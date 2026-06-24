@@ -1,0 +1,58 @@
+{
+  "mcpServers": {
+    "npc-law-database": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/npc-law-bridge"
+      ],
+      "env": {
+        "NPC_LAW_API_KEY": "${NPC_LAW_API_KEY}",
+        "NPC_LAW_ENDPOINT": "${NPC_LAW_ENDPOINT:https://flk.npc.gov.cn/api}"
+      },
+      "title": "国家法律法规数据库（占位配置）",
+      "description": "检索中国现行有效法律、行政法规、地方性法规、司法解释等；部署方需提供可用 MCP bridge。"
+    },
+    "gov-regulatory-sites": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/china-gov-regulatory-bridge"
+      ],
+      "env": {
+        "GOV_REGULATORY_ENDPOINTS": "${GOV_REGULATORY_ENDPOINTS}",
+        "GOV_REGULATORY_API_KEY": "${GOV_REGULATORY_API_KEY}"
+      },
+      "title": "国务院/部委/地方监管官网（占位配置）",
+      "description": "检索国务院、部委、地方监管机关发布的政策、规章、规范性文件、征求意见稿和监管问答。"
+    },
+    "wps-cloud-docs": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/wps-cloud-docs-bridge"
+      ],
+      "env": {
+        "WPS_CLIENT_ID": "${WPS_CLIENT_ID}",
+        "WPS_CLIENT_SECRET": "${WPS_CLIENT_SECRET}",
+        "WPS_TENANT_ID": "${WPS_TENANT_ID}"
+      },
+      "title": "WPS/金山文档（占位配置）",
+      "description": "读取企业 WPS/金山文档云端 Word、Excel、PDF；未配置时，用户可直接上传本地 .docx/.xlsx/.pdf。"
+    }
+  },
+  "chinaLocalizationNote": "中国版第一阶段仅写入默认占位 MCP。商业数据库、企业微信/钉钉/飞书、电子签章、企查查/天眼查、法院/知识产权系统等连接器见 references/china-connectors.md；国际办公连接器封存在 references/international-extensions.md。",
+  "recommendedCategories": [
+    "cnipa",
+    "trademark-search",
+    "copyright-registry",
+    "legal-research",
+    "documents"
+  ]
+}

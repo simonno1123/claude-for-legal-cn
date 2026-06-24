@@ -1,0 +1,18 @@
+escalation_triggers:
+  amount_threshold: 法务画像中配置
+  mandatory:
+    - 无限责任或责任上限缺失
+    - 境外法律/境外仲裁/境外法院
+    - 数据出境、重要数据、敏感个人信息
+    - AI 训练客户数据
+    - 知识产权转让、独家、排他
+    - 自动续期超过阈值或自动涨价
+    - 国企、政府客户、上市公司、金融、医疗、教育、平台
+approval_roles:
+  legal: 法务负责人
+  business: 业务负责人
+  finance: 财务/税务
+  security: 信息安全/数据合规
+  seal: 用印管理员
+  management: 总经理/董事会/授权审批机构
+

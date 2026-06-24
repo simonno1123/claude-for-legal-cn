@@ -1,0 +1,51 @@
+# Portfolio Ledger — litigation-legal 中国版
+#
+# 一案一行。供 /portfolio-status、/matter-briefing、/oc-status 和审判流程监控读取。
+#
+# Schema
+# - id: string
+#   name: string
+#   type: contract | employment | company | ip | product | data | construction | finance | enforcement | arbitration | regulatory | other
+#   role: plaintiff | defendant | claimant | respondent | applicant | respondent-in-enforcement | third-party
+#   counterparty: string
+#   forum: string                  # 法院/仲裁委/执行法院/监管机关
+#   status: pre-dispute | pre-litigation | accepted | service | defence | evidence | hearing | judgment | appeal | arbitration | enforcement | closed
+#   stage: string                  # 如：举证期、庭前会议、一审开庭、二审、执行中、终本
+#   source: lawyers-letter | complaint | arbitration-notice | court-notice | investigation-order | enforcement-notice | regulator-letter | internal-report
+#   outside_counsel:
+#     firm: string | null
+#     lead: string | null
+#     email: string | null
+#     engagement: signed | pending | none
+#   conflicts:
+#     status: cleared | pending | not-run | waived
+#     method: internal-check | outside-counsel | system-check | informal | other
+#     cleared_by: string | null
+#     cleared_date: YYYY-MM-DD | null
+#   risk: critical | high | medium | low
+#   materiality: reserved | disclosed | monitored | none
+#   exposure_range: string
+#   preservation:
+#     evidence_retention_issued: bool
+#     issued_date: YYYY-MM-DD | null
+#     scope: string | null
+#     custodians: [string]
+#     next_review: YYYY-MM-DD | null
+#   preservation_actions:
+#     property_preservation: none | planned | filed | granted | rejected
+#     evidence_preservation: none | planned | filed | granted | rejected
+#     conduct_preservation: none | planned | filed | granted | rejected
+#   deadlines:
+#     next: YYYY-MM-DD | null
+#     type: answer | evidence | hearing | appeal | enforcement | settlement | other
+#   enforcement:
+#     status: not-started | pending_execution | executing | suspended | terminated_temporary | executed_fully | execution_objection | settled | terminated | final
+#             # pending_execution=立案待执行；executing=执行中；suspended=中止执行；
+#             # terminated_temporary=终结本次执行程序/终本；executed_fully=执行完毕；
+#             # execution_objection=执行异议/执行异议之诉
+#     asset_clues: [string]
+#   opened: YYYY-MM-DD
+#   last_updated: YYYY-MM-DD
+#   path: matters/[slug]/
+
+matters: []

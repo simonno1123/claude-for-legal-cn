@@ -1,0 +1,8 @@
+{
+  "name": "employment-legal",
+  "version": "1.0.2",
+  "description": "面向中国劳动合同、招聘、解除/终止、工时休假、社保公积金、员工手册和劳动争议的法务工作流。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

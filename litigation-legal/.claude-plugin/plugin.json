@@ -1,0 +1,8 @@
+{
+  "name": "litigation-legal",
+  "version": "1.0.2",
+  "description": "面向中国民商事诉讼、仲裁、劳动争议、证据梳理、案件时间线、法律文书初稿和外部律师协作的争议解决工作流。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

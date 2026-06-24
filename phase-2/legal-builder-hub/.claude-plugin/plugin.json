@@ -1,0 +1,8 @@
+{
+  "name": "legal-builder-hub",
+  "version": "1.0.2",
+  "description": "第二阶段模块：面向中国法律技能插件的发现、评估、安装、禁用、更新和安全审查工作流。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

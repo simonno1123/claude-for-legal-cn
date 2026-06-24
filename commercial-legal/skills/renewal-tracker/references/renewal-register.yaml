@@ -1,0 +1,35 @@
+# 中国商事合同续约与通知台账
+#
+# 由 renewal-tracker、saas-msa-review 和用户上传的合同台账共同维护。
+# 关注送达截止日、内部启动日、用印/审批缓冲、预算和涨价风险。
+
+renewals: []
+
+# 示例：
+#
+# - counterparty: "某某云服务有限公司"
+#   agreement: "云平台服务协议"
+#   contract_no: "HT-2026-001"
+#   our_side: "客户"
+#   governing_law_region: "中国大陆"
+#   dispute_resolution: "北京仲裁委员会仲裁"
+#   currency: "CNY"
+#   annual_value_tax_included: 480000
+#   invoice_type: "增值税专用发票"
+#   signed_date: 2026-01-15
+#   initial_term_end: 2027-01-14
+#   renewal_mechanism: "自动续约一年"
+#   auto_renew_term: "1 year"
+#   notice_period_days: 60
+#   notice_method: "书面盖章通知 + EMS"
+#   notice_recipient: "合同约定联系人和注册地址"
+#   transit_buffer_days: 7
+#   business_day_rule: "中国法定节假日和调休工作日，具体年度待查证"
+#   seal_or_signature_required: "合同章"
+#   internal_start_by: 2026-10-15
+#   notice_delivery_deadline: 2026-11-15
+#   budget_owner: "信息技术部"
+#   finance_owner: "财务部"
+#   legal_owner: "法务部"
+#   status: "active"
+#   risk_notes: "自动续约且续费价格可按当期价目表调整，需预算确认"

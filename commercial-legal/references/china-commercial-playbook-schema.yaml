@@ -1,0 +1,25 @@
+fields:
+  default_jurisdiction: 中国大陆
+  contract_side: [采购方, 销售方, 服务提供方, 客户, 双方]
+  applicable_law: 中华人民共和国大陆地区法律
+  dispute_resolution:
+    type: [法院管辖, 仲裁, 待定]
+    court_or_institution: null
+    seat_or_place: null
+    language: 中文
+  authority_and_seal:
+    signer: [法定代表人, 授权代表, 其他]
+    seal_required: [合同章, 公章, 电子签, 无]
+    approval_required: true
+  payment_and_tax:
+    currency: CNY
+    tax_included: null
+    invoice_type: [增值税专用发票, 增值税普通发票, 其他]
+  risk_positions:
+    liability_cap: null
+    liquidated_damages: null
+    auto_renewal: null
+    data_processing: null
+    ip_transfer: null
+    subcontracting: null
+

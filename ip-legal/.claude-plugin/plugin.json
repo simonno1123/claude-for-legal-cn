@@ -1,0 +1,8 @@
+{
+  "name": "ip-legal",
+  "version": "1.0.2",
+  "description": "面向中国商标、专利、著作权、商业秘密、不正当竞争、开源合规、侵权初筛和权利组合管理的知识产权工作流。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

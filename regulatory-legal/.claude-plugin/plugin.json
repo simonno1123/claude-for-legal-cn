@@ -1,0 +1,8 @@
+{
+  "name": "regulatory-legal",
+  "version": "1.0.2",
+  "description": "面向中国法律法规、部门规章、监管政策、规范性文件、征求意见稿、整改差距和政策修订的监测与落地工作流。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

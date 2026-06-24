@@ -1,0 +1,8 @@
+{
+  "name": "commercial-legal",
+  "version": "1.0.2",
+  "description": "面向中国大陆 B2B 商事合同审查与履约管理，覆盖采购、销售、SaaS、NDA、续约、授权用印、发票税务和审批流转。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

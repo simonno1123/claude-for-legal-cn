@@ -1,0 +1,8 @@
+{
+  "name": "corporate-legal",
+  "version": "1.0.2",
+  "description": "面向中国新公司法下公司治理、章程旧转新、股东出资责任、股权变动、实体合规和市场监管登记事项的法务工作流。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

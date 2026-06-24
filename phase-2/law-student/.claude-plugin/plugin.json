@@ -1,0 +1,8 @@
+{
+  "name": "law-student",
+  "version": "1.0.2",
+  "description": "第二阶段模块：面向中国法学院学生和法律学习者的案例研读、法条学习、法考/课程复习、IRAC/请求权基础训练和学习计划。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}

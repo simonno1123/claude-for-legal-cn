@@ -1,0 +1,91 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-for-legal-cn",
+  "description": "中国法律体系本地化版：面向中国企业法务的商事合同、公司、劳动、数据合规、产品、监管、AI 治理、知识产权和争议解决工作流插件集合。所有输出均为律师/法务审阅初稿。",
+  "owner": {
+    "name": "Anthropic reference; China localization by Codex"
+  },
+  "plugins": [
+    {
+      "name": "commercial-legal",
+      "displayName": "商事合同法务",
+      "source": "./commercial-legal",
+      "description": "面向中国大陆 B2B 商事合同审查与履约管理，覆盖采购、销售、SaaS、NDA、续约、授权用印、发票税务和审批流转。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "privacy-legal",
+      "displayName": "个人信息与数据合规",
+      "source": "./privacy-legal",
+      "description": "面向《个人信息保护法》《数据安全法》《网络安全法》及中国数据出境、PIA、DPA、个人信息权利请求的合规工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "product-legal",
+      "displayName": "产品合规法务",
+      "source": "./product-legal",
+      "description": "面向中国互联网产品、营销宣传、消费者权益、广告、平台规则、数据与算法合规的产品发布审查。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "corporate-legal",
+      "displayName": "公司治理与章程法务",
+      "source": "./corporate-legal",
+      "description": "面向中国新公司法下公司治理、章程旧转新、股东出资责任、股权变动、实体合规和市场监管登记事项的法务工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "employment-legal",
+      "displayName": "劳动人事法务",
+      "source": "./employment-legal",
+      "description": "面向中国劳动合同、招聘、解除/终止、工时休假、社保公积金、员工手册和劳动争议的法务工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "regulatory-legal",
+      "displayName": "监管合规",
+      "source": "./regulatory-legal",
+      "description": "面向中国法律法规、部门规章、监管政策、规范性文件、征求意见稿、整改差距和政策修订的监测与落地工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "ai-governance-legal",
+      "displayName": "AI 治理法务",
+      "source": "./ai-governance-legal",
+      "description": "面向中国生成式人工智能、算法推荐、深度合成、数据安全、个人信息保护和企业 AI 使用治理的合规工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "litigation-legal",
+      "displayName": "争议解决与诉讼",
+      "source": "./litigation-legal",
+      "description": "面向中国民商事诉讼、仲裁、劳动争议、证据梳理、案件时间线、法律文书初稿和外部律师协作的争议解决工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "ip-legal",
+      "displayName": "知识产权法务",
+      "source": "./ip-legal",
+      "description": "面向中国商标、专利、著作权、商业秘密、不正当竞争、开源合规、侵权初筛和权利组合管理的知识产权工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "product-legal",
+  "version": "1.0.3",
+  "description": "面向中国大陆产品上线、营销宣传、消费者权益、电商平台、质量安全、个人信息、算法与 AI 触点的产品合规审查模块。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}
