@@ -1,7 +1,7 @@
 {
   "name": "legal-clinic",
-  "version": "1.0.2",
-  "description": "第二阶段模块：面向中国法律诊所、法律援助、学生办案训练、客户接待、案件备忘录、期限跟踪和导师审阅的工作流。",
+  "version": "2.0.0-cn-phase2",
+  "description": "Phase 2: 面向中国法律诊所、法律援助、公服咨询、学生办案训练和导师复核的工作流模块。",
   "author": {
     "name": "Anthropic reference; China localization by Codex"
   }

@@ -1,7 +1,7 @@
 {
   "name": "legal-builder-hub",
-  "version": "1.0.2",
-  "description": "第二阶段模块：面向中国法律技能插件的发现、评估、安装、禁用、更新和安全审查工作流。",
+  "version": "2.0.0-cn-phase2",
+  "description": "Phase 2: 中国法律技能与 MCP 插件构建中心，用于发现、审查、安装、禁用、更新和质检中国法本土化技能。",
   "author": {
     "name": "Anthropic reference; China localization by Codex"
   }

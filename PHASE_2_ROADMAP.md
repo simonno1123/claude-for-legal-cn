@@ -14,7 +14,7 @@ Path: `corporate-legal/phase-2/`
 
 Goal: localize M&A workflows for China Mainland practice after the core corporate governance, capital contribution, equity transfer, and articles audit workflows are stable.
 
-Status: IN PROGRESS. The first localization pass rewrote the core M&A diligence, closing, contract schedule, integration, deal summary, AI handoff, and tabular review skills into China Mainland workflows, and added a China M&A regression suite.
+Status: COMPLETE. The Phase 2 localization pass rewrote the core M&A diligence, closing, contract schedule, integration, deal summary, AI handoff, and tabular review skills into China Mainland workflows, and added a China M&A regression suite.
 
 Initial skills to review:
 
@@ -39,6 +39,8 @@ Path: `phase-2/law-student/`
 
 Goal: rebuild the law student module around China legal education, legal doctrine learning, judicial exam preparation, and statute/case reading.
 
+Status: COMPLETE. The module now uses China legal education, legal professional qualification exam, statute-system learning, claim-basis analysis, case reading, writing practice, flashcards, and study planning as its default workflow.
+
 China localization gates:
 
 - Replace US law school, common-law briefing, Bluebook, and case-method defaults.
@@ -51,6 +53,8 @@ Path: `phase-2/legal-clinic/`
 
 Goal: rebuild the clinic module around China public legal service, legal aid, community consultation, and triage workflows.
 
+Status: COMPLETE. The module now uses China legal clinic, legal aid, 12348/public legal service routing, intake, deadlines, supervisor review, client letters, case memos, and semester handoff as its default workflow.
+
 China localization gates:
 
 - Replace US clinic intake and privilege assumptions.
@@ -62,6 +66,8 @@ China localization gates:
 Path: `phase-2/legal-builder-hub/`
 
 Goal: turn the builder hub into a China legal MCP/tooling construction kit after the Phase 1 module patterns are stable.
+
+Status: COMPLETE. The module now functions as a China-law skill and MCP governance toolkit for discovery, QA, installation, disablement, update planning, allowlists, and regression checks.
 
 China localization gates:
 

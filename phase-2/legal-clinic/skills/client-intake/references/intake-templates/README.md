@@ -1,14 +1,14 @@
-# Practice-Area Intake Templates
+# 中国法律诊所接待模板
 
-Populated at cold-start from the professor's intake form(s). If none provided,
-`/client-intake` uses the default question sets in `client-intake/SKILL.md` Step 2.
+可按案由建立模板：
 
-One file per practice area the clinic handles:
+- 劳动争议
+- 消费者权益
+- 婚姻家庭
+- 房屋租赁
+- 小额债务
+- 行政投诉
+- 校园权益
 
-- `immigration.md` — status, entry, prior applications, country conditions, family, criminal history, timeline
-- `housing.md` — housing type, what happened, lease/payment, habitability, timeline
-- `family.md` — relationship, children, safety, existing orders, timeline
-- `consumer.md` — debt type, who's contacting, documentation, filed against, timeline
+每个模板应包含：身份信息、事实时间线、诉求、证据、关键期限、是否已投诉/仲裁/起诉、法援资格和导师复核点。
 
-Each template: the questions to ask, in the order to ask them, with notes on
-sensitive handling (e.g., criminal history in immigration — explain why asking).
