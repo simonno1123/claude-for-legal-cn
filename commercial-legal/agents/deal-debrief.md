@@ -13,7 +13,7 @@
 
 ## 工作流
 
-1. 读取 `commercial-legal/CLAUDE.md` 中的合同画像和 playbook。
+1. 优先读取用户级配置中的合同画像和 playbook；若用户级配置缺失，再读取仓库模板 `commercial-legal/CLAUDE.md` 作为兜底。
 2. 对比最终签署版本与标准立场。
 3. 区分常态化建议、一事一批例外、领导特批、战略客户例外和历史遗留。
 4. 生成 `review-proposals` 可读取的 playbook 更新建议。

@@ -6,7 +6,7 @@
 
 ## 适用场景
 
-- 采购/供应商合同审查。
+- 采购/销售双向商事合同审查。
 - 销售侧框架协议、订单、服务协议、补充协议审查。
 - SaaS、软件许可、云服务、技术服务和数据处理条款审查。
 - NDA/保密协议/商业秘密保护协议快速分流。
@@ -40,7 +40,7 @@
 |---|---|
 | `/commercial-legal:cold-start-interview` | 建立或更新中国商事合同画像；统一替代原 `customize` 配置入口 |
 | `/commercial-legal:review` | 自动识别合同类型并路由到采购、SaaS、NDA、续约、补充协议等审查流程 |
-| `/commercial-legal:vendor-agreement-review` | 采购/供应商合同审查：主体、授权、用印、交付验收、付款发票、责任限制、争议解决 |
+| `/commercial-legal:vendor-agreement-review` | 采购/销售双向商事合同审查：主体、授权、用印、交付验收、付款发票、责任限制、争议解决 |
 | `/commercial-legal:saas-msa-review` | SaaS/云服务/软件合同审查：个人信息、数据安全、等保、数据迁移、AI 训练、SLA |
 | `/commercial-legal:nda-review` | 保密协议/商业秘密保护协议审查和红黄绿分流 |
 | `/commercial-legal:renewal-tracker` | 续约、取消通知、涨价、生效/到期和送达期限台账 |

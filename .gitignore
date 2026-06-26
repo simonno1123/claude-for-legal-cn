@@ -5,3 +5,8 @@
 /.claude/
 __pycache__/
 *.pyc
+gemini_api.md
+.env
+*.key
+review-packets/
+review-results/

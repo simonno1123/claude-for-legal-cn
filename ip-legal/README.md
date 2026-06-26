@@ -1,169 +1,66 @@
-# IP Counsel Plugin
+# IP Legal（中国大陆知识产权版）
 
-Intellectual property practice: trademark, copyright, patent, trade secret, and open source. Drafts and triages cease-and-desist letters and DMCA takedowns (sending and responding), runs first-pass trademark clearance and freedom-to-operate triage, reviews IP clauses in agreements, tracks registrations and renewal deadlines, and checks open source license compliance. Built around a practice profile that gets written by a cold-start interview — the plugin learns *your* enforcement posture, portfolio, and approval matrix, not a generic one.
+`ip-legal` 面向中国企业知识产权法务、商标/专利代理团队、品牌保护、研发合规和开源治理，用于商标清除、专利自由实施分析、平台侵权投诉、停止侵权函、软著登记准备、商业秘密保护、海关知识产权保护和权利组合续费管理。
 
-**Every output is a draft for attorney review — cited, flagged, and gated — not a legal conclusion.** The plugin does the work: reads the documents, applies your playbook, finds the issues, drafts the memo. A lawyer reviews, verifies, and decides. Citations are tagged by source so you know which ones came from a research tool and which ones need checking. Privilege markers are applied conservatively so nothing waives by accident. Consequential actions — filing, sending, executing — are gated behind explicit confirmation.
+> 本模块输出均为内部法律分析初稿 / 保密文件 / 合规工作底稿。中国大陆法下不承认可对抗法院、行政机关或仲裁机构调取的普通法证据特权。涉及发送、投诉、备案、起诉、无效、撤三、续展或权利放弃的动作，必须经中国执业律师、企业法务或合格代理机构复核。
 
-## Who this is for
+## Phase 1 核心技能
 
-| Role | Primary workflows |
+| 命令 | 定位 |
 |---|---|
-| **In-house IP counsel** | Enforcement decisions, clause review, portfolio oversight, FTO triage |
-| **IP paralegal / specialist** | Portfolio and renewal tracking, clearance first passes, matter intake |
-| **Brand protection manager** | Cease-and-desists, DMCA takedowns, watch-service follow-up |
-| **IP prosecutor (TM / copyright)** | Clearance, clause review, portfolio maintenance — *not patent claim drafting* |
-| **Law firm IP associate** | Matter workspaces per client, clearance and FTO triage, clause review |
-| **Legal ops managing an IP portfolio** | Registration tracker, renewal deadlines, OSS compliance checks |
+| `/ip-legal:cold-start-interview` | 中国知识产权画像访谈 |
+| `/ip-legal:clearance` | 中国商标注册/使用清除初筛 |
+| `/ip-legal:fto-triage` | 中国专利自由实施风险初筛 |
+| `/ip-legal:takedown` | 中国电商/网络平台知识产权投诉与反通知 |
+| `/ip-legal:cease-desist` | 停止侵权函/律师函草稿与来函分诊 |
+| `/ip-legal:infringement-triage` | 商标、著作权、专利、商业秘密侵权初筛 |
+| `/ip-legal:portfolio` | 商标、专利、软著续费和权利组合管理 |
+| `/ip-legal:oss-review` | 开源许可证合规审查 |
+| `/ip-legal:ip-clause-review` | 合同中的知识产权条款审查 |
 
-This plugin does **not** draft patent claims. Patent prosecution with claim strategy is a specialist craft that needs a patent agent or patent attorney and should not be outsourced to a generalist tool. Patent work here is limited to FTO triage (is this product blocked by someone else's patent?), IP clause review in agreements, portfolio renewal tracking, and infringement triage.
+专利权利要求撰写、境外诉讼和跨境平台完整策略暂列 Phase 2。
 
-## First run: the cold-start interview
+## 中国法核心路径
 
-On first use, the plugin interviews you — ten to fifteen minutes, conversational — to learn how your practice actually works. It asks about your practice area mix, your jurisdiction footprint, your enforcement posture, your approval matrix, and your escalation triggers. Then it asks for your portfolio list, brand guidelines, C&D templates, enforcement playbook, and OSS policy — whatever you have — so it can extract rather than making you re-type.
+- 商标：绝对禁用条款、显著性、近似商标、类似商品/服务、异议、无效、撤三、侵权和赔偿。
+- 专利：发明、实用新型、外观设计；全面覆盖原则；专利权评价报告；现有技术/现有设计抗辩；无效宣告。
+- 著作权/软著：作品权属、软件著作权登记、CPCC 材料、App/游戏/软件上架材料。
+- 平台投诉：民法典网络侵权通知删除、电商法反通知和 15 天等待期。
+- 商业秘密：非公开性、商业价值、保密措施、接触加实质相似、举证责任转移。
+- 海关保护：海关知识产权备案、依职权扣留、依申请扣留和担保。
 
-It writes what it learns to `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md` — a plain-English document about your practice that every other skill reads before doing anything. You edit the document, not a config file.
+## 默认连接器
 
-```
+`.mcp.json` 预留中国版占位连接器：
+
+| 连接器 | 用途 |
+|---|---|
+| `npc-law-database` | 国家法律法规数据库 / 中国人大网 |
+| `gov-regulatory-sites` | 国务院、CNIPA、市场监管、版权、海关、法院等官网 |
+| `wps-cloud-docs` | WPS / 金山文档 / 本地材料上传 |
+
+商业数据库如智慧芽、企查查、天眼查、威科、法信、人民法院案例库等在 Phase 2 以适配器方式接入。
+
+## 快速开始
+
+```bash
 /ip-legal:cold-start-interview
 ```
 
-**Practice area mix.** Early in setup, you'll be asked which IP areas you actually work in — trademark, patent, copyright, trade secret, open source, or all. The plugin skips questions in areas you don't practice. Your configuration can hold multiple areas in parallel, and each skill asks which area applies when it's not obvious from what you paste.
+示例：
 
-**Enforcement posture.** You'll be asked where you land on the aggressive / measured / conservative spectrum for sending assertion letters, and who approves sending each letter type. The posture flips the defaults of the cease-and-desist, takedown, and infringement-triage skills.
-
-## Commands
-
-| Command | Does |
-|---|---|
-| `/ip-legal:cold-start-interview` | Run (or re-run) the cold-start interview |
-| `/ip-legal:cease-desist [context]` | Cease-and-desist — send, or triage an inbound one, with the approval routing your CLAUDE.md requires |
-| `/ip-legal:takedown [context]` | DMCA takedown — send, respond to a received notice, or draft a counter-notice |
-| `/ip-legal:clearance [mark]` | First-pass trademark clearance — knockout + confusion analysis, attorney still signs off |
-| `/ip-legal:fto-triage [product / claim scope]` | Freedom-to-operate triage — surfaces blocking references for attorney review |
-| `/ip-legal:invention-intake [disclosure]` | Invention disclosure first-pass screen — novelty, obviousness, §101, bar dates, detectability, strategic value |
-| `/ip-legal:infringement-triage [context]` | Infringement triage — is this worth pursuing, and how |
-| `/ip-legal:ip-clause-review [file]` | Review IP clauses in an agreement — assignment, license grant, IP indemnity, OSS reps |
-| `/ip-legal:oss-review [repo / file list]` | Open source license compliance check — copyleft obligations, attribution, license compatibility |
-| `/ip-legal:portfolio` | Registration and renewal tracker — what's due, what's filed, what needs action |
-| `/ip-legal:matter-workspace` | Manage matter workspaces (multi-client private practice only) — new, list, switch, close, none |
-
-## Skills
-
-| Skill | Purpose |
-|---|---|
-| **cold-start-interview** | First-run interview that writes `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md` |
-| **cease-desist** | Draft or triage a C&D; routes through the approval matrix before sending |
-| **takedown** | DMCA notice, response to a received takedown, or counter-notice |
-| **clearance** | Knockout search + likelihood-of-confusion first pass for a proposed mark |
-| **fto-triage** | FTO triage — flags references an attorney should read before launch |
-| **invention-intake** | First-pass patentability screen for an invention disclosure — novelty, obviousness, §101, bar dates, detectability, strategic value |
-| **infringement-triage** | Given an apparent infringement, decide: ignore / soft letter / C&D / file |
-| **ip-clause-review** | Reviews IP clauses in MSAs, SOWs, licenses, contractor agreements |
-| **oss-review** | Checks open source licenses in a repo against the OSS policy |
-| **portfolio** | Registration register, renewal deadlines, status dashboard |
-| **matter-workspace** | Create, list, switch, and close matter workspaces for multi-client practices; isolates each client/matter so context does not leak across them |
-
-## Interactive commands vs. scheduled agents
-
-The commands above run when you invoke them — for when you're working a matter. The agents below run on a schedule — for what moves while you're not looking:
-
-| Agent | What it watches | Default cadence |
-|---|---|---|
-| **ip-renewal-watcher** | Portfolio register — computes what's due (renewals, affidavits, maintenance) in the next 90 days and posts a ranked deadline report | Weekly |
-
-## Connectors and citation verification
-
-**Connect a research tool first — the citation guardrails depend on it.** Without one, every cite is tagged `[verify]` and the reviewer note above each deliverable records that sources weren't verified. The plugin works either way; it just does more of the verification for you when a research tool is connected.
-
-The legal research connectors in this plugin aren't just data sources — they're the difference between a verified citation and a citation you have to check. A citation retrieved through **CourtListener** (U.S. court opinions, PACER dockets, citation verification) or **Descrybe** (primary-law search, citation treatment, quoted-language verification) is tagged with its source and can be traced back. A citation from the model's knowledge or from web search is tagged `[verify]` or `[verify-pinpoint]` and should be checked against a primary source before anyone relies on it. The plugin tiers its citations so your verification time goes where it matters.
-
-## Integrations
-
-Ships with connectors configured in `.mcp.json`:
-
-- **Solve Intelligence** — patent and non-patent literature search, SEP technical standards, prior art, claim analysis
-- **CourtListener** — U.S. court opinions, PACER dockets, citation verification
-- **Descrybe** — primary law research by concept or wording, citation treatment, quoted-language verification
-- **Slack** — search messages, read channels, find discussions
-- **Google Drive** — search, read, and fetch documents
-
-With patent research connected: FTO and prior-art skills pull references automatically instead of relying on user-supplied lists.
-
-With a case-law tool connected: clearance and infringement-triage skills verify precedent and check whether a cited case is still good law.
-
-With Drive or Slack connected: portfolio exports, C&D templates, and enforcement-log updates route through the channel you pointed us at.
-
-## Quick start
-
-### 1. Get interviewed
-
-```
-/ip-legal:cold-start-interview
+```bash
+/ip-legal:clearance "云图，用于第9类 SaaS 软件"
+/ip-legal:fto-triage "智能门锁结构，国内上市"
+/ip-legal:takedown --send "淘宝店铺盗用我方美术作品主图"
 ```
 
-Ten to fifteen minutes. Have your portfolio list, brand guidelines (if any), a C&D template (if any), and your OSS policy (if any) ready to share.
+## 输出要求
 
-Your configuration is stored at `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md` and survives plugin updates.
+所有技能必须：
 
-### 2. Clear a mark
-
-```
-/ip-legal:clearance "APEXLEAF"
-```
-
-Output: knockout-hit list, likelihood-of-confusion factor analysis, flags for attorney review. Not a go/no-go.
-
-### 3. See what's due
-
-```
-/ip-legal:portfolio
-```
-
-Output: registrations with renewal, affidavit, or maintenance deadlines in the next 90 days, grouped by urgency.
-
-## File structure
-
-```
-ip-legal/
-├── .claude-plugin/plugin.json
-├── .mcp.json
-├── CLAUDE.md                    # Your practice profile — written by cold-start, edited by you
-├── README.md
-├── agents/
-│   └── ip-renewal-watcher.md
-├── skills/
-│   ├── cold-start-interview/
-│   ├── cease-desist/
-│   ├── takedown/
-│   ├── clearance/
-│   ├── fto-triage/
-│   ├── invention-intake/
-│   ├── infringement-triage/
-│   ├── ip-clause-review/
-│   ├── oss-review/
-│   ├── portfolio/
-│   └── matter-workspace/
-└── hooks/hooks.json
-```
-
-## Configuration
-
-The plugin reads user-specific configuration from:
-
-```
-~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md
-```
-
-This path survives plugin updates. The `CLAUDE.md` that ships with the plugin is a template — it is replaced every upgrade. The cold-start interview writes your populated version to the config path above; from then on, edit that file directly when something changes.
-
-## How it learns
-
-Your practice profile at `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md` isn't static — it improves as you use the plugin. Skills tell you when an output used a default you should tune. The `ip-renewal-watcher` agent tracks the portfolio register and surfaces upcoming renewal deadlines at your cadence. You can re-run setup, edit the file directly, or tell a skill to record a new position.
-
-## Notes
-
-- Every skill reads the practice profile first. If it finds placeholders, it stops and tells you to run `/ip-legal:cold-start-interview`. There's no generic fallback — a generic IP posture is worse than no posture.
-- Sending a C&D starts a fight. The `/ip-legal:cease-desist` skill will not send anything itself; it drafts, surfaces the approval matrix entry, and waits for the approver.
-- `/ip-legal:clearance` and `/ip-legal:fto-triage` are **first-pass** triage. The output is a research package for an attorney, not a clearance opinion. The skill says so on every run.
-- `/ip-legal:oss-review` flags license obligations and incompatibilities. It does not bless a commercial-use decision — engineering and legal decide that together.
-- Patent claim drafting is intentionally out of scope. This plugin plays well alongside a patent prosecution specialist; it does not replace one.
+- 明确法域默认为中国大陆。
+- 标注资料范围和未核验事项。
+- 不承诺“可注册”“可使用”“不侵权”“可自由实施”等最终结论。
+- 需要官方状态时标注 `[官方状态待查证]`。
+- 对平台投诉、反通知、律师函、行政投诉、海关扣留、无效、撤三和诉讼设置人工确认门。

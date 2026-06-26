@@ -26,7 +26,9 @@
 - `corporate-legal` 第三批深改完成：建立 `references/test-cases-cn.md` 七个新公司法高压回归用例，新增 `references/articles-old-to-new.md` 章程旧法残留替换表，并重写 `capital-contribution-audit` 为覆盖第47条五年出资期、第54条出资加速到期、第88条责任分流和董事催缴责任的王牌技能。
 - `corporate-legal` 收尾轮完成：新增 `articles-of-association-audit` 章程旧转新全量审计，重写 `governance-audit` 为“三会一层”内部治理审计，并删除 `customize` 独立入口，统一由 `cold-start-interview` 生成和更新 `company_profile`。
 - `commercial-legal` 第一阶段深改完成：基于 GPT-5.5 与 GPT-5.4 双模型方案对比，重写插件级 `README.md` 与 `CLAUDE.md`，新增中国商事合同 references/test cases，重写 `cold-start-interview`、`review`、`vendor-agreement-review`、`saas-msa-review`、`nda-review`、`renewal-tracker`、`escalation-flagger`、`stakeholder-summary`、`amendment-history`、`review-proposals` 与 `matter-workspace`，重写 3 个 agents，并删除 `customize` 独立入口；已按 Gemini 3.5 Flash 条件复核补齐先票后款/进项税损失、可靠电子签名/萝卜章、或审或仲/各自所在地法院等 P0/P1 控制点。
+- `commercial-legal` P1 收口完成：经 GPT-5.5 法律复核与 GPT-5.4 工程复核，软化“三流合一”、部门章/项目章、定金与违约金、电子签 CA 和各自所在地法院的绝对化表述；补齐销售侧显式路由、Case 11/12/15 回归归属、用户画像读取路径和仓库级 references 路径说明。
 - `litigation-legal` 第一阶段深改完成：按 Gemini 3.5 Flash 决策重写中国民商事诉讼/仲裁 System Alignment、README、核心规则字典和 10 个高压测试用例；新增 `court-order-triage`、`witness-trial-prep`、`confidential-evidence-review`、`evidence-preservation` 四个中国语义核心命令，并将 `subpoena-triage`、`deposition-prep`、`privilege-log-review`、`legal-hold` 保留为兼容旧命令；已补齐律师调查令非强制边界、证据保密不得误用英美法特权、仲裁保全经仲裁委转交法院、执行终本/中止/异议等状态。
+- `privacy-legal` 第一阶段深改完成：重写插件级 `CLAUDE.md`、`README.md`、`currency-watch.md`，新增 `references/china-privacy-data-playbook.md` 与 `references/test-cases-cn.md`；重写 `cold-start-interview`、`use-case-triage`、`pia-generation`、`dpa-review`、`dsar-response`、`reg-gap-analysis`、`policy-monitor`、`matter-workspace`、`customize`，将 GDPR/CCPA/HIPAA/COPPA/DSAR/DPIA/controller/processor 默认框架切换为中国《个人信息保护法》《数据安全法》《网络安全法》下的个人信息处理者、受托处理、共同处理、PIPIA、数据出境、个人权利请求、SDK/隐私政策一致性和安全事件响应。
 
 ## 仍需第二阶段深改
 
@@ -35,10 +37,10 @@
 | 模块 | 必须重写的实质内容 | 优先级 |
 |---|---|---|
 | `employment-legal` | **PHASE 1 COMPLETE（Gemini/GPT 复核后完成）**：已完成中国劳动法下解除/终止、补偿金、员工手册、工时休假、法定假别/医疗期、社保公积金、入职、内部调查、地方口径定制和用工画像主线改造；涉外扩张与 matter-workspace 暂缓/默认关闭 | 已完成 |
-| `privacy-legal` | GDPR/CCPA/DSAR 语境替换为《个保法》《数安法》《网安法》、个人信息权利请求、数据出境、重要数据、关键信息基础设施 | 高 |
+| `privacy-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国个人信息与数据合规主线改造，覆盖 PIPL/DSL/CSL、PIPIA、受托处理/共同处理/对外提供、数据出境、个人权利请求、隐私政策/SDK 一致性、安全事件响应和中国监管动态监控 | 已完成 |
 | `corporate-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成新公司法下股东会/董事会/经理层、监事会或审计委员会、职工董事、章程旧转新、五年出资期、出资加速到期、股权转让/质押登记、市场监管登记主线改造；M&A 暂列 Phase 1.5/Phase 2 | 已完成 |
 | `litigation-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国民商事诉讼/仲裁下管辖、时效、证据交换、调查令、财产/证据/行为保全、举证期限、庭审质证、律师函、案件汇报、执行和外部律师协作主线改造 | 已完成 |
-| `ip-legal` | USPTO/DMCA/FTO 美国路径替换为 CNIPA、商标局、版权登记、反不正当竞争、平台投诉/行政投诉/诉讼路径 | 高 |
+| `ip-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国知识产权主线改造，覆盖 CNIPA/中国商标网/CPCC、商标绝对条款与撤三、专利发明/实用新型/外观设计 FTO、专利权评价报告、现有技术抗辩、平台通知删除/反通知 15 天等待期、商业秘密、海关知识产权保护、开源合规和权利组合续展/年费管理 | 已完成 |
 | `product-legal` | FTC/US consumer law 替换为《广告法》《消保法》《电商法》、市场监管、网信、算法/深度合成/生成式 AI 合规 | 高 |
 | `ai-governance-legal` | NIST/EU AI Act 默认框架替换为生成式 AI、算法推荐、深度合成、数据安全、个人信息保护、科技伦理和备案/评估路径 | 高 |
 | `commercial-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国商事合同审查、采购/销售、SaaS、NDA、续约、授权用印、发票税务、审批流转和合同项目管理主线改造；后续可继续细化 agents 与外部系统连接器 | 已完成 |
@@ -74,4 +76,14 @@
 - 已重写 `product-legal/CLAUDE.md`、`README.md`、`cold-start-interview`、`launch-review`、`marketing-claims-review`、`customize`、`matter-workspace`、`launch-watcher`、`currency-watch.md` 与 `seven-category-framework.md`。
 - 新增 `product-legal/references/test-cases-cn.md`，覆盖自动续费、广告绝对化用语、大数据杀熟、未成年人单独同意、AI 深度合成标识、七日无理由退货、直播虚假宣传、CCC、默认勾选搭售和弹窗广告一键关闭 10 个高压回归用例。
 - `customize` 已并入 `cold-start-interview`；`matter-workspace`、`launch-watcher` 与法律动态自动监控降级为 Phase 2/兼容占位。
+- 残留扫描已清除核心美国法/普通法污染词，JSON 与技能 frontmatter 验证通过。
+
+## 2026-06-26 ip-legal 更新
+
+- `ip-legal` Phase 1 深改完成：基于本机 Gemini 3.5 Flash API 审查结果，重写插件级 `CLAUDE.md`、`README.md`，移除普通法证据特权、专利代理人特权、境外下架和境外商标/专利默认框架。
+- 已重写 `clearance` 为中国商标清除初筛，覆盖《商标法》第10/11/30/32/33/44/49条、CNIPA 审查指南、《类似商品和服务区分表》、异议、无效和撤三策略。
+- 已重写 `fto-triage` 为中国专利自由实施风险初筛，覆盖发明、实用新型、外观设计、全面覆盖原则、专利权评价报告、现有技术/现有设计抗辩、无效宣告和设计绕开。
+- 已重写 `takedown` 与 `cease-desist`，切换为《民法典》第1195-1197条、《电子商务法》第41-45条下的通知删除、反通知、15天等待期、平台投诉、行政投诉、律师函和诉讼/保全路径。
+- 已重写 `cold-start-interview`、`infringement-triage`、`portfolio`、`ip-renewal-watcher`、`invention-intake`、`ip-clause-review`、`oss-review` 和 `matter-workspace`，补齐 CPCC 软著、商业秘密、海关知识产权保护、开源合规和中国权利组合期限管理。
+- 新增 `ip-legal/references/china-ip-core-rules.md` 与 `ip-legal/references/test-cases-cn.md`，建立 10 个中国知识产权高压回归用例。
 - 残留扫描已清除核心美国法/普通法污染词，JSON 与技能 frontmatter 验证通过。

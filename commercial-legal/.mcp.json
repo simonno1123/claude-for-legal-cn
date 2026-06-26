@@ -47,7 +47,7 @@
       "description": "读取企业 WPS/金山文档云端 Word、Excel、PDF；未配置时，用户可直接上传本地 .docx/.xlsx/.pdf。"
     }
   },
-  "chinaLocalizationNote": "中国版第一阶段仅写入默认占位 MCP。商业数据库、企业微信/钉钉/飞书、电子签章、企查查/天眼查、法院/知识产权系统等连接器见 references/china-connectors.md；国际办公连接器封存在 references/international-extensions.md。",
+  "chinaLocalizationNote": "中国版第一阶段仅写入默认占位 MCP。商业数据库、企业微信/钉钉/飞书、电子签章、企查查/天眼查、法院/知识产权系统等连接器见仓库根目录 references/china-connectors.md；国际办公连接器封存在仓库根目录 references/international-extensions.md。",
   "recommendedCategories": [
     "contract-management",
     "e-signature",

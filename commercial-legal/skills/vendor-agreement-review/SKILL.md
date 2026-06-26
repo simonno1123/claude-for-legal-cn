@@ -1,8 +1,8 @@
 ---
 name: vendor-agreement-review
 description: >
-  中国采购/供应商合同审查。覆盖主体资格、授权用印、交付验收、付款发票、格式条款、违约责任、责任限制、知识产权、数据、解除、续约和争议解决。
-argument-hint: "[供应商合同、采购合同、服务合同、框架协议、订单、附件]"
+  中国采购/销售双向商事合同审查。覆盖主体资格、授权用印、交付验收、付款发票、格式条款、违约责任、责任限制、知识产权、数据、解除、续约和争议解决。
+argument-hint: "[供应商合同、采购合同、销售合同、服务合同、框架协议、订单、附件]"
 ---
 
 # /vendor-agreement-review
@@ -12,6 +12,7 @@ argument-hint: "[供应商合同、采购合同、服务合同、框架协议、
 - 默认适用中国大陆商事合同审查框架，调用 `references/china-commercial-contract-playbook.md` 和 `references/china-vendor-review-checklist.yaml`。
 - 不得使用 US jurisdiction、Delaware、gross negligence 默认例外、attorney work product 等美国法框架。
 - 输出不得直接说“可签署”；只能说“可进入签署前复核/需补正/需升级”。
+- 先确认我方身份：采购方/买方、销售方/卖方、服务提供方或客户。若我方为销售方，应切换到收款安全、验收触发、客户付款拖延、客户格式条款限责、发票开具和回款证据视角；不得沿用纯采购方立场。
 
 ## 必查卡点
 
@@ -46,7 +47,7 @@ argument-hint: "[供应商合同、采购合同、服务合同、框架协议、
 ## 输出格式
 
 ```markdown
-# 采购/供应商合同审查初稿
+# 采购/销售商事合同审查初稿
 
 > **审阅人备注**
 > - **来源：** [合同/订单/附件]
@@ -77,3 +78,5 @@ argument-hint: "[供应商合同、采购合同、服务合同、框架协议、
 ## 回归测试
 
 用 `references/test-cases-cn.md` 的 Case 1-4、Case 8-10、Case 13 做人工回归。
+
+销售侧和通用风险还必须覆盖 Case 11（定金与违约金选择适用）、Case 12（廉洁条款缺位）和 Case 15（离职员工空白盖章合同）。

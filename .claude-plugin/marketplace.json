@@ -19,7 +19,7 @@
       "name": "privacy-legal",
       "displayName": "个人信息与数据合规",
       "source": "./privacy-legal",
-      "description": "面向《个人信息保护法》《数据安全法》《网络安全法》及中国数据出境、PIA、DPA、个人信息权利请求的合规工作流。",
+      "description": "面向《个人信息保护法》《数据安全法》《网络安全法》及中国数据出境、PIPIA、数据处理协议、个人信息主体权利请求的合规工作流。",
       "author": {
         "name": "Anthropic reference; China localization by Codex"
       }
