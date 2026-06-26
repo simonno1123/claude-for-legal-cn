@@ -1,75 +1,29 @@
-# Regulatory Counsel Plugin
+# Regulatory Legal（中国监管合规定制版）
 
-Watches regulatory feeds, diffs new regulations against your policy library, surfaces gaps. Learns your materiality threshold so it doesn't alert on every commissioner's speech. Wired for the Federal Register API, direct regulator feeds, and CourtListener.
+本插件面向中国企业法务、合规、内控和监管事务团队，用于跟踪中国人大、国务院、部委、地方政府、监管机关发布的法律法规、部门规章、规范性文件、监管问答、征求意见稿和执法动态，并转化为内部制度修订和整改任务。
 
-**Every output is a draft for attorney review — cited, flagged, and gated — not a legal conclusion.** The plugin does the work: reads the documents, applies your playbook, finds the issues, drafts the memo. A lawyer reviews, verifies, and decides. Citations are tagged by source so you know which ones came from a research tool and which ones need checking. Privilege markers are applied conservatively so nothing waives by accident. Consequential actions — filing, sending, executing — are gated behind explicit confirmation.
+## 核心命令
 
-## Who this is for
-
-| Role | Primary workflows |
+| 命令 | 用途 |
 |---|---|
-| **Compliance / regulatory counsel** | Watchlist maintenance, gap triage, policy update coordination |
-| **Privacy / product counsel** | Receives filtered alerts relevant to their area |
-| **GC** | Escalation recipient for material gaps with deadlines |
+| `/regulatory-legal:cold-start-interview` | 建立中国监管画像、行业标签、来源清单和重大性阈值 |
+| `/regulatory-legal:reg-feed-watcher` | 生成中国监管动态摘要 |
+| `/regulatory-legal:policy-diff` | 将新规与内部制度/流程/模板做差异分析 |
+| `/regulatory-legal:gaps` | 维护监管差距和整改任务台账 |
+| `/regulatory-legal:gap-surfacer` | 提醒高风险差距、期限和需升级事项 |
+| `/regulatory-legal:comments` | 评估征求意见稿是否反馈，并起草内部意见 |
+| `/regulatory-legal:policy-redraft` | 生成制度修订建议稿 |
+| `/regulatory-legal:matter-workspace` | 按监管专项或整改项目建立工作台 |
+| `/regulatory-legal:customize` | 局部更新监管来源、阈值、Owner 和模板 |
 
-## First run: cold-start
+## 默认资料源
 
-Asks which regulators you watch, connects your policy document folder, learns what "material" means to you. Builds a watchlist and indexes your policy library.
+- 国家法律法规数据库、中国人大网、国务院、司法部。
+- 国家网信办、市场监管总局、工信部、人社部、财政部、人民银行、金融监管总局、证监会、海关总署、国家知识产权局。
+- 最高人民法院、最高人民检察院。
+- 地方人大、地方政府、地方主管部门官网。
+- 用户提供的内部制度、合规台账、监管函、处罚决定、问答或征求意见稿。
 
-```
-/regulatory-legal:cold-start-interview
-```
+## 输出边界
 
-## Skills
-
-| Skill | Does |
-|---|---|
-| `/regulatory-legal:cold-start-interview` | Cold-start: watchlist + policy index + materiality threshold |
-| `/regulatory-legal:reg-feed-watcher` | Check feeds now, report what's new |
-| `/regulatory-legal:policy-diff [reg]` | Diff a specific reg change against policy library |
-| `/regulatory-legal:gaps` | Open gaps tracker — what's been flagged and not yet closed |
-| `/regulatory-legal:comments` | Review open NPRM comment periods, log decisions, track deadlines |
-| `/regulatory-legal:policy-redraft` | Proposed marked-up policy redraft that closes a gap — a first draft for internal review, not a direct edit to source documents |
-| `/regulatory-legal:matter-workspace` | Manage matter workspaces (multi-client private practice only) — new, list, switch, close, none |
-| **gap-surfacer** *(reference)* | Shared gap- and comment-tracker framework loaded by `/gaps` and `/comments` |
-
-## Interactive skills vs. scheduled agents
-
-The skills above run when you invoke them — for when you're working a matter. The agents below run on a schedule — for what moves while you're not looking:
-
-| Agent | What it watches | Default cadence |
-|---|---|---|
-| **reg-change-monitor** | Regulatory feeds — filters by the materiality threshold learned at cold-start and posts a digest that's signal, not noise | Weekly (daily if the regulatory environment is active) |
-
-## Connectors and citation verification
-
-**Connect a research tool first — the citation guardrails depend on it.** Without one, every cite is tagged `[verify]` and the reviewer note above each deliverable records that sources weren't verified. The plugin works either way; it just does more of the verification for you when a research tool is connected.
-
-The legal research connectors in this plugin aren't just data sources — they're the difference between a verified citation and a citation you have to check. A citation retrieved through a connected research tool is tagged with its source and can be traced back. A citation from the model's knowledge or from web search is tagged `[verify]` or `[verify-pinpoint]` and should be checked against a primary source before anyone relies on it. The plugin tiers its citations so your verification time goes where it matters.
-
-## Integrations
-
-Ships with the general bucket of connectors in `.mcp.json`:
-
-- **Slack** — search messages, read channels, find discussions
-- **Google Drive** — search, read, and fetch documents
-
-Additional regulatory feed connectors can be added when partner URLs are available. Direct regulator RSS/email as fallback.
-
-## Prerequisites
-
-Owner notifications (gap assignments, due-date reminders, NPRM alerts) require a Slack MCP server in your environment. Without one, the gap tracker and comment tracker still work — notifications just won't post, and the skills will flag ungated items in the status report instead.
-
-## How it learns
-
-Your practice profile at `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` isn't static — it improves as you use the plugin. Skills tell you when an output used a default you should tune. The `reg-change-monitor` agent watches the regulatory feeds and flags changes against your policy library. You can re-run setup, edit the file directly, or tell a skill to record a new position.
-
-## Notes
-
-- Materiality filtering is the value. Everything is "technically a regulatory change" — the plugin learns what actually matters here.
-- Policy diff compares against indexed policies. If the policy library isn't connected, diffs run against what you paste.
-- This is the automated version of privacy-legal's `reg-gap-analysis`. Pair them: this one watches, that one deep-dives.
-
-## Configuration
-
-Your configuration is stored at `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` and survives plugin updates — you only run setup once.
+所有输出均为内部监管合规分析初稿。对外提交征求意见、监管回复、整改报告、承诺书、备案/申报材料前，必须经企业法务、合规负责人或中国执业律师复核。

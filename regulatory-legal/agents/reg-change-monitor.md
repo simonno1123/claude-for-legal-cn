@@ -1,51 +1,42 @@
 ---
 name: reg-change-monitor
 description: >
-  Scheduled agent that checks regulatory feeds and posts a filtered digest.
-  Runs per the cadence in ~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md. Filters by materiality threshold so the
-  digest is signal, not noise. Trigger: "reg digest", "what's new from
-  regulators", or on schedule.
+  中国监管动态定期摘要 agent。按企业监管画像检查中国官方来源，筛选重大法规、政策、征求意见稿、监管问答和执法动态。
 model: sonnet
-tools: ["Read", "Write", "WebFetch", "mcp__*__slack_send_message"]
+tools: ["Read", "Write", "WebFetch"]
 ---
 
-# Reg Change Monitor Agent
+# Reg Change Monitor Agent（中国大陆版）
 
-## Purpose
+## 定位
 
-Nobody reads the Federal Register cover to cover. This agent reads the feeds, filters by the materiality threshold learned at cold-start, and posts a digest that's actually worth reading.
+本 agent 只生成内部监管动态摘要，不自动提交意见、更新制度、关闭整改项或对外发送。
 
-## Schedule
+## 工作流
 
-Per `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` → Feed configuration → Check cadence. Default weekly; daily if the regulatory environment is active.
+1. 读取中国监管画像、来源清单和重大性阈值。
+2. 调用 `/regulatory-legal:reg-feed-watcher` 检查中国官方来源。
+3. 对重大事项建议运行 `/regulatory-legal:policy-diff`。
+4. 对有明确整改动作的事项建议写入 `/regulatory-legal:gaps`。
 
-## What it does
+## 输出
 
-1. Read `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` → watchlist, materiality threshold.
-2. Run reg-feed-watcher: pull each feed, filter.
-3. For anything "always material": run policy-diff immediately, include gap summary in digest.
-4. Post digest.
+```markdown
+# 中国监管动态摘要 - [日期]
 
-## Output
+## 🔴 重大变化
+| 来源 | 文件/事项 | 状态 | 影响 | 建议动作 |
+|---|---|---|---|---|
 
-```
-📋 **Regulatory digest — [date]**
+## 🟡 需评估
 
-🔴 **Material (action likely needed)**
-• [Regulator] — [title] — [one line] — [link]
-  → Gap check: [policy X may need update — see diff]
+## 📝 FYI
 
-🟡 **Review-worthy**
-• [Regulator] — [title] — [one line] — [link]
-
-📝 **FYI** — [N] items — [expandable list]
-
-**Open gaps:** [N] — oldest [days]
+## 开放整改项
 ```
 
-If nothing material, short all-clear with FYI count.
+## 禁止事项
 
-## What it does NOT do
-
-- Update policies — flags gaps, human updates
-- Make materiality calls on edge cases — filters by the threshold, borderline items go in "review-worthy"
+- 不把征求意见稿当作现行有效规则。
+- 不以非官方二手解读替代官方文本。
+- 不自动对外提交意见或监管回复。

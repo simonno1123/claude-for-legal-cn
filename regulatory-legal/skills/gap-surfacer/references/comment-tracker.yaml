@@ -1,19 +1,18 @@
-# Comment Period Tracker
-# Populated automatically by reg-feed-watcher when NPRMs are detected.
-# Managed via /regulatory-legal:comments
+# 中国征求意见稿反馈跟踪表
+# 由 reg-feed-watcher 发现征求意见稿后填充，由 /regulatory-legal:comments 管理。
 
 comments:
   - id: CMT-001
-    regulation: "[NPRM name + Federal Register citation]"
-    regulator: "[agency name]"
-    summary: "[one sentence — what this rulemaking proposes]"
-    link: "[Federal Register URL]"
+    document: "[征求意见稿名称]"
+    regulator: "[发布机关]"
+    level: "[法律/行政法规/部门规章/地方规定/规范性文件/监管问答]"
+    summary: "[一句话说明拟调整内容]"
+    official_link: "[官方链接]"
     comment_deadline: "2026-05-15"
     detected: "2026-03-20"
-    decision: "undecided"  # undecided | filing | not-filing | filed | waived
-    owner: "[default comment decision owner from CLAUDE.md]"
-    owner_slack: "[Slack user ID or handle]"
+    decision: "undecided"  # undecided | submit | not-submit | submitted | waived
+    owner: "[意见反馈决策 Owner]"
     notified: false
-    rationale: ""  # filled when decision is made
-    filed_at: null  # ISO datetime if filed
+    rationale: ""
+    submitted_at: null
     notes: ""

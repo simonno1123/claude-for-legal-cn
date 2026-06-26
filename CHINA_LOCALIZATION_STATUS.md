@@ -42,9 +42,9 @@
 | `litigation-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国民商事诉讼/仲裁下管辖、时效、证据交换、调查令、财产/证据/行为保全、举证期限、庭审质证、律师函、案件汇报、执行和外部律师协作主线改造 | 已完成 |
 | `ip-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国知识产权主线改造，覆盖 CNIPA/中国商标网/CPCC、商标绝对条款与撤三、专利发明/实用新型/外观设计 FTO、专利权评价报告、现有技术抗辩、平台通知删除/反通知 15 天等待期、商业秘密、海关知识产权保护、开源合规和权利组合续展/年费管理 | 已完成 |
 | `product-legal` | FTC/US consumer law 替换为《广告法》《消保法》《电商法》、市场监管、网信、算法/深度合成/生成式 AI 合规 | 高 |
-| `ai-governance-legal` | NIST/EU AI Act 默认框架替换为生成式 AI、算法推荐、深度合成、数据安全、个人信息保护、科技伦理和备案/评估路径 | 高 |
+| `ai-governance-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国 AI 治理主线改造，覆盖生成式 AI、算法推荐、深度合成、公众服务、备案/安全评估触发、内容安全、训练数据合法性、个人信息/PIPIA、供应商禁训/留存/跨境、企业 AI 使用制度和 AI 系统台账 | 已完成 |
 | `commercial-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国商事合同审查、采购/销售、SaaS、NDA、续约、授权用印、发票税务、审批流转和合同项目管理主线改造；后续可继续细化 agents 与外部系统连接器 | 已完成 |
-| `regulatory-legal` | Federal Register/Regulations.gov 替换为中国人大、国务院、部委、地方人大/政府、征求意见稿、规范性文件和监管问答 | 中 |
+| `regulatory-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国监管合规主线改造，覆盖国家法律法规数据库、中国人大、国务院、部委、地方政府、规范性文件、监管问答、征求意见稿、执法案例、政策差异分析、整改台账和制度修订 | 已完成 |
 | `law-student` | US case method/bar prep 替换为中国法考、请求权基础、法条体系、指导案例/典型案例、司法解释训练 | 中 |
 | `legal-clinic` | ABA/US clinic 语境替换为中国法律援助、12348、律协/高校诊所、导师审阅、执业边界 | 中 |
 | `legal-builder-hub` | 社区技能 QA 保留，但信任审查增加中国法律资料源、MCP 安全、合规边界 | 低 |
@@ -86,4 +86,19 @@
 - 已重写 `takedown` 与 `cease-desist`，切换为《民法典》第1195-1197条、《电子商务法》第41-45条下的通知删除、反通知、15天等待期、平台投诉、行政投诉、律师函和诉讼/保全路径。
 - 已重写 `cold-start-interview`、`infringement-triage`、`portfolio`、`ip-renewal-watcher`、`invention-intake`、`ip-clause-review`、`oss-review` 和 `matter-workspace`，补齐 CPCC 软著、商业秘密、海关知识产权保护、开源合规和中国权利组合期限管理。
 - 新增 `ip-legal/references/china-ip-core-rules.md` 与 `ip-legal/references/test-cases-cn.md`，建立 10 个中国知识产权高压回归用例。
+- `ip-legal` 收口修正：重写 `customize` 为中国知识产权画像局部更新器，并将 `.mcp.json` 的知识产权连接器说明改为仓库根目录 references 路径和国内 IP 数据源语义。
+
+## 2026-06-26 ai-governance-legal 更新
+
+- `ai-governance-legal` Phase 1 深改完成：重写插件级 `CLAUDE.md`、`README.md`、`currency-watch.md`，新增 `references/china-ai-governance-rules.md` 与 `references/test-cases-cn.md`。
+- 已重写 `cold-start-interview`、`ai-inventory`、`use-case-triage`、`aia-generation`、`vendor-ai-review`、`policy-starter`、`reg-gap-analysis`、`policy-monitor`、`matter-workspace`、`customize`。
+- 默认框架已从 EU AI Act/NIST/美国州法切换为中国生成式 AI、算法推荐、深度合成、PIPL/DSL/CSL、备案/安全评估、内容安全、供应商禁训/留存/跨境和企业 AI 使用制度。
 - 残留扫描已清除核心美国法/普通法污染词，JSON 与技能 frontmatter 验证通过。
+
+## 2026-06-26 regulatory-legal 更新
+
+- `regulatory-legal` Phase 1 深改完成：重写插件级 `CLAUDE.md`、`README.md`、监管来源目录和监管变化监控 agent。
+- 已重写 `cold-start-interview`、`reg-feed-watcher`、`policy-diff`、`gaps`、`gap-surfacer`、`comments`、`policy-redraft`、`matter-workspace`、`customize`。
+- 默认来源已从 Federal Register、Regulations.gov、CFR、CourtListener、Westlaw 切换为国家法律法规数据库、中国人大、国务院、司法部、网信办、市场监管总局、工信部、地方政府、规范性文件、监管问答、征求意见稿和执法案例。
+- 已将征求意见跟踪模板改造为中国监管语义，覆盖草案来源、意见截止日、反馈主体、提交渠道、采纳情况和后续制度修订。
+- 残留扫描仅保留“禁止默认使用/不得套用”的负向约束，JSON 与技能 frontmatter 验证通过。

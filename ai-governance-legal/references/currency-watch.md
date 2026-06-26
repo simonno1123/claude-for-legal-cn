@@ -1,38 +1,44 @@
-# AI Governance Currency Watch
+# China AI Governance Currency Watch
 
-**Last verified: 2026-05-10.**
+Use this checklist for `reg-gap-analysis`, `policy-monitor`, `use-case-triage`, and `security-assessment`. AI rules, filing practice, telecom/app launch practice, MLPS requirements, standards, and provincial CAC guidance change quickly. Mark only genuinely unverified regulator practice as `[to verify]`.
 
-> **⚠️ Staleness check.** If the last-verified date above is more than 90 days old, treat this file as stale and verify each entry before relying on it. A stale watch list is worse than no watch list — it looks current while being wrong. When a skill reads this file, check the last-verified date first. If stale, say: "The currency watch was last verified [date] — [N] months ago. I'm using it as a checklist of areas to search, not as a source of current status." When you update any entry, also update the last-verified date at the top.
+## Highest Priority Sources
 
-AI law moves faster than model training data. Before relying on an effective date, threshold, or obligation, verify it against a current source. These are the areas most likely to have moved:
+- Cyberspace Administration of China and provincial cyberspace administrations.
+- Ministry of Industry and Information Technology (MIIT): ICP filing, App filing, value-added telecom license, app/SDK governance.
+- Ministry of Public Security (MPS): MLPS 2.0, cybersecurity incident handling, AI fraud/deepfake fraud enforcement.
+- National Information Security Standardization Technical Committee (TC260): TC260-PG-20241A and synthetic-content marking standards.
+- State Administration for Market Regulation, NRTA, Ministry of Education, Ministry of Science and Technology, sector regulators.
+- National standards full-text disclosure system and official standard-release channels.
 
-## US state AI laws (enacted, effective dates shifting)
+## FINAL: 2024 CAC Cross-Border Data Flow Rules
 
-| State | Law | Status as of May 2026 | Verify |
-|---|---|---|---|
-| Colorado | SB 24-205 (Colorado AI Act) | Effective date postponed to **June 30, 2026** (SB 25B-004). Pending ADMT Framework rewrite would push to Jan 2027. | [Colorado AG](https://coag.gov) |
-| Texas | TRAIGA | **In force Jan 1, 2026.** Texas AG exclusive enforcement, $10K–$200K/violation, 60-day cure. | [Texas AG](https://www.texasattorneygeneral.gov) |
-| Nebraska | LB 525 (Conversational AI Safety Act) | Signed April 14, 2026. Disclosure to minors + chatbot-is-not-human disclosure. | NE Legislature |
-| Maine | LD 2082 | Signed April 13, 2026. Prohibits AI-delivered therapy without licensed professional. | ME Legislature |
-| Tennessee | SB 837 | "Person" in TN Code does not include AI. | TN Legislature |
-| NYC | Local Law 144 | In force. Annual bias audit for AEDT in hiring/promotion. | NYC DCWP |
-| Illinois | AIPA (820 ILCS 42) | Video interview consent — in force since 2020. | IL General Assembly |
-| Illinois | HB 3773 (Human Rights Act AI amendment) | In force Jan 1, 2026. Employers may not use AI to discriminate in hiring, promotion, discipline, discharge. Notice required. Distinct from AIPA. | IL Dept of Human Rights |
+Apply the March 22, 2024 CAC `促进和规范数据跨境流动规定` as an effective rule baseline.
 
-## EU AI Act implementation
+Core routing:
 
-- **Digital Omnibus (provisional agreement May 7, 2026):** national sandbox deadline → Aug 2, 2027; transparency grace period shortened to 3 months (new deadline Dec 2, 2026); new prohibition on AI-generated NCII/CSAM. The May 7 provisional agreement settled the high-risk deferrals; final text pending Council/Parliament formal adoption. `[verify adoption status]`
-- **Implementing acts:** check EUR-Lex for the latest Commission implementing regulations on conformity assessment, standards, and the AI Office.
-- **National transposition:** Germany, France, Netherlands, Ireland most active. Check national DPA sites.
+- If a non-CIIO exports personal information of fewer than 100,000 individuals since January 1 of the current year, excluding sensitive personal information, it is exempt from data export security assessment, personal information export standard contract filing, and personal information protection certification.
+- If a non-CIIO exports personal information of 100,000 or more but fewer than 1,000,000 individuals since January 1 of the current year, or sensitive personal information of fewer than 10,000 individuals, route to personal information export standard contract or personal information protection certification.
+- If a non-CIIO exports personal information of 1,000,000 or more individuals since January 1 of the current year, or sensitive personal information of 10,000 or more individuals, route to CAC data export security assessment.
+- If important data is involved, do not use the personal-information exemption path. Route to important data identification, sector rules, localization/export control, and CAC/security assessment review.
+- Even when exempt, PIPIA, notice/consent or lawful basis, contract controls, minimization, retention, security measures, and audit evidence still apply.
 
-## Federal (US)
+## Must-Watch Topics
 
-- EEOC AI guidance (2023) still in effect. Watch for a notice-and-comment rule.
-- FTC §5 theory expanding: *FTC v. Humor Rainbow/OkCupid* (March 2026) — undisclosed training-data sharing as a §5 violation.
-- Executive orders change with administrations. Verify current policy.
+- Generative AI service filing, security assessment, content safety, training data compliance, and public-service filing lists.
+- Algorithm recommendation filing, personalized recommendation off-switch, public opinion/social mobilization capability, and minor protection.
+- Deep synthesis visible marking, implicit watermark/metadata, real-name authentication, anti-tampering, and complaint handling.
+- TC260-PG-20241A `生成式人工智能服务安全基本要求` and later versions or replacement standards.
+- ICP filing and App filing requirements for websites, apps, mini-programs, and app-store distribution.
+- Value-added telecom business licensing, including B25 ICP License where paid information service or API/SaaS charging is triggered.
+- MLPS 2.0 filing and assessment expectations, especially Level 3/Level 2 practice for public-facing AI systems.
+- Important data catalogues and sector data rules for automotive, industrial, financial, medical, mapping/geolocation, government, and critical-sector data.
+- Personal information, sensitive personal information, automated decision-making, PIPIA, SDK/API use, public-facing AI privacy notices.
+- AI-generated content IP, training data source legality, trade secrets, open-source model licenses, and software/code generation.
+- Enterprise internal AI use, employee input of confidential materials, customer data training, vendor retention, and model training clauses.
 
-## How to use this file
+## Output Requirements
 
-When a skill cites an effective date, threshold, or obligation in this space, it should note: "AI law is moving fast — this date/rule may have changed since my training. Verify at [source]. See `references/currency-watch.md` for the live list."
-
-**This file goes stale.** It was current as of May 2026. Update it when you notice a date it lists has passed or a rule it lists has changed. A stale watch list is worse than no watch list.
+- Distinguish current effective rules, draft rules, national standards, recommended standards, filing practice, regulatory Q&A, testing guides, and enforcement cases.
+- Identify impacted systems, data, vendors, product features, policy files, approval workflows, privacy notices, user agreements, MLPS materials, MIIT filings, and incident response procedures.
+- For each change, list whether it affects algorithm filing, generative AI filing/security assessment, deep synthesis marking, real-name authentication, ICP/App filing, ICP License, MLPS, content safety reporting, important data, data export, or PIPIA.

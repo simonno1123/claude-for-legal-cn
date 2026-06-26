@@ -1,6 +1,6 @@
 {
   "name": "ai-governance-legal",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "面向中国生成式人工智能、算法推荐、深度合成、数据安全、个人信息保护和企业 AI 使用治理的合规工作流。",
   "author": {
     "name": "Anthropic reference; China localization by Codex"
