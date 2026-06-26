@@ -6,6 +6,16 @@ This document starts Phase 2 after the Phase 1 China Mainland localization basel
 
 Phase 2 covers modules intentionally excluded from the Phase 1 default marketplace because they require deeper specialization, lower-frequency workflows, or ecosystem tooling.
 
+
+## Case Authority Update Layer
+
+Status: COMPLETE. The repository now includes an updateable China Case Authority Layer:
+
+- `references/china-case-authority.md`
+- `references/case-authority-sources.json`
+
+This layer reserves update interfaces for the People's Court Case Library, Supreme People's Court releases, China Judgments Online, and commercial legal databases. Cases are used for similar-case reasoning and adjudication calibration, not as common-law precedent.
+
 ## Workstreams
 
 ### 1. Corporate M&A Phase 1.5

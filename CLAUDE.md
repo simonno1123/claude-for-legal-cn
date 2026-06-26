@@ -1,5 +1,14 @@
 # CLAUDE.md
 
+## China Case Authority Layer
+
+All China Mainland legal modules should use `references/china-case-authority.md` when a legal question depends on adjudication practice, similar-case reasoning, burden of proof, damages, enforcement, or local court/arbitration tendencies.
+
+Case materials must remain updateable. Do not hard-code case rules into prompts as permanent doctrine. Use `references/case-authority-sources.json` as the update interface for the People's Court Case Library, Supreme People's Court releases, China Judgments Online, and commercial legal databases.
+
+Required rule: guiding cases and reference cases may calibrate reasoning, but they are not common-law precedent and do not replace statutes, judicial interpretations, or mandatory rules.
+
+
 ## 中国化改造工作准则
 
 本仓库是 `claude-for-legal-cn`，目标是中国法律体系落地。编辑任何技能、代理、README 或连接器时，必须优先适配中国大陆法律、中文法律工作流和中国常用法律数据库；不得新增美国州法、普通法、Westlaw/CourtListener 等作为默认路径。第三方海外插件仅作为可选外部集成，不进入默认安装清单。

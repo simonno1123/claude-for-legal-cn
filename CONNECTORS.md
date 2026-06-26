@@ -1,5 +1,24 @@
 # 添加连接器
 
+## China Case Authority Update Connectors
+
+The repository now reserves an update interface for guiding cases, reference cases, typical cases, and ordinary judgments:
+
+- Rule file: `references/china-case-authority.md`
+- Source/update contract: `references/case-authority-sources.json`
+
+Recommended MCP connector placeholders:
+
+| Connector | Source | Purpose |
+|---|---|---|
+| `people-court-case-library` | ??????? | guiding cases and reference cases |
+| `supreme-peoples-court` | ???????? | guiding cases, typical cases, judicial policy releases |
+| `china-judgments-online` | ??????? | ordinary judgments for trend/sample research |
+| `commercial-legal-database` | ???? / ???? / ?? / Alpha | bring-your-own-key legal research integration |
+
+These connectors must return metadata including case type, case number, issuing court/body, retrieval date, source URL, and freshness tag. They must not store real credentials in repository files; use environment variables only.
+
+
 > 中国版默认连接器建议见 [`references/china-connectors.md`](references/china-connectors.md)。本文件继续作为连接器提交和评估说明。
 
 插件在连接到权威数据源时效果最佳。如果你构建或运营法律数据源、法律研究工具、合同管理系统（CLM）、文档管理系统（DMS）、电子取证平台或法律实务管理系统，我们欢迎你的 MCP 连接器加入本套件。

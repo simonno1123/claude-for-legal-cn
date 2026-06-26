@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "purpose": "Update interface for China Mainland guiding cases, reference cases, typical cases, and ordinary judgments.",
+  "default_jurisdiction": "China Mainland",
+  "freshness_policy": {
+    "guiding_cases_days": 30,
+    "people_court_case_library_reference_cases_days": 7,
+    "typical_cases_days": 30,
+    "ordinary_judgments_days": 0
+  },
+  "sources": [
+    {
+      "id": "people-court-case-library",
+      "title": "人民法院案例库",
+      "authority_tiers": ["guiding_case", "reference_case"],
+      "connector": "people-court-case-library",
+      "endpoint_env": "PEOPLE_COURT_CASE_LIBRARY_ENDPOINT",
+      "api_key_env": "PEOPLE_COURT_CASE_LIBRARY_API_KEY",
+      "default_endpoint": "https://rmfyalk.court.gov.cn/",
+      "update_mode": "mcp_or_manual",
+      "required_metadata": ["case_title", "case_type", "court_or_issuer", "case_number", "retrieval_date", "source_url"]
+    },
+    {
+      "id": "supreme-peoples-court",
+      "title": "最高人民法院官网",
+      "authority_tiers": ["guiding_case", "typical_case", "judicial_policy"],
+      "connector": "supreme-peoples-court",
+      "endpoint_env": "SPC_ENDPOINT",
+      "api_key_env": "SPC_API_KEY",
+      "default_endpoint": "https://www.court.gov.cn/",
+      "update_mode": "mcp_or_manual",
+      "required_metadata": ["title", "issuer", "publish_date", "retrieval_date", "source_url"]
+    },
+    {
+      "id": "china-judgments-online",
+      "title": "中国裁判文书网",
+      "authority_tiers": ["ordinary_judgment"],
+      "connector": "china-judgments-online",
+      "endpoint_env": "CHINA_JUDGMENTS_ENDPOINT",
+      "api_key_env": "CHINA_JUDGMENTS_API_KEY",
+      "default_endpoint": "",
+      "update_mode": "mcp_or_manual",
+      "required_metadata": ["case_title", "court", "case_number", "judgment_date", "retrieval_date"]
+    },
+    {
+      "id": "commercial-legal-databases",
+      "title": "北大法宝 / 威科先行 / 法信 / Alpha 等商业数据库",
+      "authority_tiers": ["guiding_case", "reference_case", "typical_case", "ordinary_judgment", "commentary"],
+      "connector": "commercial-legal-database",
+      "endpoint_env": "LEGAL_DATABASE_ENDPOINT",
+      "api_key_env": "LEGAL_DATABASE_API_KEY",
+      "default_endpoint": "",
+      "update_mode": "bring_your_own_key",
+      "required_metadata": ["database_name", "case_title", "case_type", "case_number", "retrieval_date"]
+    }
+  ],
+  "output_contract": {
+    "must_include": [
+      "source_id",
+      "authority_tier",
+      "case_title",
+      "case_number",
+      "court_or_issuer",
+      "retrieval_date",
+      "freshness_tag",
+      "similarity",
+      "distinction",
+      "usability"
+    ],
+    "must_not_claim": [
+      "common_law_precedent",
+      "binding_precedent",
+      "automatic_case_outcome"
+    ]
+  }
+}

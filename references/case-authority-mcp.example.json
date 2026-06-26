@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "people-court-case-library": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "mcp/people-court-case-library-bridge"],
+      "env": {
+        "PEOPLE_COURT_CASE_LIBRARY_ENDPOINT": "${PEOPLE_COURT_CASE_LIBRARY_ENDPOINT:https://rmfyalk.court.gov.cn/}",
+        "PEOPLE_COURT_CASE_LIBRARY_API_KEY": "${PEOPLE_COURT_CASE_LIBRARY_API_KEY}"
+      },
+      "title": "人民法院案例库 (指导性案例 / 参考案例，占位配置)"
+    },
+    "supreme-peoples-court": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "mcp/supreme-peoples-court-bridge"],
+      "env": {
+        "SPC_ENDPOINT": "${SPC_ENDPOINT:https://www.court.gov.cn/}",
+        "SPC_API_KEY": "${SPC_API_KEY}"
+      },
+      "title": "最高人民法院官网案例与典型案例发布 (占位配置)"
+    },
+    "commercial-legal-database": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "mcp/commercial-legal-database-bridge"],
+      "env": {
+        "LEGAL_DATABASE_VENDOR": "${LEGAL_DATABASE_VENDOR}",
+        "LEGAL_DATABASE_ENDPOINT": "${LEGAL_DATABASE_ENDPOINT}",
+        "LEGAL_DATABASE_API_KEY": "${LEGAL_DATABASE_API_KEY}"
+      },
+      "title": "商业法律数据库案例检索 (自带凭证，占位配置)"
+    }
+  }
+}
