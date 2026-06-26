@@ -1,137 +1,98 @@
-# M&A Diligence — Standard Column Set
+# 中国并购尽调标准列
 
-The default schema for a buy-side target contract review. Start here, then add or cut columns based on the deal. This is a starting point, not a checklist — the purchase agreement's reps and the request list drive what actually matters.
+默认用于买方尽调批量合同和资料审查。交易文件、尽调清单和行业特点优先于本模板。
 
 ```yaml
 schema:
-  name: "M&A Diligence — Standard"
+  name: "中国并购尽调 - 标准列"
   columns:
     - id: counterparty
-      label: "Counterparty"
+      label: "相对方"
       type: verbatim
-      prompt: "Name the contracting party other than the target entity, exactly as it appears."
+      prompt: "合同或文件中的相对方名称是什么？按原文摘录。"
 
-    - id: agreement_type
-      label: "Agreement Type"
+    - id: document_type
+      label: "文件类型"
       type: classify
-      options: [msa, purchase_order, license_in, license_out, lease, services, supply, distribution, nda, joint_venture, loan, guaranty, employment, other]
-      prompt: "What kind of agreement is this?"
+      options: [customer_contract, supplier_contract, lease, ip_license, loan, guarantee, employment, distribution, platform, government_subsidy, corporate_record, permit, litigation, other]
+      prompt: "该文件属于哪一类？"
 
-    - id: effective_date
-      label: "Effective Date"
+    - id: signing_date
+      label: "签署日期"
       type: date
-      prompt: "When did this agreement become effective?"
+      prompt: "文件签署日期是什么？"
 
     - id: term
-      label: "Term"
+      label: "期限"
       type: duration
-      prompt: "What is the initial term?"
-
-    - id: auto_renewal
-      label: "Auto-Renewal"
-      type: classify
-      options: [none, annual, fixed_period, evergreen]
-      prompt: "Does the agreement auto-renew? On what cycle?"
-
-    - id: termination_for_convenience
-      label: "Termination for Convenience"
-      type: classify
-      options: [none, either_party, target_only, counterparty_only]
-      prompt: "Can either party terminate without cause? Who?"
-
-    - id: termination_notice
-      label: "Termination Notice Period"
-      type: duration
-      prompt: "How much notice is required to terminate?"
+      prompt: "合同或权利义务期限是什么？"
 
     - id: change_of_control
-      label: "Change of Control"
+      label: "控制权变更"
       type: classify
-      options: [silent, consent_required, consent_not_unreasonably_withheld, automatic_termination, notice_only, counterparty_right_to_terminate]
-      prompt: "Does the agreement address a change of control of the target? What triggers and what happens?"
+      options: [not_present, notice_only, consent_required, termination_right, price_adjustment, unclear]
+      prompt: "是否约定股权转让、实际控制人变更、合并分立或控制权变更的通知、同意、解除或价格调整？"
 
     - id: assignment
-      label: "Assignment"
+      label: "合同转让/权利义务转移"
       type: classify
-      options: [silent, consent_required, consent_not_unreasonably_withheld, freely_assignable, assignable_to_affiliates, non_assignable]
-      prompt: "Can the target assign this agreement? What restrictions apply?"
+      options: [not_present, freely_transferable, notice_required, consent_required, prohibited, unclear]
+      prompt: "合同权利义务是否可以转让？是否需要通知或同意？"
+
+    - id: termination
+      label: "终止权"
+      type: classify
+      options: [not_present, convenience_by_either, target_only, counterparty_only, breach_only, change_of_control_trigger, unclear]
+      prompt: "相对方是否可因交易或其他原因提前终止？"
 
     - id: exclusivity
-      label: "Exclusivity / Non-Compete"
+      label: "排他/限制"
       type: classify
-      options: [none, exclusive_supplier, exclusive_customer, non_compete, non_solicit, territory_restriction, most_favored_nation]
-      prompt: "Does the agreement restrict either party from competing or contracting with others?"
+      options: [not_present, exclusivity, non_compete, territory_restriction, minimum_purchase, mfn, unclear]
+      prompt: "是否存在排他、竞业限制、区域限制、最低采购或最惠待遇？"
 
     - id: liability_cap
-      label: "Liability Cap"
+      label: "责任上限"
       type: currency
-      prompt: "Is there a cap on liability? What is the amount or multiplier?"
+      prompt: "是否存在违约责任或赔偿责任上限？金额或计算方式是什么？"
 
-    - id: indemnification
-      label: "Indemnification"
+    - id: guarantee_security
+      label: "担保/负担"
       type: classify
-      options: [none, mutual, target_indemnifies, counterparty_indemnifies, ip_only, third_party_claims_only]
-      prompt: "Who indemnifies whom, and for what?"
+      options: [not_present, guarantee, mortgage, pledge, lien, retention_of_title, unclear]
+      prompt: "是否存在保证、抵押、质押、留置、所有权保留或其他负担？"
 
-    - id: governing_law
-      label: "Governing Law"
+    - id: license_permit
+      label: "许可/资质"
+      type: classify
+      options: [not_present, license_required, filing_required, cannot_transfer, renewal_required, unclear]
+      prompt: "是否涉及行政许可、备案、强制认证或不可转让资质？"
+
+    - id: personal_info_data
+      label: "个人信息/数据"
+      type: classify
+      options: [not_present, personal_info, sensitive_personal_info, important_data_possible, cross_border_possible, unclear]
+      prompt: "文件是否涉及个人信息、敏感个人信息、重要数据或数据出境？"
+
+    - id: labor_social_security
+      label: "劳动社保"
+      type: classify
+      options: [not_present, employee_transfer, unpaid_social_security, dispatch_or_outsourcing, non_compete, dispute, unclear]
+      prompt: "是否涉及员工转移、社保公积金、劳务派遣、竞业限制或劳动争议？"
+
+    - id: governing_law_dispute
+      label: "法律适用/争议解决"
       type: verbatim
-      prompt: "What jurisdiction's law governs?"
+      prompt: "法律适用和争议解决条款原文是什么？"
 
-    - id: dispute_resolution
-      label: "Dispute Resolution"
+    - id: action_required
+      label: "后续动作"
       type: classify
-      options: [litigation, arbitration_binding, arbitration_nonbinding, mediation_first, silent]
-      prompt: "How are disputes resolved?"
-
-    - id: most_favored_nation
-      label: "MFN / Pricing Protection"
-      type: classify
-      options: [none, mfn_pricing, price_matching, benchmarking_right]
-      prompt: "Is there a most-favored-nation or pricing protection clause?"
-
-    - id: minimum_commitments
-      label: "Minimum Purchase / Volume Commitments"
-      type: currency
-      prompt: "Are there minimum purchase, volume, or spend commitments?"
-
-    - id: ip_ownership
-      label: "IP Ownership"
-      type: classify
-      options: [each_owns_own, target_owns_work_product, counterparty_owns_work_product, joint, license_only, silent]
-      prompt: "Who owns intellectual property created or used under the agreement?"
-
-    - id: confidentiality_term
-      label: "Confidentiality Survival"
-      type: duration
-      prompt: "How long do confidentiality obligations survive termination?"
-
-    - id: insurance_requirements
-      label: "Insurance Requirements"
-      type: classify
-      options: [none, general_liability, professional_liability, cyber, workers_comp, umbrella]
-      prompt: "What insurance must be maintained?"
-
-    - id: audit_rights
-      label: "Audit Rights"
-      type: classify
-      options: [none, counterparty_may_audit_target, target_may_audit_counterparty, mutual]
-      prompt: "Does either party have audit rights?"
-
-    - id: notices
-      label: "Notice Requirements"
-      type: verbatim
-      prompt: "What is the notice address and method for the target?"
+      options: [none, add_to_closing_checklist, add_to_integration_tracker, request_more_documents, escalate_to_counsel, unclear]
+      prompt: "该文件是否产生交割前或交割后行动项？"
 ```
 
-## Common additions by deal type
+## 快速首轮列
 
-- **Tech / IP-heavy targets:** source code escrow, open source restrictions, data rights, model training rights, API access
-- **Healthcare / life sciences:** BAA presence, regulatory filing obligations, FDA correspondence, clinical trial obligations
-- **Government contractors:** novation consent requirements, flow-down clauses, security clearance, FAR/DFARS citations
-- **Real estate:** renewal options, rent escalation, CAM provisions, subordination, estoppel requirements
-- **Regulated financial:** regulatory approval conditions, capital requirements, FINRA/SEC filing triggers
+时间紧时先跑以下字段：相对方、文件类型、签署日期、控制权变更、合同转让、终止权、担保/负担、后续动作。
 
-## Common cuts for a fast first pass
-
-For a time-pressured initial screen, these 6 columns answer 80% of the early deal questions: counterparty, effective_date, term, change_of_control, assignment, termination_for_convenience. Run those first, expand the schema once the deal team has prioritized.

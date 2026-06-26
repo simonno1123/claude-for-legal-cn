@@ -1,158 +1,86 @@
 ---
 name: material-contract-schedule
 description: >
-  Build the material contracts disclosure schedule from diligence findings,
-  applying the purchase agreement's Material Contract definition and formatting
-  per the agreement's schedule format. Use when user says "build the contracts
-  schedule", "disclosure schedule", "schedule 3.X", "material contracts list",
-  or when drafting disclosure schedules.
-argument-hint: "[purchase agreement path, or paste the Material Contract definition]"
----
-<!-- CHINA_LOCALIZATION_START -->
-## 中国法域与引用规则（强制）
-
-- 默认法域为中华人民共和国大陆地区法律；不得默认套用美国法、州法、普通法或欧盟法框架。
-- 引述中国法律法规时，必须标注法律全称/缩略 + 条文序号（条/款/项）；无法确认时写 `[法条待查证]`，并停止编造式引用。
-- 区分法律、行政法规、部门规章、司法解释、地方性法规、规范性文件、指导案例/典型案例的效力层级。
-- 涉及地方差异（最低工资、社保、公积金、产假、监管口径、法院管辖等）时，必须标注适用省/市及 `[地方规定 — 待查证]`。
-- 输出均为中文法律工作初稿，供执业律师或企业法务审阅；涉及发送、签署、备案、申报、起诉、仲裁、解除劳动合同等后果性动作前，必须设置人工确认门。
-<!-- CHINA_LOCALIZATION_END -->
-
-
-# /material-contract-schedule
-
-1. Load purchase agreement → Material Contract definition + schedule format.
-2. Use the workflow below.
-3. Apply definition to diligence findings. Flag edge cases.
-4. Format per agreement. Consent overlay feeds closing checklist.
-
+  中国并购重大合同披露表生成。根据交易文件中的重大合同定义和尽调发现，
+  生成披露附表，并单独维护控制权变更、合同转让、提前终止和第三方同意
+  清单。适用于“重大合同附表”“披露表”“合同清单”等场景。
+argument-hint: "[交易文件路径，或粘贴重大合同定义]"
 ---
 
-## Matter context
+# /corporate-legal:material-contract-schedule
 
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/corporate-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/corporate-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
+## 强制中国法边界
 
----
+- 默认适用中国大陆合同和并购交易实践。
+- 不套用美国披露附表、政府合同 novation、privilege 等默认表述。
+- 披露附表交付给交易相对方前，必须去除内部风险评注、谈判策略和法务意见。
 
-## Purpose
+## 目标
 
-The purchase agreement has a rep: "Schedule 3.X lists all Material Contracts." This skill builds that schedule from the diligence findings — which contracts are material per the agreement's definition, in the format the agreement requires.
+按照交易文件的“重大合同”定义，筛选目标公司合同并生成披露附表。附表本身服务于陈述保证；内部同意清单服务于交割和投后整合。
 
-## Load context
+## 重大合同常见口径
 
-- Purchase agreement draft — for the definition of "Material Contract" and the schedule format
-- `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → materiality thresholds (may differ from the agreement definition — use the agreement's)
-- Diligence findings from diligence-issue-extraction — contract-level data
+必须先读取交易文件定义；如无定义，可建议以下中国并购常见维度：
 
-## Workflow
+- 年度交易额、累计交易额或剩余履行金额超过阈值。
+- 前十大客户、前十大供应商、核心渠道、核心平台、核心许可。
+- 控制权变更、股权转让、资产转让、合并分立或实际控制人变更触发同意/解除。
+- 排他、独家、最低采购、最惠待遇、价格锁定、竞业限制或区域限制。
+- 借款、担保、抵押、质押、融资租赁、保理、供应链金融。
+- 不动产租赁、重要设备租赁、知识产权许可、技术开发、数据合作。
+- 关联交易合同、非正常商业条款、长期亏损合同。
+- 政府补贴、招商协议、产业园协议或带有返还/违约责任的政策协议。
 
-### Step 1: Get the definition
+## 工作流程
 
-Pull the definition of "Material Contract" from the purchase agreement — the PA definition controls. Deal-structure differences (stock vs. asset vs. merger) can change how a prong is interpreted, and regulated-industry overlays (healthcare, defense, financial services, telecom, government contracting) can add consent requirements that live outside the PA. If the deal involves any of those overlays, research the applicable anti-assignment or novation rules (for example, federal contracts, government contracting novation, sector-specific consent statutes) and cite the controlling rule.
+### 1. 抽取定义
 
-Common prong categories to look for in the PA definition — these are not a substitute for reading the PA, and the list the PA uses controls:
+读取交易文件中的“重大合同”定义，并列出每一项筛选标准。交易文件定义优先于一般模板。
 
-- Dollar-value threshold (annual or aggregate)
-- Term length
-- Change-of-control or anti-assignment provision
-- Exclusivity or non-compete
-- Top N customer or supplier contracts
-- Real property leases
-- IP licenses (in-bound and out-bound)
-- Related-party agreements
-- Government contracts
-- Contracts outside the ordinary course
-
-The PA's definition is the test. Apply it mechanically — every contract that meets any prong in the PA's definition goes on the schedule.
-
-### Step 2: Apply the definition to the findings
-
-For each contract reviewed in diligence:
-
-| Contract | Meets prong(s) | Include |
-|---|---|---|
-| [name] | [$X+ annual value; CoC provision] | Yes |
-| [name] | [none] | No |
-
-**Edge cases to flag for human decision:**
-- Contract is $X-1 (just under threshold) but important to the business
-- Contract meets a prong but is being terminated anyway
-- Oral agreements or side letters that may or may not count
-
-### Step 3: Gather schedule data
-
-For each included contract, the schedule typically needs:
-
-| Field | Source |
-|---|---|
-| Counterparty name | Contract |
-| Contract title/type | Contract |
-| Date | Contract |
-| Term / expiration | Contract |
-| Annual/total value | Contract or management data |
-| Which materiality prong it meets | Step 2 analysis |
-| Consent required for the deal | Diligence finding |
-| VDR reference | Diligence inventory |
-
-Pull from existing diligence extractions. If a field is missing, flag it — don't guess.
-
-### Step 4: Format per the agreement
-
-Disclosure schedules have a format — usually a numbered list or a table, sometimes with sub-parts by contract type. Match the format of the other schedules in the draft agreement.
+### 2. 筛选合同
 
 ```markdown
-## Schedule 3.[X] — Material Contracts
-
-The following are the Material Contracts as of the date hereof:
-
-### (a) Customer Contracts
-
-1. [Agreement Title], dated [date], between [Target] and [Counterparty].
-   [Brief description if the format calls for it.]
-   [VDR: path]
-
-2. [...]
-
-### (b) Supplier Contracts
-
-[...]
-
-### (c) Real Property
-
-[...]
-
-[etc. — sub-parts per the agreement's definition structure]
+| 合同 | 相对方 | 触发的重大合同标准 | 是否列入附表 | 依据 |
+|---|---|---|---|---|
+| [合同名称] | [相对方] | 年交易额超过阈值；含控制权变更条款 | 是 | [文件/条款] |
 ```
 
-### Step 5: Consent tracking overlay
+### 3. 生成披露附表
 
-Separately (not in the schedule itself — this is internal), track which scheduled contracts require consent.
+```markdown
+## 附表 [编号] 重大合同
 
-> The consent overlay and any pre-delivery working draft of the schedule are derived from privileged diligence materials and inherit their privilege and confidentiality status — distribution beyond the privilege circle can waive privilege. The schedule itself, once delivered as an exhibit to the executed PA, is a deal document and is not privileged; strip any internal annotations before delivery.
+截至本协议签署日，目标公司重大合同如下：
 
+| 序号 | 合同名称 | 相对方 | 签署日期 | 合同类型 | 期限 | 重大合同标准 | 资料室引用 |
+|---:|---|---|---|---|---|---|---|
+| 1 | [名称] | [相对方] | [日期] | [类型] | [期限] | [标准] | [路径] |
+```
 
-| Schedule # | Counterparty | Consent required | Status | Owner | Due |
+### 4. 生成内部同意与风险覆盖表
+
+该表不得直接放入对外披露附表，除非律师确认。
+
+```markdown
+## 内部合同同意覆盖表
+
+| 合同 | 控制权变更 | 转让限制 | 终止权 | 同意/通知要求 | 是否进交割清单 |
 |---|---|---|---|---|---|
-| 3.X(a)(1) | [name] | Yes — CoC §12.2 | Requested | [name] | [date] |
+| [合同] | [有/无/不明] | [有/无/不明] | [有/无/不明] | [条款摘要] | [是/否] |
+```
 
-This feeds closing-checklist.
+## 中国法卡点
 
-## Cross-check
+- 合同转让：区分债权转让通知、债务转移需债权人同意、合同权利义务概括转让需相对方同意。
+- 股权收购：目标公司合同主体不变，但控制权变更条款可能触发通知、同意或解除权。
+- 资产收购：合同通常不能自动随资产转移，需逐份确认转让、换签或债权债务承继安排。
+- 租赁、不动产、资质许可、平台账号、政府补贴协议常存在不可转让或审批要求。
+- 关联交易、担保、借款合同需与公司治理批准、章程授权和银行授信条件联动核查。
 
-Before delivering:
+## 交接
 
-- Every contract that met a prong is on the schedule (completeness)
-- No contract is on the schedule that doesn't meet a prong (no over-disclosure — it's a rep, not a data dump)
-- Schedule is consistent with the other reps (a contract on Schedule 3.X that creates a lien should also be on the liens schedule)
-- Every entry has a VDR cite so buyer's counsel can find the underlying doc
+- 列入附表的合同交给交易文件团队。
+- 需要同意、通知、解除、换签、补充协议的合同交给 `closing-checklist`。
+- 交割后继续办理的合同交给 `integration-management`。
 
-## Handoffs
-
-- **From diligence-issue-extraction:** Contract-level findings are the input.
-- **To closing-checklist:** Consent items go on the checklist.
-
-## What this skill does not do
-
-- It doesn't decide the materiality definition — that's in the purchase agreement.
-- It doesn't obtain consents — it tracks which ones are needed.
-- It doesn't draft the rep — it populates the schedule the rep references.

@@ -1,143 +1,104 @@
 ---
 name: ai-tool-handoff
 description: >
-  Detects when Luminance, Kira, or a similar bulk-review tool is in use,
-  hands off the high-volume clause extraction to it, and QAs its output
-  per the trust level in `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`. Use when user says "send to Luminance",
-  "bulk review", "AI extraction", or when diligence-issue-extraction hits
-  a high-volume category.
----
-<!-- CHINA_LOCALIZATION_START -->
-## 中国法域与引用规则（强制）
-
-- 默认法域为中华人民共和国大陆地区法律；不得默认套用美国法、州法、普通法或欧盟法框架。
-- 引述中国法律法规时，必须标注法律全称/缩略 + 条文序号（条/款/项）；无法确认时写 `[法条待查证]`，并停止编造式引用。
-- 区分法律、行政法规、部门规章、司法解释、地方性法规、规范性文件、指导案例/典型案例的效力层级。
-- 涉及地方差异（最低工资、社保、公积金、产假、监管口径、法院管辖等）时，必须标注适用省/市及 `[地方规定 — 待查证]`。
-- 输出均为中文法律工作初稿，供执业律师或企业法务审阅；涉及发送、签署、备案、申报、起诉、仲裁、解除劳动合同等后果性动作前，必须设置人工确认门。
-<!-- CHINA_LOCALIZATION_END -->
-
-
-# AI Tool Handoff
-
-## Matter context
-
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/corporate-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/corporate-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
-
+  中国并购批量文档审查工具交接与质检。用于将大量合同、资料室文件或
+  表格审查交给企业内部AI、文档管理系统、合同管理系统或外部尽调平台，
+  并对返回结果进行证据链质检和中国法判断层复核。
 ---
 
-## Purpose
+# /corporate-legal:ai-tool-handoff
 
-Luminance and Kira are good at one thing: reading 500 contracts and finding every change-of-control clause. They're less good at judgment — deciding whether a particular CoC provision is actually triggered by this deal structure.
+## 强制中国法边界
 
-This skill hands off the bulk extraction to the right tool, then runs the QA layer on what comes back.
+- 默认适用中国大陆并购尽调和数据合规要求。
+- 不默认使用 Luminance/Kira，也不要求境外资料室或境外AI工具。
+- 不向第三方工具上传含个人信息、重要数据、商业秘密或未公开交易信息前，必须提示数据合规和保密审批。
 
-**Before you hand off:** try `tabular-review` first (`/corporate-legal:tabular-review`). For anything the user's environment can handle — a few hundred documents, a defined column schema — native tabular review is faster to set up, has no per-document cost, and keeps the work product local. Hand off to Luminance/Kira when the corpus is genuinely too large, the team already has a license and workflow, or the matter requires a tool with a validated provenance chain.
+## 适用场景
 
-## Load context
+当同一类文件数量较大且字段稳定时使用，例如：
 
-`~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → AI-assisted review:
-- Tool in use (Luminance / Kira / none)
-- What it's used for (which clause types)
-- Trust level (use as-is / spot-check / full re-review)
-- Handoff process (who loads, who QAs)
+- 300份客户/供应商合同中抽取控制权变更和转让限制。
+- 批量读取租赁合同、知识产权许可、采购框架协议。
+- 从工商档案、裁判文书、行政处罚清单或合同台账中抽取结构化字段。
 
-If `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` says no AI tool → this skill is a no-op. Everything goes through diligence-issue-extraction directly.
+优先尝试 `tabular-review`。只有在企业已有合规可用工具、文档量过大或需要保留平台审计轨迹时，才进行外部工具交接。
 
-## When to hand off
-
-Hand off when all of:
-- Category has >50 documents (below that, faster to just read them)
-- Extraction target is a clause type the tool is good at (CoC, assignment, exclusivity, MFN, termination, auto-renewal)
-- Documents are reasonably uniform (all customer contracts on similar paper — not a mix of contracts, letters, and board minutes)
-
-Don't hand off:
-- Bespoke or heavily negotiated documents
-- Side letters and amendments (context-dependent, tools miss the interaction with the main agreement)
-- Anything where the question is "what does this mean for the deal" not "does this clause exist"
-
-## The handoff
-
-### Step 1: Prepare the batch
-
-- Identify documents for the batch (from VDR inventory)
-- Specify extraction targets per `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` (which clause types)
-- Note the materiality threshold so tool output can be filtered
-
-### Step 2: Load (or instruct the loader)
-
-Per `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` — who loads. If it's you, generate the load instructions. If it's someone else, generate the request:
+## 交接前检查
 
 ```markdown
-## [Tool] Load Request — [Deal code] — [Category]
+## AI工具交接前检查
 
-**Documents:** [N] docs from VDR folder [path]
-**Load to:** [Tool workspace/matter]
-**Extraction targets:**
-- Change of control / assignment
-- Exclusivity
-- [etc. per `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`]
-
-**Filter output:** Flag only where extraction target is present — no need for "no CoC clause found" for every doc.
-
-**Return by:** [date]
+工具/平台：[名称]
+部署位置：[本地/私有云/境内SaaS/境外SaaS]
+数据类型：[合同/员工信息/客户信息/源代码/财务/其他]
+是否含个人信息：[是/否/不明]
+是否可能含重要数据或核心商业秘密：[是/否/不明]
+是否完成保密和数据合规审批：[是/否]
 ```
 
-### Step 3: QA the output
+若涉及境外SaaS、境外服务器、个人信息、重要数据或未公开交易信息，不得直接建议上传；必须转为本地文件模式或要求法务/网安负责人确认。
 
-When the tool returns results, apply the trust level:
-
-**"Use as-is":** Ingest directly into diligence findings. (Only if `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` says this — it's rare.)
-
-**"Spot-check X%":** Randomly sample X% of flagged documents. For each, read the actual clause and compare to the tool's extraction. If error rate is low, accept the batch. If errors found, widen the sample.
-
-**"Full human review of flagged":** Tool narrows the universe (500 docs → 80 with CoC clauses). Human reads all 80. Tool saved the time of reading the 420 clean ones.
-
-### Step 4: Judgment layer
-
-The tool found the clauses. Now apply judgment:
-
-For each flagged CoC provision: is it actually triggered by this deal?
-- Stock sale vs. asset sale vs. merger — different triggers
-- "Change of control" defined how in the contract — majority ownership? board control? something else?
-- Is there a carve-out for this type of transaction?
-
-This is the part the tool can't do. Output goes to diligence findings in house format.
-
-## Output
-
-> The QA summary below is derived from VDR documents that are privileged, confidential, or both. It inherits the sources' privilege and confidentiality status — distribution beyond the privilege circle can waive privilege. Store with the matter's privileged files.
+## 批量抽取任务书
 
 ```markdown
-## AI Tool Handoff Summary — [Category]
+## 批量抽取任务书 - [项目代号]
 
-**Tool:** [Luminance / Kira]
-**Documents processed:** [N]
-**Extraction targets:** [clause types]
+文件范围：[路径/数量]
+抽取字段：
+- 合同相对方
+- 合同类型
+- 签署日期/期限
+- 控制权变更条款
+- 转让限制
+- 终止权
+- 排他/最惠待遇/最低采购
+- 担保、抵押、质押或其他负担
 
-### QA
+返回要求：
+- 每个字段必须给出原文引用和位置。
+- 不得用推测替代原文。
+- 无法定位原文的字段标记为“需人工复核”。
+```
 
-**Trust level:** [per `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`]
-**Sample size:** [N] docs spot-checked
-**Error rate:** [X]% — [Accepted / Widened sample / Full re-review triggered]
+## 质检
 
-### Results
+对返回结果执行：
 
-| Clause type | Docs flagged | After judgment layer | Material |
+- 抽样复核：至少10%或每类不少于5份。
+- 原文一致性：字段必须可回溯到连续原文。
+- 分类一致性：同类条款不得在不同文件中随意分类。
+- 中国法判断层：工具只抽取事实；是否触发同意、交割条件、监管审批或赔偿，由本技能重新判断。
+
+## 输出
+
+```markdown
+## AI批量审查质检报告 - [项目代号]
+
+工具：[名称]
+文件数：[N]
+字段数：[N]
+抽样复核：[N]份
+错误率：[百分比]
+
+### 质检结论
+
+[可接收 / 需扩大抽样 / 不可依赖，需人工重审]
+
+### 需进入尽调问题清单
+
+| 文件 | 问题 | 原文位置 | 中国法影响 | 后续动作 |
+|---|---|---|---|---|
+
+### 需进入交割清单
+
+| 事项 | 来源 | 责任人 | 截止日 |
 |---|---|---|---|
-| Change of control | [N] | [N actually triggered by deal structure] | [N above threshold] |
-| Assignment | [N] | [N] | [N] |
-
-**→ [N] findings added to diligence issues**
-**→ [N] consents added to closing checklist**
 ```
 
-## Close with the next-steps decision tree
+## 不做的事
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+- 不把工具抽取结果直接当作法律结论。
+- 不绕过企业数据出境、商业秘密和个人信息审批。
+- 不生成“已审完无风险”的绝对结论。
 
-## What this skill does not do
-
-- It doesn't run Luminance or Kira — it manages the handoff and QA. A human (or the tool's own interface) runs the extraction.
-- It doesn't replace the tool's output with its own judgment entirely — if `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` says spot-check 10%, check 10%, not 100%.
-- It doesn't decide the trust level — that's in `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`, set at cold-start based on the team's experience with the tool.

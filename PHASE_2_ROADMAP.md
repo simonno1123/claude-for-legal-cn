@@ -14,6 +14,8 @@ Path: `corporate-legal/phase-2/`
 
 Goal: localize M&A workflows for China Mainland practice after the core corporate governance, capital contribution, equity transfer, and articles audit workflows are stable.
 
+Status: IN PROGRESS. The first localization pass rewrote the core M&A diligence, closing, contract schedule, integration, deal summary, AI handoff, and tabular review skills into China Mainland workflows, and added a China M&A regression suite.
+
 Initial skills to review:
 
 - `diligence-issue-extraction`
@@ -85,4 +87,3 @@ Each Phase 2 workstream is complete only when it has:
 2. Legal Builder Hub
 3. Legal Clinic
 4. Law Student
-

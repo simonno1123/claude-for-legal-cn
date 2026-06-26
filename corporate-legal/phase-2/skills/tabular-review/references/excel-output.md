@@ -1,58 +1,55 @@
-# Excel Output Spec
+# WPS / Excel 输出规范
 
-The Excel file is the deliverable most deal teams will actually open. Get it right.
+本规范用于中国并购批量审查表格。默认输出可被 WPS 表格和 Microsoft Excel 打开。
 
-## If Claude in Excel / Office agent is available
+## 工作簿结构
 
-Build the workbook directly in Excel via the Office agent. This is the preferred path because it preserves formatting, lets the reviewer work in their native tool, and supports the cell-comment pattern natively.
+### `Review`
 
-## If not, use openpyxl
+主审查表：
 
-Check with `python3 -c "import openpyxl"`. If not installed, offer to install (`pip3 install openpyxl`) or fall back to CSV.
+- 第1行：保密提示，例如“内部法律分析初稿 / 保密文件 / 需人工复核”。
+- 第2行：字段名称。
+- 第3行起：一份文件一行。
+- A列：文件名或资料室路径。
+- 后续列：按 schema 顺序排列。
+- 每个数据列后可设置隐藏的 `_source` 列，记录原文引用和位置。
+- 每个数据列后可设置 `Verified` 列，由人工复核人填写。
 
-## Workbook structure
+状态颜色建议：
 
-**Sheet 1: `Review`** (the main grid)
-- Row 1: Work-product header (merged cell, the header from plugin config `## Outputs`)
-- Row 2: Column labels
-- Row 3+: One row per document
-- Column A: Document name / path
-- Columns B onward: one per schema column, in schema order
-- After every data column, a hidden `_source` column with `[quote] | [location]`
-- Cell comment on the data column cell = the quote and location (so it surfaces on hover even with `_source` hidden)
-- Cell fill by state: no fill = `answered`, `#FFF2CC` (light yellow) = `unclear` or `needs_review`, `#EFEFEF` (light gray) = `not_present`
-- A `Verified` column after each group of [data + _source]: blank by default. The reviewer fills it. Dropdown validation: `✓`, `✗`, `?`.
+| 状态 | 颜色 |
+|---|---|
+| `answered` | 无填充 |
+| `unclear` | 浅黄色 |
+| `needs_review` | 浅黄色 |
+| `not_present` | 浅灰色 |
 
-**Sheet 2: `Flags`**
-- One row per cell flagged as `unclear` or `needs_review`
-- Columns: Document, Column, State, Value (if any), Quote, Location, Note
-- This is the verification work queue. Sort by column so the reviewer can batch similar judgments.
+### `Flags`
 
-**Sheet 3: `_schema`**
-- The column definitions from `.review-schema.yaml`, one row per column: id, label, type, options, prompt
-- Makes the file self-documenting. A partner who opens it six months later can see exactly what was asked.
+人工复核工作队列：
 
-**Sheet 4: `_summary`**
-- Document count, column count, run date
-- Per-column counts of answered / not_present / unclear / needs_review
-- List of columns the normalization pass flagged
-- The verification reminder text
+| 文件 | 字段 | 状态 | 值 | 原文 | 位置 | 备注 |
+|---|---|---|---|---|---|---|
 
-## What not to do
+### `_schema`
 
-- Do not write a confidence percentage column. It's not information. The state + quote is the signal.
-- Do not truncate quotes to fit a cell. Wrap the text or put the full quote in the comment.
-- Do not merge cells in the data region. Lawyers will sort and filter.
-- Do not write the table without the `_schema` and `_summary` sheets. The self-documentation is what makes the file trustworthy.
+记录列定义：`id`、`label`、`type`、`options`、`prompt`。
 
+### `_summary`
 
-## Formula injection defense
+记录运行日期、文件数量、字段数量、各列 `answered/not_present/unclear/needs_review` 统计，以及需重点复核的字段。
 
-Before writing any cell in Excel, Sheets, or CSV output, neutralize formula injection. Counterparty-sourced text (contract quotes, party names, registered agent data, CLM exports) is attacker-controlled. A cell starting with `=`, `+`, `-`, `@`, `	`, ``, or `
-` will be interpreted as a formula or break the row structure.
+## 输出要求
 
-- **Prefix with a single quote:** `'=SUM(A1:A10)` → `=SUM(A1:A10)` (displayed as text, not executed)
-- **Applies to every cell that contains text sourced from a document, a tool result, or a user paste.** Column headers you control and computed values you produce are safe.
-- **CSV: also escape embedded commas, double quotes, newlines** (RFC 4180 quoting).
-- This is not optional. A spreadsheet your user opens in Excel that triggers a macro or exfiltrates data via DDE is a supply-chain attack on your user.
+- 不输出置信度百分比；证据链由状态、原文和位置体现。
+- 不截断原文引用；如单元格太长，应放入备注或隐藏来源列。
+- 数据区域不要合并单元格，便于筛选和排序。
+- 表格交付前去除内部谈判策略和不应对外披露的法律意见。
+
+## 公式注入防护
+
+来自合同、资料室、相对方名称、用户粘贴内容的文本都视为不可信。若单元格以 `=`, `+`, `-`, `@` 或制表/换行开头，写入前应转义为纯文本。
+
+示例：`=SUM(A1:A10)` 应写为 `'=SUM(A1:A10)`。
 
