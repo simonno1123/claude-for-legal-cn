@@ -1,56 +1,32 @@
 {
   "mcpServers": {
-    "npc-law-database": {
-      "command": "docker",
+    "legal-data": {
+      "type": "stdio",
+      "command": "node",
       "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/npc-law-bridge"
+        "connectors/legal-data/server.js"
       ],
+      "title": "统一中国法律数据层 (占位)",
+      "description": "统一提供法律法规、法条、案例、引用核验和案例权威排序能力；底层可路由至官方本地索引、元典、北大法宝、法律之星或人工上传材料。",
       "env": {
-        "NPC_LAW_API_KEY": "${NPC_LAW_API_KEY}",
-        "NPC_LAW_ENDPOINT": "${NPC_LAW_ENDPOINT:https://flk.npc.gov.cn/api}"
-      },
-      "title": "国家法律法规数据库（占位配置）",
-      "description": "检索中国现行有效法律、行政法规、地方性法规、司法解释等；部署方需提供可用 MCP bridge。"
-    },
-    "gov-regulatory-sites": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/china-gov-regulatory-bridge"
-      ],
-      "env": {
-        "GOV_REGULATORY_ENDPOINTS": "${GOV_REGULATORY_ENDPOINTS}",
-        "GOV_REGULATORY_API_KEY": "${GOV_REGULATORY_API_KEY}"
-      },
-      "title": "国务院/部委/地方监管官网（占位配置）",
-      "description": "检索国务院、部委、地方监管机关发布的政策、规章、规范性文件、征求意见稿和监管问答。"
+        "LEGAL_DATA_PROVIDER": "${LEGAL_DATA_PROVIDER:auto}",
+        "YUANDIAN_API_KEY": "${YUANDIAN_API_KEY}",
+        "PKULAW_API_KEY": "${PKULAW_API_KEY}",
+        "LAW_STAR_API_KEY": "${LAW_STAR_API_KEY}",
+        "LOCAL_LEGAL_INDEX": "${LOCAL_LEGAL_INDEX:./data/legal-index}"
+      }
     },
     "wps-cloud-docs": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/wps-cloud-docs-bridge"
-      ],
-      "env": {
-        "WPS_CLIENT_ID": "${WPS_CLIENT_ID}",
-        "WPS_CLIENT_SECRET": "${WPS_CLIENT_SECRET}",
-        "WPS_TENANT_ID": "${WPS_TENANT_ID}"
-      },
-      "title": "WPS/金山文档（占位配置）",
-      "description": "读取企业 WPS/金山文档云端 Word、Excel、PDF；未配置时，用户可直接上传本地 .docx/.xlsx/.pdf。"
+      "type": "http",
+      "url": "${WPS_CLOUD_DOCS_MCP_URL}",
+      "title": "WPS / 金山文档 (占位)",
+      "description": "读取企业云端 Word、Excel、PDF、制度、合同、案件材料和人工上传文件；未配置时使用 Local File Mode。"
     }
   },
-  "chinaLocalizationNote": "中国版第一阶段仅写入默认占位 MCP。中国官方监管来源、商业数据库、企业微信/钉钉/飞书、电子签章、企查查/天眼查、法院/知识产权系统等连接器见仓库根目录 references/china-connectors.md；国际办公连接器封存在仓库根目录 references/international-extensions.md。",
+  "chinaLocalizationNote": "中国版 MCP 配置统一由 scripts/generate-mcp-configs.py 生成。法律法规和案例能力统一走 legal-data；政府源通常通过本地索引、人工上传或企业自建采集管道接入；商业源需企业自有授权。监管模块默认通过 legal-data 查询法律法规和监管文件；政府官网实时监控建议通过本地采集索引或企业自建 ingestion 管道实现。",
   "recommendedCategories": [
+    "laws-regulations",
     "regulatory-monitoring",
-    "legal-research",
     "documents"
   ]
 }

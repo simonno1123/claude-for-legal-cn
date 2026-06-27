@@ -4,14 +4,14 @@
 
 ## 已完成
 
-- Marketplace 改为 `claude-for-legal-cn`，默认插件清单移除仅面向美国法研究的 CoCounsel / Westlaw 第三方插件。
+- Marketplace 改为 `claude-for-legal-cn`，默认插件清单移除仅面向境外法研究的第三方插件。
 - 12 个一线插件的 `plugin.json` 和 marketplace 展示名/描述改为中国法律实务语境。
 - 12 个一线插件的 `CLAUDE.md` 注入“中国法律本地化规则”，默认法域为中华人民共和国大陆地区法律。
 - 当前 155 个 `SKILL.md` 注入“中国法域与引用规则”，强制要求法条全称/缩略 + 条/款/项、效力层级、地方差异标注和人工确认门。
 - 保留并接入 `references/china-legal-standards.md` 作为全局中国法引用、来源、审阅和争议解决规范。
 - 主线插件收敛为 9 个企业法务核心模块；`law-student`、`legal-clinic`、`legal-builder-hub` 移入 `phase-2/`。
 - 9 个主线插件 `.mcp.json` 改为中国默认占位连接器：国家法律法规数据库、国务院/部委/地方监管官网、WPS/金山文档。
-- 原 Slack、Google Drive、Box、CourtListener、Trellis 等国际连接器封存至 `references/international-extensions.md`。
+- 原国际办公协作、境外案例检索和境外诉讼数据连接器封存至 `references/international-extensions.md`。
 - 新增 `references/us-to-cn-legal-terms.md`，并在根 `CLAUDE.md` 中加入中国法语境下的强制术语替换约束。
 - 第三方 `external_plugins/cocounsel-legal` 标记为非中国版默认插件。
 - 根 `README.md` 已按中国企业法务主场景彻底重写，并合并中文 Quickstart。
@@ -92,13 +92,21 @@
 
 - `ai-governance-legal` Phase 1 深改完成：重写插件级 `CLAUDE.md`、`README.md`、`currency-watch.md`，新增 `references/china-ai-governance-rules.md` 与 `references/test-cases-cn.md`。
 - 已重写 `cold-start-interview`、`ai-inventory`、`use-case-triage`、`aia-generation`、`vendor-ai-review`、`policy-starter`、`reg-gap-analysis`、`policy-monitor`、`matter-workspace`、`customize`。
-- 默认框架已从 EU AI Act/NIST/美国州法切换为中国生成式 AI、算法推荐、深度合成、PIPL/DSL/CSL、备案/安全评估、内容安全、供应商禁训/留存/跨境和企业 AI 使用制度。
+- 默认框架已从境外 AI 治理框架和美国州法切换为中国生成式 AI、算法推荐、深度合成、PIPL/DSL/CSL、备案/安全评估、内容安全、供应商禁训/留存/跨境和企业 AI 使用制度。
 - 残留扫描已清除核心美国法/普通法污染词，JSON 与技能 frontmatter 验证通过。
 
 ## 2026-06-26 regulatory-legal 更新
 
 - `regulatory-legal` Phase 1 深改完成：重写插件级 `CLAUDE.md`、`README.md`、监管来源目录和监管变化监控 agent。
 - 已重写 `cold-start-interview`、`reg-feed-watcher`、`policy-diff`、`gaps`、`gap-surfacer`、`comments`、`policy-redraft`、`matter-workspace`、`customize`。
-- 默认来源已从 Federal Register、Regulations.gov、CFR、CourtListener、Westlaw 切换为国家法律法规数据库、中国人大、国务院、司法部、网信办、市场监管总局、工信部、地方政府、规范性文件、监管问答、征求意见稿和执法案例。
+- 默认来源已从境外联邦规则、境外判例和境外法律数据库切换为国家法律法规数据库、中国人大、国务院、司法部、网信办、市场监管总局、工信部、地方政府、规范性文件、监管问答、征求意见稿和执法案例。
 - 已将征求意见跟踪模板改造为中国监管语义，覆盖草案来源、意见截止日、反馈主体、提交渠道、采纳情况和后续制度修订。
 - 残留扫描仅保留“禁止默认使用/不得套用”的负向约束，JSON 与技能 frontmatter 验证通过。
+
+## 2026-06-27 收尾修复记录
+
+- 已按第二轮复核报告完成收尾修复：`CONNECTORS.md`、`PROJECT_USAGE_GUIDE.md`、`CONTRIBUTING.md` 与 managed-agent cookbooks 的已知乱码、硬编码路径和美国/国际 SaaS 示例残留已清理。
+- 已建立统一 MCP 配置生成体系：新增 `scripts/mcp-template.json`、`scripts/mcp-modules.json` 与 `scripts/generate-mcp-configs.py`，12 个模块的 `.mcp.json` 统一由模板生成，默认接入 `legal-data` 与 `wps-cloud-docs`，并按模块追加中国合同管理、电子签章、法院/仲裁、协同系统等占位连接器。
+- 根目录 `CLAUDE.md` 已加入 MCP 维护规则：后续不得直接手改各模块 `.mcp.json`，应修改模板或模块表后重新生成并验证。
+- managed-agent cookbooks 已统一注入中国大陆默认法域声明，并清除旧的英美法工作成果标签、特权圈、旧协作工具占位符和国外合同/电子签工具命名。
+- 收尾校验通过：12 个 `.mcp.json` 全部可解析，仓库目标范围内 JSON 全部可解析，cookbook 与脚本目标范围未检出旧协作工具、硬编码本机路径、乱码哨兵或英美工作成果特权残留。

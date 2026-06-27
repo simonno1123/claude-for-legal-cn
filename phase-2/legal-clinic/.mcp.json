@@ -3,22 +3,24 @@
     "legal-data": {
       "type": "stdio",
       "command": "node",
-      "args": ["../../connectors/legal-data/server.js"],
+      "args": [
+        "connectors/legal-data/server.js"
+      ],
       "title": "统一中国法律数据层 (占位)",
-      "description": "提供法律法规、法条、案例、引用核验和案例权威排序；用于法律诊所的事实核验、法条定位和类案参考。",
+      "description": "统一提供法律法规、法条、案例、引用核验和案例权威排序能力；底层可路由至官方本地索引、元典、北大法宝、法律之星或人工上传材料。",
       "env": {
         "LEGAL_DATA_PROVIDER": "${LEGAL_DATA_PROVIDER:auto}",
         "YUANDIAN_API_KEY": "${YUANDIAN_API_KEY}",
         "PKULAW_API_KEY": "${PKULAW_API_KEY}",
         "LAW_STAR_API_KEY": "${LAW_STAR_API_KEY}",
-        "LOCAL_LEGAL_INDEX": "${LOCAL_LEGAL_INDEX:../../data/legal-index}"
+        "LOCAL_LEGAL_INDEX": "${LOCAL_LEGAL_INDEX:./data/legal-index}"
       }
     },
     "wps-cloud-docs": {
       "type": "http",
       "url": "${WPS_CLOUD_DOCS_MCP_URL}",
       "title": "WPS / 金山文档 (占位)",
-      "description": "读取当事人材料、授权委托材料、案件笔记和诊所教学文件。"
+      "description": "读取企业云端 Word、Excel、PDF、制度、合同、案件材料和人工上传文件；未配置时使用 Local File Mode。"
     },
     "cn-collaboration": {
       "type": "http",
@@ -27,6 +29,7 @@
       "description": "用于诊所内部任务分派和复核提醒；不得自动发送涉隐私材料。"
     }
   },
+  "chinaLocalizationNote": "中国版 MCP 配置统一由 scripts/generate-mcp-configs.py 生成。法律法规和案例能力统一走 legal-data；政府源通常通过本地索引、人工上传或企业自建采集管道接入；商业源需企业自有授权。法律诊所模块默认通过 legal-data 做事实核验、法条定位和类案参考；诊所协作系统只作为内部任务流转占位。",
   "recommendedCategories": [
     "china-legal-research",
     "legal-aid",

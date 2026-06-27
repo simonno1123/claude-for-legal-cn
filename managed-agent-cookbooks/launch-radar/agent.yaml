@@ -20,6 +20,7 @@ system:
     decision, not a legal review. A licensed China Mainland product counsel or
     compliance owner reviews before any launch decision is informed by this memo.
 
+    Default jurisdiction: China Mainland. All outputs follow claude-for-legal-cn localization rules.
 tools:
   - type: agent_toolset_20260401
     default_config: { enabled: false }

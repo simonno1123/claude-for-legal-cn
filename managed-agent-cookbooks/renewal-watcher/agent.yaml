@@ -23,6 +23,7 @@ system:
     from executed documents; do not treat a computed deadline as a calendar
     entry. You recommend; a lawyer decides.
 
+    Default jurisdiction: China Mainland. All outputs follow claude-for-legal-cn localization rules.
 tools:
   - type: agent_toolset_20260401
     default_config: { enabled: false }

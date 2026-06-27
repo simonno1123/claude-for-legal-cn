@@ -11,8 +11,8 @@ below — keeping write and external-channel access on the leaves, not the orche
      subagent leaves, not the parent.
   2. No `write` enabled in any `agent_toolset*` config — only the designated
      writer leaf gets Write.
-  3. No Slack tool (`slack_send_message` or any `slack_*`) granted. Orchestrators
-     emit `handoff_request` instead of calling Slack directly.
+  3. No external collaboration tool (`cn_collab_send_message` or any `cn_collab_*`) granted. Orchestrators
+     emit `handoff_request` instead of calling external collaboration directly.
 
 Exits non-zero with a message naming the offending file + tool on any
 violation. Exits 0 and prints a one-line summary per cookbook on success.
@@ -22,18 +22,81 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-import yaml
+try:
+    import yaml  # type: ignore
+except ModuleNotFoundError:  # pragma: no cover - exercised on minimal runtimes.
+    yaml = None
 
 
 ROOT = Path(__file__).resolve().parent.parent
 COOKBOOKS_DIR = ROOT / "managed-agent-cookbooks"
 
 
+def _parse_inline_mapping(text: str) -> dict[str, object]:
+    """Parse the small `{ key: value }` YAML subset used in cookbook configs."""
+    text = text.strip()
+    if not (text.startswith("{") and text.endswith("}")):
+        return {}
+    out: dict[str, object] = {}
+    for part in text[1:-1].split(","):
+        if ":" not in part:
+            continue
+        key, value = part.split(":", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if value.lower() == "true":
+            out[key] = True
+        elif value.lower() == "false":
+            out[key] = False
+        else:
+            out[key] = value
+    return out
+
+
+def _load_agent_doc(path: Path) -> dict:
+    """Load agent YAML, with a narrow stdlib fallback for minimal runtimes."""
+    with path.open(encoding="utf-8") as f:
+        text = f.read()
+    if yaml is not None:
+        return yaml.safe_load(text)
+
+    tools: list[dict] = []
+    in_tools = False
+    current: dict | None = None
+    in_configs = False
+    for raw in text.splitlines():
+        stripped = raw.strip()
+        if stripped == "tools:":
+            in_tools = True
+            continue
+        if in_tools and raw and not raw.startswith((" ", "\t", "-")):
+            break
+        if not in_tools or not stripped or stripped.startswith("#"):
+            continue
+        if stripped.startswith("- type:"):
+            current = {"type": stripped.split(":", 1)[1].strip(), "configs": []}
+            tools.append(current)
+            in_configs = False
+            continue
+        if current is None:
+            continue
+        if stripped.startswith("default_config:"):
+            current["default_config"] = _parse_inline_mapping(stripped.split(":", 1)[1].strip())
+        elif stripped.startswith("configs:"):
+            in_configs = True
+        elif in_configs and stripped.startswith("- "):
+            cfg = _parse_inline_mapping(stripped[2:].strip())
+            if cfg:
+                current.setdefault("configs", []).append(cfg)
+        elif stripped.startswith("mcp_server_name:"):
+            current["mcp_server_name"] = stripped.split(":", 1)[1].strip()
+    return {"tools": tools}
+
+
 def _lint_one(path: Path) -> list[str]:
     """Return a list of violation strings (empty if clean)."""
     errs: list[str] = []
-    with path.open() as f:
-        doc = yaml.safe_load(f)
+    doc = _load_agent_doc(path)
     tools = doc.get("tools") or []
     for idx, entry in enumerate(tools):
         if not isinstance(entry, dict):
@@ -65,13 +128,13 @@ def _lint_one(path: Path) -> list[str]:
                     f"{path}: orchestrator must not enable 'write'; "
                     f"only the writer leaf holds Write"
                 )
-            if enabled and isinstance(name, str) and name.startswith("slack"):
+            if enabled and isinstance(name, str) and name.startswith("cn_collab"):
                 errs.append(
-                    f"{path}: orchestrator must not enable Slack tool '{name}'; "
+                    f"{path}: orchestrator must not enable external collaboration tool '{name}'; "
                     f"emit a handoff_request instead"
                 )
         # If the default is enabled, it extends to every tool in the toolset —
-        # including write and Slack. We cannot enumerate the toolset here, so
+        # including write and external collaboration. We cannot enumerate the toolset here, so
         # reject default-enabled on orchestrators outright.
         if default_enabled:
             errs.append(
@@ -99,7 +162,7 @@ def main() -> int:
             print(f"  {e}", file=sys.stderr)
         return 1
     for slug in clean:
-        print(f"  ✓ {slug:24s} orchestrator tool scope clean")
+        print(f"  OK {slug:24s} orchestrator tool scope clean")
     return 0
 
 

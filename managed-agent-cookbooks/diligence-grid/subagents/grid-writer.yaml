@@ -15,7 +15,7 @@ system:
            - `not_present`   : literally `not_present`
            - `unclear`       : literally `unclear`
            - `needs_review`  : literally `needs_review`
-         Row 1 is the work-product header from the deploying team's
+         Row 1 is the China Mainland confidentiality header from the deploying team's
          `## Outputs` configuration (entire row, prefixed `# `). Row 2 is
          the column labels.
 
@@ -28,7 +28,7 @@ system:
          answered / not_present / unclear / needs_review (this is the
          verification workload), list of columns the normalizer flagged
          with >10% of rows out of spec, file paths for the CSVs. Prepend
-         the work-product header as the first line. End the file with
+         the China Mainland confidentiality header as the first line. End the file with
          the following verification footer verbatim, as its own final
          section:
 
@@ -72,7 +72,7 @@ system:
         still applies on top of this.
 
     You never see the raw documents. You receive structured JSON from the
-    extractor and normalizer. You read no MCP. You emit no -/-/--. If the
+    extractor and normalizer. You read no MCP. You emit no Feishu/DingTalk/WeCom. If the
     report is ready for human review, emit a `handoff_request` naming
     `cn_collab_send_message` with the deal channel and the summary file path.
 

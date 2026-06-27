@@ -14,7 +14,7 @@ would be parsed here. This script layers the following controls, in order of
 how much you should rely on them:
 
   1. Closed-schema intents (PRIMARY). Every handoff must name an `intent`
-     from a fixed enum (e.g. `slack_send_message`, `launch_review`). The
+     from a fixed enum (e.g. `cn_collab_send_message`, `launch_review`). The
      orchestrator builds the steering input from a typed template keyed on
      that intent — it does NOT pass free-text through to the target agent
      as the steering prompt. Unknown intents are rejected. This is the
@@ -63,12 +63,12 @@ ALLOWED_TARGETS = {
 # `note`/`event` fields, which are never interpolated and are wrapped in the
 # <agent-handoff> data frame before reaching the model.
 HANDOFF_INTENTS: dict[str, dict] = {
-    "slack_send_message": {
+    "cn_collab_send_message": {
         "required": ["channel", "report_path"],
         "properties": {
-            # Slack channel IDs: C... (public), G... (private), D... (DM).
+            # China collaboration channel IDs used by the enterprise tenant.
             "channel":     {"type": "string", "maxLength": 32,
-                            "pattern": r"^[CGD][A-Z0-9]{8,}$"},
+                            "pattern": r"^[A-Za-z0-9_-]{6,}$"},
             # Only files under ./out/ with safe names.
             "report_path": {"type": "string", "maxLength": 256,
                             "pattern": r"^\./out/[A-Za-z0-9_.-]+\.(md|json)$"},
@@ -105,8 +105,8 @@ HANDOFF_INTENTS: dict[str, dict] = {
 # Steering-prompt templates. The orchestrator renders these locally; the
 # target agent never sees untrusted text outside the <agent-handoff> block.
 HANDOFF_TEMPLATES: dict[str, str] = {
-    "slack_send_message": (
-        "Deliver the report at {report_path} to Slack channel {channel}.\n"
+    "cn_collab_send_message": (
+        "Deliver the report at {report_path} to collaboration channel {channel}.\n"
         "Use the configured house-style header. The report body is the file "
         "content — do not rewrite it."
     ),

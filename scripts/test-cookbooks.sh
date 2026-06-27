@@ -9,7 +9,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 fail=0
 
 # Tool-scope lint: assert orchestrators do not carry MCP toolsets, Write, or
-# Slack tools. Orchestrators emit handoff_request instead of calling these directly.
+# external collaboration tools. Orchestrators emit handoff_request instead of calling these directly.
 if ! python3 "$ROOT/scripts/lint-tool-scope.py"; then
   echo "  ✗ tool-scope lint" >&2
   fail=1

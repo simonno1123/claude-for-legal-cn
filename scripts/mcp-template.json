@@ -1,11 +1,10 @@
 {
-  "mcpServers": {
+  "_comment": "MCP 连接器基座模板。由 scripts/generate-mcp-configs.py 读取，用于生成各模块 .mcp.json。",
+  "baseServers": {
     "legal-data": {
       "type": "stdio",
       "command": "node",
-      "args": [
-        "connectors/legal-data/server.js"
-      ],
+      "args": ["connectors/legal-data/server.js"],
       "title": "统一中国法律数据层 (占位)",
       "description": "统一提供法律法规、法条、案例、引用核验和案例权威排序能力；底层可路由至官方本地索引、元典、北大法宝、法律之星或人工上传材料。",
       "env": {
@@ -22,12 +21,5 @@
       "title": "WPS / 金山文档 (占位)",
       "description": "读取企业云端 Word、Excel、PDF、制度、合同、案件材料和人工上传文件；未配置时使用 Local File Mode。"
     }
-  },
-  "chinaLocalizationNote": "中国版 MCP 配置统一由 scripts/generate-mcp-configs.py 生成。法律法规和案例能力统一走 legal-data；政府源通常通过本地索引、人工上传或企业自建采集管道接入；商业源需企业自有授权。知识产权模块默认通过 legal-data 查询商标法、专利法、著作权法和案例；CNIPA、商标、专利、软著数据库作为后续 IP 专项连接器。",
-  "recommendedCategories": [
-    "laws-regulations",
-    "cases",
-    "ip-registry",
-    "documents"
-  ]
+  }
 }

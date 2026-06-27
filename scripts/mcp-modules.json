@@ -1,0 +1,123 @@
+{
+  "modules": [
+    {
+      "path": "employment-legal",
+      "categories": ["laws-regulations", "cases", "documents", "local-labor-standards"],
+      "noteSuffix": "劳动用工模块默认通过 legal-data 查询劳动法律法规、地方裁审口径和案例；HRIS、社保、公积金系统作为企业自定义连接器后续接入。",
+      "extraServers": {}
+    },
+    {
+      "path": "corporate-legal",
+      "categories": ["laws-regulations", "cases", "company-registry", "documents"],
+      "noteSuffix": "公司法模块默认通过 legal-data 查询新公司法、章程规则和案例；工商、年报、股权出质、企业信用等信息后续进入 enterprise-data 层。",
+      "extraServers": {}
+    },
+    {
+      "path": "commercial-legal",
+      "categories": ["laws-regulations", "cases", "contract-management", "e-signature", "documents"],
+      "noteSuffix": "商事合同模块默认通过 legal-data 查询民法典、电子签名、发票税务和合同案例；CLM、电子签章和协作系统作为额外占位连接器。",
+      "extraServers": {
+        "cn-clm": {
+          "type": "http",
+          "url": "${CN_CLM_MCP_URL}",
+          "title": "境内 CLM / 合同台账 (占位)",
+          "description": "读取企业合同台账、续约信息、审批状态和合同元数据。"
+        },
+        "cn-esign": {
+          "type": "http",
+          "url": "${CN_ESIGN_MCP_URL}",
+          "title": "法大大 / 上上签 / e签宝 (占位)",
+          "description": "读取电子签约状态、签署证书、签署时间和存证信息。"
+        }
+      }
+    },
+    {
+      "path": "privacy-legal",
+      "categories": ["laws-regulations", "cases", "data-compliance", "documents"],
+      "noteSuffix": "隐私与数据合规模块默认通过 legal-data 查询 PIPL/DSL/CSL、数据出境和个人信息案例；数据地图、CMP、DLP 系统为企业扩展连接器。",
+      "extraServers": {}
+    },
+    {
+      "path": "product-legal",
+      "categories": ["laws-regulations", "cases", "product-launch", "documents"],
+      "noteSuffix": "产品合规模块默认通过 legal-data 查询广告、消保、电商、产品质量、未成年人和算法规则；产品路线图通过企业项目系统扩展。",
+      "extraServers": {
+        "cn-project-tracker": {
+          "type": "http",
+          "url": "${CN_PROJECT_TRACKER_MCP_URL}",
+          "title": "飞书项目 / 钉钉项目 / 企业项目系统 (占位)",
+          "description": "读取产品上线计划、PRD、风险标签和项目负责人信息。"
+        }
+      }
+    },
+    {
+      "path": "regulatory-legal",
+      "categories": ["laws-regulations", "regulatory-monitoring", "documents"],
+      "noteSuffix": "监管模块默认通过 legal-data 查询法律法规和监管文件；政府官网实时监控建议通过本地采集索引或企业自建 ingestion 管道实现。",
+      "extraServers": {}
+    },
+    {
+      "path": "litigation-legal",
+      "categories": ["laws-regulations", "cases", "court-records", "documents"],
+      "noteSuffix": "诉讼仲裁模块默认通过 legal-data 查询程序法、案例和裁判规则；案件进度、仲裁系统和保全台账作为额外占位连接器。",
+      "extraServers": {
+        "cn-court-docket": {
+          "type": "http",
+          "url": "${CN_COURT_DOCKET_MCP_URL}",
+          "title": "法院案件进度 / 执行信息 (占位)",
+          "description": "读取法院案件进度、开庭、送达、执行和保全信息。"
+        },
+        "cn-arbitration": {
+          "type": "http",
+          "url": "${CN_ARBITRATION_DOCKET_MCP_URL}",
+          "title": "仲裁机构案件系统 (占位)",
+          "description": "读取仲裁案件进度、开庭、答辩和裁决信息。"
+        }
+      }
+    },
+    {
+      "path": "ip-legal",
+      "categories": ["laws-regulations", "cases", "ip-registry", "documents"],
+      "noteSuffix": "知识产权模块默认通过 legal-data 查询商标法、专利法、著作权法和案例；CNIPA、商标、专利、软著数据库作为后续 IP 专项连接器。",
+      "extraServers": {}
+    },
+    {
+      "path": "ai-governance-legal",
+      "categories": ["laws-regulations", "cases", "ai-compliance", "documents"],
+      "noteSuffix": "AI 治理模块默认通过 legal-data 查询生成式 AI、算法推荐、深度合成、数据安全和备案规则；模型台账和供应商系统为企业扩展连接器。",
+      "extraServers": {}
+    },
+    {
+      "path": "phase-2/law-student",
+      "categories": ["china-legal-research", "legal-education", "laws-regulations", "cases", "documents"],
+      "noteSuffix": "法学生模块默认通过 legal-data 查询法规、案例和案例权威层；课程资料和案例研习材料通过 WPS 或 Local File Mode 提供。",
+      "extraServers": {}
+    },
+    {
+      "path": "phase-2/legal-clinic",
+      "categories": ["china-legal-research", "legal-aid", "case-intake", "laws-regulations", "cases", "documents"],
+      "noteSuffix": "法律诊所模块默认通过 legal-data 做事实核验、法条定位和类案参考；诊所协作系统只作为内部任务流转占位。",
+      "extraServers": {
+        "cn-collaboration": {
+          "type": "http",
+          "url": "${CN_COLLAB_MCP_URL}",
+          "title": "飞书 / 钉钉 / 企业微信 (占位)",
+          "description": "用于诊所内部任务分派和复核提醒；不得自动发送涉隐私材料。"
+        }
+      }
+    },
+    {
+      "path": "phase-2/legal-builder-hub",
+      "categories": ["legal-mcp-builder", "china-legal-data", "laws-regulations", "cases", "documents"],
+      "noteSuffix": "法律工具构建模块默认通过 legal-data 测试标准化法律法规、法条、案例和引用核验接口。",
+      "extraServers": {
+        "cn-collaboration": {
+          "type": "http",
+          "url": "${CN_COLLAB_MCP_URL}",
+          "title": "飞书 / 钉钉 / 企业微信 (占位)",
+          "description": "用于工具构建团队的任务流转和审查提醒。"
+        }
+      }
+    }
+  ]
+}
