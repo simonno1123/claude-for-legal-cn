@@ -5,7 +5,7 @@
 | 类别 | 推荐连接器 | 适用插件 |
 |---|---|---|
 | 法律法规 | 国家法律法规数据库、中国人大网、国务院政策文件库 | 全部 |
-| 案例/裁判 | 中国裁判文书网、人民法院案例库、法信、北大法宝、威科先行、Alpha | litigation, ip, corporate, legal-clinic, law-student |
+| 案例/裁判 | 中国裁判文书网、人民法院案例库、最高人民法院法答网精选系列、法信、北大法宝、威科先行、Alpha | litigation, ip, corporate, legal-clinic, law-student |
 | 监管动态 | 网信办、市场监管总局、人社部、工信部、司法部、证监/金融监管系统、地方主管机关 | regulatory, product, privacy, ai-governance, employment |
 | 合同/文档 | WPS/金山文档、飞书文档、企业微信文档、钉钉文档、iManage/本地 DMS | commercial, corporate, litigation |
 | 合同管理 | 法大大、上上签、e签宝、契约锁、企业自建 CLM | commercial, corporate |

@@ -8,8 +8,8 @@
 
 `claude-for-legal-cn` 是面向中国大陆法律体系的 AI 法律协同插件集合。项目已经完成：
 
-- Phase 1：九个企业法务核心模块本土化。
-- Phase 2：并购、法律技能构建、法律诊所、法学生学习模块本土化。
+- Phase 1：九个法律业务核心模块本土化，并将 `legal-builder-hub` 作为第一序列生态治理模块。
+- Phase 2：并购、法律诊所、法学生学习模块本土化与持续深化。
 - 中国案例规则层：指导性案例、参考案例、典型案例和裁判文书的可更新引用接口。
 
 默认法域是中华人民共和国大陆地区。涉港澳台、境外法、跨境数据、外商投资负面清单、涉外管辖等问题，应切换为提示模式，并结合对应法域律师意见。
@@ -29,13 +29,13 @@
 | `ip-legal` | 商标、专利、著作权、平台维权、开源合规、商业秘密 | `/ip-legal:clearance` |
 | `ai-governance-legal` | 生成式 AI、算法推荐、深度合成、AI 备案、安全评估 | `/ai-governance-legal:use-case-triage` |
 | `regulatory-legal` | 监管动态、政策差异、征求意见稿、整改台账、制度修订 | `/regulatory-legal:reg-feed-watcher` |
+| `legal-builder-hub` | 法律技能生态治理、社区技能审查、安装/禁用/卸载、更新差异审查、MCP 安全边界 | `/legal-builder-hub:skills-qa` |
 
 ### Phase 2 扩展模块
 
 | 模块 | 适用场景 | 常用入口 |
 |---|---|---|
 | `corporate-legal/phase-2` | 中国并购尽调、交割清单、重大合同附表、投后整合 | `/corporate-legal:diligence-issue-extraction` |
-| `phase-2/legal-builder-hub` | 中国法技能/MCP 构建、审查、安装、禁用、更新 | `/legal-builder-hub:skills-qa` |
 | `phase-2/legal-clinic` | 法律诊所、法律援助、12348、公服咨询、导师复核 | `/legal-clinic:client-intake` |
 | `phase-2/law-student` | 中国法学习、法考、请求权基础、案例研读、主观题训练 | `/law-student:study-plan` |
 
@@ -318,7 +318,7 @@
 
 ### Phase 2 模块是否默认安装？
 
-不建议默认安装。Phase 2 模块用于进阶场景，如并购、法律诊所、法学教育和技能构建。企业法务日常使用以 Phase 1 九个模块为主。
+不建议默认安装。Phase 2 模块用于进阶场景，如并购、法律诊所和法学教育。企业法务日常使用以 Phase 1 九个法律业务模块为主；`legal-builder-hub` 虽不直接处理实体法律事项，但作为第一序列生态治理模块，建议在需要安装、审查或维护技能生态时启用。
 
 ## 12. 推荐入口
 

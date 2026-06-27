@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-for-legal-cn",
-  "description": "中国法律体系本地化版：面向中国企业法务的商事合同、公司、劳动、数据合规、产品、监管、AI 治理、知识产权和争议解决工作流插件集合。所有输出均为律师/法务审阅初稿。",
+  "description": "中国法律体系本地化版：面向中国法实务的商事合同、公司、劳动、数据合规、产品、监管、AI 治理、知识产权、争议解决和法律技能生态治理插件集合。所有输出均为律师/法务审阅初稿。",
   "owner": {
     "name": "Anthropic reference; China localization by Codex"
   },
@@ -83,6 +83,15 @@
       "displayName": "知识产权法务",
       "source": "./ip-legal",
       "description": "面向中国商标、专利、著作权、商业秘密、不正当竞争、开源合规、侵权初筛和权利组合管理的知识产权工作流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "legal-builder-hub",
+      "displayName": "法律技能生态治理",
+      "source": "./legal-builder-hub",
+      "description": "面向中国法律技能生态的发现、安装、白名单审查、Prompt 注入风险扫描、质量评估、禁用/卸载、更新差异审查和 MCP 安全边界治理。",
       "author": {
         "name": "Anthropic reference; China localization by Codex"
       }

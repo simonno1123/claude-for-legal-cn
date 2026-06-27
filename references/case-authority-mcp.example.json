@@ -2,7 +2,12 @@
   "mcpServers": {
     "people-court-case-library": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "mcp/people-court-case-library-bridge"],
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/people-court-case-library-bridge"
+      ],
       "env": {
         "PEOPLE_COURT_CASE_LIBRARY_ENDPOINT": "${PEOPLE_COURT_CASE_LIBRARY_ENDPOINT:https://rmfyalk.court.gov.cn/}",
         "PEOPLE_COURT_CASE_LIBRARY_API_KEY": "${PEOPLE_COURT_CASE_LIBRARY_API_KEY}"
@@ -11,7 +16,12 @@
     },
     "supreme-peoples-court": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "mcp/supreme-peoples-court-bridge"],
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/supreme-peoples-court-bridge"
+      ],
       "env": {
         "SPC_ENDPOINT": "${SPC_ENDPOINT:https://www.court.gov.cn/}",
         "SPC_API_KEY": "${SPC_API_KEY}"
@@ -20,13 +30,32 @@
     },
     "commercial-legal-database": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "mcp/commercial-legal-database-bridge"],
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/commercial-legal-database-bridge"
+      ],
       "env": {
         "LEGAL_DATABASE_VENDOR": "${LEGAL_DATABASE_VENDOR}",
         "LEGAL_DATABASE_ENDPOINT": "${LEGAL_DATABASE_ENDPOINT}",
         "LEGAL_DATABASE_API_KEY": "${LEGAL_DATABASE_API_KEY}"
       },
       "title": "商业法律数据库案例检索 (自带凭证，占位配置)"
+    },
+    "spc-fadawang-selected": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/spc-fadawang-selected-bridge"
+      ],
+      "env": {
+        "SPC_FADAWANG_ENDPOINT": "${SPC_FADAWANG_ENDPOINT:https://www.court.gov.cn/}",
+        "SPC_FADAWANG_API_KEY": "${SPC_FADAWANG_API_KEY}"
+      },
+      "title": "最高人民法院法答网精选系列司法问答 (占位配置)"
     }
   }
 }

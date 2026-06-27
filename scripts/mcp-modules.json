@@ -107,7 +107,7 @@
       }
     },
     {
-      "path": "phase-2/legal-builder-hub",
+      "path": "legal-builder-hub",
       "categories": ["legal-mcp-builder", "china-legal-data", "laws-regulations", "cases", "documents"],
       "noteSuffix": "法律工具构建模块默认通过 legal-data 测试标准化法律法规、法条、案例和引用核验接口。",
       "extraServers": {

@@ -27,8 +27,9 @@ Do not use cases to:
 | A | Laws, administrative regulations, judicial interpretations | Direct normative basis |
 | B | Guiding cases released by the Supreme People's Court | Strong adjudication reference for similar disputes |
 | C | People's Court Case Library reference cases | Similar-case reference, rule extraction, reasoning calibration |
-| D | Gazette cases, typical cases, regulator/court selected cases | Supplementary practice reference, especially for emerging issues |
-| E | Ordinary public judgments | Trend and sample only; never universalize without corroboration |
+| D | Supreme People's Court Fadawang selected answers (最高人民法院法答网精选系列) | Judicial Q&A and adjudication-caliber reference; not a judicial interpretation or binding case |
+| E | Gazette cases, typical cases, regulator/court selected cases | Supplementary practice reference, especially for emerging issues |
+| F | Ordinary public judgments | Trend and sample only; never universalize without corroboration |
 
 ## Required Output Fields
 
@@ -42,6 +43,9 @@ Statutory basis:
 
 Guiding cases / reference cases:
 - [case name, source, case number if available, authority tier]
+
+SPC Fadawang selected answers (最高人民法院法答网精选系列):
+- [question / answer title, source, publish date, retrieval date, authority tier if used]
 
 Similarity:
 - [facts that match]
@@ -77,6 +81,7 @@ Every case citation must state:
 - case category: guiding case, reference case, typical case, gazette case, ordinary judgment;
 - court or issuing body;
 - case name and case number if available;
+- for SPC Fadawang selected answers: question title, answer title, issuing source, publish date, and retrieval date;
 - retrieval date or update timestamp;
 - whether the text was retrieved from a connector, user upload, or manual research.
 
@@ -90,6 +95,7 @@ Update policy:
 
 - guiding cases: check monthly;
 - People's Court Case Library reference cases: check weekly for active modules and monthly for inactive modules;
+- Supreme People's Court Fadawang selected answers (最高人民法院法答网精选系列): check monthly, and check immediately when the answer is used as a material risk basis;
 - typical cases and regulator/court selected cases: check monthly;
 - ordinary judgments: check only when a matter requires similar-case research.
 
@@ -109,4 +115,3 @@ If no connector is available:
 1. Ask the user to upload case search results or relevant judgments.
 2. Use statutory and judicial-interpretation analysis as the main answer.
 3. Add: `No live case authority source is connected. Similar-case conclusions are incomplete and should be checked against the People's Court Case Library or another authoritative database.`
-
