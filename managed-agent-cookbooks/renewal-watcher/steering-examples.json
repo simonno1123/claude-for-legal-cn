@@ -1,5 +1,14 @@
 [
-  { "event": "Scan renewals 0-180 days out, flag playbook deviations, as-of 2026-05-07", "description": "Scheduled weekly sweep — the default Monday-morning run" },
-  { "event": "Targeted scan: counterparty Acme Corp, all active agreements, surface cancel-by windows and price escalators", "description": "Ad-hoc scan before a renegotiation or relationship review" },
-  { "event": "Deviation check: contract IC-2026-00412 post-signature, compare against playbook and flag any terms outside standard", "description": "Follow-up after a negotiated deal closes to confirm no late-stage changes breached the playbook" }
+  {
+    "event": "扫描未来 180 天内到期或自动续约的境内采购、SaaS、经销和服务合同，标记提前通知期限和业务负责人",
+    "description": "合同续约/终止周度扫描"
+  },
+  {
+    "event": "专项扫描：供应商“上海某某科技有限公司”的全部有效合同，识别自动续约、价格调整、保证金返还和违约解除窗口",
+    "description": "商务谈判前的合同关系复核"
+  },
+  {
+    "event": "复核合同 HT-2026-00412 签署后元数据，核对 CLM 台账与已签署 PDF 原文中的续约条款是否一致",
+    "description": "签署后合同台账一致性检查"
+  }
 ]

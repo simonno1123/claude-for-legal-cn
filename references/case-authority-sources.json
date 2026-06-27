@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "purpose": "Update interface for China Mainland guiding cases, reference cases, typical cases, and ordinary judgments.",
   "default_jurisdiction": "China Mainland",
   "freshness_policy": {
@@ -22,7 +22,7 @@
     },
     {
       "id": "supreme-peoples-court",
-      "title": "最高人民法院官网",
+      "title": "最高人民法院",
       "authority_tiers": ["guiding_case", "typical_case", "judicial_policy"],
       "connector": "supreme-peoples-court",
       "endpoint_env": "SPC_ENDPOINT",
@@ -43,8 +43,30 @@
       "required_metadata": ["case_title", "court", "case_number", "judgment_date", "retrieval_date"]
     },
     {
+      "id": "yuandian-open-platform",
+      "title": "元典开放平台",
+      "authority_tiers": ["guiding_case", "reference_case", "typical_case", "ordinary_judgment", "citation_check"],
+      "connector": "yuandian-legal-data",
+      "endpoint_env": "YUANDIAN_ENDPOINT",
+      "api_key_env": "YUANDIAN_API_KEY",
+      "default_endpoint": "https://open.chineselaw.com/",
+      "update_mode": "bring_your_own_key",
+      "required_metadata": ["database_name", "case_title", "case_type", "case_number", "retrieval_date", "source_url"]
+    },
+    {
+      "id": "pkulaw-openapi",
+      "title": "北大法宝 OpenAPI / MCP",
+      "authority_tiers": ["guiding_case", "reference_case", "typical_case", "ordinary_judgment", "article_lookup", "citation_check"],
+      "connector": "pkulaw-openapi",
+      "endpoint_env": "PKULAW_ENDPOINT",
+      "api_key_env": "PKULAW_API_KEY",
+      "default_endpoint": "https://openapi.pkulaw.cn/",
+      "update_mode": "bring_your_own_key",
+      "required_metadata": ["database_name", "case_title", "case_type", "case_number", "retrieval_date", "source_url"]
+    },
+    {
       "id": "commercial-legal-databases",
-      "title": "北大法宝 / 威科先行 / 法信 / Alpha 等商业数据库",
+      "title": "威科先行 / 法信 / Alpha 等商业数据库",
       "authority_tiers": ["guiding_case", "reference_case", "typical_case", "ordinary_judgment", "commentary"],
       "connector": "commercial-legal-database",
       "endpoint_env": "LEGAL_DATABASE_ENDPOINT",

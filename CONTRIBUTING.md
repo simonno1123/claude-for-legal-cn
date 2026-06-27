@@ -1,82 +1,98 @@
-# Contributing to Claude for Legal
+# 贡献指南
 
-Notes for anyone writing or editing a plugin in this repo. Keep this short — the
-design principles that matter most for the quality of the output, not a style
-guide.
+感谢你参与 `claude-for-legal-cn`。本仓库的目标不是简单翻译原版提示词，而是把法律协同工作流改造成能够在中国大陆法律体系下落地的插件体系。
 
-## Before your first PR
+## 基本原则
 
-Sign the CLA. The first time you open a pull request, the CLA Assistant bot will
-comment with a link to the [CLA](CLA.md) and ask you to confirm. Reply with
-`I have read the CLA Document and I hereby sign the CLA` and the check will pass.
-You only need to do this once.
+1. **中国大陆法默认优先**
+   - 默认法域为中国大陆。
+   - 不得把美国普通法、证据开示、律师特权、州法或美国监管机构作为默认路径。
+   - 涉港澳台、境外法、跨境交易或外商投资因素，应明确提示需要相应法域律师复核。
 
-## Design principle: SKILL.md encodes the right behavior; CLAUDE.md guardrails
-are the net
+2. **法律规则写进技能本体**
+   - 如果一个技能依赖某条中国法规则才能正确输出，该规则应写入对应 `SKILL.md`。
+   - `CLAUDE.md` 是全局护栏，不应成为技能正确性的唯一来源。
 
-Every plugin in this repo ships with two layers of instruction:
+3. **引用必须可追溯**
+   - 法条、案例、监管规则、地方口径、计算公式和期限都应附来源或复核提示。
+   - 使用案例时必须区分指导性案例、参考案例、公报案例、典型案例和普通裁判文书。
 
-1. **`<plugin>/skills/<skill>/SKILL.md`** — what this specific skill does, step by
-   step. The narrow, task-specific scaffold.
-2. **`<plugin>/CLAUDE.md`** — the shared guardrails and the practice profile.
-   "Scaffolding, not blinders," source-tag discipline, "verify user-stated legal
-   facts," premise verification, destination check, cross-skill severity floor,
-   pre-flight citation banner. The wide, plugin-level safety net.
+4. **不承诺证据特权**
+   - 在中国法语境下，不得承诺 `attorney-client privilege`、`work product doctrine` 或“开示豁免”。
+   - 相关输出应表述为“内部法律分析初稿 / 保密文件 / 仅供内部复核”。
 
-**If a skill's correct output depends on a CLAUDE.md guardrail catching a
-mistake the SKILL.md would have made, that's a design smell.** The SKILL.md
-should tell the model what to do directly; the guardrails should catch what the
-SKILL.md missed. Every time a guardrail has to rescue a skill, we're relying on
-the guardrail firing consistently — and on a bad run, a weaker model, a terser
-prompt, or a future editor who reads only the skill text, the rescue doesn't
-happen.
+## 修改技能前
 
-**Rule of thumb: if a QA test passes only because a guardrail fired, add the
-behavior to the SKILL.md directly.** The guardrail stays (belt and suspenders),
-but the skill now carries the knowledge it needs on its own.
+- 先阅读目标插件的 `CLAUDE.md`。
+- 再阅读目标技能的 `SKILL.md` 和 `references/`。
+- 检查同插件下是否已有中国法测试用例，例如 `references/test-cases-cn.md`。
+- 确认改动是否需要更新 README、`.mcp.json`、回归用例或状态文档。
 
-Examples of this rule in practice:
+## 技能编写标准
 
-- A design patent question should not pass an infringement triage only because
-  "Scaffolding, not blinders" lets the model override the utility-patent
-  workflow. The skill should branch on the D-prefix itself and route to the
-  ordinary-observer test.
-- A renewal cancel-by date that falls on a Sunday should not land on the user's
-  calendar correctly only because the user thought to ask about weekdays. The
-  register schema and the Mode 2 output should carry the business-day roll-back
-  themselves.
-- An FLSA back-pay computation should not get the regular-rate formula right
-  only because the model happens to remember §207(e). The skill should have a
-  §207(e) checklist that forces the inclusions, the 0.5× vs. 1.5× posture, the
-  liquidated-damages doubling, and the SOL lookback into every answer.
+技能应直接包含任务所需的中国法卡点。例如：
 
-## A few concrete things that follow
+- 劳动解除技能应直接审查《劳动合同法》第 39/40/41 条、工会通知、培训或调岗前置程序、N/N+1/2N。
+- 公司法技能应直接审查新公司法五年出资期、出资加速到期、第 88 条股权转让责任、职工董事、审计委员会和影子董事责任。
+- 产品合规技能应直接审查《广告法》《消费者权益保护法》《电子商务法》《个人信息保护法》、未成年人保护、自动续费、价格欺诈和产品召回。
+- 诉讼技能应围绕举证期限、调查令、财产保全、庭审质证、仲裁/诉讼路径和执行程序，不使用 discovery/deposition/subpoena 作为默认框架。
 
-- **Put the doctrine in the skill.** If a skill's mode covers patents, cover
-  design patents. If it covers overtime, cover the regular-rate formula. Not a
-  pointer to "and also think about" — the actual checklist.
-- **Attach provenance tags to numbers, not to paragraphs.** `[model calculation
-  — verify against the notice clause]` next to the date; `[verify — consult
-  wage-and-hour counsel before asserting or paying]` on the line the back-pay
-  number appears. Tags on surrounding prose get lost; tags on the load-bearing
-  digit do not.
-- **Make the decline pathway a scaffold, not an escape hatch.** If the right
-  answer to some category of question is "I decline to compute," bake that into
-  the skill as a hard gate. `legal-clinic`'s `/deadlines` do-not-compute rule is
-  the pattern: stated plainly, non-overridable, owned by the skill.
-- **Write the gate header so the gate is default-on.** If there is an
-  exemption, phrase the heading as the gate and narrow the exemption in a
-  sub-bullet, not the other way around. A load-bearing parenthetical is a bug
-  waiting to be reintroduced by the next edit.
+如果一个测试用例只有依靠全局护栏才不会出错，应把对应规则补进技能本体。
 
-## Workflow notes
+## MCP 与连接器
 
-- **Read the plugin's `CLAUDE.md` before editing any skill in that plugin.** The
-  practice profile, the integrations table, the shared guardrails, and the
-  decision-posture statement all shape what the skill should say and omit.
-- **Bump the plugin version on a material change.** Patch bumps for behavior
-  additions; minor bumps for new skills or new required inputs.
-- **Run the validators.** `scripts/validate.py` and `scripts/lint-tool-scope.py`
-  check the structural invariants the plugin loader depends on.
-- **Do not remove the shared guardrails from CLAUDE.md.** The net stays. The
-  goal is a skill that doesn't need the net, not a plugin without one.
+新增连接器时，优先遵守 `CONNECTORS.md` 的统一架构：
+
+- 法律法规、法条、案例、引用核验统一走 `legal-data` 能力层。
+- 官方网站通常通过本地索引、人工上传或低频采集接入。
+- 商业数据库通过企业授权 API/MCP 接入，不得提交真实密钥。
+- 每个结果应返回来源、检索日期、时效状态和可引用标识。
+
+不要在单个业务插件里硬编码特定供应商，除非该插件确实需要专属业务系统。
+
+## 测试与校验
+
+提交前至少检查：
+
+- Markdown 是否可读、无明显乱码；
+- `.json` 文件是否可解析；
+- `.mcp.json` 是否没有真实密钥；
+- 是否误引入美国法默认术语；
+- 是否更新了相关中文测试用例。
+
+建议扫描以下类别的关键词：
+
+```text
+英美律师特权 / 工作成果豁免 / 证据开示
+美国程序法 / 美国劳动法 / 美国监管机构
+美国儿童隐私、广告、医疗、食品药品监管框架
+境外法院数据库 / 境外协作软件 / 境外网盘
+```
+
+如果这些词只是出现在“禁止使用/术语替换”段落中，应确保上下文明确。
+
+## 提交说明
+
+提交信息建议使用清晰动词：
+
+```text
+Localize corporate governance prompts
+Add China labor law regression cases
+Unify legal-data MCP connector docs
+Remove US litigation connector residue
+```
+
+较大改动请在 PR 描述中说明：
+
+- 改动模块；
+- 对应中国法规则；
+- 新增或更新的测试用例；
+- 仍需人工复核的边界。
+
+## 不接受的改动
+
+- 把美国法、州法或普通法制度作为中国版默认输出。
+- 提交真实 API Key、账号、Cookie、商业数据库授权信息。
+- 删除中国法安全免责声明。
+- 让模型承诺最终法律意见、诉讼结果或证据特权。
+- 用网页端 AI 产品替代可溯源法律数据源。

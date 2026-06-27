@@ -22,7 +22,7 @@ argument-hint: "[技能或插件路径]"
 - 中国法规则缺口明显。
 - 缺少 `references/test-cases-cn.md`。
 - README、`.mcp.json`、技能描述不一致。
-- 仍存在 CourtListener、Westlaw、FRCP、ABA、Bluebook 等残留术语。
+- 仍存在境外法律数据库、美国程序法、美国律师协会规范或美国引注规范等残留术语。
 
 ### P2 优化
 
@@ -47,4 +47,3 @@ argument-hint: "[技能或插件路径]"
 
 ## Regression Cases Needed
 ```
-

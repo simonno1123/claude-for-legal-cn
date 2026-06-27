@@ -1,27 +1,37 @@
 {
   "mcpServers": {
-    "Slack": {
-      "type": "http",
-      "url": "https://mcp.slack.com/mcp",
-      "title": "Slack",
-      "description": "Search messages, read channels, find discussions across your workspace."
+    "legal-data": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["../../connectors/legal-data/server.js"],
+      "title": "统一中国法律数据层 (占位)",
+      "description": "用于测试和构建中国法 MCP 工具时的标准法律法规、法条、案例和引用核验接口。",
+      "env": {
+        "LEGAL_DATA_PROVIDER": "${LEGAL_DATA_PROVIDER:auto}",
+        "YUANDIAN_API_KEY": "${YUANDIAN_API_KEY}",
+        "PKULAW_API_KEY": "${PKULAW_API_KEY}",
+        "LAW_STAR_API_KEY": "${LAW_STAR_API_KEY}",
+        "LOCAL_LEGAL_INDEX": "${LOCAL_LEGAL_INDEX:../../data/legal-index}"
+      }
     },
-    "Google Drive": {
+    "wps-cloud-docs": {
       "type": "http",
-      "url": "https://drivemcp.googleapis.com/mcp/v1",
-      "title": "Google Drive",
-      "description": "Search, read, and fetch documents from Google Drive."
+      "url": "${WPS_CLOUD_DOCS_MCP_URL}",
+      "title": "WPS / 金山文档 (占位)",
+      "description": "读取连接器说明、测试样例、回归报告和人工上传的法律材料。"
     },
-    "Lawve AI": {
+    "cn-collaboration": {
       "type": "http",
-      "url": "https://mcp.lawve.ai/mcp",
-      "title": "Lawve AI",
-      "description": "Curated library of legal AI skills written by practicing lawyers, in-house counsel, and legal technologists."
+      "url": "${CN_COLLAB_MCP_URL}",
+      "title": "飞书 / 钉钉 / 企业微信 (占位)",
+      "description": "用于工具构建团队的任务流转和审查提醒。"
     }
   },
   "recommendedCategories": [
-    "legal-skills-registry",
-    "chat",
+    "legal-mcp-builder",
+    "china-legal-data",
+    "laws-regulations",
+    "cases",
     "documents"
   ]
 }

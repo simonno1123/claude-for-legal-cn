@@ -1,5 +1,14 @@
 [
-  { "event": "Scan tracker for launches in next 6 weeks", "description": "Weekly radar — default horizon, all surfaces" },
-  { "event": "Triage: new Agent autonomy feature (PROJ-1234), is this a problem?", "description": "Single-ticket triage against the calibration table — runs the is-this-a-problem path end-to-end" },
-  { "event": "Re-scan after roadmap reprioritization, horizon: 4 weeks", "description": "Off-cadence refresh after a planning meeting shuffled launch dates" }
+  {
+    "event": "扫描未来 6 周内计划上线的产品功能，重点标记个人信息、未成年人、算法推荐、自动续费、价格促销和直播带货风险",
+    "description": "中国产品合规周度上线雷达"
+  },
+  {
+    "event": "单票据审查：飞书项目 PRD-2026-1234“未成年人社区互动功能”，判断是否触发未成年人网络保护、个人信息保护和内容审核门槛",
+    "description": "高风险产品功能单项分流"
+  },
+  {
+    "event": "产品路线图调整后重新扫描未来 4 周上线项，优先标记市监、网信、工信监管触点",
+    "description": "规划变更后的临时合规刷新"
+  }
 ]

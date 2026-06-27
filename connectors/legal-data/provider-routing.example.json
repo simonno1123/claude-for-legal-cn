@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "default_strategy": "commercial_if_authorized_else_local",
+  "routing": {
+    "law_search": ["yuandian", "pkulaw", "law-star", "official-local-index", "manual-upload"],
+    "article_lookup": ["pkulaw", "yuandian", "law-star", "official-local-index", "manual-upload"],
+    "regulation_detail": ["pkulaw", "yuandian", "law-star", "official-local-index", "manual-upload"],
+    "case_search": ["yuandian", "pkulaw", "official-local-index", "manual-upload"],
+    "case_detail": ["pkulaw", "yuandian", "official-local-index", "manual-upload"],
+    "case_authority_rank": ["official-local-index", "yuandian", "pkulaw", "manual-upload"],
+    "citation_check": ["yuandian", "pkulaw", "official-local-index", "manual-upload"]
+  },
+  "fallback": {
+    "no_provider_available": "Ask the user to configure a commercial provider, build a local index, or upload source documents.",
+    "stale_local_index": "Return the local result with freshness warning and request manual verification.",
+    "conflicting_results": "Prefer official source for legal text; for case materials, show all sources and require human review."
+  }
+}

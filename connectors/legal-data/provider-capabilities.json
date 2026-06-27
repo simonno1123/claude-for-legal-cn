@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "tools": [
+    "law_search",
+    "article_lookup",
+    "regulation_detail",
+    "case_search",
+    "case_detail",
+    "case_authority_rank",
+    "citation_check"
+  ],
+  "providers": [
+    {
+      "id": "official-local-index",
+      "type": "official-local",
+      "default_enabled": true,
+      "capabilities": ["law_search", "article_lookup", "regulation_detail", "case_search", "case_detail", "case_authority_rank"],
+      "sources": ["国家法律法规数据库", "最高人民法院", "人民法院案例库", "中国裁判文书网"],
+      "freshness_note": "Depends on local ingestion schedule or manual upload."
+    },
+    {
+      "id": "yuandian",
+      "type": "commercial-api",
+      "default_enabled": false,
+      "capabilities": ["law_search", "article_lookup", "regulation_detail", "case_search", "case_detail", "citation_check"],
+      "api_key_env": "YUANDIAN_API_KEY",
+      "freshness_note": "Depends on enterprise subscription and provider coverage."
+    },
+    {
+      "id": "pkulaw",
+      "type": "commercial-api",
+      "default_enabled": false,
+      "capabilities": ["law_search", "article_lookup", "regulation_detail", "case_search", "case_detail", "citation_check"],
+      "api_key_env": "PKULAW_API_KEY",
+      "freshness_note": "Depends on enterprise OpenAPI/MCP authorization."
+    },
+    {
+      "id": "law-star",
+      "type": "commercial-api",
+      "default_enabled": false,
+      "capabilities": ["law_search", "article_lookup", "regulation_detail"],
+      "api_key_env": "LAW_STAR_API_KEY",
+      "freshness_note": "Recommended for laws and regulations search if licensed."
+    },
+    {
+      "id": "manual-upload",
+      "type": "local-file",
+      "default_enabled": true,
+      "capabilities": ["law_search", "article_lookup", "regulation_detail", "case_search", "case_detail", "citation_check"],
+      "freshness_note": "User must provide source date and retrieval context."
+    }
+  ]
+}

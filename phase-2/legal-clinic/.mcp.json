@@ -1,42 +1,38 @@
 {
   "mcpServers": {
-    "Slack": {
-      "type": "http",
-      "url": "https://mcp.slack.com/mcp",
-      "title": "Slack",
-      "description": "Search messages, read channels, find discussions across your workspace."
+    "legal-data": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["../../connectors/legal-data/server.js"],
+      "title": "统一中国法律数据层 (占位)",
+      "description": "提供法律法规、法条、案例、引用核验和案例权威排序；用于法律诊所的事实核验、法条定位和类案参考。",
+      "env": {
+        "LEGAL_DATA_PROVIDER": "${LEGAL_DATA_PROVIDER:auto}",
+        "YUANDIAN_API_KEY": "${YUANDIAN_API_KEY}",
+        "PKULAW_API_KEY": "${PKULAW_API_KEY}",
+        "LAW_STAR_API_KEY": "${LAW_STAR_API_KEY}",
+        "LOCAL_LEGAL_INDEX": "${LOCAL_LEGAL_INDEX:../../data/legal-index}"
+      }
     },
-    "Google Drive": {
+    "wps-cloud-docs": {
       "type": "http",
-      "url": "https://drivemcp.googleapis.com/mcp/v1",
-      "title": "Google Drive",
-      "description": "Search, read, and fetch documents from Google Drive."
+      "url": "${WPS_CLOUD_DOCS_MCP_URL}",
+      "title": "WPS / 金山文档 (占位)",
+      "description": "读取当事人材料、授权委托材料、案件笔记和诊所教学文件。"
     },
-    "CourtListener": {
+    "cn-collaboration": {
       "type": "http",
-      "url": "https://mcp.courtlistener.com/",
-      "title": "CourtListener",
-      "description": "Free Law Project's legal research platform — millions of U.S. court opinions, PACER dockets, judge profiles, oral arguments, and citation verification."
-    },
-    "Courtroom5": {
-      "type": "http",
-      "url": "https://mcp.courtroom5.com",
-      "title": "Courtroom5",
-      "description": "Courtroom5 — jurisdiction-aware guidance for self-represented litigants: case intake, deadline calculations, procedural next steps."
-    },
-    "Descrybe": {
-      "type": "http",
-      "url": "https://mcp.descrybe.com/mcp",
-      "title": "Descrybe",
-      "description": "Primary law research — search cases by concept or wording, find cases from citations, extract authorities, check treatment, verify quoted language."
+      "url": "${CN_COLLAB_MCP_URL}",
+      "title": "飞书 / 钉钉 / 企业微信 (占位)",
+      "description": "用于诊所内部任务分派和复核提醒；不得自动发送涉隐私材料。"
     }
   },
   "recommendedCategories": [
-    "case-management",
-    "legal-research",
-    "case-law",
-    "licensing-boards",
-    "documents",
-    "chat"
+    "china-legal-research",
+    "legal-aid",
+    "case-intake",
+    "laws-regulations",
+    "cases",
+    "documents"
   ]
 }

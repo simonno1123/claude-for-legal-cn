@@ -46,7 +46,7 @@
 在 Claude Code 或支持插件市场的 MCP 客户端中添加本仓库路径：
 
 ```text
-/plugin marketplace add C:\Users\Administrator\Documents\Codex\2026-06-19\ni\work\claude-for-legal-cn
+/plugin marketplace add <你的本地仓库路径>/claude-for-legal-cn
 ```
 
 如果使用其他路径，请替换为你的本地仓库路径。
@@ -349,4 +349,3 @@
 /law-student:cold-start-interview
 /legal-clinic:cold-start-interview
 ```
-

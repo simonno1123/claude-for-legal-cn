@@ -1,5 +1,14 @@
 [
-  { "event": "Check feeds as-of 2026-05-12, materiality threshold: medium", "description": "Scheduled weekly digest run" },
-  { "event": "Deep check: new EU AI Act implementing regulation, policy area: ai-governance", "description": "Targeted check on a known development" },
-  { "event": "Gap check against FINRA Rule 4512 amendment, docket SR-FINRA-2026-007", "description": "Specific gap analysis on a flagged item" }
+  {
+    "event": "扫描 2026-06-01 至 2026-06-27 的国家法律法规数据库、国务院、市场监管总局、网信办和工信部更新，重要性阈值：中",
+    "description": "中国监管动态周度摘要"
+  },
+  {
+    "event": "专项检查：网信办新发布的个人信息出境、算法推荐或生成式 AI 备案规则，业务线：数据合规与 AI 治理",
+    "description": "已知监管变化的专项差距检查"
+  },
+  {
+    "event": "对照企业现行《广告合规审核制度》，检查市场监管总局近期价格促销、直播带货和互联网广告监管口径变化",
+    "description": "制度差距分析和整改线索生成"
+  }
 ]
