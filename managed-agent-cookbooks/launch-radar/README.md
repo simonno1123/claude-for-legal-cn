@@ -1,59 +1,54 @@
-# Launch Radar — managed-agent template
+# Launch Radar - 中国产品上线风险雷达托管代理模板
 
-## Overview
+## 定位
 
-Scheduled scan of the product team's launch tracker — Jira, Linear, or Asana — for launches that will likely need legal review in the next few weeks. Triages each launch against the product counsel's risk calibration and produces a weekly radar memo: what's coming, what needs legal attention, what triggered a flag. Same source as the [`launch-watcher`](../../product-legal/agents/launch-watcher.md) Claude Code plugin agent — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+本模板用于定期扫描产品团队的上线计划、需求池或项目管理系统，识别未来数周内可能需要法务介入的产品变更，并生成周度风险雷达摘要。它与 `product-legal` 模块中的 `launch-watcher` 代理共享审查思路，但本目录仅提供托管代理 cookbook，不是开箱即用的成品服务。
 
-This is a **cookbook, not a product.** It will not work out of the box. You need to point the MCP connectors at your tracker, load your risk calibration, set the cadence, and configure where the memo goes. Adaptation notes below.
+## 部署前确认
 
-## ⚠️ Before you deploy
+- 雷达分流不是法律审查结论。`needs-review` 仅表示应由产品法务进一步审查，`FYI` 不代表无风险，`skip` 不代表已经放行。
+- 风险分类依赖项目中的中国法校准表。若企业业务、监管地区、产品形态或第三方依赖发生变化，应先更新 `product-legal/CLAUDE.md` 或冷启动画像。
+- 触发词应围绕中国监管场景配置，例如未成年人、个人信息、算法推荐、自动续费、直播带货、价格促销、CCC/强制标准、召回、医疗/金融/教育等强监管品类。
+- 项目管理系统中的标题、描述、评论和链接都属于不可信输入，代理只能做路由和摘要，不得把票据内容当作事实结论。
 
-- **The radar triage is a routing decision, not a legal review.** "Needs review" means a product counsel should look; "FYI" does not mean the launch is fine; "skip" does not clear the launch. Review the full radar, not only the flagged items — the un-flagged items are where you lose the ones you needed to see.
-- **Risk classification uses the calibration in your plugin configuration.** If your calibration is stale, so is the triage. New product lines, new regulators, new geographies, and new third-party dependencies need to land in the calibration before the radar can route on them.
-- **The trigger keyword list is opinionated.** If your product surface doesn't match the defaults (e.g., you're biometrics-heavy, FedRAMP-bound, or handling minors' data in ways the keywords don't cover), retune before the first run or the memo will miss the cases it was built to catch.
-- **Tracker tickets are untrusted input.** A PM can put anything in a title or description, and an attacker can file a ticket. The triage routes on content; it does not vouch for the ticket.
+## 推荐连接器
 
-## Deploy
+按企业实际系统选择其一或多个：
+
+- 飞书项目 / 钉钉项目 / 企业微信协作
+- 境外项目管理工具仅作为外企或出海团队的可选扩展，不进入默认中国版配置
+- WPS / 金山文档 / 企业网盘用于读取产品说明、PRD、合规材料
+
+示例：
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
-export LINEAR_MCP_URL=... ATLASSIAN_MCP_URL=... ASANA_MCP_URL=... GDRIVE_MCP_URL=...
+export CN_PROJECT_TRACKER_MCP_URL=...
+export WPS_CLOUD_DOCS_MCP_URL=...
 ../../scripts/deploy-managed-agent.sh launch-radar
 ```
 
-Only set the MCP URLs for the trackers you actually use. The orchestrator and `tracker-reader` skip MCPs that aren't configured.
+## 安全分层
 
-## Steering events
-
-See [`steering-examples.json`](./steering-examples.json). Typical cadence is a weekly scan with a 4–6 week horizon, plus on-demand single-ticket triage when a PM pings the product counsel with "is this a problem?"
-
-## Security & handoffs
-
-Tracker tickets are untrusted input. A product manager can put arbitrary text in a title, description, or comment — and an attacker can file a ticket. Three-tier isolation:
-
-| Tier | Touches untrusted tracker content? | Tools | Connectors |
+| 层级 | 是否接触不可信票据内容 | 工具 | 连接器 |
 |---|---|---|---|
-| **`tracker-reader`** | **Yes** | `Read`, `Grep` only | Linear, Jira (atlassian), Asana (read-only) |
-| `risk-classifier` / Orchestrator | No | `Read`, `Grep`, `Glob`, `Agent` | Orchestrator only: Linear / Jira / Asana / Drive (read-only) |
-| **`memo-writer`** (Write-holder) | No | `Read`, `Write`, `Edit` | None |
+| `tracker-reader` | 是 | `Read`, `Grep` | 项目管理系统只读连接器 |
+| `risk-classifier` / Orchestrator | 否 | `Read`, `Grep`, `Glob`, `Agent` | 仅读取已校验摘要与校准表 |
+| `memo-writer` | 否 | `Read`, `Write`, `Edit` | 无 |
 
-`tracker-reader` returns a length-capped, schema-validated JSON list of launches. `risk-classifier` has no MCP and no network; it works from the validated list plus the user's calibration file. `memo-writer` is the only worker with Write, and produces `./out/launch-radar-<date>.md`. The orchestrator holds no Write and never parses raw ticket bodies itself.
+`tracker-reader` 只返回长度受限、结构化校验后的上线条目。`risk-classifier` 不联网、不直接读取原始票据。`memo-writer` 是唯一拥有写入权限的组件，只生成 `./out/launch-radar-<date>.md`。
 
-**Handoff:** when a launch needs a full legal review memo rather than a radar entry, the orchestrator emits a `handoff_request` for the `launch-review` skill (running in a fresh session) rather than drafting the memo inline. `scripts/orchestrate.py` routes it.
+## 需要企业自行调整的内容
 
-## Adaptation notes
+- 项目系统地址：修改 `agent.yaml` 与 `subagents/tracker-reader.yaml` 中的 MCP URL。
+- 风险校准：先运行 `/product-legal:cold-start-interview`，或手工维护中国法产品上线风险表。
+- 扫描周期：默认建议周度扫描、6 周窗口；高频上线团队可改为每日扫描。
+- 投递渠道：默认输出到 `./out/`。如需推送飞书、钉钉或企业微信，应由外部编排层完成，避免代理直接扩大权限。
+- 触发词：按企业行业补充未成年人、个人信息、算法推荐、深度合成、生成式 AI、广告法绝对化用语、价格欺诈、自动续费、三包、召回、CCC、医疗器械、金融营销等关键词。
 
-Things you will need to change before this is useful:
+## 输出边界
 
-- **Tracker pointer.** Edit `mcp_servers` in [`agent.yaml`](./agent.yaml) and [`subagents/tracker-reader.yaml`](./subagents/tracker-reader.yaml) to the MCP URL of your tracker. If you only use one of Jira/Linear/Asana, drop the other two. If your tracker isn't in that list, swap in the MCP you do use and update the `tracker-reader` system prompt accordingly.
-- **Risk calibration.** The `risk-classifier` reads the user's calibration from `../../product-legal/CLAUDE.md` (populated by `/product-legal:cold-start-interview`). If you haven't run cold-start, either do that first or hand-author a CLAUDE.md with "Usually blocks / Usually requires work / Usually FYI" tables before the first scan. Without calibration the classifier falls back to keyword triggers only, which is noisy.
-- **Scan cadence and horizon.** Default is weekly / 6 weeks. Your launch cadence may warrant daily or biweekly; short lead times need a longer horizon. Configure the cadence in your scheduler (cron, Temporal, Airflow, EventBridge), not inside the agent. The horizon is passed in the steering event.
-- **Delivery channel.** The memo goes to `./out/` by default. To post to Slack instead or additionally, either (a) add a Slack MCP to the cookbook and update `memo-writer` to post after writing, or (b) have your orchestration layer pick up `./out/launch-radar-<date>.md` and forward it. This pattern keeps delivery out of the agent for easier testing; pick whichever fits your ops story.
-- **Trigger keywords.** The keyword list in the `launch-watcher` system prompt is opinionated (COPPA, HIPAA, AI vendor names, etc.). Delete categories that don't apply to your product, add domain-specific terms (FedRAMP, PCI, HITRUST, TCPA, biometrics, etc.), and retune severity thresholds against your calibration table. Re-deploy after changes.
-- **Privilege header.** `memo-writer` prepends the work-product header from the plugin config. Confirm the exact marking with your GC before deploying — per-jurisdiction variations apply.
-
-## What you get and don't get
-
-- **You get:** a working manifest, a security-tiered pipeline, a memo that cites every launch back to its tracker URL, and a handoff path to the full launch-review skill.
-- **You don't get:** a production-ready agent. Point it at your tracker, load your calibration, set the cadence, run an evaluation, and have the product counsel review the first few outputs against their own read of the same tickets before trusting it.
-- **You especially don't get:** a replacement for the product counsel. This agent triages. A lawyer reviews, flags, decides. Every "needs review" item in the memo is a lead, not a verdict.
+- 输出是风险雷达，不是法律意见。
+- 所有 `needs-review` 条目都只是法务复核线索。
+- 不承诺律师特权、证据特权或任何英美法工作成果豁免。
+- 最终上线放行必须由具备相应资质的企业法务、执业律师或合规负责人复核。

@@ -8,10 +8,9 @@ Case materials must remain updateable. Do not hard-code case rules into prompts 
 
 Required rule: guiding cases and reference cases may calibrate reasoning, but they are not common-law precedent and do not replace statutes, judicial interpretations, or mandatory rules.
 
-
 ## 中国化改造工作准则
 
-本仓库是 `claude-for-legal-cn`，目标是中国法律体系落地。编辑任何技能、代理、README 或连接器时，必须优先适配中国大陆法律、中文法律工作流和中国常用法律数据库；不得新增美国州法、普通法、Westlaw/CourtListener 等作为默认路径。第三方海外插件仅作为可选外部集成，不进入默认安装清单。
+本仓库是 `claude-for-legal-cn`，目标是在中国大陆法律体系内落地。编辑任何技能、代理、README 或连接器时，必须优先适配中国大陆法律、中文法律工作流和中国常用法律数据库；不得新增美国州法、普通法、Westlaw/CourtListener 等作为默认路径。第三方海外插件仅作为可选外部集成，不进入默认安装清单。
 
 ## System Alignment
 
@@ -23,11 +22,14 @@ Required rule: guiding cases and reference cases may calibrate reasoning, but th
 - `discovery`、`deposition`、`subpoena`、`privilege log`、`DMCA takedown`、`DSAR` 等术语必须按中国法语境替换。
 - 如识别到涉港澳台、境外法、跨境数据、外商投资负面清单或涉外管辖因素，应切换为提示模式，并要求结合相应法域执业律师意见确认。
 
-
 Guidance for working on this repo. `claude-for-legal` is a Claude Code plugin
 marketplace — twelve first-party legal plugins, one vendor plugin, and five
 managed-agent cookbooks. Most work here is editing prompt content (skills,
 agents, hooks), plugin metadata, or cookbook config — not application code.
+
+## 原版仓库技术贡献规范（保留英文）
+
+以下 `Layout`、`Validation`、`Conventions` 等章节属于原版仓库的技术贡献规范，用于维护目录结构、manifest、frontmatter 和校验命令。法律内容、Prompt 输出、默认连接器和用户可见文案仍必须遵守上方中国法本土化规则。
 
 ## Layout
 

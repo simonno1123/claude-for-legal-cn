@@ -1,58 +1,46 @@
-# Docket Watcher — managed-agent template
+# Docket Watcher - 中国诉讼/仲裁进度监测托管代理模板
 
-## Overview
+## 定位
 
-Monitors court dockets for matters in the active litigation portfolio. Trellis covers state trial courts; CourtListener / PACER covers federal. For each active matter the agent pulls new filings since the last check, maps filing types to candidate deadlines, cross-references against the matter's history and open deliverables, and produces a docket status report plus a structured deadline feed.
+本模板用于监测企业诉讼、仲裁、执行和保全案件的进展，拉取新增立案、送达、举证、开庭、裁判、保全、执行等事件，并生成状态报告和候选期限清单。
 
-Same source as the [`docket-watcher`](../../litigation-legal/agents/docket-watcher.md) agent in the litigation-legal Claude Code plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+它是 cookbook，不是直接可用的案件管理系统。部署方必须接入自己的法院/仲裁/案件管理系统连接器，并维护本地期限规则表。
 
-## ⚠️ Before you deploy
-
-- **Computed deadlines are leads, not calendar entries.** Court deadline rules vary by jurisdiction, court, judge, and local rule, and can be modified by standing order or case-specific case management order. Missing a court deadline has malpractice consequences. A licensed attorney verifies every computed deadline against the court's actual rules and any case-specific orders before it is docketed. The agent is upstream of that decision, not a substitute for it.
-- **Filing classifications are heuristic.** A filing the agent misclassifies — an administrative motion read as a dispositive motion, a stipulation read as a discovery dispute — can produce a wrong deadline rule. Read the filing; do not trust the label.
-- **An unknown court is not a default.** If the jurisdiction-rule table does not cover a court, the mapper must produce `confidence: low` + `needs_verification: true`, never a silent default. If you see a confident deadline on an obscure court, treat the rule table as stale until proven otherwise.
-- **A quiet docket is not a clean docket.** Clerks docket late. Minute entries sometimes arrive days after the event. "No new filings" is a statement about the feed, not a statement about the case.
-
-## Deploy
+## 推荐连接器
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
-export TRELLIS_MCP_URL=...
-export COURTLISTENER_MCP_URL=...
-export GDRIVE_MCP_URL=...
+export CN_COURT_DOCKET_MCP_URL=...
+export CN_ARBITRATION_DOCKET_MCP_URL=...
+export WPS_CLOUD_DOCS_MCP_URL=...
 ../../scripts/deploy-managed-agent.sh docket-watcher
 ```
 
-## Steering events
+可接入来源包括：
 
-See [`steering-examples.json`](./steering-examples.json).
+- 人民法院在线服务、审判流程信息公开、执行信息公开等法院侧系统
+- 仲裁机构案件系统或企业内部案件管理系统
+- WPS/金山文档中的举证期限、开庭通知、保全续封台账
 
-## Security & handoffs
+## 安全分层
 
-Court filings are public records, but they are also UNTRUSTED INPUT. The filer controls the text and can embed prompts, URLs, and instructions aimed at the agent. Three-tier isolation:
+法院和仲裁文件属于不可信输入。起诉状、证据、律师函、邮件、系统备注都可能包含诱导模型改变行为的文本。代理分三层隔离：
 
-| Tier | Touches filings? | Tools | Connectors |
+| 层级 | 是否读取原始文件 | 权限 | 说明 |
 |---|---|---|---|
-| **`docket-reader`** | **Yes** | `Read`, `Grep` only | trellis, courtlistener (read-only) |
-| `deadline-mapper` / Orchestrator | No — sees structured JSON only | `Read`, `Grep`, `Glob`, `Agent` | gdrive (jurisdiction config, read-only) |
-| **`tracker-writer`** (Write-holder) | No | `Read`, `Write`, `Edit` | None |
+| `docket-reader` | 是 | 只读 | 拉取新增事件并结构化 |
+| `deadline-mapper` | 否 | 只读 | 根据中国法和本地规则映射候选期限 |
+| `tracker-writer` | 否 | 写入 | 输出报告和期限清单 |
 
-`docket-reader` returns length-capped, schema-validated JSON. `deadline-mapper` has no MCP and no web — it applies rules the deploying team has configured. `tracker-writer` produces `./out/docket-report-<date>.md` and `./out/deadlines.yaml` and never sees raw filings.
+## 期限边界
 
-## Adaptation notes
+- 自动计算的期限只是候选线索，不是最终日历项。
+- 举证期限、上诉期、保全续封、执行异议、仲裁答辩等期限可能受送达方式、法院通知、仲裁规则和个案裁定影响。
+- 所有 `needs_verification: true` 的条目必须由案件律师或诉讼管理人员复核。
+- 即使置信度为 high，也应在正式登记前核对案件材料和法院/仲裁机构通知。
 
-This cookbook is a starting point. It will not work in production until you have done the following:
+## 输出
 
-- **Set the MCP URLs.** `TRELLIS_MCP_URL` and `COURTLISTENER_MCP_URL` must point at your deployment's endpoints, with whatever authentication your platform requires. `GDRIVE_MCP_URL` (or a substitute) points at wherever your jurisdiction-rule tables live.
-- **Load the portfolio.** The agent reads `matters/_log.yaml` plus the per-matter `docket_id` and `court` from the deploying team's litigation-legal configuration. If your docketing system is the source of truth, front it with an MCP or a scheduled sync into the config path.
-- **Configure jurisdiction rules.** Ship the deadline-mapper a local-rule table for every court in your portfolio. Federal rules you can encode once; state trial courts and individual judges are where the landmines live. An unknown court should produce `confidence: low` + `needs_verification: true`, never a silent default.
-- **Wire delivery.** Decide where the output goes: your docketing system ingests `./out/deadlines.yaml`; the narrative report goes to Slack, email, or your matter management workspace; critical flags route to whoever you want woken up.
-- **Set the schedule.** Weekly for most matters; daily for anything with a hearing inside 14 days, any `trial` or late-`discovery` posture, or any `risk: critical` matter.
+- `./out/docket-status-<date>.md`：案件进展摘要
+- `./out/deadlines.yaml`：结构化候选期限
 
-## Computed deadlines are leads, not calendar entries
-
-**The computed deadlines this agent produces require human verification against the controlling local rule, standing order, and case management order before they are calendared. Missing a court deadline has malpractice consequences. This agent surfaces deadlines; a human verifies and dockets them.**
-
-Every deadline carries `confidence` and `needs_verification` fields. The report segregates low-confidence entries and stamps a verification callout on anything not derived from an unambiguous federal rule. Treat that as the minimum — not the ceiling — of human review. Judges override defaults by individual order, local rules change, and the date the clerk actually docketed service may differ from the date the docket displays.
-
-**Not guaranteed:** this agent recommends a deadline; the docketing attorney confirms against the controlling rule and books the date.
+输出可以由外部编排层转发至飞书、钉钉、企业微信、邮件或案件管理系统。代理本身不直接发送协作消息。

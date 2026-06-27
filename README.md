@@ -1,5 +1,5 @@
 # Claude for Legal (中国法企业法务定制版)
-> ?????????[PROJECT_USAGE_GUIDE.md](PROJECT_USAGE_GUIDE.md)
+> 详细使用说明请参阅：[PROJECT_USAGE_GUIDE.md](PROJECT_USAGE_GUIDE.md)
 
 
 本项目是基于 Anthropic `claude-for-legal` 原型进行深度本地化改造的开源项目。针对中国大陆法系（成文法）特点及国内企业合规、法务核心工作流进行了底层架构与 Prompt 的全量重雕，旨在打造开箱即用的“AI 法律协同副驾驶（Copilot）”。

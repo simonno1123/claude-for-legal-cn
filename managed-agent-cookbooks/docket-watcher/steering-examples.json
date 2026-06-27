@@ -1,5 +1,14 @@
 [
-  { "event": "Watch docket 2:26-cv-00315 in N.D. Cal., matter M-2026-042", "description": "Single-matter federal docket sweep" },
-  { "event": "Daily sweep: all active matters with hearings in next 14 days", "description": "Scheduled portfolio sweep for near-term hearings" },
-  { "event": "New filing detected: Motion to Dismiss in matter M-2026-042, compute opposition deadline", "description": "Event-triggered deadline computation for a specific filing" }
+  {
+    "event": "监测上海市浦东新区人民法院案件 (2026)沪0115民初12345号，matter M-2026-042",
+    "description": "单案法院进展扫描"
+  },
+  {
+    "event": "扫描本周全部仲裁案件，输出新增开庭、举证和答辩期限",
+    "description": "批量仲裁进度扫描"
+  },
+  {
+    "event": "检查财产保全续封台账，提示未来30天内到期事项",
+    "description": "保全期限复核"
+  }
 ]

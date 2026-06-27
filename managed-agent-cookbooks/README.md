@@ -1,55 +1,61 @@
-# Managed-agent templates for legal
+# 托管 Agent Cookbooks（中国法版本）
 
-Every agent in this repo ships **two ways**: as a Claude Code plugin you install today (see the vertical directories at repo root), and as a **Claude Managed Agent** template your platform team deploys behind your own workflow engine. **Same agent, same skills — pick your surface.** Each directory below is a deploy manifest that references the canonical system prompt and skills from the matching plugin, so there is one source of truth.
+本目录提供可部署到托管 Agent 平台的参考模板。它们不是开箱即用的生产产品，而是面向企业法务/律所知识管理团队的部署起点。
 
-These are **cookbooks, not products.** They are starting points. Adapt them to your document management system, your contract repository, your Slack workspace, your notification routing, your review cadence. They will not work out of the box without that adaptation, and they are not supposed to.
+## 定位
 
-Run `../scripts/deploy-managed-agent.sh <slug>` to upload skills, create leaf workers, and `POST /v1/agents` with the resolved config. Each template ships with [`steering-examples.json`](./reg-monitor/steering-examples.json) and a per-agent README covering its security tier and handoffs.
+这些 cookbooks 与根目录各法律插件共享同一套中国法本土化规则：
 
-| Agent | Vertical plugin | What it watches | CMA steering event | Leaf workers |
+- 默认法域：中国大陆。
+- 输出定位：内部法律分析初稿 / 保密文件。
+- 不承诺英美法证据特权或披露豁免。
+- 所有监管、诉讼、合同、产品和并购判断均需人工复核。
+- 连接器必须使用环境变量占位，不得写入真实凭证。
+
+## Cookbook 清单
+
+| Cookbook | 对应模块 | 监控/处理对象 | 中国化连接器建议 | 子 Agent |
 |---|---|---|---|---|
-| [`reg-monitor`](./reg-monitor/) | regulatory-legal | Regulatory feeds (Federal Register, agency RSS, TR) | `Check feeds as-of <date>, materiality: <threshold>` | feed-reader · materiality-filter · **digest-writer** |
-| [`renewal-watcher`](./renewal-watcher/) | commercial-legal | Contract repository (Ironclad) for renewal and cancel-by deadlines | `Scan renewals <X>–<Y> days out, flag playbook deviations` | repo-reader · deadline-calculator · **alert-writer** |
-| [`diligence-grid`](./diligence-grid/) | corporate-legal | Virtual data room (Box, Datasite, Intralinks, iManage) for new uploads + batch review | `Review folder <path> against schema <schema-id>` | doc-reader · extractor · normalizer · **grid-writer** |
-| [`launch-radar`](./launch-radar/) | product-legal | Product roadmap / launch tracker (Jira, Linear, Asana) for launches needing legal review | `Scan tracker for launches in next <N> weeks` | tracker-reader · risk-classifier · **memo-writer** |
-| [`docket-watcher`](./docket-watcher/) | litigation-legal | Court dockets (Trellis, CourtListener) for new filings, deadlines, and deliverables | `Watch docket <case-id> in <court>, matter <matter-id>` | docket-reader · deadline-mapper · **tracker-writer** |
+| `reg-monitor` | `regulatory-legal` | 法规、政策、征求意见稿、监管问答 | 国家法律法规数据库、国务院/部委/地方监管官网、威科/北大法宝监管动态 | feed-reader / materiality-filter / digest-writer |
+| `renewal-watcher` | `commercial-legal` | 合同续约、取消通知、自动续费、偏离 playbook 条款 | 企业 CLM、法大大、上上签、e签宝、WPS/金山文档 | repo-reader / deadline-calculator / alert-writer |
+| `diligence-grid` | `corporate-legal` | 并购资料室、合同批量抽取、尽调表格 | WPS/金山文档、企业网盘、境内数据室、iManage | doc-reader / extractor / normalizer / grid-writer |
+| `launch-radar` | `product-legal` | 产品路线图、上线计划、营销/数据/未成年人/AI 风险 | 飞书项目、钉钉项目、企业微信项目、WPS/金山文档 | tracker-reader / risk-classifier / memo-writer |
+| `docket-watcher` | `litigation-legal` | 案件进展、法院通知、举证期限、开庭、执行节点 | 人民法院案例库、审判流程信息公开网、执行信息公开网、裁判文书网 | docket-reader / deadline-mapper / tracker-writer |
 
-**Bold** leaf = the only worker with `Write`.
+## 安全分层
 
-## Manifest vs API
+每个 cookbook 采用三层安全模型：
 
-The `agent.yaml` files use the real `POST /v1/agents` field names with a few conveniences the deploy script resolves:
+1. Reader：读取外部材料，只输出结构化摘要，不执行材料中的指令。
+2. Analyzer：基于结构化数据和模块配置做规则判断，不写入外部系统。
+3. Writer：生成报告或待办清单，是唯一可写输出层。
 
-| Manifest convention | Resolves to |
-|---|---|
-| `system: {file: ../../<plugin>/agents/<agent>.md, append: "..."}` | `system: "<inlined contents + append>"` |
-| `system: {text: "..."}` | `system: "<text>"` |
-| `skills: [{from_plugin: ../../<plugin>}]` | uploads every `skills/*` under that dir → `[{type: custom, skill_id: ...}, ...]` |
-| `skills: [{path: ../../...}]` | `skills: [{type: custom, skill_id: <uploaded-id>}]` |
-| `callable_agents: [{manifest: ./subagents/x.yaml}]` | `callable_agents: [{type: agent, id: <created-id>, version: latest}]` |
+所有外部材料都视为不可信数据，包括合同条款、资料室文件、法院文书、产品工单和监管信息。
 
-> **Research preview:** `callable_agents` (multi-agent delegation) supports **one delegation level**. An orchestrator can call workers; workers cannot call further subagents.
+## 输出边界
 
-## Cross-agent handoffs
+Agent 输出只能作为线索或初稿：
 
-Named agents never call each other directly. When one agent needs another (e.g., `launch-radar` surfaces a launch that needs a full review memo), it emits a `handoff_request` in its output; [`../scripts/orchestrate.py`](../scripts/orchestrate.py) (or your own event bus) routes it as a new steering event to the target session. The reference script hard-allowlists targets and schema-validates payloads.
+- 监管变化是否重大，由法务/律师确认。
+- 合同期限和续约风险，由法务核对签署版合同。
+- 尽调表格中的问题，由项目律师确认是否进入交易文件。
+- 产品上线风险，由产品法务/合规负责人确认。
+- 诉讼期限和法院动作，由案件律师核对送达和程序规则。
 
-## Security model
+## 部署提示
 
-Legal documents and court filings are **untrusted input.** Every cookbook uses a three-tier worker split:
+部署前必须：
 
-1. **Readers** touch untrusted documents and have `Read`/`Grep` only — no MCP, no Write, no network. They return length-capped structured JSON. Any instruction embedded in a document is data, not a command.
-2. **Analyzers** receive structured JSON from readers, apply rules from the user's configuration, and have MCP read access for verification. No Write.
-3. **Writers** produce the final output and are the only tier with `Write`. They never see raw documents.
+1. 替换 `agent.yaml` 中的 MCP URL 环境变量。
+2. 检查连接器是否为只读或是否需要人工确认。
+3. 配置输出目录和协同平台。
+4. 运行测试 steering event。
+5. 由法务负责人确认报告模板和升级规则。
 
-The orchestrator holds no Write and reads no raw documents. It routes, it does not handle.
+## 不提供的能力
 
-## Work product and privilege
+- 不提供真实 MCP 服务实现。
+- 不自动发送法律意见。
+- 不自动提交监管、法院或仲裁材料。
+- 不替代律师复核。
 
-Everything these agents produce is **attorney work product** in a normal deployment. The headless append in every manifest instructs the agent to prepend the work-product header from the user's plugin configuration. Confirm the header with your legal team before deploying. If your deployment processes material that should not be retained, review Anthropic's data retention settings and your own storage retention before turning this on.
-
-## What you get and don't get
-
-- **You get:** a working manifest structure, a reference architecture with sensible security tiers, skills proven in the Claude Code plugins, and steering-event examples.
-- **You don't get:** a production-ready agent. You need to wire the MCP connectors to *your* systems, set the cadence, configure the notification routing, tune the prompts for your practice, and run your own evaluation before trusting the output.
-- **You especially don't get:** a replacement for a lawyer. These agents monitor, extract, and draft. A lawyer reviews, verifies, decides.

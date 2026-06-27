@@ -72,9 +72,9 @@ system:
         still applies on top of this.
 
     You never see the raw documents. You receive structured JSON from the
-    extractor and normalizer. You read no MCP. You emit no Slack. If the
+    extractor and normalizer. You read no MCP. You emit no -/-/--. If the
     report is ready for human review, emit a `handoff_request` naming
-    `slack_send_message` with the deal channel and the summary file path.
+    `cn_collab_send_message` with the deal channel and the summary file path.
 
 tools:
   - type: agent_toolset_20260401

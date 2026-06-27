@@ -1,32 +1,34 @@
-# Phase 2 Roadmap
+# Phase 2 路线图
 
-This document starts Phase 2 after the Phase 1 China Mainland localization baseline was committed and pushed.
+本文件记录 Phase 1 中国大陆法本土化基线完成之后的 Phase 2 工作流。当前 Phase 2 已完成，后续仅保留维护、更新和深化入口。
 
-## Phase 2 Scope
+## Phase 2 范围
 
-Phase 2 covers modules intentionally excluded from the Phase 1 default marketplace because they require deeper specialization, lower-frequency workflows, or ecosystem tooling.
+Phase 2 覆盖未进入 Phase 1 默认 Marketplace 的进阶模块。这些模块要么场景更专业，要么使用频率较低，要么属于工具生态建设。
 
+## 中国案例规则更新层
 
-## Case Authority Update Layer
+状态：COMPLETE。
 
-Status: COMPLETE. The repository now includes an updateable China Case Authority Layer:
+项目已加入可更新的中国案例规则层：
 
 - `references/china-case-authority.md`
 - `references/case-authority-sources.json`
+- `references/case-authority-mcp.example.json`
 
-This layer reserves update interfaces for the People's Court Case Library, Supreme People's Court releases, China Judgments Online, and commercial legal databases. Cases are used for similar-case reasoning and adjudication calibration, not as common-law precedent.
+该层为人民法院案例库、最高人民法院发布、裁判文书网和商业法律数据库预留更新接口。案例用于类案检索、裁判规则校准和风险判断，不得作为英美法意义上的判例法。
 
-## Workstreams
+## 工作流
 
 ### 1. Corporate M&A Phase 1.5
 
-Path: `corporate-legal/phase-2/`
+路径：`corporate-legal/phase-2/`
 
-Goal: localize M&A workflows for China Mainland practice after the core corporate governance, capital contribution, equity transfer, and articles audit workflows are stable.
+目标：在公司治理、出资、股权转让和章程审查稳定后，补齐中国并购尽调、交割和投后整合工作流。
 
-Status: COMPLETE. The Phase 2 localization pass rewrote the core M&A diligence, closing, contract schedule, integration, deal summary, AI handoff, and tabular review skills into China Mainland workflows, and added a China M&A regression suite.
+状态：COMPLETE。
 
-Initial skills to review:
+已完成：
 
 - `diligence-issue-extraction`
 - `material-contract-schedule`
@@ -35,71 +37,97 @@ Initial skills to review:
 - `deal-team-summary`
 - `tabular-review`
 - `ai-tool-handoff`
+- `references/test-cases-cn.md`
 
-China localization gates:
+验收点：
 
-- Replace US deal concepts with China equity/asset acquisition, business registration, tax, labor, antitrust, data, and state-owned asset review logic.
-- Add filing and approval checkpoints for market regulation, foreign investment, state-owned assets, merger control, and industry-specific licenses.
-- Add due diligence output matrices covering equity title, capital contribution defects, related-party transactions, labor/social insurance, tax, permits, IP, data compliance, litigation, and material contracts.
-- Do not mark as complete until a China M&A regression case set exists.
+- 已替换美国交易概念为中国股权/资产收购、工商登记、税务、劳动、反垄断、数据和国资审查逻辑。
+- 已加入市场监管、外商投资、国资、经营者集中和行业许可等审批/备案检查。
+- 已覆盖股权权属、出资瑕疵、关联交易、劳动社保、税务、许可、知识产权、数据合规、诉讼和重大合同。
 
 ### 2. Law Student
 
-Path: `phase-2/law-student/`
+路径：`phase-2/law-student/`
 
-Goal: rebuild the law student module around China legal education, legal doctrine learning, judicial exam preparation, and statute/case reading.
+目标：围绕中国法学院教育、法考、法条体系、请求权基础、案例研读和法律写作训练重建学习模块。
 
-Status: COMPLETE. The module now uses China legal education, legal professional qualification exam, statute-system learning, claim-basis analysis, case reading, writing practice, flashcards, and study planning as its default workflow.
+状态：COMPLETE。
 
-China localization gates:
+已完成：
 
-- Replace US law school, common-law briefing, Bluebook, and case-method defaults.
-- Add China statute hierarchy, civil/criminal/administrative/procedural law study maps, and legal professional qualification exam modes.
-- Keep outputs educational only and avoid pretending to provide client-specific legal advice.
+- 中国法学习画像。
+- 法考客观题/主观题训练。
+- 法条体系和请求权基础训练。
+- 案例研读、课堂提问准备、闪卡、学习计划。
+- `references/test-cases-cn.md`
+
+验收点：
+
+- 已移除美国 law school、Bluebook、bar exam 和 common-law case method 默认框架。
+- 输出定位为学习材料，不处理真实客户事项。
 
 ### 3. Legal Clinic
 
-Path: `phase-2/legal-clinic/`
+路径：`phase-2/legal-clinic/`
 
-Goal: rebuild the clinic module around China public legal service, legal aid, community consultation, and triage workflows.
+目标：围绕中国法律诊所、法律援助、12348 公共法律服务、学生办案训练和导师复核重建工作流。
 
-Status: COMPLETE. The module now uses China legal clinic, legal aid, 12348/public legal service routing, intake, deadlines, supervisor review, client letters, case memos, and semester handoff as its default workflow.
+状态：COMPLETE。
 
-China localization gates:
+已完成：
 
-- Replace US clinic intake and privilege assumptions.
-- Add China legal aid eligibility, 12348/public legal service routing, labor dispute/arbitration, consumer complaint, family, tenancy, and small-claim triage.
-- Add strong boundaries for conflict checks, evidence preservation, limitation periods, and referral to licensed lawyers.
+- 当事人接待和初筛。
+- 法援/公服分流。
+- 期限跟踪。
+- 案件备忘录、文书学习稿、当事人说明信。
+- 导师/律师复核队列。
+- 学期交接。
+- `references/test-cases-cn.md`
+
+验收点：
+
+- 已移除 ABA、美国学生执业规则、美国证据特权和州律师协会默认框架。
+- 所有真实当事人事项均保留导师或执业律师复核门。
 
 ### 4. Legal Builder Hub
 
-Path: `phase-2/legal-builder-hub/`
+路径：`phase-2/legal-builder-hub/`
 
-Goal: turn the builder hub into a China legal MCP/tooling construction kit after the Phase 1 module patterns are stable.
+目标：作为中国法律技能和 MCP 工具链构建中心，支撑技能发现、审查、安装、禁用、更新和回归检查。
 
-Status: COMPLETE. The module now functions as a China-law skill and MCP governance toolkit for discovery, QA, installation, disablement, update planning, allowlists, and regression checks.
+状态：COMPLETE。
 
-China localization gates:
+已完成：
 
-- Provide reusable templates for China-law skills, test cases, references, MCP connector placeholders, and Gemini/manual review packets.
-- Encode the Phase 1 localization workflow as repeatable tooling: scan, packet, external review, implement, validate, and status update.
-- Keep connector templates credential-free and document local file mode fallback.
+- 中国法技能 QA。
+- 安装白名单。
+- MCP 凭证占位检查。
+- 技能启用/禁用/卸载。
+- 更新计划。
+- 相关技能推荐。
+- `references/test-cases-cn.md`
 
-## Acceptance Checklist
+验收点：
 
-Each Phase 2 workstream is complete only when it has:
+- 所有外部技能必须通过中国法本土化审查。
+- 禁止真实凭证入库。
+- 禁止未审查技能进入默认 Marketplace。
 
-- China Mainland system alignment and no US/common-law default reasoning.
-- Localized README or module guide.
-- Localized core skills and command list.
-- `references/test-cases-cn.md` or equivalent regression suite.
-- Valid JSON and valid skill frontmatter.
-- No mojibake.
-- Review packet and review result saved under `review-packets/` and `review-results/` when an external review is used.
+## 后续维护入口
 
-## Suggested Execution Order
+| 方向 | 文件/模块 | 建议周期 |
+|---|---|---|
+| 案例规则更新 | `references/case-authority-sources.json` | 活跃模块每周，非活跃模块每月 |
+| 法律法规更新 | `references/china-legal-standards.md` 与各模块 references | 每月或重大修法时 |
+| 连接器落地 | `CONNECTORS.md`、各 `.mcp.json` | 按供应商或内部系统推进 |
+| 回归用例维护 | 各 `references/test-cases-cn.md` | 每次重大 Prompt 修改后 |
+| Phase 2 深化 | `phase-2/` 与 `corporate-legal/phase-2/` | 按需求迭代 |
 
-1. Corporate M&A Phase 1.5
-2. Legal Builder Hub
-3. Legal Clinic
-4. Law Student
+## 总结
+
+Phase 2 已完成从“暂存模块”到“中国法可用模块”的第一轮本土化。后续重点不再是法域替换，而是：
+
+1. 增强 Practice Profile 丰富度。
+2. 落地真实 MCP 连接器。
+3. 建立自动化回归测试。
+4. 接入可持续更新的案例与监管数据源。
