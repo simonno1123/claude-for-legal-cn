@@ -51,11 +51,11 @@
 |---|---|
 | `local-legal-index` | 官方网站、企业授权数据库导出、历史检索结果的本地索引 |
 | `manual-upload` | 用户上传法规 PDF、案例、检索报告、裁判文书、法律意见摘录 |
-| `review-packet` | 供 Gemini/人工专家复核的模块审查包 |
+| `review-packet` | 供模型交叉审查和人工专家复核的模块审查包 |
 
 ## 三、推荐 MCP 配置形态
 
-项目最终应收敛为一个全局法律数据入口：
+项目已收敛为一个全局法律数据入口。仓库内置 `connectors/legal-data/server.js` 作为最小本地 MCP server；生产环境可在同一接口后接企业授权商业库、官方本地索引或人工上传材料：
 
 ```json
 {
@@ -77,7 +77,7 @@
 }
 ```
 
-各业务插件不得再分别硬编码 `npc-law-database`、`court-case-local-index`、`pkulaw-openapi`、`yuandian-legal-data` 等供应商名称；这些应作为 `legal-data` 内部 provider。
+各业务插件不得再分别硬编码 `npc-law-database`、`court-case-local-index`、`pkulaw-openapi`、`yuandian-legal-data` 等供应商名称；这些应作为 `legal-data` 内部 provider。当前最小 server 只执行本地 JSON 索引查询，不联网调用商业源。
 
 ## 四、案例权威层连接器
 

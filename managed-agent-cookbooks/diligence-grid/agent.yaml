@@ -27,7 +27,7 @@ system:
     skill exactly:
       1. Load or confirm the column schema. Default is the M&A diligence
          standard column set in
-         `skills/tabular-review/references/ma-diligence-columns.md`.
+         `corporate-legal/phase-2/skills/tabular-review/references/ma-diligence-columns.md`.
       2. Sample run on 3–5 documents before fanning out. Adjust the schema
          if `classify` columns miss options or `verbatim` columns drift.
       3. Fan out one `extractor` subagent per document. Each cell must

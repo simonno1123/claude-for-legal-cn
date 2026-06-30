@@ -10,7 +10,7 @@ Required rule: guiding cases and reference cases may calibrate reasoning, but th
 
 ## 中国化改造工作准则
 
-本仓库是 `Codex-for-legal-cn`，目标是在中国大陆法律体系内落地。编辑任何技能、代理、README 或连接器时，必须优先适配中国大陆法律、中文法律工作流和中国常用法律数据库；不得新增美国州法、普通法、Westlaw/CourtListener 等作为默认路径。第三方海外插件仅作为可选外部集成，不进入默认安装清单。
+本仓库是 `claude-for-legal-cn`，目标是在中国大陆法律体系内落地。编辑任何技能、代理、README 或连接器时，必须优先适配中国大陆法律、中文法律工作流和中国常用法律数据库；不得新增美国州法、普通法、Westlaw/CourtListener 等作为默认路径。第三方海外插件仅作为可选外部集成，不进入默认安装清单。
 
 ## System Alignment
 
@@ -22,7 +22,7 @@ Required rule: guiding cases and reference cases may calibrate reasoning, but th
 - `discovery`、`deposition`、`subpoena`、`privilege log`、`DMCA takedown`、`DSAR` 等术语必须按中国法语境替换。
 - 如识别到涉港澳台、境外法、跨境数据、外商投资负面清单或涉外管辖因素，应切换为提示模式，并要求结合相应法域执业律师意见确认。
 
-Guidance for working on this repo. `Codex-for-legal` is a Codex plugin
+Guidance for working on this repo. `claude-for-legal-cn` is a Claude plugin
 marketplace — twelve first-party legal plugins, one vendor plugin, and five
 managed-agent cookbooks. Most work here is editing prompt content (skills,
 agents, hooks), plugin metadata, or cookbook config — not application code.
@@ -42,9 +42,9 @@ agents, hooks), plugin metadata, or cookbook config — not application code.
 ## Layout
 
 ```
-.Codex-plugin/marketplace.json   # the marketplace manifest — one entry per plugin
+.claude-plugin/marketplace.json   # the marketplace manifest — one entry per plugin
 <plugin>/                         # 12 first-party plugins (commercial-legal, privacy-legal, ...)
-  .Codex-plugin/plugin.json      # plugin manifest (name, version, description, author)
+  .claude-plugin/plugin.json      # plugin manifest (name, version, description, author)
   .mcp.json                       # MCP servers the plugin connects to
   AGENTS.md                       # practice-profile TEMPLATE (see "Plugin AGENTS.md" below)
   README.md                       # per-plugin docs
@@ -61,14 +61,14 @@ references/                       # shared templates (company-profile, dashboard
 
 ## Validation — run before opening a PR
 
-This repo follows the same conventions `anthropics/Codex-plugins-official`
+This repo follows the same conventions `anthropics/claude-plugins-official`
 enforces in CI. Run the equivalent checks locally:
 
 ```bash
 # 1. Marketplace + per-plugin schema validation (source of truth)
-Codex plugin validate .Codex-plugin/marketplace.json
-for d in */; do [ -f "$d/.Codex-plugin/plugin.json" ] && Codex plugin validate "$d"; done
-Codex plugin validate external_plugins/cocounsel-legal
+claude plugin validate .claude-plugin/marketplace.json
+for d in */; do [ -f "$d/.claude-plugin/plugin.json" ] && claude plugin validate "$d"; done
+claude plugin validate external_plugins/cocounsel-legal
 
 # 2. Cookbook tool-scope lint (orchestrators must not over-grant tools)
 python3 scripts/lint-tool-scope.py
@@ -79,7 +79,7 @@ python3 -c "import json,glob; [json.load(open(f)) for f in glob.glob('**/*.json'
 
 ### Marketplace invariants (I1–I11)
 
-`Codex-plugins-official` layers these on top of the schema check. They apply
+`claude-plugins-official` layers these on top of the schema check. They apply
 here too — the ones most likely to trip a contributor:
 
 - **I1** — `plugins[]` should be alpha-sorted by name (case-insensitive).
@@ -88,7 +88,7 @@ here too — the ones most likely to trip a contributor:
 - **I2** — no duplicate plugin names.
 - **I3** — `description` 10–2000 chars, no leading/trailing whitespace.
 - **I8** — every vendored `source` (`"./<dir>"`) must point at a directory that
-  contains `.Codex-plugin/plugin.json`.
+  contains `.claude-plugin/plugin.json`.
 - **I9** — `source` paths/URLs must contain no shell metacharacters or `..`.
 - **I10** — no hidden Unicode (zero-width chars, bidi controls) in
   `name`/`description`.
@@ -99,14 +99,14 @@ here too — the ones most likely to trip a contributor:
 Every `agents/*.md` needs `name` and `description`. Every
 `skills/<name>/SKILL.md` needs `description`. Every `commands/*.md` needs
 `description`. Multi-line descriptions use `>` block scalars and that's fine —
-`Codex plugin validate` parses them correctly.
+`claude plugin validate` parses them correctly.
 
 ## Conventions
 
 ### Keep `marketplace.json` in sync with `plugin.json`
 
 For first-party plugins, `marketplace.json`'s `name`, `description`, and
-`author` should match the plugin's own `.Codex-plugin/plugin.json` field for
+`author` should match the plugin's own `.claude-plugin/plugin.json` field for
 field. If you change a plugin's description in one place, change it in the
 other.
 
@@ -115,16 +115,16 @@ other.
 When a `SKILL.md` (especially `customize` or `cold-start-interview`) tells the
 user "run `/foo`," `foo` must be the actual `skills/<foo>/` directory name.
 Short forms like `/triage` for `/use-case-triage` look right in prose but are
-dead commands — the user types them and nothing happens. Refs to Codex
+dead commands — the user types them and nothing happens. Refs to Claude
 built-ins (`/mcp`, `/plugin`) and to other plugins (`/<other-plugin>:<skill>`)
 are fine.
 
 ### Plugin AGENTS.md is a template, not project context
 
 Each `<plugin>/AGENTS.md` is a practice-profile template that the
-`cold-start-interview` skill copies to `~/.Codex/plugins/config/Codex-for-legal/<plugin>/AGENTS.md`
+`cold-start-interview` skill copies to `~/.claude/plugins/config/claude-for-legal-cn/<plugin>/CLAUDE.md`
 on the user's machine. It is *not* loaded as project context when the plugin is
-installed — `Codex plugin validate` warns about this and the warning is
+installed — `claude plugin validate` warns about this and the warning is
 expected. Don't "fix" it by moving the content into a skill.
 
 ### `external_plugins/` is vendor-maintained

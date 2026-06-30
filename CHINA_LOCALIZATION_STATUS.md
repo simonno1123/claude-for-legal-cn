@@ -19,15 +19,15 @@
 - `employment-legal` 第二轮深改完成：新增 `handbook-audit`，重写 `wage-hour-qa` 和 `worker-classification`，建立 `employment-legal/references/test-cases-cn.md` 六个劳动法回归用例。
 - `employment-legal` 第三轮深改完成：重写 `cold-start-interview`、`log-leave` 与 `leave-tracker`，新增 `social-insurance-audit`，并将插件级 `CLAUDE.md` 尾部美国法模板替换为中国用工画像、审阅人备注和社保公积金审计模板。
 - `employment-legal` 收尾轮完成：重写 `hiring-review`、`policy-drafting`、`handbook-updates`、`internal-investigation` 与 `investigation-memo`；`customize` 不再作为初始化入口，改为地方司法裁审口径定制，企业用工画像统一由 `cold-start-interview` 初始化。
-- `employment-legal` 复核修正完成：经 GPT-5.5、GPT-5.4 与 Gemini 3.5 Flash 复核，删除调查链路英美法特权语义，重写 `leave-tracker` 入口，默认关闭 `matter-workspace`，将 `expansion-*` 挂起至 Phase 2，补强第38/42/46/47/48/87条法条路由，并将劳动法回归用例扩展至 15 个高压案例。
+- `employment-legal` 复核修正完成：经多模型交叉复核，删除调查链路英美法特权语义，重写 `leave-tracker` 入口，默认关闭 `matter-workspace`，将 `expansion-*` 挂起至 Phase 2，补强第38/42/46/47/48/87条法条路由，并将劳动法回归用例扩展至 15 个高压案例。
 - `corporate-legal` 已完成 Phase 1 深改：聚焦 2024 年 7 月 1 日施行的新公司法下公司治理、章程旧转新、出资期限/加速到期、股权转让与质押登记。
 - `corporate-legal` 第一批深改完成：重写插件级 `CLAUDE.md`、`README.md`、`board-minutes` 与 `written-consent`，新增 `governance-audit`、`capital-contribution-audit`、`equity-transfer-pledge-review` 三个新公司法专项技能。
 - `corporate-legal` 第二批深改完成：重写 `cold-start-interview` 为中国境内企业公司画像访谈，重写 `entity-compliance` 为市场监管年报/登记备案/章程健康检查，并将 M&A/尽调/交割/整合相关技能移入 `corporate-legal/phase-2/skills/` 暂缓加载。
 - `corporate-legal` 第三批深改完成：建立 `references/test-cases-cn.md` 七个新公司法高压回归用例，新增 `references/articles-old-to-new.md` 章程旧法残留替换表，并重写 `capital-contribution-audit` 为覆盖第47条五年出资期、第54条出资加速到期、第88条责任分流和董事催缴责任的王牌技能。
 - `corporate-legal` 收尾轮完成：新增 `articles-of-association-audit` 章程旧转新全量审计，重写 `governance-audit` 为“三会一层”内部治理审计，并删除 `customize` 独立入口，统一由 `cold-start-interview` 生成和更新 `company_profile`。
-- `commercial-legal` 第一阶段深改完成：基于 GPT-5.5 与 GPT-5.4 双模型方案对比，重写插件级 `README.md` 与 `CLAUDE.md`，新增中国商事合同 references/test cases，重写 `cold-start-interview`、`review`、`vendor-agreement-review`、`saas-msa-review`、`nda-review`、`renewal-tracker`、`escalation-flagger`、`stakeholder-summary`、`amendment-history`、`review-proposals` 与 `matter-workspace`，重写 3 个 agents，并删除 `customize` 独立入口；已按 Gemini 3.5 Flash 条件复核补齐先票后款/进项税损失、可靠电子签名/萝卜章、或审或仲/各自所在地法院等 P0/P1 控制点。
-- `commercial-legal` P1 收口完成：经 GPT-5.5 法律复核与 GPT-5.4 工程复核，软化“三流合一”、部门章/项目章、定金与违约金、电子签 CA 和各自所在地法院的绝对化表述；补齐销售侧显式路由、Case 11/12/15 回归归属、用户画像读取路径和仓库级 references 路径说明。
-- `litigation-legal` 第一阶段深改完成：按 Gemini 3.5 Flash 决策重写中国民商事诉讼/仲裁 System Alignment、README、核心规则字典和 10 个高压测试用例；新增 `court-order-triage`、`witness-trial-prep`、`confidential-evidence-review`、`evidence-preservation` 四个中国语义核心命令，并将 `subpoena-triage`、`deposition-prep`、`privilege-log-review`、`legal-hold` 保留为兼容旧命令；已补齐律师调查令非强制边界、证据保密不得误用英美法特权、仲裁保全经仲裁委转交法院、执行终本/中止/异议等状态。
+- `commercial-legal` 第一阶段深改完成：基于多模型方案对比，重写插件级 `README.md` 与 `CLAUDE.md`，新增中国商事合同 references/test cases，重写 `cold-start-interview`、`review`、`vendor-agreement-review`、`saas-msa-review`、`nda-review`、`renewal-tracker`、`escalation-flagger`、`stakeholder-summary`、`amendment-history`、`review-proposals` 与 `matter-workspace`，重写 3 个 agents，并删除 `customize` 独立入口；已按交叉复核结论补齐先票后款/进项税损失、可靠电子签名/萝卜章、或审或仲/各自所在地法院等 P0/P1 控制点。
+- `commercial-legal` P1 收口完成：经法律与工程双轨复核，软化“三流合一”、部门章/项目章、定金与违约金、电子签 CA 和各自所在地法院的绝对化表述；补齐销售侧显式路由、Case 11/12/15 回归归属、用户画像读取路径和仓库级 references 路径说明。
+- `litigation-legal` 第一阶段深改完成：按交叉复核决策重写中国民商事诉讼/仲裁 System Alignment、README、核心规则字典和 10 个高压测试用例；新增 `court-order-triage`、`witness-trial-prep`、`confidential-evidence-review`、`evidence-preservation` 四个中国语义核心命令，并将 `subpoena-triage`、`deposition-prep`、`privilege-log-review`、`legal-hold` 保留为兼容旧命令；已补齐律师调查令非强制边界、证据保密不得误用英美法特权、仲裁保全经仲裁委转交法院、执行终本/中止/异议等状态。
 - `privacy-legal` 第一阶段深改完成：重写插件级 `CLAUDE.md`、`README.md`、`currency-watch.md`，新增 `references/china-privacy-data-playbook.md` 与 `references/test-cases-cn.md`；重写 `cold-start-interview`、`use-case-triage`、`pia-generation`、`dpa-review`、`dsar-response`、`reg-gap-analysis`、`policy-monitor`、`matter-workspace`、`customize`，将 GDPR/CCPA/HIPAA/COPPA/DSAR/DPIA/controller/processor 默认框架切换为中国《个人信息保护法》《数据安全法》《网络安全法》下的个人信息处理者、受托处理、共同处理、PIPIA、数据出境、个人权利请求、SDK/隐私政策一致性和安全事件响应。
 
 ## 仍需第二阶段深改
@@ -36,7 +36,7 @@
 
 | 模块 | 必须重写的实质内容 | 优先级 |
 |---|---|---|
-| `employment-legal` | **PHASE 1 COMPLETE（Gemini/GPT 复核后完成）**：已完成中国劳动法下解除/终止、补偿金、员工手册、工时休假、法定假别/医疗期、社保公积金、入职、内部调查、地方口径定制和用工画像主线改造；涉外扩张与 matter-workspace 暂缓/默认关闭 | 已完成 |
+| `employment-legal` | **PHASE 1 COMPLETE（交叉复核后完成）**：已完成中国劳动法下解除/终止、补偿金、员工手册、工时休假、法定假别/医疗期、社保公积金、入职、内部调查、地方口径定制和用工画像主线改造；涉外扩张与 matter-workspace 暂缓/默认关闭 | 已完成 |
 | `privacy-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国个人信息与数据合规主线改造，覆盖 PIPL/DSL/CSL、PIPIA、受托处理/共同处理/对外提供、数据出境、个人权利请求、隐私政策/SDK 一致性、安全事件响应和中国监管动态监控 | 已完成 |
 | `corporate-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成新公司法下股东会/董事会/经理层、监事会或审计委员会、职工董事、章程旧转新、五年出资期、出资加速到期、股权转让/质押登记、市场监管登记主线改造；M&A 暂列 Phase 1.5/Phase 2 | 已完成 |
 | `litigation-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国民商事诉讼/仲裁下管辖、时效、证据交换、调查令、财产/证据/行为保全、举证期限、庭审质证、律师函、案件汇报、执行和外部律师协作主线改造 | 已完成 |
@@ -72,7 +72,7 @@
 
 ## 2026-06-24 product-legal 更新
 
-- `product-legal` Phase 1 深改完成：按 GPT-5.5、GPT-5.4 与 Gemini 人工裁决结果，收敛为 5 个核心技能：`cold-start-interview`、`launch-review`、`marketing-claims-review`、`feature-risk-assessment`、`is-this-a-problem`。
+- `product-legal` Phase 1 深改完成：按多模型交叉复核与人工裁决结果，收敛为 5 个核心技能：`cold-start-interview`、`launch-review`、`marketing-claims-review`、`feature-risk-assessment`、`is-this-a-problem`。
 - 已重写 `product-legal/CLAUDE.md`、`README.md`、`cold-start-interview`、`launch-review`、`marketing-claims-review`、`customize`、`matter-workspace`、`launch-watcher`、`currency-watch.md` 与 `seven-category-framework.md`。
 - 新增 `product-legal/references/test-cases-cn.md`，覆盖自动续费、广告绝对化用语、大数据杀熟、未成年人单独同意、AI 深度合成标识、七日无理由退货、直播虚假宣传、CCC、默认勾选搭售和弹窗广告一键关闭 10 个高压回归用例。
 - `customize` 已并入 `cold-start-interview`；`matter-workspace`、`launch-watcher` 与法律动态自动监控降级为 Phase 2/兼容占位。
@@ -80,7 +80,7 @@
 
 ## 2026-06-26 ip-legal 更新
 
-- `ip-legal` Phase 1 深改完成：基于本机 Gemini 3.5 Flash API 审查结果，重写插件级 `CLAUDE.md`、`README.md`，移除普通法证据特权、专利代理人特权、境外下架和境外商标/专利默认框架。
+- `ip-legal` Phase 1 深改完成：基于模型交叉审查和人工复核结果，重写插件级 `CLAUDE.md`、`README.md`，移除普通法证据特权、专利代理人特权、境外下架和境外商标/专利默认框架。
 - 已重写 `clearance` 为中国商标清除初筛，覆盖《商标法》第10/11/30/32/33/44/49条、CNIPA 审查指南、《类似商品和服务区分表》、异议、无效和撤三策略。
 - 已重写 `fto-triage` 为中国专利自由实施风险初筛，覆盖发明、实用新型、外观设计、全面覆盖原则、专利权评价报告、现有技术/现有设计抗辩、无效宣告和设计绕开。
 - 已重写 `takedown` 与 `cease-desist`，切换为《民法典》第1195-1197条、《电子商务法》第41-45条下的通知删除、反通知、15天等待期、平台投诉、行政投诉、律师函和诉讼/保全路径。
@@ -116,3 +116,10 @@
 - 已将 `legal-builder-hub` 从 `phase-2/legal-builder-hub` 提升至根目录 `legal-builder-hub`，作为第一序列生态治理模块。
 - 第一序列现包括 9 个实体法律业务模块和 1 个生态治理模块；`law-student`、`legal-clinic` 继续作为 Phase 2 教育/公益法律服务模块。
 - 已同步更新 MCP 模块表，后续 `.mcp.json` 由 `scripts/generate-mcp-configs.py` 按新路径生成。
+
+## 2026-06-30 legal-data 最小可运行层
+
+- 新增 `connectors/legal-data/server.js`：无依赖 Node stdio MCP server，支持 `law_search`、`article_lookup`、`regulation_detail`、`case_search`、`case_detail`、`case_authority_rank`、`judicial_answer_search`、`judicial_answer_detail`、`citation_check`。
+- 新增 `connectors/legal-data/local-index.sample.json`：用于 smoke test 的本地样例索引，覆盖《劳动合同法》《公司法》《个人信息保护法》的核心样例条文、案例权威等级和法答网样例。
+- 新增 `scripts/test-legal-data.sh`：验证本地 server、自测、法条定位和引用校验混合结果。
+- `legal-data` 当前只读取 `LOCAL_LEGAL_INDEX` 本地 JSON 索引；未配置时使用样例索引并强制返回人工复核提示。不联网、不调用商业库、不把样例摘要当作正式法律文本。

@@ -14,13 +14,13 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
 
 1. **打开 Claude Code**（在终端中）或 **Claude Cowork**（桌面应用）。不确定用的是哪个？如果你看到的是带 Claude 的终端窗口，那就是 Claude Code。
 
-2. **添加插件市场。** 在 Claude Code 中输入 `/plugin marketplace add `（末尾带空格），然后**将解压后的 `claude-for-legal` 文件夹拖到终端窗口中** — 它会自动填入路径。按回车确认。
+2. **添加插件市场。** 在 Claude Code 中输入 `/plugin marketplace add `（末尾带空格），然后**将解压后的 `claude-for-legal-cn` 文件夹拖到终端窗口中** — 它会自动填入路径。按回车确认。
 
-   （或直接输入完整路径：`/plugin marketplace add /Users/你的用户名/Desktop/claude-for-legal`）
+   （或直接输入完整路径：`/plugin marketplace add /Users/你的用户名/Desktop/claude-for-legal-cn`）
 
 3. **安装插件。** 从下表中选择适合你工作的插件，然后执行：
    ```
-   /plugin install privacy-legal@claude-for-legal
+   /plugin install privacy-legal@claude-for-legal-cn
    ```
 
 4. **⚠️ 重启 Claude Code。** 关闭并重新打开。此步骤不可跳过 — 插件在重启后才会生效。
@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
 
 原因：项目级安装会阻止插件读取项目文件夹外的文件 — 你放在"下载"中的合同文件、"文档"中的协议、云盘中的案卷都将无法访问。用户级安装不会给予插件额外的文件访问权限 — 插件只能读取你明确指向的文件或当前目录中的文件。它只是意味着插件可以在任何文件夹中工作。
 
-如果已经安装了项目级并想切换：`/plugin uninstall <插件名>`，然后从主目录执行 `/plugin install <插件名>@claude-for-legal`。
+如果已经安装了项目级并想切换：`/plugin uninstall <插件名>`，然后从主目录执行 `/plugin install <插件名>@claude-for-legal-cn`。
 
 ## 哪个插件适合我？
 
@@ -46,15 +46,15 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
 |---|---|---|
 | 数据合规/个人信息保护律师 | `privacy-legal` | `/privacy-legal:use-case-triage` |
 | 商事合同律师/法务 | `commercial-legal` | `/commercial-legal:review` |
-| 公司法/并购律师 | `corporate-legal` | `/corporate-legal:diligence-issue-extraction` |
+| 公司法/公司治理律师 | `corporate-legal` | `/corporate-legal:governance-audit` |
 | 劳动法律师/人力资源法务 | `employment-legal` | `/employment-legal:wage-hour-qa` |
 | 产品法务 | `product-legal` | `/product-legal:is-this-a-problem` |
 | 知识产权律师/专利代理师 | `ip-legal` | `/ip-legal:clearance` |
 | 诉讼律师（企业内部或律所） | `litigation-legal` | `/litigation-legal:matter-intake` |
 | 监管合规律师 | `regulatory-legal` | `/regulatory-legal:reg-feed-watcher` |
 | AI 治理负责人 | `ai-governance-legal` | `/ai-governance-legal:use-case-triage` |
-| 法律诊所指导教师 | `legal-clinic` | `/legal-clinic:cold-start-interview` |
-| 法学院学生 | `law-student` | `/law-student:cold-start-interview` |
+| 法律诊所指导教师（Phase 2） | `legal-clinic` | `/legal-clinic:cold-start-interview` |
+| 法学院学生（Phase 2） | `law-student` | `/law-student:cold-start-interview` |
 | 法律科技/寻找扩展技能 | `legal-builder-hub` | `/legal-builder-hub:registry-browser` |
 
 ## 安装的内容
@@ -65,7 +65,7 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
 
 ## 插件包含的内容
 
-12 个法律实务插件、5 个托管代理 cookbook、16+ 个连接器。完整参考见 [README.md](README.md)。
+10 个默认第一序列插件、2 个 Phase 2 教育/公益模块、5 个托管代理 cookbook，以及统一中国法律数据层和若干占位连接器。完整参考见 [README.md](README.md)。
 
 ## 遇到问题？
 

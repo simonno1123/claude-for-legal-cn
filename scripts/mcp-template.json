@@ -7,8 +7,8 @@
       "args": [
         "connectors/legal-data/server.js"
       ],
-      "title": "统一中国法律数据层 (占位)",
-      "description": "统一提供法律法规、法条、案例、引用核验、最高人民法院法答网精选系列司法问答和案例权威排序能力；底层可路由至官方本地索引、元典、北大法宝、法律之星或人工上传材料。",
+      "title": "统一中国法律数据层",
+      "description": "统一提供法律法规、法条、案例、引用核验、最高人民法院法答网精选系列司法问答和案例权威排序能力；当前内置最小本地索引 server，后续可路由至官方本地索引、元典、北大法宝、法律之星或人工上传材料。",
       "env": {
         "LEGAL_DATA_PROVIDER": "${LEGAL_DATA_PROVIDER:auto}",
         "YUANDIAN_API_KEY": "${YUANDIAN_API_KEY}",

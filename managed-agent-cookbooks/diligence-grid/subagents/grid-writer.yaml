@@ -84,5 +84,5 @@ tools:
       - { name: write, enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../corporate-legal/skills/tabular-review }
+  - { path: ../../../corporate-legal/phase-2/skills/tabular-review }
 callable_agents: []
