@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: JSON sanity
+        run: |
+          find . -name '*.json' -not -path './.git/*' -print0 | xargs -0 -n1 python3 -m json.tool >/dev/null
+
+      - name: China localization regression
+        run: python3 scripts/localization-regression.py
+
+      - name: Legal-data smoke test
+        run: bash scripts/test-legal-data.sh
+
+      - name: Managed-agent cookbook smoke test
+        run: bash scripts/test-cookbooks.sh

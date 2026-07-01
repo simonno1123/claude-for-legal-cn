@@ -45,11 +45,14 @@
 
 ### 2. 注入中国默认连接器 (MCP)
 
-项目在 `.mcp.json` 中预留了国内标准法律科技与办公生态的占位接口。请在本地环境中配置相应的环境变量或标准 API 桥接器：
+项目在 `.mcp.json` 中接入统一中国法律数据层，并预留国内办公与企业法务系统接口。请在本地环境中配置相应的环境变量或标准 API 桥接器：
 
-- `npc-law-database`: 国家法律法规数据库 / 中国人大网流式检索
+- `legal-data`: 已提供 `connectors/legal-data/server.js` 最小本地 MCP server，默认读取 `LOCAL_LEGAL_INDEX` 本地 JSON 索引；未配置时仅使用样例索引做离线冒烟测试。
+- `npc-law-database`: 国家法律法规数据库 / 中国人大网流式检索入口，现已收敛到 `legal-data` 统一层。
 - `gov-regulatory-sites`: 国务院及各部委、地方监管官网动态合规检查
 - `wps-cloud-docs`: 金山文档 / WPS WebOffice 云端文件同步
+
+其他企业系统连接器仍为占位，包括 CLM、电子签章、法院/仲裁案件进度、项目管理和协同系统。它们用于部署方按自身授权环境桥接，不表示仓库已经内置商业 API 或真实凭证。
 
 注：若未配置云端 MCP 连接器，系统默认激活 **Local File Mode**，你可直接向 Claude 拖入本地 `.docx`、`.xlsx`、`.pdf` 用工材料，Claude 将利用 Context Window 进行结构化解析。
 
@@ -70,4 +73,3 @@
 - `law-student` / `legal-clinic` (法律诊所与法学生学术协同)
 
 `legal-builder-hub` 已提升为第一序列生态治理模块，不再作为 Phase 2 挂载模块。
-

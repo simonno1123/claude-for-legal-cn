@@ -22,8 +22,9 @@ Required rule: guiding cases and reference cases may calibrate reasoning, but th
 - `discovery`、`deposition`、`subpoena`、`privilege log`、`DMCA takedown`、`DSAR` 等术语必须按中国法语境替换。
 - 如识别到涉港澳台、境外法、跨境数据、外商投资负面清单或涉外管辖因素，应切换为提示模式，并要求结合相应法域执业律师意见确认。
 
-Guidance for working on this repo. `claude-for-legal` is a Claude Code plugin
-marketplace — twelve first-party legal plugins, one vendor plugin, and five
+Guidance for working on this repo. `claude-for-legal-cn` is a Claude Code plugin
+marketplace — ten default first-sequence China legal plugins, two Phase 2
+education/public-interest plugins, optional external vendor plugins, and five
 managed-agent cookbooks. Most work here is editing prompt content (skills,
 agents, hooks), plugin metadata, or cookbook config — not application code.
 
@@ -43,7 +44,7 @@ agents, hooks), plugin metadata, or cookbook config — not application code.
 
 ```
 .claude-plugin/marketplace.json   # the marketplace manifest — one entry per plugin
-<plugin>/                         # 12 first-party plugins (commercial-legal, privacy-legal, ...)
+<plugin>/                         # 10 default first-sequence China legal plugins
   .claude-plugin/plugin.json      # plugin manifest (name, version, description, author)
   .mcp.json                       # MCP servers the plugin connects to
   CLAUDE.md                       # practice-profile TEMPLATE (see "Plugin CLAUDE.md" below)
@@ -52,7 +53,7 @@ agents, hooks), plugin metadata, or cookbook config — not application code.
   agents/<name>.md                # subagent definitions
   hooks/hooks.json                # hook config (most plugins ship an empty stub)
   .gitignore
-external_plugins/<vendor>/        # vendor-maintained plugins (CoCounsel)
+external_plugins/<vendor>/        # optional vendor-maintained plugins, excluded from default marketplace
 managed-agent-cookbooks/<name>/   # CMA agent.yaml + subagents/ + steering-examples.json
 scripts/                          # validate.py, lint-tool-scope.py, orchestrate.py,
                                   # deploy-managed-agent.sh, test-cookbooks.sh
@@ -68,7 +69,7 @@ enforces in CI. Run the equivalent checks locally:
 # 1. Marketplace + per-plugin schema validation (source of truth)
 claude plugin validate .claude-plugin/marketplace.json
 for d in */; do [ -f "$d/.claude-plugin/plugin.json" ] && claude plugin validate "$d"; done
-claude plugin validate external_plugins/cocounsel-legal
+# Optional only: validate external_plugins/cocounsel-legal if you are changing it.
 
 # 2. Cookbook tool-scope lint (orchestrators must not over-grant tools)
 python3 scripts/lint-tool-scope.py
@@ -130,9 +131,10 @@ expected. Don't "fix" it by moving the content into a skill.
 ### `external_plugins/` is vendor-maintained
 
 Plugins under `external_plugins/` are built and maintained by the vendor
-(README.md has the policy). Don't change vendor-authored content without
-checking with them first; whitespace normalization and formatting are usually
-fine since the vendor lands changes via PR rather than mirroring a fork.
+(README.md has the policy). They are not part of the China default marketplace.
+Don't change vendor-authored content without checking with them first; whitespace
+normalization and formatting are usually fine since the vendor lands changes via
+PR rather than mirroring a fork.
 
 ### Formatting
 

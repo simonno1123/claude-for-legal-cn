@@ -123,3 +123,9 @@
 - 新增 `connectors/legal-data/local-index.sample.json`：用于 smoke test 的本地样例索引，覆盖《劳动合同法》《公司法》《个人信息保护法》的核心样例条文、案例权威等级和法答网样例。
 - 新增 `scripts/test-legal-data.sh`：验证本地 server、自测、法条定位和引用校验混合结果。
 - `legal-data` 当前只读取 `LOCAL_LEGAL_INDEX` 本地 JSON 索引；未配置时使用样例索引并强制返回人工复核提示。不联网、不调用商业库、不把样例摘要当作正式法律文本。
+
+## 2026-07-01 自动化收口
+
+- 新增 `scripts/localization-regression.py`：自动检查默认 marketplace 不包含海外 vendor 插件、各默认模块均保留中国法测试用例、`.mcp.json` 均接入 `legal-data`、核心文档不回退到旧的 vendor/default 口径，并对未授权路径中的境外法研究默认语境做回归拦截。
+- 新增 `.github/workflows/ci.yml`：在 push/PR 上运行 JSON 解析、localization regression、`legal-data` smoke test 和 managed-agent cookbook smoke test。
+- 更新根 `README.md`、`CLAUDE.md`、`AGENTS.md`，明确 `legal-data` 已具备最小本地 server，其他企业系统连接器仍为部署占位，`external_plugins/cocounsel-legal` 是可选外部插件且不进入中国版默认 marketplace。
