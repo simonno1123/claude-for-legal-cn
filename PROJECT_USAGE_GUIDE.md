@@ -6,17 +6,17 @@
 
 ## 1. 项目定位
 
-`claude-for-legal-cn` 是面向中国大陆法律体系的 AI 法律协同插件集合。项目已经完成：
+`claude-for-legal-cn` 是面向中国大陆法律体系的 AI 法律协同插件集合。v1 治理目标是 Complete Chinese Port / Faithful Port，即对上游 `claude-for-legal` 的目录、插件、技能、代理、工作流和文档概念建立一一对应的中国法实现。
 
-- Phase 1：九个法律业务核心模块本土化，并将 `legal-builder-hub` 作为第一序列生态治理模块。
-- Phase 2：并购、法律诊所、法学生学习模块本土化与持续深化。
-- 中国案例规则层：指导性案例、参考案例、典型案例和裁判文书的可更新引用接口。
+当前仓库已经包含多个中国法模块、案例规则层、MCP 占位配置和本地最小 legal-data server。它们应按 Faithful Port 标准逐项验收，而不是按企业法务、律所、教育、公益或治理场景做价值排序。
+
+项目范围以 [docs/PROJECT_SCOPE.md](docs/PROJECT_SCOPE.md) 为准；上游映射以 [docs/UPSTREAM_MAPPING_MATRIX.md](docs/UPSTREAM_MAPPING_MATRIX.md) 为基线。
 
 默认法域是中华人民共和国大陆地区。涉港澳台、境外法、跨境数据、外商投资负面清单、涉外管辖等问题，应切换为提示模式，并结合对应法域律师意见。
 
 ## 2. 模块总览
 
-### Phase 1 主线模块
+### 当前默认 Marketplace 模块
 
 | 模块 | 适用场景 | 常用入口 |
 |---|---|---|
@@ -31,13 +31,15 @@
 | `regulatory-legal` | 监管动态、政策差异、征求意见稿、整改台账、制度修订 | `/regulatory-legal:reg-feed-watcher` |
 | `legal-builder-hub` | 法律技能生态治理、社区技能审查、安装/禁用/卸载、更新差异审查、MCP 安全边界 | `/legal-builder-hub:skills-qa` |
 
-### Phase 2 扩展模块
+### 当前非默认目录模块
 
 | 模块 | 适用场景 | 常用入口 |
 |---|---|---|
 | `corporate-legal/phase-2` | 中国并购尽调、交割清单、重大合同附表、投后整合 | `/corporate-legal:diligence-issue-extraction` |
 | `phase-2/legal-clinic` | 法律诊所、法律援助、12348、公服咨询、导师复核 | `/legal-clinic:client-intake` |
 | `phase-2/law-student` | 中国法学习、法考、请求权基础、案例研读、主观题训练 | `/law-student:study-plan` |
+
+`phase-2` 目前只是目录状态，不代表模块价值较低，也不代表 v1 可以跳过这些上游职责。是否恢复根目录 parity、是否进入默认 marketplace、以及命令路径如何对齐，应在后续 Faithful Port 映射审核中处理。
 
 ## 3. 推荐安装方式
 
@@ -316,9 +318,9 @@
 
 不是。指导性案例和参考案例可用于类案参考和裁判规则校准，但不能替代成文法和司法解释，也不能作为普通法意义上的 binding precedent。
 
-### Phase 2 模块是否默认安装？
+### `phase-2` 模块是否代表低优先级？
 
-不建议默认安装。Phase 2 模块用于进阶场景，如并购、法律诊所和法学教育。企业法务日常使用以 Phase 1 九个法律业务模块为主；`legal-builder-hub` 虽不直接处理实体法律事项，但作为第一序列生态治理模块，建议在需要安装、审查或维护技能生态时启用。
+不是。`phase-2` 目前只是当前仓库的目录状态，不应理解为模块价值、验收标准或上游职责优先级较低。按照 v1 Faithful Port 原则，法律诊所、法学生、并购尽调和其他上游能力都应建立中国法对应实现；是否调整目录和 marketplace 暴露方式，应在后续结构映射阶段统一决定。
 
 ## 12. 推荐入口
 

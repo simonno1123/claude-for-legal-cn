@@ -1,28 +1,29 @@
-# Claude for Legal (中国法企业法务定制版)
+# Claude for Legal CN
 > 详细使用说明请参阅：[PROJECT_USAGE_GUIDE.md](PROJECT_USAGE_GUIDE.md)
 
 
-本项目是基于 Anthropic `claude-for-legal` 通用法律插件集合进行深度本地化改造的开源项目。针对中国大陆法系（成文法）特点及当前维护者的中国法实务优先级，对企业合规、法务核心工作流和法律技能生态治理进行了底层架构与 Prompt 的全量重雕，旨在打造开箱即用的“AI 法律协同副驾驶（Copilot）”。
+本项目是 Anthropic `claude-for-legal` 的中国法完整移植版本，v1 目标是 **Complete Chinese Port / Faithful Port**：尽量保持上游目录、插件、技能、代理、工作流和文档概念的可比结构，并将其中的法律内容、资料源、引用规则和人工复核门替换为中华人民共和国大陆地区法律体系下的对应实现。
+
+v1 的目标不是重新排序业务优先级，也不是新增专业化产品层。项目治理边界见 [docs/PROJECT_SCOPE.md](docs/PROJECT_SCOPE.md)，上游映射基线见 [docs/UPSTREAM_MAPPING_MATRIX.md](docs/UPSTREAM_MAPPING_MATRIX.md)。
 
 > ⚠️ **专业免责声明**
 > 本项目定位为法律协同工具。大模型生成的所有分析意见、合同审查结论、法律文书初稿，**必须经由具备中华人民共和国执业资格的律师或企业内部专业法务进行复核**，系统输出不得直接作为企业最终决策或法庭辩论依据。
 
 ---
 
-## 📌 项目定位与主场景优先级
+## 📌 项目定位
 
-本项目核心服务于以下场景，研发与 Prompt 调优资源按此优先级倾斜：
+本项目服务于上游 `claude-for-legal` 覆盖的法律工作场景，并以中国法语境实现对应职责。不同模块不因企业、律所、教育、公益或治理场景而在 v1 中被视为价值更低；当前目录状态只反映移植过程中的工程状态，不构成长期产品分级。
 
-1. **企业内控法务（In-house Legal）** —— 高频、流程化、强合规控制（当前业务优先级）
-2. **律所执业律师（Law Firm）** —— 个性化对抗、检索增强与文书辅助
-3. **法律技能生态治理（Legal Builder Hub）** —— 技能发现、安装、审查、禁用、更新和质量控制（第一序列治理模块）
-4. **法律教育与援助（Phase 2）** —— 学术与公益性长尾场景（`law-student`、`legal-clinic` 仍挂载于 `phase-2/`）
+- 企业法务、律所律师、监管合规、诉讼仲裁、知识产权、产品、隐私与 AI 治理等场景应按上游职责逐项完成中国法映射。
+- 法学生、法律诊所、法律援助和技能生态治理模块也应按 Faithful Port 标准验收。
+- 后续商业数据库、OCR、工商/执行信息、专业 Practice Pack 和工作流自动化属于 v2+ 扩展，不属于 v1 完整移植完成条件。
 
 ---
 
-## 📦 核心插件矩阵 (第一阶段正式模块)
+## 📦 当前插件矩阵
 
-默认 Marketplace 加载以下 9 个完全适配中国大陆法律环境的业务插件，以及 1 个第一序列生态治理插件：
+当前默认 Marketplace 加载以下中国法模块。该清单是当前工程状态，不替代上游完整映射验收：
 
 - `commercial-legal`: 境内商业合同审查与法律风险识别
 - `privacy-legal`: 个人信息保护法（PIPL）合规与数据安全审查
@@ -68,8 +69,8 @@
 
 ## 🗺️ 路线图 (Roadmap)
 
-以下模块由于教育/公益法律服务场景与当前业务优先级不同，仍挂载于 `phase-2/` 目录，作为第二阶段深化入口：
+v1：Complete Chinese Port / Faithful Port。目标是完成上游 `claude-for-legal` 能力在中国法体系下的一一对应实现，并保持后续上游 diff 可审查。
 
-- `law-student` / `legal-clinic` (法律诊所与法学生学术协同)
+v2+：在 v1 基线稳定后，再接入 MCP Provider、商业法律数据库、OCR、工商/执行信息、专业 Practice Pack、工作流自动化和公共能力层。
 
-`legal-builder-hub` 已提升为第一序列生态治理模块，不再作为 Phase 2 挂载模块。
+当前 `law-student` / `legal-clinic` 仍位于 `phase-2/` 目录，这只是当前目录状态，不代表模块价值低于其他上游模块；是否恢复根目录 parity 需在 Faithful Port 映射审核中决定。
