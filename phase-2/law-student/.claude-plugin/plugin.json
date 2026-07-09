@@ -1,8 +1,0 @@
-{
-  "name": "law-student",
-  "version": "2.0.0-cn-phase2",
-  "description": "Phase 2: 面向中国法学院学生、法考考生和法律学习者的法条体系、请求权基础、案例研读、模拟考试、写作训练和学习计划模块。",
-  "author": {
-    "name": "Anthropic reference; China localization by Codex"
-  }
-}

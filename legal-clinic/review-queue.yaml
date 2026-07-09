@@ -1,0 +1,10 @@
+# Legal Clinic supervisor review queue - China Mainland
+
+review_queue:
+  states:
+    - pending_review
+    - approved
+    - returned_with_comments
+  queue: []
+  log: []
+

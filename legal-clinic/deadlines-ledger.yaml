@@ -1,0 +1,34 @@
+# Legal Clinic deadline ledger - China Mainland
+#
+# Operational record for /legal-clinic:deadlines.
+# The skill tracks deadlines but does not finally calculate legal time limits.
+# Student computes from source documents and governing rules; supervisor confirms.
+
+default_deadline_policy:
+  jurisdiction: China Mainland
+  warning_days: [30, 14, 7, 3, 1]
+  manual_review_required: true
+  no_ai_final_calculation: true
+  note: "期限规则需按具体案由、程序、送达方式、当地机关要求和复核人意见确认。"
+
+deadlines: []
+
+# Entry schema:
+# - id: "case-short-deadline-YYYYMMDD"
+#   case_id: ""
+#   case_name: ""
+#   matter_type: "labor_arbitration | civil_litigation | administrative_reconsideration | administrative_litigation | consumer_complaint | legal_aid_application | other"
+#   deadline_type: "limitation | filing | evidence | hearing | appeal | correction | complaint | service | other"
+#   description: ""
+#   due_date: "YYYY-MM-DD | VERIFY"
+#   source: "notice/statute/document/user-provided source"
+#   source_verified: false
+#   owner_student: ""
+#   supervisor: ""
+#   status: "upcoming | due_soon | overdue | completed | closed"
+#   warning_days: [30, 14, 7, 3, 1]
+#   warnings: []
+#   created_at: "YYYY-MM-DD"
+#   updated_at: "YYYY-MM-DD"
+#   review_required: true
+#   notes: ""

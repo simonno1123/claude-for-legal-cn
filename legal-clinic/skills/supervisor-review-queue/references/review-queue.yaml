@@ -1,0 +1,37 @@
+review_queue:
+  jurisdiction: China Mainland
+  states:
+    - pending_review
+    - approved
+    - returned_with_comments
+  required_review:
+    - external_submission
+    - client_letter
+    - filing
+    - arbitration_application
+    - lawsuit_material
+    - legal_aid_application
+    - settlement
+    - withdrawal
+    - admission_of_liability
+    - payment_commitment
+    - waiver_or_disposition
+    - deadline_expiring
+    - vulnerable_party
+    - case_closure
+  queue: []
+  log: []
+
+# Entry schema:
+# - id: "RQ-YYYYMMDD-001"
+#   case_id: ""
+#   item_type: "intake | memo | draft | client_letter | status | handoff | deadline | other"
+#   student: ""
+#   supervisor: ""
+#   submitted_at: "YYYY-MM-DDTHH:MM"
+#   status: "pending_review"
+#   urgency: "urgent | high | normal"
+#   flags: []
+#   content_path: ""
+#   deadline_id: ""
+#   decision_log: []

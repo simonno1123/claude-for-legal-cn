@@ -1,5 +1,0 @@
-default_deadline_policy:
-  jurisdiction: China Mainland
-  warning_days: [30, 14, 7, 3, 1]
-  manual_review_required: true
-  note: "期限规则需按具体案由、程序和当地机关要求复核。"

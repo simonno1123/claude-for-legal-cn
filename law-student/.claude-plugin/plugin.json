@@ -1,0 +1,8 @@
+{
+  "name": "law-student",
+  "version": "2.0.0-cn-v1",
+  "description": "面向中国法学院学生、法考考生和法律学习者的法条体系、请求权基础、案例研读、法考训练、写作反馈和状态化学习计划模块。",
+  "author": {
+    "name": "Anthropic reference; China localization by Codex"
+  }
+}
