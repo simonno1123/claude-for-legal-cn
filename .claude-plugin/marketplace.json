@@ -95,6 +95,24 @@
       "author": {
         "name": "Anthropic reference; China localization by Codex"
       }
+    },
+    {
+      "name": "law-student",
+      "displayName": "法学生助手 (Law Student Assistant)",
+      "source": "./law-student",
+      "description": "提供中国法考备考、请求权基础训练、民商事案例研习与苏格拉底提问式辅导。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
+    },
+    {
+      "name": "legal-clinic",
+      "displayName": "法律诊所与援助 (Legal Clinic & Aid)",
+      "source": "./legal-clinic",
+      "description": "提供中国高校法律诊所、基层法律援助中心、12348公共法律服务时效台账与导师审查流。",
+      "author": {
+        "name": "Anthropic reference; China localization by Codex"
+      }
     }
   ]
 }

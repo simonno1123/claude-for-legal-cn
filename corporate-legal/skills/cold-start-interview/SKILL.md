@@ -156,4 +156,4 @@ argument-hint: "[--redo | --check-integrations | --full]"
 - 不得把 M&A/SEC/Delaware 作为默认模块。
 - 不得跳过出资期限和章程 2024 年后修订状态。
 - 不得在未读取章程时确认会议、决议或书面决议有效。
-- 不得另设 `customize` 配置入口；`company_profile` 必须由本技能统一生成和更新。
+- 不得另设配置存储源；公司画像（company_profile）必须统一保存在插件的根配置文件中，其自定义更新可通过 /corporate-legal:customize 入口提出建议并由用户确认。

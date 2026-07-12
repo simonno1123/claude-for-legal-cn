@@ -2,6 +2,8 @@
 
 This plugin supports China Mainland AI governance workflows for enterprise legal, compliance, security, data, and product teams. It covers generative AI services, algorithm recommendation, deep synthesis, vendor AI procurement, enterprise AI-use policy, personal information, important data, content safety, MIIT launch prerequisites, MLPS 2.0, and cross-border data routing.
 
+The v1 Faithful Port keeps the upstream lifecycle responsibilities: profile setup, AI system inventory, use-case registry, impact assessment, vendor playbook review, policy monitoring, and matter workspace state are all tracked through local configuration files. China-law substance replaces the upstream EU/US defaults, but the workflow remains stateful.
+
 > Professional note: outputs are internal compliance drafts. Filing, launch, vendor signing, regulator submission, data export, security assessment, and public commitments require review by legal, compliance, security owners, and China-qualified counsel where needed.
 
 ## Main Commands
@@ -20,6 +22,19 @@ This plugin supports China Mainland AI governance workflows for enterprise legal
 | `/ai-governance-legal:matter-workspace` | Organize an AI compliance project workspace |
 
 `/ai-governance-legal:customize` is kept only as a compatibility placeholder. It redirects users to `/ai-governance-legal:cold-start-interview` and must not create a second configuration profile.
+
+## Stateful Files
+
+The plugin uses local state files under:
+
+`~/.claude/plugins/config/claude-for-legal/ai-governance-legal/`
+
+- `CLAUDE.md` - China AI governance profile.
+- `ai-systems.yaml` - AI system inventory.
+- `use-case-registry.yaml` - approved / conditional / rejected / watch use cases.
+- `vendor-ai-playbook.yaml` - vendor AI positions and red lines.
+- `policy-sweep-log.yaml` - policy-monitor sweep history and acknowledgments.
+- `matters/` - isolated AI system, vendor, filing, or assessment workspaces.
 
 ## Phase 1 Boundaries
 
@@ -40,7 +55,9 @@ The default framework is China Mainland law and regulator practice. EU AI Act, N
 
 ```bash
 /ai-governance-legal:cold-start-interview
+/ai-governance-legal:ai-inventory add "Customer support LLM"
 /ai-governance-legal:use-case-triage "Customer support plans to use an LLM to answer user complaints"
+/ai-governance-legal:aia-generation "Customer support LLM"
 /ai-governance-legal:vendor-ai-review "Model API service terms"
 /ai-governance-legal:security-assessment "Public-facing AI image generation service"
 ```

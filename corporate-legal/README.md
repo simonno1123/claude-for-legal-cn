@@ -37,6 +37,14 @@
 | `/corporate-legal:written-consent` | 中国公司书面决议/传签决议审查与草案，先判断章程和事项是否允许书面决议 |
 | `/corporate-legal:entity-compliance` | 实体合规台账、登记事项、年度报告、章程/登记健康检查 |
 | `/corporate-legal:matter-workspace` | 多事项工作区管理 |
+| `/corporate-legal:customize` | Faithful Port 兼容入口，用于更新中国公司画像和公司法实务口径 |
+| `/corporate-legal:diligence-issue-extraction` | 中国并购尽调问题抽取 |
+| `/corporate-legal:tabular-review` | 中国并购批量表格化审查 |
+| `/corporate-legal:deal-team-summary` | 中国并购项目组简报 |
+| `/corporate-legal:material-contract-schedule` | 中国并购重大合同披露表生成 |
+| `/corporate-legal:closing-checklist` | 中国并购交割清单管理 |
+| `/corporate-legal:integration-management` | 中国并购交割后法律整合管理 |
+| `/corporate-legal:ai-tool-handoff` | 中国并购批量文档审查工具交接与质检 |
 
 ## 第一批深改状态
 
@@ -54,9 +62,11 @@
 - 新增 `references/test-cases-cn.md` 作为公司法 Prompt 回归测试靶场。
 - 新增 `references/articles-old-to-new.md` 作为章程旧法残留到新公司法口径的强制替换表。
 
-## Phase 1.5 规划：并购与投融资交易
+## 并购与投融资交易
 
-M&A / 投融资相关技能已暂移至 `phase-2/skills/`，不作为公司法第一阶段主线入口。后续将在公司治理、章程、出资和股权底座稳定后，按中国股权/资产交易、国资/外资/反垄断、税务和登记交割逻辑重写：
+M&A / 投融资相关技能是 `corporate-legal` Faithful Port v1 的上游职责。当前部分中国法实质实现因历史原因保留在 `phase-2/skills/`，但均通过根级 `skills/` wrapper 暴露为 `/corporate-legal:*` 命令。`phase-2` 路径不代表能力降权，也不代表 v1 可跳过这些职责。
+
+根级命令覆盖：
 
 - `diligence-issue-extraction`
 - `tabular-review`

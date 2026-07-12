@@ -31,15 +31,16 @@
 | `regulatory-legal` | 监管动态、政策差异、征求意见稿、整改台账、制度修订 | `/regulatory-legal:reg-feed-watcher` |
 | `legal-builder-hub` | 法律技能生态治理、社区技能审查、安装/禁用/卸载、更新差异审查、MCP 安全边界 | `/legal-builder-hub:skills-qa` |
 
-### 当前非默认目录模块
+### 教学与公益服务模块
 
 | 模块 | 适用场景 | 常用入口 |
 |---|---|---|
-| `corporate-legal/phase-2` | 中国并购尽调、交割清单、重大合同附表、投后整合 | `/corporate-legal:diligence-issue-extraction` |
-| `phase-2/legal-clinic` | 法律诊所、法律援助、12348、公服咨询、导师复核 | `/legal-clinic:client-intake` |
-| `phase-2/law-student` | 中国法学习、法考、请求权基础、案例研读、主观题训练 | `/law-student:study-plan` |
+| `legal-clinic` | 法律诊所、法律援助、12348、公服咨询、导师复核 | `/legal-clinic:client-intake` |
+| `law-student` | 中国法学习、法考、请求权基础、案例研读、主观题训练 | `/law-student:study-plan` |
 
-`phase-2` 目前只是目录状态，不代表模块价值较低，也不代表 v1 可以跳过这些上游职责。是否恢复根目录 parity、是否进入默认 marketplace、以及命令路径如何对齐，应在后续 Faithful Port 映射审核中处理。
+`corporate-legal` 的并购尽调、交割清单、重大合同附表和投后整合属于 corporate Faithful Port v1 职责，命令通过根级 `/corporate-legal:*` 暴露。部分实质实现因历史原因仍存放在 `corporate-legal/phase-2/skills/`，但该路径不代表能力降权，也不代表 v1 可以跳过这些职责。
+
+`legal-clinic` 和 `law-student` 已按 Faithful Port v1 恢复根目录 parity，并通过根级 `/legal-clinic:*`、`/law-student:*` 命令暴露。历史 `phase-2` 路径不代表能力降权，也不再作为这两个模块的默认入口。
 
 ## 3. 推荐安装方式
 

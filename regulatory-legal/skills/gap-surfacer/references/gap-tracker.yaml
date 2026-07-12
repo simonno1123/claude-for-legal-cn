@@ -1,16 +1,24 @@
-# Gap Tracker
-# Populated by policy-diff handoffs. Tracks open policy gaps until closed or risk-accepted.
+# 中国监管差距跟踪表
+# 由 /regulatory-legal:policy-diff 写入，由 /regulatory-legal:gaps 和 gap-surfacer 维护。
 
 gaps: []
 
 # Example:
 # - id: GAP-001
-#   requirement: "Must disclose X at Y point in the flow"
-#   regulation: "State Privacy Act § 4.2"
-#   policy_affected: "Privacy Policy v3.1"
-#   gap_type: "partial"
-#   owner: "privacy-legal@company.com"
-#   opened: 2026-03-01
-#   due: 2026-06-01
-#   status: "open"
+#   requirement: "网络产品运营者应在个人信息处理规则中增加自动化决策说明"
+#   regulation: "国家互联网信息办公室 [文件名称] 第X条"
+#   source_level: "部门规章/规范性文件/监管问答/地方规定"
+#   source_tag: "官方来源"
+#   policy_affected: "个人信息保护制度 v2.1"
+#   gap_type: "partial" # none | partial | full | new-policy | watch | comment-decision
+#   owner: "合规负责人"
+#   opened: "2026-07-04"
+#   due: "2026-08-01"
+#   status_verified: true
+#   status: "open" # open | in-progress | closed | risk-accepted
+#   notified: false
+#   evidence: ""
 #   resolution: ""
+#   accepted_by: ""
+#   accepted_rationale: ""
+#   closed_at: null

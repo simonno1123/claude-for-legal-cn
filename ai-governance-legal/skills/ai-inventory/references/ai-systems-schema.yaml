@@ -1,0 +1,42 @@
+# China AI governance inventory schema example.
+# Runtime inventory lives at:
+# ~/.claude/plugins/config/claude-for-legal/ai-governance-legal/ai-systems.yaml
+
+systems:
+  - id: sys-001
+    name: "Customer support LLM"
+    owner: "Product / Legal"
+    description: "Assists customer service staff with draft answers to user complaints."
+    status: planned # planned | in_development | in_pilot | in_production | suspended | deprecated
+    ai_type:
+      - generative_ai
+    service_scope: public_china # internal_only | enterprise_customer | public_china | overseas | minors
+    launch_channel:
+      - app
+      - mini_program
+    data_categories:
+      - personal_information
+      - customer_data
+    vendor_or_model: "[vendor/model]"
+    filing:
+      algorithm_recommendation: not_applicable
+      generative_ai_service: to_assess
+      deep_synthesis: not_applicable
+      provincial_cac: to_verify
+    infrastructure:
+      icp_filing: to_verify
+      app_filing: to_verify
+      icp_license: to_assess
+      mlps: to_assess
+    controls:
+      real_name_authentication: missing
+      visible_marking: not_applicable
+      implicit_watermark: not_applicable
+      content_safety_stop_filter: to_assess
+      human_review: required
+    assessments:
+      last_assessment: null
+      assessment_status: not_started
+      open_assessment_gaps: []
+    next_review: "2026-08-01"
+    review_trigger: "Before public launch"

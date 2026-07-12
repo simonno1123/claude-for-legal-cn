@@ -30,7 +30,7 @@ Data-room tools are likewise external MCPs. Preferred China deployment paths are
 1. Query the configured data room or document index for documents added since last run.
 2. Map new docs to China diligence request-list categories.
 3. Flag anything in high-priority categories (章程/股权/出资、重大合同、劳动用工、诉讼仲裁、知识产权、行政处罚、个人信息/数据合规).
-4. Run closing-checklist Mode 4 if it's briefing day.
+4. Run `/corporate-legal:closing-checklist` Mode 4 if it's briefing day.
 5. Write the update locally and, if configured, request delivery through the China collaboration connector.
 
 ## Output

@@ -23,14 +23,14 @@ Status legend:
 | `litigation-legal` | `litigation-legal` | 保留 / 已中国化 / 待核对 | China litigation/arbitration substance is present. Compatibility names such as `subpoena-triage`, `deposition-prep`, and `privilege-log-review` should be reviewed as v1 parity decisions, not product enhancements. |
 | `ip-legal` | `ip-legal` | 保留 / 已中国化 / 待核对 | China trademark, patent, copyright, platform takedown, trade secret, and OSS logic is present. Verify upstream workflow parity. |
 | `legal-builder-hub` | `legal-builder-hub` | 保留 / 已中国化 / 偏移风险 | Directory is present, but docs currently frame it as a promoted first-sequence governance module. For v1, treat it as an upstream module with China-governance substance, not as a higher-priority product layer. |
-| `law-student` | `phase-2/law-student` | 已中国化 / 偏移风险 / 待核对 | Current CN content exists under `phase-2`. Faithful Port requires a decision on whether to restore root-level source parity or explicitly document a temporary directory exception. Do not treat the module as lower value. |
-| `legal-clinic` | `phase-2/legal-clinic` | 已中国化 / 偏移风险 / 待核对 | Current CN content exists under `phase-2`. Faithful Port requires a decision on directory parity and marketplace inclusion. Do not treat clinic/legal aid workflows as lower value. |
+| `law-student` | `law-student` | 保留 / 已中国化 / 已恢复根目录 parity | Restored to root-level source parity and marketplace exposure after TASK_015. Continue to review learning-mode depth under Faithful Port, not as a lower-priority module. |
+| `legal-clinic` | `legal-clinic` | 保留 / 已中国化 / 已恢复根目录 parity | Restored to root-level source parity and marketplace exposure after TASK_017. Continue to review clinic/legal-aid operational safety under Faithful Port, not as a lower-priority module. |
 | `external_plugins/cocounsel-legal` | `external_plugins/cocounsel-legal` | 保留 / 待核对 / 偏移风险 | Vendor U.S.-law content remains isolated and is not in the CN default marketplace. Decide whether v1 preserves it as an external vendor plugin, adds a China-law equivalent, or documents it as out of China-port scope. |
 
 ## Current Governance Findings
 
 - CN has meaningful China-law substance, but current documentation still reflects a product-priority split rather than a pure Faithful Port baseline.
-- `law-student` and `legal-clinic` are the clearest directory parity risks because upstream uses root-level modules while CN currently stores them under `phase-2/`.
+- `law-student` and `legal-clinic` were directory parity risks because upstream uses root-level modules; both have now been restored to root-level module paths for v1 review.
 - `corporate-legal/phase-2` is a second parity risk because some upstream corporate/M&A responsibilities are not exposed at the root skill path.
 - MCP provider routing and legal database integrations should remain v2+ expansion items unless the upstream capability itself requires the placeholder interface.
 
@@ -48,4 +48,3 @@ Build a row-level inventory for every upstream:
 
 Each item should be marked `ported`, `mapped with China-law equivalent`,
 `temporarily deferred`, or `requires decision`.
-

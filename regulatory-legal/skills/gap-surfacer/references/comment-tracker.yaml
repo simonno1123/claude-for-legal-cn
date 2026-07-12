@@ -1,18 +1,20 @@
 # 中国征求意见稿反馈跟踪表
 # 由 reg-feed-watcher 发现征求意见稿后填充，由 /regulatory-legal:comments 管理。
 
-comments:
-  - id: CMT-001
-    document: "[征求意见稿名称]"
-    regulator: "[发布机关]"
-    level: "[法律/行政法规/部门规章/地方规定/规范性文件/监管问答]"
-    summary: "[一句话说明拟调整内容]"
-    official_link: "[官方链接]"
-    comment_deadline: "2026-05-15"
-    detected: "2026-03-20"
-    decision: "undecided"  # undecided | submit | not-submit | submitted | waived
-    owner: "[意见反馈决策 Owner]"
-    notified: false
-    rationale: ""
-    submitted_at: null
-    notes: ""
+comments: []
+
+# Example:
+# - id: CMT-001
+#   document: "[征求意见稿名称]"
+#   regulator: "[发布机关]"
+#   level: "[法律/行政法规/部门规章/地方规定/规范性文件/监管问答]"
+#   summary: "[一句话说明拟调整内容]"
+#   official_link: "[官方链接]"
+#   comment_deadline: "2026-08-15"
+#   detected: "2026-07-04"
+#   decision: "undecided" # undecided | submit | not-submit | submitted | waived
+#   owner: "[意见反馈决策 Owner]"
+#   notified: false
+#   rationale: ""
+#   submitted_at: null
+#   notes: ""

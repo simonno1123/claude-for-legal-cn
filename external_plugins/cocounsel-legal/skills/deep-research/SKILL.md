@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
 ---
 
+> [!WARNING]
+> 本技能属于第三方的 Westlaw / 美国法外部插件。除非用户明确指定进行美国法或 Westlaw 检索，本技能默认不被加载，亦不得作为中华人民共和国大陆地区法律检索的默认手段。中国法域检索请导向 `regulatory-legal` 或根目录 `references/` 规范。
+
 # Westlaw Deep Research
 
 Westlaw Deep Research searches Westlaw's database of caselaw, statutes, and administrative decisions and returns a written research report that explains, analyzes, or synthesizes relevant authority.
