@@ -23,8 +23,7 @@ Required rule: guiding cases and reference cases may calibrate reasoning, but th
 - 如识别到涉港澳台、境外法、跨境数据、外商投资负面清单或涉外管辖因素，应切换为提示模式，并要求结合相应法域执业律师意见确认。
 
 Guidance for working on this repo. `claude-for-legal-cn` is a Claude Code plugin
-marketplace — ten default first-sequence China legal plugins, two Phase 2
-education/public-interest plugins, optional external vendor plugins, and five
+marketplace — twelve default China legal plugins, optional external vendor plugins, and five
 managed-agent cookbooks. Most work here is editing prompt content (skills,
 agents, hooks), plugin metadata, or cookbook config — not application code.
 
@@ -44,7 +43,7 @@ agents, hooks), plugin metadata, or cookbook config — not application code.
 
 ```
 .claude-plugin/marketplace.json   # the marketplace manifest — one entry per plugin
-<plugin>/                         # 10 default first-sequence China legal plugins
+<plugin>/                         # 12 default China legal plugins
   .claude-plugin/plugin.json      # plugin manifest (name, version, description, author)
   .mcp.json                       # MCP servers the plugin connects to
   CLAUDE.md                       # practice-profile TEMPLATE (see "Plugin CLAUDE.md" below)

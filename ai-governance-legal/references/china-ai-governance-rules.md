@@ -2,6 +2,18 @@
 
 This is the default rulebook for `ai-governance-legal`. It assumes China Mainland jurisdiction unless the user expressly identifies an overseas or cross-border scenario.
 
+## Governing Regulations (法规依据)
+
+| # | 监管赛道 | 法规全称 | 发布机关 | 施行日期 |
+|---|---------|---------|---------|---------|
+| 1 | 算法推荐备案 | 《互联网信息服务算法推荐管理规定》 | 国家互联网信息办公室等四部门 | 2022-03-01 |
+| 2 | 深度合成标识与备案 | 《互联网信息服务深度合成管理规定》 | 国家互联网信息办公室等三部门 | 2023-01-10 |
+| 3 | 生成式 AI 服务备案与安全评估 | 《生成式人工智能服务管理暂行办法》 | 国家互联网信息办公室等七部门 | 2023-08-15 |
+| 4 | 网络安全等级保护 (MLPS 2.0) | 《网络安全等级保护条例》及《信息安全技术 网络安全等级保护基本要求》(GB/T 22239-2019) | 公安部 / TC260 | 2019-12-01 |
+| 5 | 数据出境安全评估 | 《数据出境安全评估办法》 | 国家互联网信息办公室 | 2022-09-01 |
+
+> 上述法规名称为正式引用名称。模块内部各技能以概念描述方式引用对应义务时，均应可溯源至本表。如法规发生修订或废止，应同步更新本表及相关技能文件。
+
 ## Non-Negotiable Alignment
 
 - Outputs are internal compliance drafts only.
