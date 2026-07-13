@@ -20,7 +20,7 @@
 
 必查：最小必要、明示告知、单独同意、第三方 SDK 清单、委托处理、共同处理、数据出境、删除/更正/撤回同意机制。
 
-高风险时转交：`/privacy-legal:pia-audit`。
+高风险时转交：`/privacy-legal:pia-generation`。
 
 ## 4. 算法与 AI 触点
 
@@ -28,7 +28,7 @@
 
 必查：算法备案、显著标识、退出机制、内容安全、训练数据来源、未成年人保护、大数据杀熟、生成内容水印或标识。
 
-高风险时转交：`/ai-governance-legal:cac-filing`。
+高风险时转交：`/ai-governance-legal:security-assessment`。
 
 ## 5. 质量标准与召回
 

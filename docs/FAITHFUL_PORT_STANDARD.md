@@ -1,13 +1,14 @@
 # Faithful Port Standard
 
-Status: v1 Frozen Governance Standard
+Status: v1 Engineering Standard; Phase 1 scope reclassified on 2026-07-13
 
 ## 1. Purpose
 
 This document defines the engineering standard for a Faithful Port of an AI legal
 project into the China Mainland legal system.
 
-For `claude-for-legal-cn`, this standard governs v1 acceptance. It is written as
+For `claude-for-legal-cn`, this standard governs responsibility mapping and
+Phase 1 acceptance. It is written as
 an engineering specification rather than a project overview so that the same
 method can be reused for future China-law ports of comparable AI legal projects.
 
@@ -15,7 +16,10 @@ The core rule is:
 
 > Responsibility Equivalence, not Literal Duplication.
 
-The port must preserve what the upstream project is responsible for achieving.
+The port must preserve traceability to what the upstream project is responsible
+for achieving. A responsibility may be assigned to Phase 1, Phase 1.5, or Phase 2
+under `docs/PROJECT_SCOPE.md`; approved deferral must remain explicit and must not
+be represented as an implemented Phase 1 capability.
 It does not need to duplicate the exact upstream wording, interaction shape,
 provider choice, or file granularity when a China-law implementation achieves
 the same responsibility.
@@ -32,7 +36,8 @@ This standard applies to:
 - plugin-level audit reports;
 - v1 acceptance decisions.
 
-This standard does not authorize v2+ expansion work. MCP provider integrations,
+This standard does not authorize Phase 1.5 or Phase 2 expansion work. Stateful
+workflow infrastructure, MCP provider integrations,
 commercial legal database integrations, OCR, company search, judgment search,
 enforcement intelligence, and specialized practice packs remain governed by
 `docs/PROJECT_SCOPE.md`.
@@ -53,6 +58,9 @@ enforcement intelligence, and specialized practice packs remain governed by
 | Compatibility Wording | Legacy or upstream-compatible names retained for structural continuity while the substance has been localized. |
 | Design Difference | A deliberate implementation difference that does not prevent the upstream responsibility from being achieved. |
 | Observation | A non-blocking implementation or depth difference that should be recorded but does not affect responsibility completion. |
+| Phase 1 Baseline | China-law substantive alignment, root discoverability, mandatory runtime validation, and truthful documentation required for the Release Candidate. |
+| Phase 1.5 Legal Workflow Layer | Local, human-triggered persistence, tracking, matter isolation, and lifecycle behavior. |
+| Phase 2 Advanced Integration | External providers, automatic monitoring, privileged ecosystem actions, and specialized cross-border capabilities. |
 
 ## 4. Responsibility Mapping Principle
 
@@ -73,6 +81,11 @@ One upstream responsibility may map to one or more China-law implementations.
 Multiple upstream implementation details may also consolidate into a single
 China-law workflow, provided the upstream responsibility remains fully
 achievable.
+
+When an approved scope decision assigns a responsibility to Phase 1.5 or Phase 2,
+the Phase 1 implementation may provide only a compatibility entry, safe intake,
+planning template, or explicit handoff. The mapping matrix must identify that
+boundary; the deferred responsibility must not be described as complete.
 
 Example:
 
@@ -108,7 +121,8 @@ remove an upstream responsibility, or create an unresolved v1 mapping decision.
 Identify the upstream capability and confirm that the China-law plugin still
 serves the same capability category.
 
-Capability loss is a Blocker.
+Capability loss inside the phase currently under acceptance is a Blocker. An
+explicitly approved later-phase capability is not a Phase 1 Blocker.
 
 ### 5.3 Responsibility
 
@@ -116,7 +130,9 @@ Map upstream responsibilities to China-law equivalents. Treat file
 consolidation, command renaming, or China-specific workflow design as acceptable
 when the responsibility remains achievable.
 
-Responsibility loss is a Blocker. Responsibility impairment is a Gap.
+Responsibility loss inside the phase currently under acceptance is a Blocker.
+Responsibility impairment is a Gap. An approved Phase 1.5 or Phase 2 assignment
+is a scope classification, not a Phase 1 defect, when the current boundary is truthful.
 
 ### 5.4 Operational Depth
 
@@ -160,17 +176,17 @@ Check compliance with:
 - this standard.
 
 The audit must flag business-priority drift, module devaluation, product-specific
-positioning, premature v2+ claims, or claims of production provider integration
-that are not implemented.
+positioning, stale phase assignments, premature later-phase completion claims,
+or claims of production provider integration that are not implemented.
 
 ## 6. Severity Model
 
 | Severity | Meaning | Typical Result |
 |---|---|---|
-| Blocker | Capability or required responsibility is absent, or runtime is unusable. | ACTION REQUIRED |
-| Gap | Responsibility exists but behavior is materially different in a way that affects v1 completion. | ACTION REQUIRED or Conditional PASS depending on scope |
+| Blocker | A capability or required responsibility in the accepted phase is absent, or mandatory runtime is unusable. | ACTION REQUIRED |
+| Gap | A responsibility in the accepted phase exists but behavior is materially different in a way that affects completion. | ACTION REQUIRED or Conditional PASS depending on scope |
 | Observation | Responsibility works, but operational depth, workflow richness, examples, or implementation shape differs. | PASS or Conditional PASS |
-| Enhancement | Future improvement outside v1 Faithful Port scope. | PASS or Conditional PASS |
+| Enhancement | Future improvement or an approved later-phase item. | PASS or Conditional PASS |
 
 Severity must be assigned by effect on capability and responsibility, not by
 literal file differences.
@@ -179,9 +195,9 @@ literal file differences.
 
 | Result | Definition |
 |---|---|
-| PASS | Capability and responsibilities are preserved, China-law localization is sufficient, runtime is not materially broken, and no governance issue blocks v1 acceptance. |
-| Conditional PASS | Capability and responsibilities are substantially preserved, but mapping confirmations, Observations, Enhancements, or limited non-blocking Gaps remain. |
-| ACTION REQUIRED | A Blocker exists, or a Gap materially prevents v1 Faithful Port acceptance. |
+| PASS | Phase 1 capabilities are present, China-law localization is sufficient, mandatory runtime passes, phase mappings are truthful, and no governance issue blocks acceptance. |
+| Conditional PASS | Phase 1 capabilities are substantially present, but mapping confirmations, Observations, Enhancements, or limited non-blocking Gaps remain. |
+| ACTION REQUIRED | A Phase 1 Blocker exists, or a Gap materially prevents Phase 1 baseline acceptance. |
 
 An audit may not mark a plugin ACTION REQUIRED only because upstream operational
 depth is richer. It must identify the responsibility that is actually missing or
@@ -200,6 +216,7 @@ The following do not default to parity defects:
 - command or workflow consolidation;
 - compatibility names retained for upstream traceability;
 - richer China-law examples than upstream examples.
+- responsibilities assigned to Phase 1.5 or Phase 2 by an accepted scope decision.
 
 They become defects only if they prevent an upstream capability or
 responsibility from being achieved, break runtime use, or violate

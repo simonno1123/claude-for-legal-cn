@@ -1,50 +1,43 @@
 # Upstream Mapping Matrix
 
-This matrix tracks the current relationship between upstream `claude-for-legal`
-and `claude-for-legal-cn`. It is a governance document for the v1 Faithful Port
-baseline, not a claim that every row is already complete.
+Status: synchronized with the scope decision accepted on 2026-07-13.
 
-Status legend:
+This matrix tracks responsibility mapping between upstream `claude-for-legal`
+and `claude-for-legal-cn`. A deferred responsibility remains traceable here but
+does not block the Phase 1 baseline when its target phase and current boundary are explicit.
 
-- **保留**: the upstream concept/path is preserved or intentionally mirrored.
-- **已中国化**: the capability has China-law substance.
-- **待核对**: parity must still be checked against the latest upstream version.
-- **偏移风险**: current CN structure or positioning diverges from Faithful Port.
-
-| Upstream module | Current CN location | Current status | Notes / recommendation |
+| Upstream module | Current CN location | Phase 1 baseline | Deferred responsibility |
 |---|---|---|---|
-| `commercial-legal` | `commercial-legal` | 保留 / 已中国化 / 待核对 | Directory is preserved and China contract substance is present. Verify every upstream skill, agent, workflow, and doc has a one-to-one responsibility mapping. |
-| `privacy-legal` | `privacy-legal` | 保留 / 已中国化 / 待核对 | China PIPL/DSL/CSL framing is present. Check whether retained compatibility names such as `dsar-response` remain acceptable under Faithful Port. |
-| `product-legal` | `product-legal` | 保留 / 已中国化 / 待核对 | China product, consumer, advertising, platform, data, and algorithm logic is present. Broken cross-module references should be handled in a later structure/runtime pass. |
-| `corporate-legal` | `corporate-legal` plus `corporate-legal/phase-2` | 已中国化 / 偏移风险 / 待核对 | Core China company-law work exists, but some M&A/diligence upstream responsibilities are moved under `phase-2`. Decide whether v1 should restore root-level command parity. |
-| `employment-legal` | `employment-legal` | 保留 / 已中国化 / 待核对 | China labor-law substance is present. Confirm expansion and matter-workspace responsibilities against upstream instead of ranking by local business priority. |
-| `regulatory-legal` | `regulatory-legal` | 保留 / 已中国化 / 待核对 | China regulator-source logic is present. Verify upstream source-monitoring and policy-diff responsibilities remain equivalent. |
-| `ai-governance-legal` | `ai-governance-legal` | 保留 / 已中国化 / 待核对 | China AI governance content is present. Confirm upstream skill count, agent expectations, and command examples. |
-| `litigation-legal` | `litigation-legal` | 保留 / 已中国化 / 待核对 | China litigation/arbitration substance is present. Compatibility names such as `subpoena-triage`, `deposition-prep`, and `privilege-log-review` should be reviewed as v1 parity decisions, not product enhancements. |
-| `ip-legal` | `ip-legal` | 保留 / 已中国化 / 待核对 | China trademark, patent, copyright, platform takedown, trade secret, and OSS logic is present. Verify upstream workflow parity. |
-| `legal-builder-hub` | `legal-builder-hub` | 保留 / 已中国化 / 偏移风险 | Directory is present, but docs currently frame it as a promoted first-sequence governance module. For v1, treat it as an upstream module with China-governance substance, not as a higher-priority product layer. |
-| `law-student` | `law-student` | 保留 / 已中国化 / 已恢复根目录 parity | Restored to root-level source parity and marketplace exposure after TASK_015. Continue to review learning-mode depth under Faithful Port, not as a lower-priority module. |
-| `legal-clinic` | `legal-clinic` | 保留 / 已中国化 / 已恢复根目录 parity | Restored to root-level source parity and marketplace exposure after TASK_017. Continue to review clinic/legal-aid operational safety under Faithful Port, not as a lower-priority module. |
-| `external_plugins/cocounsel-legal` | `external_plugins/cocounsel-legal` | 保留 / 待核对 / 偏移风险 | Vendor U.S.-law content remains isolated and is not in the CN default marketplace. Decide whether v1 preserves it as an external vendor plugin, adds a China-law equivalent, or documents it as out of China-port scope. |
+| `commercial-legal` | `commercial-legal` | China contract review, playbooks, renewal templates, root skills and agents are present. Agent frontmatter is restored. | Stateful matter lifecycle and agent persistence are Phase 1.5. External notifications are Phase 2. |
+| `privacy-legal` | `privacy-legal` | PIPL/DSL/CSL triage, PIPIA, processing-relationship review, rights requests and policy monitoring are present. | Persistent matter lifecycle is Phase 1.5. Real legal/privacy providers are Phase 2. |
+| `product-legal` | `product-legal` | China consumer, advertising, platform, data, algorithm, quality and launch review is present. | Local launch tracker and matter lifecycle are Phase 1.5. External product-system monitoring is Phase 2. |
+| `corporate-legal` | `corporate-legal` plus historical implementation storage at `corporate-legal/phase-2/skills` | China company law and M&A responsibilities are root-discoverable; seven M&A root wrappers delegate to the maintained implementations. | External VDR/enterprise integrations are Phase 2. Historical storage does not lower module status. |
+| `employment-legal` | `employment-legal` | China hiring, wage/hour, leave, handbook, investigation, termination, compensation and social-insurance responsibilities are present. | Optional local matter lifecycle is Phase 1.5. Substantive international expansion/EOR capability is Phase 2; Phase 1 retains safe intake and professional handoff only. |
+| `regulatory-legal` | `regulatory-legal` | China source provenance, feed/diff/tracker/comments/closure workflow and policy review are present. | Production regulator feeds and enterprise notifications are Phase 2. |
+| `ai-governance-legal` | `ai-governance-legal` | China algorithm, generative AI, deep-synthesis, security-assessment, PIPL/DSL/CSL and registry workflows are present. | Production filing/provider integrations are Phase 2. |
+| `litigation-legal` | `litigation-legal` | China litigation/arbitration, preservation, hearing, confidential-evidence and enforcement responsibilities are present; compatibility commands remain root-discoverable. | Court/arbitration system integrations are Phase 2. |
+| `ip-legal` | `ip-legal` | China trademark, patent, copyright, platform takedown, trade secret, customs and OSS responsibilities are present. | Local matter lifecycle is Phase 1.5. Registry/provider automation is Phase 2. |
+| `legal-builder-hub` | `legal-builder-hub` | China-law skill QA, static source review, planning templates and safety boundaries are present. | Physical install/update/rollback/disable/uninstall and remote registry synchronization are Phase 2. |
+| `law-student` | `law-student` | Root marketplace exposure, China legal education, 法考, claim-basis analysis, case study, writing practice and learning guardrails are present. | Richer learning analytics are optional later depth, not a Phase 1 blocker. |
+| `legal-clinic` | `legal-clinic` | Root marketplace exposure, China clinic/legal-aid intake, supervision, confidentiality, deadline tracking and handoff are present. | External clinic case-management integration is Phase 2. |
+| `external_plugins/cocounsel-legal` | `external_plugins/cocounsel-legal` | Intentionally isolated vendor content; excluded from the default China marketplace and covered by `external_plugins/README.md`. | Vendor-controlled evolution remains outside the first-party Phase 1 baseline. |
 
-## Current Governance Findings
+## Root Assets
 
-- CN has meaningful China-law substance, but current documentation still reflects a product-priority split rather than a pure Faithful Port baseline.
-- `law-student` and `legal-clinic` were directory parity risks because upstream uses root-level modules; both have now been restored to root-level module paths for v1 review.
-- `corporate-legal/phase-2` is a second parity risk because some upstream corporate/M&A responsibilities are not exposed at the root skill path.
-- MCP provider routing and legal database integrations should remain v2+ expansion items unless the upstream capability itself requires the placeholder interface.
+| Asset | Phase 1 baseline | Deferred responsibility |
+|---|---|---|
+| `managed-agent-cookbooks` | Five cookbooks remain available with China-law boundaries and schema validation. | Real enterprise providers and automated delivery are Phase 2. |
+| MCP configuration | Twelve root `.mcp.json` files are generated from `scripts/mcp-template.json` and `scripts/mcp-modules.json`; `legal-data` is a local sample server. | Commercial databases, WPS and enterprise systems are production integrations for Phase 2. |
 
-## Next Review Step
+## Maintenance Rule
 
-Build a row-level inventory for every upstream:
+For every upstream update, record whether the responsibility is:
 
-- plugin manifest;
-- README / CLAUDE.md;
-- each skill;
-- each agent;
-- hooks and workflows;
-- MCP config;
-- managed-agent cookbook.
+- included in the Phase 1 baseline;
+- mapped to a China-law equivalent;
+- assigned to Phase 1.5;
+- assigned to Phase 2;
+- intentionally isolated as external/vendor content.
 
-Each item should be marked `ported`, `mapped with China-law equivalent`,
-`temporarily deferred`, or `requires decision`.
+Do not use directory names, historical `phase-2` storage, or practice-setting
+preferences as a proxy for module value or acceptance priority.

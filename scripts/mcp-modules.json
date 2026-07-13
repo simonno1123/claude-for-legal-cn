@@ -88,13 +88,13 @@
       "extraServers": {}
     },
     {
-      "path": "phase-2/law-student",
+      "path": "law-student",
       "categories": ["china-legal-research", "legal-education", "laws-regulations", "cases", "documents"],
       "noteSuffix": "法学生模块默认通过 legal-data 查询法规、案例和案例权威层；课程资料和案例研习材料通过 WPS 或 Local File Mode 提供。",
       "extraServers": {}
     },
     {
-      "path": "phase-2/legal-clinic",
+      "path": "legal-clinic",
       "categories": ["china-legal-research", "legal-aid", "case-intake", "laws-regulations", "cases", "documents"],
       "noteSuffix": "法律诊所模块默认通过 legal-data 做事实核验、法条定位和类案参考；诊所协作系统只作为内部任务流转占位。",
       "extraServers": {

@@ -6,9 +6,9 @@
 
 ## 1. 项目定位
 
-`claude-for-legal-cn` 是面向中国大陆法律体系的 AI 法律协同插件集合。v1 治理目标是 Complete Chinese Port / Faithful Port，即对上游 `claude-for-legal` 的目录、插件、技能、代理、工作流和文档概念建立一一对应的中国法实现。
+`claude-for-legal-cn` 是面向中国大陆法律体系的 AI 法律协同插件集合。Phase 1 定位为中国执业律师和企业法务 AI 辅助工具基础层：完成中国法实体内容、12 个根模块、基线可运行性与文档真实性对齐，并保留上游职责映射。
 
-当前仓库已经包含多个中国法模块、案例规则层、MCP 占位配置和本地最小 legal-data server。它们应按 Faithful Port 标准逐项验收，而不是按企业法务、律所、教育、公益或治理场景做价值排序。
+当前仓库包含 12 个根级中国法模块、案例规则层、MCP 占位配置和本地最小 `legal-data` server。Phase 1.5 承接本地状态化工作流，Phase 2 承接真实 Provider、外部自动化、跨境专业包和高权限生态操作；阶段划分不是模块价值排序。
 
 项目范围以 [docs/PROJECT_SCOPE.md](docs/PROJECT_SCOPE.md) 为准；上游映射以 [docs/UPSTREAM_MAPPING_MATRIX.md](docs/UPSTREAM_MAPPING_MATRIX.md) 为基线。
 
@@ -29,7 +29,7 @@
 | `ip-legal` | 商标、专利、著作权、平台维权、开源合规、商业秘密 | `/ip-legal:clearance` |
 | `ai-governance-legal` | 生成式 AI、算法推荐、深度合成、AI 备案、安全评估 | `/ai-governance-legal:use-case-triage` |
 | `regulatory-legal` | 监管动态、政策差异、征求意见稿、整改台账、制度修订 | `/regulatory-legal:reg-feed-watcher` |
-| `legal-builder-hub` | 法律技能生态治理、社区技能审查、安装/禁用/卸载、更新差异审查、MCP 安全边界 | `/legal-builder-hub:skills-qa` |
+| `legal-builder-hub` | 法律技能 QA、静态来源审查、变更计划、MCP 安全边界 | `/legal-builder-hub:skills-qa` |
 
 ### 教学与公益服务模块
 
@@ -38,9 +38,11 @@
 | `legal-clinic` | 法律诊所、法律援助、12348、公服咨询、导师复核 | `/legal-clinic:client-intake` |
 | `law-student` | 中国法学习、法考、请求权基础、案例研读、主观题训练 | `/law-student:study-plan` |
 
-`corporate-legal` 的并购尽调、交割清单、重大合同附表和投后整合属于 corporate Faithful Port v1 职责，命令通过根级 `/corporate-legal:*` 暴露。部分实质实现因历史原因仍存放在 `corporate-legal/phase-2/skills/`，但该路径不代表能力降权，也不代表 v1 可以跳过这些职责。
+`corporate-legal` 的并购尽调、交割清单、重大合同附表和投后整合已经通过根级 `/corporate-legal:*` 命令暴露。部分实质实现因历史原因仍存放在 `corporate-legal/phase-2/skills/`，但该路径不代表能力降权或后续阶段状态。
 
-`legal-clinic` 和 `law-student` 已按 Faithful Port v1 恢复根目录 parity，并通过根级 `/legal-clinic:*`、`/law-student:*` 命令暴露。历史 `phase-2` 路径不代表能力降权，也不再作为这两个模块的默认入口。
+`legal-clinic` 和 `law-student` 已恢复根目录 parity，并通过根级 `/legal-clinic:*`、`/law-student:*` 命令暴露。历史 `phase-2` 路径不再是这两个模块的入口。
+
+Phase 1 中的 matter-workspace 入口仅提供模板或启用边界说明，不承诺本地持久化的 `new/list/switch/close/none` 生命周期；该能力统一列入 Phase 1.5。`legal-builder-hub` 的安装、更新、回滚、禁用和卸载同样只提供审查或人工操作计划，物理文件操作属于 Phase 2。
 
 ## 3. 推荐安装方式
 
@@ -319,9 +321,9 @@
 
 不是。指导性案例和参考案例可用于类案参考和裁判规则校准，但不能替代成文法和司法解释，也不能作为普通法意义上的 binding precedent。
 
-### `phase-2` 模块是否代表低优先级？
+### Phase 1.5 / Phase 2 是否代表模块价值较低？
 
-不是。`phase-2` 目前只是当前仓库的目录状态，不应理解为模块价值、验收标准或上游职责优先级较低。按照 v1 Faithful Port 原则，法律诊所、法学生、并购尽调和其他上游能力都应建立中国法对应实现；是否调整目录和 marketplace 暴露方式，应在后续结构映射阶段统一决定。
+不是。当前 12 个第一方插件均位于根目录并进入默认 marketplace。Phase 1.5 仅表示本地状态化工作流的交付阶段；Phase 2 表示真实 Provider、外部自动化、跨境专业包或高权限生态操作的交付阶段。具体责任边界以 `docs/UPSTREAM_MAPPING_MATRIX.md` 为准。
 
 ## 12. 推荐入口
 

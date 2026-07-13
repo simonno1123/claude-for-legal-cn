@@ -1,54 +1,67 @@
 # Project Scope
 
+Status: Phase 1 scope reclassified by `TASK_017_PHASE1_SCOPE_RECLASSIFICATION_DECISION` on 2026-07-13.
+
 This document defines the governance baseline for `claude-for-legal-cn`.
 
-## v1 Goal: Complete Chinese Port / Faithful Port
+## Phase 1 Goal: China-Law Baseline
 
-Version 1 is a faithful China-law port of the upstream `claude-for-legal` project.
-The goal is structural and functional parity first:
+Phase 1 freezes a usable foundation for Chinese licensed lawyers, in-house legal
+teams, clinics, and legal learners. Its release condition is:
 
-- preserve the upstream directory, plugin, skill, agent, workflow, prompt, and documentation concepts wherever possible;
-- map each upstream capability to the best China Mainland legal implementation;
-- replace legal substance, examples, sources, citations, and review gates with China-law equivalents;
-- keep enough structural compatibility to make future upstream diffs reviewable.
+- 12 first-party root modules are discoverable and structurally valid;
+- their core legal substance, sources, examples, citations, and review gates use China Mainland law;
+- mandatory CI, command references, generated configuration, and documentation are internally consistent;
+- every upstream responsibility is mapped to Phase 1, Phase 1.5, Phase 2, or an isolated external/vendor boundary;
+- deferred capabilities are described truthfully and are not presented as implemented.
 
-Faithful Port does not mean literal translation. Each upstream component should be
-evaluated by responsibility:
+Faithful Port remains the responsibility-mapping method. It does not require
+literal duplication, and the Phase 1 baseline does not require every stateful,
+automated, cross-border, or provider-dependent upstream workflow to be implemented
+before the baseline can freeze.
 
-1. What problem does the upstream component solve?
-2. What is the China-law implementation that solves the same problem?
+## Phase Model
 
-## v1 Non-Goals
+| Phase | Scope | Examples |
+|---|---|---|
+| Phase 1 Baseline Recovery | China-law substantive alignment, root discoverability, static/local use, mandatory runtime validation, truthful documentation | Core legal reviews, local file mode, command routing, CI, MCP placeholder configuration |
+| Phase 1.5 Legal Workflow Layer | Local, human-triggered persistence and lifecycle behavior | Matter workspaces, trackers, history, owner/status/deadline, local monitoring queues |
+| Phase 2 Advanced Integration / External Capability | External providers, automatic monitoring, privileged ecosystem actions, and specialized cross-border expansion | Real MCP providers, WPS API, enterprise systems, outbound employment packs, skill install/update/rollback |
 
-Version 1 should not prioritize one practice setting or create new product layers.
-In particular, v1 does not do the following:
+Phase assignment is not a value ranking. Law firm, in-house, clinic, student,
+regulatory, and governance modules remain subject to the same Phase 1 quality bar
+for the capabilities actually included in the baseline.
 
-- no enterprise-legal-first priority over law firm, clinic, student, regulatory, or other upstream use cases;
-- no personal practice preference or maintainer-specific business priority as the organizing principle;
-- no specialized practice packs beyond what is needed to port upstream capabilities;
-- no built-in commercial legal database dependency;
-- no claim that PKULAW, Yuandian, Wolters Kluwer, Faxin, Alpha, court systems, OCR, company search, or enforcement intelligence is production-integrated;
-- no architecture rewrite whose main purpose is optimization rather than faithful porting.
+## Phase 1 Non-Goals
 
-## v2+ Expansion Boundary
+Phase 1 does not include:
 
-Capabilities beyond upstream parity belong to later versions:
+- stateful matter-workspace implementation or automatic lifecycle management;
+- automatic monitoring of product, contract, docket, registry, or enterprise systems;
+- physical installation, update, rollback, disable, or uninstall of community skills;
+- substantive foreign-law, EOR, foreign tax, or immigration advice for international expansion;
+- production MCP providers for commercial legal databases, WPS, court systems, OCR, company search, or enforcement intelligence;
+- specialized Practice Packs beyond the Phase 1 China-law baseline;
+- an architecture rewrite whose main purpose is optimization.
 
-- MCP provider integrations for PKULAW, Yuandian, Wolters Kluwer, Faxin, Alpha, official legal databases, and enterprise data systems;
-- specialized Practice Packs for industries, transaction types, litigation workflows, employment subdomains, privacy/data, IP portfolios, or regulatory verticals;
-- OCR, company search, judgment search, enforcement intelligence, business registry, public records, and workflow automation;
-- reusable China legal capability layers such as `legal-core-cn`.
+The repository may preserve compatibility commands, planning templates, placeholder
+connector interfaces, and the local sample `legal-data` server. Each must state its
+actual operating boundary.
 
-The v1 baseline may contain placeholder connector interfaces and local smoke-test
-servers, but these must be documented as infrastructure placeholders, not as
-production provider integrations.
+## Provider Boundary
+
+PKULAW, Yuandian, Wolters Kluwer, Faxin, Alpha, court systems, WPS, OCR,
+company search, judgment search, enforcement intelligence, business registries,
+and enterprise systems are not production-integrated by the Phase 1 repository.
+Deployments may connect authorized providers later without changing the Phase 1
+legal-substance baseline.
 
 ## Acceptance Rule
 
-v1 is complete only when the upstream-to-China mapping matrix is reviewed and all
-upstream modules, skills, agents, workflows, and documentation concepts are either:
+Phase 1 is ready for Release Candidate review only when:
 
-- faithfully ported;
-- intentionally preserved as external/vendor content;
-- explicitly marked with an unresolved mapping decision.
-
+1. all Phase 1 Mandatory issues pass validation;
+2. current paths, module counts, command names, and capability states are documented accurately;
+3. `docs/UPSTREAM_MAPPING_MATRIX.md` records each deferred responsibility and target phase;
+4. Phase 1.5 and Phase 2 items are not treated as Phase 1 blockers and are not claimed as implemented;
+5. external/vendor content remains isolated from the default China marketplace.

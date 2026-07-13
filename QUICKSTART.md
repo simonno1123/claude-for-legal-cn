@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
    /privacy-legal:cold-start-interview
    ```
 
-6. **连接法律研究工具。** 未连接研究工具时，所有引用将被标记为未验证。在 Cowork 中：设置 → 连接器 → 添加法律数据库（如北大法宝）。在 Claude Code 中：插件已在配置中列出研究工具 MCP，首次使用时会提示你授权。
+6. **确认法律研究模式。** 仓库自带的 `legal-data` 仅是读取本地 JSON 索引的最小 server；未配置授权数据源时，引用应标记为待核验。北大法宝等商业数据库及企业系统需要部署方另行取得授权并实现连接器，本仓库不内置其生产接口。
 
 ## 安装为用户级而非项目级
 
@@ -53,8 +53,8 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
 | 诉讼律师（企业内部或律所） | `litigation-legal` | `/litigation-legal:matter-intake` |
 | 监管合规律师 | `regulatory-legal` | `/regulatory-legal:reg-feed-watcher` |
 | AI 治理负责人 | `ai-governance-legal` | `/ai-governance-legal:use-case-triage` |
-| 法律诊所指导教师（Phase 2） | `legal-clinic` | `/legal-clinic:cold-start-interview` |
-| 法学院学生（Phase 2） | `law-student` | `/law-student:cold-start-interview` |
+| 法律诊所指导教师 | `legal-clinic` | `/legal-clinic:cold-start-interview` |
+| 法学院学生 | `law-student` | `/law-student:cold-start-interview` |
 | 法律科技/寻找扩展技能 | `legal-builder-hub` | `/legal-builder-hub:registry-browser` |
 
 ## 安装的内容
@@ -65,7 +65,7 @@ https://github.com/user-attachments/assets/51394f0a-5277-4fe2-b81c-5c5e9ac876b5
 
 ## 插件包含的内容
 
-10 个默认第一序列插件、2 个 Phase 2 教育/公益模块、5 个托管代理 cookbook，以及统一中国法律数据层和若干占位连接器。完整参考见 [README.md](README.md)。
+12 个根级第一方插件、5 个托管代理 cookbook、一个最小本地 `legal-data` server，以及若干未生产接入的占位连接器。完整参考见 [README.md](README.md)。
 
 ## 遇到问题？
 

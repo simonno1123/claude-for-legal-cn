@@ -16,23 +16,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-FIRST_SEQUENCE_MODULES = {
+ROOT_MODULES = {
     "ai-governance-legal",
     "commercial-legal",
     "corporate-legal",
     "employment-legal",
     "ip-legal",
+    "law-student",
     "legal-builder-hub",
+    "legal-clinic",
     "litigation-legal",
     "privacy-legal",
     "product-legal",
     "regulatory-legal",
 }
 
-PHASE_2_MODULES = {
-    "phase-2/law-student",
-    "phase-2/legal-clinic",
-}
+IGNORED_TOP_LEVEL_DIRS = {".git", ".codex-coordination"}
 
 FORBIDDEN_DEFAULT_PHRASES = (
     "one vendor plugin",
@@ -60,6 +59,10 @@ def rel(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
 
 
+def is_ignored(path: Path) -> bool:
+    return bool(IGNORED_TOP_LEVEL_DIRS.intersection(path.relative_to(ROOT).parts))
+
+
 def fail(errors: list[str], message: str) -> None:
     errors.append(message)
 
@@ -74,7 +77,7 @@ def load_json(path: Path, errors: list[str]):
 
 def check_all_json(errors: list[str]) -> None:
     for path in sorted(ROOT.rglob("*.json")):
-        if ".git" in path.parts:
+        if is_ignored(path):
             continue
         load_json(path, errors)
 
@@ -86,9 +89,9 @@ def check_marketplace(errors: list[str]) -> None:
 
     plugins = marketplace.get("plugins", [])
     names = [plugin.get("name") for plugin in plugins]
-    if set(names) != FIRST_SEQUENCE_MODULES:
-        missing = sorted(FIRST_SEQUENCE_MODULES - set(names))
-        extra = sorted(set(names) - FIRST_SEQUENCE_MODULES)
+    if set(names) != ROOT_MODULES:
+        missing = sorted(ROOT_MODULES - set(names))
+        extra = sorted(set(names) - ROOT_MODULES)
         fail(errors, f"marketplace plugins mismatch; missing={missing}, extra={extra}")
 
     for plugin in plugins:
@@ -122,7 +125,21 @@ def check_mcp(errors: list[str]) -> None:
     if not sample_index.exists():
         fail(errors, "connectors/legal-data/local-index.sample.json is missing")
 
-    for module in sorted(FIRST_SEQUENCE_MODULES | PHASE_2_MODULES):
+    modules_config = load_json(ROOT / "scripts" / "mcp-modules.json", errors)
+    if modules_config:
+        raw_paths = [module.get("path") for module in modules_config.get("modules", [])]
+        if not all(isinstance(path, str) and path for path in raw_paths):
+            fail(errors, "scripts/mcp-modules.json contains a missing or invalid path")
+        configured_paths = {path for path in raw_paths if isinstance(path, str)}
+        if configured_paths != ROOT_MODULES:
+            missing = sorted(ROOT_MODULES - configured_paths)
+            extra = sorted(configured_paths - ROOT_MODULES)
+            fail(
+                errors,
+                f"MCP module paths mismatch; missing={missing}, extra={extra}",
+            )
+
+    for module in sorted(ROOT_MODULES):
         mcp = load_json(ROOT / module / ".mcp.json", errors)
         if not mcp:
             continue
@@ -131,8 +148,7 @@ def check_mcp(errors: list[str]) -> None:
 
 
 def check_test_cases(errors: list[str]) -> None:
-    required = FIRST_SEQUENCE_MODULES | PHASE_2_MODULES
-    for module in sorted(required):
+    for module in sorted(ROOT_MODULES):
         cases = ROOT / module / "references" / "test-cases-cn.md"
         if not cases.exists():
             fail(errors, f"{module} is missing references/test-cases-cn.md")
@@ -161,7 +177,7 @@ def check_docs(errors: list[str]) -> None:
 
 def check_default_backslide(errors: list[str]) -> None:
     for path in sorted(ROOT.rglob("*")):
-        if path.is_dir() or ".git" in path.parts:
+        if path.is_dir() or is_ignored(path):
             continue
         name = rel(path)
         if name in DEFAULT_BACKSLIDE_ALLOWLIST:

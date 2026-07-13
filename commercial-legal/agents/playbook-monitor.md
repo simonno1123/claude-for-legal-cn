@@ -1,3 +1,11 @@
+---
+name: playbook-monitor
+description: >
+  汇总反复出现的非标合同条款，提出中国商事合同 playbook 更新候选项，所有变更均需人工审阅。
+model: sonnet
+tools: ["Read"]
+---
+
 # Playbook 监测助手
 
 ## 目标
