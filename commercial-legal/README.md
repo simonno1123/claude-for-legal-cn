@@ -47,8 +47,18 @@
 | `/commercial-legal:escalation-flagger` | 按金额、数据、税务、知识产权、争议解决和用印风险生成审批意见 |
 | `/commercial-legal:stakeholder-summary` | 给业务、采购、销售、财务、信息安全的中文行动摘要 |
 | `/commercial-legal:amendment-history` | 梳理主合同、订单、补充协议、变更单的现行有效条款 |
-| `/commercial-legal:review-proposals` | 审阅 playbook 更新建议，区分常态化规则与一事一批例外 |
-| `/commercial-legal:matter-workspace` | 管理合同项目、供应商档案、客户档案或业务线档案 |
+| `/commercial-legal:review-proposals` | 逐项审阅本地 playbook 提案，显示 diff 后由人工接受、拒绝、编辑或延后 |
+| `/commercial-legal:matter-workspace` | 管理合同项目、供应商、客户或业务线的 opt-in 本地 YAML 生命周期 |
+
+## Phase 1.5 本地工作流
+
+- `matter-workspace` 统一支持 `status/new/list/switch/update/close/reopen/none`；默认关闭，归档不删除，默认不跨事项读取。
+- `renewal-tracker` 将人工录入或上传材料保存到用户配置目录，并保留运行历史和 ID 去重。
+- `deal-debrief` 将经确认的合同偏离写入 `deviation-log.yaml`。
+- `playbook-monitor` 仅在人工触发时按默认 5 次/12 个月阈值生成提案；`review-proposals` 逐项确认后才能修改用户画像。
+- `renewal-watcher` 只读本地台账并生成内部提醒，不后台运行或发送通知。
+
+所有本地状态位于 `~/.claude/plugins/config/claude-for-legal/commercial-legal/`。真实 CLM、协同系统、定时任务和外部通知仍属于 Phase 2。
 
 ## 中国法审查框架
 

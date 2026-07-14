@@ -1,13 +1,13 @@
 # Phase 1.5 / Phase 2 路线图
 
-本文件记录 Phase 1 中国大陆法基线之后的后续能力。Phase 1.5 和 Phase 2 均为 backlog，不得以目录存在或模板存在宣称已完成。
+本文件记录 Phase 1 中国大陆法基线之后的阶段交付。Phase 1.5 本地工作流层已完成并进入 active maintenance；Phase 2 仍为 future/planned。不得把本地 YAML 工作流描述为真实 Provider 或外部自动化已经完成。
 
 ## 阶段范围
 
-- Phase 1.5：本地、人工触发的 matter workspace、tracker、history、owner/status/deadline 和生命周期。
-- Phase 2：真实 Provider、外部系统自动监控、跨境专业能力，以及会改变本机插件状态的安装/更新/回滚操作。
+- Phase 1.5（Implemented / Active）：本地、人工触发的 matter workspace、tracker、history、owner/status/deadline 和生命周期。
+- Phase 2（Future / Planned）：真实 Provider、外部系统自动监控、跨境专业能力，以及会改变本机插件状态的安装/更新/回滚操作。
 
-当前 12 个第一方插件均位于根目录并进入默认 Marketplace。阶段归类只描述尚未交付的责任，不代表模块价值或加载顺序。
+当前 12 个第一方插件均位于根目录并进入默认 Marketplace。阶段归类描述交付边界，不代表模块价值或加载顺序。
 
 ## 中国案例规则更新层
 
@@ -117,12 +117,19 @@
 - 禁止未审查技能进入默认 Marketplace。
 - Phase 1 不得自动复制、改名、删除或覆盖本机技能文件。
 
-## Phase 1.5 Backlog
+## Phase 1.5 Implemented / Active
 
-- Product 本地 launch tracker 与人工触发 review queue。
-- Product、IP、commercial、privacy、employment 的 opt-in matter lifecycle。
-- Commercial agents 的本地 deviation log、proposal threshold、renewal history 和去重。
-- 可复用的本地 tracker/workspace 最小 contract。
+状态：`IMPLEMENTED / ACTIVE`（`TASK_019_PHASE1_5_WORKSPACE_RECOVERY` 于 2026-07-14 经 Gemini `ACCEPTED`）。
+
+已交付：
+
+- 共享规范：`references/local-workflow-contract.md` 定义本地路径、YAML 状态、active matter、owner/status/deadline、append-only history、archive/reopen、slug 安全、保密隔离、人工确认和失败恢复。
+- 五模块事项空间：Product、IP、commercial、privacy、employment 均支持 opt-in 的 `status/new/list/switch/update/close/reopen/none` 生命周期。
+- Product：根级 `/product-legal:launch-tracker` 支持人工 `add/import/list/update/queue/close`；`launch-watcher` 只读本地台账并由人工触发。
+- Commercial：`deviation-log.yaml`、playbook proposal threshold、renewal register/run history、ID 去重和逐项人工提案审阅已经定义。
+- 安全边界：所有运行状态保存在 `~/.claude/plugins/config/claude-for-legal/<plugin>/`，默认不跨事项读取，不后台运行，不自动通知，不执行法律后果性动作。
+
+Active maintenance 只包括 schema/命令一致性、回归检查和缺陷修复。真实连接器、外部调度与通知仍属于 Phase 2。
 
 ## Phase 2 Backlog
 
@@ -139,15 +146,15 @@
 | 法律法规更新 | `references/china-legal-standards.md` 与各模块 references | 每月或重大修法时 |
 | 连接器落地 | `CONNECTORS.md`、各 `.mcp.json` | 按供应商或内部系统推进 |
 | 回归用例维护 | 各 `references/test-cases-cn.md` | 每次重大 Prompt 修改后 |
-| Phase 1.5 工作流 | 各模块本地 tracker/workspace backlog | 统一 contract 后迭代 |
+| Phase 1.5 工作流 | `references/local-workflow-contract.md`、五模块 workspace、Product tracker、Commercial state files | 每次 lifecycle/schema 修改后运行回归 |
 | Phase 2 集成 | Provider、外部自动化、跨境专业包、技能生态执行 | 单独验收后迭代 |
 | 技能生态治理 | `legal-builder-hub/` | 每次新增、安装、禁用、更新社区技能时 |
 
 ## 总结
 
-Phase 1 已完成核心中国法内容和 12 根模块基线。后续重点是：
+Phase 1 已完成核心中国法内容和 12 根模块基线，Phase 1.5 已完成本地状态化工作流。剩余工作重点是：
 
 1. 增强 Practice Profile 丰富度。
-2. 在 Phase 1.5 建立本地状态化工作流。
-3. 在 Phase 2 落地真实 MCP 连接器和外部自动化。
+2. 维护 Phase 1.5 本地 workflow contract 与回归覆盖。
+3. 仅在独立验收后，于 Phase 2 落地真实 MCP 连接器和外部自动化。
 4. 接入经授权、可持续更新的案例与监管数据源。

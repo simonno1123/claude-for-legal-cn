@@ -17,8 +17,11 @@
 | `/ip-legal:portfolio` | 商标、专利、软著续费和权利组合管理 |
 | `/ip-legal:oss-review` | 开源许可证合规审查 |
 | `/ip-legal:ip-clause-review` | 合同中的知识产权条款审查 |
+| `/ip-legal:matter-workspace` | 管理权利组合、FTO、商业秘密、平台投诉或维权事项的 opt-in 本地 YAML 生命周期 |
 
 专利权利要求撰写、境外诉讼和跨境平台完整策略暂列 Phase 2。
+
+Phase 1.5 的 matter workspace 默认关闭，可人工启用 `status/new/list/switch/update/close/reopen/none`。状态和历史位于用户配置目录；默认不跨事项读取，FTO/商业秘密可采用 `heightened` 或 `clean_team`。它不执行官方监控、申请、投诉、续展或缴费。
 
 ## 中国法核心路径
 

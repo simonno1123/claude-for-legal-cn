@@ -15,12 +15,14 @@
 | `/privacy-legal:dsar-response` | 起草个人信息主体权利请求的内部处理记录和对外回复 |
 | `/privacy-legal:reg-gap-analysis` | 将中国新规、监管问答或执法案例转化为差距清单 |
 | `/privacy-legal:policy-monitor` | 对照隐私政策、App 权限、SDK 清单、Cookie/追踪和实际处理活动 |
-| `/privacy-legal:matter-workspace` | 按产品功能、处理活动或专项整改建立工作台 |
+| `/privacy-legal:matter-workspace` | 按处理活动、产品、供应商、跨境项目或事件管理 opt-in 本地 YAML 生命周期 |
 | `/privacy-legal:customize` | 局部更新画像、阈值、联系人和模板；不替代冷启动访谈 |
 
 ## 第一阶段边界
 
 默认主线聚焦中国大陆法。GDPR、CCPA、HIPAA、COPPA、GLBA、FERPA、DSAR、DPIA、controller/processor、SCC 等词仅在涉外材料中作为原文术语或比较法提示，不作为中国法默认判断框架。
+
+Phase 1.5 的 `matter-workspace` 默认关闭，可人工启用 `status/new/list/switch/update/close/reopen/none`。状态、历史和归档保存在用户配置目录；默认不跨事项读取，不自动回复个人权利请求、提交 PIPIA、报告事件或连接外部隐私平台。
 
 ## 快速开始
 

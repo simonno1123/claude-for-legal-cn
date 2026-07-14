@@ -60,6 +60,12 @@ argument-hint: "[--redo] [--check-integrations]"
 - 是否有保密制度、权限控制、员工/供应商 NDA、离职交接和水印/日志？
 - 是否有开源组件清单、许可证政策和发布审批？
 
+### 7. 本地事项工作区
+
+- 是否需要按权利组合、产品线、平台投诉、FTO、商业秘密或客户委托隔离资料？默认关闭。
+- FTO、商业秘密或敏感维权事项是否需要 `heightened`/`clean_team`？
+- 跨事项读取默认 `false`；本地工作区不执行官方监控、申请、投诉或缴费。
+
 ## 写入内容
 
 使用 `ip-legal/CLAUDE.md` 的中国版结构，填充：
@@ -70,6 +76,7 @@ argument-hint: "[--redo] [--check-integrations]"
 - `商标/专利/软著/商业秘密/平台投诉资产画像`
 - `默认维权姿态`
 - `Human Confirmation Gate`
+- `Local Matter Workflows`
 
 ## 完成提示
 
@@ -83,9 +90,12 @@ argument-hint: "[--redo] [--check-integrations]"
 - 平台投诉和侵权维权路径
 - 商业秘密和开源治理
 - 续费/年费/登记台账
+- 本地事项工作区选项
 
 ## 下一步
 1. `/ip-legal:clearance` 做商标清除初筛
 2. `/ip-legal:fto-triage` 做中国专利自由实施初筛
 3. `/ip-legal:takedown --send` 准备平台投诉材料
 ```
+
+若用户明确启用 matter workspace，在预览并确认后创建 `matters/index.yaml`；否则不创建目录。索引初始值必须是 `version: 1`、`enabled: true`、`active_matter: null`、`cross_matter_context: false`、`matters: []`。任何写入失败必须如实报告。

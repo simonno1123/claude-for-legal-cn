@@ -8,7 +8,7 @@
 
 `claude-for-legal-cn` 是面向中国大陆法律体系的 AI 法律协同插件集合。Phase 1 定位为中国执业律师和企业法务 AI 辅助工具基础层：完成中国法实体内容、12 个根模块、基线可运行性与文档真实性对齐，并保留上游职责映射。
 
-当前仓库包含 12 个根级中国法模块、案例规则层、MCP 占位配置和本地最小 `legal-data` server。Phase 1.5 承接本地状态化工作流，Phase 2 承接真实 Provider、外部自动化、跨境专业包和高权限生态操作；阶段划分不是模块价值排序。
+当前仓库包含 12 个根级中国法模块、案例规则层、MCP 占位配置和本地最小 `legal-data` server。Phase 1.5 已交付本地状态化工作流；Phase 2 承接真实 Provider、外部自动化、跨境专业包和高权限生态操作。阶段划分不是模块价值排序。
 
 项目范围以 [docs/PROJECT_SCOPE.md](docs/PROJECT_SCOPE.md) 为准；上游映射以 [docs/UPSTREAM_MAPPING_MATRIX.md](docs/UPSTREAM_MAPPING_MATRIX.md) 为基线。
 
@@ -42,7 +42,7 @@
 
 `legal-clinic` 和 `law-student` 已恢复根目录 parity，并通过根级 `/legal-clinic:*`、`/law-student:*` 命令暴露。历史 `phase-2` 路径不再是这两个模块的入口。
 
-Phase 1 中的 matter-workspace 入口仅提供模板或启用边界说明，不承诺本地持久化的 `new/list/switch/close/none` 生命周期；该能力统一列入 Phase 1.5。`legal-builder-hub` 的安装、更新、回滚、禁用和卸载同样只提供审查或人工操作计划，物理文件操作属于 Phase 2。
+Phase 1.5 已为 commercial、privacy、product、IP 和 employment 交付本地持久化 matter lifecycle，并增加 Product launch tracker 与 Commercial agent state。`legal-builder-hub` 的安装、更新、回滚、禁用和卸载仍只提供审查或人工操作计划，物理文件操作属于 Phase 2。
 
 ## 3. 推荐安装方式
 
@@ -95,6 +95,53 @@ Phase 1 中的 matter-workspace 入口仅提供模板或启用边界说明，不
 ```text
 /commercial-legal:review
 ```
+
+### 4.1 Phase 1.5 本地事项工作流
+
+以下模块支持 opt-in 本地事项空间：
+
+- `commercial-legal`
+- `privacy-legal`
+- `product-legal`
+- `ip-legal`
+- `employment-legal`
+
+统一命令：
+
+```text
+/<module>:matter-workspace status
+/<module>:matter-workspace new <slug>
+/<module>:matter-workspace list
+/<module>:matter-workspace switch <slug>
+/<module>:matter-workspace update <slug>
+/<module>:matter-workspace close <slug>
+/<module>:matter-workspace reopen <slug>
+/<module>:matter-workspace none
+```
+
+状态保存在：
+
+```text
+~/.claude/plugins/config/claude-for-legal/<module>/matters/
+├── index.yaml
+├── <slug>/matter.yaml
+├── <slug>/history.yaml
+└── _archived/<slug>/
+```
+
+工作区默认关闭。首次 `new` 会显示启用和建档预览，确认后才写入；`close` 只归档、不删除。默认不跨事项读取，员工、事件、FTO、商业秘密及 `heightened/clean_team` 事项应采用更严格隔离。写入失败时不得声称状态已保存。
+
+Product 上线队列示例：
+
+```text
+/product-legal:launch-tracker add
+/product-legal:launch-tracker import
+/product-legal:launch-tracker queue --days 30
+```
+
+`launch-watcher` 只在人工调用时读取本地 `launch-tracker.yaml`，不会轮询飞书、企微、钉钉、WPS、TAPD、Jira 或发送通知。
+
+Commercial 的 deal debrief、playbook monitor、renewal tracker 和 proposal review 使用用户配置目录中的本地 YAML。达到阈值不会自动修改 playbook；每项变更仍须显示 diff 并由法务/律师确认。
 
 ## 5. 文件输入方式
 
@@ -323,7 +370,7 @@ Phase 1 中的 matter-workspace 入口仅提供模板或启用边界说明，不
 
 ### Phase 1.5 / Phase 2 是否代表模块价值较低？
 
-不是。当前 12 个第一方插件均位于根目录并进入默认 marketplace。Phase 1.5 仅表示本地状态化工作流的交付阶段；Phase 2 表示真实 Provider、外部自动化、跨境专业包或高权限生态操作的交付阶段。具体责任边界以 `docs/UPSTREAM_MAPPING_MATRIX.md` 为准。
+不是。当前 12 个第一方插件均位于根目录并进入默认 marketplace。Phase 1.5 本地状态化工作流已经交付并进入 active maintenance；Phase 2 表示尚未交付的真实 Provider、外部自动化、跨境专业包或高权限生态操作。具体责任边界以 `docs/UPSTREAM_MAPPING_MATRIX.md` 为准。
 
 ## 12. 推荐入口
 

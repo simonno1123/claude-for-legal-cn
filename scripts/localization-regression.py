@@ -31,6 +31,25 @@ ROOT_MODULES = {
     "regulatory-legal",
 }
 
+PHASE_1_5_WORKSPACE_MODULES = (
+    "commercial-legal",
+    "privacy-legal",
+    "product-legal",
+    "ip-legal",
+    "employment-legal",
+)
+
+PHASE_1_5_LIFECYCLE_COMMANDS = (
+    "status",
+    "new",
+    "list",
+    "switch",
+    "update",
+    "close",
+    "reopen",
+    "none",
+)
+
 IGNORED_TOP_LEVEL_DIRS = {".git", ".codex-coordination"}
 
 FORBIDDEN_DEFAULT_PHRASES = (
@@ -175,6 +194,205 @@ def check_docs(errors: list[str]) -> None:
         fail(errors, "README.md must distinguish legal-data from other placeholder enterprise connectors")
 
 
+def require_tokens(
+    path: Path,
+    tokens: tuple[str, ...],
+    errors: list[str],
+    purpose: str,
+) -> str:
+    if not path.exists():
+        fail(errors, f"{rel(path)} is missing ({purpose})")
+        return ""
+
+    text = path.read_text(encoding="utf-8")
+    missing = [token for token in tokens if token not in text]
+    if missing:
+        fail(errors, f"{rel(path)} is missing {purpose} markers: {missing}")
+    return text
+
+
+def check_phase_1_5_workflows(errors: list[str]) -> None:
+    """Validate the static contract for local, human-triggered workflows."""
+
+    require_tokens(
+        ROOT / "references" / "local-workflow-contract.md",
+        (
+            "matters/index.yaml",
+            "matter.yaml",
+            "history.yaml",
+            "_archived",
+            "enabled: false",
+            "active_matter: null",
+            "cross_matter_context: false",
+            "owner:",
+            "status: active",
+            "deadline: null",
+            "event_id:",
+            "human-confirmed",
+            "failure",
+        ),
+        errors,
+        "Phase 1.5 local workflow contract",
+    )
+
+    stale_workspace_phrases = (
+        "Phase 2 placeholder",
+        "降级为 Phase 2",
+        "Phase 1 默认关闭",
+        "第一阶段默认关闭",
+    )
+
+    for module in PHASE_1_5_WORKSPACE_MODULES:
+        module_root = ROOT / module
+        skill = module_root / "skills" / "matter-workspace" / "SKILL.md"
+        skill_text = require_tokens(
+            skill,
+            (
+                "name: matter-workspace",
+                "index.yaml",
+                "matter.yaml",
+                "history.yaml",
+                "_archived",
+                "version: 1",
+                "enabled: true",
+                "active_matter: null",
+                "cross_matter_context: false",
+                "matters: []",
+            ),
+            errors,
+            f"{module} matter workspace schema",
+        )
+
+        if skill_text.startswith("---\n"):
+            parts = skill_text.split("---", 2)
+            frontmatter = parts[1] if len(parts) == 3 else ""
+            missing_commands = [
+                command
+                for command in PHASE_1_5_LIFECYCLE_COMMANDS
+                if not re.search(rf"\b{re.escape(command)}\b", frontmatter)
+            ]
+            if missing_commands:
+                fail(
+                    errors,
+                    f"{rel(skill)} frontmatter is missing lifecycle commands: {missing_commands}",
+                )
+        else:
+            fail(errors, f"{rel(skill)} is missing YAML frontmatter")
+
+        for phrase in stale_workspace_phrases:
+            if phrase in skill_text:
+                fail(errors, f"{rel(skill)} still contains stale workspace status: {phrase}")
+
+        require_tokens(
+            module_root / "skills" / "cold-start-interview" / "SKILL.md",
+            (
+                "enabled: true",
+                "active_matter: null",
+                "cross_matter_context: false",
+                "matters: []",
+            ),
+            errors,
+            f"{module} workspace initialization",
+        )
+        require_tokens(
+            module_root / "CLAUDE.md",
+            ("matters/index.yaml", "active matter", "Cross-matter context"),
+            errors,
+            f"{module} profile preflight",
+        )
+
+    require_tokens(
+        ROOT / "product-legal" / "skills" / "launch-tracker" / "SKILL.md",
+        (
+            "name: launch-tracker",
+            "status | add | import | list | update | queue | close",
+            "launch-tracker.yaml",
+            "launch-tracker-history.yaml",
+            "version: 1",
+            "entries:",
+            "launch_id:",
+            "legal_review:",
+            "event_id",
+            "人工确认",
+        ),
+        errors,
+        "Product local launch tracker schema",
+    )
+    require_tokens(
+        ROOT / "product-legal" / "agents" / "launch-watcher.md",
+        ("人工触发", "launch-tracker.yaml", "不后台运行", "不自动通知"),
+        errors,
+        "Product local launch watcher boundary",
+    )
+
+    commercial_checks = {
+        "agents/deal-debrief.md": (
+            "deviation-log.yaml",
+            "deal_id",
+            "deviation_id",
+            "exclude_from_patterns",
+            "去重",
+        ),
+        "agents/playbook-monitor.md": (
+            "pattern_threshold",
+            "lookback_months",
+            "playbook-proposals.yaml",
+            "playbook-monitor-history.yaml",
+            "不得自动修改",
+        ),
+        "agents/renewal-watcher.md": (
+            "renewal-register.yaml",
+            "renewal-run-history.yaml",
+            "run_id",
+            "不后台运行",
+        ),
+        "skills/renewal-tracker/SKILL.md": (
+            "renewal-register.yaml",
+            "renewal_id",
+            "renewal-run-history.yaml",
+            "去重",
+        ),
+        "skills/review-proposals/SKILL.md": (
+            "playbook-proposals.yaml",
+            "accept",
+            "reject",
+            "edit",
+            "defer",
+            "精确 diff",
+        ),
+    }
+    for relative_path, tokens in commercial_checks.items():
+        require_tokens(
+            ROOT / "commercial-legal" / relative_path,
+            tokens,
+            errors,
+            "Commercial local workflow persistence",
+        )
+
+    documentation_checks = {
+        "PHASE_2_ROADMAP.md": (
+            "Phase 1.5 Implemented / Active",
+            "Phase 2（Future / Planned）",
+        ),
+        "docs/UPSTREAM_MAPPING_MATRIX.md": (
+            "Preserved responsibility (Phase 1 + 1.5)",
+            "Future extension",
+        ),
+        "CHINA_LOCALIZATION_STATUS.md": (
+            "PHASE 1 + 1.5 VALID",
+            "2026-07-14 Phase 1.5 本地工作流",
+        ),
+        "PROJECT_USAGE_GUIDE.md": ("Phase 1.5 本地事项工作流",),
+    }
+    for relative_path, tokens in documentation_checks.items():
+        require_tokens(
+            ROOT / relative_path,
+            tokens,
+            errors,
+            "Phase 1.5 documentation status",
+        )
+
+
 def check_default_backslide(errors: list[str]) -> None:
     for path in sorted(ROOT.rglob("*")):
         if path.is_dir() or is_ignored(path):
@@ -200,6 +418,7 @@ def main() -> int:
     check_mcp(errors)
     check_test_cases(errors)
     check_docs(errors)
+    check_phase_1_5_workflows(errors)
     check_default_backslide(errors)
 
     if errors:

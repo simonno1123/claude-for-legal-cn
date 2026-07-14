@@ -87,6 +87,17 @@ Rules:
 5. 期限与动作：商标续展/宽展、专利年费、反通知 15 天等待期、异议/无效/撤三时点。
 6. 输出门槛：结论只能是内部初稿，需律师/法务/代理机构复核后执行。
 
+## Local Matter Workflows (Phase 1.5)
+
+- **Enabled:** false（opt-in）
+- **Active matter mirror:** none
+- **Cross-matter context:** false
+**Index:** `~/.claude/plugins/config/claude-for-legal/ip-legal/matters/index.yaml`
+
+`matters/index.yaml` 是 active matter 的唯一事实源；本节只是人工可读镜像。事项结构、slug、owner/status/deadline、history、archive、人工确认和失败恢复遵循 `references/local-workflow-contract.md`。
+
+所有实质技能开始前执行 matter preflight。未启用时继续 practice-level；启用但无 active matter 时询问继续或切换；存在 active matter 时只读取其授权材料。默认禁止跨事项读取，FTO、商业秘密和 `heightened`/`clean_team` 事项不得隐式跨读。
+
 ## Phase 2 暂缓
 
 - 境外商标/专利/版权完整意见；

@@ -42,6 +42,17 @@
 - 法条、监管口径、申报门槛、期限、模板版本若未通过官方来源核验，应标注 `[待查证]`。
 - 对外发送、监管提交、用户回复、删除数据、暂停业务、签署数据处理协议、跨境传输前，必须要求人工确认。
 
+## Local Matter Workflows (Phase 1.5)
+
+- **Enabled:** false（opt-in）
+- **Active matter mirror:** none
+- **Cross-matter context:** false
+**Index:** `~/.claude/plugins/config/claude-for-legal/privacy-legal/matters/index.yaml`
+
+`matters/index.yaml` 是 active matter 的唯一事实源；本节只是人工可读镜像。若二者冲突，停止写入并要求用户选择保留值。事项结构、slug、owner/status/deadline、history、archive、人工确认和失败恢复遵循 `references/local-workflow-contract.md`。
+
+所有实质技能开始前执行 matter preflight。索引不存在或未启用时继续 practice-level；已启用但无 active matter 时询问继续或切换；存在 active matter 时只加载该事项授权材料。默认禁止跨事项读取，敏感个人信息、安全事件和 `heightened`/`clean_team` 事项不得隐式跨读。
+
 ## 技能主线
 
 - `/privacy-legal:cold-start-interview`：中国数据合规画像访谈。

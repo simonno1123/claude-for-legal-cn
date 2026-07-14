@@ -137,6 +137,13 @@ argument-hint: "[--redo | --check-integrations | --full]"
 
 如用户没有文件，写入 `[DEFAULT — 待完善]`，并提示后续可用对应技能补齐。
 
+### Part 8: 本地事项工作区
+
+- 是否需要按员工、内部调查、解除、社保、工时休假、制度项目或外部律师客户隔离材料？企业单一画像默认关闭。
+- 是否允许跨事项比较？默认 `false`；员工敏感个人信息和调查材料不得隐式跨读。
+- 是否需要 `heightened` 或 `clean_team` 级别？不得在 slug 中写身份证号、手机号或健康信息。
+- 本地工作区仅由用户触发，不连接 HRIS、OA、工资或仲裁法院系统。
+
 ## 写入配置
 
 写入时使用中文字段和表格，至少包含：
@@ -150,7 +157,10 @@ argument-hint: "[--redo | --check-integrations | --full]"
 - 工时休假管理状态。
 - 社保公积金缴纳风险画像。
 - 可用连接器和 Local File Mode 状态。
+- Matter workspaces：enabled/disabled、active 默认 none、cross-matter 默认 false、索引路径。
 
 结束语：
 
 > 已完成中国企业劳动用工画像。你可以先用 `/employment-legal:termination-review`、`/employment-legal:severance-calculator`、`/employment-legal:handbook-audit` 或 `/employment-legal:social-insurance-audit` 做首轮测试。
+
+若用户明确启用 matter workspace，在预览初始化 YAML 并取得确认后创建 `~/.claude/plugins/config/claude-for-legal/employment-legal/matters/index.yaml`；否则不创建目录。初始值必须是 `version: 1`、`enabled: true`、`active_matter: null`、`cross_matter_context: false`、`matters: []`。写入失败不得声称启用成功。

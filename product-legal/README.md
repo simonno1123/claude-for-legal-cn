@@ -4,9 +4,9 @@
 
 > 本模块输出均为内部法律分析初稿 / 保密文件 / 合规工作底稿。中国大陆法下不承诺任何可对抗司法、仲裁或行政监管机关调取的证据特权。所有上线、投放、下架、召回、整改或对外回复决定，必须由中国执业律师或企业法务复核确认。
 
-## Phase 1 技能范围
+## 能力范围
 
-第一阶段仅保留 5 个核心技能：
+Phase 1 中国法基线包含 5 个核心审查技能：
 
 | 命令 | 定位 |
 |---|---|
@@ -16,14 +16,22 @@
 | `/product-legal:feature-risk-assessment` | 单项高风险功能穿透评估 |
 | `/product-legal:is-this-a-problem` | 产品经理快速合规分诊 |
 
-以下能力不作为 Phase 1 正式主线：
+Phase 1.5 增加本地、人工触发工作流：
+
+| 项目 | 处理 |
+|---|---|
+| `/product-legal:matter-workspace` | opt-in 管理产品、功能、营销活动或监管事项的本地 YAML 生命周期 |
+| `/product-legal:launch-tracker` | 手工录入/导入上线台账，生成 review queue 并保留历史和去重 |
+| `launch-watcher` | 人工触发读取本地台账，不轮询外部系统、不自动通知或改变上线状态 |
+
+兼容和维护入口：
 
 | 项目 | 处理 |
 |---|---|
 | `/product-legal:customize` | 已并入 `cold-start-interview`，仅保留兼容提示 |
-| `/product-legal:matter-workspace` | 降级为 Phase 2，多客户外部律师场景再启用 |
-| `launch-watcher` | 降级为 Phase 2，国内协同系统自动监控暂不默认开启 |
 | `currency-watch.md` | 仅作为人工更新清单，不作为自动化法律动态源 |
+
+真实飞书/企微/钉钉/WPS/TAPD/Jira 读取、后台监控和通知属于 Phase 2。
 
 ## 上线审查矩阵
 
@@ -62,6 +70,7 @@
 /product-legal:launch-review
 /product-legal:marketing-claims-review
 /product-legal:is-this-a-problem "会员自动续费上线前需要法务看吗？"
+/product-legal:launch-tracker queue --days 30
 ```
 
 ## 输出要求

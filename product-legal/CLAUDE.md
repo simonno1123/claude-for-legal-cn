@@ -120,13 +120,26 @@ Rules:
 **绝对化用语：** 默认阻断，除非法律允许且事实基础充分。  
 **特殊广告：** 医疗、药品、医疗器械、保健食品、特殊医学用途配方食品、金融、教育培训、招商投资、房地产等必须专项审查。
 
+## Local Matter and Launch Workflows (Phase 1.5)
+
+- **Matter enabled:** false（opt-in）
+- **Active matter mirror:** none
+- **Cross-matter context:** false
+- **Matter index:** `~/.claude/plugins/config/claude-for-legal/product-legal/matters/index.yaml`
+- **Launch tracker:** `~/.claude/plugins/config/claude-for-legal/product-legal/launch-tracker.yaml`
+- **Launch run history:** `~/.claude/plugins/config/claude-for-legal/product-legal/launch-tracker-history.yaml`
+- **Default review window:** 30 days
+
+`matters/index.yaml` 是 active matter 的唯一事实源；本节只是人工可读镜像。事项结构、隔离、历史、归档、人工确认和失败恢复遵循 `references/local-workflow-contract.md`。所有产品技能执行 matter preflight；存在 active matter 时只读取其授权材料。
+
+Launch tracker 仅保存用户手工录入或上传的本地条目，并由用户显式运行 `/product-legal:launch-tracker queue` 或 `launch-watcher` 后生成 review queue。不得后台轮询、自动读取外部产品系统、自动通知或改变上线状态。
+
 ## Phase 2 暂缓
 
-- 国内协同系统的上线清单自动监控；
+- 国内协同/产品系统的自动读取、定时监控和通知；
 - 跨境多法域产品合规完整意见；
 - 特定行业许可全流程办理；
-- 监管申报、备案、整改报告的正式提交；
-- 多客户外部律师工作区。
+- 监管申报、备案、整改报告的正式提交。
 
 ## Seed Documents
 

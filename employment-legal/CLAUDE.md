@@ -189,11 +189,14 @@ The deliverable should read like a partner wrote it. The meta-commentary goes in
 
 ## Matter workspaces
 
-**Enabled:** ✗（企业法务 Phase 1 默认关闭）
-**Active matter:** none
-**Cross-matter context:** off
+- **Enabled:** false（opt-in）
+- **Active matter mirror:** none
+- **Cross-matter context:** false
+**Index:** `~/.claude/plugins/config/claude-for-legal/employment-legal/matters/index.yaml`
 
-企业法务场景通常按员工事项、调查事项、解除事项、社保事项或制度事项归档，不默认启用多客户 matter 隔离。`matter-workspace` 在 Phase 1 默认关闭；外部律师如确需多客户隔离，必须经人工确认后另行配置。
+企业法务单一用工画像默认关闭。Phase 1.5 允许对员工、调查、解除、社保、工时休假、制度项目或外部律师客户启用本地事项隔离。`matters/index.yaml` 是 active matter 的唯一事实源；本节只是人工可读镜像。若二者冲突，停止写入并要求用户选择保留值。
+
+事项结构、slug、owner/status/deadline、history、archive、人工确认和失败恢复遵循 `references/local-workflow-contract.md`。所有实质技能开始前执行 matter preflight；存在 active matter 时只读取其授权材料。员工个人信息、调查材料和 `heightened`/`clean_team` 事项不得隐式跨读。
 
 ## Phase 2 暂缓模块
 

@@ -1,13 +1,15 @@
 # 中国化落地状态
 
-本文件记录 `claude-for-legal-cn` 中国化改造历史和当前阶段状态。当前 Phase 1 定位为中国法实体对齐、12 根模块和基线可运行性；Phase 1.5/2 的后续能力不得因模板或占位文件存在而标记为已完成。
+本文件记录 `claude-for-legal-cn` 中国化改造历史和当前阶段状态。Phase 1 已完成中国法实体对齐、12 根模块和基线可运行性；Phase 1.5 本地状态化工作流已实现并通过验收。Phase 2 真实 Provider、外部自动化和高权限操作仍不得因模板或占位文件存在而标记为已完成。
 
 ## 已完成
+
+- Phase 1.5 本地工作流层完成：`TASK_019_PHASE1_5_WORKSPACE_RECOVERY` 于 2026-07-14 经 Gemini `ACCEPTED`；共享 `local-workflow-contract`、五模块 matter lifecycle、Product launch tracker/review queue 与 Commercial 本地 persistence/threshold/history/dedup 均进入 active baseline。
 
 - Marketplace 改为 `claude-for-legal-cn`，默认插件清单移除仅面向境外法研究的第三方插件。
 - 12 个一线插件的 `plugin.json` 和 marketplace 展示名/描述改为中国法律实务语境。
 - 12 个一线插件的 `CLAUDE.md` 注入“中国法律本地化规则”，默认法域为中华人民共和国大陆地区法律。
-- 当前 12 个根模块共 168 个 `SKILL.md`，均纳入中国法域、引用规则和人工确认门检查。
+- 当前 12 个根模块共 169 个 `SKILL.md`，均纳入中国法域、引用规则和人工确认门检查；新增项为 Phase 1.5 根级 `product-legal/launch-tracker`。
 - 保留并接入 `references/china-legal-standards.md` 作为全局中国法引用、来源、审阅和争议解决规范。
 - 12 个第一方插件均位于根目录并进入默认 Marketplace；不存在 10+2 或教育/公益模块降权。
 - 12 个根模块 `.mcp.json` 使用统一中国占位配置；本地 `legal-data` 仅提供样例索引，WPS、商业数据库和企业系统仍是未生产接入的 Provider 占位。
@@ -19,7 +21,7 @@
 - `employment-legal` 第二轮深改完成：新增 `handbook-audit`，重写 `wage-hour-qa` 和 `worker-classification`，建立 `employment-legal/references/test-cases-cn.md` 六个劳动法回归用例。
 - `employment-legal` 第三轮深改完成：重写 `cold-start-interview`、`log-leave` 与 `leave-tracker`，新增 `social-insurance-audit`，并将插件级 `CLAUDE.md` 尾部美国法模板替换为中国用工画像、审阅人备注和社保公积金审计模板。
 - `employment-legal` 收尾轮完成：重写 `hiring-review`、`policy-drafting`、`handbook-updates`、`internal-investigation` 与 `investigation-memo`；`customize` 不再作为初始化入口，改为地方司法裁审口径定制，企业用工画像统一由 `cold-start-interview` 初始化。
-- `employment-legal` 复核修正完成：经多模型交叉复核，删除调查链路英美法特权语义，重写 `leave-tracker` 入口，默认关闭 `matter-workspace`，补强第38/42/46/47/48/87条法条路由，并将劳动法回归用例扩展至 15 个高压案例。Matter lifecycle 属于 Phase 1.5；跨境 expansion 实质能力属于 Phase 2，Phase 1 仅保留安全 intake/handoff。
+- `employment-legal` 复核修正完成：经多模型交叉复核，删除调查链路英美法特权语义，重写 `leave-tracker` 入口，补强第38/42/46/47/48/87条法条路由，并将劳动法回归用例扩展至 15 个高压案例。Phase 1.5 已交付默认关闭、可 opt-in 的本地 matter lifecycle；跨境 expansion 实质能力仍属于 Phase 2。
 - `corporate-legal` 已完成 Phase 1 深改：聚焦 2024 年 7 月 1 日施行的新公司法下公司治理、章程旧转新、出资期限/加速到期、股权转让与质押登记。
 - `corporate-legal` 第一批深改完成：重写插件级 `CLAUDE.md`、`README.md`、`board-minutes` 与 `written-consent`，新增 `governance-audit`、`capital-contribution-audit`、`equity-transfer-pledge-review` 三个新公司法专项技能。
 - `corporate-legal` 第二批深改完成：重写 `cold-start-interview` 为中国境内企业公司画像访谈，重写 `entity-compliance` 为市场监管年报/登记备案/章程健康检查。M&A/尽调/交割/整合实质内容保存在历史 `corporate-legal/phase-2/skills/` 路径，但已通过根级 wrappers 暴露，不再暂缓加载。
@@ -32,18 +34,18 @@
 
 ## 当前模块阶段账本
 
-第一阶段解决“默认不再套美国法”的底座问题；以下内容还需要逐技能重写：
+当前阶段账本区分已交付的 Phase 1/1.5 能力与仍属 Phase 2 的扩展：
 
 | 模块 | 必须重写的实质内容 | 优先级 |
 |---|---|---|
-| `employment-legal` | **PHASE 1 BASELINE COMPLETE**：中国劳动法核心能力已完成；matter lifecycle 为 Phase 1.5，跨境 expansion 实质能力为 Phase 2 | 已完成/已登记后续阶段 |
-| `privacy-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国个人信息与数据合规主线改造，覆盖 PIPL/DSL/CSL、PIPIA、受托处理/共同处理/对外提供、数据出境、个人权利请求、隐私政策/SDK 一致性、安全事件响应和中国监管动态监控 | 已完成 |
+| `employment-legal` | **PHASE 1 + 1.5 VALID**：中国劳动法核心能力和 opt-in 本地 matter lifecycle 已完成；跨境 expansion 实质能力为 Phase 2 | 已完成/Active |
+| `privacy-legal` | **PHASE 1 + 1.5 VALID**：中国个人信息与数据合规主线及处理活动/产品/供应商/事件的本地 matter lifecycle 已完成 | 已完成/Active |
 | `corporate-legal` | **PHASE 1 BASELINE COMPLETE**：新公司法及 M&A 根命令均已暴露；历史存储路径不构成阶段降级 | 已完成 |
 | `litigation-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国民商事诉讼/仲裁下管辖、时效、证据交换、调查令、财产/证据/行为保全、举证期限、庭审质证、律师函、案件汇报、执行和外部律师协作主线改造 | 已完成 |
-| `ip-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国知识产权主线改造，覆盖 CNIPA/中国商标网/CPCC、商标绝对条款与撤三、专利发明/实用新型/外观设计 FTO、专利权评价报告、现有技术抗辩、平台通知删除/反通知 15 天等待期、商业秘密、海关知识产权保护、开源合规和权利组合续展/年费管理 | 已完成 |
-| `product-legal` | **PHASE 1 BASELINE COMPLETE**：中国产品、消费者、广告、平台、数据、算法和质量审查已完成；本地 tracker/workspace 为 Phase 1.5，外部自动监控为 Phase 2 | 已完成/已登记后续阶段 |
+| `ip-legal` | **PHASE 1 + 1.5 VALID**：中国知识产权主线及权利组合/FTO/商业秘密/维权事项的本地隔离 lifecycle 已完成 | 已完成/Active |
+| `product-legal` | **PHASE 1 + 1.5 VALID**：中国产品审查、本地 matter lifecycle、launch tracker 和人工 review queue 已完成；外部自动监控仍为 Phase 2 | 已完成/Active |
 | `ai-governance-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国 AI 治理主线改造，覆盖生成式 AI、算法推荐、深度合成、公众服务、备案/安全评估触发、内容安全、训练数据合法性、个人信息/PIPIA、供应商禁训/留存/跨境、企业 AI 使用制度和 AI 系统台账 | 已完成 |
-| `commercial-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国商事合同审查、采购/销售、SaaS、NDA、续约、授权用印、发票税务、审批流转和合同项目管理主线改造；后续可继续细化 agents 与外部系统连接器 | 已完成 |
+| `commercial-legal` | **PHASE 1 + 1.5 VALID**：中国商事合同主线、本地 matter lifecycle、deviation log、proposal threshold、renewal history 和去重已完成；外部系统连接器仍为 Phase 2 | 已完成/Active |
 | `regulatory-legal` | **PHASE 1 COMPLETE（第一阶段完成）**：已完成中国监管合规主线改造，覆盖国家法律法规数据库、中国人大、国务院、部委、地方政府、规范性文件、监管问答、征求意见稿、执法案例、政策差异分析、整改台账和制度修订 | 已完成 |
 | `law-student` | **PHASE 1 BASELINE COMPLETE**：根级法考、请求权基础、法条体系、案例研习和法律写作训练 | 已完成 |
 | `legal-clinic` | **PHASE 1 BASELINE COMPLETE**：根级法律援助、12348、高校诊所、导师复核和执业边界 | 已完成 |
@@ -70,12 +72,20 @@
 - 删除、披露、跨境传输个人信息或重要数据
 - 放弃权利、承认责任、撤回申请、和解、调解、付款或退款承诺
 
+## 2026-07-14 Phase 1.5 本地工作流
+
+- 新增共享规范 `references/local-workflow-contract.md`，统一本地 YAML 路径、active matter、owner/status/deadline、history、archive/reopen、保密隔离、人工确认和失败恢复。
+- `commercial-legal`、`privacy-legal`、`product-legal`、`ip-legal`、`employment-legal` 均支持 `status/new/list/switch/update/close/reopen/none`，默认 opt-in，不跨事项读取。
+- 新增 `/product-legal:launch-tracker`，支持人工 `add/import/list/update/queue/close`；`launch-watcher` 仅在人工触发时读取本地台账。
+- Commercial agents 已定义本地 deviation log、5 次/12 个月默认 proposal threshold、renewal run history、ID 去重和逐项人工提案确认。
+- Phase 1.5 不包含真实 MCP、外部系统轮询、定时任务、自动通知、提交、签署或其他后果性动作。
+
 ## 2026-06-24 product-legal 更新
 
 - `product-legal` Phase 1 深改完成：按多模型交叉复核与人工裁决结果，收敛为 5 个核心技能：`cold-start-interview`、`launch-review`、`marketing-claims-review`、`feature-risk-assessment`、`is-this-a-problem`。
 - 已重写 `product-legal/CLAUDE.md`、`README.md`、`cold-start-interview`、`launch-review`、`marketing-claims-review`、`customize`、`matter-workspace`、`launch-watcher`、`currency-watch.md` 与 `seven-category-framework.md`。
 - 新增 `product-legal/references/test-cases-cn.md`，覆盖自动续费、广告绝对化用语、大数据杀熟、未成年人单独同意、AI 深度合成标识、七日无理由退货、直播虚假宣传、CCC、默认勾选搭售和弹窗广告一键关闭 10 个高压回归用例。
-- `customize` 已并入 `cold-start-interview`；本地 `matter-workspace` 和 launch tracker 属于 Phase 1.5，外部系统自动监控属于 Phase 2，当前兼容入口必须明确其非执行边界。
+- `customize` 已并入 `cold-start-interview`；本地 `matter-workspace` 和 launch tracker 已在 Phase 1.5 交付，外部系统自动监控仍属于 Phase 2。
 - 残留扫描已清除核心美国法/普通法污染词，JSON 与技能 frontmatter 验证通过。
 
 ## 2026-06-26 ip-legal 更新
@@ -84,7 +94,7 @@
 - 已重写 `clearance` 为中国商标清除初筛，覆盖《商标法》第10/11/30/32/33/44/49条、CNIPA 审查指南、《类似商品和服务区分表》、异议、无效和撤三策略。
 - 已重写 `fto-triage` 为中国专利自由实施风险初筛，覆盖发明、实用新型、外观设计、全面覆盖原则、专利权评价报告、现有技术/现有设计抗辩、无效宣告和设计绕开。
 - 已重写 `takedown` 与 `cease-desist`，切换为《民法典》第1195-1197条、《电子商务法》第41-45条下的通知删除、反通知、15天等待期、平台投诉、行政投诉、律师函和诉讼/保全路径。
-- 已重写 `cold-start-interview`、`infringement-triage`、`portfolio`、`ip-renewal-watcher`、`invention-intake`、`ip-clause-review`、`oss-review` 和 `matter-workspace`，补齐 CPCC 软著、商业秘密、海关知识产权保护、开源合规和中国权利组合期限管理。
+- 已重写 `cold-start-interview`、`infringement-triage`、`portfolio`、`ip-renewal-watcher`、`invention-intake`、`ip-clause-review`、`oss-review` 和 `matter-workspace`，补齐 CPCC 软著、商业秘密、海关知识产权保护、开源合规和中国权利组合期限管理；本地 matter lifecycle 后于 Phase 1.5 完成状态化。
 - 新增 `ip-legal/references/china-ip-core-rules.md` 与 `ip-legal/references/test-cases-cn.md`，建立 10 个中国知识产权高压回归用例。
 - `ip-legal` 收口修正：重写 `customize` 为中国知识产权画像局部更新器，并将 `.mcp.json` 的知识产权连接器说明改为仓库根目录 references 路径和国内 IP 数据源语义。
 

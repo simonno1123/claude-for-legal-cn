@@ -56,7 +56,11 @@
 | `/employment-legal:investigation-summary` | 按不同受众生成调查摘要初稿 |
 | `/employment-legal:leave-tracker` | 跟踪病假、医疗期、产假、育儿假、工伤等休假事项 |
 | `/employment-legal:log-leave` | 添加新的休假记录 |
-| `/employment-legal:matter-workspace` | 管理劳动事项工作区 |
+| `/employment-legal:matter-workspace` | 管理员工、调查、解除、社保或制度事项的 opt-in 本地 YAML 生命周期 |
+
+## Phase 1.5 本地事项工作区
+
+企业单一用工画像默认关闭 matter workspace；需要隔离敏感员工、内部调查、解除、群体事项或外部律师客户时，可人工启用 `status/new/list/switch/update/close/reopen/none`。默认不跨事项读取，员工敏感个人信息和调查材料不得写入 slug 或隐式跨读。该能力不连接 HRIS/OA，也不自动解除、处分、付款、发送或提交材料。
 
 ## 数据和材料
 

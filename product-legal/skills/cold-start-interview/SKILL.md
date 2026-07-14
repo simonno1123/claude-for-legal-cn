@@ -64,6 +64,13 @@ argument-hint: "[--redo] [--check-integrations]"
 - 是否需要强制性国家标准、CCC、检测报告、警示说明或召回机制？
 - 主要主管部门：市监局、网信办、工信部门、文旅、药监、金融监管、教育主管部门或其他？
 
+### 7. 本地事项与上线 tracker
+
+- 是否需要按产品、功能、营销活动、监管整改或客户委托隔离材料？默认 matter workspace 关闭。
+- 是否启用本地 `launch-tracker.yaml`？它仅保存人工录入条目，不读取外部系统。
+- 默认 review queue 窗口为未来 30 天；询问是否调整。
+- 跨事项读取默认关闭；不得把 tracker 状态当作上线批准。
+
 ## 写入模板
 
 使用 `product-legal/CLAUDE.md` 的中国版结构，填充：
@@ -74,6 +81,7 @@ argument-hint: "[--redo] [--check-integrations]"
 - `Review Framework`
 - `Risk Calibration`
 - `Marketing Claims`
+- `Local Matter and Launch Workflows`
 - `Seed Documents`
 
 ## 完成提示
@@ -88,9 +96,12 @@ argument-hint: "[--redo] [--check-integrations]"
 - 数据/算法/AI 触点
 - 平台/电商/内容治理
 - 质量安全/召回/监管触点
+- 本地 matter workspace 与 launch tracker 选项
 
 ## 下一步
 1. `/product-legal:launch-review` 审查一个 PRD
 2. `/product-legal:marketing-claims-review` 审查一段营销文案
 3. `/product-legal:is-this-a-problem` 做快速合规判断
 ```
+
+若用户明确启用 matter workspace，在预览并确认后创建 `matters/index.yaml`，初始值为 `version: 1`、`enabled: true`、`active_matter: null`、`cross_matter_context: false`、`matters: []`。若启用 launch tracker，在预览并确认后创建 `launch-tracker.yaml`，初始值为 `version: 1`、`entries: []`；两个功能均默认不创建。写入失败必须披露。

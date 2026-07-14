@@ -65,6 +65,13 @@ argument-hint: "[--redo | --update profile|playbook|approval|integrations|output
 - 业务负责人、采购、财务/税务、法务负责人、数据合规/信息安全、用印管理员、总经理/董事会。
 - 必须升级事项：无限责任、境外争议解决、数据出境、知识产权转让、独家排他、自动续约超阈值、国企/政府客户。
 
+### 7. 本地事项与监测状态
+
+- 是否需要按合同项目、供应商、客户、业务线或外部律师委托隔离资料？默认 `Enabled: false`。
+- 是否允许跨事项比较？默认 `Cross-matter context: false`；只有用户明确选择才可开启。
+- Playbook pattern threshold 默认 12 个月内同类偏离 5 次；续约观察窗口默认 30/60/90/180 天。询问是否调整。
+- 本地状态仅由用户触发；不得承诺定时运行、外部通知或 CLM 自动同步。
+
 ## 输出模板
 
 ```markdown
@@ -79,6 +86,8 @@ argument-hint: "[--redo | --update profile|playbook|approval|integrations|output
 - 销售侧 playbook：
 - NDA/数据立场：
 - 审批矩阵：
+- Matter workspaces：[enabled/disabled；active 默认 none；cross-matter 默认 false]
+- Local agent settings：[threshold/lookback/renewal windows]
 
 ## 高风险缺口
 - [ ] 最新营业执照/统一社会信用代码
@@ -93,6 +102,8 @@ argument-hint: "[--redo | --update profile|playbook|approval|integrations|output
 3. `/commercial-legal:saas-msa-review`
 4. `/commercial-legal:nda-review`
 ```
+
+若用户明确启用 matter workspace，在显示初始化 YAML 并取得确认后创建 `matters/index.yaml`；否则只在画像中写入 disabled 镜像，不创建目录。索引初始值必须是 `version: 1`、`enabled: true`、`active_matter: null`、`cross_matter_context: false`、`matters: []`。任何写入失败必须如实报告。
 
 ## 禁止事项
 

@@ -134,6 +134,32 @@ Rules for every skill, command, and agent:
 
 不得输出“ready to sign”作为最终结论；只能输出“可进入签署流程前的人工复核”或“仍需补正”。
 
+## Local Matter Workflows (Phase 1.5)
+
+- **Enabled:** false（opt-in）
+- **Active matter mirror:** none
+- **Cross-matter context:** false
+**Index:** `~/.claude/plugins/config/claude-for-legal/commercial-legal/matters/index.yaml`
+
+`matters/index.yaml` 是 active matter 的唯一事实源；本节只是便于人工阅读的镜像。若二者冲突，停止写入并要求用户选择保留值。事项结构、slug、历史、归档、人工确认和失败恢复遵循 `references/local-workflow-contract.md`。
+
+所有实质技能开始前执行 matter preflight：未启用或索引不存在时使用 practice-level；已启用但无 active matter 时询问继续 practice-level 还是切换；存在 active matter 时只读取其 `matter.yaml` 和用户授权文件。默认禁止跨事项读取，`heightened` 和 `clean_team` 事项不得隐式跨读。
+
+### Local agent state
+
+```yaml
+deviation_log: ~/.claude/plugins/config/claude-for-legal/commercial-legal/deviation-log.yaml
+playbook_proposals: ~/.claude/plugins/config/claude-for-legal/commercial-legal/playbook-proposals.yaml
+playbook_monitor_history: ~/.claude/plugins/config/claude-for-legal/commercial-legal/playbook-monitor-history.yaml
+renewal_register: ~/.claude/plugins/config/claude-for-legal/commercial-legal/renewal-register.yaml
+renewal_run_history: ~/.claude/plugins/config/claude-for-legal/commercial-legal/renewal-run-history.yaml
+pattern_threshold: 5
+lookback_months: 12
+renewal_windows_days: [30, 60, 90, 180]
+```
+
+这些文件只由人工触发的本地工作流读写。没有外部定时任务、自动通知或自动 playbook 变更；任何画像或 playbook 修改必须逐项显示 diff 并取得确认。
+
 ## References
 
 - `references/china-commercial-contract-playbook.md`
