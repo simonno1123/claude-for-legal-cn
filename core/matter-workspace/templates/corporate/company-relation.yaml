@@ -1,0 +1,36 @@
+# Template schema: ../../../schema/fact.yaml
+version: 1
+id: template-company-relation
+matter_slug: template-corporate-matter
+statement: Replace with a sourced proposition about a company relationship.
+fact_type: relationship
+status: unknown
+occurred_at: null
+time_precision: unknown
+party_refs:
+  - template-company-a
+  - template-company-b
+source_refs:
+  - replace-with-source-ref
+evidence_refs: []
+issue_refs: []
+legal_significance: null
+human_verified: false
+verification_note: null
+tags:
+  - company-relation
+module_fields:
+  template: true
+  replace_before_use:
+    - id
+    - matter_slug
+    - statement
+    - party_refs
+    - source_refs
+  corporate:
+    relation_type: to_assess
+    ownership_percentage: null
+    control_basis: null
+    effective_from: null
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

@@ -1,0 +1,44 @@
+# Template schema: ../../../schema/evidence.yaml
+version: 1
+id: template-evidence
+matter_slug: template-civil-matter
+title: Untitled evidence item
+evidence_type: other
+status: under_review
+source:
+  description: Replace with the evidence source and provenance.
+  holder_party_id: null
+  source_ref: null
+acquisition:
+  method: Replace with the collection or receipt method.
+  lawfulness: to_assess
+  obtained_at: null
+  note: null
+authenticity:
+  status: to_assess
+  original_status: unknown
+  note: null
+relevance:
+  status: to_assess
+  note: null
+admissibility:
+  status: to_assess
+  note: null
+chain_of_custody: []
+file_refs: []
+fact_refs: []
+issue_refs: []
+confidentiality: standard
+original_held_by: null
+review_note: null
+module_fields:
+  template: true
+  replace_before_use:
+    - id
+    - matter_slug
+    - title
+    - evidence_type
+    - source
+    - acquisition
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

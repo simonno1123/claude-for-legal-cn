@@ -1,0 +1,163 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/decision.yaml
+title: Matter Workspace Decision
+description: >-
+  An auditable human decision record. Proposed analysis is distinct from an
+  approved decision, and no Schema state itself performs an external action.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - title
+  - decision_type
+  - status
+  - summary
+  - rationale
+  - input_refs
+  - consequences
+  - follow_up_actions
+  - human_review
+  - supersedes
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: matter.yaml#/$defs/slug
+  title:
+    type: string
+    minLength: 1
+    maxLength: 300
+  decision_type:
+    type: string
+    minLength: 1
+    maxLength: 150
+  status:
+    type: string
+    enum:
+      - proposed
+      - approved
+      - rejected
+      - deferred
+      - superseded
+  summary:
+    type: string
+    minLength: 1
+    maxLength: 5000
+  rationale:
+    type: string
+    minLength: 1
+    maxLength: 12000
+  input_refs:
+    $ref: '#/$defs/input_refs'
+  consequences:
+    type: array
+    items:
+      type: string
+      minLength: 1
+      maxLength: 2000
+  follow_up_actions:
+    type: array
+    items:
+      $ref: '#/$defs/follow_up_action'
+  human_review:
+    $ref: matter.yaml#/$defs/human_review
+  supersedes:
+    oneOf:
+      - $ref: matter.yaml#/$defs/entity_id
+      - type: 'null'
+  output_refs:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: matter.yaml#/$defs/local_path
+  module_fields:
+    type: object
+  created_at:
+    $ref: matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: matter.yaml#/$defs/date_time
+$defs:
+  input_refs:
+    type: object
+    additionalProperties: false
+    required:
+      - facts
+      - evidence
+      - issues
+      - claims
+      - strategies
+    properties:
+      facts:
+        $ref: matter.yaml#/$defs/reference_list
+      evidence:
+        $ref: matter.yaml#/$defs/reference_list
+      issues:
+        $ref: matter.yaml#/$defs/reference_list
+      claims:
+        $ref: matter.yaml#/$defs/reference_list
+      strategies:
+        $ref: matter.yaml#/$defs/reference_list
+  follow_up_action:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - description
+      - owner
+      - due_date
+      - status
+    properties:
+      id:
+        $ref: matter.yaml#/$defs/entity_id
+      description:
+        type: string
+        minLength: 1
+        maxLength: 2000
+      owner:
+        type: string
+        minLength: 1
+        maxLength: 120
+      due_date:
+        oneOf:
+          - $ref: matter.yaml#/$defs/date
+          - type: 'null'
+      status:
+        type: string
+        enum:
+          - not_started
+          - in_progress
+          - completed
+          - cancelled
+allOf:
+  - if:
+      properties:
+        status:
+          const: approved
+      required:
+        - status
+    then:
+      properties:
+        human_review:
+          allOf:
+            - $ref: matter.yaml#/$defs/human_review
+            - properties:
+                status:
+                  const: approved
+                reviewer:
+                  type: string
+                  minLength: 1
+                  maxLength: 120
+                reviewed_at:
+                  $ref: matter.yaml#/$defs/date_time
+              required:
+                - status
+                - reviewer
+                - reviewed_at

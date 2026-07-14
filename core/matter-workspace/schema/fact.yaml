@@ -1,0 +1,106 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/fact.yaml
+title: Matter Workspace Fact
+description: >-
+  A sourced factual proposition. Verification status records evidentiary
+  confidence without converting an allegation into an established fact.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - statement
+  - fact_type
+  - status
+  - party_refs
+  - source_refs
+  - evidence_refs
+  - issue_refs
+  - human_verified
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: matter.yaml#/$defs/slug
+  statement:
+    type: string
+    minLength: 1
+    maxLength: 8000
+  fact_type:
+    type: string
+    enum:
+      - event
+      - background
+      - relationship
+      - communication
+      - payment
+      - procedure
+      - other
+  status:
+    type: string
+    enum:
+      - alleged
+      - admitted
+      - disputed
+      - verified
+      - unknown
+  occurred_at:
+    oneOf:
+      - $ref: matter.yaml#/$defs/date
+      - $ref: matter.yaml#/$defs/date_time
+      - type: 'null'
+  time_precision:
+    type: string
+    enum:
+      - exact
+      - approximate
+      - range
+      - unknown
+    default: unknown
+  party_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  source_refs:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+      maxLength: 500
+  evidence_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  issue_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  legal_significance:
+    oneOf:
+      - type: string
+        maxLength: 4000
+      - type: 'null'
+  human_verified:
+    type: boolean
+    default: false
+  verification_note:
+    oneOf:
+      - type: string
+        maxLength: 2000
+      - type: 'null'
+  tags:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+      maxLength: 80
+  module_fields:
+    type: object
+  created_at:
+    $ref: matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: matter.yaml#/$defs/date_time

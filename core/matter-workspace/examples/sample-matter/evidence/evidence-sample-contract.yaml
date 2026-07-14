@@ -1,0 +1,45 @@
+version: 1
+id: evidence-sample-contract
+matter_slug: sample-contract-dispute
+title: Synthetic sales contract record
+evidence_type: document
+status: under_review
+source:
+  description: Generated fixture record; no underlying real document exists.
+  holder_party_id: party-company-a
+  source_ref: synthetic-contract-source
+acquisition:
+  method: Generated solely for repository validation.
+  lawfulness: lawful
+  obtained_at: '2026-01-15T10:00:00+08:00'
+  note: Contains no personal, client or confidential data.
+authenticity:
+  status: to_assess
+  original_status: unknown
+  note: Synthetic fixture, not litigation evidence.
+relevance:
+  status: to_assess
+  note: Included to demonstrate a Fact-to-Evidence reference.
+admissibility:
+  status: to_assess
+  note: No admissibility conclusion is intended.
+chain_of_custody:
+  - event_id: custody-fixture-created
+    occurred_at: '2026-01-15T10:00:00+08:00'
+    actor: Repository fixture generator
+    action: Created synthetic metadata record
+    location: Repository
+    note: No source document was created.
+file_refs: []
+fact_refs:
+  - fact-contract-formation
+issue_refs:
+  - issue-payment-obligation
+confidentiality: standard
+original_held_by: null
+review_note: Pending human review as a Schema fixture.
+module_fields:
+  fixture: true
+  synthetic_data: true
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

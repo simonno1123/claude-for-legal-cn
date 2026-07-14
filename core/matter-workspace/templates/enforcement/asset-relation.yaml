@@ -1,0 +1,35 @@
+# Template schema: ../../../schema/fact.yaml
+# An asset clue is a sourced proposition, not a confirmed ownership finding.
+version: 1
+id: template-asset-relation
+matter_slug: template-enforcement-matter
+statement: Replace with a sourced proposition about an asset relationship.
+fact_type: relationship
+status: unknown
+occurred_at: null
+time_precision: unknown
+party_refs:
+  - template-debtor
+source_refs:
+  - replace-with-source-ref
+evidence_refs: []
+issue_refs: []
+legal_significance: null
+human_verified: false
+verification_note: null
+tags:
+  - asset-clue
+module_fields:
+  template: true
+  replace_before_use:
+    - id
+    - matter_slug
+    - statement
+    - source_refs
+  enforcement:
+    asset_type: to_assess
+    relation_type: to_assess
+    registration_status: to_assess
+    disposal_risk: to_assess
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

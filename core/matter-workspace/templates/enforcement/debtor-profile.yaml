@@ -1,0 +1,31 @@
+# Template schema: ../../../schema/party.yaml
+version: 1
+id: template-debtor
+matter_slug: template-enforcement-matter
+name: Example Debtor
+aliases: []
+party_type: other
+roles:
+  - debtor
+side: respondent
+identifiers: []
+representatives: []
+contact_reference: null
+legal_status: null
+confidentiality: heightened
+source_refs: []
+notes: null
+module_fields:
+  template: true
+  replace_before_use:
+    - id
+    - matter_slug
+    - name
+    - party_type
+  enforcement:
+    enforceable_instrument_ref: null
+    performance_status: to_assess
+    property_clues: []
+    restriction_measures: []
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

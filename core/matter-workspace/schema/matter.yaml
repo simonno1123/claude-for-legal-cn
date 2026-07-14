@@ -1,0 +1,231 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml
+title: Matter Workspace Matter
+description: >-
+  Shared Matter record compatible with the Phase 1.5 Local Workflow Contract.
+  Domain-specific data belongs in module_fields or referenced record files.
+type: object
+additionalProperties: false
+required:
+  - version
+  - slug
+  - title
+  - matter_type
+  - owner
+  - status
+  - opened_at
+  - updated_at
+  - deadline
+  - confidentiality
+  - participants
+  - related_matters
+  - source_files
+  - key_facts
+  - module_fields
+properties:
+  version:
+    type: integer
+    const: 1
+    description: Phase 1.5 matter record version.
+  slug:
+    $ref: '#/$defs/slug'
+  title:
+    type: string
+    minLength: 1
+    maxLength: 200
+  matter_type:
+    type: string
+    minLength: 1
+    maxLength: 100
+  owner:
+    type: string
+    minLength: 1
+    maxLength: 120
+  status:
+    $ref: '#/$defs/matter_status'
+  opened_at:
+    $ref: '#/$defs/date'
+  updated_at:
+    $ref: '#/$defs/date_time'
+  deadline:
+    oneOf:
+      - $ref: '#/$defs/date'
+      - type: 'null'
+  confidentiality:
+    $ref: '#/$defs/confidentiality'
+  participants:
+    type: array
+    uniqueItems: true
+    items:
+      oneOf:
+        - type: string
+          minLength: 1
+          maxLength: 200
+        - $ref: '#/$defs/party_reference'
+  related_matters:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: '#/$defs/slug'
+  source_files:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: '#/$defs/local_path'
+  key_facts:
+    type: array
+    items:
+      oneOf:
+        - type: string
+          minLength: 1
+        - $ref: '#/$defs/fact_reference'
+  module_fields:
+    type: object
+    description: Plugin-specific extension point; shared fields must not be renamed.
+  jurisdiction:
+    type: string
+    minLength: 1
+    default: CN-Mainland
+  summary:
+    oneOf:
+      - type: string
+        maxLength: 4000
+      - type: 'null'
+  record_files:
+    $ref: '#/$defs/record_files'
+$defs:
+  slug:
+    type: string
+    pattern: '^[a-z0-9][a-z0-9-]{0,62}$'
+  entity_id:
+    type: string
+    pattern: '^[a-z0-9][a-z0-9-]{0,95}$'
+  date:
+    type: string
+    format: date
+  date_time:
+    type: string
+    format: date-time
+  local_path:
+    type: string
+    minLength: 1
+    maxLength: 500
+    $comment: >-
+      Runtime validators must reject absolute paths, parent traversal,
+      backslash traversal and symlink escape.
+  matter_status:
+    type: string
+    enum:
+      - active
+      - on_hold
+      - closed
+      - archived
+  confidentiality:
+    type: string
+    enum:
+      - standard
+      - heightened
+      - clean_team
+  party_reference:
+    type: object
+    additionalProperties: false
+    required:
+      - party_id
+    properties:
+      party_id:
+        $ref: '#/$defs/entity_id'
+      role:
+        type: string
+        minLength: 1
+        maxLength: 100
+  fact_reference:
+    type: object
+    additionalProperties: false
+    required:
+      - fact_id
+    properties:
+      fact_id:
+        $ref: '#/$defs/entity_id'
+      summary:
+        type: string
+        minLength: 1
+        maxLength: 500
+  reference_list:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: '#/$defs/entity_id'
+  human_review:
+    type: object
+    additionalProperties: false
+    required:
+      - required
+      - status
+      - reviewer
+      - reviewed_at
+      - note
+    properties:
+      required:
+        type: boolean
+        const: true
+      status:
+        type: string
+        enum:
+          - pending
+          - approved
+          - rejected
+      reviewer:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 120
+          - type: 'null'
+      reviewed_at:
+        oneOf:
+          - $ref: '#/$defs/date_time'
+          - type: 'null'
+      note:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
+  record_files:
+    type: object
+    additionalProperties: false
+    properties:
+      parties:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'
+      facts:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'
+      evidence:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'
+      issues:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'
+      claims:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'
+      strategies:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'
+      decisions:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: '#/$defs/local_path'

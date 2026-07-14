@@ -1,0 +1,29 @@
+# Template schema: ../../../schema/matter.yaml
+# Replace all values listed in module_fields.replace_before_use before use.
+version: 1
+slug: template-civil-matter
+title: Untitled civil litigation matter
+matter_type: civil-litigation
+owner: To be assigned
+status: active
+opened_at: '2000-01-01'
+updated_at: '2000-01-01T00:00:00Z'
+deadline: null
+confidentiality: standard
+participants: []
+related_matters: []
+source_files: []
+key_facts: []
+module_fields:
+  template: true
+  replace_before_use:
+    - slug
+    - title
+    - owner
+    - opened_at
+    - updated_at
+  civil_litigation:
+    court: null
+    case_number: null
+    procedure: to_assess
+    current_stage: pre_filing

@@ -1,0 +1,59 @@
+version: 1
+id: strategy-prelitigation
+matter_slug: sample-contract-dispute
+title: Synthetic pre-litigation options
+status: pending_review
+objective: Demonstrate structured option and risk recording before action.
+issue_refs:
+  - issue-payment-obligation
+claim_refs:
+  - claim-contract-payment
+options:
+  - id: option-request-information
+    title: Request missing information
+    description: Collect performance, acceptance, invoice and payment records.
+    actions:
+      - Prepare a focused information request for human approval.
+    benefits:
+      - Reduces factual uncertainty before selecting a legal response.
+    risks:
+      - May delay the assessment if records are unavailable.
+    dependencies:
+      - Human confirmation of the requested materials.
+    estimated_timeline: Example only; determine from the real matter.
+  - id: option-preserve-position
+    title: Preserve the legal position
+    description: Draft, but do not send, a rights-preservation communication.
+    actions:
+      - Prepare a draft for responsible-lawyer review.
+    benefits:
+      - Creates a reviewable record without autonomous external action.
+    risks:
+      - An inaccurate draft could prejudice the matter if sent without review.
+    dependencies:
+      - Verified facts, authority and responsible-lawyer approval.
+    estimated_timeline: Example only; determine from the real matter.
+selected_option_id: null
+risk_assessment:
+  - category: evidence
+    level: high
+    description: Performance and non-payment evidence is missing.
+    mitigation: Do not select or execute a strategy before evidence review.
+  - category: legal-authority
+    level: medium
+    description: The illustrative authority has not been verified.
+    mitigation: Retrieve and verify the primary source.
+assumptions:
+  - All parties and facts in this fixture are fictional.
+output_refs: []
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: No option has been selected or approved.
+module_fields:
+  fixture: true
+  synthetic_data: true
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

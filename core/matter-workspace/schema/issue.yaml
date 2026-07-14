@@ -1,0 +1,197 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/issue.yaml
+title: Matter Workspace Issue
+description: >-
+  A legal or procedural issue linked to facts, evidence, claims and verified
+  legal-authority references.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - question
+  - issue_type
+  - status
+  - fact_refs
+  - evidence_refs
+  - claim_refs
+  - legal_basis
+  - positions
+  - human_review
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: matter.yaml#/$defs/slug
+  question:
+    type: string
+    minLength: 1
+    maxLength: 4000
+  issue_type:
+    type: string
+    enum:
+      - substantive
+      - procedural
+      - evidence
+      - jurisdiction
+      - remedy
+      - enforcement
+      - compliance
+      - other
+  status:
+    type: string
+    enum:
+      - open
+      - researching
+      - analyzed
+      - resolved
+      - deferred
+  owner:
+    oneOf:
+      - type: string
+        minLength: 1
+        maxLength: 120
+      - type: 'null'
+  deadline:
+    oneOf:
+      - $ref: matter.yaml#/$defs/date
+      - type: 'null'
+  fact_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  evidence_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  claim_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  legal_basis:
+    type: array
+    items:
+      $ref: '#/$defs/authority'
+  positions:
+    type: array
+    items:
+      $ref: '#/$defs/position'
+  analysis:
+    oneOf:
+      - type: string
+        maxLength: 12000
+      - type: 'null'
+  conclusion:
+    oneOf:
+      - type: string
+        maxLength: 5000
+      - type: 'null'
+  open_questions:
+    type: array
+    items:
+      type: string
+      minLength: 1
+      maxLength: 1000
+  human_review:
+    $ref: matter.yaml#/$defs/human_review
+  module_fields:
+    type: object
+  created_at:
+    $ref: matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: matter.yaml#/$defs/date_time
+$defs:
+  authority:
+    type: object
+    additionalProperties: false
+    required:
+      - citation
+      - title
+      - authority_type
+      - issuer
+      - source
+      - verification_status
+      - verified_at
+    properties:
+      citation:
+        type: string
+        minLength: 1
+        maxLength: 500
+      title:
+        type: string
+        minLength: 1
+        maxLength: 500
+      authority_type:
+        type: string
+        enum:
+          - statute
+          - administrative_regulation
+          - judicial_interpretation
+          - department_rule
+          - local_rule
+          - guiding_case
+          - typical_case
+          - other
+      issuer:
+        type: string
+        minLength: 1
+        maxLength: 300
+      effective_status:
+        type: string
+        enum:
+          - effective
+          - amended
+          - repealed
+          - pending
+          - unknown
+        default: unknown
+      source:
+        type: string
+        minLength: 1
+        maxLength: 1000
+      verification_status:
+        type: string
+        enum:
+          - unverified
+          - verified_primary
+          - verified_secondary
+      verified_at:
+        oneOf:
+          - $ref: matter.yaml#/$defs/date_time
+          - type: 'null'
+      pinpoint:
+        oneOf:
+          - type: string
+            maxLength: 500
+          - type: 'null'
+  position:
+    type: object
+    additionalProperties: false
+    required:
+      - party_ref
+      - summary
+      - supporting_refs
+      - counterarguments
+    properties:
+      party_ref:
+        oneOf:
+          - $ref: matter.yaml#/$defs/entity_id
+          - type: 'null'
+      summary:
+        type: string
+        minLength: 1
+        maxLength: 5000
+      supporting_refs:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+          minLength: 1
+          maxLength: 200
+      counterarguments:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          maxLength: 2000

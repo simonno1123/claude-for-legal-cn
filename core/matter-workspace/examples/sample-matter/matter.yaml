@@ -1,0 +1,48 @@
+# Fully synthetic fixture. It does not describe a real client or dispute.
+version: 1
+slug: sample-contract-dispute
+title: Sample contract dispute
+matter_type: civil-litigation
+owner: Example Responsible Lawyer
+status: active
+opened_at: '2026-01-15'
+updated_at: '2026-01-15T10:00:00+08:00'
+deadline: '2026-03-31'
+confidentiality: standard
+participants:
+  - party_id: party-company-a
+    role: claimant
+  - party_id: party-company-b
+    role: respondent
+related_matters: []
+source_files: []
+key_facts:
+  - fact_id: fact-contract-formation
+    summary: The sample companies entered into a fictional sales contract.
+module_fields:
+  fixture: true
+  synthetic_data: true
+  civil_litigation:
+    court: null
+    case_number: null
+    procedure: ordinary
+    current_stage: pre_filing
+jurisdiction: CN-Mainland
+summary: >-
+  Synthetic pre-litigation fixture for validating Matter Workspace references.
+record_files:
+  parties:
+    - parties/party-company-a.yaml
+    - parties/party-company-b.yaml
+  facts:
+    - facts/fact-contract-formation.yaml
+  evidence:
+    - evidence/evidence-sample-contract.yaml
+  issues:
+    - issues/issue-payment-obligation.yaml
+  claims:
+    - claims/claim-contract-payment.yaml
+  strategies:
+    - strategies/strategy-prelitigation.yaml
+  decisions:
+    - decisions/decision-next-step.yaml

@@ -1,0 +1,40 @@
+version: 1
+id: decision-next-step
+matter_slug: sample-contract-dispute
+title: Synthetic next-step decision
+decision_type: strategy-selection
+status: proposed
+summary: Request missing information before selecting a legal response.
+rationale: The synthetic fixture deliberately leaves material facts unverified.
+input_refs:
+  facts:
+    - fact-contract-formation
+  evidence:
+    - evidence-sample-contract
+  issues:
+    - issue-payment-obligation
+  claims:
+    - claim-contract-payment
+  strategies:
+    - strategy-prelitigation
+consequences:
+  - No filing, notice, demand or external communication is authorized.
+follow_up_actions:
+  - id: action-review-information-request
+    description: Review the proposed information request before any use.
+    owner: Example Responsible Lawyer
+    due_date: '2026-01-20'
+    status: not_started
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Proposed fixture decision only; no action is approved.
+supersedes: null
+output_refs: []
+module_fields:
+  fixture: true
+  synthetic_data: true
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

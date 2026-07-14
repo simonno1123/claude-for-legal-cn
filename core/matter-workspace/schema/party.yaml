@@ -1,0 +1,139 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/party.yaml
+title: Matter Workspace Party
+description: >-
+  A party or participant in a Matter. Sensitive identity and contact values
+  should remain in separately authorized source material, not this index.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - name
+  - party_type
+  - roles
+  - confidentiality
+  - source_refs
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: matter.yaml#/$defs/slug
+  name:
+    type: string
+    minLength: 1
+    maxLength: 300
+  aliases:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+      maxLength: 300
+  party_type:
+    type: string
+    enum:
+      - natural_person
+      - legal_person
+      - unincorporated_organization
+      - public_authority
+      - other
+  roles:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+      maxLength: 100
+  side:
+    oneOf:
+      - type: string
+        minLength: 1
+        maxLength: 100
+      - type: 'null'
+  identifiers:
+    type: array
+    items:
+      $ref: '#/$defs/identifier'
+  representatives:
+    type: array
+    items:
+      $ref: '#/$defs/representative'
+  contact_reference:
+    oneOf:
+      - $ref: matter.yaml#/$defs/local_path
+      - type: 'null'
+  legal_status:
+    oneOf:
+      - type: string
+        maxLength: 500
+      - type: 'null'
+  confidentiality:
+    $ref: matter.yaml#/$defs/confidentiality
+  source_refs:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+      maxLength: 500
+  notes:
+    oneOf:
+      - type: string
+        maxLength: 4000
+      - type: 'null'
+  module_fields:
+    type: object
+  created_at:
+    $ref: matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: matter.yaml#/$defs/date_time
+$defs:
+  identifier:
+    type: object
+    additionalProperties: false
+    required:
+      - type
+      - value
+    properties:
+      type:
+        type: string
+        enum:
+          - unified_social_credit_code
+          - case_party_number
+          - internal_reference
+          - other
+      value:
+        type: string
+        minLength: 1
+        maxLength: 200
+      verified:
+        type: boolean
+        default: false
+  representative:
+    type: object
+    additionalProperties: false
+    required:
+      - name
+      - capacity
+    properties:
+      name:
+        type: string
+        minLength: 1
+        maxLength: 200
+      capacity:
+        type: string
+        minLength: 1
+        maxLength: 120
+      party_id:
+        oneOf:
+          - $ref: matter.yaml#/$defs/entity_id
+          - type: 'null'

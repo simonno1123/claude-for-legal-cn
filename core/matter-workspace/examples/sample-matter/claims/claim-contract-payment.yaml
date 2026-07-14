@@ -1,0 +1,67 @@
+version: 1
+id: claim-contract-payment
+matter_slug: sample-contract-dispute
+claim_type: contract-payment
+status: potential
+claimant_refs:
+  - party-company-a
+respondent_refs:
+  - party-company-b
+requested_relief:
+  - type: payment
+    description: Synthetic request for payment of the assumed contract price.
+    amount:
+      currency: CNY
+      value: 100000
+elements:
+  - id: element-valid-contract
+    description: A valid contractual relationship exists.
+    status: to_assess
+    fact_refs:
+      - fact-contract-formation
+    evidence_refs:
+      - evidence-sample-contract
+    gaps:
+      - Verify formation and validity from primary source material.
+  - id: element-payment-due
+    description: The payment obligation is due and remains unpaid.
+    status: unsupported
+    fact_refs: []
+    evidence_refs: []
+    gaps:
+      - Add performance, invoice, due-date and payment records.
+legal_basis_refs:
+  - issue-payment-obligation
+fact_refs:
+  - fact-contract-formation
+evidence_refs:
+  - evidence-sample-contract
+defenses:
+  - id: defense-performance-dispute
+    description: Performance or acceptance may be disputed.
+    status: potential
+    fact_refs: []
+    evidence_refs: []
+limitation:
+  status: not_assessed
+  start_date: null
+  deadline: null
+  note: A real matter requires a separate limitation analysis.
+assessment:
+  strengths:
+    - The fixture links a contract Fact and Evidence record.
+  weaknesses:
+    - Performance and non-payment are not established.
+  risks:
+    - The illustrative legal basis remains unverified.
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: No claim should be asserted from this synthetic fixture.
+module_fields:
+  fixture: true
+  synthetic_data: true
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

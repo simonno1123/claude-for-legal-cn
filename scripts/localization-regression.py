@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -411,6 +412,40 @@ def check_default_backslide(errors: list[str]) -> None:
                 fail(errors, f"{name} appears to reintroduce foreign-law defaults: {pattern.pattern}")
 
 
+def check_matter_workspace(errors: list[str]) -> None:
+    """Run the offline Matter Workspace integration gate."""
+
+    script = ROOT / "scripts" / "test-matter-workspace.sh"
+    if not script.exists():
+        fail(errors, "scripts/test-matter-workspace.sh is missing")
+        return
+
+    try:
+        result = subprocess.run(
+            ["bash", str(script)],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+    except OSError as exc:
+        fail(errors, f"Matter Workspace integration test could not start: {exc}")
+        return
+
+    if result.returncode == 0:
+        return
+
+    lines = (result.stdout + result.stderr).strip().splitlines()
+    diagnostics = "\n".join(lines[-40:]).replace(str(ROOT), ".")
+    if not diagnostics:
+        diagnostics = f"exit code {result.returncode} with no output"
+    fail(
+        errors,
+        "Matter Workspace integration test failed "
+        f"(scripts/test-matter-workspace.sh):\n{diagnostics}",
+    )
+
+
 def main() -> int:
     errors: list[str] = []
     check_all_json(errors)
@@ -420,6 +455,7 @@ def main() -> int:
     check_docs(errors)
     check_phase_1_5_workflows(errors)
     check_default_backslide(errors)
+    check_matter_workspace(errors)
 
     if errors:
         print("China localization regression FAILED:", file=sys.stderr)

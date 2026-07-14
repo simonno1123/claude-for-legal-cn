@@ -1,0 +1,229 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/evidence.yaml
+title: Matter Workspace Evidence
+description: >-
+  An evidence record for China-law matter analysis. Authenticity, relevance,
+  admissibility and acquisition lawfulness remain separate review dimensions.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - title
+  - evidence_type
+  - status
+  - source
+  - acquisition
+  - authenticity
+  - relevance
+  - admissibility
+  - chain_of_custody
+  - file_refs
+  - fact_refs
+  - issue_refs
+  - confidentiality
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: matter.yaml#/$defs/slug
+  title:
+    type: string
+    minLength: 1
+    maxLength: 300
+  evidence_type:
+    type: string
+    enum:
+      - document
+      - electronic_data
+      - audio_visual
+      - witness_statement
+      - expert_opinion
+      - inspection_record
+      - party_statement
+      - physical_evidence
+      - other
+  status:
+    type: string
+    enum:
+      - pending_collection
+      - collected
+      - under_review
+      - verified
+      - challenged
+      - excluded
+  source:
+    $ref: '#/$defs/source'
+  acquisition:
+    $ref: '#/$defs/acquisition'
+  authenticity:
+    $ref: '#/$defs/authenticity'
+  relevance:
+    $ref: '#/$defs/legal_dimension'
+  admissibility:
+    $ref: '#/$defs/legal_dimension'
+  chain_of_custody:
+    type: array
+    items:
+      $ref: '#/$defs/custody_event'
+  file_refs:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: matter.yaml#/$defs/local_path
+  fact_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  issue_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  confidentiality:
+    $ref: matter.yaml#/$defs/confidentiality
+  original_held_by:
+    oneOf:
+      - $ref: matter.yaml#/$defs/entity_id
+      - type: 'null'
+  review_note:
+    oneOf:
+      - type: string
+        maxLength: 5000
+      - type: 'null'
+  module_fields:
+    type: object
+  created_at:
+    $ref: matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: matter.yaml#/$defs/date_time
+$defs:
+  source:
+    type: object
+    additionalProperties: false
+    required:
+      - description
+      - holder_party_id
+      - source_ref
+    properties:
+      description:
+        type: string
+        minLength: 1
+        maxLength: 1000
+      holder_party_id:
+        oneOf:
+          - $ref: matter.yaml#/$defs/entity_id
+          - type: 'null'
+      source_ref:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 500
+          - type: 'null'
+  acquisition:
+    type: object
+    additionalProperties: false
+    required:
+      - method
+      - lawfulness
+      - obtained_at
+    properties:
+      method:
+        type: string
+        minLength: 1
+        maxLength: 500
+      lawfulness:
+        type: string
+        enum:
+          - to_assess
+          - lawful
+          - challenged
+          - unlawful
+      obtained_at:
+        oneOf:
+          - $ref: matter.yaml#/$defs/date_time
+          - type: 'null'
+      note:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
+  authenticity:
+    type: object
+    additionalProperties: false
+    required:
+      - status
+      - original_status
+      - note
+    properties:
+      status:
+        type: string
+        enum:
+          - to_assess
+          - supported
+          - challenged
+          - not_supported
+      original_status:
+        type: string
+        enum:
+          - original
+          - copy
+          - electronic_original
+          - unknown
+      note:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
+  legal_dimension:
+    type: object
+    additionalProperties: false
+    required:
+      - status
+      - note
+    properties:
+      status:
+        type: string
+        enum:
+          - to_assess
+          - supported
+          - challenged
+          - not_supported
+      note:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
+  custody_event:
+    type: object
+    additionalProperties: false
+    required:
+      - event_id
+      - occurred_at
+      - actor
+      - action
+    properties:
+      event_id:
+        $ref: matter.yaml#/$defs/entity_id
+      occurred_at:
+        $ref: matter.yaml#/$defs/date_time
+      actor:
+        type: string
+        minLength: 1
+        maxLength: 200
+      action:
+        type: string
+        minLength: 1
+        maxLength: 200
+      location:
+        oneOf:
+          - type: string
+            maxLength: 500
+          - type: 'null'
+      note:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'

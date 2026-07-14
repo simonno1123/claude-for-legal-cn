@@ -1,0 +1,8 @@
+# Python 3.13 validation environment. Dependency retrieval is provisioning;
+# Validator execution remains local-only and performs no network access.
+attrs==26.1.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+PyYAML==6.0.3
+referencing==0.37.0
+rpds-py==2026.5.1

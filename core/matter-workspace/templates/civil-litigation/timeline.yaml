@@ -1,0 +1,30 @@
+# Template schema: ../../../schema/fact.yaml
+# Each timeline event is a Fact record; do not mark it verified without review.
+version: 1
+id: template-timeline-event
+matter_slug: template-civil-matter
+statement: Replace with an alleged, admitted, disputed or verified event.
+fact_type: event
+status: unknown
+occurred_at: null
+time_precision: unknown
+party_refs: []
+source_refs:
+  - replace-with-source-ref
+evidence_refs: []
+issue_refs: []
+legal_significance: null
+human_verified: false
+verification_note: null
+tags:
+  - timeline
+module_fields:
+  template: true
+  replace_before_use:
+    - id
+    - matter_slug
+    - statement
+    - status
+    - source_refs
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

@@ -1,0 +1,248 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/claim.yaml
+title: Matter Workspace Claim
+description: >-
+  A claim, request or defense theory with element-by-element support and an
+  explicit human-review state.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - claim_type
+  - status
+  - claimant_refs
+  - respondent_refs
+  - requested_relief
+  - elements
+  - legal_basis_refs
+  - fact_refs
+  - evidence_refs
+  - defenses
+  - assessment
+  - human_review
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: matter.yaml#/$defs/slug
+  claim_type:
+    type: string
+    minLength: 1
+    maxLength: 200
+  status:
+    type: string
+    enum:
+      - potential
+      - asserted
+      - defended
+      - settled
+      - withdrawn
+      - decided
+      - enforced
+      - closed
+  claimant_refs:
+    allOf:
+      - $ref: matter.yaml#/$defs/reference_list
+      - minItems: 1
+  respondent_refs:
+    allOf:
+      - $ref: matter.yaml#/$defs/reference_list
+      - minItems: 1
+  requested_relief:
+    type: array
+    minItems: 1
+    items:
+      $ref: '#/$defs/relief'
+  elements:
+    type: array
+    minItems: 1
+    items:
+      $ref: '#/$defs/element'
+  legal_basis_refs:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+      maxLength: 500
+  fact_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  evidence_refs:
+    $ref: matter.yaml#/$defs/reference_list
+  defenses:
+    type: array
+    items:
+      $ref: '#/$defs/defense'
+  limitation:
+    $ref: '#/$defs/limitation'
+  assessment:
+    $ref: '#/$defs/assessment'
+  human_review:
+    $ref: matter.yaml#/$defs/human_review
+  module_fields:
+    type: object
+  created_at:
+    $ref: matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: matter.yaml#/$defs/date_time
+$defs:
+  relief:
+    type: object
+    additionalProperties: false
+    required:
+      - type
+      - description
+    properties:
+      type:
+        type: string
+        minLength: 1
+        maxLength: 120
+      description:
+        type: string
+        minLength: 1
+        maxLength: 2000
+      amount:
+        oneOf:
+          - $ref: '#/$defs/money'
+          - type: 'null'
+  money:
+    type: object
+    additionalProperties: false
+    required:
+      - currency
+      - value
+    properties:
+      currency:
+        type: string
+        pattern: '^[A-Z]{3}$'
+        default: CNY
+      value:
+        type: number
+        minimum: 0
+  element:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - description
+      - status
+      - fact_refs
+      - evidence_refs
+      - gaps
+    properties:
+      id:
+        $ref: matter.yaml#/$defs/entity_id
+      description:
+        type: string
+        minLength: 1
+        maxLength: 3000
+      status:
+        type: string
+        enum:
+          - to_assess
+          - supported
+          - partially_supported
+          - disputed
+          - unsupported
+      fact_refs:
+        $ref: matter.yaml#/$defs/reference_list
+      evidence_refs:
+        $ref: matter.yaml#/$defs/reference_list
+      gaps:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          maxLength: 1000
+  defense:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - description
+      - status
+      - fact_refs
+      - evidence_refs
+    properties:
+      id:
+        $ref: matter.yaml#/$defs/entity_id
+      description:
+        type: string
+        minLength: 1
+        maxLength: 3000
+      status:
+        type: string
+        enum:
+          - potential
+          - asserted
+          - supported
+          - challenged
+          - rejected
+      fact_refs:
+        $ref: matter.yaml#/$defs/reference_list
+      evidence_refs:
+        $ref: matter.yaml#/$defs/reference_list
+  limitation:
+    type: object
+    additionalProperties: false
+    required:
+      - status
+      - start_date
+      - deadline
+      - note
+    properties:
+      status:
+        type: string
+        enum:
+          - not_assessed
+          - no_issue
+          - risk
+          - expired
+          - uncertain
+      start_date:
+        oneOf:
+          - $ref: matter.yaml#/$defs/date
+          - type: 'null'
+      deadline:
+        oneOf:
+          - $ref: matter.yaml#/$defs/date
+          - type: 'null'
+      note:
+        oneOf:
+          - type: string
+            maxLength: 3000
+          - type: 'null'
+  assessment:
+    type: object
+    additionalProperties: false
+    required:
+      - strengths
+      - weaknesses
+      - risks
+    properties:
+      strengths:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          maxLength: 1000
+      weaknesses:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          maxLength: 1000
+      risks:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          maxLength: 1000

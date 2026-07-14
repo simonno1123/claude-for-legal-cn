@@ -1,0 +1,38 @@
+# Template schema: ../../../schema/issue.yaml
+version: 1
+id: template-shareholder-analysis
+matter_slug: template-corporate-matter
+question: Replace with the shareholder responsibility or control issue.
+issue_type: substantive
+status: open
+owner: null
+deadline: null
+fact_refs: []
+evidence_refs: []
+claim_refs: []
+legal_basis: []
+positions: []
+analysis: null
+conclusion: null
+open_questions:
+  - Verify the shareholder relationship and capital contribution record.
+  - Identify the legal basis and retrieve a primary source.
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: null
+module_fields:
+  template: true
+  replace_before_use:
+    - id
+    - matter_slug
+    - question
+  corporate:
+    registered_shareholder_refs: []
+    beneficial_owner_refs: []
+    capital_contribution_status: to_assess
+    control_indicators: []
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

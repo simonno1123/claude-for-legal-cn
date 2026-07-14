@@ -1,0 +1,55 @@
+version: 1
+id: issue-payment-obligation
+matter_slug: sample-contract-dispute
+question: >-
+  Whether the fictional payment obligation would be due after the assumed
+  performance described in the synthetic record.
+issue_type: substantive
+status: open
+owner: Example Responsible Lawyer
+deadline: '2026-02-15'
+fact_refs:
+  - fact-contract-formation
+evidence_refs:
+  - evidence-sample-contract
+claim_refs:
+  - claim-contract-payment
+legal_basis:
+  - citation: Example PRC Civil Code contract provision; verify before use
+    title: PRC Civil Code contract rules (illustrative reference)
+    authority_type: statute
+    issuer: National People's Congress
+    effective_status: unknown
+    source: Official primary source must be retrieved and verified before use.
+    verification_status: unverified
+    verified_at: null
+    pinpoint: null
+positions:
+  - party_ref: party-company-a
+    summary: Synthetic claimant position that payment is due.
+    supporting_refs:
+      - fact-contract-formation
+      - evidence-sample-contract
+    counterarguments:
+      - Performance and payment conditions remain unverified.
+  - party_ref: party-company-b
+    summary: Synthetic respondent position reserved pending factual review.
+    supporting_refs: []
+    counterarguments:
+      - The fixture contains no verified defense evidence.
+analysis: null
+conclusion: null
+open_questions:
+  - Verify contract formation, performance and payment conditions.
+  - Retrieve and verify the applicable primary legal authority.
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Synthetic issue; no legal conclusion approved.
+module_fields:
+  fixture: true
+  synthetic_data: true
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'
