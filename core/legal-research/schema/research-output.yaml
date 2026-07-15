@@ -1,0 +1,131 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-research/v1/research-output.yaml
+title: Legal Research Output
+description: >-
+  A human-reviewable research output linked to a Research Matter and Issue.
+  Schema validity does not approve the analysis or authorize legal reliance.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - research_id
+  - matter_slug
+  - issue_ref
+  - question
+  - sources
+  - rules
+  - case_patterns
+  - analysis
+  - legal_position
+  - review_status
+  - human_review
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  research_id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/slug
+  issue_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  question:
+    type: string
+    minLength: 1
+    maxLength: 4000
+  sources:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  rules:
+    type: array
+    items:
+      $ref: '#/$defs/rule'
+  case_patterns:
+    type: array
+    items:
+      $ref: '#/$defs/case_pattern'
+  analysis:
+    oneOf:
+      - type: string
+        maxLength: 20000
+      - type: 'null'
+  legal_position:
+    oneOf:
+      - type: string
+        maxLength: 10000
+      - type: 'null'
+  review_status:
+    type: string
+    enum:
+      - pending
+      - approved
+      - rejected
+  human_review:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/human_review
+  created_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+$defs:
+  rule:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - proposition
+      - source_refs
+      - verification_status
+    properties:
+      id:
+        $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+      proposition:
+        type: string
+        minLength: 1
+        maxLength: 8000
+      source_refs:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+      verification_status:
+        type: string
+        enum:
+          - unverified
+          - verified
+  case_pattern:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - summary
+      - source_refs
+      - treatment
+    properties:
+      id:
+        $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+      summary:
+        type: string
+        minLength: 1
+        maxLength: 5000
+      source_refs:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+      treatment:
+        type: string
+        enum:
+          - supports
+          - distinguishes
+          - contradicts
+          - contextualizes

@@ -1,0 +1,133 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-research/v1/research-source.yaml
+title: Legal Research Source
+description: >-
+  A manually collected legal-research source record. The model stores source
+  provenance and verification state but performs no retrieval or legal
+  assessment.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - research_id
+  - matter_slug
+  - issue_ref
+  - source_type
+  - title
+  - citation
+  - issuer
+  - jurisdiction
+  - source_location
+  - verification_status
+  - effective_status
+  - pinpoint
+  - extracted_rule
+  - review_note
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  research_id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/slug
+  issue_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  source_type:
+    $ref: '#/$defs/source_type'
+  title:
+    type: string
+    minLength: 1
+    maxLength: 500
+  citation:
+    type: string
+    minLength: 1
+    maxLength: 1000
+  issuer:
+    oneOf:
+      - type: string
+        minLength: 1
+        maxLength: 300
+      - type: 'null'
+  jurisdiction:
+    type: string
+    minLength: 1
+    maxLength: 200
+  source_location:
+    type: string
+    minLength: 1
+    maxLength: 1000
+    description: A human-recorded citation location, not a retrieval instruction.
+  verification_status:
+    type: string
+    enum:
+      - unverified
+      - verified_primary
+      - verified_secondary
+  effective_status:
+    type: string
+    enum:
+      - effective
+      - amended
+      - repealed
+      - pending
+      - unknown
+      - not_applicable
+  pinpoint:
+    oneOf:
+      - type: string
+        maxLength: 500
+      - type: 'null'
+  extracted_rule:
+    oneOf:
+      - type: string
+        maxLength: 8000
+      - type: 'null'
+  review_note:
+    oneOf:
+      - type: string
+        maxLength: 2000
+      - type: 'null'
+  created_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+$defs:
+  source_type:
+    type: string
+    enum:
+      - law_or_regulation
+      - judicial_interpretation
+      - guiding_case
+      - adjudicative_case
+      - scholarship
+  source_requirement:
+    type: object
+    additionalProperties: false
+    required:
+      - source_type
+      - required
+      - priority
+      - note
+    properties:
+      source_type:
+        $ref: '#/$defs/source_type'
+      required:
+        type: boolean
+      priority:
+        type: string
+        enum:
+          - primary
+          - supplementary
+          - optional
+      note:
+        oneOf:
+          - type: string
+            maxLength: 1000
+          - type: 'null'

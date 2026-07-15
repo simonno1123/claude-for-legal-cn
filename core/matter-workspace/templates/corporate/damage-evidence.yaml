@@ -1,0 +1,56 @@
+# Template schema: ../../../schema/evidence.yaml
+version: 1
+id: template-corporate-damage-evidence
+matter_slug: template-corporate-dispute
+title: 公司纠纷损害证据
+evidence_type: document
+classification: payment
+status: received
+source:
+  description: 待填写损失凭证、财务记录、估值材料或损害计算依据来源。
+  holder_party_id: null
+  source_ref: null
+acquisition:
+  method: 待记录提交或依法收集方式。
+  lawfulness: to_assess
+  obtained_at: null
+  note: null
+authenticity:
+  status: to_assess
+  original_status: unknown
+  note: 待核对凭证来源、会计期间及形成过程。
+relevance:
+  status: to_assess
+  note: 待人工判断与损害事实及因果关系的关联。
+admissibility:
+  status: to_assess
+  note: 待人工审查证据资格及取得程序。
+chain_of_custody: []
+file_refs: []
+fact_refs:
+  - fact-corporate-damage
+issue_refs:
+  - issue-corporate-damage-liability
+fact_relationships:
+  - target_id: fact-corporate-damage
+    relation_type: supports
+    note: 候选关联，须经人工确认。
+issue_relationships:
+  - target_id: issue-corporate-damage-liability
+    relation_type: relates_to
+    note: 候选关联，须经人工确认。
+confidentiality: heightened
+original_held_by: null
+review_note: 模板不自动计算或认定公司纠纷损害金额。
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: 复核损害范围、计算基础及因果关系后方可推进。
+module_fields:
+  template: true
+  domain: corporate_dispute
+  evidence_category: damage_evidence
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

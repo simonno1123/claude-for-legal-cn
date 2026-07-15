@@ -1,0 +1,46 @@
+version: 1
+id: research-payment-obligation
+matter_slug: sample-contract-dispute
+issue_ref: issue-payment-obligation
+legal_question: >-
+  For this synthetic fixture, what verified PRC legal rules would govern the
+  assumed payment obligation after the alleged contractual performance?
+jurisdiction:
+  country: CN
+  legal_system: PRC
+  region: national
+  court_level: null
+source_requirements:
+  - source_type: law_or_regulation
+    required: true
+    priority: primary
+    note: Retrieve and verify the applicable effective primary legislation.
+  - source_type: judicial_interpretation
+    required: true
+    priority: primary
+    note: Check for applicable effective judicial interpretations.
+  - source_type: guiding_case
+    required: false
+    priority: supplementary
+    note: Record relevance and limits without treating cases as binding precedent.
+  - source_type: adjudicative_case
+    required: false
+    priority: supplementary
+    note: Use only verified and materially comparable adjudicative patterns.
+  - source_type: scholarship
+    required: false
+    priority: optional
+    note: Keep secondary analysis separate from primary authority.
+status: awaiting_human_review
+owner: Example Research Lawyer
+open_questions:
+  - Verify the current primary authorities and their effective status.
+  - Confirm whether the synthetic performance premise is supported by evidence.
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Synthetic fixture; no research conclusion has been approved.
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

@@ -1,0 +1,21 @@
+version: 1
+id: strategy-option-reviewed-engagement
+strategy_id: strategy-payment-obligation
+matter_slug: sample-contract-dispute
+issue_ref: issue-payment-obligation
+description: >-
+  Prepare a counsel-reviewed engagement path only after the factual, legal and
+  client-authority prerequisites are satisfied.
+advantages:
+  - Creates a documented path for human discussion without autonomous action.
+  - Allows business considerations to be reviewed alongside legal constraints.
+risk_refs:
+  - strategy-risk-legal
+  - strategy-risk-evidence
+  - strategy-risk-business
+prerequisites:
+  - Approved Legal Research Output.
+  - Confirmed client objective, authority and communication boundary.
+status: candidate
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

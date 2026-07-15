@@ -1,0 +1,21 @@
+version: 1
+id: strategy-option-verify-first
+strategy_id: strategy-payment-obligation
+matter_slug: sample-contract-dispute
+issue_ref: issue-payment-obligation
+description: >-
+  Preserve the current position while counsel verifies the assumed facts,
+  evidence chain and applicable primary authorities.
+advantages:
+  - Avoids relying on the synthetic fixture as if it were verified evidence.
+  - Keeps unresolved legal and procedural questions visible for counsel.
+risk_refs:
+  - strategy-risk-legal
+  - strategy-risk-evidence
+  - strategy-risk-procedural
+prerequisites:
+  - Human confirmation of the research question and Matter facts.
+  - Verification of primary legal sources and their effective status.
+status: candidate
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

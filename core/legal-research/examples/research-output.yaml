@@ -1,0 +1,28 @@
+version: 1
+id: research-output-payment-obligation
+research_id: research-payment-obligation
+matter_slug: sample-contract-dispute
+issue_ref: issue-payment-obligation
+question: >-
+  For this synthetic fixture, what verified PRC legal rules would govern the
+  assumed payment obligation after the alleged contractual performance?
+sources:
+  - research-source-sample-law
+rules:
+  - id: research-rule-payment-placeholder
+    proposition: No rule stated; primary authority remains unverified.
+    source_refs:
+      - research-source-sample-law
+    verification_status: unverified
+case_patterns: []
+analysis: null
+legal_position: null
+review_status: pending
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Human review is required before any downstream strategy use.
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

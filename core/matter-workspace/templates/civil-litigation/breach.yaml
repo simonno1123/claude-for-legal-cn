@@ -1,0 +1,56 @@
+# Template schema: ../../../schema/evidence.yaml
+version: 1
+id: template-contract-breach-evidence
+matter_slug: template-contract-dispute
+title: 合同违约证据
+evidence_type: document
+classification: contract
+status: received
+source:
+  description: 待填写催告、拒绝履行、迟延记录或其他违约相关材料来源。
+  holder_party_id: null
+  source_ref: null
+acquisition:
+  method: 待记录提交或收集方式。
+  lawfulness: to_assess
+  obtained_at: null
+  note: null
+authenticity:
+  status: to_assess
+  original_status: unknown
+  note: 待核对材料原始载体及形成过程。
+relevance:
+  status: to_assess
+  note: 待人工判断与被主张违约事实的关联。
+admissibility:
+  status: to_assess
+  note: 待人工审查证据资格及取得程序。
+chain_of_custody: []
+file_refs: []
+fact_refs:
+  - fact-contract-breach
+issue_refs:
+  - issue-contract-breach
+fact_relationships:
+  - target_id: fact-contract-breach
+    relation_type: supports
+    note: 候选关联，须经人工确认。
+issue_relationships:
+  - target_id: issue-contract-breach
+    relation_type: relates_to
+    note: 候选关联，须经人工确认。
+confidentiality: standard
+original_held_by: null
+review_note: 模板不预设行为构成违约或责任成立。
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: 复核义务内容、履行期限及抗辩后方可推进。
+module_fields:
+  template: true
+  domain: civil_litigation_contract
+  evidence_category: breach
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

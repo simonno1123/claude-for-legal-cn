@@ -1,0 +1,108 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-strategy/v1/strategy.yaml
+title: Legal Strategy
+description: >-
+  A human-controlled strategy decision record linked to one reviewed research
+  output. The model does not generate or select an option.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - issue_ref
+  - research_output_ref
+  - objective
+  - legal_position
+  - option_refs
+  - risk_refs
+  - recommendation
+  - status
+  - approval_status
+  - human_approval
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/slug
+  issue_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  research_output_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  objective:
+    type: string
+    minLength: 1
+    maxLength: 5000
+  legal_position:
+    oneOf:
+      - type: string
+        maxLength: 10000
+      - type: 'null'
+  option_refs:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  risk_refs:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  recommendation:
+    $ref: '#/$defs/recommendation'
+  status:
+    type: string
+    enum:
+      - research_result_received
+      - issue_assessed
+      - options_documented
+      - risks_reviewed
+      - decision_pending
+      - awaiting_human_approval
+      - approved
+      - rejected
+      - closed
+  approval_status:
+    type: string
+    enum:
+      - pending
+      - approved
+      - rejected
+  human_approval:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/human_review
+  created_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+$defs:
+  recommendation:
+    type: object
+    additionalProperties: false
+    required:
+      - selected_option_ref
+      - rationale
+      - decision_owner
+    properties:
+      selected_option_ref:
+        oneOf:
+          - $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+          - type: 'null'
+      rationale:
+        oneOf:
+          - type: string
+            maxLength: 8000
+          - type: 'null'
+      decision_owner:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 120
+          - type: 'null'

@@ -1,0 +1,56 @@
+# Template schema: ../../../schema/evidence.yaml
+version: 1
+id: template-asset-clues-evidence
+matter_slug: template-enforcement-matter
+title: 财产线索证据
+evidence_type: document
+classification: property
+status: received
+source:
+  description: 待填写不动产、车辆、股权、账户或其他财产线索来源。
+  holder_party_id: null
+  source_ref: null
+acquisition:
+  method: 待记录提交或依法收集方式。
+  lawfulness: to_assess
+  obtained_at: null
+  note: null
+authenticity:
+  status: to_assess
+  original_status: unknown
+  note: 待核对线索来源、权属时点及记录完整性。
+relevance:
+  status: to_assess
+  note: 待人工判断与可供执行财产的关联。
+admissibility:
+  status: to_assess
+  note: 待人工审查证据资格及取得程序。
+chain_of_custody: []
+file_refs: []
+fact_refs:
+  - fact-debtor-assets
+issue_refs:
+  - issue-enforceable-property
+fact_relationships:
+  - target_id: fact-debtor-assets
+    relation_type: supports
+    note: 候选关联，须经人工确认。
+issue_relationships:
+  - target_id: issue-enforceable-property
+    relation_type: relates_to
+    note: 候选关联，须经人工确认。
+confidentiality: heightened
+original_held_by: null
+review_note: 模板不自动调查、检索或确认财产权属。
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: 复核权属、价值、查控状态及来源合法性后方可推进。
+module_fields:
+  template: true
+  domain: enforcement
+  evidence_category: asset_clues
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

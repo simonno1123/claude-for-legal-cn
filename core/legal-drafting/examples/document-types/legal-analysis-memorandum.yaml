@@ -1,0 +1,7 @@
+version: 1
+id: document-type-legal-analysis-memorandum
+category: legal_analysis
+type_code: memorandum
+label: Legal research memorandum workflow record
+purpose: Track a reviewable legal analysis memorandum without approving legal advice.
+status: active

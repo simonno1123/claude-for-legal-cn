@@ -1,0 +1,22 @@
+version: 1
+id: draft-payment-complaint
+matter_slug: sample-contract-dispute
+strategy_ref: strategy-payment-obligation
+research_output_ref: research-output-payment-obligation
+document_type_ref: document-type-litigation-complaint
+source_trace_ref: source-trace-payment-complaint
+purpose: >-
+  Track a synthetic civil complaint drafting request after counsel reviews the
+  underlying Matter, Research and Strategy records.
+revision: 1
+status: draft_requested
+reviewer: null
+approval_status: pending
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Synthetic fixture; no legal document has been generated or approved.
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

@@ -1,0 +1,7 @@
+version: 1
+id: document-type-enforcement-application
+category: enforcement
+type_code: enforcement_application
+label: Enforcement application workflow record
+purpose: Track preparation and review of an enforcement application without filing it.
+status: active

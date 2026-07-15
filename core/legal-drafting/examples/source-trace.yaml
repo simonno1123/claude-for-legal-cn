@@ -1,0 +1,29 @@
+version: 1
+id: source-trace-payment-complaint
+draft_id: draft-payment-complaint
+matter_slug: sample-contract-dispute
+strategy_ref: strategy-payment-obligation
+research_output_ref: research-output-payment-obligation
+issue_ref: issue-payment-obligation
+evidence_refs:
+  - evidence-sample-contract
+fact_refs:
+  - fact-contract-formation
+evidence_fact_links:
+  - evidence_ref: evidence-sample-contract
+    fact_refs:
+      - fact-contract-formation
+    issue_refs:
+      - issue-payment-obligation
+    use_note: >-
+      Synthetic trace only; counsel must verify the Evidence, Fact and intended
+      use before relying on the record in any draft.
+review_status: pending
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Source trace requires human verification before drafting or approval.
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

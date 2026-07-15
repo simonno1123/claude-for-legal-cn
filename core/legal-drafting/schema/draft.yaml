@@ -1,0 +1,78 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-drafting/v1/draft.yaml
+title: Legal Draft
+description: >-
+  A human-controlled legal-document workflow record. It tracks provenance,
+  revision and approval state without generating document content.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - matter_slug
+  - strategy_ref
+  - research_output_ref
+  - document_type_ref
+  - source_trace_ref
+  - purpose
+  - revision
+  - status
+  - reviewer
+  - approval_status
+  - human_review
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/slug
+  strategy_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  research_output_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  document_type_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  source_trace_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  purpose:
+    type: string
+    minLength: 1
+    maxLength: 4000
+  revision:
+    type: integer
+    minimum: 1
+  status:
+    type: string
+    enum:
+      - draft_requested
+      - outlining
+      - drafting
+      - legal_review
+      - revision_required
+      - awaiting_approval
+      - approved
+      - rejected
+      - archived
+  reviewer:
+    oneOf:
+      - type: string
+        minLength: 1
+        maxLength: 120
+      - type: 'null'
+  approval_status:
+    type: string
+    enum:
+      - pending
+      - approved
+      - rejected
+  human_review:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/human_review
+  created_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time

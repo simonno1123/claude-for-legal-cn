@@ -1,0 +1,86 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-drafting/v1/document-type.yaml
+title: Legal Document Type
+description: >-
+  A document-type definition used to classify a Draft. It contains no document
+  body, filing instruction or automated-generation capability.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - category
+  - type_code
+  - label
+  - purpose
+  - status
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  category:
+    type: string
+    enum:
+      - litigation
+      - legal_analysis
+      - enforcement
+  type_code:
+    type: string
+    enum:
+      - complaint
+      - answer
+      - evidence_list
+      - hearing_statement
+      - memorandum
+      - opinion_report
+      - enforcement_application
+      - investigation_request
+  label:
+    type: string
+    minLength: 1
+    maxLength: 200
+  purpose:
+    type: string
+    minLength: 1
+    maxLength: 2000
+  status:
+    type: string
+    enum:
+      - active
+      - retired
+allOf:
+  - if:
+      properties:
+        category:
+          const: litigation
+    then:
+      properties:
+        type_code:
+          enum:
+            - complaint
+            - answer
+            - evidence_list
+            - hearing_statement
+  - if:
+      properties:
+        category:
+          const: legal_analysis
+    then:
+      properties:
+        type_code:
+          enum:
+            - memorandum
+            - opinion_report
+  - if:
+      properties:
+        category:
+          const: enforcement
+    then:
+      properties:
+        type_code:
+          enum:
+            - enforcement_application
+            - investigation_request

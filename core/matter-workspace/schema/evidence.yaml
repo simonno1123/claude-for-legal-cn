@@ -38,7 +38,41 @@ properties:
     type: string
     minLength: 1
     maxLength: 300
+  metadata:
+    type: object
+    additionalProperties: false
+    properties:
+      external_id:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 200
+          - type: 'null'
+      description:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
+      document_date:
+        oneOf:
+          - type: string
+            format: date
+          - type: 'null'
+      language:
+        oneOf:
+          - type: string
+            minLength: 2
+            maxLength: 35
+          - type: 'null'
+      tags:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+          minLength: 1
+          maxLength: 100
   evidence_type:
+    description: Legal-form evidence type used by the existing Matter model.
     type: string
     enum:
       - document
@@ -50,7 +84,22 @@ properties:
       - party_statement
       - physical_evidence
       - other
+  classification:
+    description: Business classification used for Evidence intake and routing.
+    type: string
+    enum:
+      - contract
+      - payment
+      - communication
+      - corporate
+      - court_document
+      - property
+      - identity
+      - other
   status:
+    description: >-
+      Evidence lifecycle status. Existing v1 values remain valid for backward
+      compatibility; the additional values support the Evidence Workflow.
     type: string
     enum:
       - pending_collection
@@ -59,6 +108,10 @@ properties:
       - verified
       - challenged
       - excluded
+      - received
+      - reviewing
+      - disputed
+      - archived
   source:
     $ref: '#/$defs/source'
   acquisition:
@@ -79,9 +132,69 @@ properties:
     items:
       $ref: matter.yaml#/$defs/local_path
   fact_refs:
+    description: Fact IDs associated with this Evidence record.
     $ref: matter.yaml#/$defs/reference_list
   issue_refs:
+    description: Issue IDs associated with this Evidence record.
     $ref: matter.yaml#/$defs/reference_list
+  fact_relationships:
+    description: Optional typed relationships to Fact records.
+    type: array
+    uniqueItems: true
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - target_id
+        - relation_type
+        - note
+      properties:
+        target_id:
+          type: string
+          pattern: '^[a-z0-9][a-z0-9-]{0,95}$'
+        relation_type:
+          type: string
+          enum:
+            - supports
+            - contradicts
+            - contextualizes
+            - authenticates
+            - challenges
+            - relates_to
+        note:
+          oneOf:
+            - type: string
+              maxLength: 2000
+            - type: 'null'
+  issue_relationships:
+    description: Optional typed relationships to Issue records.
+    type: array
+    uniqueItems: true
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - target_id
+        - relation_type
+        - note
+      properties:
+        target_id:
+          type: string
+          pattern: '^[a-z0-9][a-z0-9-]{0,95}$'
+        relation_type:
+          type: string
+          enum:
+            - supports
+            - contradicts
+            - contextualizes
+            - authenticates
+            - challenges
+            - relates_to
+        note:
+          oneOf:
+            - type: string
+              maxLength: 2000
+            - type: 'null'
   confidentiality:
     $ref: matter.yaml#/$defs/confidentiality
   original_held_by:
@@ -93,6 +206,42 @@ properties:
       - type: string
         maxLength: 5000
       - type: 'null'
+  human_review:
+    description: Mandatory human approval gate when this field is present.
+    type: object
+    additionalProperties: false
+    required:
+      - required
+      - status
+      - reviewer
+      - reviewed_at
+      - note
+    properties:
+      required:
+        type: boolean
+        const: true
+      status:
+        type: string
+        enum:
+          - pending
+          - approved
+          - rejected
+      reviewer:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 120
+          - type: 'null'
+      reviewed_at:
+        oneOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+      note:
+        oneOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
   module_fields:
     type: object
   created_at:
@@ -122,6 +271,59 @@ $defs:
             minLength: 1
             maxLength: 500
           - type: 'null'
+      origin:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 500
+          - type: 'null'
+      provider_party_id:
+        oneOf:
+          - type: string
+            pattern: '^[a-z0-9][a-z0-9-]{0,95}$'
+          - type: 'null'
+      provider_name:
+        oneOf:
+          - type: string
+            minLength: 1
+            maxLength: 300
+          - type: 'null'
+      reliability:
+        description: >-
+          Human-recorded source reliability information, not an automated
+          finding.
+        type: object
+        additionalProperties: false
+        required:
+          - status
+          - reviewed_by
+          - reviewed_at
+          - note
+        properties:
+          status:
+            type: string
+            enum:
+              - unassessed
+              - corroborated
+              - partially_corroborated
+              - disputed
+              - unreliable
+          reviewed_by:
+            oneOf:
+              - type: string
+                minLength: 1
+                maxLength: 120
+              - type: 'null'
+          reviewed_at:
+            oneOf:
+              - type: string
+                format: date-time
+              - type: 'null'
+          note:
+            oneOf:
+              - type: string
+                maxLength: 2000
+              - type: 'null'
   acquisition:
     type: object
     additionalProperties: false

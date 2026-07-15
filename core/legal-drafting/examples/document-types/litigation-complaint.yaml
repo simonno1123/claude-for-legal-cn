@@ -1,0 +1,7 @@
+version: 1
+id: document-type-litigation-complaint
+category: litigation
+type_code: complaint
+label: Civil complaint workflow record
+purpose: Track preparation and review of a civil complaint without generating its content.
+status: active

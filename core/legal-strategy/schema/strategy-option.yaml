@@ -1,0 +1,67 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-strategy/v1/strategy-option.yaml
+title: Legal Strategy Option
+description: >-
+  A human-authored candidate option. Schema validity does not recommend,
+  select or approve the option.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - strategy_id
+  - matter_slug
+  - issue_ref
+  - description
+  - advantages
+  - risk_refs
+  - prerequisites
+  - status
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  strategy_id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/slug
+  issue_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  description:
+    type: string
+    minLength: 1
+    maxLength: 5000
+  advantages:
+    type: array
+    items:
+      type: string
+      minLength: 1
+      maxLength: 2000
+  risk_refs:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  prerequisites:
+    type: array
+    items:
+      type: string
+      minLength: 1
+      maxLength: 2000
+  status:
+    type: string
+    enum:
+      - candidate
+      - under_review
+      - selected
+      - rejected
+      - withdrawn
+  created_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time

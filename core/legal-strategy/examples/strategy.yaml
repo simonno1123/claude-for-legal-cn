@@ -1,0 +1,31 @@
+version: 1
+id: strategy-payment-obligation
+matter_slug: sample-contract-dispute
+issue_ref: issue-payment-obligation
+research_output_ref: research-output-payment-obligation
+objective: >-
+  Document human-controlled candidate responses for the synthetic payment
+  issue after facts, evidence and primary authorities are verified.
+legal_position: null
+option_refs:
+  - strategy-option-verify-first
+  - strategy-option-reviewed-engagement
+risk_refs:
+  - strategy-risk-legal
+  - strategy-risk-evidence
+  - strategy-risk-procedural
+  - strategy-risk-business
+recommendation:
+  selected_option_ref: null
+  rationale: null
+  decision_owner: null
+status: awaiting_human_approval
+approval_status: pending
+human_approval:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: Synthetic fixture; no option has been recommended or approved.
+created_at: '2026-01-15T10:00:00+08:00'
+updated_at: '2026-01-15T10:00:00+08:00'

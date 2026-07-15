@@ -19,6 +19,28 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 VALIDATOR_PATH = (
     REPO_ROOT / "core" / "matter-workspace" / "validators" / "validate.py"
 )
+REQUIRED_LITIGATION_EVIDENCE_TEMPLATES = frozenset(
+    {
+        "civil-litigation/breach.yaml",
+        "civil-litigation/communication.yaml",
+        "civil-litigation/contract-formation.yaml",
+        "civil-litigation/damages.yaml",
+        "civil-litigation/payment.yaml",
+        "civil-litigation/performance.yaml",
+        "corporate/capital-contribution.yaml",
+        "corporate/control-relationship.yaml",
+        "corporate/corporate-registration.yaml",
+        "corporate/damage-evidence.yaml",
+        "corporate/related-party-evidence.yaml",
+        "corporate/transaction-flow.yaml",
+        "enforcement/asset-clues.yaml",
+        "enforcement/debtor-information.yaml",
+        "enforcement/enforcement-basis.yaml",
+        "enforcement/recovery-strategy.yaml",
+        "enforcement/related-parties.yaml",
+        "enforcement/transfer-evidence.yaml",
+    }
+)
 
 
 def load_validator_module():
@@ -79,11 +101,24 @@ class MatterWorkspaceValidatorIntegrationTests(unittest.TestCase):
 
     def test_complete_asset_chain_passes(self) -> None:
         result = self.run_copied_validator()
+        template_root = (
+            self.temp_root / "core" / "matter-workspace" / "templates"
+        )
+        template_paths = {
+            path.relative_to(template_root).as_posix()
+            for path in template_root.rglob("*.yaml")
+        }
         self.assertEqual("PASS", result["status"])
         self.assertEqual([], result["errors"])
         self.assertEqual(8, result["checked"]["schemas"])
         self.assertEqual(127, result["checked"]["schema_refs"])
-        self.assertEqual(8, result["checked"]["templates"])
+        self.assertEqual(len(template_paths), result["checked"]["templates"])
+        missing_templates = REQUIRED_LITIGATION_EVIDENCE_TEMPLATES - template_paths
+        self.assertFalse(
+            missing_templates,
+            msg=f"missing required litigation Evidence templates: "
+            f"{sorted(missing_templates)}",
+        )
         self.assertEqual(9, result["checked"]["sample_records"])
         self.assertEqual(8, result["checked"]["sample_entities"])
 

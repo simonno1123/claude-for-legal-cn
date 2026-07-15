@@ -1,0 +1,56 @@
+# Template schema: ../../../schema/evidence.yaml
+version: 1
+id: template-control-relationship-evidence
+matter_slug: template-corporate-dispute
+title: 控制关系证据
+evidence_type: document
+classification: corporate
+status: received
+source:
+  description: 待填写股权、表决权、任职、协议控制或实际支配材料来源。
+  holder_party_id: null
+  source_ref: null
+acquisition:
+  method: 待记录提交或依法收集方式。
+  lawfulness: to_assess
+  obtained_at: null
+  note: null
+authenticity:
+  status: to_assess
+  original_status: unknown
+  note: 待核对材料来源、时间范围及形成过程。
+relevance:
+  status: to_assess
+  note: 待人工判断与控制关系事实的关联。
+admissibility:
+  status: to_assess
+  note: 待人工审查证据资格及取得程序。
+chain_of_custody: []
+file_refs: []
+fact_refs:
+  - fact-control-relationship
+issue_refs:
+  - issue-actual-control
+fact_relationships:
+  - target_id: fact-control-relationship
+    relation_type: contextualizes
+    note: 候选关联，须经人工确认。
+issue_relationships:
+  - target_id: issue-actual-control
+    relation_type: relates_to
+    note: 候选关联，须经人工确认。
+confidentiality: heightened
+original_held_by: null
+review_note: 控制关系材料不当然证明人格混同或责任承担。
+human_review:
+  required: true
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  note: 复核控制方式、期间及责任要件后方可推进。
+module_fields:
+  template: true
+  domain: corporate_dispute
+  evidence_category: control_relationship
+created_at: '2000-01-01T00:00:00Z'
+updated_at: '2000-01-01T00:00:00Z'

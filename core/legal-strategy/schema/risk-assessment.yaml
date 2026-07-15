@@ -1,0 +1,88 @@
+# JSON Schema Draft 2020-12 expressed as YAML.
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.claude-for-legal-cn.invalid/legal-strategy/v1/risk-assessment.yaml
+title: Legal Strategy Risk Assessment
+description: >-
+  A human-recorded qualitative risk. It contains no success probability,
+  prediction or automatic legal conclusion.
+type: object
+additionalProperties: false
+required:
+  - version
+  - id
+  - strategy_id
+  - matter_slug
+  - issue_ref
+  - risk_type
+  - description
+  - severity
+  - evidence_refs
+  - research_source_refs
+  - mitigation
+  - status
+  - review_note
+  - created_at
+  - updated_at
+properties:
+  version:
+    type: integer
+    const: 1
+  id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  strategy_id:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  matter_slug:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/slug
+  issue_ref:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  risk_type:
+    type: string
+    enum:
+      - legal
+      - evidence
+      - procedural
+      - business
+  description:
+    type: string
+    minLength: 1
+    maxLength: 5000
+  severity:
+    type: string
+    enum:
+      - unassessed
+      - low
+      - medium
+      - high
+      - critical
+  evidence_refs:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  research_source_refs:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/entity_id
+  mitigation:
+    oneOf:
+      - type: string
+        maxLength: 5000
+      - type: 'null'
+  status:
+    type: string
+    enum:
+      - open
+      - under_review
+      - mitigated
+      - accepted
+      - closed
+  review_note:
+    oneOf:
+      - type: string
+        maxLength: 2000
+      - type: 'null'
+  created_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
+  updated_at:
+    $ref: https://schemas.claude-for-legal-cn.invalid/matter-workspace/v1/matter.yaml#/$defs/date_time
