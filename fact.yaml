@@ -1,0 +1,1715 @@
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "urn:acos:phase3:track-c:fact-schema:1.0.0"
+title: "ACOS Phase 3 Track C — Governed Objective Fact"
+description: >-
+  Concrete Fact Schema for governed objective-fact records. Structural
+  conformance to this Schema does not establish evidence validity, fact truth,
+  Human Validation, Legal Fact, Request Right, or downstream authorization.
+type: object
+additionalProperties: false
+
+x-acos-governance:
+  phase: "PHASE 3"
+  track: "Track C"
+  name: "FACT SCHEMA MATERIALIZATION"
+  unique_authorized_asset: "fact.yaml"
+  asset_version: "1.0.0"
+  expression: "JSON Schema Draft 2020-12 expressed in YAML"
+  status: "MATERIALIZED — PENDING SCHEMA REVIEW"
+  acceptance_status: "NOT ACCEPTED"
+  schema_validation_status: "NOT AUTHORIZED"
+  implementation_status: "NOT AUTHORIZED"
+  real_matter_status: "NOT AUTHORIZED"
+  legal_fact_status: "NOT AUTHORIZED"
+  request_right_status: "NOT AUTHORIZED"
+  asset_integrity: "EXTERNAL SHA-256 REQUIRED; NO SELF-HASH"
+  normative_baseline:
+    - artifact: "TASK_PHASE3_TRACK_A_FACT_CONSTRUCTION_GOVERNANCE_HANDOFF.md"
+      sha256: "33C7AF56B80015804BCE056AAEFBABB6FC30811908652E0EE68709342A06AEC8"
+    - artifact: "TASK_PHASE3_TRACK_A_FACT_CONSTRUCTION_GOVERNANCE_SPEC.md"
+      sha256: "2721F31685A3831EA68792AEE1C011599E7DF2E122FB41B5D1BB1A5C967CF1FA"
+    - artifact: "TASK_PHASE3_TRACK_A_FACT_CONSTRUCTION_GOVERNANCE_RESULT.md"
+      sha256: "EB24C7C46FDF70EA71999EDAE46E905301F19E7DBEE6F19F54B66D5C07E6938E"
+    - artifact: "TASK_PHASE3_TRACK_B_FACT_SCHEMA_GOVERNANCE_HANDOFF.md"
+      sha256: "EF7788D15F037705CD6932CD772B6C78E6961EC0D9F64CDD06620DF2693A8E3E"
+    - artifact: "TASK_PHASE3_TRACK_B_FACT_SCHEMA_GOVERNANCE_SPEC.md"
+      sha256: "9DCF9D7794E3C91A1ADF3902C2EA45056395F5F03A2645ED7B2721104477AD96"
+    - artifact: "TASK_PHASE3_TRACK_B_FACT_SCHEMA_GOVERNANCE_RESULT.md"
+      sha256: "6F02F5016572DBE4C014EA9E66856D13A0DADB696D28B8F56CBAD621D6D342C6"
+    - artifact: "TASK_PHASE3_TRACK_C_FACT_SCHEMA_MATERIALIZATION_HANDOFF.md"
+      sha256: "F822C4BA3DEE2D1F449E3AE3A2F3054825502F4B62A109007AF46290A97129DB"
+    - artifact: "TASK_PHASE3_TRACK_C_FACT_SCHEMA_MATERIALIZATION_SPEC.md"
+      sha256: "BE59D0E137CC18C69194C1D369DAA8CCA3C87EB502BED9A412D64FC6BE49E3BB"
+    - artifact: "TASK_PHASE3_TRACK_C_FACT_SCHEMA_MATERIALIZATION_RESULT.md"
+      sha256: "A3E8F100EA7BD4B1752FCA79BCDE1D5282ED2AA0FDC596B17209C16480652131"
+  governing_invariants:
+    - "Evidence is not Fact."
+    - "Fact is not Legal Fact."
+    - "Structural Validity is not Fact Validity."
+    - "Schema Conformance is not Fact Truth."
+    - "Data Presence is not Confirmed Fact."
+    - "Data Absence is not Fact Non-Existence."
+    - "Unknown is not Empty."
+    - "Disputed is not Invalid."
+    - "Rejected is not Deleted History."
+    - "Superseded is not Silently Overwritten."
+    - "Human Review Support is not Human Decision."
+    - "Schema Availability is not Downstream Authorization."
+  prohibited_companion_assets:
+    - "Schema instances"
+    - "Examples"
+    - "Test data"
+    - "Real, simulated, or synthetic matter data"
+    - "Validator"
+    - "Migration"
+    - "Generator"
+    - "Converter"
+    - "Agent"
+    - "Skill"
+    - "Tool"
+    - "Implementation code"
+    - "API structure"
+    - "Database structure"
+    - "Legal Fact asset"
+    - "Request Right asset"
+
+required:
+  - schema_version
+  - fact_identity
+  - fact_expression
+  - lifecycle_state
+  - construction
+  - traceability
+  - human_validation
+  - dispute
+  - absence_and_unknown
+  - revalidation
+  - version_governance
+  - legal_isolation
+  - audit
+  - governance_controls
+
+properties:
+  schema_version:
+    const: "1.0.0"
+    description: >-
+      Version of this concrete Schema. Presence of this value does not prove
+      that a record was accepted, validated, or authorized for downstream use.
+
+  fact_identity:
+    "$ref": "#/$defs/fact_identity"
+
+  fact_expression:
+    "$ref": "#/$defs/fact_expression"
+
+  lifecycle_state:
+    "$ref": "#/$defs/lifecycle_state"
+
+  construction:
+    "$ref": "#/$defs/construction"
+
+  traceability:
+    "$ref": "#/$defs/traceability"
+
+  human_validation:
+    "$ref": "#/$defs/human_validation"
+
+  dispute:
+    "$ref": "#/$defs/dispute"
+
+  absence_and_unknown:
+    "$ref": "#/$defs/absence_and_unknown"
+
+  revalidation:
+    "$ref": "#/$defs/revalidation"
+
+  version_governance:
+    "$ref": "#/$defs/version_governance"
+
+  legal_isolation:
+    "$ref": "#/$defs/legal_isolation"
+
+  audit:
+    "$ref": "#/$defs/audit"
+
+  governance_controls:
+    "$ref": "#/$defs/governance_controls"
+
+allOf:
+  - if:
+      not:
+        properties:
+          lifecycle_state:
+            const: "Rejected / Out of Scope"
+        required:
+          - lifecycle_state
+    then:
+      properties:
+        fact_expression:
+          required:
+            - objective_statement
+          properties:
+            submitted_candidate_legal_characterization_excluded:
+              const: true
+        construction:
+          properties:
+            source_bound:
+              const: true
+        traceability:
+          properties:
+            evidence_links:
+              minItems: 1
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Unverified Fact Candidate"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          not:
+            required:
+              - current_disposition
+          properties:
+            decision_history:
+              maxItems: 0
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              maxItems: 0
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Not Reliance-Eligible"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Validation Pending"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          required:
+            - gate_submission_reference
+          anyOf:
+            - not:
+                required:
+                  - current_disposition
+            - required:
+                - current_disposition
+              properties:
+                current_disposition:
+                  const: "Return for Revalidation"
+          properties:
+            decision_history:
+              not:
+                contains:
+                  type: object
+                  required:
+                    - decision_type
+                    - decision_status
+                  properties:
+                    decision_type:
+                      enum:
+                        - "Confirmed"
+                        - "Disputed"
+                        - "Unknown"
+                        - "Rejected / Out of Scope"
+                        - "Legal Fact Candidate Isolation Approval"
+                    decision_status:
+                      const: "Active"
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Not Reliance-Eligible"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Verified Objective Fact"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          required:
+            - current_disposition
+          properties:
+            current_disposition:
+              const: "Confirmed"
+            decision_history:
+              contains:
+                type: object
+                required:
+                  - decision_type
+                  - decision_status
+                properties:
+                  decision_type:
+                    const: "Confirmed"
+                  decision_status:
+                    const: "Active"
+              minContains: 1
+              not:
+                contains:
+                  type: object
+                  required:
+                    - decision_type
+                    - decision_status
+                  properties:
+                    decision_type:
+                      enum:
+                        - "Disputed"
+                        - "Unknown"
+                        - "Rejected / Out of Scope"
+                        - "Return for Revalidation"
+                        - "Legal Fact Candidate Isolation Approval"
+                    decision_status:
+                      const: "Active"
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 1
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Objective Fact Reliance Only"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Disputed Objective Fact"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          required:
+            - current_disposition
+          properties:
+            current_disposition:
+              const: "Disputed"
+            decision_history:
+              contains:
+                type: object
+                required:
+                  - decision_type
+                  - decision_status
+                properties:
+                  decision_type:
+                    const: "Disputed"
+                  decision_status:
+                    const: "Active"
+              minContains: 1
+              not:
+                contains:
+                  type: object
+                  required:
+                    - decision_type
+                    - decision_status
+                  properties:
+                    decision_type:
+                      enum:
+                        - "Confirmed"
+                        - "Unknown"
+                        - "Rejected / Out of Scope"
+                        - "Return for Revalidation"
+                        - "Legal Fact Candidate Isolation Approval"
+                    decision_status:
+                      const: "Active"
+        dispute:
+          required:
+            - dispute_group_reference
+          properties:
+            active:
+              const: true
+            competing_versions:
+              minItems: 2
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 1
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Dispute Preservation Only"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Unknown / Insufficient"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          required:
+            - current_disposition
+          properties:
+            current_disposition:
+              const: "Unknown"
+            decision_history:
+              contains:
+                type: object
+                required:
+                  - decision_type
+                  - decision_status
+                properties:
+                  decision_type:
+                    const: "Unknown"
+                  decision_status:
+                    const: "Active"
+              minContains: 1
+              not:
+                contains:
+                  type: object
+                  required:
+                    - decision_type
+                    - decision_status
+                  properties:
+                    decision_type:
+                      enum:
+                        - "Confirmed"
+                        - "Disputed"
+                        - "Rejected / Out of Scope"
+                        - "Return for Revalidation"
+                        - "Legal Fact Candidate Isolation Approval"
+                    decision_status:
+                      const: "Active"
+        absence_and_unknown:
+          properties:
+            information_gaps:
+              contains:
+                type: object
+                required:
+                  - semantic_classification
+                properties:
+                  semantic_classification:
+                    const: "Unknown / Insufficient"
+              minContains: 1
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 1
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Unknown Preservation Only"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Rejected / Out of Scope"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          required:
+            - current_disposition
+          properties:
+            current_disposition:
+              const: "Rejected / Out of Scope"
+            decision_history:
+              contains:
+                type: object
+                required:
+                  - decision_type
+                  - decision_status
+                properties:
+                  decision_type:
+                    const: "Rejected / Out of Scope"
+                  decision_status:
+                    const: "Active"
+              minContains: 1
+              not:
+                contains:
+                  type: object
+                  required:
+                    - decision_type
+                    - decision_status
+                  properties:
+                    decision_type:
+                      enum:
+                        - "Confirmed"
+                        - "Disputed"
+                        - "Unknown"
+                        - "Return for Revalidation"
+                        - "Legal Fact Candidate Isolation Approval"
+                    decision_status:
+                      const: "Active"
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 1
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Blocked"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Superseded / Revalidation Required"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        revalidation:
+          properties:
+            required:
+              const: true
+            reliance_suspended:
+              const: true
+        human_validation:
+          anyOf:
+            - not:
+                required:
+                  - current_disposition
+            - required:
+                - current_disposition
+              properties:
+                current_disposition:
+                  const: "Return for Revalidation"
+          properties:
+            decision_history:
+              not:
+                contains:
+                  type: object
+                  required:
+                    - decision_type
+                    - decision_status
+                  properties:
+                    decision_type:
+                      enum:
+                        - "Confirmed"
+                        - "Disputed"
+                        - "Unknown"
+                        - "Rejected / Out of Scope"
+                        - "Legal Fact Candidate Isolation Approval"
+                    decision_status:
+                      const: "Active"
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 1
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Suspended"
+
+  - if:
+      properties:
+        lifecycle_state:
+          const: "Legal Fact Candidate — Isolated"
+      required:
+        - lifecycle_state
+    then:
+      properties:
+        human_validation:
+          required:
+            - current_disposition
+          properties:
+            current_disposition:
+              const: "Confirmed"
+            decision_history:
+              allOf:
+                - contains:
+                    type: object
+                    required:
+                      - decision_type
+                      - decision_status
+                    properties:
+                      decision_type:
+                        const: "Confirmed"
+                      decision_status:
+                        const: "Active"
+                  minContains: 1
+                - not:
+                    contains:
+                      type: object
+                      required:
+                        - decision_type
+                        - decision_status
+                      properties:
+                        decision_type:
+                          enum:
+                            - "Disputed"
+                            - "Unknown"
+                            - "Rejected / Out of Scope"
+                            - "Return for Revalidation"
+                        decision_status:
+                          const: "Active"
+                - contains:
+                    type: object
+                    required:
+                      - decision_type
+                      - decision_status
+                    properties:
+                      decision_type:
+                        const: "Legal Fact Candidate Isolation Approval"
+                      decision_status:
+                        const: "Active"
+                  minContains: 1
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 2
+        legal_isolation:
+          required:
+            - candidate_gate_decision_reference
+            - isolation_boundary_authorization_reference
+          properties:
+            candidate_isolated:
+              const: true
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Isolated Candidate Only"
+
+  - if:
+      not:
+        properties:
+          lifecycle_state:
+            const: "Legal Fact Candidate — Isolated"
+        required:
+          - lifecycle_state
+    then:
+      properties:
+        legal_isolation:
+          properties:
+            candidate_isolated:
+              const: false
+
+  - if:
+      properties:
+        human_validation:
+          properties:
+            current_disposition:
+              const: "Return for Revalidation"
+          required:
+            - current_disposition
+      required:
+        - human_validation
+    then:
+      properties:
+        lifecycle_state:
+          const: "Validation Pending"
+        human_validation:
+          properties:
+            decision_history:
+              contains:
+                type: object
+                required:
+                  - decision_type
+                  - decision_status
+                properties:
+                  decision_type:
+                    const: "Return for Revalidation"
+                  decision_status:
+                    const: "Active"
+              minContains: 1
+        traceability:
+          properties:
+            authorized_human_decision_references:
+              minItems: 1
+        revalidation:
+          required:
+            - return_decision_reference
+            - target_state
+          properties:
+            required:
+              const: true
+            target_state:
+              const: "Validation Pending"
+            reliance_suspended:
+              const: true
+        governance_controls:
+          properties:
+            current_reliance_status:
+              const: "Not Reliance-Eligible"
+
+  - if:
+      properties:
+        human_validation:
+          properties:
+            decision_history:
+              contains:
+                type: object
+                required:
+                  - decision_type
+                  - decision_status
+                properties:
+                  decision_type:
+                    const: "Return for Revalidation"
+                  decision_status:
+                    const: "Active"
+              minContains: 1
+          required:
+            - decision_history
+      required:
+        - human_validation
+    then:
+      properties:
+        human_validation:
+          required:
+            - current_disposition
+          properties:
+            current_disposition:
+              const: "Return for Revalidation"
+
+  - if:
+      properties:
+        revalidation:
+          properties:
+            required:
+              const: true
+          required:
+            - required
+      required:
+        - revalidation
+    then:
+      properties:
+        lifecycle_state:
+          enum:
+            - "Validation Pending"
+            - "Superseded / Revalidation Required"
+        revalidation:
+          properties:
+            reasons:
+              minItems: 1
+            target_state:
+              const: "Validation Pending"
+            reliance_suspended:
+              const: true
+        governance_controls:
+          properties:
+            current_reliance_status:
+              enum:
+                - "Not Reliance-Eligible"
+                - "Suspended"
+
+  - if:
+      not:
+        properties:
+          lifecycle_state:
+            enum:
+              - "Validation Pending"
+              - "Superseded / Revalidation Required"
+        required:
+          - lifecycle_state
+    then:
+      properties:
+        revalidation:
+          properties:
+            required:
+              const: false
+            reliance_suspended:
+              const: false
+
+  - if:
+      not:
+        properties:
+          lifecycle_state:
+            const: "Disputed Objective Fact"
+        required:
+          - lifecycle_state
+    then:
+      properties:
+        dispute:
+          properties:
+            active:
+              const: false
+
+"$defs":
+  non_empty_string:
+    type: string
+    minLength: 1
+
+  reference:
+    type: string
+    minLength: 1
+    description: >-
+      Stable reference to an authoritative governance object. Structural
+      presence does not establish the referenced object's validity.
+
+  timestamp:
+    type: string
+    format: date-time
+
+  lifecycle_state:
+    type: string
+    enum:
+      - "Unverified Fact Candidate"
+      - "Validation Pending"
+      - "Verified Objective Fact"
+      - "Disputed Objective Fact"
+      - "Unknown / Insufficient"
+      - "Rejected / Out of Scope"
+      - "Superseded / Revalidation Required"
+      - "Legal Fact Candidate — Isolated"
+    description: >-
+      Track A lifecycle state. This value is separate from Human Validation
+      disposition and cannot be promoted by structural validation.
+
+  validation_disposition:
+    type: string
+    enum:
+      - "Confirmed"
+      - "Disputed"
+      - "Unknown"
+      - "Rejected / Out of Scope"
+      - "Return for Revalidation"
+    description: >-
+      Authorized human disposition. Schema conformance cannot grant this value.
+
+  fact_identity:
+    type: object
+    additionalProperties: false
+    required:
+      - fact_id
+      - record_id
+    properties:
+      fact_id:
+        "$ref": "#/$defs/reference"
+        description: >-
+          Stable identity across governed versions of the same fact candidate.
+      record_id:
+        "$ref": "#/$defs/reference"
+        description: "Identity of this specific governed record version."
+      identity_continuity_reference:
+        "$ref": "#/$defs/reference"
+        description: >-
+          Reference demonstrating why versions belong to the same fact
+          identity; it must not merge merely similar statements.
+
+  fact_expression:
+    type: object
+    additionalProperties: false
+    required:
+      - submitted_candidate_statement
+      - support_scope
+      - scope_limitations
+      - submitted_candidate_legal_characterization_excluded
+      - negative_inference_from_silence_prohibited
+    properties:
+      submitted_candidate_statement:
+        "$ref": "#/$defs/non_empty_string"
+        description: >-
+          Statement submitted to governance. For Rejected / Out of Scope this
+          preserves the blocked input for audit without treating it as a Fact.
+      objective_statement:
+        "$ref": "#/$defs/non_empty_string"
+        description: >-
+          Minimal objective statement limited to what qualified evidence can
+          support. Required for every state other than Rejected / Out of Scope;
+          it must not contain legal characterization or requested legal
+          outcomes.
+      support_scope:
+        "$ref": "#/$defs/non_empty_string"
+        description: "Express boundary of evidentiary support."
+      scope_limitations:
+        type: array
+        items:
+          "$ref": "#/$defs/non_empty_string"
+        uniqueItems: true
+        description: >-
+          Express limitations and unresolved boundaries; an empty array does
+          not mean that no limitations exist unless an authorized human
+          decision establishes that conclusion.
+      uncertainty_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      submitted_candidate_legal_characterization_excluded:
+        type: boolean
+        description: >-
+          Input-audit classification for the statement submitted to governance.
+          It must be true for every state other than Rejected / Out of Scope.
+          False in a rejected record only documents why the submitted candidate
+          was blocked; it never characterizes a Fact-layer output and never
+          permits legal content to enter the Fact layer.
+      negative_inference_from_silence_prohibited:
+        const: true
+
+  construction:
+    type: object
+    additionalProperties: false
+    required:
+      - construction_id
+      - submitter_reference
+      - submitter_role
+      - submitter_authorization_reference
+      - submitted_at
+      - construction_decision_reference
+      - formation_process
+      - source_bound
+      - uncertainty_preserved
+    properties:
+      construction_id:
+        "$ref": "#/$defs/reference"
+      submitter_reference:
+        "$ref": "#/$defs/reference"
+      submitter_role:
+        const: "Construction Submitter"
+      submitter_authorization_reference:
+        "$ref": "#/$defs/reference"
+      submitted_at:
+        "$ref": "#/$defs/timestamp"
+      construction_decision_reference:
+        "$ref": "#/$defs/reference"
+      formation_process:
+        "$ref": "#/$defs/non_empty_string"
+        description: >-
+          Auditable explanation of how the statement was formed from its
+          evidence links without supplementing or rewriting the evidence.
+      source_bound:
+        type: boolean
+        description: >-
+          Must be true for every state other than Rejected / Out of Scope.
+          A rejected intake may record false when no qualified evidence source
+          exists; false never authorizes Fact construction.
+      uncertainty_preserved:
+        const: true
+
+  traceability:
+    type: object
+    additionalProperties: false
+    description: >-
+      Preserves the chain from Fact State through construction or validation
+      decision, authorized human decision when one exists, Verified Evidence
+      reference, and Evidence Governance verification. Presence of references
+      is not proof that the referenced governance acts are valid.
+    required:
+      - construction_or_validation_decision_references
+      - authorized_human_decision_references
+      - evidence_links
+    properties:
+      construction_or_validation_decision_references:
+        type: array
+        minItems: 1
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      authorized_human_decision_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+        description: >-
+          May be empty before a Human Validation decision exists. It must not
+          be treated as Unknown, Rejected, or Confirmed merely because it is
+          empty.
+      evidence_links:
+        type: array
+        items:
+          "$ref": "#/$defs/evidence_link"
+        description: >-
+          Must contain at least one qualified link for every state other than
+          Rejected / Out of Scope. It may be empty only to preserve a rejection
+          based on the absence of a qualified evidence source.
+
+  evidence_link:
+    type: object
+    additionalProperties: false
+    required:
+      - evidence_link_id
+      - verified_evidence_reference
+      - evidence_version_reference
+      - verified_evidence_qualification_reference
+      - evidence_governance_verification_reference
+      - support_scope
+    properties:
+      evidence_link_id:
+        "$ref": "#/$defs/reference"
+      verified_evidence_reference:
+        "$ref": "#/$defs/reference"
+      evidence_version_reference:
+        "$ref": "#/$defs/reference"
+      verified_evidence_qualification_reference:
+        "$ref": "#/$defs/reference"
+        description: >-
+          Reference proving Verified Evidence qualification at the relevant
+          governance time; it is not a fact-validation decision.
+      evidence_governance_verification_reference:
+        "$ref": "#/$defs/reference"
+      support_scope:
+        "$ref": "#/$defs/non_empty_string"
+      source_difference_note:
+        "$ref": "#/$defs/non_empty_string"
+        description: >-
+          Preserves material differences in source, version, wording, or
+          support scope. It must not be used to rank sources automatically.
+
+  human_validation:
+    type: object
+    additionalProperties: false
+    required:
+      - decision_history
+      - submitter_may_not_self_approve
+      - model_output_is_non_decisive
+    properties:
+      gate_submission_reference:
+        "$ref": "#/$defs/reference"
+      current_disposition:
+        "$ref": "#/$defs/validation_disposition"
+      decision_history:
+        type: array
+        items:
+          "$ref": "#/$defs/human_decision"
+      submitter_may_not_self_approve:
+        const: true
+      model_output_is_non_decisive:
+        const: true
+
+  human_decision:
+    type: object
+    additionalProperties: false
+    required:
+      - decision_id
+      - decision_type
+      - decision_status
+      - human_actor_reference
+      - human_authorization_reference
+      - decision_scope
+      - evidence_link_references
+      - decided_at
+      - model_output_is_non_decisive
+    properties:
+      decision_id:
+        "$ref": "#/$defs/reference"
+      decision_type:
+        type: string
+        enum:
+          - "Confirmed"
+          - "Disputed"
+          - "Unknown"
+          - "Rejected / Out of Scope"
+          - "Return for Revalidation"
+          - "Legal Fact Candidate Isolation Approval"
+      decision_status:
+        type: string
+        enum:
+          - "Active"
+          - "Withdrawn"
+          - "Superseded"
+      human_actor_reference:
+        "$ref": "#/$defs/reference"
+      human_authorization_reference:
+        "$ref": "#/$defs/reference"
+      decision_scope:
+        "$ref": "#/$defs/non_empty_string"
+      evidence_link_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      decided_at:
+        "$ref": "#/$defs/timestamp"
+      limitations:
+        type: array
+        items:
+          "$ref": "#/$defs/non_empty_string"
+        uniqueItems: true
+      supersedes_decision_reference:
+        "$ref": "#/$defs/reference"
+      replacement_decision_reference:
+        "$ref": "#/$defs/reference"
+        description: >-
+          Reference to the later decision that replaced this decision. Required
+          when decision_status is Superseded.
+      withdrawal_or_supersession_reason:
+        "$ref": "#/$defs/non_empty_string"
+      model_output_is_non_decisive:
+        const: true
+    allOf:
+      - if:
+          not:
+            properties:
+              decision_type:
+                const: "Rejected / Out of Scope"
+            required:
+              - decision_type
+        then:
+          properties:
+            evidence_link_references:
+              minItems: 1
+      - if:
+          properties:
+            decision_status:
+              const: "Withdrawn"
+          required:
+            - decision_status
+        then:
+          required:
+            - withdrawal_or_supersession_reason
+      - if:
+          properties:
+            decision_status:
+              const: "Superseded"
+          required:
+            - decision_status
+        then:
+          required:
+            - replacement_decision_reference
+            - withdrawal_or_supersession_reason
+
+  dispute:
+    type: object
+    additionalProperties: false
+    required:
+      - active
+      - competing_versions
+      - human_objection_references
+      - automatic_resolution_prohibited
+      - confidence_or_source_count_is_non_decisive
+    properties:
+      active:
+        type: boolean
+      dispute_group_reference:
+        "$ref": "#/$defs/reference"
+      competing_versions:
+        type: array
+        items:
+          "$ref": "#/$defs/competing_fact_version"
+        uniqueItems: true
+      human_objection_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      automatic_resolution_prohibited:
+        const: true
+      confidence_or_source_count_is_non_decisive:
+        const: true
+
+  competing_fact_version:
+    type: object
+    additionalProperties: false
+    required:
+      - variant_id
+      - objective_statement
+      - evidence_link_references
+      - support_scope
+      - material_differences
+    properties:
+      variant_id:
+        "$ref": "#/$defs/reference"
+      objective_statement:
+        "$ref": "#/$defs/non_empty_string"
+      evidence_link_references:
+        type: array
+        minItems: 1
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      support_scope:
+        "$ref": "#/$defs/non_empty_string"
+      material_differences:
+        type: array
+        minItems: 1
+        items:
+          "$ref": "#/$defs/non_empty_string"
+        uniqueItems: true
+      human_objection_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+
+  absence_and_unknown:
+    type: object
+    additionalProperties: false
+    required:
+      - information_gaps
+      - automatic_default_prohibited
+      - negative_inference_from_absence_prohibited
+      - technical_missing_is_not_human_unknown
+    properties:
+      information_gaps:
+        type: array
+        items:
+          "$ref": "#/$defs/information_gap"
+      automatic_default_prohibited:
+        const: true
+      negative_inference_from_absence_prohibited:
+        const: true
+      technical_missing_is_not_human_unknown:
+        const: true
+
+  information_gap:
+    type: object
+    additionalProperties: false
+    required:
+      - gap_id
+      - dimension
+      - semantic_classification
+      - description
+      - evidence_link_references
+    properties:
+      gap_id:
+        "$ref": "#/$defs/reference"
+      dimension:
+        "$ref": "#/$defs/non_empty_string"
+        description: >-
+          Uncertain dimension such as time, actor, conduct, scope, causation,
+          meaning, or another expressly described dimension.
+      semantic_classification:
+        type: string
+        enum:
+          - "Unknown / Insufficient"
+          - "Not Provided"
+          - "Technical Missing"
+          - "Temporarily Unavailable"
+          - "Not Applicable"
+          - "Negated"
+          - "Rejected"
+          - "Out of Scope"
+          - "Confirmed Non-Existence"
+      description:
+        "$ref": "#/$defs/non_empty_string"
+      evidence_link_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      human_decision_reference:
+        "$ref": "#/$defs/reference"
+    allOf:
+      - if:
+          properties:
+            semantic_classification:
+              enum:
+                - "Unknown / Insufficient"
+                - "Not Applicable"
+                - "Negated"
+                - "Rejected"
+                - "Out of Scope"
+                - "Confirmed Non-Existence"
+          required:
+            - semantic_classification
+        then:
+          required:
+            - human_decision_reference
+
+  revalidation:
+    type: object
+    additionalProperties: false
+    required:
+      - required
+      - reasons
+      - reliance_suspended
+      - current_verified_evidence_required
+      - history_preservation_required
+    properties:
+      required:
+        type: boolean
+      reasons:
+        type: array
+        items:
+          type: string
+          enum:
+            - "Evidence Withdrawn or Invalidated"
+            - "Material Evidence Version Change"
+            - "New Material Conflict"
+            - "Human Decision Withdrawn"
+            - "Authorization Invalidated"
+            - "Traceability Incomplete"
+            - "Governance Rule Change"
+        uniqueItems: true
+      return_decision_reference:
+        "$ref": "#/$defs/reference"
+      target_state:
+        const: "Validation Pending"
+      reliance_suspended:
+        type: boolean
+      current_verified_evidence_required:
+        const: true
+      history_preservation_required:
+        const: true
+    allOf:
+      - if:
+          properties:
+            required:
+              const: true
+          required:
+            - required
+        then:
+          required:
+            - target_state
+          properties:
+            reasons:
+              minItems: 1
+            reliance_suspended:
+              const: true
+        else:
+          properties:
+            reasons:
+              maxItems: 0
+            reliance_suspended:
+              const: false
+          not:
+            anyOf:
+              - required:
+                  - return_decision_reference
+              - required:
+                  - target_state
+
+  version_governance:
+    type: object
+    additionalProperties: false
+    required:
+      - record_version
+      - created_at
+      - change_reason
+      - integrity_reference
+      - superseded_record_references
+      - silent_overwrite_prohibited
+      - history_preservation_required
+    properties:
+      record_version:
+        type: integer
+        minimum: 1
+      created_at:
+        "$ref": "#/$defs/timestamp"
+      predecessor_record_reference:
+        "$ref": "#/$defs/reference"
+      superseded_record_references:
+        type: array
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+      change_reason:
+        "$ref": "#/$defs/non_empty_string"
+      integrity_reference:
+        "$ref": "#/$defs/reference"
+      governance_review_reference:
+        "$ref": "#/$defs/reference"
+      silent_overwrite_prohibited:
+        const: true
+      history_preservation_required:
+        const: true
+
+  legal_isolation:
+    type: object
+    additionalProperties: false
+    required:
+      - objective_fact_only
+      - candidate_isolated
+      - legal_fact_generated
+      - legal_element_matching_performed
+      - request_right_inference_performed
+      - strategy_generation_performed
+      - downstream_execution_blocked
+    properties:
+      objective_fact_only:
+        const: true
+      candidate_isolated:
+        type: boolean
+      candidate_gate_decision_reference:
+        "$ref": "#/$defs/reference"
+      isolation_boundary_authorization_reference:
+        "$ref": "#/$defs/reference"
+      legal_fact_generated:
+        const: false
+      legal_element_matching_performed:
+        const: false
+      request_right_inference_performed:
+        const: false
+      strategy_generation_performed:
+        const: false
+      downstream_execution_blocked:
+        const: true
+
+  audit:
+    type: object
+    additionalProperties: false
+    required:
+      - state_history
+      - boundary_events
+    properties:
+      state_history:
+        type: array
+        minItems: 1
+        items:
+          "$ref": "#/$defs/state_transition"
+      boundary_events:
+        type: array
+        items:
+          "$ref": "#/$defs/boundary_event"
+
+  state_transition:
+    type: object
+    additionalProperties: false
+    required:
+      - transition_id
+      - from_state
+      - to_state
+      - transition_rule
+      - trigger_description
+      - triggered_at
+      - authorization_reference
+      - execution_mode
+      - history_preserved
+    properties:
+      transition_id:
+        "$ref": "#/$defs/reference"
+      from_state:
+        type: string
+        enum:
+          - "Verified Evidence"
+          - "Unverified Fact Candidate"
+          - "Validation Pending"
+          - "Verified Objective Fact"
+          - "Disputed Objective Fact"
+          - "Unknown / Insufficient"
+          - "Rejected / Out of Scope"
+          - "Superseded / Revalidation Required"
+          - "Legal Fact Candidate — Isolated"
+      to_state:
+        "$ref": "#/$defs/lifecycle_state"
+      transition_rule:
+        type: string
+        enum:
+          - "FC-T-001"
+          - "FC-T-002"
+          - "FC-T-003"
+          - "FC-T-004"
+          - "FC-T-005"
+          - "FC-T-006"
+          - "FC-T-007"
+          - "FC-T-008"
+          - "FC-T-009"
+          - "FC-T-010"
+      trigger_description:
+        "$ref": "#/$defs/non_empty_string"
+      triggered_at:
+        "$ref": "#/$defs/timestamp"
+      human_decision_reference:
+        "$ref": "#/$defs/reference"
+        description: >-
+          Reference to the authorized human gate or disposition decision
+          required by the mapped transition rule. For FC-T-007 protective
+          blocking this field must be absent until a human final disposition
+          occurs.
+      authorization_reference:
+        "$ref": "#/$defs/reference"
+      execution_mode:
+        type: string
+        description: >-
+          Human Authorized denotes a completed human-gated transition.
+          Protective Blocking Only is permitted solely for the provisional
+          FC-T-007 suspension action and is not a final human disposition.
+        enum:
+          - "Human Authorized"
+          - "Protective Blocking Only"
+      previous_record_reference:
+        "$ref": "#/$defs/reference"
+      history_preserved:
+        const: true
+    allOf:
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-001"
+          required:
+            - transition_rule
+        then:
+          properties:
+            from_state:
+              const: "Verified Evidence"
+            to_state:
+              const: "Unverified Fact Candidate"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-002"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              const: "Unverified Fact Candidate"
+            to_state:
+              const: "Validation Pending"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-003"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              const: "Validation Pending"
+            to_state:
+              const: "Verified Objective Fact"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-004"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              const: "Validation Pending"
+            to_state:
+              const: "Disputed Objective Fact"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-005"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              const: "Validation Pending"
+            to_state:
+              const: "Unknown / Insufficient"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-006"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              enum:
+                - "Unverified Fact Candidate"
+                - "Validation Pending"
+                - "Verified Objective Fact"
+                - "Disputed Objective Fact"
+                - "Unknown / Insufficient"
+                - "Superseded / Revalidation Required"
+                - "Legal Fact Candidate — Isolated"
+            to_state:
+              const: "Rejected / Out of Scope"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-007"
+          required:
+            - transition_rule
+        then:
+          properties:
+            from_state:
+              enum:
+                - "Verified Objective Fact"
+                - "Disputed Objective Fact"
+                - "Unknown / Insufficient"
+                - "Legal Fact Candidate — Isolated"
+            to_state:
+              const: "Superseded / Revalidation Required"
+            execution_mode:
+              enum:
+                - "Human Authorized"
+                - "Protective Blocking Only"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-007"
+            execution_mode:
+              const: "Human Authorized"
+          required:
+            - transition_rule
+            - execution_mode
+        then:
+          required:
+            - human_decision_reference
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-007"
+            execution_mode:
+              const: "Protective Blocking Only"
+          required:
+            - transition_rule
+            - execution_mode
+        then:
+          not:
+            required:
+              - human_decision_reference
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-008"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              const: "Verified Objective Fact"
+            to_state:
+              const: "Legal Fact Candidate — Isolated"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-009"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              enum:
+                - "Verified Objective Fact"
+                - "Disputed Objective Fact"
+                - "Unknown / Insufficient"
+                - "Legal Fact Candidate — Isolated"
+            to_state:
+              const: "Validation Pending"
+            execution_mode:
+              const: "Human Authorized"
+
+      - if:
+          properties:
+            transition_rule:
+              const: "FC-T-010"
+          required:
+            - transition_rule
+        then:
+          required:
+            - human_decision_reference
+          properties:
+            from_state:
+              enum:
+                - "Verified Objective Fact"
+                - "Disputed Objective Fact"
+                - "Unknown / Insufficient"
+                - "Superseded / Revalidation Required"
+                - "Legal Fact Candidate — Isolated"
+            to_state:
+              const: "Validation Pending"
+            execution_mode:
+              const: "Human Authorized"
+
+  boundary_event:
+    type: object
+    additionalProperties: false
+    required:
+      - event_id
+      - event_type
+      - occurred_at
+      - protective_action
+      - reason
+      - related_references
+    properties:
+      event_id:
+        "$ref": "#/$defs/reference"
+      event_type:
+        type: string
+        enum:
+          - "Evidence Withdrawal Signal"
+          - "Evidence Invalidation Signal"
+          - "Material Evidence Version Change"
+          - "New Material Conflict"
+          - "Human Decision Revoked"
+          - "Authorization Invalidated"
+          - "Traceability Break"
+          - "Unauthorized Legal Reasoning Attempt"
+          - "Unauthorized Downstream Attempt"
+      occurred_at:
+        "$ref": "#/$defs/timestamp"
+      protective_action:
+        type: string
+        enum:
+          - "Blocked"
+          - "Suspended"
+          - "Sent for Human Review"
+      reason:
+        "$ref": "#/$defs/non_empty_string"
+      related_references:
+        type: array
+        minItems: 1
+        items:
+          "$ref": "#/$defs/reference"
+        uniqueItems: true
+
+  governance_controls:
+    type: object
+    additionalProperties: false
+    required:
+      - structural_validity_is_fact_validity
+      - schema_conformance_is_fact_truth
+      - human_validation_required
+      - evidence_registry_read_only
+      - automatic_state_transition_prohibited
+      - automatic_legal_promotion_prohibited
+      - downstream_execution_blocked
+      - protective_automation_limited_to_blocking
+      - current_reliance_status
+    properties:
+      structural_validity_is_fact_validity:
+        const: false
+      schema_conformance_is_fact_truth:
+        const: false
+      human_validation_required:
+        const: true
+      evidence_registry_read_only:
+        const: true
+      automatic_state_transition_prohibited:
+        const: true
+      automatic_legal_promotion_prohibited:
+        const: true
+      downstream_execution_blocked:
+        const: true
+      protective_automation_limited_to_blocking:
+        const: true
+      current_reliance_status:
+        type: string
+        description: >-
+          In-layer governance classification only. It never authorizes
+          downstream execution, Legal Fact generation, Request Right
+          inference, or implementation.
+        enum:
+          - "Not Reliance-Eligible"
+          - "Objective Fact Reliance Only"
+          - "Dispute Preservation Only"
+          - "Unknown Preservation Only"
+          - "Blocked"
+          - "Suspended"
+          - "Isolated Candidate Only"

@@ -1,0 +1,1482 @@
+# ACOS CROSS-VENDOR DESIGN RE-REVIEW INSTRUCTION — REV 3 PREFILLED
+
+DO NOT ACKNOWLEDGE THIS INSTRUCTION.
+OUTPUT ONLY THE COMPLETED REPORT TEMPLATE BELOW.
+DO NOT ADD, DELETE, RENAME, REORDER OR ABBREVIATE ANY FIXED ROW, ID, TITLE OR MATRIX CELL.
+REPLACE EVERY BRACKETED PLACEHOLDER.
+YOUR RESPONSE MUST BEGIN EXACTLY WITH:
+# ACOS CROSS-VENDOR DESIGN REVIEW REPORT
+
+Reviewer:
+Google Gemini 3.6 Flash — HIGH
+Cross-Vendor External Reviewer
+
+Mode:
+READ-ONLY ADVISORY / MANUAL TEXT-ONLY / TOOL-ISOLATED
+PREFILLED CLOSED-FORM TABLE-ONLY REVIEW
+
+Target Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_SPEC.md
+
+Target Bound SHA-256:
+105FC8863F801168FED5DE8763973A05F68515165303A8672506929F410FD64D
+
+Use only the target text between the marker named
+`BEGIN EXACT TARGET SPEC` and the marker named `END EXACT TARGET SPEC`.
+
+NO Workspace, local files, attachments, Drive, Git, terminal, shell,
+directory listing, repository search, web search, retrieval, Connector,
+MCP, API, code execution, tools or non-target assets.
+NO historical report or transcript reuse.
+
+MANDATORY PHRASES
+
+Target SHA:
+PROJECT OWNER ATTESTED / LOCAL SYSTEM VERIFIED — NOT MODEL-COMPUTED
+
+Each unuploaded baseline and SHA:
+RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED
+
+Materialization, asset-existence, sole-artifact, zero-overreach,
+zero-implementation and downstream-execution facts:
+RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED
+
+Lifecycle/current-state text:
+RECORDED IN TARGET TEXT ONLY — NO GOVERNING-STATE DETERMINATION
+
+Timestamp/temporal text:
+RECORDED VALUE PRESENT — NOT INDEPENDENTLY VERIFIED; NO TEMPORAL LINEAGE DETERMINATION MADE
+
+PROHIBITED OUTPUT
+
+- Authorization Status, Current State or Governing Status fields;
+- current SRDS/SV state determinations;
+- authorization validity, consumption or governing determinations;
+- timestamps or Temporal Lineage;
+- Spec Acceptance, Governing PASS or downstream authority declarations;
+- PROJECT OWNER ATTESTED / TEXT BOUND;
+- title abbreviations;
+- invented ratings or scales such as High / Medium / Low;
+- assertions that external execution facts were independently verified;
+- findings, registers, risk scores, exploits, tests or implementation advice.
+
+DETERMINATIONS
+
+Every bracketed determination must become exactly PASS or FAIL.
+Operational outcomes remain separate and do not replace PASS/FAIL.
+A target-text PASS is not certification, security, acceptance or authority.
+
+FIXED REPORT TEMPLATE
+
+# ACOS CROSS-VENDOR DESIGN REVIEW REPORT
+
+### 1. Reviewer and Access Matrix
+
+| Reviewer Role | Entity / Model | Provider / Independence Class | Current Session Access |
+| --- | --- | --- | --- |
+| Internal Architecture Reviewer | OpenAI GPT/Codex Architecture Coordinator | Internal Architecture Reviewer | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+| Cross-Vendor External Reviewer | Google Gemini 3.6 Flash — HIGH | Cross-Vendor External Reviewer | [TARGET TEXT ONLY / TOOL ACCESS NONE / NON-TARGET ACCESS NONE] |
+| Human Security Reviewer | Separately authorized Human Review role | Human Security Reviewer | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+| Project Owner | Sole Positive Authority — not a Reviewer Class | Not a Reviewer Class | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+| Codex Executor | Materialization/execution role — not a Reviewer Class unless separately appointed | Not a Reviewer Class | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+
+### 2. Target and Source Qualification Matrix
+
+| Asset | SHA-256 | Qualification |
+| --- | --- | --- |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_SPEC.md | 105FC8863F801168FED5DE8763973A05F68515165303A8672506929F410FD64D | PROJECT OWNER ATTESTED / LOCAL SYSTEM VERIFIED — NOT MODEL-COMPUTED |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_GOVERNANCE_RESULT.md | 9FD9E823A890F5D6DEFD57437F5C5036BAC367F8BAA11F39C19E76A80F341DA2 | RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_HANDOFF.md | 6099DA3AE832C6E212123097E6625D2F70C28B2AFC1DA83CC45065999654DF2A | RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC.md | F1398EFC56B89F2370F3AD58A76FCBBFB48D5B851760CBBC76795EA9E409C0BC | RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_RESULT.md | AD621ADB166433A4019DC6A9BB5E7E47B547C0FD5A4C8A9B83A5A58E10EFB265 | RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_HANDOFF.md | BAA7DFD8284FA3753FF226703A4CCF29AC06C8980284A9D9C480F01EE092EC4F | RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED |
+
+### 3. Design Review Questions 01–45
+
+| ID | Fixed Question | Determination | Target-Text Evidence | Mandatory Qualification / Limitation |
+| --- | --- | --- | --- | --- |
+| 01 | 是否仅创建唯一授权 Security Review Design Spec | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 02 | 是否保持 DESIGN SPEC ONLY | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 03 | Runtime Governance Result SHA 是否匹配 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 04 | Component Governance Handoff SHA 是否匹配 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 05 | Component Governance Spec SHA 是否匹配 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 06 | Component Governance Result SHA 是否匹配 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 07 | Security Review Handoff SHA 是否匹配 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 08 | 五项 accepted baselines 是否未被改写 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 09 | 授权、物化、Review、Acceptance、Result 与 Execution 是否分离 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 10 | Security PASS 是否明确不等于 secure、certified 或 deployment-ready | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 11 | 25 项 Design Principles 是否完整 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 12 | 10 类 Abstract Security-Control Classes 是否保持抽象 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 13 | 8 类 Abstract Asset Classes 是否未创建资产 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 14 | 8 项 Trust Boundaries 是否未形成网络拓扑 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 15 | 12 项 Exposure Surfaces 是否未形成攻击树或测试计划 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 16 | 21 项 Security Domains 是否完整 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 17 | Identity and Principal Binding 是否保持显式 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 18 | Authentication Boundary 是否排除凭据访问 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 19 | Authorization and Least Privilege 是否独立于 authentication | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 20 | Credential、Secret、Key 与 Token isolation 是否绝对 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 21 | Session、Token、Replay 与 stale-state control 是否保持抽象 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 22 | Input and Instruction Boundary 是否禁止 exploit-ready payload | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 23 | Packet identity and integrity 是否不创建 Packet | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 24 | Queue integrity and dispatch safety 是否不创建 Queue | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 25 | Ledger and audit integrity 是否不创建 Ledger | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 26 | Decision Gate and Owner authenticity 是否保持 Owner-only authority | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 27 | Connector and Provider identity 是否不创建 Connector | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 28 | Network and Transport Boundary 是否不创建拓扑或探针 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 29 | Storage、Cache、Log protection 是否不创建存储设计 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 30 | Error and Information Disclosure 是否保持最小披露 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 31 | Monitoring and Detection 是否不创建监控实现 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 32 | Availability、Rate 与 Retry 是否保持 Fail-Closed | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 33 | Kill、Revocation 与 Suspension 是否优先 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 34 | Recovery and Rollback 是否要求 no-silent-recovery | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 35 | Dependency and Supply-Chain integrity 是否保持来源与版本边界 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 36 | Build、Artifact、Environment、Deployment integrity 是否保持阶段隔离 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 37 | Incident Handling 是否不创建响应计划 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 38 | Evidence qualifications 是否不静默升级 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 39 | Reviewer roles 与 provider independence 是否分离 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 40 | Severity、Likelihood 与 Uncertainty 是否无评分公式 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 41 | Outcome semantics 是否保持八项区分 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 42 | Finding lifecycle 是否非执行且不创建 Finding | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 43 | 25 条 Transition Rules 与 13 行 Matrix 是否一致 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 44 | Threat / Privacy / Security 是否独立 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| 45 | 是否无 Finding、Register、Exploit、Test、Code、Credential、Runtime、Real Matter 或自动下游。 | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+
+### 4. Acceptance Gates MMCRG-SRDS-001–045
+
+| Gate | Fixed Gate Title | Determination | Target-Text Evidence | Mandatory Qualification / Limitation |
+| --- | --- | --- | --- | --- |
+| MMCRG-SRDS-001 | Authorization Fidelity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-002 | Sole Artifact | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-003 | Design-Spec-Only Scope | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-004 | Runtime Governance Result Integrity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-005 | Component Handoff Integrity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-006 | Component Spec Integrity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-007 | Component Result Integrity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-008 | Security Handoff Integrity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-009 | Baseline Non-Rewrite | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-010 | Governing Separation | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-011 | Principle Completeness | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-012 | Control-Class Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-013 | Asset-Class Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-014 | Trust-Boundary Abstraction | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-015 | Exposure-Surface Abstraction | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-016 | Security Domain Completeness | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-017 | Identity Coverage | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-018 | Authentication Coverage | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-019 | Authorization Coverage | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-020 | Credential Isolation | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-021 | Session and Replay Coverage | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-022 | Input Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-023 | Packet and Queue Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-024 | Ledger and Decision Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-025 | Connector and Provider Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-026 | Network and Transport Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-027 | Storage and Disclosure Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-028 | Monitoring Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-029 | Availability Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-030 | Kill and Revocation Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-031 | Recovery Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-032 | Supply-Chain Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-033 | Build and Environment Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-034 | Incident Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-035 | Evidence Sufficiency | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-036 | Reviewer Independence | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-037 | No Timestamp Fabrication | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-038 | No Security Certification | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-039 | Severity and Uncertainty Boundary | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-040 | Outcome Fidelity | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-041 | Finding Governance | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-042 | Transition Completeness | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-043 | Assurance Separation | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-044 | Fail-Closed Completeness | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+| MMCRG-SRDS-045 | Zero Overreach | [PASS/FAIL] | [TARGET-TEXT EVIDENCE] | [MANDATORY QUALIFICATION / LIMITATION] |
+
+### 5. Design Principles MMCRG-SDG-001–025
+
+| Principle | Fixed Principle Title | Determination | Fidelity Evidence |
+| --- | --- | --- | --- |
+| MMCRG-SDG-001 | Authorization Before Review | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-002 | Sole Positive Authority | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-003 | Handoff Is Not Review | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-004 | Security Domain Is Not Finding | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-005 | Control Name Is Not Control Existence | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-006 | Finding Is Not Exploit | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-007 | Exact Asset Identity | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-008 | Evidence Before Conclusion | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-009 | Access Limitation Fidelity | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-010 | Reviewer Identity Binding | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-011 | Internal / External Separation | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-012 | No Timestamp Fabrication | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-013 | Provenance Preservation | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-014 | No Security Certification | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-015 | Authentication and Least Privilege | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-016 | Credential Absolute Isolation | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-017 | Integrity Is Not Semantic Correctness | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-018 | G0–G5 Preservation | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-019 | Provider and Network Binding | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-020 | Minimal Security Evidence | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-021 | Human Review Gate | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-022 | Fail-Closed Availability | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-023 | Revocation and Kill Dominance | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-024 | Assurance Track Separation | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+| MMCRG-SDG-025 | Immutable History and No Automatic Escalation | [PASS/FAIL] | [FIDELITY EVIDENCE] |
+
+### 6. Security Domains MMCRG-SD-001–021
+
+| Domain | Fixed Domain Title | Determination | Coverage Evidence |
+| --- | --- | --- | --- |
+| MMCRG-SD-001 | Identity and Principal Binding | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-002 | Authentication Boundary | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-003 | Authorization and Least Privilege | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-004 | Credential, Secret and Key Isolation | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-005 | Session, Token and Replay Control | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-006 | Input and Instruction Boundary | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-007 | Packet Identity and Integrity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-008 | Queue Integrity and Dispatch Safety | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-009 | Ledger and Audit Integrity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-010 | Decision Gate and Owner Authenticity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-011 | Connector and Provider Identity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-012 | Network and Transport Boundary | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-013 | Storage, Cache and Log Protection | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-014 | Error and Information Disclosure | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-015 | Monitoring and Detection | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-016 | Availability, Rate and Retry Safety | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-017 | Kill, Revocation and Suspension | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-018 | Recovery and Rollback Integrity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-019 | Dependency and Supply-Chain Integrity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-020 | Build, Artifact, Environment and Deployment Integrity | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+| MMCRG-SD-021 | Incident Handling and Evidence Preservation | [PASS/FAIL] | [COVERAGE EVIDENCE] |
+
+### 7. Abstract Taxonomy Matrix
+
+| Taxonomy | Fixed Count / IDs | Determination | Boundary Evidence |
+| --- | --- | --- | --- |
+| Abstract Security-Control Classes | 10 / MMCRG-SCC-001–010 | [PASS/FAIL] | [EVIDENCE] |
+| Abstract Asset Classes | 8 / SA-01–SA-08 | [PASS/FAIL] | [EVIDENCE + RECORDED-ONLY QUALIFICATION] |
+| Abstract Trust Boundaries | 8 / STB-01–STB-08 | [PASS/FAIL] | [EVIDENCE] |
+| Abstract Exposure Surfaces | 12 / SES-01–SES-12 | [PASS/FAIL] | [EVIDENCE] |
+
+### 8. Evidence, Reviewer Independence and Qualitative Axes
+
+| Topic | Determination | Target-Text Evidence | Limitation |
+| --- | --- | --- | --- |
+| Evidence Sufficiency and Provenance | [PASS/FAIL] | [EVIDENCE] | [LIMITATION OR NONE] |
+| Reviewer Identity and Independence | [PASS/FAIL] | [EVIDENCE] | [LIMITATION OR NONE] |
+| Severity / Likelihood / Uncertainty | [PASS/FAIL] | [EVIDENCE] | [LIMITATION OR NONE] |
+
+### 9. Outcome and Lifecycle Design Matrix
+
+| Structure | Fixed Elements | Determination | Required State Qualification |
+| --- | --- | --- | --- |
+| Security Review Outcome Semantics | PASS, FAIL, BLOCKED, LIMITED, PENDING, UNBOUND, STALE, SUPERSEDED | [PASS/FAIL] | NO GOVERNING-STATE DETERMINATION |
+| Conceptual Security Finding Lifecycle | SF0–SF9 / 10 stages | [PASS/FAIL] | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+| Future Security Review Lifecycle | SV0–SV12 / 13 stages | [PASS/FAIL] | RECORDED IN TARGET TEXT ONLY — NO GOVERNING-STATE DETERMINATION |
+| Security Review Design Lifecycle | SRDS0–SRDS7 / 8 stages | [PASS/FAIL] | RECORDED IN TARGET TEXT ONLY — NO GOVERNING-STATE DETERMINATION |
+
+### 10. Transition Rules MMCRG-SDT-001–025
+
+| Rule | Fixed Rule Title | Design Determination | Rule Fidelity Evidence | Operational Protective Outcome |
+| --- | --- | --- | --- | --- |
+| MMCRG-SDT-001 | Object Nomination | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-002 | Authority Precondition | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-003 | Invalid Authority | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-004 | Identity and SHA Binding | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-005 | SHA Mismatch | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-006 | Scope and Classification Binding | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-007 | UNKNOWN / MIXED or Prohibited Data | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-008 | Evidence Admission | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-009 | Reviewer Binding | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-010 | Internal Review Isolation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-011 | External Review Isolation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-012 | Response Binding | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-013 | Unbound, Replay or Historical Reuse | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-014 | Reconciliation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-015 | Agreement Preservation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-016 | Disagreement Preservation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-017 | Human Review Gate | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-018 | Outcome Distinction | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-019 | Owner Presentation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-020 | OWNER HOLD | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-021 | Explicit Owner Disposition | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-022 | Finding Isolation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-023 | Downstream Isolation | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-024 | Kill and Revocation Dominance | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+| MMCRG-SDT-025 | No Silent Recovery | [PASS/FAIL] | [RULE FIDELITY EVIDENCE — NO SCORE OR SCALE] | [OPERATIONAL PROTECTIVE OUTCOME] |
+
+### 11. 13-Row Transition Matrix Review
+
+| State | Fixed Required Input | Fixed Allowed Determination | Fixed Protective Outcome | Fixed Next State | Design Determination | Limitation |
+| --- | --- | --- | --- | --- | --- | --- |
+| SV0 | nominated object | eligible / ineligible | BLOCKED if object unbound | SV1 or remain SV0 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV1 | active authority | bound / invalid | BLOCKED — AUTHORIZATION | SV2 or remain SV1 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV2 | identity and SHA | match / mismatch | BLOCKED — SHA | SV3 or STALE | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV3 | purpose, domain, class, access | complete / incomplete | BLOCKED — SCOPE OR DATA | SV4 or remain SV3 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV4 | admitted evidence | sufficient / partial / absent | LIMITED, BLOCKED or NOT EVALUABLE | SV5 or remain SV4 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV5 | reviewer binding | independent / unbound | BLOCKED — REVIEWER IDENTITY | SV6 or remain SV5 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV6 | internal report | completed / unavailable | PENDING or BLOCKED | SV7 only with new authority | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV7 | external report | completed / unavailable / invalid | PENDING, BLOCKED or UNBOUND | SV8 or remain SV7 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV8 | reconciliation | agreement / disagreement | preserve both; route disagreement | SV9 or SV10 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV9 | Human Review record | resolved / unresolved | PENDING or BLOCKED | SV10 or remain SV9 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV10 | Owner disposition | accept / reject / hold / withdraw / limited | OWNER HOLD if no positive decision | SV11 or remain SV10 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV11 | closed disposition | current / stale / superseded | downstream remains blocked | SV12 | [PASS/FAIL] | [LIMITATION OR NONE] |
+| SV12 | immutable history | preserved | no silent reactivation | terminal record | [PASS/FAIL] | [LIMITATION OR NONE] |
+
+### 12. Assurance Separation and Target-Text Boundary Matrix
+
+| Boundary | Determination | Target-Text Evidence | Mandatory Qualification / Limitation |
+| --- | --- | --- | --- |
+| Threat / Privacy / Security Separation | [PASS/FAIL] | [EVIDENCE] | [LIMITATION OR NONE] |
+| Materialization and Sole-Artifact Boundary | [PASS/FAIL] | [EVIDENCE] | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+| Zero-Implementation Boundary | [PASS/FAIL] | [EVIDENCE] | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+| Downstream-Execution Boundary | [PASS/FAIL] | [EVIDENCE] | RECORDED IN TARGET TEXT ONLY — NOT INDEPENDENTLY VERIFIED |
+
+### 13. Defect Register
+
+| Category | Count | Details |
+| --- | --- | --- |
+| Blocker | [INTEGER] | [NONE OR DETAILS] |
+| Non-Blocker | [INTEGER] | [NONE OR DETAILS] |
+| Regression | [INTEGER] | [NONE OR DETAILS] |
+| Overreach | [INTEGER] | [NONE OR DETAILS] |
+| Source-Qualification Defect | [INTEGER] | [NONE OR DETAILS] |
+| Evidence Overstatement | [INTEGER] | [NONE OR DETAILS] |
+| Authorization / State Overreach | [INTEGER] | [NONE OR DETAILS] |
+| Identity Conflict | [INTEGER] | [NONE OR DETAILS] |
+| Principle Drift | [INTEGER] | [NONE OR DETAILS] |
+| Domain Drift | [INTEGER] | [NONE OR DETAILS] |
+| Transition Drift | [INTEGER] | [NONE OR DETAILS] |
+| Implementation Pollution | [INTEGER] | [NONE OR DETAILS] |
+| Timestamp / Temporal Overreach | [INTEGER] | [NONE OR DETAILS] |
+| Internal Contradiction | [INTEGER] | [NONE OR DETAILS] |
+
+### 14. Overall Advisory Verdict
+
+[PASS — GRADE A / PASS WITH LIMITATIONS / FAIL]
+
+Advisory Scope Statement:
+[STATE ONLY THE TEXTUAL DESIGN-REVIEW SCOPE AND LIMITATIONS.
+DO NOT STATE CURRENT AUTHORIZATION, GOVERNING, LIFECYCLE, ACCEPTANCE OR DOWNSTREAM STATUS.]
+
+===== BEGIN EXACT TARGET SPEC =====
+# TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_SPEC
+
+## Status
+
+LIMITED REVISION MATERIALIZED — DESIGN RE-REVIEW NOT AUTHORIZED
+
+## System Identification
+
+Project:
+ACOS Multi-Model Collaboration Automation
+
+Governance Layer:
+Runtime Assurance Governance
+
+Assurance Track:
+Security
+
+Artifact Type:
+DESIGN SPEC ONLY
+
+Data Classification:
+G1 — INTERNAL GOVERNANCE WITHOUT REAL MATTER
+
+Sole Authorized Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_SPEC.md
+
+## Materialization Authorization
+
+Project Owner authorized materialization of this sole Design Spec.
+
+Authorized scope is limited to abstract Security Review governance design.
+
+This authorization does not authorize:
+
+- Design Review;
+- Cross-Vendor external review;
+- Spec acceptance;
+- Design Result;
+- Security Review Execution;
+- Security Finding or Security Register;
+- vulnerability assessment or control validation;
+- penetration testing, exploit procedure or test vector;
+- component, Packet, Queue, Ledger or Schema materialization;
+- API, Connector, MCP, Agent, Skill, Code or Credential;
+- Test Data, Runtime, Pilot, Deployment, Real Matter or Implementation.
+
+## Limited Revision Lineage
+
+Previous Candidate SHA-256:
+70D8348824CBECDFC45A3C7708EFDC1072B787A9B6FCC608E7E0C528DEB842BF
+
+Previous Internal Design Review:
+FAIL — LIMITED REVISION REQUIRED
+
+Revision Scope:
+
+- restore one-to-one identity and semantic fidelity for all twenty-five accepted `MMCRG-SH-001` through `MMCRG-SH-025` Handoff principles in the `MMCRG-SDG` principle register;
+- preserve all other design, evidence, transition, isolation and downstream boundaries;
+- create no secondary asset and perform no Security Review Execution.
+
+Previous Candidate Status:
+HISTORICAL / SUPERSEDED CANDIDATE / NON-GOVERNING
+
+This limited revision does not establish Design Review PASS, Spec acceptance, Design Result authority or downstream authority.
+
+## Bound Accepted Baselines
+
+| Baseline Asset | Bound SHA-256 | Recorded Status |
+| --- | --- | --- |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_GOVERNANCE_RESULT.md | 9FD9E823A890F5D6DEFD57437F5C5036BAC367F8BAA11F39C19E76A80F341DA2 | ACCEPTED & CLOSED & SHA BOUND |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_HANDOFF.md | 6099DA3AE832C6E212123097E6625D2F70C28B2AFC1DA83CC45065999654DF2A | ACCEPTED & SHA BOUND |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC.md | F1398EFC56B89F2370F3AD58A76FCBBFB48D5B851760CBBC76795EA9E409C0BC | ACCEPTED & CLOSED & SHA BOUND |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_RESULT.md | AD621ADB166433A4019DC6A9BB5E7E47B547C0FD5A4C8A9B83A5A58E10EFB265 | ACCEPTED & CLOSED & SHA BOUND |
+| TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_HANDOFF.md | BAA7DFD8284FA3753FF226703A4CCF29AC06C8980284A9D9C480F01EE092EC4F | ACCEPTED & SHA BOUND |
+
+All five SHA values are fixed inputs to this Design Spec.
+
+No baseline text is rewritten, amended, merged or re-accepted by this asset.
+
+## Normative Precedence
+
+1. Current exact-scope Project Owner materialization authorization;
+2. accepted Runtime Security Review Handoff at exact SHA;
+3. accepted Runtime Component Governance Result at exact SHA;
+4. accepted Runtime Component Governance Spec at exact SHA;
+5. accepted Runtime Component Governance Handoff at exact SHA;
+6. accepted Runtime Governance Result at exact SHA;
+7. this candidate Design Spec.
+
+A lower-precedence asset cannot create authority over a higher-precedence asset.
+
+## Objective
+
+This Design Spec converts the accepted Runtime Security Review Handoff into a reviewable, abstract and non-executable Security Review governance contract.
+
+Its objectives are to:
+
+- preserve all twenty-five accepted Security Review governance principles;
+- preserve all twenty-one required Security Domains;
+- define abstract security-control classes without claiming control existence;
+- define asset, trust-boundary and exposure-surface taxonomies without creating architecture or topology;
+- define evidence sufficiency, access limitation and reviewer independence rules;
+- define qualitative severity, likelihood and uncertainty governance without scoring;
+- define conceptual finding, disagreement, Human Review and Project Owner gates;
+- define Fail-Closed, kill, revocation, withdrawal, supersession and recovery boundaries;
+- preserve Threat, Privacy and Security track separation;
+- define review questions, acceptance gates, transition rules and a non-executable transition matrix;
+- prevent this Spec from being mistaken for Security Review Execution, certification or implementation.
+
+This Spec does not:
+
+- inspect a credential, secret, key or token;
+- inspect code, a network, a provider, an endpoint or a Runtime;
+- validate authentication, authorization or any control;
+- perform vulnerability analysis or penetration testing;
+- generate an exploit, payload, attack tree, test vector or risk score;
+- create a Security Finding, Security Register or incident record;
+- create a component, interface, Schema, configuration or executable control;
+- authorize downstream action.
+
+## Governing Separation
+
+| Governance Object or Event | Must Not Be Treated As |
+| --- | --- |
+| Security Review Handoff Acceptance | Security Review Design Acceptance |
+| Design Spec Materialization | Design Review Authorization |
+| Design Review PASS | Spec Acceptance |
+| Spec Acceptance | Design Result Authorization |
+| Design Result Acceptance | Security Review Execution Authorization |
+| Security Review Execution | Security Review Result Acceptance |
+| Security Review PASS | System Is Secure |
+| Security Review PASS | Security Certification |
+| Named Control | Implemented Control |
+| Implemented Control | Effective Control |
+| Security Finding | Exploit or Remediation Authority |
+| Reviewer Recommendation | Project Owner Decision |
+| Threat Review PASS | Security Review PASS |
+| Privacy Review PASS | Security Review PASS |
+| Security Review PASS | Component, Code, Test or Runtime Authority |
+
+No state in the left column automatically creates a state in the right column.
+
+## Security Review Design Principles
+
+### MMCRG-SDG-001 Authorization Before Review
+
+No Security Review action may occur before an applicable Project Owner authorization is active.
+
+### MMCRG-SDG-002 Sole Positive Authority
+
+Only the Project Owner may create positive authority, accept an asset or authorize downstream action.
+
+### MMCRG-SDG-003 Handoff Is Not Review
+
+This Handoff defines a future review boundary; it does not perform Security Review.
+
+### MMCRG-SDG-004 Security Domain Is Not Finding
+
+Listing a Security Domain does not establish a vulnerability, control failure or finding.
+
+### MMCRG-SDG-005 Control Name Is Not Control Existence
+
+Naming an expected security control does not assert that the control exists, is configured or is effective.
+
+### MMCRG-SDG-006 Finding Is Not Exploit
+
+A future finding does not authorize exploitation, probing, test execution or remediation.
+
+### MMCRG-SDG-007 Exact Asset Identity
+
+Every future review must bind asset name, exact SHA, scope and candidate status.
+
+### MMCRG-SDG-008 Evidence Before Conclusion
+
+No security conclusion may be issued without authorized, accessible and attributable evidence.
+
+### MMCRG-SDG-009 Access Limitation Fidelity
+
+Unavailable or partially available sources must be stated as not independently verified.
+
+### MMCRG-SDG-010 Reviewer Identity Binding
+
+Reviewer role, provider, model where applicable and independence class must be explicit.
+
+### MMCRG-SDG-011 Internal / External Separation
+
+Internal review and Cross-Vendor external review remain separate evidence channels.
+
+### MMCRG-SDG-012 No Timestamp Fabrication
+
+Model-generated or predicted timestamps cannot establish authorization or temporal lineage.
+
+### MMCRG-SDG-013 Provenance Preservation
+
+Manual, system-observed and connector-observed provenance must remain distinguishable.
+
+### MMCRG-SDG-014 No Security Certification
+
+Security Review PASS cannot be represented as certification, absence of vulnerability, safety or deployment readiness.
+
+### MMCRG-SDG-015 Authentication and Least Privilege
+
+Identity, authentication, authorization and least privilege must remain distinct future review concerns.
+
+### MMCRG-SDG-016 Credential Absolute Isolation
+
+Credentials, secrets and keys must not appear in prompts, reports, logs, caches, packets or evidence.
+
+### MMCRG-SDG-017 Integrity Is Not Semantic Correctness
+
+Hash or structural integrity does not establish semantic correctness, authority, safety or truth.
+
+### MMCRG-SDG-018 G0–G5 Preservation
+
+Highest-class composition, UNKNOWN / MIXED blocking, G4 external exclusion and G5 absolute exclusion remain mandatory.
+
+### MMCRG-SDG-019 Provider and Network Binding
+
+Provider, model, endpoint, transport and destination identity must be bound before any future external path may be evaluated or used.
+
+### MMCRG-SDG-020 Minimal Security Evidence
+
+Security evidence must disclose only the minimum authorized content and must not expose exploit-ready or secret material.
+
+### MMCRG-SDG-021 Human Review Gate
+
+Material ambiguity, disagreement or control-effectiveness uncertainty requires authorized human resolution.
+
+### MMCRG-SDG-022 Fail-Closed Availability
+
+Unavailable reviewer, missing evidence, unknown identity or unsafe access must block rather than degrade silently.
+
+### MMCRG-SDG-023 Revocation and Kill Dominance
+
+Kill, revocation, suspension, withdrawal and supersession override queue, retry, recovery and deployment behavior.
+
+### MMCRG-SDG-024 Assurance Track Separation
+
+Threat, Privacy and Security reviews may cross-reference dependencies but may not substitute for one another.
+
+### MMCRG-SDG-025 Immutable History and No Automatic Escalation
+
+History must remain append-preserved, and no PASS, recommendation or majority vote may activate downstream authority.
+
+## Abstract Security-Control Classes
+
+These classes are conceptual review categories only. They are not implemented controls, interfaces, configuration requirements or a control catalog.
+
+| ID | Abstract Control Class | Design Boundary |
+| --- | --- | --- |
+| MMCRG-SCC-001 | Identity and Principal Control | attribution, substitution resistance and role binding |
+| MMCRG-SCC-002 | Authentication and Session Control | entry, session establishment, expiration and failure handling |
+| MMCRG-SCC-003 | Authorization and Least-Privilege Control | action, resource and scope eligibility |
+| MMCRG-SCC-004 | Credential and Secret Isolation | exclusion, non-disclosure and non-retention of protected authentication material |
+| MMCRG-SCC-005 | Integrity, Freshness and Replay Control | SHA, binding, mutation, duplication, replay and stale-state protection |
+| MMCRG-SCC-006 | Input, Context and Information-Disclosure Control | instruction separation, validation boundary and minimum disclosure |
+| MMCRG-SCC-007 | Provider, Network and Transport Control | provider identity, destination, endpoint and protected transport boundary |
+| MMCRG-SCC-008 | Storage, Log and Observability Control | storage, cache, log, detection and evidence-protection boundary |
+| MMCRG-SCC-009 | Availability, Kill and Recovery Control | retry, rate, kill, revocation, rollback and no-silent-recovery boundary |
+| MMCRG-SCC-010 | Supply-Chain, Build and Incident Control | dependency, artifact, environment, deployment and incident-evidence boundary |
+
+## Abstract Asset Classes
+
+| ID | Abstract Asset Class | Examples of Future Review Interest |
+| --- | --- | --- |
+| SA-01 | Authority and Identity Evidence | authorization, role, principal and reviewer identity |
+| SA-02 | Governance Asset Identity | exact asset name, SHA and status |
+| SA-03 | Review Evidence | admitted evidence, access level and limitations |
+| SA-04 | Message and Work Identity | conceptual Packet, Queue and response binding |
+| SA-05 | Decision and History Evidence | Ledger, Decision Gate, Owner decision and preserved history |
+| SA-06 | Provider and Transport Description | provider, endpoint, destination and transport boundary |
+| SA-07 | Build and Environment Description | dependency, artifact, build, environment and deployment boundary |
+| SA-08 | Protected Authentication Material | credentials, secrets, keys and reusable tokens, which remain prohibited |
+
+The examples identify possible future review interests and do not materialize any asset.
+
+## Abstract Trust Boundaries
+
+| ID | Trust Boundary | Required Governance Separation |
+| --- | --- | --- |
+| STB-01 | Project Owner to Governance System | positive authority and identity |
+| STB-02 | Internal Reviewer to Review Object | evidence access and reviewer scope |
+| STB-03 | Cross-Vendor Reviewer to Review Object | transfer, provider and access limitations |
+| STB-04 | Human Reviewer to Disagreement Record | exact issue, evidence and resolution scope |
+| STB-05 | Project / Matter / User / Session | context and tenant isolation |
+| STB-06 | Connector / Provider / Network | destination, endpoint, transport and external authority |
+| STB-07 | Storage / Cache / Log / Ledger | confidentiality, integrity, provenance and retention |
+| STB-08 | Build / Artifact / Environment / Deployment | supply-chain, promotion and rollback integrity |
+
+These boundaries are abstract review boundaries and are not a network topology or implementation diagram.
+
+## Abstract Exposure Surfaces
+
+| ID | Abstract Surface |
+| --- | --- |
+| SES-01 | identity and role binding |
+| SES-02 | authentication entry and session establishment |
+| SES-03 | authorization and resource selection |
+| SES-04 | prompt, input and instruction handling |
+| SES-05 | Packet, Queue and dispatch handling |
+| SES-06 | response, reconciliation and decision presentation |
+| SES-07 | provider, endpoint, network and transport |
+| SES-08 | storage, cache, log, metric and diagnostic output |
+| SES-09 | retry, rate, availability and delayed work |
+| SES-10 | kill, revocation, recovery and rollback |
+| SES-11 | dependency, build, artifact and environment |
+| SES-12 | monitoring, incident handling and evidence preservation |
+
+No surface is a finding, attack path, interface, test plan or implementation instruction.
+
+## Required Security Domains
+
+All twenty-one domains are mandatory future coverage requirements when within an authorized Security Review scope.
+
+### MMCRG-SD-001 Identity and Principal Binding
+
+Review must evaluate explicit attribution and substitution resistance for human, service, model, provider and component identities.
+
+### MMCRG-SD-002 Authentication Boundary
+
+Review must evaluate authentication entry, session establishment and failure handling without receiving credentials.
+
+### MMCRG-SD-003 Authorization and Least Privilege
+
+Review must evaluate whether actions and resources remain limited to explicit authorization.
+
+### MMCRG-SD-004 Credential, Secret and Key Isolation
+
+Review must evaluate exclusion, exposure and lifecycle boundaries without receiving protected material.
+
+### MMCRG-SD-005 Session, Token and Replay Control
+
+Review must evaluate scope, binding, expiration, invalidation, duplication and replay resistance where mechanisms exist.
+
+### MMCRG-SD-006 Input and Instruction Boundary
+
+Review must evaluate validation and instruction separation without creating exploit-ready payloads.
+
+### MMCRG-SD-007 Packet Identity and Integrity
+
+Review must evaluate exact identity, SHA, sealing, mutation detection and provenance of any separately materialized Packet.
+
+### MMCRG-SD-008 Queue Integrity and Dispatch Safety
+
+Review must evaluate insertion, ordering, duplicate dispatch, retry amplification and stale work where a Queue exists.
+
+### MMCRG-SD-009 Ledger and Audit Integrity
+
+Review must evaluate append preservation, tamper detection, ordering, omission, correction and provenance.
+
+### MMCRG-SD-010 Decision Gate and Owner Authenticity
+
+Review must evaluate decision presentation integrity and Project Owner identity without allowing a Gate to decide.
+
+### MMCRG-SD-011 Connector and Provider Identity
+
+Review must evaluate exact Connector, provider, model and destination binding where separately authorized.
+
+### MMCRG-SD-012 Network and Transport Boundary
+
+Review must evaluate endpoint, route, transport protection and boundary assumptions only on authorized descriptions or evidence.
+
+### MMCRG-SD-013 Storage, Cache and Log Protection
+
+Review must evaluate confidentiality, integrity, access, retention and disclosure boundaries where such mechanisms exist.
+
+### MMCRG-SD-014 Error and Information Disclosure
+
+Review must evaluate whether errors, traces, metrics and diagnostics minimize and protect information.
+
+### MMCRG-SD-015 Monitoring and Detection
+
+Review must evaluate authorized monitoring coverage, signal provenance, blind spots and notification routing.
+
+### MMCRG-SD-016 Availability, Rate and Retry Safety
+
+Review must evaluate quota, rate, retry, amplification, delayed work and failure behavior.
+
+### MMCRG-SD-017 Kill, Revocation and Suspension
+
+Review must evaluate activation authority, scope, propagation, evidence preservation and downstream blocking.
+
+### MMCRG-SD-018 Recovery and Rollback Integrity
+
+Review must evaluate reauthorization, identity, SHA, evidence, rollback source and no-silent-recovery.
+
+### MMCRG-SD-019 Dependency and Supply-Chain Integrity
+
+Review must evaluate identity, source, version, provenance, approval and supersession of dependencies.
+
+### MMCRG-SD-020 Build, Artifact, Environment and Deployment Integrity
+
+Review must evaluate build identity, artifact binding, environment separation, promotion and rollback boundaries.
+
+### MMCRG-SD-021 Incident Handling and Evidence Preservation
+
+Review must evaluate containment boundaries, evidence preservation, notification and authorized recovery.
+
+## Security Domain Coverage Rules
+
+A future Security Review must:
+
+- evaluate every authorized in-scope domain;
+- mark missing evidence as BLOCKED or NOT EVALUABLE;
+- preserve domain-specific limitations;
+- distinguish absence of evidence from absence of vulnerability;
+- distinguish governance design exposure from implementation exposure;
+- distinguish a named control from an implemented control;
+- distinguish implementation from effectiveness;
+- distinguish theoretical weakness from demonstrated vulnerability;
+- preserve scope exclusions and unresolved issues;
+- refuse to combine unrelated evidence into a generalized PASS;
+- exclude credentials, secrets and exploit-ready content.
+
+No risk score, maturity score, exploitability score, certification formula or aggregate security score is defined.
+
+## Evidence Sufficiency and Provenance
+
+The following are conceptual evidence qualifications, not a data Schema:
+
+| Qualification | Meaning |
+| --- | --- |
+| NOT PROVIDED | no evidence supplied |
+| RECORDED VALUE ONLY | a value is present but its source is unavailable |
+| PROJECT OWNER ATTESTED | Project Owner attests to the stated fact or transfer |
+| LOCAL SYSTEM VERIFIED | a local system observation verifies the exact fact stated |
+| CONNECTOR OBSERVED | an authorized Connector reports the exact event |
+| INDEPENDENTLY VERIFIED | the reviewer directly accessed and verified the authorized source |
+| HUMAN VALIDATED | an authorized human reviewer validated the exact issue |
+
+A stronger qualification cannot be inferred from a weaker one.
+
+Unavailable sources must use:
+
+RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED
+
+Temporal statements must distinguish Project Owner decisions, system observations, owner-recorded report acquisition and model text. A model cannot generate governing time.
+
+## Reviewer Roles and Independence
+
+| Role | Authority Boundary |
+| --- | --- |
+| Internal Architecture Reviewer | read-only advisory review when separately authorized |
+| Cross-Vendor External Reviewer | independent advisory review by a different provider when separately authorized |
+| Human Security Reviewer | resolves only separately defined disagreement or effectiveness ambiguity |
+| Project Owner | sole positive authority; not a reviewer class |
+| Codex Executor | materialization or bounded execution role; not a reviewer class unless separately appointed |
+
+Reviewer identity, provider, model, evidence, access level and independence class must be bound before review.
+
+Internal and external outputs cannot be merged into a single anonymous conclusion.
+
+## Severity, Likelihood and Uncertainty Governance
+
+Severity, likelihood and uncertainty are independent qualitative axes.
+
+This Spec does not create values, thresholds, scores, formulas or automatic priority.
+
+Future authorized Review must:
+
+- tie any severity statement to a defined impact scope and evidence;
+- tie any likelihood statement to authorized evidence and assumptions;
+- state uncertainty separately;
+- avoid converting model confidence into severity or likelihood;
+- avoid combining qualitative axes into a numeric score;
+- preserve disagreement and missing evidence.
+
+## Security Review Outcome Semantics
+
+| Outcome | Governance Meaning |
+| --- | --- |
+| PASS | authorized scope evaluated with sufficient bound evidence and no unresolved blocker within that scope |
+| FAIL | at least one unresolved blocking defect exists within the authorized scope |
+| BLOCKED | authority, identity, SHA, evidence, classification or safe access prevents review or conclusion |
+| LIMITED | review completed in a narrower authorized scope with material limitations |
+| PENDING | authorized evidence or reviewer response remains outstanding |
+| UNBOUND | output cannot be tied to the authorized asset, SHA, reviewer or scope |
+| STALE | reviewed identity or governing condition changed |
+| SUPERSEDED | later accepted record replaces current governing use while preserving history |
+
+PASS never means secure, certified, vulnerability-free, compliant, accepted or deployment-ready.
+
+Operational protective states such as kill, hold or suspension remain separate from review determinations.
+
+## Conceptual Security Finding Lifecycle
+
+This lifecycle is a non-executable governance contract.
+
+| Stage | Meaning |
+| --- | --- |
+| SF0 | potential issue observed |
+| SF1 | issue scope and domain nominated |
+| SF2 | authority, asset identity and SHA bound |
+| SF3 | evidence admitted and access qualified |
+| SF4 | reviewer identity and independence bound |
+| SF5 | candidate finding assessed |
+| SF6 | internal and external evidence reconciled |
+| SF7 | Human Review performed if separately required |
+| SF8 | Project Owner disposition recorded |
+| SF9 | current, historical, stale, withdrawn or superseded status preserved |
+
+No stage creates a Security Finding asset in this Design Spec.
+
+A future finding must remain tied to exact asset, SHA, domain, evidence, reviewer, limitations and status.
+
+## Future Security Review Lifecycle
+
+| State | Lifecycle Meaning |
+| --- | --- |
+| SV0 | Review Object nominated |
+| SV1 | Project Owner authority bound |
+| SV2 | object identity and SHA bound |
+| SV3 | purpose, domains, classification and access bound |
+| SV4 | evidence admitted and provenance bound |
+| SV5 | reviewer identity and independence bound |
+| SV6 | internal review separately authorized and completed |
+| SV7 | Cross-Vendor review separately authorized and completed |
+| SV8 | review outputs reconciled without semantic collapse |
+| SV9 | Human Review completed when separately authorized and required |
+| SV10 | Project Owner disposition pending |
+| SV11 | disposition accepted, rejected, held, withdrawn or limited |
+| SV12 | record archived, stale or superseded with immutable history |
+
+No lifecycle state authorizes the next state automatically.
+
+## Security Review Design Lifecycle
+
+| State | Design Lifecycle Meaning |
+| --- | --- |
+| SRDS0 | Design Spec materialization authorized |
+| SRDS1 | Design Spec materialized |
+| SRDS2 | fixed-SHA Design Review authorized |
+| SRDS3 | Design Review completed |
+| SRDS4 | Project Owner Design Spec decision pending |
+| SRDS5 | Spec accepted, rejected, held, withdrawn or superseded |
+| SRDS6 | Design Result separately authorized or not authorized |
+| SRDS7 | downstream Security Review Execution remains separately gated |
+
+Current state is SRDS1 only.
+
+## Transition Rules
+
+### MMCRG-SDT-001 Object Nomination
+
+SV0 requires explicit identification of the proposed review object.
+
+### MMCRG-SDT-002 Authority Precondition
+
+SV0 to SV1 requires prior exact-scope Project Owner authority.
+
+### MMCRG-SDT-003 Invalid Authority
+
+Missing, expired, revoked, suspended or ambiguous authority produces BLOCKED.
+
+### MMCRG-SDT-004 Identity and SHA Binding
+
+SV1 to SV2 requires exact asset identity and SHA.
+
+### MMCRG-SDT-005 SHA Mismatch
+
+Mismatch makes the candidate ineligible and prior evidence stale for current use.
+
+### MMCRG-SDT-006 Scope and Classification Binding
+
+SV2 to SV3 requires purpose, domains, G-class, access and exclusions.
+
+### MMCRG-SDT-007 UNKNOWN / MIXED or Prohibited Data
+
+UNKNOWN / MIXED, G5, prohibited G4 or protected secret content produces BLOCKED.
+
+### MMCRG-SDT-008 Evidence Admission
+
+SV3 to SV4 requires explicit evidence identity, provenance, authority and access qualification.
+
+### MMCRG-SDT-009 Reviewer Binding
+
+SV4 to SV5 requires reviewer identity, provider, role, model where applicable and independence.
+
+### MMCRG-SDT-010 Internal Review Isolation
+
+SV5 to SV6 requires separate internal review authorization and preserves its report independently.
+
+### MMCRG-SDT-011 External Review Isolation
+
+SV6 does not enter SV7 automatically; Cross-Vendor review requires separate manual or otherwise explicit authority.
+
+### MMCRG-SDT-012 Response Binding
+
+Every reviewer response must bind object, SHA, reviewer, scope, evidence and report identity.
+
+### MMCRG-SDT-013 Unbound, Replay or Historical Reuse
+
+Unbound, replayed, stale, superseded or reused historical reports cannot govern.
+
+### MMCRG-SDT-014 Reconciliation
+
+SV6 and SV7 outputs may enter SV8 only after identity and scope compatibility checks.
+
+### MMCRG-SDT-015 Agreement Preservation
+
+Agreement preserves separate reports and does not manufacture a merged reviewer identity.
+
+### MMCRG-SDT-016 Disagreement Preservation
+
+Substantive disagreement remains unresolved and cannot be reduced by majority vote.
+
+### MMCRG-SDT-017 Human Review Gate
+
+SV8 enters SV9 only under separate exact-issue Human Review authority when required.
+
+### MMCRG-SDT-018 Outcome Distinction
+
+PASS, FAIL, BLOCKED, LIMITED, PENDING, UNBOUND, STALE and SUPERSEDED remain distinct.
+
+### MMCRG-SDT-019 Owner Presentation
+
+SV8 or SV9 may enter SV10 only with a complete, bound and limitation-preserving review record.
+
+### MMCRG-SDT-020 OWNER HOLD
+
+Owner silence or explicit hold preserves PENDING or OWNER HOLD without acceptance.
+
+### MMCRG-SDT-021 Explicit Owner Disposition
+
+SV10 enters SV11 only by explicit Project Owner acceptance, rejection, hold, withdrawal or limited disposition.
+
+### MMCRG-SDT-022 Finding Isolation
+
+A finding or review disposition does not authorize remediation, testing or implementation.
+
+### MMCRG-SDT-023 Downstream Isolation
+
+SV11 does not authorize Component, Code, Test, Runtime, Pilot, Deployment or Real Matter.
+
+### MMCRG-SDT-024 Kill and Revocation Dominance
+
+Kill, revocation, suspension, withdrawal or supersession blocks affected current use and future transition.
+
+### MMCRG-SDT-025 No Silent Recovery
+
+Recovery requires revalidation of authority, identity, SHA, evidence, reviewer and Project Owner re-enable where kill applies.
+
+## Transition Matrix
+
+This matrix is a non-executable governance contract.
+
+| Current State | Required Input | Allowed Determination | Protective Outcome | Next State |
+| --- | --- | --- | --- | --- |
+| SV0 | nominated object | eligible / ineligible | BLOCKED if object unbound | SV1 or remain SV0 |
+| SV1 | active authority | bound / invalid | BLOCKED — AUTHORIZATION | SV2 or remain SV1 |
+| SV2 | identity and SHA | match / mismatch | BLOCKED — SHA | SV3 or STALE |
+| SV3 | purpose, domain, class, access | complete / incomplete | BLOCKED — SCOPE OR DATA | SV4 or remain SV3 |
+| SV4 | admitted evidence | sufficient / partial / absent | LIMITED, BLOCKED or NOT EVALUABLE | SV5 or remain SV4 |
+| SV5 | reviewer binding | independent / unbound | BLOCKED — REVIEWER IDENTITY | SV6 or remain SV5 |
+| SV6 | internal report | completed / unavailable | PENDING or BLOCKED | SV7 only with new authority |
+| SV7 | external report | completed / unavailable / invalid | PENDING, BLOCKED or UNBOUND | SV8 or remain SV7 |
+| SV8 | reconciliation | agreement / disagreement | preserve both; route disagreement | SV9 or SV10 |
+| SV9 | Human Review record | resolved / unresolved | PENDING or BLOCKED | SV10 or remain SV9 |
+| SV10 | Owner disposition | accept / reject / hold / withdraw / limited | OWNER HOLD if no positive decision | SV11 or remain SV10 |
+| SV11 | closed disposition | current / stale / superseded | downstream remains blocked | SV12 |
+| SV12 | immutable history | preserved | no silent reactivation | terminal record |
+
+## Fail-Closed Conditions
+
+Future Security Review must block when:
+
+- Project Owner authority is absent, expired, revoked, suspended or ambiguous;
+- reviewed asset or SHA is missing or mismatched;
+- accepted baseline or Handoff cannot be established;
+- reviewer identity, provider, role or independence is unbound;
+- source access is partial but represented as complete;
+- recorded SHA is represented as independently verified without source access;
+- a model supplies its own governance timestamp;
+- data class is UNKNOWN or MIXED;
+- an external path includes unauthorized G4;
+- any path includes G5;
+- credential, secret, key or reusable token appears in evidence;
+- provider, model, endpoint, destination or transport is unbound;
+- required domain evidence is absent;
+- named control lacks implementation or effectiveness evidence for the claimed conclusion;
+- evidence is incomplete, stale, replayed or superseded;
+- response provenance is missing;
+- internal and external reports are merged;
+- disagreement lacks required Human Review;
+- kill, revocation, suspension, withdrawal or supersession is active;
+- review availability, quota or safe access fails;
+- a historical report is reused under a new authorization;
+- outcome semantics are collapsed;
+- PASS is used as certification;
+- review attempts to authorize remediation, testing or downstream action.
+
+Protective labels are descriptive only and do not create executable constants.
+
+## Kill, Revocation, Withdrawal and Recovery
+
+Kill activation may be authorized to Project Owner or an exact-scope protective operator expressly delegated by Project Owner.
+
+Re-enable after kill is Project Owner-only and non-delegable.
+
+Kill, revocation or suspension must:
+
+- stop affected future review dispatch and retry;
+- prevent affected evidence from current governing use without deleting history;
+- preserve activation source, scope and evidence;
+- prevent automatic recovery.
+
+Request cancellation terminates the request but does not withdraw or delete the asset.
+
+Asset withdrawal removes the asset from current eligibility but preserves history.
+
+Recovery requires:
+
+- new authority where required;
+- current identity and SHA;
+- current classification and evidence;
+- current reviewer binding;
+- explicit Project Owner re-enable after kill;
+- no silent carryover from stale or superseded records.
+
+## Threat / Privacy / Security Track Separation
+
+| Track | Authorized Review Concern |
+| --- | --- |
+| Threat | adversarial, abuse and misuse risk within exact scope |
+| Privacy | minimization, purpose, personal data, retention, transfer and data-subject impact |
+| Security | identity, control implementation, credential, provider, network, environment and operational security |
+
+One track may record a dependency on another track.
+
+No track may:
+
+- substitute for another;
+- declare another track PASS;
+- import another track's authority;
+- merge evidence without authority;
+- activate another track automatically.
+
+The accepted Privacy Domain Review record for the revised Component Governance Spec does not establish Security Review authority or outcome.
+
+## Roles and Decision Rights
+
+### Project Owner
+
+Project Owner exclusively may:
+
+- authorize Design Review;
+- accept, reject, hold, withdraw or supersede this Spec;
+- authorize limited revision;
+- authorize Design Result;
+- nominate a Security Review object;
+- authorize evidence access, internal review, Cross-Vendor review or Human Review;
+- accept or reject future Security Review records;
+- authorize tests, remediation, engineering, Runtime or deployment;
+- activate kill or delegate exact-scope protective activation;
+- re-enable after kill.
+
+### Codex Executor
+
+Under the materialization and limited-revision authorizations, Codex may only:
+
+- materialize this sole Design Spec;
+- verify the five bound SHAs;
+- preserve Handoff principles and domains;
+- perform static zero-overreach checks;
+- calculate this candidate SHA;
+- report.
+
+This Spec does not authorize Codex to review, accept or further revise this Spec; execute Security Review; invoke an external reviewer; create a finding; access secrets; scan code or networks; create tests; or start downstream.
+
+### Architecture Coordinator
+
+Design Review authority is not granted.
+
+A future separately authorized role may perform fixed-SHA read-only evaluation of Questions, Gates, principles, domains, transitions, blockers, regressions and overreach.
+
+### Cross-Vendor External Reviewer
+
+External Design Review is not authorized.
+
+If separately authorized, the reviewer must be provider-independent, evidence-bounded, tool-isolated as required, provenance-qualified and advisory only.
+
+### Human Security Reviewer
+
+Human Review is not authorized.
+
+If separately authorized, Human Review is limited to the exact disagreement or ambiguity and cannot create Project Owner acceptance or expand evidence access.
+
+## Design Review Questions
+
+If separately authorized, the fixed-SHA Design Review must answer:
+
+1. 是否仅创建唯一授权 Security Review Design Spec；
+2. 是否保持 DESIGN SPEC ONLY；
+3. Runtime Governance Result SHA 是否匹配；
+4. Component Governance Handoff SHA 是否匹配；
+5. Component Governance Spec SHA 是否匹配；
+6. Component Governance Result SHA 是否匹配；
+7. Security Review Handoff SHA 是否匹配；
+8. 五项 accepted baselines 是否未被改写；
+9. 授权、物化、Review、Acceptance、Result 与 Execution 是否分离；
+10. Security PASS 是否明确不等于 secure、certified 或 deployment-ready；
+11. 25 项 Design Principles 是否完整；
+12. 10 类 Abstract Security-Control Classes 是否保持抽象；
+13. 8 类 Abstract Asset Classes 是否未创建资产；
+14. 8 项 Trust Boundaries 是否未形成网络拓扑；
+15. 12 项 Exposure Surfaces 是否未形成攻击树或测试计划；
+16. 21 项 Security Domains 是否完整；
+17. Identity and Principal Binding 是否保持显式；
+18. Authentication Boundary 是否排除凭据访问；
+19. Authorization and Least Privilege 是否独立于 authentication；
+20. Credential、Secret、Key 与 Token isolation 是否绝对；
+21. Session、Token、Replay 与 stale-state control 是否保持抽象；
+22. Input and Instruction Boundary 是否禁止 exploit-ready payload；
+23. Packet identity and integrity 是否不创建 Packet；
+24. Queue integrity and dispatch safety 是否不创建 Queue；
+25. Ledger and audit integrity 是否不创建 Ledger；
+26. Decision Gate and Owner authenticity 是否保持 Owner-only authority；
+27. Connector and Provider identity 是否不创建 Connector；
+28. Network and Transport Boundary 是否不创建拓扑或探针；
+29. Storage、Cache、Log protection 是否不创建存储设计；
+30. Error and Information Disclosure 是否保持最小披露；
+31. Monitoring and Detection 是否不创建监控实现；
+32. Availability、Rate 与 Retry 是否保持 Fail-Closed；
+33. Kill、Revocation 与 Suspension 是否优先；
+34. Recovery and Rollback 是否要求 no-silent-recovery；
+35. Dependency and Supply-Chain integrity 是否保持来源与版本边界；
+36. Build、Artifact、Environment、Deployment integrity 是否保持阶段隔离；
+37. Incident Handling 是否不创建响应计划；
+38. Evidence qualifications 是否不静默升级；
+39. Reviewer roles 与 provider independence 是否分离；
+40. Severity、Likelihood 与 Uncertainty 是否无评分公式；
+41. Outcome semantics 是否保持八项区分；
+42. Finding lifecycle 是否非执行且不创建 Finding；
+43. 25 条 Transition Rules 与 13 行 Matrix 是否一致；
+44. Threat / Privacy / Security 是否独立；
+45. 是否无 Finding、Register、Exploit、Test、Code、Credential、Runtime、Real Matter 或自动下游。
+
+## Design Acceptance Gates
+
+### MMCRG-SRDS-001 Authorization Fidelity
+
+Only the exact authorized Design Spec may be materialized.
+
+### MMCRG-SRDS-002 Sole Artifact
+
+No additional asset may be created.
+
+### MMCRG-SRDS-003 Design-Spec-Only Scope
+
+The artifact must remain abstract and non-executable.
+
+### MMCRG-SRDS-004 Runtime Governance Result Integrity
+
+The bound Runtime Governance Result identity and SHA must match.
+
+### MMCRG-SRDS-005 Component Handoff Integrity
+
+The bound Component Governance Handoff identity and SHA must match.
+
+### MMCRG-SRDS-006 Component Spec Integrity
+
+The accepted revised Component Governance Spec identity and SHA must match.
+
+### MMCRG-SRDS-007 Component Result Integrity
+
+The accepted revised Component Governance Result identity and SHA must match.
+
+### MMCRG-SRDS-008 Security Handoff Integrity
+
+The accepted Security Review Handoff identity and SHA must match.
+
+### MMCRG-SRDS-009 Baseline Non-Rewrite
+
+No accepted baseline may be rewritten or reinterpreted as new authority.
+
+### MMCRG-SRDS-010 Governing Separation
+
+Materialization, review, acceptance, result and execution must remain separate.
+
+### MMCRG-SRDS-011 Principle Completeness
+
+All 25 Security Review Design Principles must be present.
+
+### MMCRG-SRDS-012 Control-Class Boundary
+
+All abstract control classes must remain non-materialized.
+
+### MMCRG-SRDS-013 Asset-Class Boundary
+
+Asset classes must remain a taxonomy only.
+
+### MMCRG-SRDS-014 Trust-Boundary Abstraction
+
+Trust boundaries must not become topology or configuration.
+
+### MMCRG-SRDS-015 Exposure-Surface Abstraction
+
+Exposure surfaces must not become attacks, exploits or test vectors.
+
+### MMCRG-SRDS-016 Security Domain Completeness
+
+All 21 required Security Domains must be preserved.
+
+### MMCRG-SRDS-017 Identity Coverage
+
+Identity and principal binding must be explicit.
+
+### MMCRG-SRDS-018 Authentication Coverage
+
+Authentication entry, session and failure boundaries must be covered without credentials.
+
+### MMCRG-SRDS-019 Authorization Coverage
+
+Authorization and least privilege must remain independently governed.
+
+### MMCRG-SRDS-020 Credential Isolation
+
+Credentials, secrets, private keys and reusable tokens must remain prohibited.
+
+### MMCRG-SRDS-021 Session and Replay Coverage
+
+Session, token, expiration, invalidation and replay boundaries must be covered.
+
+### MMCRG-SRDS-022 Input Boundary
+
+Input and instruction separation must be covered without payload generation.
+
+### MMCRG-SRDS-023 Packet and Queue Boundary
+
+Packet and Queue domains must remain abstract and unmaterialized.
+
+### MMCRG-SRDS-024 Ledger and Decision Boundary
+
+Ledger evidence and Project Owner decision authority must remain distinct.
+
+### MMCRG-SRDS-025 Connector and Provider Boundary
+
+Provider, model, destination and Connector identity must remain separately authorized.
+
+### MMCRG-SRDS-026 Network and Transport Boundary
+
+No network topology, probe or transport configuration may be created.
+
+### MMCRG-SRDS-027 Storage and Disclosure Boundary
+
+Storage, cache, log, error and disclosure domains must be covered abstractly.
+
+### MMCRG-SRDS-028 Monitoring Boundary
+
+Monitoring and detection must not become an implementation plan.
+
+### MMCRG-SRDS-029 Availability Boundary
+
+Rate, retry, quota and availability failure must remain Fail-Closed.
+
+### MMCRG-SRDS-030 Kill and Revocation Boundary
+
+Kill, revocation and suspension must dominate affected state.
+
+### MMCRG-SRDS-031 Recovery Boundary
+
+Recovery and rollback must require current authority and no silent recovery.
+
+### MMCRG-SRDS-032 Supply-Chain Boundary
+
+Dependency source, version, provenance and supersession must be covered.
+
+### MMCRG-SRDS-033 Build and Environment Boundary
+
+Build, artifact, environment and deployment integrity must remain conceptual.
+
+### MMCRG-SRDS-034 Incident Boundary
+
+Incident handling and evidence preservation must not create a response plan.
+
+### MMCRG-SRDS-035 Evidence Sufficiency
+
+Evidence access and provenance qualifications must remain explicit.
+
+### MMCRG-SRDS-036 Reviewer Independence
+
+Internal, Cross-Vendor, Human and Project Owner roles must remain distinct.
+
+### MMCRG-SRDS-037 No Timestamp Fabrication
+
+Model-generated timestamps must remain non-governing.
+
+### MMCRG-SRDS-038 No Security Certification
+
+PASS must not become certification or an assertion that the system is secure.
+
+### MMCRG-SRDS-039 Severity and Uncertainty Boundary
+
+No risk score, threshold or automatic priority formula may be created.
+
+### MMCRG-SRDS-040 Outcome Fidelity
+
+PASS, FAIL, BLOCKED, LIMITED, PENDING, UNBOUND, STALE and SUPERSEDED must remain distinct.
+
+### MMCRG-SRDS-041 Finding Governance
+
+Finding lifecycle must remain non-executable and separately authorized.
+
+### MMCRG-SRDS-042 Transition Completeness
+
+All 25 transition rules and the 13-row matrix must be present and consistent.
+
+### MMCRG-SRDS-043 Assurance Separation
+
+Threat, Privacy and Security tracks must remain non-substitutable.
+
+### MMCRG-SRDS-044 Fail-Closed Completeness
+
+Missing authority, identity, SHA, evidence, reviewer, safe access or downstream authority must block.
+
+### MMCRG-SRDS-045 Zero Overreach
+
+No Security Review Execution, Result, Finding, Register, vulnerability assessment, test, exploit, component, Schema, API, Code, Credential, Runtime, Real Matter or external invocation may occur.
+
+## Authorized Scope
+
+This Design Spec is authorized to:
+
+- bind the five accepted baseline assets;
+- preserve twenty-five accepted Security governance principles;
+- preserve twenty-one Security Domains;
+- define abstract control, asset, trust-boundary and exposure-surface taxonomies;
+- define evidence and reviewer governance;
+- define qualitative severity, likelihood and uncertainty boundaries;
+- define conceptual lifecycles, outcome semantics, transitions and gates;
+- define Design Review Questions and Acceptance Gates.
+
+## Not Authorized
+
+This Design Spec does not authorize:
+
+- Design Review or revision;
+- Cross-Vendor review or asset transfer;
+- Spec acceptance;
+- Design Result;
+- Security Review Execution or Result;
+- Security Finding, Security Register or Vulnerability Register;
+- control validation, certification or compliance conclusion;
+- attack tree, exploit, payload, test vector or penetration test;
+- hardening, incident-response, recovery or rollback implementation;
+- Threat or Privacy Review Execution;
+- component-specific design or materialization;
+- Packet, Queue, Ledger, Decision Gate or Schema;
+- API, Connector, MCP, Webhook, Agent, Skill or Code;
+- configuration, Credential, Secret, Key or Token;
+- Test Data, connection test, Runtime, Pilot or Deployment;
+- Real Matter or Implementation.
+
+## Artifact Inventory
+
+Newly Materialized Asset:
+
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_SPEC.md
+
+Explicitly Not Created:
+
+- Security Review Result;
+- Security Finding or Register;
+- vulnerability record;
+- security architecture or network topology;
+- control implementation or validation;
+- attack tree, exploit or test vector;
+- component, Packet, Queue, Ledger or Schema;
+- API, Connector, MCP, Code or Credential;
+- Test Data, Runtime, Pilot, Deployment or Implementation.
+
+## Current System State
+
+| Governance Item | Current State |
+| --- | --- |
+| Runtime Security Review Handoff | ACCEPTED & SHA BOUND |
+| Runtime Security Review Design Spec | LIMITED REVISION MATERIALIZED — DESIGN RE-REVIEW NOT AUTHORIZED |
+| Security Review Design Result | NOT CREATED / NOT AUTHORIZED |
+| Security Review Execution / Result | NOT AUTHORIZED |
+| Threat / Privacy Review Execution | NOT AUTHORIZED |
+| Security Finding / Register | NOT CREATED / NOT AUTHORIZED |
+| Components / Schema / API / Code / Credential | NOT CREATED / NOT AUTHORIZED |
+| Test / Runtime / Pilot / Deployment / Real Matter / Implementation | NOT AUTHORIZED |
+| Automatic Downstream Transition | BLOCKED |
+
+## Review Submission
+
+A future separately authorized fixed-SHA Design Review must evaluate:
+
+- all 45 Design Review Questions;
+- all 45 MMCRG-SRDS Acceptance Gates;
+- all 25 MMCRG-SDG Design Principles;
+- all 10 MMCRG-SCC Abstract Control Classes;
+- all 21 MMCRG-SD Security Domains;
+- all 8 Asset Classes;
+- all 8 Trust Boundaries;
+- all 12 Exposure Surfaces;
+- evidence sufficiency and reviewer independence;
+- severity, likelihood and uncertainty governance;
+- outcome and finding semantics;
+- all 25 MMCRG-SDT Transition Rules;
+- the 13-row non-executable transition matrix;
+- baseline SHA and governance-lineage fidelity;
+- zero implementation pollution.
+
+## Next Authorized Action
+
+There is no automatically authorized next action.
+
+The system remains at:
+
+SECURITY REVIEW DESIGN SPEC LIMITED REVISION MATERIALIZED
+DESIGN RE-REVIEW NOT AUTHORIZED
+EXTERNAL REVIEW NOT AUTHORIZED
+DESIGN RESULT NOT AUTHORIZED
+SECURITY REVIEW EXECUTION NOT AUTHORIZED
+FINDING / REGISTER / TEST / EXPLOIT NOT AUTHORIZED
+COMPONENT / SCHEMA / API / CODE / CREDENTIAL NOT AUTHORIZED
+RUNTIME / DEPLOYMENT / REAL MATTER / IMPLEMENTATION NOT AUTHORIZED
+
+Any Design Review, limited revision, acceptance, Design Result, Security Review Execution or downstream action requires a separate exact-scope Project Owner decision.
+===== END EXACT TARGET SPEC =====
