@@ -1,0 +1,2379 @@
+# TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC
+
+## Status
+
+```text
+LIMITED-REVISION CANDIDATE MATERIALIZED — DESIGN REVIEW NOT AUTHORIZED
+```
+
+
+## System Identification
+
+System:
+
+```text
+ACOS — Architecture & Control Operating System
+```
+
+Program:
+
+```text
+Multi-Model Collaboration Automation
+```
+
+Design Layer:
+
+```text
+Runtime Component Governance
+```
+
+Artifact Type:
+
+```text
+DESIGN SPEC ONLY
+```
+
+
+## Materialization Authorization
+
+Project Owner authorized exactly one new asset:
+
+```text
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC.md
+```
+
+Authorized Scope:
+
+```text
+DESIGN SPEC ONLY
+```
+
+This authorization permits abstract governance design for the thirteen component responsibility boundaries accepted in the Component Governance Handoff.
+
+Explicitly Not Authorized:
+
+```text
+Concrete Component Materialization:
+NOT AUTHORIZED
+
+Packet / Queue / Ledger / Schema:
+NOT AUTHORIZED
+
+API / Connector / MCP / Code / Credential:
+NOT AUTHORIZED
+
+Test / Runtime / Pilot / Implementation:
+NOT AUTHORIZED
+
+DESIGN REVIEW:
+NOT AUTHORIZED
+
+RESULT:
+NOT AUTHORIZED
+```
+
+
+## Limited Privacy-Control Revision Authorization
+
+Project Owner separately authorized a one-time, fixed-scope privacy-control revision of this existing Design Spec.
+
+Previous Accepted Baseline SHA-256:
+
+```text
+E655C0E89797EF0EFA081EC8A3A1107E2BF2D43929C1CFAA1C4EDCD8AFCAA9A1
+```
+
+Authorized Revision Scope:
+
+```text
+MMCRG-PD-002 DATA MINIMIZATION SURFACES
+MMCRG-PD-007 PROMPT AND CONTEXT DISCLOSURE SURFACES
+MMCRG-PD-009 CONTEXT AND TENANT SEPARATION BOUNDARIES
+MMCRG-PD-016 CREDENTIAL AND SECRET EXCLUSION SURFACES
+```
+
+The previous accepted SHA remains an immutable historical baseline.
+
+This revised file is a new candidate. Prior Review evidence and acceptance bound to the previous SHA do not transfer to this candidate.
+
+Project Owner subsequently authorized a second, B1/B2-only limited revision bound to pre-revision candidate SHA:
+
+```text
+06670D7E81B67FAD32932BB0EDC44E6B9CD66EBF18D3301F43C14C1FC71C9A20
+```
+
+Privacy Review lineage for every revised candidate must preserve:
+
+- every PV lifecycle state, review record and domain outcome bound to a previous SHA is `STALE` for the revised candidate；
+- historical PV records remain preserved and must not be deleted, rewritten or rebound to the revised candidate；
+- no previous Object Nomination, Authority Binding, Identity / SHA Binding, Evidence Admission, Domain Review or Domain Outcome transfers to the revised candidate；
+- the revised candidate requires a new Privacy Review Object Nomination；
+- the revised candidate requires new explicit Project Owner authority and exact-SHA binding before any Privacy Review activity；
+- no PV lifecycle transition occurs automatically from revision, materialization, Review or acceptance。
+
+This revision authorization does not authorize Design Review, external review, acceptance, Design Result, assurance execution, component materialization, Schema, API, Code, Runtime or Implementation.
+
+
+## MMCRG-SD-003 Limited Revision Candidate Lineage
+
+Source Spec SHA-256:
+
+```text
+F1398EFC56B89F2370F3AD58A76FCBBFB48D5B851760CBBC76795EA9E409C0BC
+```
+
+Accepted Limited Revision Proposal SHA-256:
+
+```text
+3CBA38659C7BBD2323F5AC71111EEBCB5344D63F818133447A1021B1AC97D976
+```
+
+Accepted Security Limitation Resolution Handoff SHA-256:
+
+```text
+69C9DD8B62C83E1BF68B748D75A83E2535FDA6E27ADCCE29A4A85619F7FAC42C
+```
+
+Authorized Revision Domain:
+
+```text
+MMCRG-SD-003 ONLY
+```
+
+Authorized Candidate Changes:
+
+- Candidate Insertion A under MMCRG-CDG-001；
+- Candidate Insertion B under MMCRG-CC-001 Governance Responsibility；
+- Candidate Insertion C under MMCRG-CC-001 Must Not。
+
+The accepted Source Spec remains unchanged.
+
+Review evidence bound to the Source Spec SHA remains valid only for that accepted Source Spec and is `STALE / NON-TRANSFERABLE` for this revised candidate.
+
+This candidate requires new Internal and Cross-Vendor Design Reviews.
+
+No review, acceptance, limitation resolution or downstream authority is created.
+
+## Objective
+
+本 Design Spec 将已接受的 Runtime Component Governance Handoff 转化为可审查的抽象组件治理契约。
+
+本 Spec 的目标是：
+
+- 固定四个 accepted Handoff baselines；
+- 设计十三个抽象组件边界的职责、前置条件、保护性输出、禁止权力及依赖关系；
+- 保留 authorization、integrity、data、review、disagreement、decision、kill 与 history 多轴分离；
+- 保留 Internal / Cross-Vendor Review 分离与 Human Review；
+- 保留 G0–G5、最高级合成、UNKNOWN / MIXED blocking、G4 external exclusion 与 G5 absolute exclusion；
+- 设计跨组件的治理顺序与 Fail-Closed 转换；
+- 设计 kill、revocation、suspension、withdrawal、supersession 与 recovery 的控制关系；
+- 设计 Threat、Privacy、Security 三轨对未来工程阶段的前置约束；
+- 防止 Design Spec 被误认为 Component、Schema、API、Code、Test 或 Runtime；
+- 为未来单独授权的 Design Review 提供 Questions 与 Acceptance Gates。
+
+本 Spec 不：
+
+- create a component；
+- create an instance；
+- create a service；
+- create a Packet；
+- create a Queue；
+- create a Ledger；
+- define a field Schema；
+- define a message format；
+- define an API method；
+- define a database；
+- define executable configuration；
+- define source code；
+- create credentials；
+- invoke a provider；
+- execute Threat、Privacy or Security Review；
+- create test plans or test data；
+- start Runtime、Pilot、Deployment or Implementation。
+
+
+## Architectural Position
+
+```text
+Accepted Component Governance Handoff
+        |
+        +----------------------+----------------------+
+        |                      |                      |
+        v                      v                      v
+Accepted Threat Handoff  Accepted Privacy Handoff  Accepted Security Handoff
+        |                      |                      |
+        +----------------------+----------------------+
+                               |
+                               v
+          Runtime Component Governance Design Spec
+                               |
+                               v
+                 Future Design Review Decision
+                               |
+                               v
+                  Future Design Acceptance
+                               |
+                               v
+            Future Design Result Authorization
+                               |
+                               v
+     Future Component Materialization Authorization
+```
+
+This is a governance dependency view.
+
+It is not:
+
+- an execution graph；
+- a service topology；
+- a process implementation；
+- a message sequence；
+- a network topology；
+- a data-flow diagram；
+- a deployment plan。
+
+
+## Governing Separation
+
+```text
+Handoff Acceptance
+≠
+Design Spec Authorization
+
+Design Spec Materialization
+≠
+Design Review Authorization
+
+Design Review PASS
+≠
+Design Spec Acceptance
+
+Design Spec Acceptance
+≠
+Design Result Authorization
+
+Design Result Acceptance
+≠
+Component Materialization Authorization
+
+Abstract Component Contract
+≠
+Concrete Component
+
+Responsibility Boundary
+≠
+Interface
+
+Conceptual Input Category
+≠
+Field Schema
+
+Protective Outcome
+≠
+Executable Status
+
+Logical Dependency
+≠
+Runtime Call Order
+
+Packet Boundary
+≠
+Packet Schema or Instance
+
+Queue Boundary
+≠
+Queue Implementation
+
+Ledger Boundary
+≠
+Ledger Storage
+
+Decision Readiness
+≠
+Project Owner Decision
+
+Assurance Handoff Acceptance
+≠
+Assurance Review Execution or PASS
+
+Component Governance Design
+≠
+Engineering Authorization
+```
+
+
+## Bound Accepted Baselines
+
+### Component Governance Handoff
+
+```text
+Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_HANDOFF.md
+
+SHA-256:
+6099DA3AE832C6E212123097E6625D2F70C28B2AFC1DA83CC45065999654DF2A
+
+Status:
+ACCEPTED & SHA BOUND
+```
+
+
+### Threat Review Handoff
+
+```text
+Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_THREAT_REVIEW_HANDOFF.md
+
+SHA-256:
+2A42194859118342CF0F162F7ECDE5D747D495CB1657ACAF70592CF67E747C19
+
+Status:
+ACCEPTED & SHA BOUND
+
+Threat Review Execution / Result:
+NOT AUTHORIZED / NOT CREATED
+```
+
+
+### Privacy Review Handoff
+
+```text
+Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_PRIVACY_REVIEW_HANDOFF.md
+
+SHA-256:
+F89F2D36CDDB4DF2E7266709DAA5152F16D1BE5765E71BA3C32D4F7589A2F20B
+
+Status:
+ACCEPTED & SHA BOUND
+
+Privacy Review Execution / Result:
+NOT AUTHORIZED / NOT CREATED
+```
+
+
+### Security Review Handoff
+
+```text
+Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_HANDOFF.md
+
+SHA-256:
+BAA7DFD8284FA3753FF226703A4CCF29AC06C8980284A9D9C480F01EE092EC4F
+
+Status:
+ACCEPTED & SHA BOUND
+
+Security Review Execution / Result:
+NOT AUTHORIZED / NOT CREATED
+```
+
+
+## Baseline Interpretation
+
+The accepted Component Governance Handoff preserves the upstream Automation and Runtime Governance chain by reference.
+
+The accepted Threat、Privacy and Security Handoffs establish assurance entry boundaries only.
+
+They do not establish:
+
+- completed assurance designs；
+- executed assurance reviews；
+- assurance findings；
+- assurance PASS；
+- accepted assurance results；
+- engineering readiness。
+
+This Design Spec may proceed because Project Owner expressly authorized governance design.
+
+It may not infer completion of R15 assurance execution or activation of R16 engineering.
+
+
+## Baseline Fidelity Rules
+
+This Design Spec must:
+
+- bind all four exact Handoff SHAs；
+- preserve accepted upstream references without rewrite；
+- preserve the thirteen abstract responsibility boundaries；
+- preserve the twelve dependency invariants；
+- preserve Project Owner as sole positive authority；
+- preserve Internal / Cross-Vendor independence；
+- preserve Human Review for substantive disagreement；
+- preserve conceptual outcome distinctions；
+- preserve G0–G5 and credential isolation；
+- preserve revocation and kill dominance；
+- preserve assurance-track separation；
+- preserve no automatic escalation；
+- treat any candidate change as a new SHA；
+- invalidate old-SHA Review evidence after change。
+
+
+## Normative Precedence
+
+```text
+1. Current explicit Project Owner decision
+2. Accepted Runtime Component Governance Handoff at exact SHA
+3. Accepted Threat Review Handoff at exact SHA
+4. Accepted Privacy Review Handoff at exact SHA
+5. Accepted Security Review Handoff at exact SHA
+6. Accepted upstream Automation and Runtime Governance assets by reference
+7. This Design Spec after Project Owner acceptance
+8. Future Design Result after separate acceptance
+9. Future component-specific assets after separate authorization
+```
+
+No lower-precedence asset or reviewer may expand a higher-precedence authorization.
+
+
+## Component Governance Design Principles
+
+### MMCRG-CDG-001 Authorization Before Action
+
+Every future component action requires current, applicable and exact-scope Project Owner authority.
+
+Each authorization grant must be limited to the minimum expressly necessary asset, action, capability, scope, duration, recipient, provider, transfer mode, cost and retry boundary for the separately authorized purpose. Any broader or unspecified authority dimension remains unauthorized and requires protective blocking or a new exact-scope Project Owner decision.
+
+
+### MMCRG-CDG-002 Sole Positive Authority
+
+Only Project Owner may ACCEPT、AUTHORIZE、START、ACTIVATE or RE-ENABLE positive downstream action.
+
+
+### MMCRG-CDG-003 Design Is Not Materialization
+
+An accepted component contract remains abstract until a separate materialization authorization exists.
+
+
+### MMCRG-CDG-004 Name Is Not Existence
+
+A component, Packet, Queue, Ledger, Gate or Connector name does not establish an asset or capability.
+
+
+### MMCRG-CDG-005 Contract Is Not Interface
+
+Responsibility, precondition and outcome categories are not methods, fields, payloads or APIs.
+
+
+### MMCRG-CDG-006 Exact Identity
+
+Every future governing action must bind the exact asset, candidate SHA, scope and authority.
+
+
+### MMCRG-CDG-007 No Authority Creation
+
+No component may create, infer, renew, broaden, substitute or transfer authorization.
+
+
+### MMCRG-CDG-008 Protective Outputs Only
+
+Automation may emit protective states and routing readiness but never positive acceptance.
+
+
+### MMCRG-CDG-009 Multi-Axis Preservation
+
+Authorization、integrity、data、review、disagreement、decision、kill and history remain independent axes.
+
+
+### MMCRG-CDG-010 No Semantic Collapse
+
+PASS、FAIL、BLOCKED、LIMITED、PENDING、UNBOUND、CANCELLED、STALE and SUPERSEDED remain distinct.
+
+
+### MMCRG-CDG-011 Queue Is Not Authority
+
+Admission, priority, scheduling and retry cannot create eligibility or scope.
+
+
+### MMCRG-CDG-012 Ledger Is Not Decision
+
+Evidence persistence cannot create a decision, acceptance or authorization.
+
+
+### MMCRG-CDG-013 Gate Is Not Owner
+
+Decision readiness cannot become Project Owner acceptance or downstream activation.
+
+
+### MMCRG-CDG-014 Internal / External Separation
+
+Internal reviewers cannot become Cross-Vendor reviewers, and evidence channels cannot be merged.
+
+
+### MMCRG-CDG-015 Human Review Preservation
+
+Substantive disagreement remains unresolved until separately authorized human resolution.
+
+
+### MMCRG-CDG-016 G0–G5 Preservation
+
+Highest-class composition、UNKNOWN / MIXED blocking、G4 external exclusion and G5 absolute exclusion remain mandatory.
+
+
+### MMCRG-CDG-017 Minimal Disclosure
+
+Every conceptual evidence path must preserve minimum necessary disclosure.
+
+
+### MMCRG-CDG-018 Credential Absolute Isolation
+
+Credentials, secrets, keys and reusable tokens remain outside project assets, evidence and model context.
+
+
+### MMCRG-CDG-019 Integrity Is Not Semantics
+
+Hash, seal or structural integrity cannot establish semantic correctness, truth, safety or authority.
+
+
+### MMCRG-CDG-020 Revocation Dominance
+
+Kill、revocation、suspension、expiry、withdrawal and supersession dominate pending, retry and delayed paths.
+
+
+### MMCRG-CDG-021 No Silent Recovery
+
+Quota, process, connector, operator or infrastructure recovery cannot resume protected work automatically.
+
+
+### MMCRG-CDG-022 Owner-Only Re-Enable
+
+Re-enable after kill remains Project Owner-only and non-delegable.
+
+
+### MMCRG-CDG-023 Assurance Before Engineering
+
+Accepted assurance entry Handoffs do not replace separately authorized and accepted assurance evidence required before engineering.
+
+
+### MMCRG-CDG-024 No Automatic Escalation
+
+Review PASS, design acceptance, readiness or recorded evidence cannot start a downstream stage.
+
+
+### MMCRG-CDG-025 Fail-Closed by Default
+
+Missing authority, identity, SHA, classification, review, provenance, safe state or assurance produces a protective block.
+
+
+## Abstract Contract Vocabulary
+
+Each component contract may describe only:
+
+- governance responsibility；
+- required evidence category；
+- precondition；
+- protective disposition category；
+- dependency；
+- prohibition；
+- assurance dependency；
+- audit obligation。
+
+This Spec does not define:
+
+- field names；
+- data types；
+- required properties；
+- serialization；
+- endpoint paths；
+- methods；
+- classes；
+- functions；
+- database tables；
+- queue technology；
+- storage technology；
+- network protocol；
+- deployment topology。
+
+
+## Conceptual Governance Axes
+
+Future governance must preserve the following independent axes:
+
+```text
+AUTHORIZATION
+INTEGRITY
+DATA CLASSIFICATION
+REVIEW STATUS
+DISAGREEMENT
+OWNER DECISION
+KILL / REVOCATION
+HISTORY / PROVENANCE
+```
+
+No component may compress these axes into one boolean, score or confidence value.
+
+
+## Abstract Component Contracts
+
+All thirteen entries are abstract design contracts only.
+
+They are not materialized components.
+
+
+### MMCRG-CC-001 Authorization Resolver
+
+Governance Responsibility:
+
+- evaluate applicable per-asset and Standing Authorization evidence；
+- bind authority to asset, SHA, reviewer, provider, model, scope, time, transfer mode, cost and retry where applicable；
+- constrain an eligible authorization disposition to the minimum expressly necessary asset, action, capability, scope, duration, recipient, provider, transfer mode, cost and retry boundary for the separately authorized purpose；
+- apply expiry, revocation, suspension, withdrawal and supersession；
+- produce eligibility or a protective authorization disposition。
+
+Required Preconditions:
+
+- exact asset identity；
+- candidate SHA；
+- Project Owner authority source；
+- current authorization state；
+- applicable kill and revocation state。
+
+Protective Dispositions:
+
+- eligible for the next separately authorized governance check；
+- blocked for missing, ambiguous, expired, revoked, suspended or mismatched authority。
+
+Must Not:
+
+- create or infer authority；
+- broaden scope；
+- treat a broader or unspecified authorization dimension as eligible when the separately authorized purpose does not expressly require it；
+- renew authorization；
+- accept an asset；
+- re-enable kill；
+- select a provider or model outside authority。
+
+Dependencies:
+
+- Project Owner decision evidence；
+- Review Ledger as evidence only；
+- Kill Switch as a protective override。
+
+
+### MMCRG-CC-002 Integrity Verifier
+
+Governance Responsibility:
+
+- compare exact asset identity and SHA；
+- evaluate seal and binding consistency；
+- identify mismatch, mutation, stale evidence and supersession；
+- preserve independent-computation and recorded-value distinctions。
+
+Required Preconditions:
+
+- authorized candidate identity；
+- accessible verification source or explicit access limitation；
+- expected binding evidence。
+
+Protective Dispositions:
+
+- integrity matched for current use；
+- blocked, stale, unbound or superseded。
+
+Must Not:
+
+- determine semantic correctness；
+- repair an asset；
+- downgrade mismatch to warning；
+- carry old-SHA evidence forward；
+- claim independent verification without access。
+
+Dependencies:
+
+- Authorization Resolver；
+- Review Ledger for historical comparison；
+- Response Binder for response identity。
+
+
+### MMCRG-CC-003 Data Classifier
+
+Governance Responsibility:
+
+- apply accepted G0–G5 meanings；
+- apply highest-class composition；
+- detect UNKNOWN and MIXED；
+- preserve classification source and limitation；
+- determine conceptual internal or external path eligibility。
+
+Required Preconditions:
+
+- current authority；
+- identifiable content scope；
+- authorized access sufficient for classification；
+- applicable destination and transfer mode。
+
+Protective Dispositions:
+
+- classified and potentially eligible；
+- blocked for UNKNOWN, MIXED, G4 external, G5 or insufficient access。
+
+Must Not:
+
+- classify by filename alone；
+- silently downgrade；
+- create a redaction mechanism；
+- expose prohibited content in classification evidence；
+- authorize transfer。
+
+Dependencies:
+
+- Authorization Resolver；
+- Integrity Verifier；
+- assurance requirements for privacy and security。
+
+
+### MMCRG-CC-004 Review Packet
+
+Governance Responsibility:
+
+- preserve exact review identity, authorized scope and reviewer target；
+- preserve minimal disclosure, data classification and provenance；
+- preserve applicable assurance and limitation references；
+- remain immutable after an authorized sealing decision；
+- expire or supersede predictably。
+
+Required Preconditions:
+
+- current authorization eligibility；
+- matched integrity；
+- eligible data classification；
+- exact reviewer and transfer scope；
+- absence of G4 on external path and absence of G5 on all paths。
+
+Protective Dispositions:
+
+- conceptually sealable for future Queue consideration；
+- blocked, unbound, stale or superseded。
+
+Must Not:
+
+- become a concrete Packet or Schema；
+- contain credentials, G5 or unauthorized G4；
+- create authority；
+- mutate after sealing；
+- include unnecessary content。
+
+Dependencies:
+
+- Authorization Resolver；
+- Integrity Verifier；
+- Data Classifier；
+- Review Ledger evidence overlay。
+
+
+### MMCRG-CC-005 Review Queue
+
+Governance Responsibility:
+
+- admit only conceptually eligible review requests；
+- preserve exact request identity and seal status；
+- preserve authorized provider, model, quota, cost, retry and transfer constraints；
+- apply cancellation, revocation, supersession, OWNER HOLD and kill-pause distinctions。
+
+Required Preconditions:
+
+- eligible sealed review boundary；
+- current authority and kill state；
+- authorized reviewer and route；
+- current quota and availability evidence。
+
+Protective Dispositions:
+
+- pending within current authority；
+- blocked, cancelled, held, stale, superseded or kill-paused。
+
+Must Not:
+
+- become a concrete Queue；
+- create eligibility；
+- convert priority into authority；
+- select an unauthorized provider；
+- increase cost or retry scope；
+- revive cancelled or superseded work；
+- interpret a response。
+
+Dependencies:
+
+- Review Packet；
+- Authorization Resolver；
+- Kill Switch；
+- Review Ledger。
+
+
+### MMCRG-CC-006 External Connector
+
+Governance Responsibility:
+
+- preserve future dispatch preconditions；
+- bind provider, model, endpoint, destination, transport and transfer mode；
+- preserve response provenance；
+- stop under kill, revocation, scope change or identity mismatch。
+
+Required Preconditions:
+
+- separately authorized Connector materialization and use；
+- eligible Queue state；
+- current authorization；
+- eligible data class；
+- bound provider, model, endpoint and destination；
+- credential isolation；
+- accepted Threat, Privacy and Security evidence required for future engineering。
+
+Protective Dispositions:
+
+- future dispatch eligibility；
+- blocked for any missing prerequisite。
+
+Must Not:
+
+- exist or dispatch under this Spec；
+- access the repository broadly；
+- receive G4 or G5；
+- store credentials in project assets；
+- substitute provider or model；
+- retry outside authority；
+- declare a response governing。
+
+Dependencies:
+
+- Review Queue；
+- Authorization Resolver；
+- Data Classifier；
+- Kill Switch；
+- future accepted assurance evidence。
+
+
+### MMCRG-CC-007 Response Binder
+
+Governance Responsibility:
+
+- bind response evidence to the exact request, asset, SHA, reviewer and scope；
+- preserve provider and transfer provenance；
+- distinguish PASS, FAIL, BLOCKED, LIMITED, PENDING and UNBOUND；
+- reject stale, replayed, duplicate-selected and superseded evidence。
+
+Required Preconditions:
+
+- identifiable current request；
+- bound reviewer response；
+- current asset and authority；
+- preserved provenance。
+
+Protective Dispositions:
+
+- bound current evidence；
+- blocked, limited, unbound, stale or superseded。
+
+Must Not:
+
+- convert LIMITED to PASS；
+- convert UNBOUND to FAIL；
+- select a favorable duplicate；
+- merge internal and external evidence；
+- accept an asset。
+
+Dependencies:
+
+- Review Queue identity；
+- Integrity Verifier；
+- Review Ledger；
+- Kill Switch and current authority。
+
+
+### MMCRG-CC-008 Review Reconciler
+
+Governance Responsibility:
+
+- compare internal and Cross-Vendor evidence while preserving provenance；
+- detect substantive and procedural disagreement；
+- preserve blocker and limitation distinctions；
+- route unresolved substantive disagreement to Human Review。
+
+Required Preconditions:
+
+- bound current internal evidence；
+- bound current external evidence where required；
+- same asset and SHA；
+- comparable authorized scope；
+- current kill and revocation state。
+
+Protective Dispositions:
+
+- review evidence aligned for Decision Gate evaluation；
+- blocked or Human Review required。
+
+Must Not:
+
+- majority vote；
+- multiply same-family votes；
+- suppress blockers；
+- select the more favorable report；
+- merge provenance；
+- create Project Owner decision。
+
+Dependencies:
+
+- Response Binder；
+- Human Review Router；
+- Review Ledger；
+- Decision Gate。
+
+
+### MMCRG-CC-009 Review Ledger
+
+Governance Responsibility:
+
+- preserve append-only governance evidence；
+- distinguish current and historical records；
+- preserve authorization, SHA, reviewer, provenance, state and decision lineage；
+- preserve corrections, invalidations, withdrawals and supersession without erasure。
+
+Required Preconditions:
+
+- attributable governance event；
+- exact asset and scope where applicable；
+- provenance classification；
+- minimum-necessary evidence boundary。
+
+Protective Dispositions:
+
+- recorded evidence available for authorized evaluation；
+- blocked from governing use if unbound, stale or prohibited。
+
+Must Not:
+
+- become a concrete Ledger or storage Schema；
+- store G5 or unauthorized G4；
+- store prohibited full content；
+- overwrite history；
+- create eligibility or acceptance；
+- infer missing events。
+
+Dependencies:
+
+- cross-cutting evidence overlay for every component；
+- Project Owner decisions；
+- kill and revocation events。
+
+
+### MMCRG-CC-010 Decision Gate
+
+Governance Responsibility:
+
+- evaluate authorization, identity, integrity, data, review, disagreement, kill, revocation and assurance axes；
+- preserve the deterministic priority of protective conditions；
+- produce a protective disposition or `OWNER DECISION READY`。
+
+Required Preconditions:
+
+- current authority；
+- exact matched identity and SHA；
+- eligible data state；
+- complete required review evidence；
+- resolved substantive disagreement；
+- no active kill, revocation or supersession；
+- required assurance evidence for the proposed downstream scope。
+
+Protective Dispositions:
+
+- blocked by the highest-priority protective condition；
+- Owner decision ready。
+
+Must Not:
+
+- emit `PROJECT OWNER ACCEPTED`；
+- waive a review, SHA, classification or assurance prerequisite；
+- treat silence as acceptance；
+- activate downstream；
+- collapse multiple axes into one score。
+
+Dependencies:
+
+- Authorization Resolver；
+- Integrity Verifier；
+- Data Classifier；
+- Review Reconciler；
+- Human Review Router；
+- Kill Switch；
+- Review Ledger evidence。
+
+
+### MMCRG-CC-011 Human Review Router
+
+Governance Responsibility:
+
+- preserve exact-SHA substantive disagreement；
+- preserve original reviewer evidence；
+- identify a separately authorized human resolution path；
+- maintain unresolved state until valid resolution。
+
+Required Preconditions:
+
+- identified disagreement；
+- exact asset, SHA and scope；
+- separately authorized human reviewer or decision path；
+- permissible evidence access。
+
+Protective Dispositions:
+
+- Human Review pending；
+- resolved evidence returned for Decision Gate evaluation；
+- blocked if authority or reviewer identity is absent。
+
+Must Not:
+
+- select a verdict automatically；
+- convert recommendation to acceptance；
+- bypass kill, revocation or OWNER HOLD；
+- expand evidence access；
+- create Project Owner authority。
+
+Dependencies:
+
+- Review Reconciler；
+- Authorization Resolver；
+- Review Ledger；
+- Decision Gate。
+
+
+### MMCRG-CC-012 Project Owner Decision Interface
+
+Governance Responsibility:
+
+- present exact asset and SHA；
+- present internal and external evidence separately；
+- present blockers, limitations, disagreement, provenance and assurance status；
+- present available Project Owner decision categories without preselection；
+- bind an explicit Owner decision to exact scope。
+
+Required Preconditions:
+
+- Decision Gate disposition；
+- current evidence and history；
+- exact scope and downstream boundary；
+- no hidden protective state。
+
+Protective Dispositions:
+
+- await explicit Project Owner decision；
+- remain blocked or held。
+
+Must Not:
+
+- preselect acceptance；
+- infer silence；
+- hide blockers or limitations；
+- accept on behalf of Project Owner；
+- expand downstream authority from an acceptance。
+
+Dependencies:
+
+- Decision Gate；
+- Review Ledger；
+- Project Owner as sole decision source。
+
+
+### MMCRG-CC-013 Kill Switch
+
+Authority Source:
+
+```text
+PROJECT OWNER ONLY
+```
+
+Potential Activation Executor:
+
+```text
+PROJECT OWNER
+OR
+EXACT-SCOPE PROTECTIVE OPERATOR EXPLICITLY DELEGATED BY PROJECT OWNER
+```
+
+Re-Enable Authority:
+
+```text
+PROJECT OWNER ONLY — NON-DELEGABLE
+```
+
+Governance Responsibility:
+
+- stop future dispatch within exact scope；
+- prevent retry and delayed work；
+- block affected evidence from current Decision Gate use；
+- preserve history；
+- notify Project Owner；
+- prevent automatic resume。
+
+Required Preconditions:
+
+- Project Owner activation or valid exact-scope protective delegation；
+- attributable activation scope；
+- append-preserved event evidence。
+
+Protective Dispositions:
+
+- kill active；
+- activation blocked if authority is invalid；
+- re-enable pending explicit Project Owner decision。
+
+Must Not:
+
+- become a concrete control under this Spec；
+- create positive authority；
+- delete history；
+- treat kill pause as OWNER HOLD；
+- re-enable automatically；
+- use activation as a positive decision。
+
+Dependencies:
+
+- cross-cutting protective override across all components；
+- Review Ledger；
+- Project Owner Decision Interface。
+
+
+## Governance Dependency View
+
+```text
+Project Owner Authority
+        |
+        v
+Authorization Resolver
+        |
+        +-------------------+
+        |                   |
+        v                   v
+Integrity Verifier     Data Classifier
+        |                   |
+        +---------+---------+
+                  |
+                  v
+              Review Packet
+                  |
+                  v
+              Review Queue
+                  |
+                  v
+           External Connector
+                  |
+                  v
+            Response Binder
+                  |
+                  v
+           Review Reconciler
+                  |
+          +-------+-------+
+          |               |
+          v               v
+Human Review Router   Protective Outcome
+          |
+          v
+          Decision Gate
+                  |
+                  v
+Project Owner Decision Interface
+                  |
+                  v
+Explicit Project Owner Decision
+
+Review Ledger:
+APPEND-ONLY EVIDENCE OVERLAY — NEVER A DECISION SOURCE
+
+Kill Switch:
+PROTECTIVE OVERRIDE OVERLAY — NEVER POSITIVE AUTHORITY
+```
+
+This view remains logical and non-executable.
+
+
+## Dependency Invariants
+
+### CG-DI-001 Authority Before Eligibility
+
+No integrity, classification, Packet or Queue disposition may substitute for current authority.
+
+
+### CG-DI-002 Integrity Before Current Use
+
+Mismatched, stale or superseded evidence cannot enter the current governing path.
+
+
+### CG-DI-003 Classification Before External Eligibility
+
+External eligibility requires separately governed classification and destination scope.
+
+
+### CG-DI-004 Packet Before Queue
+
+Future Queue admission requires an authorized immutable review identity boundary.
+
+
+### CG-DI-005 Queue Before Dispatch
+
+Dispatch cannot occur outside the authorized Queue and current authority boundary.
+
+
+### CG-DI-006 Response Binding Before Reconciliation
+
+Unbound evidence cannot be reconciled or presented as current.
+
+
+### CG-DI-007 Reconciliation Before Decision Readiness
+
+Internal and external evidence must remain distinct and disagreement must be routed.
+
+
+### CG-DI-008 Human Resolution Before Readiness
+
+Substantive disagreement cannot be bypassed by Decision Gate.
+
+
+### CG-DI-009 Decision Gate Before Owner Presentation
+
+Only a protective disposition or `OWNER DECISION READY` may reach the Owner interface.
+
+
+### CG-DI-010 Owner Decision Before Downstream
+
+Readiness, PASS or evidence cannot start downstream without a separate explicit Owner decision.
+
+
+### CG-DI-011 Ledger Is Cross-Cutting Evidence
+
+Ledger records state but never changes eligibility or authority.
+
+
+### CG-DI-012 Kill Is Cross-Cutting Protection
+
+Kill and revocation dominate every pending or delayed path.
+
+
+## Conceptual Component Governance Lifecycle
+
+```text
+C0 — REQUEST OBSERVED
+C1 — AUTHORITY EVALUATED
+C2 — IDENTITY / INTEGRITY EVALUATED
+C3 — DATA ELIGIBILITY EVALUATED
+C4 — REVIEW BOUNDARY ELIGIBLE
+C5 — REVIEW PENDING
+C6 — RESPONSE BOUND
+C7 — REVIEW RECONCILED
+C8 — HUMAN RESOLUTION PENDING OR COMPLETE
+C9 — OWNER DECISION READY OR PROTECTIVELY BLOCKED
+C10 — EXPLICIT OWNER DECISION RECORDED
+C11 — DOWNSTREAM REMAINS SEPARATELY AUTHORIZED
+```
+
+These are conceptual governance stages.
+
+They are not executable states, constants, database values or runtime instructions.
+
+
+## Transition Rules
+
+### MMCRG-CDT-001 Request Observation
+
+C0 records no eligibility and creates no authority.
+
+
+### MMCRG-CDT-002 Authority Precondition
+
+C0 may reach C1 only under a separately authorized future evaluation path.
+
+
+### MMCRG-CDT-003 Invalid Authority
+
+Missing, expired, revoked, suspended or mismatched authority produces a protective block.
+
+
+### MMCRG-CDT-004 Integrity Precondition
+
+Only current authority may proceed to identity and integrity evaluation.
+
+
+### MMCRG-CDT-005 SHA Mismatch
+
+Mismatch, mutation, stale or superseded identity blocks current use.
+
+
+### MMCRG-CDT-006 Classification Precondition
+
+Only matched current identity may proceed to data eligibility evaluation.
+
+
+### MMCRG-CDT-007 UNKNOWN / MIXED
+
+UNKNOWN or MIXED classification blocks.
+
+
+### MMCRG-CDT-008 G4 External
+
+G4 is blocked from external paths.
+
+
+### MMCRG-CDT-009 G5 Absolute
+
+G5 is blocked from every content path.
+
+
+### MMCRG-CDT-010 Review Boundary Eligibility
+
+C4 requires authority, integrity, classification, reviewer and minimum-disclosure eligibility.
+
+
+### MMCRG-CDT-011 Queue Admission
+
+Queue admission may occur only after an authorized immutable review boundary exists.
+
+
+### MMCRG-CDT-012 Queue Is Non-Authoritative
+
+Pending, priority, quota or availability cannot expand eligibility.
+
+
+### MMCRG-CDT-013 Dispatch Preconditions
+
+Future dispatch requires separate Connector, credential, provider, model, transport and assurance authority.
+
+
+### MMCRG-CDT-014 Response Binding
+
+Only an attributable response matching current request identity may reach C6.
+
+
+### MMCRG-CDT-015 Unbound or Replay
+
+Unbound, replayed, stale, duplicate-selected or superseded evidence blocks reconciliation.
+
+
+### MMCRG-CDT-016 Review Reconciliation
+
+Internal and external evidence remain separate during C7.
+
+
+### MMCRG-CDT-017 PASS / FAIL Disagreement
+
+Substantive PASS / FAIL disagreement requires Human Review.
+
+
+### MMCRG-CDT-018 LIMITED / UNBOUND Preservation
+
+LIMITED and UNBOUND cannot be promoted or converted into PASS.
+
+
+### MMCRG-CDT-019 Human Resolution
+
+C8 requires separate exact-SHA Human Review authority.
+
+
+### MMCRG-CDT-020 Decision Gate
+
+C9 may emit only a protective disposition or `OWNER DECISION READY`.
+
+
+### MMCRG-CDT-021 Owner Silence
+
+Project Owner silence remains pending and cannot be inferred as acceptance.
+
+
+### MMCRG-CDT-022 Explicit Owner Decision
+
+C10 requires an explicit Project Owner decision bound to exact asset, SHA and scope.
+
+
+### MMCRG-CDT-023 Downstream Isolation
+
+C10 does not automatically authorize C11 or any downstream action.
+
+
+### MMCRG-CDT-024 Kill and Revocation Dominance
+
+Kill, revocation, suspension, withdrawal and supersession may protectively interrupt any stage.
+
+
+### MMCRG-CDT-025 No Silent Recovery
+
+Recovery from quota, process, connector or operator failure returns to protective pending state until Project Owner re-authorizes where required.
+
+
+## Transition Matrix
+
+| Current Conceptual Stage | Required Condition | Permitted Next Disposition | Prohibited Interpretation |
+|---|---|---|---|
+| C0 | future evaluation authority | C1 or BLOCKED | request creates authority |
+| C1 | valid exact-scope authority | C2 | authority may be inferred |
+| C2 | exact identity and SHA match | C3 | integrity means semantic correctness |
+| C3 | eligible G-class and destination | C4 | classification authorizes transfer |
+| C4 | sealed authorized review boundary | C5 | Packet is a Schema or instance |
+| C5 | separately authorized dispatch and response | C6 or protective pending | Queue creates eligibility |
+| C6 | current bound evidence | C7 | any response is governing |
+| C7 | aligned evidence or routed disagreement | C8 or C9 | majority vote |
+| C8 | authorized human resolution | C9 | human reviewer becomes Owner |
+| C9 | no unresolved protective blocker | Owner interface readiness | readiness is acceptance |
+| C10 | explicit Owner decision | separately authorized downstream consideration | acceptance activates downstream |
+| Any | kill, revocation or supersession | protective interruption | automatic resume |
+
+
+## Decision and Outcome Semantics
+
+The following concepts remain distinct:
+
+```text
+PASS
+FAIL
+BLOCKED
+LIMITED
+PENDING
+UNBOUND
+CANCELLED
+STALE
+SUPERSEDED
+OWNER HOLD
+KILL PAUSED
+OWNER DECISION READY
+```
+
+These are conceptual governance meanings only.
+
+They are not executable enumerations or a status Schema.
+
+Additional separation:
+
+- request cancellation is not asset withdrawal；
+- OWNER HOLD is not kill；
+- kill pause is not cancellation；
+- STALE is not FAIL；
+- UNBOUND is not FAIL；
+- LIMITED is not PASS；
+- SUPERSEDED is historical preservation, not deletion；
+- readiness is not acceptance。
+
+
+## Assurance-Track Governance
+
+### Threat
+
+Accepted State:
+
+```text
+HANDOFF ACCEPTED
+EXECUTION / RESULT NOT AUTHORIZED
+```
+
+Future component materialization must not proceed until separately required threat evidence is authorized, completed, reviewed and accepted.
+
+
+### Privacy
+
+Accepted State:
+
+```text
+HANDOFF ACCEPTED
+EXECUTION / RESULT NOT AUTHORIZED
+```
+
+Future component materialization must not proceed until separately required privacy evidence is authorized, completed, reviewed and accepted.
+
+
+### Security
+
+Accepted State:
+
+```text
+HANDOFF ACCEPTED
+EXECUTION / RESULT NOT AUTHORIZED
+```
+
+Future component materialization must not proceed until separately required security evidence is authorized, completed, reviewed and accepted.
+
+
+### Assurance Separation
+
+No track may:
+
+- substitute for another；
+- import another track's authorization；
+- declare another track PASS；
+- combine evidence without authorization；
+- automatically activate engineering。
+
+
+## Data and Credential Governance
+
+Future design or materialization must preserve:
+
+- accepted G0–G5 meanings；
+- content-based classification；
+- highest-class composition；
+- UNKNOWN / MIXED blocking；
+- G4 external exclusion；
+- G5 absolute exclusion；
+- minimum necessary disclosure；
+- context and project isolation；
+- source-access limitations；
+- credential and secret isolation；
+- append-preserved provenance。
+
+### Explicit Privacy-Control Design Clarifications
+
+The following statements clarify the abstract privacy-control obligations already preserved by this Spec.
+
+They do not create a component, Schema, data flow, storage design, retention schedule, deletion workflow, interface, configuration or executable mechanism.
+
+#### MMCRG-PD-002 Data Minimization Surfaces
+
+Access minimization:
+
+- every future access path must be limited to the minimum content and evidence portions necessary for the exact authorized purpose, scope and reviewer；
+- access beyond that minimum must remain blocked。
+
+Transfer minimization:
+
+- every future transfer path must be limited to the minimum content and evidence portions necessary for the exact authorized destination and transfer scope；
+- content that is unnecessary for the authorized purpose must not be transferred。
+
+Display minimization:
+
+- every future display or presentation path must expose only the minimum content and evidence portions necessary for the exact authorized recipient and decision purpose；
+- hidden, unrelated or prohibited content must not be surfaced merely because it exists in an authorized asset。
+
+Retention minimization:
+
+- every future retention decision must be limited to the minimum authorized duration and minimum governance evidence necessary for the exact purpose；
+- when current governing use ends, content must be excluded from current use, while only minimum non-prohibited provenance may remain where separately authorized；
+- this abstract obligation does not define a retention schedule, deletion period, storage mechanism or deletion workflow。
+
+#### MMCRG-PD-007 Prompt and Context Disclosure Surfaces
+
+Prompts:
+
+- every future prompt path must contain only the minimum authorized content necessary for the exact review purpose；
+- unrelated content, prohibited classifications and credentials must remain excluded。
+
+Context:
+
+- every future model or reviewer context must remain limited to the exact authorized asset, SHA, purpose, scope and evidence boundary；
+- context expansion or carryover without separate authority must remain blocked。
+
+Attachments:
+
+- every future attachment must be separately identified, SHA-bound, classified and authorized before use；
+- attachment content must be minimized to the exact authorized purpose, and an attachment must not create access to non-target content。
+
+History:
+
+- prior prompt, model, reviewer, user or session history must not be injected, reused or treated as current evidence without separate exact-scope authority and necessity；
+- Review Ledger or provenance history must not substitute for authorization to disclose prompt, context, attachment, model, user or session history。
+
+#### MMCRG-PD-009 Context and Tenant Separation Boundaries
+
+Cross-Project:
+
+- project contexts and evidence must remain separated；
+- cross-project combination or reuse requires separate exact-project authority and must otherwise remain blocked。
+
+Cross-Matter:
+
+- matter contexts and evidence must remain separated；
+- cross-matter combination or reuse requires separate exact-matter authority, and Real Matter remains prohibited unless separately and expressly authorized。
+
+Cross-User:
+
+- user-scoped contexts and evidence must remain separated；
+- one user's authority, context or history must not create another user's access or evidence eligibility。
+
+Cross-Session:
+
+- session contexts and histories must remain separated；
+- prior-session context or evidence must not carry into a new session without separate exact-scope authority and current necessity。
+
+Cross-Provider:
+
+- provider-scoped contexts and evidence channels must remain separated；
+- transfer, combination or reuse across providers requires separate exact-provider, model, destination and transfer-scope authority and must otherwise remain blocked。
+
+#### MMCRG-PD-016 Credential and Secret Exclusion Surfaces
+
+Prompts:
+
+- credentials, secrets, keys and reusable tokens must remain excluded from every future prompt；
+- suspected secret entry must produce an immediate protective block。
+
+Reports:
+
+- credentials, secrets, keys and reusable tokens must remain excluded from every future report；
+- a report must not reproduce secret material as evidence or explanation。
+
+Logs:
+
+- credentials, secrets, keys and reusable tokens must remain excluded from every future log, trace, error, metric or diagnostic record；
+- observability need must not override credential isolation。
+
+Caches:
+
+- credentials, secrets, keys and reusable tokens must remain excluded from every future cache or temporary retained context；
+- caching must not create a secret-entry or secret-reuse path。
+
+Evidence:
+
+- credentials, secrets, keys and reusable tokens must remain excluded from every future evidence object, Packet, response, Ledger record or decision presentation；
+- secret material must not be retained merely to prove that exclusion failed。
+
+Any missing, ambiguous or unsupported privacy-control boundary above produces a protective block and cannot be cured by reviewer confidence, attestation, majority agreement or downstream readiness.
+
+This Spec does not create:
+
+- a classifier implementation；
+- a redaction mechanism；
+- an anonymization mechanism；
+- a data Schema；
+- a credential store；
+- a secret manager；
+- a transfer mechanism。
+
+
+## Evidence and Provenance Governance
+
+Future component evidence must distinguish:
+
+- independently computed SHA；
+- recorded SHA value；
+- Project Owner attestation；
+- manual transfer；
+- system-observed event；
+- connector-observed event；
+- internal reviewer evidence；
+- Cross-Vendor reviewer evidence；
+- current evidence；
+- historical evidence。
+
+Model-generated or predicted timestamps cannot establish authorization lineage.
+
+Unavailable sources must be marked:
+
+```text
+RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED
+```
+
+No evidence record may silently claim a stronger access or verification level.
+
+
+## Fail-Closed Conditions
+
+The future component-governance path must block when:
+
+- Project Owner authority is absent, expired, revoked, suspended or ambiguous；
+- asset identity or SHA is missing or mismatched；
+- source acceptance cannot be established；
+- a component name is presented as a materialized asset；
+- an abstract contract is presented as an interface or Schema；
+- authorization scope is inferred or broadened；
+- G-class is UNKNOWN or MIXED；
+- an external path includes G4；
+- any content path includes G5；
+- credentials or secrets appear in project evidence；
+- reviewer provider, model or independence is unbound；
+- source access is partial but represented as complete；
+- internal and Cross-Vendor evidence is merged；
+- required external review is unavailable, quota-limited or incomplete；
+- PASS, FAIL, BLOCKED, LIMITED, PENDING or UNBOUND is collapsed；
+- substantive disagreement lacks authorized Human Review；
+- OWNER HOLD, kill pause, cancellation and withdrawal are conflated；
+- response is stale, replayed, unbound or superseded；
+- kill, revocation, suspension or supersession is active；
+- a model-generated timestamp is used as governance evidence；
+- Threat, Privacy or Security prerequisite evidence is absent for engineering；
+- Packet, Queue, Ledger, API, Code, Test or Runtime authority is absent；
+- downstream action is inferred from acceptance。
+
+Protective descriptions may include:
+
+```text
+BLOCKED — AUTHORIZATION
+BLOCKED — SHA
+BLOCKED — IDENTITY
+BLOCKED — DATA CLASS
+BLOCKED — G4 EXTERNAL
+BLOCKED — G5 / CREDENTIAL
+BLOCKED — REVIEWER IDENTITY
+BLOCKED — SOURCE ACCESS
+BLOCKED — ASSURANCE
+BLOCKED — REVIEW
+BLOCKED — DISAGREEMENT
+BLOCKED — KILL
+BLOCKED — REVOCATION
+BLOCKED — DOWNSTREAM NOT AUTHORIZED
+```
+
+These descriptions are not executable constants.
+
+
+## Kill, Revocation and Recovery Governance
+
+Kill Activation Authority:
+
+```text
+PROJECT OWNER
+OR
+EXACT-SCOPE PROTECTIVE OPERATOR EXPLICITLY DELEGATED BY PROJECT OWNER
+```
+
+Re-Enable Authority:
+
+```text
+PROJECT OWNER ONLY — NON-DELEGABLE
+```
+
+Kill or revocation must:
+
+- stop future dispatch within scope；
+- stop retries and delayed work；
+- remove affected evidence from current governing use without deleting history；
+- preserve the activation source and scope；
+- notify Project Owner；
+- prevent automatic recovery。
+
+Recovery must:
+
+- preserve prior evidence as historical；
+- re-evaluate authority, SHA, identity, data, reviewer and assurance；
+- require explicit Project Owner re-enable after kill；
+- remain blocked if any prerequisite is missing。
+
+
+## Design Lifecycle
+
+```text
+CGDS0 — DESIGN SPEC MATERIALIZATION AUTHORIZED
+CGDS1 — DESIGN SPEC MATERIALIZED
+CGDS2 — DESIGN REVIEW AUTHORIZED
+CGDS3 — DESIGN REVIEW COMPLETED
+CGDS4 — PROJECT OWNER SPEC DECISION
+CGDS5 — SPEC ACCEPTED OR REJECTED
+CGDS6 — DESIGN RESULT DECISION
+CGDS7 — FUTURE COMPONENT MATERIALIZATION DECISION
+```
+
+Rules:
+
+1. CGDS0 → CGDS1 requires sole-asset materialization.
+2. CGDS1 → CGDS2 requires separate fixed-SHA Review authorization.
+3. CGDS2 → CGDS3 permits read-only Design Review only.
+4. CGDS3 → CGDS4 requires a complete Review report.
+5. CGDS4 → CGDS5 requires explicit Project Owner decision.
+6. CGDS5 does not automatically enter CGDS6.
+7. CGDS6 does not automatically enter CGDS7.
+8. Any content change creates a new candidate SHA.
+9. Old-SHA Review evidence becomes stale.
+10. Review FAIL does not authorize revision.
+11. Revision requires separate exact-file authority.
+12. Design Result, materialization and implementation remain independently authorized.
+
+Current:
+
+```text
+CGDS1 — DESIGN SPEC MATERIALIZED
+
+CGDS2–CGDS7:
+NOT AUTHORIZED
+```
+
+
+## Roles and Decision Rights
+
+### Project Owner
+
+Exclusively may:
+
+- authorize Design Review；
+- accept, reject, hold, withdraw or supersede this Spec；
+- authorize limited revision；
+- authorize Design Result；
+- authorize assurance execution；
+- authorize component materialization；
+- authorize Code, Test, Pilot and Deployment；
+- activate kill or delegate exact-scope protective activation；
+- re-enable after kill。
+
+
+### Codex Executor
+
+Current authority is limited to:
+
+- materialize this sole Design Spec；
+- verify four bound Handoff SHAs；
+- preserve accepted abstract component contracts；
+- calculate candidate SHA；
+- perform static zero-overreach checks；
+- report。
+
+Codex may not:
+
+- review or accept this Spec；
+- create a component；
+- create Packet, Queue or Ledger assets；
+- invoke an external reviewer；
+- create API, Code, Credential, Test or Runtime；
+- start downstream。
+
+
+### Architecture Coordinator
+
+Current:
+
+```text
+DESIGN REVIEW:
+NOT AUTHORIZED
+```
+
+Future role, if separately authorized:
+
+- fixed-SHA read-only Design Review；
+- Question and Gate evaluation；
+- blocker, non-blocker, regression and overreach classification；
+- recommendation only。
+
+
+### External Consultant
+
+Current:
+
+```text
+EXTERNAL DESIGN REVIEW:
+NOT AUTHORIZED
+```
+
+No Handoff or assurance external PASS automatically carries forward to this Spec.
+
+
+### Human Reviewer
+
+May act only after:
+
+- a separately authorized Human Review path；
+- exact-SHA disagreement binding；
+- identified resolution authority；
+- preservation of original evidence。
+
+Human Review cannot create Project Owner acceptance or downstream authority.
+
+
+## Future Materialization Preconditions
+
+No component-specific or concrete component asset may be authorized merely because this Spec is accepted.
+
+Future materialization consideration requires, at minimum:
+
+- accepted Design Spec at exact SHA；
+- separately authorized and accepted Design Result where required；
+- explicit component identity and sole-asset authorization；
+- accepted Threat evidence applicable to that component and scope；
+- accepted Privacy evidence applicable to that component and scope；
+- accepted Security evidence applicable to that component and scope；
+- exact data classification and credential boundary；
+- separate Schema or interface authorization if needed；
+- separate Code, Test and Runtime authorizations；
+- current kill and revocation state；
+- explicit Project Owner decision。
+
+
+## Design Review Questions
+
+If separately authorized, Design Review must answer:
+
+1. 是否仅创建唯一授权 Design Spec；
+2. Spec 是否保持 `DESIGN SPEC ONLY`；
+3. Component Governance Handoff SHA 是否匹配；
+4. Threat Review Handoff SHA 是否匹配；
+5. Privacy Review Handoff SHA 是否匹配；
+6. Security Review Handoff SHA 是否匹配；
+7. 四个 Handoff 是否准确记录为 accepted；
+8. Assurance Handoff acceptance 是否未被误写为 execution or PASS；
+9. accepted upstream 是否仅按 reference 继承而未重写；
+10. Handoff / Spec / Review / Result / Materialization / Implementation 是否分离；
+11. 25 项 Component Governance Design Principles 是否完整；
+12. abstract contract vocabulary 是否未构成 interface or Schema；
+13. 八个治理轴是否保持独立；
+14. 十三个 abstract component contracts 是否完整；
+15. Authorization Resolver 是否不创建 authority；
+16. Integrity Verifier 是否不判断 semantic correctness；
+17. Data Classifier 是否保留 G0–G5 and protective blocking；
+18. Review Packet 是否保持 abstract, immutable-boundary and non-Schema；
+19. Review Queue 是否不创建 eligibility or retry scope；
+20. External Connector 是否保持未创建、未授权且受 assurance 前置约束；
+21. Response Binder 是否保留 exact request-response identity；
+22. Review Reconciler 是否禁止 majority vote and provenance merge；
+23. Review Ledger 是否 append-preserved 且非 decision source；
+24. Decision Gate 是否只产生 protective state or Owner readiness；
+25. Human Review Router 是否保留 unresolved disagreement；
+26. Project Owner Interface 是否不预选 positive decision；
+27. Kill Switch 是否保留 Owner-only re-enable；
+28. 十二项 Dependency Invariants 是否完整；
+29. dependency view 是否明确非 execution graph；
+30. conceptual lifecycle 是否不构成 executable state machine；
+31. 25 项 Transition Rules 是否完整；
+32. Transition Matrix 是否保留 authority → integrity → data → review → decision 分离；
+33. PASS / FAIL / BLOCKED / LIMITED / PENDING / UNBOUND 是否不折叠；
+34. OWNER HOLD / kill / cancellation / withdrawal 是否分离；
+35. exact-SHA, stale and supersession 是否完整；
+36. Internal / Cross-Vendor Review 是否保持不同供应商与独立 provenance；
+37. G4 external exclusion、G5 absolute exclusion、MMCRG-PD-002 的 Access / Transfer / Display / Retention、MMCRG-PD-007 的 Prompts / Context / Attachments / History，以及 MMCRG-PD-009 的 Cross-Project / Cross-Matter / Cross-User / Cross-Session / Cross-Provider 是否均保持显式、分离且 Fail-Closed；
+38. MMCRG-PD-016 是否明确要求在 Prompts、Reports、Logs、Caches and Evidence 五个表面排除 credential, secret, key and reusable token；
+39. Threat / Privacy / Security tracks 是否保持独立；
+40. Assurance before engineering 是否未被 Handoff acceptance 替代；
+41. Fail-Closed 是否覆盖 authority, SHA, identity, data, review, disagreement, assurance and kill；
+42. 是否未创建 component, Packet, Queue, Ledger or Schema；
+43. 是否未创建 API, Connector, MCP, Code or Credential；
+44. 是否未创建 Test, Runtime, Pilot, Deployment or Real Matter；
+45. 是否不存在 external invocation, Design Result or automatic escalation。
+
+
+## Design Acceptance Gates
+
+### MMCRG-CGDS-001 Authorization Fidelity
+
+Only the authorized Runtime Component Governance Design Spec may be created.
+
+
+### MMCRG-CGDS-002 Sole Artifact
+
+No secondary asset may be created.
+
+
+### MMCRG-CGDS-003 Design-Spec-Only Scope
+
+The artifact must remain `DESIGN SPEC ONLY`.
+
+
+### MMCRG-CGDS-004 Component Handoff Integrity
+
+The Component Governance Handoff identity and SHA must match.
+
+
+### MMCRG-CGDS-005 Threat Handoff Integrity
+
+The Threat Review Handoff identity and SHA must match.
+
+
+### MMCRG-CGDS-006 Privacy Handoff Integrity
+
+The Privacy Review Handoff identity and SHA must match.
+
+
+### MMCRG-CGDS-007 Security Handoff Integrity
+
+The Security Review Handoff identity and SHA must match.
+
+
+### MMCRG-CGDS-008 Accepted Baseline Fidelity
+
+Accepted Handoff states must be recorded without re-acceptance or inflation.
+
+
+### MMCRG-CGDS-009 Assurance Status Fidelity
+
+Handoff acceptance must not become assurance execution, finding, result or PASS.
+
+
+### MMCRG-CGDS-010 Inherited Baseline Non-Rewrite
+
+Upstream assets must remain unchanged.
+
+
+### MMCRG-CGDS-011 Governing Separation
+
+Spec, Review, Result, materialization, implementation and downstream authority must remain separate.
+
+
+### MMCRG-CGDS-012 Principle Completeness
+
+All 25 Component Governance Design Principles must be present.
+
+
+### MMCRG-CGDS-013 Abstract Contract Boundary
+
+Contract vocabulary must not become fields, methods, payloads, API or Schema.
+
+
+### MMCRG-CGDS-014 Multi-Axis Preservation
+
+All eight governance axes must remain independent.
+
+
+### MMCRG-CGDS-015 Component Contract Completeness
+
+All thirteen abstract component contracts must be present.
+
+
+### MMCRG-CGDS-016 Authorization Resolver Boundary
+
+Authorization Resolver must not create, infer or broaden authority.
+
+
+### MMCRG-CGDS-017 Integrity Verifier Boundary
+
+Integrity Verifier must not infer semantics, truth or safety.
+
+
+### MMCRG-CGDS-018 Data Classifier Boundary
+
+G0–G5, highest-class, UNKNOWN / MIXED, G4 and G5 controls must remain.
+
+
+### MMCRG-CGDS-019 Packet Boundary
+
+Review Packet must remain an abstract immutable identity boundary and not a Schema.
+
+
+### MMCRG-CGDS-020 Queue Boundary
+
+Review Queue must not create eligibility, authority, provider choice or retry scope.
+
+
+### MMCRG-CGDS-021 Connector Boundary
+
+External Connector must remain uncreated, unauthorized and assurance-gated.
+
+
+### MMCRG-CGDS-022 Response Binding
+
+Current request-to-response identity and stale / replay rejection must remain.
+
+
+### MMCRG-CGDS-023 Reconciliation Boundary
+
+Provenance separation, disagreement preservation and no-majority-vote must remain.
+
+
+### MMCRG-CGDS-024 Ledger Boundary
+
+Ledger must remain append-preserved evidence and never a decision source.
+
+
+### MMCRG-CGDS-025 Decision Gate Boundary
+
+Decision Gate must emit only protective disposition or Owner readiness.
+
+
+### MMCRG-CGDS-026 Human Review Preservation
+
+Substantive disagreement must remain unresolved until authorized human resolution.
+
+
+### MMCRG-CGDS-027 Owner Interface Neutrality
+
+The Owner interface must not preselect, infer or manufacture a positive decision.
+
+
+### MMCRG-CGDS-028 Kill Authority Separation
+
+Kill activation scope and Owner-only re-enable must remain distinct.
+
+
+### MMCRG-CGDS-029 Dependency Invariants
+
+All twelve accepted dependency invariants must remain intact.
+
+
+### MMCRG-CGDS-030 Non-Executable Dependency View
+
+The dependency view must not become call order, topology or implementation.
+
+
+### MMCRG-CGDS-031 Lifecycle Fidelity
+
+Conceptual lifecycle stages must remain non-executable and separately authorized.
+
+
+### MMCRG-CGDS-032 Transition Rule Completeness
+
+All 25 transition rules must be present and protective.
+
+
+### MMCRG-CGDS-033 Transition Matrix Fidelity
+
+The matrix must preserve authority, integrity, data, review and Owner-decision separation.
+
+
+### MMCRG-CGDS-034 Outcome Fidelity
+
+PASS, FAIL, BLOCKED, LIMITED, PENDING, UNBOUND, CANCELLED, STALE and SUPERSEDED must remain distinct.
+
+
+### MMCRG-CGDS-035 Hold / Kill / Cancellation / Withdrawal Separation
+
+OWNER HOLD, kill pause, request cancellation and asset withdrawal must not be conflated.
+
+
+### MMCRG-CGDS-036 SHA and History Fidelity
+
+Exact SHA, staleness, supersession and immutable history must remain.
+
+
+### MMCRG-CGDS-037 Review Independence
+
+Internal and Cross-Vendor review identity and provenance must remain separate.
+
+
+### MMCRG-CGDS-038 Data Isolation
+
+G4 external exclusion and G5 absolute exclusion must remain.
+
+MMCRG-PD-002 Access、Transfer、Display and Retention minimization；MMCRG-PD-007 Prompts、Context、Attachments and History disclosure controls；and MMCRG-PD-009 Cross-Project、Cross-Matter、Cross-User、Cross-Session and Cross-Provider separation must remain explicit, distinct and Fail-Closed.
+
+
+### MMCRG-CGDS-039 Credential Isolation
+
+Credentials, secrets, keys and reusable tokens must remain excluded across MMCRG-PD-016 Prompts、Reports、Logs、Caches and Evidence surfaces.
+
+
+### MMCRG-CGDS-040 Assurance Separation
+
+Threat, Privacy and Security tracks must remain independent and non-substitutable.
+
+
+### MMCRG-CGDS-041 Assurance Before Engineering
+
+Accepted assurance entry Handoffs must not substitute for accepted assurance evidence.
+
+
+### MMCRG-CGDS-042 Fail-Closed Completeness
+
+Authority, SHA, identity, data, review, disagreement, assurance, kill and downstream failures must block.
+
+
+### MMCRG-CGDS-043 No Concrete Component / Schema
+
+No component, Packet, Queue, Ledger, interface, instance or Schema may be created.
+
+
+### MMCRG-CGDS-044 No API / Code / Test / Runtime
+
+No API, Connector, MCP, Code, Credential, Test, Runtime, Pilot or Deployment may be created or invoked.
+
+
+### MMCRG-CGDS-045 No Result / External / Real Matter / Escalation
+
+No Design Result, external invocation, Real Matter or automatic escalation may occur.
+
+
+## Authorized Scope
+
+This Spec is authorized to:
+
+- bind four accepted Handoffs；
+- preserve accepted component-governance principles；
+- define thirteen abstract component contracts；
+- preserve twelve dependency invariants；
+- define conceptual lifecycle and transition rules；
+- define a non-executable transition matrix；
+- preserve outcome distinctions；
+- preserve assurance preconditions；
+- define data, evidence, credential, kill and Fail-Closed governance；
+- define Design Review Questions and Acceptance Gates。
+
+
+## Not Authorized
+
+This Spec does not authorize:
+
+- Design Review；
+- external review；
+- Spec acceptance；
+- any further Spec revision beyond the completed one-time limited privacy-control revision；
+- Design Result；
+- Threat Review Design or Execution；
+- Privacy Review Design or Execution；
+- Security Review Design or Execution；
+- component-specific Handoff；
+- concrete component；
+- component materialization；
+- interface；
+- field Schema；
+- Packet Schema or instance；
+- Queue implementation；
+- Ledger implementation；
+- Decision Gate implementation；
+- API；
+- Connector；
+- MCP；
+- Webhook；
+- Agent；
+- Skill；
+- script；
+- source code；
+- executable configuration；
+- credential；
+- secret；
+- key；
+- test plan；
+- test case；
+- test data；
+- connection test；
+- Runtime；
+- Pilot；
+- Deployment；
+- rollback tool；
+- Real Matter；
+- Implementation。
+
+
+## Artifact Inventory
+
+### Newly Materialized Asset
+
+```text
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC.md
+```
+
+
+### Explicitly Not Created
+
+```text
+Runtime Component Governance Result
+Authorization Resolver
+Integrity Verifier
+Data Classifier
+Review Packet
+Packet Schema
+Review Queue
+External Connector
+Response Binder
+Review Reconciler
+Review Ledger
+Decision Gate
+Human Review Router
+Project Owner Decision Interface
+Kill Switch
+Component Instance
+Interface
+Schema
+API
+MCP
+Webhook
+Agent
+Skill
+Script
+Code
+Executable Configuration
+Credential
+Secret
+Key
+Test Plan
+Test Case
+Test Data
+Runtime
+Pilot
+Deployment
+Rollback Tool
+```
+
+
+## Current System State
+
+```text
+Runtime Component Governance Handoff:
+ACCEPTED & SHA BOUND
+
+Runtime Threat Review Handoff:
+ACCEPTED & SHA BOUND
+
+Runtime Privacy Review Handoff:
+ACCEPTED & SHA BOUND
+
+Runtime Security Review Handoff:
+ACCEPTED & SHA BOUND
+
+Runtime Component Governance Design Spec:
+LIMITED-REVISION CANDIDATE MATERIALIZED — DESIGN REVIEW NOT AUTHORIZED
+
+Threat / Privacy / Security Review Execution:
+NOT AUTHORIZED
+
+Runtime Component Governance Result:
+NOT CREATED / NOT AUTHORIZED
+
+Concrete Components:
+NOT CREATED / NOT AUTHORIZED
+
+Packet / Queue / Ledger / Schema:
+NOT CREATED / NOT AUTHORIZED
+
+API / Connector / MCP / Code / Credential:
+NOT CREATED / NOT AUTHORIZED
+
+Test / Runtime / Pilot / Deployment / Implementation:
+NOT AUTHORIZED
+
+Real Matter:
+NOT AUTHORIZED
+
+Automatic State Transition:
+BLOCKED
+```
+
+
+## Review Submission
+
+Review Object:
+
+```text
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC.md
+```
+
+Proposed Internal Reviewer:
+
+```text
+OpenAI GPT/Codex Architecture Coordinator
+```
+
+Current Review Authority:
+
+```text
+NOT GRANTED
+```
+
+Future Design Review Mode:
+
+```text
+READ-ONLY
+FIXED-SHA
+45 QUESTIONS
+45 ACCEPTANCE GATES
+25 DESIGN PRINCIPLES
+13 ABSTRACT COMPONENT CONTRACTS
+12 DEPENDENCY INVARIANTS
+25 TRANSITION RULES
+```
+
+Future Design Review must not:
+
+- edit this Spec；
+- edit accepted sources；
+- invoke external models；
+- transfer project assets；
+- execute assurance reviews；
+- create components, Schema, API, Code or Credential；
+- create test data or Runtime；
+- accept this Spec；
+- authorize Result, materialization or downstream。
+
+
+## Next Authorized Action
+
+There is no automatically authorized next action.
+
+The system must remain at:
+
+```text
+RUNTIME COMPONENT GOVERNANCE DESIGN SPEC LIMITED-REVISION CANDIDATE MATERIALIZED
+DESIGN REVIEW NOT AUTHORIZED
+DESIGN RESULT NOT AUTHORIZED
+ASSURANCE REVIEW EXECUTION NOT AUTHORIZED
+COMPONENT MATERIALIZATION NOT AUTHORIZED
+SCHEMA / API / CODE / CREDENTIAL NOT AUTHORIZED
+TEST / RUNTIME / IMPLEMENTATION NOT AUTHORIZED
+```
+
+Any Design Review, limited revision, acceptance, Design Result, assurance execution, component materialization or downstream action requires a separate Project Owner decision.
