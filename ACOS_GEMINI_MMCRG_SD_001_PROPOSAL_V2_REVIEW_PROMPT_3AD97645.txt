@@ -1,0 +1,877 @@
+# ACOS CROSS-VENDOR MMCRG-SD-001 LIMITED REVISION PROPOSAL V2 REVIEW INSTRUCTION
+
+DO NOT ACKNOWLEDGE THIS INSTRUCTION.
+DO NOT OUTPUT PRELIMINARY COMMENTARY.
+DO NOT USE OR REQUEST ANY TOOL.
+OUTPUT ONLY THE REQUIRED REVIEW REPORT.
+
+## Reviewer and Review Boundary
+
+Reviewer:
+Google Gemini 3.6 Flash — HIGH
+
+Role:
+Cross-Vendor External Proposal Reviewer
+
+Review Mode:
+READ-ONLY ADVISORY / MANUAL TEXT-ONLY / TOOL-ISOLATED / TARGET-TEXT-ONLY / CLOSED-FORM TABLE-ONLY
+
+Target Asset:
+TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_MMCRG_SD_001_LIMITED_REVISION_PROPOSAL_V2.md
+
+Target SHA-256:
+3AD9764504F351CB0F57F6ACCBC9216BB4AE15BB35509B8A1146FADCCE051E55
+
+Target SHA Qualification:
+PROJECT OWNER ATTESTED / LOCAL SYSTEM VERIFIED — NOT MODEL-COMPUTED
+
+Authorized Domain:
+MMCRG-SD-001 — Identity and Principal Binding
+
+## Mandatory Access Constraints
+
+- Use only the complete target Proposal V2 text included between the target-text markers below.
+- Do not use Workspace, local files, attachments, Drive, Git, terminal, shell, repository search, web search, Connector, MCP, API, code execution or any non-target asset.
+- Do not compute or claim to compute any SHA-256 value.
+- Do not import definitions, facts, implementation assumptions, identity standards, authentication standards or security standards not stated in the target text.
+- Do not infer authorization state, current governance state, acceptance, resolution, temporal lineage or downstream readiness.
+- Do not modify, correct, rewrite or supplement the target Proposal V2.
+
+## Mandatory Qualification Strings
+
+For the target Proposal V2 SHA use exactly:
+
+PROJECT OWNER ATTESTED / LOCAL SYSTEM VERIFIED — NOT MODEL-COMPUTED
+
+For every unuploaded bound asset, historical record, review record, decision record or normative reference use exactly:
+
+RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED
+
+For every timestamp or temporal statement appearing in the target text use exactly:
+
+RECORDED VALUE PRESENT — NOT INDEPENDENTLY VERIFIED; NO TEMPORAL LINEAGE DETERMINATION MADE
+
+For a target-text governance state or disposition use exactly:
+
+RECORDED IN TARGET TEXT ONLY — NO CURRENT GOVERNANCE-STATE DETERMINATION MADE
+
+These qualifications must appear in every applicable physical row. A qualification in one row or section does not cure its omission elsewhere.
+
+## Mandatory Review Semantics
+
+- Review only the Proposal V2 itself for design fidelity, normative category coverage, scope control, internal consistency, baseline preservation and non-regression.
+- Evaluate Proposal V2 Review Questions 1 through 27 separately.
+- Evaluate Acceptance Gates SD001-LRPV2-001 through SD001-LRPV2-027 separately.
+- Evaluate human, service, model, provider and component identity categories separately.
+- Evaluate the seven authorized change-surface elements separately.
+- Evaluate the ten axis-separation rules separately.
+- Evaluate the identity/data exclusions, MMCRG-SD-003 non-regression rules, historical preservation rules and future-candidate requirements separately.
+- Permitted row determinations are PASS, FAIL or NOT EVALUABLE.
+- A proposed insertion is non-operative. Never describe it as an accepted amendment, implemented control or operational protection.
+- A row may receive PASS only when its determination is supported directly by explicit target text.
+- Where the target records an upstream value without supplying the upstream asset, evaluate only whether the value is recorded and attach the mandatory upstream qualification.
+- Where the target records a timestamp or state, evaluate only whether the target contains the record and attach the applicable mandatory qualification.
+- MMCRG-SD-001 must not be described as resolved or accepted.
+- MMCRG-SD-003 must not be reopened, reinterpreted or independently re-verified.
+- Do not issue an aggregate security, privacy, threat, legal or compliance verdict.
+- Do not declare Proposal V2 acceptance, candidate creation, Source Spec modification, Security Review Execution or downstream authority.
+- Do not treat the future governance sequence as an executable state machine.
+
+## Five-Category Coverage Lock
+
+The report must contain one separate physical row for each category:
+
+1. Human identity;
+2. Service identity;
+3. Model identity;
+4. Provider identity;
+5. Component identity.
+
+Each row must separately evaluate:
+
+- exact attribution;
+- non-substitution;
+- protective blocking;
+- authorization binding where applicable;
+- dispatch or response binding where applicable;
+- exclusion of real-person or executable identity mechanisms.
+
+Do not merge model with provider. Do not merge service with component. Do not infer one category from another.
+
+## Mandatory Timestamp and State Quarantine
+
+Do not generate, infer, reproduce as fact or declare any Authorization Time, Report Time, Receipt Time, Temporal Lineage, Authorization State, Governing Status, Proposal Acceptance, Domain Resolution or Current System State.
+
+If a timestamp or state must be evaluated because it appears in a locked Question or Gate, treat it only as target-text content and include the exact applicable qualification in that same row.
+
+## Mandatory Output Form
+
+The first output line must be exactly:
+
+# ACOS CROSS-VENDOR MMCRG-SD-001 LIMITED REVISION PROPOSAL V2 REVIEW REPORT
+
+After that title, output only the following eight Markdown table headings and tables. Do not add an executive summary, prose section, note, footnote, timestamp, authorization receipt or current-state section.
+
+### Table A — Reviewer and Access Matrix
+
+Use exactly these columns:
+
+| Field | Recorded value | Qualification | Determination |
+
+Required rows:
+
+- Reviewer;
+- Role;
+- Review mode;
+- Target asset;
+- Target SHA-256;
+- Authorized domain;
+- Tool access;
+- Non-target access;
+- External facts or definitions;
+- Model-generated timestamp or governance state.
+
+### Table B — Bound Input and Provenance Record
+
+Use exactly these columns:
+
+| Row ID | Bound input or record | Complete recorded SHA-256 | Mandatory qualification | Target-text determination |
+
+Include all seven bound inputs from target Section 2. Every row must contain the full 64-character SHA-256 and exactly:
+
+RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED
+
+Do not claim independent access, local matching, hashing or verification.
+
+### Table C — Proposal V2 Review Questions
+
+Use exactly these columns:
+
+| Question ID | Exact question | Target-text evidence | Required qualification | Determination | Limitation |
+
+Copy and evaluate all 27 questions from target Section 15. Use IDs SD001-LRPV2-Q-001 through SD001-LRPV2-Q-027. Each question must occupy one physical Markdown table row.
+
+For questions involving an unuploaded asset, historical review or decision record, put exactly this in Required qualification:
+
+RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED
+
+For questions involving target-text state or disposition, put exactly this in Required qualification:
+
+RECORDED IN TARGET TEXT ONLY — NO CURRENT GOVERNANCE-STATE DETERMINATION MADE
+
+If both apply, include both exact strings in the same Required qualification cell separated only by ` / `.
+
+### Table D — Proposal V2 Acceptance Gates
+
+Use exactly these columns:
+
+| Gate ID | Exact required condition | Target-text evidence | Required qualification | Determination | Limitation |
+
+Copy and evaluate SD001-LRPV2-001 through SD001-LRPV2-027 from target Section 16. Each gate must occupy one physical Markdown table row.
+
+Apply the same in-row qualification rules as Table C.
+
+### Table E — Five-Category Identity Matrix
+
+Use exactly these columns:
+
+| Category ID | Identity category | Exact attribution | Non-substitution | Protective block | Authorization binding | Dispatch or response binding | Data and execution exclusion | Determination | Limitation |
+
+Use exactly five rows, SD001-ID-01 through SD001-ID-05. Use only PASS, FAIL or NOT EVALUABLE in each determination field. Do not merge categories.
+
+### Table F — Change-Surface, Separation and Preservation Controls
+
+Use exactly these columns:
+
+| Control ID | Control | Target-text evidence | Determination | Limitation |
+
+Evaluate separately:
+
+- CS-01 MMCRG-CDG-006 Exact Identity;
+- CS-02 MMCRG-CDG-007 No Authority Creation preservation;
+- CS-03 MMCRG-CC-001 Authorization Resolver;
+- CS-04 MMCRG-CC-006 External Connector;
+- CS-05 MMCRG-CC-007 Response Binder;
+- CS-06 MMCRG-CDT-005 SHA Mismatch;
+- CS-07 MMCRG-CDT-014 Response Binding;
+- AX-01 through AX-10, one row for each target Section 10 axis-separation rule;
+- DB-01 real-person and protected-information exclusion;
+- DB-02 credential, secret, key and token exclusion;
+- DB-03 schema, API and storage-mechanism exclusion;
+- DB-04 executable identity, dispatch and response logic exclusion;
+- NR-01 through NR-06, one row for each target Section 12 MMCRG-SD-003 non-regression rule;
+- HP-01 through HP-07, one row for each target Section 13 parent, V1 and historical preservation rule;
+- FC-01 through FC-12, one row for each target Section 14 future-candidate requirement.
+
+For any row relying on an unuploaded upstream asset or decision, place `RECORDED VALUE MATCHED — NOT INDEPENDENTLY VERIFIED` in the Limitation cell.
+
+### Table G — Report-Quality Defect Register
+
+Use exactly these columns:
+
+| Defect category | Count | Status | Report location or NONE |
+
+Required categories:
+
+- Closed-form output violation;
+- Missing required row;
+- Scope expansion;
+- Unsupported definition;
+- Evidence overstatement;
+- Source-qualification defect;
+- Temporal or governance-state overreach;
+- Identity-category merge;
+- Identity or provenance conflict;
+- Semantic collapse;
+- Internal contradiction;
+- Implementation pollution.
+
+Counts must describe defects in this report, not target-design determinations. Counts must match the report body exactly. If any defect exists, do not report zero for that category and do not return PASS for Advisory Proposal Review Result.
+
+### Table H — Advisory Completion
+
+Use exactly these columns:
+
+| Completion item | Required count or value | Recorded result | Determination |
+
+Required rows:
+
+- Bound input rows: 7 / 7;
+- Proposal V2 Review Questions: 27 / 27;
+- Acceptance Gates: 27 / 27;
+- Identity categories: 5 / 5;
+- Change-surface controls: 7 / 7;
+- Axis-separation rules: 10 / 10;
+- Data and execution exclusions: 4 / 4;
+- MMCRG-SD-003 non-regression rules: 6 / 6;
+- Parent, V1 and historical preservation rules: 7 / 7;
+- Future-candidate requirements: 12 / 12;
+- Question PASS / FAIL / NOT EVALUABLE counts;
+- Gate PASS / FAIL / NOT EVALUABLE counts;
+- Report-quality defect counts match body: YES or NO;
+- Proposal V2 accepted by this report: NO;
+- MMCRG-SD-001 resolved by this report: NO;
+- MMCRG-SD-003 reopened by this report: NO;
+- Revised candidate created by this report: NO;
+- Downstream authority granted by this report: NO;
+- Advisory Proposal Review Result: PASS or BLOCKED.
+
+`Advisory Proposal Review Result: PASS` means only that this external advisory report found the target Proposal V2 text complete and internally consistent for its authorized proposal-review scope. It does not establish governing status, acceptance, resolution or downstream authority.
+
+## Prohibited Output
+
+- No text before the required report title.
+- No prose outside Tables A through H.
+- No tool traces, access logs or preliminary commentary.
+- No model-generated timestamps, temporal lineage or current-state declarations.
+- No abbreviated, truncated or ellipsized SHA values.
+- No historical-report reuse.
+- No correction, modification or rewritten version of Proposal V2.
+- No invented identity evidence, standard, implementation, schema, API or runtime mechanism.
+- No Proposal V2 acceptance.
+- No MMCRG-SD-001 resolution.
+- No reopening or reinterpretation of MMCRG-SD-003.
+- No Source Spec or accepted V2 parent modification.
+- No revised-candidate text.
+- No Security Finding, Register, aggregate verdict, testing, remediation, code, runtime or implementation.
+
+--------------------------------------------------------------------------------
+BEGIN COMPLETE TARGET PROPOSAL V2 TEXT
+--------------------------------------------------------------------------------
+# ACOS Multi-Model Collaboration Automation Runtime Component Governance MMCRG-SD-001 Limited Revision Proposal V2
+
+## Document Control
+
+```text
+Artifact Type:
+LIMITED DESIGN REVISION PROPOSAL V2 ONLY
+
+Authorized Domain:
+MMCRG-SD-001 — Identity and Principal Binding
+
+Proposal Status:
+MATERIALIZED — PROPOSAL REVIEW NOT AUTHORIZED
+
+V1 Proposal Status:
+HISTORICAL / BLOCKED / SUPERSEDED FOR FUTURE REVIEW / NON-TRANSFERABLE
+
+Accepted V2 Parent Modification:
+NOT PERFORMED / NOT AUTHORIZED
+
+Historical Source Spec Modification:
+NOT PERFORMED / NOT AUTHORIZED
+
+Revised Spec Candidate:
+NOT CREATED / NOT AUTHORIZED
+
+MMCRG-SD-001 Resolution:
+NOT ESTABLISHED / UNRESOLVED / HOLD
+
+Automatic Downstream Transition:
+BLOCKED
+```
+
+This document is a non-operative limited design revision proposal. It corrects
+the identity-category coverage defect identified in the internal read-only
+review of V1. It does not amend, supersede or replace an accepted specification
+and does not establish that its candidate wording is sufficient or accepted.
+
+## 1. Materialization Authority
+
+```text
+Authorization:
+PROJECT OWNER MMCRG-SD-001 LIMITED DESIGN REVISION PROPOSAL V2 MATERIALIZATION AUTHORIZATION
+
+Authorized Scope:
+LIMITED DESIGN REVISION PROPOSAL V2 ONLY
+
+System-Observed Authorization Receipt Time:
+2026-08-12T10:31:56.647+08:00
+
+Authorization Status at Completion:
+CONSUMED & CLOSED
+```
+
+The authorization permits only creation and local integrity verification of
+this named V2 proposal. It does not authorize review, acceptance, candidate
+creation, external transfer, Security Review Execution, engineering,
+implementation or Git operations.
+
+## 2. Bound Governance Inputs
+
+| Bound input | SHA-256 | Binding state |
+| --- | --- | --- |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_MMCRG_SD_001_LIMITED_REVISION_PROPOSAL.md` | `931B0DFEE7A6FB9FEF8BF80ACDDCB34DFB035DEEDF12812A3903C4D36E2A01EE` | V1 PROPOSAL / LOCAL SHA EXACT MATCH / HISTORICAL BLOCKED INPUT |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC_MMCRG_SD_003_REVISION_CANDIDATE_V2.md` | `E60A2C5EB310DE17E79F00AB4767D675681BCA51E3776142AEA52F942DB7E7E2` | ACCEPTED V2 PARENT / LOCAL SHA EXACT MATCH |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SPEC.md` | `F1398EFC56B89F2370F3AD58A76FCBBFB48D5B851760CBBC76795EA9E409C0BC` | HISTORICAL SOURCE SPEC / LOCAL SHA EXACT MATCH / MUST REMAIN UNCHANGED |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_SECURITY_LIMITATION_RESOLUTION_HANDOFF.md` | `69C9DD8B62C83E1BF68B748D75A83E2535FDA6E27ADCCE29A4A85619F7FAC42C` | ACCEPTED HANDOFF / LOCAL SHA EXACT MATCH |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_DOMAIN_REVIEW_ARCHIVE.md` | `A8D17BC7E616B542810B68E99DBD745B56E2A87496FDC62A4F3A63F23A9AFF12` | HISTORICAL REVIEW ARCHIVE / LOCAL SHA EXACT MATCH |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_COMPONENT_GOVERNANCE_MMCRG_SD_003_RESOLUTION_DECISION.md` | `D6B3583E7DA250E3FF19DD18AF93D74A8930767A87541BCB15AF5CDAF87B4DF7` | ACCEPTED SD-003 RESOLUTION / LOCAL SHA EXACT MATCH / NON-REGRESSION BASELINE |
+| `TASK_ACOS_MULTI_MODEL_COLLABORATION_AUTOMATION_RUNTIME_SECURITY_REVIEW_SPEC.md` | `105FC8863F801168FED5DE8763973A05F68515165303A8672506929F410FD64D` | NORMATIVE SD-001 DEFINITION / LOCAL SHA EXACT MATCH |
+
+## 3. V1 Internal Review Disposition
+
+```text
+Reviewed V1 Proposal SHA-256:
+931B0DFEE7A6FB9FEF8BF80ACDDCB34DFB035DEEDF12812A3903C4D36E2A01EE
+
+V1 Review Mode:
+READ-ONLY INTERNAL PROPOSAL REVIEW
+
+V1 Review Outcome:
+BLOCKED — NORMATIVE IDENTITY-CATEGORY COVERAGE INCOMPLETE
+
+V1 Formal Questions / Gates:
+25 / 25 SATISFIED AGAINST V1 SELF-DECLARED STRUCTURE
+
+Normative Coverage Defect:
+MODEL AND COMPONENT IDENTITY CATEGORIES NOT FULLY BOUND
+
+V1 Proposal Acceptance:
+NOT READY / NOT AUTHORIZED
+
+V1 Evidence or Outcome Transfer:
+PROHIBITED / NOT PERFORMED
+```
+
+V1 covered human, service and provider categories but did not fully bind model
+and component categories across attribution, non-substitution, protective
+blocking and response binding. A self-consistent V1 question/gate set could not
+cure the mismatch with the normative `MMCRG-SD-001` definition.
+
+## 4. Normative Identity-Category Lock
+
+The governing Security Review Spec states that `MMCRG-SD-001` must evaluate
+explicit attribution and substitution resistance for the following five
+identity categories:
+
+| Category ID | Abstract identity category | Mandatory V2 treatment |
+| --- | --- | --- |
+| `SD001-ID-01` | Human identity | SEPARATELY ATTRIBUTABLE / NON-SUBSTITUTABLE / FAIL-CLOSED |
+| `SD001-ID-02` | Service identity | SEPARATELY ATTRIBUTABLE / NON-SUBSTITUTABLE / FAIL-CLOSED |
+| `SD001-ID-03` | Model identity | SEPARATELY ATTRIBUTABLE / NON-SUBSTITUTABLE / FAIL-CLOSED |
+| `SD001-ID-04` | Provider identity | SEPARATELY ATTRIBUTABLE / NON-SUBSTITUTABLE / FAIL-CLOSED |
+| `SD001-ID-05` | Component identity | SEPARATELY ATTRIBUTABLE / NON-SUBSTITUTABLE / FAIL-CLOSED |
+
+All five rows are mandatory. One category must not stand in for another, and a
+role label, session, name, authorization record, request identifier or
+self-assertion must not independently establish a category's identity.
+
+## 5. Preserved Historical Disagreement
+
+```text
+Historical Review Object SHA-256:
+F1398EFC56B89F2370F3AD58A76FCBBFB48D5B851760CBBC76795EA9E409C0BC
+
+Domain:
+MMCRG-SD-001
+
+SV6 Internal Determination:
+PASS
+
+SV7 Cross-Vendor Determination:
+LIMITED
+
+SV8 Reconciliation:
+DISAGREEMENT PRESERVED
+
+Candidate Future Route:
+LIMITED DESIGN REVISION CANDIDATE
+
+Candidate Resolution Subject:
+HUMAN / SERVICE / MODEL / PROVIDER / COMPONENT IDENTITY ATTRIBUTION AND IDENTITY-SUBSTITUTION RESISTANCE
+
+Current Domain State:
+UNRESOLVED / HOLD
+```
+
+The historical determinations remain bound to the historical Source Spec SHA.
+They are lineage only and do not become evidence for this proposal, the
+accepted V2 parent or any future candidate.
+
+## 6. Proposal Objective
+
+The sole objective is to define candidate wording that may, in a future
+separately authorized revision:
+
+1. keep all five normative identity categories separately attributable;
+2. bind each applicable category to the exact authorized governance action;
+3. prevent inference, merging, pollution and substitution across categories;
+4. block absent, ambiguous, stale, conflicting, mismatched or substituted
+   category attribution;
+5. preserve request-response and dispatch attribution without treating a
+   matching request, session, name or role as sufficient identity evidence;
+6. preserve identity, authentication and authorization as distinct governance
+   axes;
+7. exclude real-person data, credentials and executable identity mechanisms.
+
+This proposal does not determine that the wording is sufficient or accepted,
+does not resolve `MMCRG-SD-001` and does not issue an aggregate verdict.
+
+## 7. Exact Authorized Change Surface
+
+| Element | Existing design function | Proposal V2 treatment |
+| --- | --- | --- |
+| `MMCRG-CDG-006 — Exact Identity` | Requires exact asset, candidate SHA, scope and authority | FIVE-CATEGORY ATTRIBUTION INSERTION PROPOSED |
+| `MMCRG-CDG-007 — No Authority Creation` | Prohibits inferred, broadened, substituted or transferred authority | PRESERVE VERBATIM / NON-REGRESSION ONLY |
+| `MMCRG-CC-001 — Authorization Resolver` | Evaluates authorization evidence and protective eligibility | FIVE-CATEGORY RESPONSIBILITY, PRECONDITION, DISPOSITION AND MUST-NOT INSERTIONS PROPOSED |
+| `MMCRG-CC-006 — External Connector` | Binds provider, model, endpoint, destination and transport | MODEL / PROVIDER SEPARATION INSERTIONS PROPOSED |
+| `MMCRG-CC-007 — Response Binder` | Binds response evidence to request, asset, reviewer and scope | FIVE-CATEGORY RESPONSE-CHAIN ATTRIBUTION INSERTIONS PROPOSED |
+| `MMCRG-CDT-005 — SHA Mismatch` | Blocks mismatched, mutated, stale or superseded identity | FIVE-CATEGORY PROTECTIVE BLOCK INSERTION PROPOSED |
+| `MMCRG-CDT-014 — Response Binding` | Requires attributable response matching current request identity | FIVE-CATEGORY RESPONSE-BINDING INSERTION PROPOSED |
+
+All other principles, contracts, invariants, transition rules, matrices,
+questions and gates remain outside the permitted future change surface.
+
+## 8. Candidate Wording
+
+### 8.1 Amendment A — MMCRG-CDG-006 Exact Identity
+
+#### Proposed insertion location
+
+Immediately after the existing sentence under `MMCRG-CDG-006 — Exact
+Identity`.
+
+#### Existing text preserved verbatim
+
+```text
+Every future governing action must bind the exact asset, candidate SHA, scope and authority.
+```
+
+#### Candidate insertion
+
+```text
+Each applicable human, service, model, provider and component identity category must remain separately attributable within the authorized governance action. A role label, session, human-readable name, model name, provider name, component name, authorization record, request identifier or self-assertion does not by itself establish category identity, and no identity category may be inferred from, merged with or substituted for another.
+```
+
+### 8.2 Amendment B — MMCRG-CC-001 Authorization Resolver
+
+#### Proposed insertion locations
+
+One new bullet in each of `Governance Responsibility`, `Required
+Preconditions`, `Protective Dispositions` and `Must Not`.
+
+#### Governance responsibility insertion
+
+```text
+- bind authorization eligibility to separately attributable human, service, model, provider and component identity evidence for every category applicable to the separately authorized purpose；
+```
+
+#### Required precondition insertion
+
+```text
+- unambiguous current attribution for every applicable human, service, model, provider and component identity category；
+```
+
+#### Protective disposition insertion
+
+```text
+- blocked when any applicable human, service, model, provider or component identity is absent, ambiguous, stale, conflicting, mismatched, polluted or substituted；
+```
+
+#### Must-not insertion
+
+```text
+- infer, merge or substitute any human, service, model, provider or component identity from another category or from a role label, session, name, authorization record, request identifier or self-assertion；
+```
+
+### 8.3 Amendment C — MMCRG-CC-006 External Connector
+
+#### Proposed insertion locations
+
+One new bullet in `Governance Responsibility`, one in `Required Preconditions`
+and one in `Must Not`.
+
+#### Governance responsibility insertion
+
+```text
+- preserve separate attribution for the authorized service, model, provider and component identities applicable to a future dispatch path；
+```
+
+#### Required precondition insertion
+
+```text
+- separately bound service, model, provider and component identities where applicable to the authorized dispatch path；
+```
+
+#### Must-not insertion
+
+```text
+- infer or substitute service, model, provider or component identity from endpoint, destination, session, display name, response content or another identity category；
+```
+
+### 8.4 Amendment D — MMCRG-CC-007 Response Binder
+
+#### Proposed insertion locations
+
+One new bullet in `Governance Responsibility`, one in `Required Preconditions`
+and one in `Must Not`.
+
+#### Governance responsibility insertion
+
+```text
+- preserve separately attributable human, service, model, provider and component identity evidence for every category applicable to the authorized request-response chain；
+```
+
+#### Required precondition insertion
+
+```text
+- separately bound attribution for every applicable human, service, model, provider and component identity category in the current request-response chain；
+```
+
+#### Must-not insertion
+
+```text
+- attribute a response or responder category solely from a role label, session, human-readable name, model name, provider name, component name, matching request identifier, response content or self-assertion；
+```
+
+### 8.5 Amendment E — MMCRG-CDT-005 SHA Mismatch
+
+#### Proposed insertion location
+
+Immediately after the existing sentence under `MMCRG-CDT-005 — SHA
+Mismatch`.
+
+#### Existing text preserved verbatim
+
+```text
+Mismatch, mutation, stale or superseded identity blocks current use.
+```
+
+#### Candidate insertion
+
+```text
+Absent, ambiguous, conflicting, mismatched, polluted or substituted attribution in any applicable human, service, model, provider or component identity category also blocks current use.
+```
+
+### 8.6 Amendment F — MMCRG-CDT-014 Response Binding
+
+#### Proposed insertion location
+
+Immediately after the existing sentence under `MMCRG-CDT-014 — Response
+Binding`.
+
+#### Existing text preserved verbatim
+
+```text
+Only an attributable response matching current request identity may reach C6.
+```
+
+#### Candidate insertion
+
+```text
+Request-response identity matching is insufficient unless every applicable human, service, model, provider and component identity category remains separately attributable and bound to the current authorized path.
+```
+
+## 9. Five-Category Closure Matrix
+
+| Identity category | Exact attribution | Non-substitution | Protective block | Authorization binding | Dispatch or response binding |
+| --- | --- | --- | --- | --- | --- |
+| Human | PROPOSED | PROPOSED | PROPOSED | PROPOSED WHERE APPLICABLE | PROPOSED WHERE APPLICABLE |
+| Service | PROPOSED | PROPOSED | PROPOSED | PROPOSED WHERE APPLICABLE | PROPOSED WHERE APPLICABLE |
+| Model | PROPOSED | PROPOSED | PROPOSED | PROPOSED WHERE APPLICABLE | PROPOSED WHERE APPLICABLE |
+| Provider | PROPOSED | PROPOSED | PROPOSED | PROPOSED WHERE APPLICABLE | PROPOSED WHERE APPLICABLE |
+| Component | PROPOSED | PROPOSED | PROPOSED | PROPOSED WHERE APPLICABLE | PROPOSED WHERE APPLICABLE |
+
+`PROPOSED` records candidate coverage only. It is not a review determination,
+accepted control, implementation claim or security outcome.
+
+## 10. Axis-Separation Rules
+
+1. Identity attribution does not establish authentication.
+2. Authentication evidence does not establish authorization.
+3. Authorization evidence does not establish identity attribution.
+4. Asset or request SHA matching does not establish a principal category.
+5. Provider attribution does not establish model attribution.
+6. Model attribution does not establish service or component attribution.
+7. Component attribution does not establish human or service attribution.
+8. A session, endpoint, destination or display name does not establish any
+   category by itself.
+9. Missing evidence on one axis must not be repaired by a favorable state on
+   another axis.
+10. Every unresolved identity-category condition remains fail-closed.
+
+## 11. Identity and Data Boundaries
+
+All candidate wording is abstract. It must not introduce, request, infer,
+retain or disclose:
+
+- a real person's name or identity;
+- a government-issued identifier;
+- biometric information;
+- an account identifier or credential;
+- personal information or sensitive personal information;
+- privileged, confidential or Real Matter content;
+- a credential, secret, key or token;
+- an identity proofing, authentication or authorization algorithm;
+- an identifier format, schema, API field or storage mechanism;
+- executable identity, dispatch or response logic.
+
+The five category labels are abstract governance classifications only. They do
+not bind a real person, account, deployed model, provider or component.
+
+## 12. MMCRG-SD-003 Non-Regression Rules
+
+1. The accepted V2 parent SHA
+   `E60A2C5EB310DE17E79F00AB4767D675681BCA51E3776142AEA52F942DB7E7E2`
+   remains unchanged during this proposal stage.
+2. The accepted `MMCRG-SD-003` Resolution Decision SHA
+   `D6B3583E7DA250E3FF19DD18AF93D74A8930767A87541BCB15AF5CDAF87B4DF7`
+   remains the fixed non-regression baseline.
+3. The eleven minimum-necessary authorization dimensions and four protective
+   controls accepted for `MMCRG-SD-003` remain verbatim in any future candidate.
+4. Identity attribution must not broaden authorization eligibility, establish
+   standing authority or weaken exact-scope authorization.
+5. Identity and authorization evidence remain separate and non-substitutable.
+6. No `MMCRG-SD-001` review or decision may reopen or reinterpret the closed
+   `MMCRG-SD-003` decision without separate exact-domain authority.
+
+## 13. Parent, V1 and Historical Preservation
+
+1. The accepted V2 parent, historical Source Spec and V1 proposal remain
+   byte-for-byte unchanged during this V2 proposal stage.
+2. V1 remains historical, blocked and non-transferable; V2 does not modify V1.
+3. This V2 proposal must not be inserted into or substituted for a bound asset.
+4. No existing identifier may be renumbered.
+5. Only the Section 8 insertion locations and exact candidate wording may be
+   used by a future separately authorized candidate materialization.
+6. Historical reviews and decisions remain bound to their original SHA.
+7. No old-SHA review result or evidence transfers to a future candidate.
+
+## 14. Future Candidate Requirements
+
+This proposal does not authorize or create a revised Spec candidate.
+
+A future candidate materialization authorization must:
+
+1. bind the accepted V2 parent name and SHA;
+2. bind this V2 proposal name and materialized SHA;
+3. bind the `MMCRG-SD-003` Resolution Decision SHA;
+4. identify one sole V3 candidate asset;
+5. permit only Section 8's insertion locations and exact wording;
+6. preserve every accepted `MMCRG-SD-003` control verbatim;
+7. require a new SHA different from the accepted V2 parent SHA;
+8. preserve the V2 parent, V1 proposal and historical Source Spec;
+9. make all old-SHA evidence stale and non-transferable for the new SHA;
+10. require newly authorized Internal and Cross-Vendor candidate reviews;
+11. prohibit review PASS from automatically accepting the candidate;
+12. prohibit candidate acceptance from authorizing review execution,
+    engineering, runtime or implementation.
+
+## 15. Proposal V2 Review Questions
+
+1. Is this the sole authorized V2 proposal asset?
+2. Do all seven bound identities and SHA-256 values match?
+3. Is V1 preserved as historical, blocked and non-transferable?
+4. Is the accepted V2 Candidate preserved as the sole future parent?
+5. Is the historical Source Spec preserved unchanged?
+6. Is the proposal confined to `MMCRG-SD-001`?
+7. Is the historical PASS / LIMITED disagreement preserved?
+8. Does `MMCRG-SD-001` remain `UNRESOLVED / HOLD`?
+9. Is the change surface limited to the seven listed elements?
+10. Is human identity separately attributable and non-substitutable?
+11. Is service identity separately attributable and non-substitutable?
+12. Is model identity separately attributable and non-substitutable?
+13. Is provider identity separately attributable and non-substitutable?
+14. Is component identity separately attributable and non-substitutable?
+15. Does every applicable category receive a protective blocking rule?
+16. Does Authorization Resolver preserve five-category binding without creating
+    authority?
+17. Does External Connector preserve model/provider separation and applicable
+    service/component attribution?
+18. Does Response Binder cover all five applicable identity categories?
+19. Is a matching request identifier expressly insufficient as principal proof?
+20. Are identity inference, merging, pollution and substitution prohibited?
+21. Are identity, authentication, authorization, SHA and request matching kept
+    as separate governance axes?
+22. Are real-person data, credentials, schemas, APIs and executable mechanisms
+    excluded?
+23. Are all accepted `MMCRG-SD-003` dimensions and protections preserved?
+24. Are all non-target clauses preserved unchanged?
+25. Does a future candidate require a new SHA and new reviews?
+26. Does the dedicated model-identity row close the V1 model coverage defect?
+27. Does the dedicated component-identity row close the V1 component coverage
+    defect?
+
+## 16. Proposal V2 Acceptance Gates
+
+| Gate ID | Required condition |
+| --- | --- |
+| `SD001-LRPV2-001` | Sole V2 proposal asset is exact and unambiguous |
+| `SD001-LRPV2-002` | All seven bound identities and SHA-256 values match |
+| `SD001-LRPV2-003` | V1 is historical, blocked and non-transferable |
+| `SD001-LRPV2-004` | Accepted V2 Candidate is the sole future parent |
+| `SD001-LRPV2-005` | Historical Source Spec remains unchanged |
+| `SD001-LRPV2-006` | Domain scope is limited to MMCRG-SD-001 |
+| `SD001-LRPV2-007` | Historical PASS / LIMITED disagreement is preserved |
+| `SD001-LRPV2-008` | MMCRG-SD-001 remains UNRESOLVED / HOLD |
+| `SD001-LRPV2-009` | Change surface is limited to the seven listed elements |
+| `SD001-LRPV2-010` | Human identity is separately attributable and non-substitutable |
+| `SD001-LRPV2-011` | Service identity is separately attributable and non-substitutable |
+| `SD001-LRPV2-012` | Model identity is separately attributable and non-substitutable |
+| `SD001-LRPV2-013` | Provider identity is separately attributable and non-substitutable |
+| `SD001-LRPV2-014` | Component identity is separately attributable and non-substitutable |
+| `SD001-LRPV2-015` | Every applicable category has a protective blocking rule |
+| `SD001-LRPV2-016` | Authorization Resolver does not create identity or authority |
+| `SD001-LRPV2-017` | External Connector preserves model/provider separation |
+| `SD001-LRPV2-018` | Response Binder covers all five applicable categories |
+| `SD001-LRPV2-019` | Request matching alone is not principal proof |
+| `SD001-LRPV2-020` | Inference, merging, pollution and substitution are prohibited |
+| `SD001-LRPV2-021` | Identity, authentication, authorization, SHA and request axes remain separate |
+| `SD001-LRPV2-022` | Real-person data and executable mechanisms are excluded |
+| `SD001-LRPV2-023` | MMCRG-SD-003 accepted controls are preserved verbatim |
+| `SD001-LRPV2-024` | Non-target clauses remain unchanged |
+| `SD001-LRPV2-025` | Future candidate requires a new SHA and new reviews |
+| `SD001-LRPV2-026` | Dedicated model-identity coverage closes the V1 model gap |
+| `SD001-LRPV2-027` | Dedicated component-identity coverage closes the V1 component gap |
+
+All questions and gates are non-executable review criteria. Their presence does
+not establish review authority, PASS, proposal acceptance or candidate
+authority.
+
+## 17. Future Governance Sequence
+
+```text
+P0  SD-001 Proposal V2 Materialized
+    |
+    v
+P1  Internal Proposal V2 Review — SEPARATE AUTHORIZATION REQUIRED
+    |
+    v
+P2  Cross-Vendor Proposal V2 Review — SEPARATE AUTHORIZATION REQUIRED
+    |
+    v
+P3  Project Owner Proposal V2 Decision — SEPARATE DECISION REQUIRED
+    |
+    v
+P4  V3 Candidate Materialization from Accepted V2 Parent — SEPARATE AUTHORIZATION REQUIRED
+    |
+    v
+P5  New Candidate SHA Binding
+    |
+    v
+P6  New Internal and Cross-Vendor Candidate Reviews
+    |
+    v
+P7  Project Owner Candidate Decision
+    |
+    v
+P8  Exact-SHA MMCRG-SD-001 Domain Re-Review and Resolution Lifecycle
+```
+
+Every transition is fail-closed and requires separate exact-scope Project Owner
+authority. No transition executes automatically.
+
+## 18. Explicitly Not Authorized
+
+```text
+Accepted V2 Candidate Modification:
+NOT AUTHORIZED
+
+Historical Source Spec or V1 Proposal Modification:
+NOT AUTHORIZED
+
+Proposal V2 Review or Acceptance:
+NOT AUTHORIZED
+
+V3 or Other Revised Candidate:
+NOT AUTHORIZED
+
+Evidence Admission:
+NOT AUTHORIZED
+
+Other Security Domain Review or Resolution:
+NOT AUTHORIZED
+
+External Review or Asset Transfer:
+NOT AUTHORIZED
+
+Security Finding / Security Register / Aggregate Verdict:
+NOT AUTHORIZED
+
+Component / Packet / Queue / Ledger / Schema:
+NOT AUTHORIZED
+
+API / Connector / MCP / Agent / Skill / Code / Credential:
+NOT AUTHORIZED
+
+Test / Runtime / Pilot / Deployment / Implementation:
+NOT AUTHORIZED
+
+Git Commit / Push / Branch / Merge / Pull Request:
+NOT AUTHORIZED
+```
+
+## 19. Materialization Completion State
+
+```text
+MMCRG-SD-001 Limited Revision Proposal V2:
+MATERIALIZED — PROPOSAL REVIEW NOT AUTHORIZED
+
+V1 Proposal:
+HISTORICAL / BLOCKED / SUPERSEDED FOR FUTURE REVIEW / NON-TRANSFERABLE
+
+Accepted V2 Parent:
+UNCHANGED & SHA BOUND
+
+MMCRG-SD-003:
+RESOLVED & CLOSED & SHA BOUND — DESIGN-TEXT SCOPE
+
+MMCRG-SD-001:
+UNRESOLVED / HOLD
+
+Other Security Domains:
+UNCHANGED
+
+Aggregate Security Verdict:
+NOT ISSUED
+
+Active Downstream Authorization:
+NONE
+
+Runtime / Implementation:
+BLOCKED / NOT AUTHORIZED
+```
+--------------------------------------------------------------------------------
+END COMPLETE TARGET PROPOSAL V2 TEXT
+--------------------------------------------------------------------------------
