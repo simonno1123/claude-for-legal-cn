@@ -9,7 +9,7 @@
 - Marketplace 改为 `claude-for-legal-cn`，默认插件清单移除仅面向境外法研究的第三方插件。
 - 12 个一线插件的 `plugin.json` 和 marketplace 展示名/描述改为中国法律实务语境。
 - 12 个一线插件的 `CLAUDE.md` 注入“中国法律本地化规则”，默认法域为中华人民共和国大陆地区法律。
-- 当前 12 个根模块共 169 个 `SKILL.md`，均纳入中国法域、引用规则和人工确认门检查；新增项为 Phase 1.5 根级 `product-legal/launch-tracker`。
+- 当前 12 个根模块共有 162 个根级可发现 Skill；连同 `corporate-legal/phase-2/skills/` 中由根级 wrapper 暴露的 7 个历史实现文件，仓库内第一方 `SKILL.md` 物理文件总数为 169。上述 Skill 均纳入中国法域、引用规则和人工确认门检查；新增项为 Phase 1.5 根级 `product-legal/launch-tracker`。
 - 保留并接入 `references/china-legal-standards.md` 作为全局中国法引用、来源、审阅和争议解决规范。
 - 12 个第一方插件均位于根目录并进入默认 Marketplace；不存在 10+2 或教育/公益模块降权。
 - 12 个根模块 `.mcp.json` 使用统一中国占位配置；本地 `legal-data` 仅提供样例索引，WPS、商业数据库和企业系统仍是未生产接入的 Provider 占位。

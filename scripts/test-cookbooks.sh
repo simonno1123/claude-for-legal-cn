@@ -8,6 +8,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 fail=0
 
+# Keep embedded Python input/output deterministic on Windows hosts whose
+# process locale otherwise defaults to GBK.
+export PYTHONUTF8=1
+export PYTHONIOENCODING=utf-8
+
 # Tool-scope lint: assert orchestrators do not carry MCP toolsets, Write, or
 # external collaboration tools. Orchestrators emit handoff_request instead of calling these directly.
 if ! python3 "$ROOT/scripts/lint-tool-scope.py"; then

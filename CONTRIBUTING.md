@@ -52,6 +52,22 @@
 
 ## 测试与校验
 
+首次运行 Python 校验脚本前，请创建独立校验环境并安装固定依赖：
+
+```bash
+python3 -m venv .venv-validation
+.venv-validation/bin/python -m pip install -r requirements-validation.txt
+```
+
+Windows PowerShell 使用：
+
+```powershell
+python -m venv .venv-validation
+.\.venv-validation\Scripts\python.exe -m pip install -r requirements-validation.txt
+```
+
+校验环境只用于仓库校验，不存放业务数据、凭据或运行时状态。
+
 提交前至少检查：
 
 - Markdown 是否可读、无明显乱码；

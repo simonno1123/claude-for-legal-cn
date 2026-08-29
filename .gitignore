@@ -5,6 +5,7 @@
 /.claude/
 __pycache__/
 *.pyc
+.venv-validation/
 gemini_api.md
 .env
 *.key
