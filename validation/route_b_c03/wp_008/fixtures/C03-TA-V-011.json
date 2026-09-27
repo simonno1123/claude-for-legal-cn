@@ -1,0 +1,21 @@
+{
+  "fixture_id": "C03-WP008-FX-011",
+  "fixture_version": "1.0",
+  "scenario_id": "C03-TA-V-011",
+  "fictional": true,
+  "metadata_only": true,
+  "contains_real_matter_data": false,
+  "contains_personal_information": false,
+  "contains_credentials_or_secrets": false,
+  "contains_file_path_or_external_locator": false,
+  "input_state": {
+    "current_version": "SYNTHETIC_CURRENT",
+    "prior_accepted_version": "SYNTHETIC_PRIOR",
+    "rollback_authority_present": false
+  },
+  "expected_state": "ROLLBACK_ELIGIBILITY_ONLY",
+  "expected_reason_class": "ROLLBACK_REFERENCE_REQUIRES_AUTHORITY",
+  "expected_permitted_write_set": [],
+  "prohibited_effect": "AUDIT_HISTORY_REWRITE_OR_UNBOUND_RESTORATION",
+  "limitation": "PREPARATION_ONLY_NOT_EXECUTED"
+}

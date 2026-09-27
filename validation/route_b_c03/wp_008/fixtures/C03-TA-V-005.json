@@ -1,0 +1,20 @@
+{
+  "fixture_id": "C03-WP008-FX-005",
+  "fixture_version": "1.0",
+  "scenario_id": "C03-TA-V-005",
+  "fictional": true,
+  "metadata_only": true,
+  "contains_real_matter_data": false,
+  "contains_personal_information": false,
+  "contains_credentials_or_secrets": false,
+  "contains_file_path_or_external_locator": false,
+  "input_state": {
+    "prohibited_content_class": "CREDENTIAL_SECRET_KEY_OR_TOKEN",
+    "raw_value_supplied": false
+  },
+  "expected_state": "BLOCKED_QUARANTINED",
+  "expected_reason_class": "PROHIBITED_CONTENT_CLASSIFICATION",
+  "expected_permitted_write_set": [],
+  "prohibited_effect": "RAW_VALUE_LOGGING_ECHO_MAPPING_OR_FORWARDING",
+  "limitation": "PREPARATION_ONLY_NOT_EXECUTED"
+}

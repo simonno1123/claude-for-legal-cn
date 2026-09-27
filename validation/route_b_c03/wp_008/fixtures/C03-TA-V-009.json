@@ -1,0 +1,20 @@
+{
+  "fixture_id": "C03-WP008-FX-009",
+  "fixture_version": "1.0",
+  "scenario_id": "C03-TA-V-009",
+  "fictional": true,
+  "metadata_only": true,
+  "contains_real_matter_data": false,
+  "contains_personal_information": false,
+  "contains_credentials_or_secrets": false,
+  "contains_file_path_or_external_locator": false,
+  "input_state": {
+    "revocation_state": "ACTIVE_SYNTHETIC",
+    "revocation_boundary": "FUTURE_ACCEPTANCE_REQUIRED"
+  },
+  "expected_state": "BLOCKED_REVOKED",
+  "expected_reason_class": "REVOCATION_DENIAL",
+  "expected_permitted_write_set": [],
+  "prohibited_effect": "ACTION_AFTER_ACCEPTED_REVOCATION_BOUNDARY",
+  "limitation": "PREPARATION_ONLY_NOT_EXECUTED"
+}

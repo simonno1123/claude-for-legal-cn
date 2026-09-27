@@ -1,0 +1,20 @@
+{
+  "fixture_id": "C03-WP008-FX-002",
+  "fixture_version": "1.0",
+  "scenario_id": "C03-TA-V-002",
+  "fictional": true,
+  "metadata_only": true,
+  "contains_real_matter_data": false,
+  "contains_personal_information": false,
+  "contains_credentials_or_secrets": false,
+  "contains_file_path_or_external_locator": false,
+  "input_state": {
+    "authority_identity_state": "MALFORMED",
+    "authority_reference_present": false
+  },
+  "expected_state": "BLOCKED",
+  "expected_reason_class": "AUTHORITY_OR_IDENTITY_FAILURE",
+  "expected_permitted_write_set": [],
+  "prohibited_effect": "DEFAULT_INFERENCE_FALLBACK_OR_PARTIAL_EXECUTION",
+  "limitation": "PREPARATION_ONLY_NOT_EXECUTED"
+}

@@ -1,0 +1,2125 @@
+{
+  "binding_id": "C03-WP008-SCENARIO-INPUT-BINDING-V3.2-V2.2-CANDIDATE-006",
+  "binding_version": "0.6",
+  "project": "claude-for-legal-cn",
+  "artifact_role": "RDM-V2-03 V3.2/V2.2 INPUT-BINDING CANDIDATE WITH LIMITED RDM-V2-04 SEQUENCING-WORDING REVISION; NOT REVIEWED OR ADMITTED",
+  "candidate_state": "MATERIALIZED_NOT_FORMALLY_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED",
+  "activation_semantics": "CAPABILITY_ONLY",
+  "design_pair": {
+    "execution_package": {
+      "path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "sha256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD"
+    },
+    "manifest_preparation_plan": {
+      "path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "sha256": "6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA"
+    },
+    "adoption_reference": {
+      "type": "CONVERSATION_LEVEL_PROJECT_OWNER_DECISION",
+      "durable_file_sha256": "NOT_MATERIALIZED",
+      "qualification": "V3.2/V2.2 CONVERSATION-LEVEL LIMITED DESIGN ADOPTION FOR PREPARATION ONLY; FOUR LIMITED REVIEW ITEMS RETAINED; NO DURABLE DETACHED BINDING; NO INPUT ADMISSION OR USE"
+    }
+  },
+  "authorization_boundary": {
+    "authority": "CONVERSATION-LEVEL PROJECT OWNER LIMITED RDM-V2-04 PREPARATION AUTHORIZATION: 授权; PRIOR V3.2/V2.2 CANDIDATE SHA 2E27CC27059016BB7BDC6A680BBBED34579B717AD932757EA3FEC00DD025FECC; NO TIMESTAMP OR DECISION FILE ASSERTED",
+    "permitted": "CREATE A SEPARATE LIMITED WORDING-REVISION CANDIDATE AND NEW-PAIR PER-ITEM DISPOSITION PROPOSAL; PRESERVE PRIOR FILES, ALL INPUT VALUES, ORIGINAL EXPECTATIONS AND NORMATIVE RULES; NO INPUT ADMISSION",
+    "not_permitted": [
+      "FINAL_INPUT_ADMISSION",
+      "HARNESS_MATERIALIZATION",
+      "MANIFEST_GENERATION",
+      "PYTHON_OR_SUBJECT_EXECUTION",
+      "TEST_OR_RUNTIME_PROBE",
+      "SUBJECT_OR_FIXTURE_MODIFICATION",
+      "EVIDENCE_CREATION",
+      "BLOCKER_CLOSURE",
+      "ROUTE_A_OR_OCR",
+      "CASE_OR_LEGAL_PROCESSING",
+      "PROVIDER_OR_NETWORK",
+      "INDEPENDENT_ACOS",
+      "GIT_COMMIT_OR_PUSH"
+    ]
+  },
+  "representation_contract": {
+    "format": "CLOSED JSON DATA; NO JSON SCHEMA CREATED",
+    "object_reference": "An object_ref resolves only to an exact synthetic_object_catalog key.",
+    "object_override": "A key is /OBJECT_ID/arguments/FIELD and replaces only that field for one stimulus.",
+    "enum": "enum_class and member require a fixed harness-side reviewed conversion; data never chooses imports or arbitrary attributes.",
+    "tuple": "A tuple object is converted only at a fixed expected field.",
+    "dispatch": "adapter_id is descriptive input; a later accepted harness must use a closed literal mapping and must not import/getattr/eval from this file.",
+    "defaults": "All selected defaults are explicitly represented in object catalog or stimulus arguments.",
+    "unknown_behavior": "STOP; no fallback, inference, reduced subset, or post-hoc oracle change.",
+    "gate_decision_output": {
+      "contract_id": "OBS-GATEDECISION-EXACT-V1",
+      "status": "PROPOSED_NOT_REVIEWED_NOT_ACCEPTED",
+      "applies_to_rule_ids": [
+        "CR-002-AUTHORITY-BINDING-FAILURE",
+        "CR-002-ALL-MATCH-CONTROL"
+      ],
+      "scope": "V002-BIND-02 THROUGH V002-BIND-05 ONLY; NO CONSTRUCTOR OR OTHER RULE APPLICATION",
+      "type_identity_source": {
+        "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+        "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+        "binding": "Exact GateDecision and InvocationState class objects from the same fixed, future-admitted contracts module; same-named or independently loaded classes do not substitute.",
+        "dispatch": "Descriptions are not import paths or executable directives. A separately reviewed literal harness mapping must bind these classes; no dynamic import, getattr or eval from candidate data."
+      },
+      "expected_encoding": "raw_requirement is an unchanged JSON encoding of typed expectations, NOT an observed return object. Its state strings denote the closed enum members below; its [] denotes exactly an empty native tuple only for permitted_write_namespaces.",
+      "native_container": "The actual return must have exactly the bound GateDecision type. Dictionary, duck-typed object, subclass, missing return or exception is not a GateDecision observation.",
+      "field_contracts": {
+        "state": {
+          "native_type": "Exactly the bound InvocationState enum type; never a plain string or another enum.",
+          "expected_members_by_rule": {
+            "CR-002-AUTHORITY-BINDING-FAILURE": "BLOCKED",
+            "CR-002-ALL-MATCH-CONTROL": "ELIGIBLE_FOR_MAPPING"
+          },
+          "comparison": "Require identity with the fixed expected enum singleton for the selected rule; also preserve its original member name and string value. str-enum/string equality alone is insufficient.",
+          "json_evidence_encoding": "Copy the actual member value without normalization; retain the actual enum type, member name and value in the same per-variant provenance record. Never synthesize a member from a string."
+        },
+        "reason_code": {
+          "native_type": "Exactly built-in str.",
+          "comparison": "Exact original Unicode code-point sequence against raw_requirement.reason_code; no trimming, Unicode normalization, case folding, prefix match or substitution.",
+          "json_evidence_encoding": "Copy the actual string unchanged; JSON escaping may encode it but decoding must recover the identical code-point sequence."
+        },
+        "audit_correlation_id": {
+          "native_type": "Exactly built-in str.",
+          "comparison": "Exact original Unicode code-point sequence against raw_requirement.audit_correlation_id; do not fill, repair or substitute the expected identifier.",
+          "json_evidence_encoding": "Copy the actual string unchanged with the same reversible JSON-escaping rule."
+        },
+        "permitted_write_namespaces": {
+          "native_type": "Exactly built-in tuple; every element, if any, must be exactly built-in str.",
+          "native_expectation": "Exactly the empty tuple (). This applies to both rules; [] in raw_requirement is its expectation encoding, not permission to accept a returned list.",
+          "comparison": "Check native type before value; a nonempty tuple is a mismatch. List, set, generator, None, missing field or wrong element type is a type/observation failure, even if coercion could produce an empty sequence.",
+          "json_evidence_encoding": "Only after native type checks, encode actual tuple elements as an ordered JSON array and retain the original built-in tuple type in the same provenance record. Preserve every element and its order; never clear a nonempty tuple. An empty tuple encodes as [] but the array alone cannot establish conformance."
+        }
+      },
+      "comparison_sequence": [
+        "Validate the fixed source/type binding and the actual per-variant return provenance; no expected-to-observed copying.",
+        "Check exact native container and all four field types before any equality shortcut, coercion or evidence encoding.",
+        "Compare the actual native enum member, exact strings and empty tuple against the selected rule's typed expectations. Any mismatch remains a mismatch.",
+        "Encode only type-valid observations losslessly for evidence display, retaining type/member/tuple provenance and any value mismatch. Encoding is separate from and cannot override the native comparison.",
+        "Apply the unchanged fixture_mapping only after all native checks pass for a negative variant; the positive control has no negative fixture mapping."
+      ],
+      "mismatch_policy": "No PASS from projection alone. On missing observation, type failure or value mismatch, preserve available raw provenance and the failure/exception without repair; stop the affected comparison. Do not call unknown-object conversion methods to manufacture a serializable observation.",
+      "evidence_separation": "Keep expected encoding, actual native observation/type provenance, optional lossless JSON display and comparison determination separate for each variant. No runtime evidence is created by this draft.",
+      "normalization_boundary": "The explicitly specified, type-preserving evidence encoding is representation only. Semantic normalization, type coercion for acceptance, fallback values and post-hoc oracle changes remain prohibited.",
+      "lifecycle_boundary": "No harness, runtime execution, rule acceptance, input admission, RDM-DSP-002 closure or overall WP-008 verdict is established."
+    },
+    "v003_gate_decision_output": {
+      "contract_id": "OBS-V003-GATEDECISION-EXACT-DRAFT-001",
+      "status": "PROPOSED_NOT_REVIEWED_NOT_ACCEPTED",
+      "applies_to_rule_ids": [
+        "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE"
+      ],
+      "type_source": {
+        "path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+        "sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4"
+      },
+      "type_binding": "Exact GateDecision and InvocationState objects from the same fixed, future-admitted module. Descriptive names are not dynamic import/getattr/eval directives; a later independently reviewed literal harness mapping is required.",
+      "native_container": "Exactly the bound GateDecision class; no dictionary, subclass, same-name independently loaded class or duck-typed substitution.",
+      "fields": {
+        "state": {
+          "native_type": "Exactly the bound InvocationState enum",
+          "native_expectation": "Identity with InvocationState.BLOCKED",
+          "encoding": "Actual member value plus original enum type/member/value provenance; a plain string BLOCKED is not an enum observation."
+        },
+        "reason_code": {
+          "native_type": "Exactly built-in str",
+          "native_expectation": "BLOCKED — CAPABILITY IDENTITY FAILURE",
+          "encoding": "Actual string unchanged; JSON escaping must round-trip identical Unicode code points. No trim, case fold or normalization."
+        },
+        "audit_correlation_id": {
+          "native_type": "Exactly built-in str",
+          "native_expectation": "SYNTHETIC-CORRELATION-001",
+          "encoding": "Actual string unchanged with the same reversible JSON escaping; no expected-value backfill."
+        },
+        "permitted_write_namespaces": {
+          "native_type": "Exactly built-in tuple; every element, if present, exactly built-in str",
+          "native_expectation": "Exactly empty tuple ()",
+          "encoding": "Type-valid tuple may be displayed as ordered JSON array while retaining original tuple type; preserve all elements. [] is only the empty-tuple expectation/display encoding, never acceptance of a returned list."
+        }
+      },
+      "sequence": [
+        "Verify fixed source, exact input variant and actual return provenance.",
+        "Check the exact native container and all four field types before equality shortcuts or conversion.",
+        "Compare actual enum singleton, exact code-point strings and empty tuple; preserve any value mismatch.",
+        "Optionally encode type-valid actual values losslessly with type provenance for display; encoding cannot turn a mismatch into conformance.",
+        "Only after all checks pass, record the fixture abstraction separately from expected values, native observations, display encoding and comparison determination."
+      ],
+      "failure_policy": "No pass from a JSON projection alone. None, missing fields, wrong types, empty lists, nonempty tuples, changed strings and exceptions cannot be repaired into expected data. Preserve available failure provenance without calling unknown-object conversion methods.",
+      "side_effect_limit": "An empty permitted-write tuple is only declared return metadata, not proof of zero actual I/O or successful OS enforcement.",
+      "independence": "New unaccepted V-003 draft only. Does not reuse, extend, amend or inherit acceptance of OBS-GATEDECISION-EXACT-V1 or either V-002 rule."
+    }
+  },
+  "subject_identities": {
+    "scripts/phase2_runtime/__init__.py": "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
+    "scripts/phase2_runtime/route_b_c03/__init__.py": "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
+    "scripts/phase2_runtime/route_b_c03/contracts.py": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+    "scripts/phase2_runtime/route_b_c03/identity_gate.py": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+    "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
+    "scripts/phase2_runtime/route_b_c03/isolation.py": "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B",
+    "scripts/phase2_runtime/route_b_c03/failures.py": "6F30D996119F61A19B20208FC44C8AF1FB96ADFE09ADE3538675B9D3F2933734",
+    "scripts/phase2_runtime/route_b_c03/audit.py": "A704BDB22C55C92D0909FA0D6A668D8C149724B2A7627938C301758F1D09F561",
+    "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+    "scripts/phase2_runtime/route_b_c03/capability.py": "028EE9DDD7A2C06840A6F344A4C4CC716EFF95073BE39CA6E57FB7FDBBFA6DD5"
+  },
+  "fixture_identities": {
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-001.json": "C8CEFEDC496D5D0D33E0F21D61B5E3C3354579A8D0E1C74F70640305C65FC99A",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-002.json": "257437A2AA80A58C0741F1EC0A5A514E014C633DD974804C6407DB84DB107290",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-003.json": "21BD65ECD28D569BADFF11489017569E8413B1CC9A5138A851F907CCF62EAF7E",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-005.json": "4405ADC2CE242B83120B0BA304157B3E6F03687345F764BBBE1E3A2DCF2422DE",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-006.json": "9D24E6AFA92F9EF6E895B0B6E4D0E84BDC326E9C4B815E42723B31374CC2FDC8",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-007.json": "68D9D63583A0301BDE76C3E60A5F66B7CCDA897C17D58E8DBF282E3E49C3DB90",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-008.json": "7AA3FEF0CCDFA0C6A462C7945B63A50D828AC9C6D0725F428D347F6836075193",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-009.json": "34EFBC55490FB2E3FFC89CAFCAD9DD2D319C2C24D9B3E2B026143F74A73DC93C",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-010.json": "19DF9D35835F60C03C969B79B25F62CFE95E28C0A1B8122EDD8B9E1A5BC0E67A",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-011.json": "8795DA58E092E6DC7F88958E3AC60B754870F5BFAE15FF8BC2D699450B65FDFD",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-012.json": "8C6E4FC6279E95CFE48C9E9DA6E161F0AF05CA5FFEA95BE18DBAD6A81204E8E6",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-013.json": "3DBF0F60AC970F90C97CF85F5F21F1758B4818D814A02CE8ED03A4F1C3A49CA6",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-014.json": "D3EF698EA45F41824CCF6C5A7020F6A0B495460341ADE7446461A1AAF0E7D523",
+    "validation/route_b_c03/wp_008/fixtures/C03-TA-V-015.json": "06DCEBA08CA43C75439B5A2AC1C140905887EF8CDC26C561FBD68E9A001D5AE1"
+  },
+  "synthetic_data_declaration": {
+    "fictional": true,
+    "metadata_only": true,
+    "contains_real_matter_data": false,
+    "contains_personal_information": false,
+    "contains_credentials_secrets_keys_tokens": false,
+    "contains_external_locator_or_file_payload": false,
+    "grants_real_authority": false,
+    "establishes_time_or_temporal_lineage": false
+  },
+  "adapter_catalog": {
+    "ADP-EVALUATE-IDENTITY": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "subject_sha256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+      "callable": "evaluate_identity_gate",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "argument_order": [
+        "configuration",
+        "packet",
+        "envelope"
+      ],
+      "keyword_only": [
+        "expected",
+        "validity_confirmed",
+        "kill_active"
+      ]
+    },
+    "ADP-CONSTRUCT-EXPECTED": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "callable": "ExpectedIdentityReference",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    },
+    "ADP-ASSERT-REFERENCE-ONLY": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
+      "subject_sha256": "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B",
+      "callable": "assert_reference_only",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "argument_order": [
+        "record"
+      ]
+    },
+    "ADP-CONSTRUCT-IDEMPOTENCY": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "callable": "IdempotencyKeyReference",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    },
+    "ADP-EVALUATE-RETRY": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
+      "subject_sha256": "6F30D996119F61A19B20208FC44C8AF1FB96ADFE09ADE3538675B9D3F2933734",
+      "callable": "evaluate_retry",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "argument_order": [
+        "policy",
+        "failure_code",
+        "completed_attempts"
+      ],
+      "keyword_only": [
+        "identical_scope",
+        "deadline_valid",
+        "kill_active",
+        "revoked",
+        "stale",
+        "quarantined"
+      ]
+    },
+    "ADP-CONSTRUCT-TIMEOUT": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "callable": "TimeoutPolicyReference",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    },
+    "ADP-PROTECTED-STATE": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
+      "subject_sha256": "6F30D996119F61A19B20208FC44C8AF1FB96ADFE09ADE3538675B9D3F2933734",
+      "callable": "protected_state",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "keyword_only": [
+        "kill_active",
+        "revoked",
+        "stale"
+      ]
+    },
+    "ADP-EVALUATE-RELEASE": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
+      "subject_sha256": "6F30D996119F61A19B20208FC44C8AF1FB96ADFE09ADE3538675B9D3F2933734",
+      "callable": "evaluate_release",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "argument_order": [
+        "decision"
+      ],
+      "keyword_only": [
+        "protected_state_reference",
+        "resolution_evidence_reference"
+      ]
+    },
+    "ADP-CONSTRUCT-ROLLBACK": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "callable": "RollbackReference",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    },
+    "ADP-CONSTRUCT-AUDIT-INTEGRITY": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "callable": "AuditIntegrityReference",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    },
+    "ADP-BUILD-AUDIT-CANDIDATE": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/audit.py",
+      "subject_sha256": "A704BDB22C55C92D0909FA0D6A668D8C149724B2A7627938C301758F1D09F561",
+      "callable": "build_audit_candidate",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    },
+    "ADP-NULL-PROVIDER": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/provider_port.py",
+      "subject_sha256": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+      "callable": "NullProviderPort.submit_reference",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "argument_order": [
+        "request_reference"
+      ]
+    },
+    "ADP-ASSERT-WRITE-SET": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
+      "subject_sha256": "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B",
+      "callable": "assert_permitted_write_set",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
+      "argument_order": [
+        "write_set"
+      ]
+    },
+    "ADP-CONSTRUCT-CANDIDATE": {
+      "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "subject_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "callable": "CandidateRecord",
+      "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
+    }
+  },
+  "synthetic_object_catalog": {
+    "OBJ-CONFIG-BASE": {
+      "type": "CapabilityConfigurationReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "capability_id": "C03-SYNTHETIC",
+        "capability_version": "1.0-SYNTHETIC",
+        "implementation_sha256": "028EE9DDD7A2C06840A6F344A4C4CC716EFF95073BE39CA6E57FB7FDBBFA6DD5",
+        "configuration_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "activation_decision_reference": "SYNTHETIC-ACTIVATION-REFERENCE-NOT-AUTHORITY",
+        "state": {
+          "enum_class": "CapabilityState",
+          "member": "ENABLED_CAPABILITY_ONLY"
+        },
+        "revocation_reference": null,
+        "validity": "SYNTHETIC-NON-ACTIVE-TEST-VALIDITY"
+      }
+    },
+    "OBJ-EXPECTED-BASE": {
+      "type": "ExpectedIdentityReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "capability_id": "C03-SYNTHETIC",
+        "capability_version": "1.0-SYNTHETIC",
+        "implementation_sha256": "028EE9DDD7A2C06840A6F344A4C4CC716EFF95073BE39CA6E57FB7FDBBFA6DD5",
+        "configuration_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "activation_decision_reference": "SYNTHETIC-ACTIVATION-REFERENCE-NOT-AUTHORITY",
+        "route": "ROUTE_B_SYNTHETIC",
+        "route_version": "1.0-SYNTHETIC",
+        "domain_id": "C03-SYNTHETIC",
+        "domain_version": "1.0-SYNTHETIC",
+        "adapter_contract_version": "1.0-SYNTHETIC",
+        "matter_authorization_reference": "SYNTHETIC-MATTER-AUTHORITY-REFERENCE-NOT-AUTHORITY",
+        "execution_authorization_reference": "SYNTHETIC-EXECUTION-REFERENCE-NOT-AUTHORITY"
+      }
+    },
+    "OBJ-ENVELOPE-BASE": {
+      "type": "GovernedInputEnvelopeReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "envelope_id": "SYNTHETIC-ENVELOPE-001",
+        "route": "ROUTE_B_SYNTHETIC",
+        "route_version": "1.0-SYNTHETIC",
+        "domain_id": "C03-SYNTHETIC",
+        "domain_version": "1.0-SYNTHETIC",
+        "adapter_contract_version": "1.0-SYNTHETIC",
+        "matter_id": "SYNTHETIC-MATTER-001",
+        "matter_version": "1.0-SYNTHETIC",
+        "matter_authorization_reference": "SYNTHETIC-MATTER-AUTHORITY-REFERENCE-NOT-AUTHORITY",
+        "actor_reference": "SYNTHETIC-ACTOR-001",
+        "role": "SYNTHETIC-VALIDATION-ROLE",
+        "authority_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY",
+        "purpose": "SYNTHETIC-METADATA-VALIDATION",
+        "operation": "SYNTHETIC-CANDIDATE-MAPPING",
+        "input_set_sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+        "requested_output_scope": {
+          "tuple": [
+            {
+              "enum_class": "CandidateClass",
+              "member": "ISSUE_MATRIX"
+            }
+          ]
+        },
+        "prohibited_output_scope": {
+          "tuple": [
+            "LEGAL_CONCLUSION",
+            "EXTERNAL_TRANSFER",
+            "RUNTIME_EXECUTION"
+          ]
+        },
+        "execution_authorization_reference": "SYNTHETIC-EXECUTION-REFERENCE-NOT-AUTHORITY",
+        "audit_correlation_id": "SYNTHETIC-CORRELATION-001",
+        "input_artifact_references": {
+          "tuple": []
+        }
+      }
+    },
+    "OBJ-PACKET-BASE": {
+      "type": "TierBAuthorityPacketReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "packet_id": "SYNTHETIC-PACKET-001",
+        "packet_version": "1.0-SYNTHETIC",
+        "packet_sha256": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+        "matter_id": "SYNTHETIC-MATTER-001",
+        "matter_version": "1.0-SYNTHETIC",
+        "actor_reference": "SYNTHETIC-ACTOR-001",
+        "purpose": "SYNTHETIC-METADATA-VALIDATION",
+        "operation": "SYNTHETIC-CANDIDATE-MAPPING",
+        "input_set_sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+        "output_class": {
+          "enum_class": "CandidateClass",
+          "member": "ISSUE_MATRIX"
+        },
+        "decision_reference": "SYNTHETIC-EXECUTION-REFERENCE-NOT-AUTHORITY",
+        "valid_from": "SYNTHETIC-START-BOUNDARY",
+        "valid_until": "SYNTHETIC-END-BOUNDARY",
+        "revocation_state": {
+          "enum_class": "RevocationState",
+          "member": "CLEAR"
+        },
+        "state": {
+          "enum_class": "PacketState",
+          "member": "ACCEPTED"
+        }
+      }
+    },
+    "OBJ-RETRY-POLICY": {
+      "type": "RetryPolicyReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "policy_id": "SYNTHETIC-RETRY-POLICY-001",
+        "version": "1.0-SYNTHETIC",
+        "sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+        "eligible_failure_codes": {
+          "tuple": [
+            "TRANSIENT_FAILURE"
+          ]
+        },
+        "maximum_attempts": 2,
+        "backoff_policy_reference": "SYNTHETIC-BACKOFF-REFERENCE-NOT-EXECUTED",
+        "deadline_reference": "SYNTHETIC-DEADLINE-REFERENCE-NOT-CLOCK",
+        "scope_lock_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+        "terminal_codes": {
+          "tuple": [
+            "AUTHORITY_FAILURE",
+            "KILL_ACTIVE",
+            "REVOKED",
+            "STALE"
+          ]
+        },
+        "authorization_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY"
+      }
+    },
+    "OBJ-IDEMPOTENCY-REFERENCE": {
+      "type": "IdempotencyKeyReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "canonicalization_version": "1.0-SYNTHETIC",
+        "digest_algorithm": "SHA-256",
+        "key_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "replay_window_reference": "SYNTHETIC-REPLAY-WINDOW-REFERENCE-NOT-IMPLEMENTED"
+      }
+    },
+    "OBJ-TIMEOUT-REFERENCE": {
+      "type": "TimeoutPolicyReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "policy_id": "SYNTHETIC-TIMEOUT-POLICY-001",
+        "version": "1.0-SYNTHETIC",
+        "sha256": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+        "start_category": "SYNTHETIC-START-EVENT",
+        "deadline_duration": "SYNTHETIC-DURATION-NOT-A-CLOCK",
+        "late_result_policy": "DENY_USE",
+        "terminal_state": {
+          "enum_class": "ControlState",
+          "member": "QUARANTINED"
+        },
+        "retry_effect": "NONE"
+      }
+    },
+    "OBJ-ROLLBACK-REFERENCE": {
+      "type": "RollbackReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "rollback_id": "SYNTHETIC-ROLLBACK-001",
+        "version": "1.0-SYNTHETIC",
+        "current_identity": "SYNTHETIC-CURRENT",
+        "target_identity": "SYNTHETIC-PRIOR",
+        "restoration_surface": {
+          "tuple": [
+            "REFERENCE_ONLY"
+          ]
+        },
+        "preconditions": {
+          "tuple": [
+            "SEPARATE_AUTHORITY_REQUIRED",
+            "AUDIT_HISTORY_PRESERVED"
+          ]
+        },
+        "prohibited_surface": {
+          "tuple": [
+            "FILE_WRITE",
+            "STATE_MUTATION",
+            "HISTORY_REWRITE"
+          ]
+        },
+        "decision_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY",
+        "post_restore_state": {
+          "enum_class": "CapabilityState",
+          "member": "DISABLED"
+        }
+      }
+    },
+    "OBJ-AUDIT-INTEGRITY": {
+      "type": "AuditIntegrityReference",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "policy_id": "SYNTHETIC-INTEGRITY-POLICY-001",
+        "version": "1.0-SYNTHETIC",
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+        "chain_reference": "SYNTHETIC-CHAIN-REFERENCE-NOT-A-CHAIN",
+        "subject_hashes": {
+          "tuple": [
+            "A704BDB22C55C92D0909FA0D6A668D8C149724B2A7627938C301758F1D09F561"
+          ]
+        },
+        "redaction_state": "SYNTHETIC-REDACTED-METADATA",
+        "tamper_state": {
+          "enum_class": "TamperState",
+          "member": "MISMATCH"
+        },
+        "retention_reference": "NONE",
+        "access_reference": "NONE",
+        "supersedes": "NONE"
+      }
+    },
+    "OBJ-CANDIDATE-BASE": {
+      "type": "CandidateRecord",
+      "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "arguments": {
+        "candidate_id": "SYNTHETIC-CANDIDATE-001",
+        "candidate_version": "1.0-SYNTHETIC",
+        "candidate_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "candidate_class": {
+          "enum_class": "CandidateClass",
+          "member": "AUTHORITY_CHECK_REQUEST"
+        },
+        "capability_reference": "SYNTHETIC-C03-CAPABILITY-REFERENCE",
+        "matter_reference": "SYNTHETIC-MATTER-001",
+        "purpose": "SYNTHETIC-HUMAN-REVIEW-CANDIDATE",
+        "operation": "SYNTHETIC-CLASSIFICATION-BOUNDARY-CHECK",
+        "input_set_sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+        "mapping_trace_references": {
+          "tuple": [
+            "SYNTHETIC-TRACE-REFERENCE-001"
+          ]
+        },
+        "notices": {
+          "tuple": [
+            "CANDIDATE — REQUIRES QUALIFIED HUMAN REVIEW",
+            "NOT LEGAL ADVICE",
+            "NOT AN ENFORCEMENT INSTRUCTION",
+            "NOT AUTHORIZED FOR FILING, CONTACT, TRANSFER, OR EXECUTION"
+          ]
+        },
+        "state": {
+          "enum_class": "InvocationState",
+          "member": "HUMAN_REVIEW_PENDING"
+        },
+        "downstream_blocked": true
+      }
+    }
+  },
+  "comparison_rule_catalog": {
+    "CR-001-RAW-GATE-TO-ABSTRACT-ORACLE": {
+      "status": "PROPOSED_NOT_ACCEPTED",
+      "raw_requirement": {
+        "state": "BLOCKED",
+        "reason_code": "BLOCKED — TIER B AUTHORITY REQUIRED"
+      },
+      "fixture_mapping": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "MISSING_MATTER_BOUND_AUTHORITY"
+      },
+      "post_hoc_change": "PROHIBITED"
+    },
+    "CR-002-CONSTRUCTOR-FAILURE": {
+      "status": "PROPOSED_NOT_ACCEPTED",
+      "raw_requirement": {
+        "exception_type": "ValueError",
+        "message": "matter_authorization_reference must be a non-empty explicit value"
+      },
+      "fixture_mapping": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "AUTHORITY_OR_IDENTITY_FAILURE"
+      },
+      "post_hoc_change": "PROHIBITED"
+    },
+    "CR-005-PROHIBITED-KEY-EXCEPTION": {
+      "status": "PROPOSED_NOT_ACCEPTED",
+      "raw_requirement": {
+        "exception_type": "IsolationViolation",
+        "message": "QUARANTINED — CONTENT FIELD PROHIBITED: credential_reference_present"
+      },
+      "fixture_mapping": {
+        "expected_state": "BLOCKED_QUARANTINED",
+        "expected_reason_class": "PROHIBITED_CONTENT_CLASSIFICATION"
+      },
+      "post_hoc_change": "PROHIBITED"
+    },
+    "CR-007-RETRY-ELIGIBILITY": {
+      "status": "PROPOSED_NOT_ACCEPTED",
+      "raw_requirement": {
+        "state": "RETRY_ELIGIBILITY_PENDING",
+        "reason_code": "RETRY ELIGIBLE — EXECUTION NOT AUTHORIZED",
+        "next_attempt": 1
+      },
+      "fixture_mapping": {
+        "expected_state": "RETRY_ELIGIBILITY_PENDING",
+        "expected_reason_class": "ELIGIBILITY_ONLY_EXECUTION_UNAUTHORIZED"
+      },
+      "post_hoc_change": "PROHIBITED"
+    },
+    "CR-014-PROHIBITED-NAMESPACE-EXCEPTION": {
+      "status": "PROPOSED_NOT_ACCEPTED",
+      "raw_requirement": {
+        "exception_type": "IsolationViolation",
+        "message_prefix": "REJECTED — PROHIBITED WRITE:"
+      },
+      "fixture_mapping": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "PROHIBITED_WRITE_TARGET"
+      },
+      "post_hoc_change": "PROHIBITED"
+    },
+    "CR-002-AUTHORITY-BINDING-FAILURE": {
+      "status": "PROPOSED_NOT_REVIEWED_NOT_ACCEPTED",
+      "applies_to": [
+        "SB-002-MATTER-AUTHORITY-MISMATCH",
+        "SB-002-EXECUTION-AUTHORITY-MISMATCH",
+        "SB-002-PACKET-DECISION-MISMATCH"
+      ],
+      "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+      "raw_requirement": {
+        "state": "BLOCKED",
+        "reason_code": "BLOCKED — AUTHORITY BINDING FAILURE",
+        "audit_correlation_id": "SYNTHETIC-CORRELATION-001",
+        "permitted_write_namespaces": []
+      },
+      "fixture_mapping": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "AUTHORITY_OR_IDENTITY_FAILURE"
+      },
+      "comparison_mode": "EXACT_NATIVE_TYPES_AND_VALUES; LOSSLESS_EVIDENCE_ENCODING_ONLY; NO SEMANTIC NORMALIZATION, PREFIX MATCH OR REASON SUBSTITUTION",
+      "mismatch_policy": "DO_NOT_ASSERT_CONFORMANCE; PRESERVE RAW MISMATCH OR EXCEPTION AND STOP THE AFFECTED COMPARISON",
+      "post_hoc_change": "PROHIBITED",
+      "scope": "THREE INDIVIDUAL V-002 GATE REFERENCE-CONSISTENCY MISMATCH VARIANTS ONLY",
+      "authority_qualification": "METADATA CONSISTENCY ONLY; NOT AUTHORIZATION VALIDATION OR EXECUTION PERMISSION",
+      "observation_contract_id": "OBS-GATEDECISION-EXACT-V1",
+      "raw_requirement_qualification": "TYPED_EXPECTATION_JSON_ENCODING_ONLY; NOT_RAW_OBSERVATION; APPLY_OBS-GATEDECISION-EXACT-V1_BEFORE_EVIDENCE_ENCODING"
+    },
+    "CR-002-ALL-MATCH-CONTROL": {
+      "status": "PROPOSED_NOT_REVIEWED_NOT_ACCEPTED",
+      "applies_to": [
+        "SB-002-ALL-REFERENCES-MATCH-CONTROL"
+      ],
+      "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+      "raw_requirement": {
+        "state": "ELIGIBLE_FOR_MAPPING",
+        "reason_code": "ELIGIBLE — SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+        "audit_correlation_id": "SYNTHETIC-CORRELATION-001",
+        "permitted_write_namespaces": []
+      },
+      "fixture_mapping": null,
+      "comparison_mode": "EXACT_NATIVE_TYPES_AND_VALUES; LOSSLESS_EVIDENCE_ENCODING_ONLY; POSITIVE RAW CONTROL ONLY; NO SEMANTIC NORMALIZATION",
+      "mismatch_policy": "DO_NOT_ASSERT_CONFORMANCE; PRESERVE RAW MISMATCH OR EXCEPTION AND STOP THE AFFECTED COMPARISON",
+      "post_hoc_change": "PROHIBITED",
+      "scope": "ONE V-002 ALL-MATCH CONTROL ONLY; NEGATIVE FIXTURE ORACLE DOES NOT APPLY",
+      "authority_qualification": "ELIGIBILITY RETURN ONLY; NO AUTHORITY GRANT, BUSINESS MAPPING OR EXECUTION",
+      "observation_contract_id": "OBS-GATEDECISION-EXACT-V1",
+      "raw_requirement_qualification": "TYPED_EXPECTATION_JSON_ENCODING_ONLY; NOT_RAW_OBSERVATION; APPLY_OBS-GATEDECISION-EXACT-V1_BEFORE_EVIDENCE_ENCODING"
+    },
+    "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE": {
+      "rule_id": "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE",
+      "status": "PROPOSED_NOT_REVIEWED_NOT_ACCEPTED",
+      "scenario_id": "C03-TA-V-003",
+      "binding_reference": {
+        "path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_RDM_DSP_002_REVISION_CANDIDATE_REV2.json",
+        "sha256": "6C78702FCA2D776CE0AD17F4BD00AE65FF5B5C8D216209539FCD5877122B26B9",
+        "qualification": "READ-ONLY INPUT REFERENCE; NOT ADMISSION OR IN-PLACE INTEGRATION"
+      },
+      "subject_reference": {
+        "path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+        "sha256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+        "callable": "evaluate_identity_gate"
+      },
+      "fixture_reference": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-003.json",
+        "sha256": "21BD65ECD28D569BADFF11489017569E8413B1CC9A5138A851F907CCF62EAF7E",
+        "fixture_id": "C03-WP008-FX-003",
+        "fixture_version": "1.0"
+      },
+      "applies_to": [
+        "SB-003-CAPABILITY-VERSION",
+        "SB-003-IMPLEMENTATION-SHA",
+        "SB-003-CONFIGURATION-SHA"
+      ],
+      "input_condition": "Exact fixed variant arguments plus its one declared configuration-field override; all other object fields unchanged. Kill is false, configuration is present and ENABLED_CAPABILITY_ONLY; only the selected one of five identity comparisons is unequal.",
+      "observation_contract_id": "OBS-V003-GATEDECISION-EXACT-DRAFT-001",
+      "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+      "observation_scope_qualification": "Proposed V-003 comparison requirements only. Existing binding still records state/reason and NOT_ESTABLISHED; no observation surface or rule ID is installed by this document.",
+      "raw_requirement": {
+        "state": "BLOCKED",
+        "reason_code": "BLOCKED — CAPABILITY IDENTITY FAILURE",
+        "audit_correlation_id": "SYNTHETIC-CORRELATION-001",
+        "permitted_write_namespaces": []
+      },
+      "raw_requirement_qualification": "TYPED EXPECTATION JSON ENCODING; NOT AN OBSERVED VALUE. Use the separately proposed V-003 output contract, not the accepted V-002 contract.",
+      "fixture_mapping": {
+        "expected_state": "BLOCKED_STALE",
+        "expected_reason_class": "EXACT_IDENTITY_MISMATCH",
+        "expected_permitted_write_set": []
+      },
+      "mapping_qualification": "Only a separate per-variant fixture abstraction after exact input and native output checks; never replace raw state/reason, create a runtime enum alias, or assert chronological staleness.",
+      "comparison_mode": "EXACT_VARIANT_AND_NATIVE_TYPES_AND_VALUES; NO SEMANTIC NORMALIZATION, PREFIX MATCH, FALLBACK OR POST-HOC SUBSTITUTION",
+      "mismatch_policy": "Do not map or assert conformance on unknown/mismatched identity, any unintended input difference, missing provenance, type failure, exception, wrong output value or earlier denial. Preserve actual facts; stop the affected comparison and obey the separately accepted run stop policy.",
+      "post_hoc_change": "PROHIBITED",
+      "acceptance_or_execution_effect": "NONE; NO V-002 SCOPE EXTENSION, INPUT ADMISSION, HARNESS OR SUBJECT EXECUTION, BLOCKER CLOSURE OR AGGREGATE VERDICT"
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "C03-TA-V-001",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-001.json",
+        "sha256": "C8CEFEDC496D5D0D33E0F21D61B5E3C3354579A8D0E1C74F70640305C65FC99A",
+        "fixture_id": "C03-WP008-FX-001",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "capability_metadata": "VALID_SYNTHETIC_METADATA",
+        "tier_b_packet_present": false
+      },
+      "binding_state": "COMPLETE_FOR_EXISTING_CALL",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-001-MISSING-PACKET",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": null,
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code",
+          "comparison_rule_id": "CR-001-RAW-GATE-TO-ABSTRACT-ORACLE"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "MISSING_MATTER_BOUND_AUTHORITY",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "MATTER_ACCESS_OR_CANDIDATE_OUTPUT",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [],
+      "coverage_limitations": [
+        "Tests the reachable missing-packet gate only; it does not establish real authority absence or execution authorization."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-002",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-002.json",
+        "sha256": "257437A2AA80A58C0741F1EC0A5A514E014C633DD974804C6407DB84DB107290",
+        "fixture_id": "C03-WP008-FX-002",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "authority_identity_state": "MALFORMED",
+        "authority_reference_present": false
+      },
+      "binding_state": "FIVE_VARIANTS_EXPLICIT_PENDING_RULE_REVIEW_AND_INPUT_ADMISSION",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-002-MALFORMED-CONSTRUCTOR",
+          "adapter_id": "ADP-CONSTRUCT-EXPECTED",
+          "arguments": {
+            "capability_id": "C03-SYNTHETIC",
+            "capability_version": "1.0-SYNTHETIC",
+            "implementation_sha256": "028EE9DDD7A2C06840A6F344A4C4CC716EFF95073BE39CA6E57FB7FDBBFA6DD5",
+            "configuration_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "activation_decision_reference": "SYNTHETIC-ACTIVATION-REFERENCE-NOT-AUTHORITY",
+            "route": "ROUTE_B_SYNTHETIC",
+            "route_version": "1.0-SYNTHETIC",
+            "domain_id": "C03-SYNTHETIC",
+            "domain_version": "1.0-SYNTHETIC",
+            "adapter_contract_version": "1.0-SYNTHETIC",
+            "matter_authorization_reference": "",
+            "execution_authorization_reference": "SYNTHETIC-EXECUTION-REFERENCE-NOT-AUTHORITY"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "Constructor exception identity/message",
+          "comparison_rule_id": "CR-002-CONSTRUCTOR-FAILURE",
+          "design_variant_id": "V002-BIND-01",
+          "variant_role": "NEGATIVE_CONSTRUCTOR_ONLY"
+        },
+        {
+          "stimulus_binding_id": "SB-002-MATTER-AUTHORITY-MISMATCH",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-ENVELOPE-BASE/arguments/matter_authorization_reference": "SYNTHETIC-MATTER-AUTHORITY-MISMATCH-NOT-AUTHORITY"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-002-AUTHORITY-BINDING-FAILURE",
+          "design_variant_id": "V002-BIND-02",
+          "variant_role": "NEGATIVE_GATE_REFERENCE_CONSISTENCY_ONLY",
+          "precondition_contract": "ALL_NON_TARGET_REFERENCES_MATCH_AND_ALL_EARLIER_GUARDS_PASS; NO EARLIER DENIAL COUNTS AS TARGET COVERAGE"
+        },
+        {
+          "stimulus_binding_id": "SB-002-EXECUTION-AUTHORITY-MISMATCH",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-ENVELOPE-BASE/arguments/execution_authorization_reference": "SYNTHETIC-EXECUTION-AUTHORITY-MISMATCH-NOT-AUTHORITY"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-002-AUTHORITY-BINDING-FAILURE",
+          "design_variant_id": "V002-BIND-03",
+          "variant_role": "NEGATIVE_GATE_REFERENCE_CONSISTENCY_ONLY",
+          "precondition_contract": "ALL_NON_TARGET_REFERENCES_MATCH_AND_ALL_EARLIER_GUARDS_PASS; NO EARLIER DENIAL COUNTS AS TARGET COVERAGE"
+        },
+        {
+          "stimulus_binding_id": "SB-002-PACKET-DECISION-MISMATCH",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-PACKET-BASE/arguments/decision_reference": "SYNTHETIC-PACKET-DECISION-MISMATCH-NOT-AUTHORITY"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-002-AUTHORITY-BINDING-FAILURE",
+          "design_variant_id": "V002-BIND-04",
+          "variant_role": "NEGATIVE_GATE_REFERENCE_CONSISTENCY_ONLY",
+          "precondition_contract": "ALL_NON_TARGET_REFERENCES_MATCH_AND_ALL_EARLIER_GUARDS_PASS; NO EARLIER DENIAL COUNTS AS TARGET COVERAGE"
+        },
+        {
+          "stimulus_binding_id": "SB-002-ALL-REFERENCES-MATCH-CONTROL",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-002-ALL-MATCH-CONTROL",
+          "design_variant_id": "V002-BIND-05",
+          "variant_role": "POSITIVE_RAW_CONTROL_ONLY_NO_FIXTURE_ABSTRACTION",
+          "precondition_contract": "ALL_THREE_REFERENCES_MATCH_AND_ALL_EARLIER_GUARDS_PASS; NO AUTHORITY GRANT OR BUSINESS EXECUTION"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "AUTHORITY_OR_IDENTITY_FAILURE",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "DEFAULT_INFERENCE_FALLBACK_OR_PARTIAL_EXECUTION",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "Two new V-002 rule drafts require fixed-SHA independent review and separate Project Owner acceptance.",
+        "This revised input binding requires its own fixed-SHA review and admission; shared-adapter changes do not inherit old execution evidence."
+      ],
+      "coverage_limitations": [
+        "Five synthetic metadata variants only; no authenticity, sufficiency, legal effect or real invocation authority is evaluated.",
+        "Constructor failure is separate from the three reachable gate-reference mismatch variants.",
+        "The all-match control preserves the explicit separate-matter-invocation-authority requirement; it is not a negative fixture result.",
+        "Earlier-denial outputs, exceptions on gate variants, non-empty write namespaces or correlation drift do not satisfy the target comparison.",
+        "No scenario was executed and no runtime output or formal WP-008 verdict is recorded by this candidate."
+      ],
+      "execution_state": "NOT_RUN",
+      "original_fixture_qualification": "Preserved negative fixture input_state and oracle are historical abstractions, not constructor arguments for every variant. Explicit variant arguments and overrides select the synthetic stimulus; the positive control has no negative-fixture mapping.",
+      "oracle_application": {
+        "negative_variant_ids": [
+          "SB-002-MALFORMED-CONSTRUCTOR",
+          "SB-002-MATTER-AUTHORITY-MISMATCH",
+          "SB-002-EXECUTION-AUTHORITY-MISMATCH",
+          "SB-002-PACKET-DECISION-MISMATCH"
+        ],
+        "negative_requirement": "APPLY THE REFERENCED PROPOSED OR HISTORICALLY RECORDED RULE WITHOUT REWRITING THE ORIGINAL ORACLE; NEW BINDING APPLICATION STILL REQUIRES REVIEW",
+        "positive_control_variant_id": "SB-002-ALL-REFERENCES-MATCH-CONTROL",
+        "positive_control_rule_id": "CR-002-ALL-MATCH-CONTROL",
+        "positive_control_fixture_mapping": "NOT_APPLICABLE; NEVER COMPARE ELIGIBLE_FOR_MAPPING TO THE NEGATIVE FIXTURE EXPECTED_STATE",
+        "expected_observed_comparison_separation": "MANDATORY; NO OBSERVED VALUES OR SCENARIO PASS POPULATED DURING PREPARATION"
+      }
+    },
+    {
+      "scenario_id": "C03-TA-V-003",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-003.json",
+        "sha256": "21BD65ECD28D569BADFF11489017569E8413B1CC9A5138A851F907CCF62EAF7E",
+        "fixture_id": "C03-WP008-FX-003",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "sha_state": "STALE_SYNTHETIC",
+        "version_state": "STALE_SYNTHETIC",
+        "configuration_state": "STALE_SYNTHETIC"
+      },
+      "binding_state": "V003_RULE_AND_OUTPUT_CONTRACT_INTEGRATED_IN_CANDIDATE_PENDING_REVIEW_AND_ADMISSION",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-003-CAPABILITY-VERSION",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-CONFIG-BASE/arguments/capability_version": "2.0-SYNTHETIC-MISMATCH"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE"
+        },
+        {
+          "stimulus_binding_id": "SB-003-IMPLEMENTATION-SHA",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-CONFIG-BASE/arguments/implementation_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE"
+        },
+        {
+          "stimulus_binding_id": "SB-003-CONFIGURATION-SHA",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-CONFIG-BASE/arguments/configuration_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+          "comparison_rule_id": "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_STALE",
+        "expected_reason_class": "EXACT_IDENTITY_MISMATCH",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "HISTORICAL_FALLBACK_OR_SILENT_SUBSTITUTION",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "The V-003 rule and output-contract design was accepted at conversation level only. This REV3 integration candidate still requires its own fixed-SHA review, acceptance and input admission.",
+        "The four-field observation declaration requires a separately reviewed and admitted literal harness/type binding; no actual observation or execution is established here."
+      ],
+      "coverage_limitations": [
+        "Three identity comparisons are separately reachable; raw output must remain distinct from the fixture abstraction.",
+        "The accepted mapping applies only to the three fixed single-field variants; BLOCKED_STALE remains a fixture abstraction, not a native state or proof of chronological staleness.",
+        "A matching declared empty write tuple does not establish zero actual I/O or the complete prohibited_effect; missing behavioral evidence remains unverified."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-004",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+        "sha256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+        "fixture_id": "C03-WP008-FX-004",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "matter_boundary": "MISMATCH_SYNTHETIC",
+        "project_boundary": "MISMATCH_SYNTHETIC",
+        "session_boundary": "MISMATCH_SYNTHETIC",
+        "provider_boundary": "MISMATCH_SYNTHETIC"
+      },
+      "binding_state": "PARTIAL_OBSERVABLE",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-004-MATTER-ID",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-PACKET-BASE/arguments/matter_id": "SYNTHETIC-MATTER-MISMATCH"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        },
+        {
+          "stimulus_binding_id": "SB-004-MATTER-VERSION",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-PACKET-BASE/arguments/matter_version": "2.0-SYNTHETIC-MISMATCH"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        },
+        {
+          "stimulus_binding_id": "SB-004-ACTOR",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-PACKET-BASE/arguments/actor_reference": "SYNTHETIC-ACTOR-MISMATCH"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_ISOLATED",
+        "expected_reason_class": "BOUNDARY_MISMATCH",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "CROSS_BOUNDARY_DISCLOSURE_OR_STATE_REUSE",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No existing same-name project, session, or provider boundary argument exists in this gate signature."
+      ],
+      "coverage_limitations": [
+        "Matter/version/actor rejection cannot stand for project/session/provider isolation coverage."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-005",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-005.json",
+        "sha256": "4405ADC2CE242B83120B0BA304157B3E6F03687345F764BBBE1E3A2DCF2422DE",
+        "fixture_id": "C03-WP008-FX-005",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "prohibited_content_class": "CREDENTIAL_SECRET_KEY_OR_TOKEN",
+        "raw_value_supplied": false
+      },
+      "binding_state": "COMPLETE_FOR_EXISTING_CALL",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-005-PROHIBITED-KEY",
+          "adapter_id": "ADP-ASSERT-REFERENCE-ONLY",
+          "arguments": {
+            "record": {
+              "credential_reference_present": false
+            }
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "IsolationViolation exception identity/message",
+          "comparison_rule_id": "CR-005-PROHIBITED-KEY-EXCEPTION"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_QUARANTINED",
+        "expected_reason_class": "PROHIBITED_CONTENT_CLASSIFICATION",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "RAW_VALUE_LOGGING_ECHO_MAPPING_OR_FORWARDING",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [],
+      "coverage_limitations": [
+        "Checks a prohibited top-level metadata key without supplying any raw protected value; nested/value channels remain outside this observation."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-006",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-006.json",
+        "sha256": "9D24E6AFA92F9EF6E895B0B6E4D0E84BDC326E9C4B815E42723B31374CC2FDC8",
+        "fixture_id": "C03-WP008-FX-006",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "invocation_identity": "SYNTHETIC_DUPLICATE_ID",
+        "duplicate_count": 2
+      },
+      "binding_state": "NOT_EVALUABLE_FULL_REQUIREMENT",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-006-REFERENCE-CONSTRUCTION-ONLY",
+          "adapter_id": "ADP-CONSTRUCT-IDEMPOTENCY",
+          "arguments": {
+            "canonicalization_version": "1.0-SYNTHETIC",
+            "digest_algorithm": "SHA-256",
+            "key_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+            "replay_window_reference": "SYNTHETIC-REPLAY-WINDOW-REFERENCE-NOT-IMPLEMENTED"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "Constructed immutable reference only",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_OR_SINGLE_EFFECT_ONLY",
+        "expected_reason_class": "IDEMPOTENCY_OR_DUPLICATE_DENIAL",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "DUPLICATE_EFFECT_OR_AUDIT_HISTORY_OVERWRITE",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No duplicate store, replay detector, invocation side-effect counter, or rejection callable exists."
+      ],
+      "coverage_limitations": [
+        "Two-call idempotency and duplicate-effect denial cannot be evaluated by constructing a reference."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-007",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-007.json",
+        "sha256": "68D9D63583A0301BDE76C3E60A5F66B7CCDA897C17D58E8DBF282E3E49C3DB90",
+        "fixture_id": "C03-WP008-FX-007",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "failure_code": "TRANSIENT_FAILURE",
+        "retry_policy_identity": "SYNTHETIC_EXACT_POLICY_REFERENCE"
+      },
+      "binding_state": "COMPLETE_FOR_EXISTING_ELIGIBILITY_CALL",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-007-ELIGIBILITY",
+          "adapter_id": "ADP-EVALUATE-RETRY",
+          "arguments": {
+            "policy": {
+              "object_ref": "OBJ-RETRY-POLICY"
+            },
+            "failure_code": {
+              "enum_class": "FailureCode",
+              "member": "TRANSIENT_FAILURE"
+            },
+            "completed_attempts": 0,
+            "identical_scope": true,
+            "deadline_valid": true,
+            "kill_active": false,
+            "revoked": false,
+            "stale": false,
+            "quarantined": false
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "RetryDetermination.state/reason_code/next_attempt",
+          "comparison_rule_id": "CR-007-RETRY-ELIGIBILITY"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "RETRY_ELIGIBILITY_PENDING",
+        "expected_reason_class": "ELIGIBILITY_ONLY_EXECUTION_UNAUTHORIZED",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "AUTOMATIC_RETRY_SCOPE_BROADENING_OR_DUPLICATE_EFFECT",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [],
+      "coverage_limitations": [
+        "Only eligibility is observed; no retry, delay, scheduler, deadline measurement, or side effect is executed."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-008",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-008.json",
+        "sha256": "7AA3FEF0CCDFA0C6A462C7945B63A50D828AC9C6D0725F428D347F6836075193",
+        "fixture_id": "C03-WP008-FX-008",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "timeout_state": "SYNTHETIC_TIMEOUT_REACHED",
+        "clock_identity_state": "FUTURE_BINDING_REQUIRED"
+      },
+      "binding_state": "NOT_EVALUABLE_FULL_REQUIREMENT",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-008-REFERENCE-CONSTRUCTION-ONLY",
+          "adapter_id": "ADP-CONSTRUCT-TIMEOUT",
+          "arguments": {
+            "policy_id": "SYNTHETIC-TIMEOUT-POLICY-001",
+            "version": "1.0-SYNTHETIC",
+            "sha256": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "start_category": "SYNTHETIC-START-EVENT",
+            "deadline_duration": "SYNTHETIC-DURATION-NOT-A-CLOCK",
+            "late_result_policy": "DENY_USE",
+            "terminal_state": {
+              "enum_class": "ControlState",
+              "member": "QUARANTINED"
+            },
+            "retry_effect": "NONE"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "Constructed immutable reference only",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "PROTECTED_TERMINAL_STATE",
+        "expected_reason_class": "TIMEOUT_DENIAL_OR_TERMINATION",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "POST_TIMEOUT_WORK_OR_AUDIT_DISCONTINUITY",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No accepted clock, start-event observer, timer, late-result detector, or timeout termination callable exists."
+      ],
+      "coverage_limitations": [
+        "A timeout policy reference and supplied timeout label cannot demonstrate temporal enforcement."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-009",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-009.json",
+        "sha256": "34EFBC55490FB2E3FFC89CAFCAD9DD2D319C2C24D9B3E2B026143F74A73DC93C",
+        "fixture_id": "C03-WP008-FX-009",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "revocation_state": "ACTIVE_SYNTHETIC",
+        "revocation_boundary": "FUTURE_ACCEPTANCE_REQUIRED"
+      },
+      "binding_state": "PARTIAL_OBSERVABLE",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-009-CONFIG-REVOKED",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": false
+          },
+          "object_overrides": {
+            "/OBJ-CONFIG-BASE/arguments/state": {
+              "enum_class": "CapabilityState",
+              "member": "REVOKED"
+            },
+            "/OBJ-CONFIG-BASE/arguments/revocation_reference": "SYNTHETIC-REVOCATION-REFERENCE-NOT-AUTHORITY"
+          },
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        },
+        {
+          "stimulus_binding_id": "SB-009-PROTECTED-STATE",
+          "adapter_id": "ADP-PROTECTED-STATE",
+          "arguments": {
+            "kill_active": false,
+            "revoked": true,
+            "stale": false
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "ControlState enum",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_REVOKED",
+        "expected_reason_class": "REVOCATION_DENIAL",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "ACTION_AFTER_ACCEPTED_REVOCATION_BOUNDARY",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No accepted revocation receipt boundary or observation of actions before/after receipt exists."
+      ],
+      "coverage_limitations": [
+        "Given-state denial/selection does not prove propagation timing or absence of later activity."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-010",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-010.json",
+        "sha256": "19DF9D35835F60C03C969B79B25F62CFE95E28C0A1B8122EDD8B9E1A5BC0E67A",
+        "fixture_id": "C03-WP008-FX-010",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "kill_switch_state": "ACTIVE_SYNTHETIC",
+        "release_authority_present": false
+      },
+      "binding_state": "PARTIAL_OBSERVABLE",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-010-GATE-KILL",
+          "adapter_id": "ADP-EVALUATE-IDENTITY",
+          "arguments": {
+            "configuration": {
+              "object_ref": "OBJ-CONFIG-BASE"
+            },
+            "packet": {
+              "object_ref": "OBJ-PACKET-BASE"
+            },
+            "envelope": {
+              "object_ref": "OBJ-ENVELOPE-BASE"
+            },
+            "expected": {
+              "object_ref": "OBJ-EXPECTED-BASE"
+            },
+            "validity_confirmed": true,
+            "kill_active": true
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "GateDecision.state/reason_code",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        },
+        {
+          "stimulus_binding_id": "SB-010-PROTECTED-STATE",
+          "adapter_id": "ADP-PROTECTED-STATE",
+          "arguments": {
+            "kill_active": true,
+            "revoked": false,
+            "stale": false
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "ControlState enum",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        },
+        {
+          "stimulus_binding_id": "SB-010-NO-RELEASE",
+          "adapter_id": "ADP-EVALUATE-RELEASE",
+          "arguments": {
+            "decision": null,
+            "protected_state_reference": "SYNTHETIC-KILL-STATE-REFERENCE",
+            "resolution_evidence_reference": "SYNTHETIC-NO-RESOLUTION-EVIDENCE"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "ControlState enum",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_KILL_ACTIVE",
+        "expected_reason_class": "KILL_STATE_DENIAL",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "SELF_RELEASE_IMPLICIT_RECOVERY_OR_CONTINUED_OPERATION",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No external kill-switch receipt, immutable propagation mechanism, or self-release prevention enforcement exists."
+      ],
+      "coverage_limitations": [
+        "Pure supplied flags and a null release decision do not establish a complete kill mechanism."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-011",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-011.json",
+        "sha256": "8795DA58E092E6DC7F88958E3AC60B754870F5BFAE15FF8BC2D699450B65FDFD",
+        "fixture_id": "C03-WP008-FX-011",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "current_version": "SYNTHETIC_CURRENT",
+        "prior_accepted_version": "SYNTHETIC_PRIOR",
+        "rollback_authority_present": false
+      },
+      "binding_state": "NOT_EVALUABLE_FULL_REQUIREMENT",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-011-REFERENCE-CONSTRUCTION-ONLY",
+          "adapter_id": "ADP-CONSTRUCT-ROLLBACK",
+          "arguments": {
+            "rollback_id": "SYNTHETIC-ROLLBACK-001",
+            "version": "1.0-SYNTHETIC",
+            "current_identity": "SYNTHETIC-CURRENT",
+            "target_identity": "SYNTHETIC-PRIOR",
+            "restoration_surface": {
+              "tuple": [
+                "REFERENCE_ONLY"
+              ]
+            },
+            "preconditions": {
+              "tuple": [
+                "SEPARATE_AUTHORITY_REQUIRED",
+                "AUDIT_HISTORY_PRESERVED"
+              ]
+            },
+            "prohibited_surface": {
+              "tuple": [
+                "FILE_WRITE",
+                "STATE_MUTATION",
+                "HISTORY_REWRITE"
+              ]
+            },
+            "decision_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY",
+            "post_restore_state": {
+              "enum_class": "CapabilityState",
+              "member": "DISABLED"
+            }
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "Constructed immutable reference only",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "ROLLBACK_ELIGIBILITY_ONLY",
+        "expected_reason_class": "ROLLBACK_REFERENCE_REQUIRES_AUTHORITY",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "AUDIT_HISTORY_REWRITE_OR_UNBOUND_RESTORATION",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No rollback eligibility evaluator, authority gate, restoration mechanism, or post-restoration verifier exists."
+      ],
+      "coverage_limitations": [
+        "Reference construction cannot prove rollback eligibility or execute restoration."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-012",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-012.json",
+        "sha256": "8C6E4FC6279E95CFE48C9E9DA6E161F0AF05CA5FFEA95BE18DBAD6A81204E8E6",
+        "fixture_id": "C03-WP008-FX-012",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "integrity_state": "DETERMINISTIC_SYNTHETIC_MISMATCH",
+        "affected_path_class": "AUDIT_REFERENCE"
+      },
+      "binding_state": "PARTIAL_OBSERVABLE",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-012-INTEGRITY-REFERENCE",
+          "adapter_id": "ADP-CONSTRUCT-AUDIT-INTEGRITY",
+          "arguments": {
+            "policy_id": "SYNTHETIC-INTEGRITY-POLICY-001",
+            "version": "1.0-SYNTHETIC",
+            "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+            "chain_reference": "SYNTHETIC-CHAIN-REFERENCE-NOT-A-CHAIN",
+            "subject_hashes": {
+              "tuple": [
+                "A704BDB22C55C92D0909FA0D6A668D8C149724B2A7627938C301758F1D09F561"
+              ]
+            },
+            "redaction_state": "SYNTHETIC-REDACTED-METADATA",
+            "tamper_state": {
+              "enum_class": "TamperState",
+              "member": "MISMATCH"
+            },
+            "retention_reference": "NONE",
+            "access_reference": "NONE",
+            "supersedes": "NONE"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "Constructed immutable reference only",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        },
+        {
+          "stimulus_binding_id": "SB-012-AUDIT-CANDIDATE",
+          "adapter_id": "ADP-BUILD-AUDIT-CANDIDATE",
+          "arguments": {
+            "audit_id": "SYNTHETIC-AUDIT-012",
+            "correlation_id": "SYNTHETIC-CORRELATION-012",
+            "capability_reference": "SYNTHETIC-C03-CAPABILITY-REFERENCE",
+            "implementation_sha256": "028EE9DDD7A2C06840A6F344A4C4CC716EFF95073BE39CA6E57FB7FDBBFA6DD5",
+            "configuration_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "domain_reference": "C03-SYNTHETIC",
+            "tier_b_packet_reference": "SYNTHETIC-PACKET-REFERENCE",
+            "matter_reference": "SYNTHETIC-MATTER-001",
+            "actor_reference": "SYNTHETIC-ACTOR-001",
+            "purpose": "SYNTHETIC-INTEGRITY-METADATA",
+            "operation": "SYNTHETIC-AUDIT-CANDIDATE-CONSTRUCTION",
+            "prior_state": "UNCHECKED",
+            "next_state": "QUARANTINED",
+            "reason_code": "INTEGRITY_FAILURE",
+            "decision_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY",
+            "created_at": "SYNTHETIC-NON-TEMPORAL-ORDER-MARKER",
+            "redaction_state": "SYNTHETIC-REDACTED-METADATA",
+            "input_artifact_references": {
+              "tuple": [
+                "SYNTHETIC-AFFECTED-REFERENCE"
+              ]
+            },
+            "supersedes": "NONE"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "AuditRecordCandidate fields",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED_QUARANTINED",
+        "expected_reason_class": "INTEGRITY_FAILURE",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "AFFECTED_PATH_USE_RELEASE_OR_SILENT_REPAIR",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No independent integrity detector, chain verifier, mismatch source, affected-path isolation mechanism, or release guard exists."
+      ],
+      "coverage_limitations": [
+        "Supplying MISMATCH and constructing an audit record cannot demonstrate detection or quarantine enforcement."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-013",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-013.json",
+        "sha256": "3DBF0F60AC970F90C97CF85F5F21F1758B4818D814A02CE8ED03A4F1C3A49CA6",
+        "fixture_id": "C03-WP008-FX-013",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "provider_identity": "NULL_PROVIDER",
+        "provider_availability": "UNAVAILABLE_SYNTHETIC",
+        "dependency_availability": "UNAVAILABLE_SYNTHETIC"
+      },
+      "binding_state": "PARTIAL_OBSERVABLE_WITH_EXPECTED_MISMATCH",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-013-NULL-PROVIDER",
+          "adapter_id": "ADP-NULL-PROVIDER",
+          "arguments": {
+            "request_reference": "SYNTHETIC-REQUEST-REFERENCE-NO-PAYLOAD"
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "ProviderPortResult fields",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "DEPENDENCY_OR_PROVIDER_UNAVAILABLE",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "SILENT_SUBSTITUTION_NETWORK_ROUTE_OR_DEGRADED_BYPASS",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No separate dependency-unavailable or provider-unavailable fault-injection surface exists."
+      ],
+      "coverage_limitations": [
+        "NullProvider returns PROVIDER NOT AUTHORIZED; it cannot be relabeled as unavailable without a separately accepted comparison rule."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-014",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-014.json",
+        "sha256": "D3EF698EA45F41824CCF6C5A7020F6A0B495460341ADE7446461A1AAF0E7D523",
+        "fixture_id": "C03-WP008-FX-014",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "requested_write_target_class": "UPSTREAM_OR_INDEPENDENT_ACOS",
+        "requested_write_content_present": false
+      },
+      "binding_state": "COMPLETE_FOR_EXISTING_METADATA_CHECK",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-014-ACOS-NAMESPACE",
+          "adapter_id": "ADP-ASSERT-WRITE-SET",
+          "arguments": {
+            "write_set": {
+              "acos_source_project": [
+                "SYNTHETIC-REFERENCE-NO-PATH"
+              ]
+            }
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "IsolationViolation exception identity/message",
+          "comparison_rule_id": "CR-014-PROHIBITED-NAMESPACE-EXCEPTION"
+        },
+        {
+          "stimulus_binding_id": "SB-014-ROUTE-A-NAMESPACE",
+          "adapter_id": "ADP-ASSERT-WRITE-SET",
+          "arguments": {
+            "write_set": {
+              "route_a": [
+                "SYNTHETIC-REFERENCE-NO-PATH"
+              ]
+            }
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "IsolationViolation exception identity/message",
+          "comparison_rule_id": "CR-014-PROHIBITED-NAMESPACE-EXCEPTION"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "BLOCKED",
+        "expected_reason_class": "PROHIBITED_WRITE_TARGET",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "WRITE_STAGE_COMMIT_BRANCH_PUSH_OR_REMOTE_ACTION",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [],
+      "coverage_limitations": [
+        "Pure namespace metadata is observed; no filesystem, Git, remote ACL, stage, commit, branch, push, or external write is attempted."
+      ],
+      "execution_state": "NOT_RUN"
+    },
+    {
+      "scenario_id": "C03-TA-V-015",
+      "fixture": {
+        "path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-015.json",
+        "sha256": "06DCEBA08CA43C75439B5A2AC1C140905887EF8CDC26C561FBD68E9A001D5AE1",
+        "fixture_id": "C03-WP008-FX-015",
+        "fixture_version": "1.0"
+      },
+      "original_fixture_input_state": {
+        "candidate_classification_request": "LEGAL_ADVICE_OR_DOWNSTREAM_AUTHORITY",
+        "qualified_human_disposition_present": false
+      },
+      "binding_state": "PARTIAL_OBSERVABLE",
+      "stimulus_variants": [
+        {
+          "stimulus_binding_id": "SB-015-CANDIDATE-CONSTRUCTION",
+          "adapter_id": "ADP-CONSTRUCT-CANDIDATE",
+          "arguments": {
+            "candidate_id": "SYNTHETIC-CANDIDATE-001",
+            "candidate_version": "1.0-SYNTHETIC",
+            "candidate_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "candidate_class": {
+              "enum_class": "CandidateClass",
+              "member": "AUTHORITY_CHECK_REQUEST"
+            },
+            "capability_reference": "SYNTHETIC-C03-CAPABILITY-REFERENCE",
+            "matter_reference": "SYNTHETIC-MATTER-001",
+            "purpose": "SYNTHETIC-HUMAN-REVIEW-CANDIDATE",
+            "operation": "SYNTHETIC-CLASSIFICATION-BOUNDARY-CHECK",
+            "input_set_sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            "mapping_trace_references": {
+              "tuple": [
+                "SYNTHETIC-TRACE-REFERENCE-001"
+              ]
+            },
+            "notices": {
+              "tuple": [
+                "CANDIDATE — REQUIRES QUALIFIED HUMAN REVIEW",
+                "NOT LEGAL ADVICE",
+                "NOT AN ENFORCEMENT INSTRUCTION",
+                "NOT AUTHORIZED FOR FILING, CONTACT, TRANSFER, OR EXECUTION"
+              ]
+            },
+            "state": {
+              "enum_class": "InvocationState",
+              "member": "HUMAN_REVIEW_PENDING"
+            },
+            "downstream_blocked": true
+          },
+          "object_overrides": {},
+          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+          "observation_surface": "CandidateRecord fields/state/notices/downstream_blocked",
+          "comparison_rule_id": "NOT_ESTABLISHED"
+        }
+      ],
+      "original_oracle": {
+        "expected_state": "HUMAN_REVIEW_PENDING_DOWNSTREAM_BLOCKED",
+        "expected_reason_class": "CLASSIFICATION_BOUNDARY_DENIAL",
+        "expected_permitted_write_set": [],
+        "prohibited_effect": "LEGAL_CONCLUSION_AUTOMATIC_ACCEPTANCE_OR_DOWNSTREAM_USE",
+        "fixture_limitation": "PREPARATION_ONLY_NOT_EXECUTED",
+        "comparison_status": "REQUIRES_SEPARATE_ACCEPTED_RULE_BEFORE EXECUTION"
+      },
+      "unbound_requirements": [
+        "No type-valid CandidateClass member represents legal advice or downstream authority; CandidateRecord has no legal-classification evaluator."
+      ],
+      "coverage_limitations": [
+        "Valid candidate invariants can be observed, but the fixture's prohibited classification request remains not evaluable."
+      ],
+      "execution_state": "NOT_RUN"
+    }
+  ],
+  "completeness_summary": {
+    "scenario_count": 15,
+    "complete_existing_observation_bindings": 4,
+    "complete_existing_calls_with_open_oracle_mismatch": 0,
+    "partial_observable_bindings": 6,
+    "not_evaluable_full_requirements": 3,
+    "full_run_binding_state": "BLOCKED",
+    "final_input_admission_state": "NOT_AUTHORIZED_NOT_ESTABLISHED",
+    "target_five_variant_bindings_pending_review": 1,
+    "stimulus_variant_count": 28,
+    "adapter_count": 14,
+    "synthetic_object_count": 10,
+    "comparison_rule_count": 8,
+    "new_v002_rule_drafts": 2,
+    "v003_integration_bindings_pending_review_and_admission": 1,
+    "v003_rule_entries_added_from_accepted_design": 1,
+    "count_qualification": "All scenario-category counts are inherited from REV3 and describe preserved data records, not new-pair independent review, executed coverage, admitted inputs or closed limitations. new_v002_rule_drafts=2 remains the inherited REV2 origin count, not a current rejection of their conversation-level design acceptance. The separately recorded V3.2/V2.2 preparation inventory does not promote these counts to execution evidence."
+  },
+  "blocking_items": [
+    "V3.2/V2.2 have conversation-level limited design adoption for preparation, but no durable detached design-pair adoption receipt is materialized; four LIMITED review items remain open.",
+    "C03-TA-V-002 source reachability remains governed by its separate replacement record. Its two new rule designs and output contract have conversation-level acceptance only; the complete five-variant binding and this V3.2/V2.2 candidate remain unadmitted. RDM-DSP-002 remains open.",
+    "C03-TA-V-003 comparison-rule and output-contract design acceptance is conversation-level only. Their preserved REV3 integration does not formally review, accept or admit this V3.2/V2.2 candidate; no harness, actual observations, execution or full prohibited-effect proof is established.",
+    "C03-TA-V-004 lacks project/session/provider observation surfaces.",
+    "C03-TA-V-006 has no idempotency or duplicate-effect mechanism.",
+    "C03-TA-V-008 has no clock, timer or timeout-enforcement mechanism.",
+    "C03-TA-V-009 lacks an accepted revocation receipt boundary.",
+    "C03-TA-V-010 lacks an external kill propagation/enforcement mechanism.",
+    "C03-TA-V-011 has no rollback evaluator or mechanism.",
+    "C03-TA-V-012 has no integrity detector or chain verifier.",
+    "C03-TA-V-013 has no unavailable-dependency/provider observation surface.",
+    "C03-TA-V-015 has no legal/downstream classification-denial surface.",
+    "Historical detached acceptance of five unchanged rules and conversation-level design acceptance of the V-002/V-003 additions do not accept or admit this new V3.2/V2.2 candidate. REV3 status strings retained inside copied data are formation-time snapshots, not current authority or execution permission.",
+    "REV3 already recorded the changed shared identity-gate adapter SHA; this candidate preserves that identity and all non-target scenario data, but prior-SHA review or execution evidence must not transfer."
+  ],
+  "resulting_state": {
+    "candidate_materialization": "COMPLETED_BY_THIS_AUTHORIZED_PREPARATION",
+    "candidate_review": "FORMAL_REVIEW_NOT_AUTHORIZED_NOT_PERFORMED; STATIC_AUTHOR_CHECK_RECORDED_SEPARATELY",
+    "candidate_admission": "NOT_AUTHORIZED_NOT_ESTABLISHED",
+    "new_harness_or_network_attestation": "NOT_CREATED_BY_THIS_AUTHORIZATION",
+    "preexisting_environment_manifest": "PRESENT_READ_ONLY_NOT_MODIFIED",
+    "python_subject_validation_execution": "NOT_AUTHORIZED_NOT_RUN_FOR_THIS_CANDIDATE",
+    "operational_tier_a_blockers_closed": "0 / 3",
+    "c03_readiness": "NOT_READY",
+    "automatic_downstream_transition": "BLOCKED",
+    "new_comparison_rules": "V-002 AND V-003 DESIGN ACCEPTANCE RECORDED AT CONVERSATION LEVEL ONLY; THIS V3.2/V2.2 INPUT CANDIDATE IS NOT FORMALLY REVIEWED, ACCEPTED OR ADMITTED",
+    "rdm_dsp_002": "OPEN_NOT_CLOSED",
+    "v003_integration": "PRESERVED_FROM_REV3_AS_CANDIDATE_DATA_ONLY; NEW_PAIR_CANDIDATE_NOT_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED"
+  },
+  "v32_v22_preparation_reconciliation": {
+    "stage": "RDM-V2-03",
+    "limited_revision_source": {
+      "path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE.json",
+      "sha256": "2E27CC27059016BB7BDC6A680BBBED34579B717AD932757EA3FEC00DD025FECC",
+      "scope": "RDM-V2-04 SEQUENCING-WORDING CORRECTION AND NECESSARY NEW CANDIDATE IDENTITY/PROVENANCE ONLY; PRIOR FILE PRESERVED UNMODIFIED"
+    },
+    "scope": "CONCRETE INPUT-BINDING CANDIDATE PREPARATION AND AUTHOR STATIC CHECK ONLY",
+    "preparation_source": {
+      "path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_RDM_DSP_002_REVISION_CANDIDATE_REV3.json",
+      "sha256": "45AB3117389A22DA9F502319467CE8BDDA731539C3B023BF92D7F0E2D93F0C6B",
+      "disposition": "READ-ONLY FORMATION SOURCE; NOT FORMALLY REVIEWED OR ADMITTED; NO AUTHORITY OR EVIDENCE TRANSFER"
+    },
+    "historical_design_pair": {
+      "execution_package_sha256": "3432D99D22AA288668C8D4E2CF58975A794ED545B62EB05FCA9E0B41525AEDDB",
+      "manifest_preparation_plan_sha256": "07FD553F641CF52EF54FABFCFAD448CC2D432C8A0279082E6DB899EB8C900910",
+      "qualification": "REV3 FORMATION CONTEXT ONLY; NOT THE CURRENT CANDIDATE DESIGN PAIR"
+    },
+    "fixed_future_run_input_path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+    "fixed_future_run_input_disposition": "EXISTING FILE PRESERVED UNMODIFIED; NO NEW-PAIR REVIEW OR ADMISSION; THIS SEPARATE CANDIDATE IS NOT AN ALTERNATE RUN INPUT",
+    "preservation": "15 ORIGINAL SCENARIOS, 28 EXISTING VARIANTS, 14 ADAPTERS, 10 SYNTHETIC OBJECTS, 10 SUBJECT IDENTITIES, 15 FIXTURE IDENTITIES, ORIGINAL INPUT/ORACLE VALUES, EIGHT COMPARISON RULES AND EXISTING OUTPUT CONTRACTS ARE COPIED WITHOUT VALUE CHANGES",
+    "missing_input_and_observation_inventory": {
+      "source_fields": "scenarios[*].unbound_requirements AND scenarios[*].coverage_limitations; PRESERVED FORMATION-TIME TEXT, NOT NEW EXECUTION FINDINGS",
+      "new_concrete_arguments_supplied": 0,
+      "required_unbound_or_missing_observation_scenarios": [
+        "C03-TA-V-002",
+        "C03-TA-V-003",
+        "C03-TA-V-004",
+        "C03-TA-V-006",
+        "C03-TA-V-008",
+        "C03-TA-V-009",
+        "C03-TA-V-010",
+        "C03-TA-V-011",
+        "C03-TA-V-012",
+        "C03-TA-V-013",
+        "C03-TA-V-015"
+      ],
+      "coverage_limitations": "ALL FIFTEEN SCENARIOS RETAIN THEIR EXISTING coverage_limitations ENTRIES; NO MISSING MECHANISM, UNREACHABLE COMPARISON OR PROHIBITED EFFECT IS RECLASSIFIED AS PASS",
+      "complete_original_requirement_coverage": "NOT_ESTABLISHED"
+    },
+    "retained_limited_design_review_items": [
+      "V3.2 RQ-021",
+      "V3.2 G-017",
+      "V2.2 RQ-018",
+      "V2.2 G-014"
+    ],
+    "unresolved_governance": "B-01, B-02, RDM-DSP-001 AND RDM-DSP-002 NOT CLOSED; INPUT LIMITATIONS REQUIRE SEPARATE DISPOSITION BEFORE FINAL INPUT ADMISSION WITHIN RDM-V2-04",
+    "candidate_state": "PREPARED_NOT_INDEPENDENTLY_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED",
+    "execution_state": "NOT_RUN; NO HARNESS, MANIFEST, PYTHON, NETWORK, EVIDENCE OR AUTOMATIC DOWNSTREAM EFFECT"
+  },
+  "revision_context": {
+    "lifecycle_item": "RDM-DSP-002",
+    "prior_binding": {
+      "path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+      "sha256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+      "disposition": "PRESERVED_UNMODIFIED; NOT A CURRENT-SOURCE EXECUTION BINDING"
+    },
+    "prior_subject_sha256": "EA762C13F1DED4ABEAE27D16DD1087901D73E0B6B0A680791E3082AEFFB4D90A",
+    "current_subject": {
+      "path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "sha256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445"
+    },
+    "accepted_source_candidate": {
+      "path": "validation/route_b_c03/wp_008/IDENTITY_GATE_RDM_DSP_002_REVISION_CANDIDATE.py",
+      "sha256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445"
+    },
+    "accepted_design_proposal": {
+      "path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL.md",
+      "sha256": "85D7A4029D9667EFF7922CEDAA19570A7C6A68F36C2D6A66401F291B5F135A24"
+    },
+    "design_proposal_acceptance_record": {
+      "path": ".codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL_ACCEPTANCE_DECISION.md",
+      "sha256": "AF62A625483B67C4512A62CB7E0D44762EBA55520FFDBE0B2A18787C18D4269A"
+    },
+    "source_candidate_acceptance_record": {
+      "path": ".codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_IDENTITY_GATE_REVISION_CANDIDATE_ACCEPTANCE_DECISION.md",
+      "sha256": "805701FE3C60443ABAEB2B11ECEABC94F1EAFDAD28BF6418CDB0E7C21E025547"
+    },
+    "source_replacement_record": {
+      "path": "validation/route_b_c03/wp_008/RDM_DSP_002_SOURCE_REPLACEMENT_RESULT.md",
+      "sha256": "BF5934EBBBE63065B79DCAB27AFE05733078994851EAD4FB0A28ADC2572873AD",
+      "qualification": "PRIOR LOCAL REPLACEMENT AND SYNTHETIC DIAGNOSTIC RECORD; NOT EXECUTION OR ADMISSION OF THIS BINDING"
+    },
+    "change_scope": [
+      "REV3 IDENTITY, AUTHORIZATION, LINEAGE AND ACCURATE DESIGN-ACCEPTANCE CONTEXT ONLY",
+      "ONE V-003 RULE COPIED VERBATIM AS JSON DATA FROM THE FIXED ACCEPTED DESIGN",
+      "ONE SEPARATE V-003 OUTPUT CONTRACT COPIED VERBATIM AS JSON DATA",
+      "THREE EXISTING V-003 RULE REFERENCES AND FOUR-FIELD OBSERVATION DECLARATIONS",
+      "V-003 CANDIDATE BINDING STATUS, LIMITATIONS AND DERIVED COUNTS; NO INPUT-VALUE CHANGE"
+    ],
+    "preservation_scope": [
+      "ALL FOURTEEN NON-V-003 SCENARIO RECORDS",
+      "ALL FIFTEEN FIXTURE IDENTITIES AND ORIGINAL FIXTURE BYTES",
+      "ALL FIFTEEN SCENARIO ORIGINAL ORACLES AND INPUT-STATE SNAPSHOTS",
+      "ALL TWENTY-EIGHT EXISTING VARIANT IDS, ARGUMENTS AND OBJECT OVERRIDES",
+      "ALL TEN SYNTHETIC OBJECT DEFINITIONS AND ALL FOURTEEN ADAPTERS",
+      "ALL TEN SUBJECT IDENTITIES AND SOURCE BYTES",
+      "ALL SEVEN EXISTING RULE DEFINITIONS AND EXISTING V-002 OUTPUT CONTRACT",
+      "ALL PRIOR CANDIDATE, RULE, STATIC-CHECK AND ACCEPTED DESIGN FILES"
+    ],
+    "all_match_rule_rationale": "The accepted proposal requires a positive all-match control. Its explicit raw-value comparison is separated from negative fixture mapping; this is not a new business operation.",
+    "inherited_snapshot_qualification": "Unchanged design-pair, other-scenario and non-target limitation text is carried forward from the original preparation snapshot, not a new finding or current acceptance decision for those items.",
+    "existing_rule_lineage_qualification": "The five unchanged rules have historical detached acceptance for the prior binding. Their embedded PROPOSED_NOT_ACCEPTED strings are preserved formation-time text; neither those strings nor historical acceptance establishes admission or execution authority for this revised binding.",
+    "shared_adapter_change_effect": "ADP-EVALUATE-IDENTITY now names a new subject SHA for every referencing scenario. Unchanged non-target scenario data is not fresh review or runtime evidence for the new SHA.",
+    "static_check_qualification": "AUTHOR SELF-CHECK ONLY; NOT INDEPENDENT REVIEW, RULE ACCEPTANCE OR INPUT ADMISSION",
+    "runtime_observation_transfer": "PROHIBITED; NO OBSERVED OUTPUTS ARE INSERTED INTO THIS CANDIDATE",
+    "rdm_dsp_002_closure": "NOT_ESTABLISHED",
+    "new_rule_acceptance": "V-002 AND V-003 DESIGN RULE/CONTRACT ACCEPTANCE IS CONVERSATION-LEVEL ONLY; NO REV3 CANDIDATE ACCEPTANCE OR ADMISSION",
+    "output_representation_revision": {
+      "revision": "REV2",
+      "prior_candidate": {
+        "path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_RDM_DSP_002_REVISION_CANDIDATE.json",
+        "sha256": "738252342529332DB521A51E653D7E6FE32ED44EC6DA66C5F278D35BAEF99ECF"
+      },
+      "prior_rule_draft": {
+        "path": "validation/route_b_c03/wp_008/RDM_DSP_002_COMPARISON_RULE_DRAFT.md",
+        "sha256": "766B611BBD04C6A37F81DED5D4F7BCFDB6D5D8D13BBC870DAA14FA61FFABB71D"
+      },
+      "prior_static_check": {
+        "path": "validation/route_b_c03/wp_008/RDM_DSP_002_INPUT_BINDING_STATIC_CHECK.md",
+        "sha256": "7CC09E3D7AD801A7798A3183CD31822648444F96CB7266C144DE3980CF6299A7"
+      },
+      "reason": "Prior read-only author follow-up identified an unbound distinction between native tuple/enum observations and JSON expectation representation; prior static checks did not establish that contract.",
+      "permitted_delta": [
+        "REVISION IDENTITY AND AUTHORIZATION CONTEXT",
+        "ONE OUTPUT REPRESENTATION CONTRACT",
+        "TWO EXISTING DRAFT RULE CONTRACT REFERENCES AND COMPARISON MODES",
+        "REVISION LINEAGE"
+      ],
+      "preserved": "All scenario arguments, overrides, raw expectation values, fixture mappings, original fixture bytes, subject bytes, synthetic objects, adapters and five historical rules remain unchanged from the prior candidate.",
+      "review_qualification": "AUTHOR STATIC SELF-CHECK ONLY; NO INDEPENDENT REVIEW OR ACCEPTANCE TRANSFER",
+      "operational_effect": "NONE; DESIGN CONTRACT SUPPLEMENT ONLY"
+    },
+    "v003_integration_revision": {
+      "revision": "REV3",
+      "immediate_prior_candidate": {
+        "path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_RDM_DSP_002_REVISION_CANDIDATE_REV2.json",
+        "sha256": "6C78702FCA2D776CE0AD17F4BD00AE65FF5B5C8D216209539FCD5877122B26B9",
+        "disposition": "PRESERVED_UNMODIFIED; INPUT/DATA AND INHERITED HISTORY SOURCE; NOT ADMITTED BY THIS REVISION"
+      },
+      "accepted_v003_design": {
+        "path": "validation/route_b_c03/wp_008/V003_LIMITED_COMPARISON_RULE_DRAFT.md",
+        "sha256": "9A856FCC23FEAC15A32CB7CD68BF3A33B33801B6D3947AB646CB6FD2AD7E08C9",
+        "rule_id": "CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE",
+        "output_contract_id": "OBS-V003-GATEDECISION-EXACT-DRAFT-001",
+        "acceptance_type": "CONVERSATION_LEVEL_PROJECT_OWNER_DECISION",
+        "accepted_scope": "V-003 COMPARISON RULE AND OUTPUT CONTRACT DESIGN ONLY; SHA BOUND",
+        "decision_file": "NOT_MATERIALIZED",
+        "review_qualification": "SAME-PROVIDER INDEPENDENT READ-ONLY DESIGN REVIEW COMPLETED IN CONVERSATION; NOT CROSS-VENDOR AND NOT A REVIEW OF THIS REV3 INTEGRATION",
+        "acceptance_effect": "NO INPUT ADMISSION, HARNESS, PYTHON OR SCENARIO EXECUTION, BLOCKER CLOSURE OR AGGREGATE VERDICT"
+      },
+      "v002_preservation": {
+        "path": "validation/route_b_c03/wp_008/RDM_DSP_002_COMPARISON_RULE_DRAFT_REV2.md",
+        "sha256": "94A6A193F299D9A42B40899D1708AE3CD29D435C11911DB424BB7CAAEC9BF875",
+        "qualification": "PRIOR CONVERSATION-LEVEL DESIGN ACCEPTANCE REMAINS LIMITED TO ITS TWO V-002 RULES AND OWN OUTPUT CONTRACT; NO REOPENING, EXTENSION OR REVOCATION"
+      },
+      "copied_design_snapshot_qualification": {
+        "copy_mode": "TWO COMPLETE JSON DESIGN BLOCKS COPIED WITHOUT VALUE CHANGES",
+        "rule_location": "comparison_rule_catalog.CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE",
+        "contract_location": "representation_contract.v003_gate_decision_output",
+        "formation_time_fields": [
+          "comparison_rule_catalog.CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE.status",
+          "comparison_rule_catalog.CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE.observation_scope_qualification",
+          "comparison_rule_catalog.CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE.raw_requirement_qualification",
+          "representation_contract.v003_gate_decision_output.status",
+          "representation_contract.v003_gate_decision_output.independence"
+        ],
+        "interpretation": "Words such as PROPOSED, not accepted, existing binding and this document in these preserved provenance/status statements describe the unchanged source design document at formation and its REV2 input reference; they do not deny the later conversation-level design acceptance or describe this REV3 integration as already admitted. All normative input, type, value, mapping, failure and scope requirements remain unchanged.",
+        "fixed_prior_binding_reference": "The rule's binding_reference remains the fixed REV2 input-data origin, not a self-SHA for REV3. The three variant IDs, actual stimulus arguments, overrides, base objects and original fixture must remain identical to that source.",
+        "authority_separation": "The accepted_v003_design metadata records source-design acceptance only. Current whole-candidate review/admission is controlled by candidate_state and resulting_state and remains blocked; no inherited acceptance transfers to this candidate."
+      },
+      "inherited_status_qualification": "Unchanged V-002 scenario state, rule status, earlier change history and prior review qualifications are preserved formation-time records, not a new review, acceptance denial or operational authority. No previous-SHA review or execution evidence transfers. This task changes no source SHA.",
+      "permitted_delta": [
+        "TOP-LEVEL REVISION IDENTITY AND AUTHORIZATION METADATA",
+        "ONE VERBATIM V-003 RULE CATALOG ENTRY",
+        "ONE VERBATIM V-003 OUTPUT CONTRACT ENTRY",
+        "ONLY THE THREE V-003 comparison_rule_id AND observation_surface FIELDS",
+        "V-003 BINDING/UNBOUND/LIMITATION METADATA, DERIVED COUNTS AND CURRENT V-002/V-003 ACCEPTANCE QUALIFICATIONS",
+        "REVISION LINEAGE AND PRESERVATION DECLARATIONS"
+      ],
+      "forbidden_delta": [
+        "ANY EXISTING STIMULUS ID, CALL ARGUMENT, OBJECT OVERRIDE, RAW EXPECTATION OR ORIGINAL ORACLE VALUE",
+        "ANY NON-V-003 SCENARIO RECORD, OBJECT, ADAPTER, SOURCE IDENTITY, FIXTURE OR EXISTING RULE/CONTRACT",
+        "IN-PLACE MODIFICATION OF ANY PRIOR FILE",
+        "INPUT ADMISSION, HARNESS, PYTHON EXECUTION, SCENARIO EXECUTION, OBSERVED OUTPUT INSERTION OR LIMITATION CLOSURE"
+      ],
+      "static_check_qualification": "AUTHOR STATIC INTEGRATION SELF-CHECK ONLY; NOT INDEPENDENT REVIEW OF THIS CANDIDATE",
+      "operational_effect": "NONE; CANDIDATE DATA ONLY; NO AUTOMATIC DOWNSTREAM TRANSITION"
+    }
+  }
+}

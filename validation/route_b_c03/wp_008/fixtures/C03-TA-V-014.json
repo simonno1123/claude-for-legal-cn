@@ -1,0 +1,20 @@
+{
+  "fixture_id": "C03-WP008-FX-014",
+  "fixture_version": "1.0",
+  "scenario_id": "C03-TA-V-014",
+  "fictional": true,
+  "metadata_only": true,
+  "contains_real_matter_data": false,
+  "contains_personal_information": false,
+  "contains_credentials_or_secrets": false,
+  "contains_file_path_or_external_locator": false,
+  "input_state": {
+    "requested_write_target_class": "UPSTREAM_OR_INDEPENDENT_ACOS",
+    "requested_write_content_present": false
+  },
+  "expected_state": "BLOCKED",
+  "expected_reason_class": "PROHIBITED_WRITE_TARGET",
+  "expected_permitted_write_set": [],
+  "prohibited_effect": "WRITE_STAGE_COMMIT_BRANCH_PUSH_OR_REMOTE_ACTION",
+  "limitation": "PREPARATION_ONLY_NOT_EXECUTED"
+}

@@ -1,0 +1,1096 @@
+{
+  "scope": "LOCAL SYNTHETIC POST-REPLACEMENT REGRESSION ONLY; NOT FORMAL WP-008 VALIDATION OR ACTIVATION",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\Administrator\\Documents\\claude-for-legal-cn-phase2.5\\.venv-validation\\Scripts\\python.exe",
+  "python_flags": {
+    "isolated": 1,
+    "no_site": 1,
+    "dont_write_bytecode": true
+  },
+  "source_bindings": {
+    "contracts": {
+      "path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4"
+    },
+    "accepted_candidate": {
+      "path": "validation/route_b_c03/wp_008/IDENTITY_GATE_RDM_DSP_002_REVISION_CANDIDATE.py",
+      "sha256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445"
+    },
+    "preserved_original": {
+      "path": "validation/route_b_c03/wp_008/IDENTITY_GATE_RDM_DSP_002_PRE_REPLACEMENT.py",
+      "sha256": "EA762C13F1DED4ABEAE27D16DD1087901D73E0B6B0A680791E3082AEFFB4D90A"
+    },
+    "active_source": {
+      "path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "sha256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445"
+    }
+  },
+  "scenario_count": 38,
+  "baseline_defect_reproduced": true,
+  "constructor_checks": [
+    {
+      "id": "missing-matter-reference",
+      "passed": true,
+      "observed": "matter_authorization_reference must be a non-empty explicit value"
+    },
+    {
+      "id": "missing-execution-reference",
+      "passed": true,
+      "observed": "execution_authorization_reference must be a non-empty explicit value"
+    },
+    {
+      "id": "missing-packet-decision",
+      "passed": true,
+      "observed": "decision_reference must be a non-empty explicit value"
+    }
+  ],
+  "denied_events": [],
+  "source_hashes_unchanged": true,
+  "diagnostic_success": true,
+  "results": [
+    {
+      "id": "authority-000",
+      "expected": [
+        "ELIGIBLE_FOR_MAPPING",
+        "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-001",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-010",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-011",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-100",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-101",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-110",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "authority-111",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": false,
+        "observed": [
+          "ELIGIBLE_FOR_MAPPING",
+          "ELIGIBLE \u2014 SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY BINDING FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "kill",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 KILL ACTIVE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 KILL ACTIVE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 KILL ACTIVE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "missing-configuration",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY NOT ACTIVE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY NOT ACTIVE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY NOT ACTIVE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "capability-DISABLED",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY NOT ACTIVE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY NOT ACTIVE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY NOT ACTIVE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "capability-REVOKED",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "capability-STALE",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 VERSION FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 VERSION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 VERSION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "configuration-capability_id",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "configuration-capability_version",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "configuration-implementation_sha256",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "configuration-configuration_sha256",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "configuration-activation_decision_reference",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 CAPABILITY IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "envelope-route",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "envelope-route_version",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "envelope-domain_id",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "envelope-domain_version",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "envelope-adapter_contract_version",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 DOMAIN IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "missing-packet",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 TIER B AUTHORITY REQUIRED",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 TIER B AUTHORITY REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 TIER B AUTHORITY REQUIRED",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "packet-BLOCKED",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "packet-WITHDRAWN",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "packet-STALE",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "packet-REVOKED",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "revocation-REVOKED",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "revocation-UNKNOWN",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "validity-unconfirmed",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 AUTHORITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 AUTHORITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "isolation-matter_id",
+      "expected": [
+        "REJECTED",
+        "REJECTED \u2014 ISOLATION FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 ISOLATION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 ISOLATION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "isolation-matter_version",
+      "expected": [
+        "REJECTED",
+        "REJECTED \u2014 ISOLATION FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 ISOLATION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 ISOLATION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "isolation-actor_reference",
+      "expected": [
+        "REJECTED",
+        "REJECTED \u2014 ISOLATION FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 ISOLATION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 ISOLATION FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "scope-purpose",
+      "expected": [
+        "REJECTED",
+        "REJECTED \u2014 SCOPE FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 SCOPE FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 SCOPE FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "scope-operation",
+      "expected": [
+        "REJECTED",
+        "REJECTED \u2014 SCOPE FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 SCOPE FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 SCOPE FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "input-set",
+      "expected": [
+        "BLOCKED",
+        "BLOCKED \u2014 INPUT SET IDENTITY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 INPUT SET IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "BLOCKED",
+          "BLOCKED \u2014 INPUT SET IDENTITY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    },
+    {
+      "id": "output-boundary",
+      "expected": [
+        "REJECTED",
+        "REJECTED \u2014 OUTPUT BOUNDARY FAILURE",
+        "SYNTHETIC-CORRELATION",
+        []
+      ],
+      "preserved_original": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 OUTPUT BOUNDARY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      },
+      "active_source": {
+        "passed": true,
+        "observed": [
+          "REJECTED",
+          "REJECTED \u2014 OUTPUT BOUNDARY FAILURE",
+          "SYNTHETIC-CORRELATION",
+          []
+        ]
+      }
+    }
+  ],
+  "active_source_pass_count": 38,
+  "active_source_failures": [],
+  "preserved_original_failures": [
+    "authority-001",
+    "authority-010",
+    "authority-011",
+    "authority-100",
+    "authority-101",
+    "authority-110",
+    "authority-111"
+  ],
+  "fixed_suite_binding": {
+    "path": "validation/route_b_c03/wp_008/test_identity_gate_rdm_dsp_002.py",
+    "sha256": "3ECC8614BAC8AC7960807571BA323CF24BA73D4916D83B4A59459EAED93F1833"
+  },
+  "regression_runner_sha256": "9369DF33AE81337C59118B595FA0B07B15D742B5AEB7D5A5ECCCE365776EBBC6",
+  "active_source_matches_accepted_candidate": true,
+  "coverage_counts_valid": true
+}
