@@ -1,0 +1,1552 @@
+{
+  "RecordKind": "LOCAL_EXECUTION_OBSERVATION_RECORD_NOT_OWNER_ACCEPTANCE",
+  "Scope": "LOCAL_SYNTHETIC_ONLY_NO_SOURCE_ADMISSION_CAPTURE_OR_INTEGRATION",
+  "AcceptedSlotSHA256": "904146E082C2CAE73E2E25BAD1549C15DD076E6E206A6FC0854E18A43DA543B3",
+  "StorageQualification": "Attempts 2-4 preserve parsed parent JSON objects from tool output with repository LF formatting; not unmodified raw child stdout or a complete transcript. Attempt 1 is an explicitly selected projection.",
+  "Attempts": [
+    {
+      "Attempt": 1,
+      "HarnessSourceSHA256": "FBEC7D3EA5FE5BEA3A3FD3484746B90EA6C138EFC2C292B8252ADD3E97B4E8F7",
+      "ObservationQualification": "SELECTED PROJECTION OF ACTUAL TOOL OUTPUT; NOT COMPLETE RAW TRANSCRIPT",
+      "CapturedParentRecord": {
+        "SupervisorSourceSHA256": "FAAC19D96010340B04EA349F76B0A81C22857871472BDF22448CF8486AF2EE68",
+        "Outcome": "LOCAL_CHILD_NONZERO_EXIT_OBSERVED",
+        "ElapsedMilliseconds": 1793,
+        "LaunchAttempted": true,
+        "InputCloseReturned": true,
+        "ChildExitObserved": true,
+        "StopRequested": false,
+        "ExitCode": 1,
+        "StdoutBytes": 9903,
+        "StderrBytes": 0,
+        "FailureType": null,
+        "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+        "Child": {
+          "Outcome": "LOCAL_SYNTHETIC_CHECKS_FAIL",
+          "CompileCompleted": true,
+          "SlotPreparationCalls": 1,
+          "SlotRequestCalls": 2,
+          "SlotRequestCodes": [
+            "FIRST_REQUEST_REFUSED_UNBOUND",
+            "REPEATED_REQUEST_REFUSED"
+          ],
+          "ControllerDefinitionLoadAttempts": 1,
+          "LocalFixedHelperAttempts": 0,
+          "LocalFixedHelperNormalReturns": 0,
+          "CheckCount": 67,
+          "PassedChecks": 67,
+          "FailedChecks": 0,
+          "UniqueCheckIds": 67,
+          "PrimaryFailureType": "System.Management.Automation.MethodInvocationException",
+          "CleanupFailureTypes": [],
+          "LastCompletedCheckId": "ADAPTER-LOAD-03",
+          "FixedHelperMetadata": {}
+        }
+      },
+      "QuarantinedUnconditionalStrings": [
+        "NEW CARRIER PREPARATION ARRAY EQUALS COMMAND SLOT REFERENCE; CALLEE PARAMETER IDENTITY NOT INSTRUMENTED; EXCLUSIVITY AND FREEZE NOT ESTABLISHED",
+        "ONE SYNTHETIC MISMATCH HELPER RETURN OBSERVED; FULL D007 ADMISSION AND ITEM COMPLETION NOT ESTABLISHED"
+      ],
+      "QuarantineQualification": "These two original unconditional qualification strings did not describe Attempt 1 observed behavior and are NOT RELIED UPON. No helper was invoked in Attempt 1."
+    },
+    {
+      "Attempt": 2,
+      "HarnessSourceSHA256": "C04A7C31CE28E665BC97A03ADFACD69B7A3A1B5C09EEDA613B106C8414CE2704",
+      "CapturedParentRecord": {
+        "SupervisorSourceSHA256": "4043521D0B0AB723D3D8EFDFA14E75AEB4CAEFE0CB021562AA37F7C15DF714B0",
+        "Outcome": "LOCAL_CHILD_NONZERO_EXIT_OBSERVED",
+        "ElapsedMilliseconds": 2270,
+        "LaunchAttempted": true,
+        "InputCloseReturned": true,
+        "ChildExitObserved": true,
+        "StopRequested": false,
+        "ExitCode": 1,
+        "StdoutBytes": 10256,
+        "StderrBytes": 0,
+        "FailureType": null,
+        "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+        "TemporaryDirectory": "C:\\Users\\Administrator\\AppData\\Local\\Packages\\sandbox.{8b32a58a-1897-40a0-81fc-bf017b04c72a}\\AC\\Temp\\dsp004-d007-local-04198fc77b8a49a8bc9bfeef0531b3fa",
+        "InputSnapshotQualification": "FIXED HARNESS SNAPSHOT VERIFIED AGAIN IN CHILD; NOT TRUSTED ROOT",
+        "StopQualification": "NO ADVERSARIAL STOP OR COMPLETE DESCENDANT SETTLEMENT PROOF",
+        "Child": {
+          "Scope": "LOCAL_SYNTHETIC_SLOT_REFUSAL_AND_SEPARATE_FIXED_HELPER_VALIDATION_ONLY",
+          "Outcome": "LOCAL_SYNTHETIC_CHECKS_FAIL",
+          "AcceptedSlotSourceSHA256": "904146E082C2CAE73E2E25BAD1549C15DD076E6E206A6FC0854E18A43DA543B3",
+          "ControllerSourceSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+          "CompileCompleted": true,
+          "SlotPreparationCalls": 1,
+          "SlotRequestCalls": 2,
+          "SlotRequestCodes": [
+            "FIRST_REQUEST_REFUSED_UNBOUND",
+            "REPEATED_REQUEST_REFUSED"
+          ],
+          "ControllerDefinitionLoadAttempts": 1,
+          "LocalFixedHelperAttempts": 0,
+          "LocalFixedHelperNormalReturns": 0,
+          "CheckCount": 71,
+          "PassedChecks": 70,
+          "FailedChecks": 1,
+          "UniqueCheckIds": 71,
+          "PrimaryFailureType": "System.InvalidOperationException",
+          "FailureStage": "CONTROLLER_DEFINITION_LOAD",
+          "CleanupFailureTypes": [],
+          "CleanupObservation": "LOCAL DISPOSE CALLS RETURNED ONLY; COMPLETE RESOURCE SETTLEMENT NOT ESTABLISHED",
+          "FailureRetentionQualification": "ACTUAL EXCEPTIONS RETAINED LOCALLY; ONLY TYPE METADATA EXPORTED; NO CROSS-PROCESS OBJECT RETENTION CLAIM",
+          "OracleDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "AcceptedSlotDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "NewCarrierDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "NewCarrierPostCallDigestSHA256": null,
+          "RecordedK003LiteralSHA256": "6405563F9A39B39F8E63D4330C497A76C99B38F4FE4662B0A6E310F355B69210",
+          "OracleQualification": "SEPARATE INPUT AND API PATH; SAME DOTNET CRYPTO STACK; NOT INDEPENDENT CRYPTO IMPLEMENTATION",
+          "HandoffQualification": "NO QUALIFIED ACTUAL ARGUMENT REFERENCE OBSERVATION",
+          "AcceptedSlotQualification": "NO PRIVATE ARRAY ACCESS OR OUTCOME TRANSFER; ORIGINAL API STILL REFUSES DUT DISPATCH",
+          "LocalD007Qualification": "NO COMPLETE QUALIFIED SYNTHETIC HELPER RETURN; FULL D007 ADMISSION AND ITEM COMPLETION NOT ESTABLISHED",
+          "SlotMetadata": {
+            "PreparationRelation": "DIFFERENT_FROM_RECORDED_LITERAL",
+            "ObservationCode": "INTERNAL_SLOT_REFERENCE_RECORDED_ONLY",
+            "SyntheticDigestHex": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+            "FixedTargetName": "Test-DSP004DriverBytesInMemory",
+            "FixedParameterName": "Payload",
+            "RecordedParameterSignature": "SINGLE OBJECT PARAMETER; BYTE ARRAY VALUE REQUIRED",
+            "ParameterSlotQualification": "INTERNAL PREPARATION-TO-SLOT REFERENCE ONLY; ACTUAL ARGUMENT BINDING NOT OBSERVED",
+            "PayloadRetentionQualification": "PRIVATE REFERENCE ONLY; EXCLUSIVE OWNERSHIP, FREEZE AND LIFETIME NOT ESTABLISHED",
+            "DigestRetentionQualification": "PRIVATE REFERENCE ONLY; IMPLEMENTATION IDENTITY AND TRUST NOT ESTABLISHED",
+            "ExceptionRetentionQualification": "NO PREPARATION EXCEPTION REFERENCE RECORDED",
+            "DigestQualification": "SYNTHETIC BYTE DIGEST ONLY; RECORDED LITERAL COMPARISON; NOT REAL SOURCE VERIFICATION",
+            "Authority": "NOT ESTABLISHED",
+            "SourceAdmission": "NOT ESTABLISHED",
+            "TrustedLoadIdentity": "UNBOUND",
+            "HashImplementationIdentity": "UNBOUND",
+            "FixedInvocationAdapter": "NOT IMPLEMENTED",
+            "ActualParameterIdentity": "NOT OBSERVED",
+            "FrozenHandoff": "NOT IMPLEMENTED",
+            "SamePayloadDutUse": "NOT ESTABLISHED",
+            "DutInvocation": "NOT PERFORMED BY THIS API",
+            "D007ItemOutcome": "NOT DETERMINED BY THIS API",
+            "TimingAndOuterStop": "NOT ESTABLISHED",
+            "PrivateFailureRetentionQualification": "NO EXCEPTION GETTER OR FORMATTING; FAILURE RETENTION LIMITED"
+          },
+          "FixedHelperMetadata": {},
+          "RuntimeMetadata": null,
+          "Checks": [
+            {
+              "Id": "SLOT-SRC-01",
+              "Scope": "Fixed accepted source byte length",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-SRC-02",
+              "Scope": "Exact accepted source snapshot SHA",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-SRC-03",
+              "Scope": "No source BOM",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-01",
+              "Scope": "Complete fixed controller byte length",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-02",
+              "Scope": "Complete controller snapshot SHA",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-03",
+              "Scope": "No controller source BOM",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-01",
+              "Scope": "No preexisting candidate type",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-02",
+              "Scope": "Three compiler-reported types including the private slot type; no private-member access",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-03",
+              "Scope": "Exact compiler-reported type identities only",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-01",
+              "Scope": "Sealed type with no public constructor",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-02",
+              "Scope": "No public raw fields",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-03",
+              "Scope": "Exactly preparation and refusal request methods",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-04",
+              "Scope": "Zero-argument preparation shape",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-05",
+              "Scope": "Zero-argument per-instance refusal request shape",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-06",
+              "Scope": "23 read-only non-indexed string properties; no private-field reflection",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-07",
+              "Scope": "Sealed readonly request metadata only",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-01",
+              "Scope": "Independent native oracle fixture shape",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-02",
+              "Scope": "Oracle fixture all-zero content",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-03",
+              "Scope": "Full oracle digest",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-04",
+              "Scope": "Synthetic mismatch relation only; no real driver verification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-RUN-01",
+              "Scope": "Exact candidate result type",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-RUN-02",
+              "Scope": "Preparation digest equals separate oracle",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-01",
+              "Scope": "Candidate string only: PreparationRelation",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-02",
+              "Scope": "Candidate string only: ObservationCode",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-03",
+              "Scope": "Candidate string only: SyntheticDigestHex",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-04",
+              "Scope": "Candidate string only: FixedTargetName",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-05",
+              "Scope": "Candidate string only: FixedParameterName",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-06",
+              "Scope": "Candidate string only: RecordedParameterSignature",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-07",
+              "Scope": "Candidate string only: ParameterSlotQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-08",
+              "Scope": "Candidate string only: PayloadRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-09",
+              "Scope": "Candidate string only: DigestRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-10",
+              "Scope": "Candidate string only: ExceptionRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-11",
+              "Scope": "Candidate string only: DigestQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-12",
+              "Scope": "Candidate string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-13",
+              "Scope": "Candidate string only: SourceAdmission",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-14",
+              "Scope": "Candidate string only: TrustedLoadIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-15",
+              "Scope": "Candidate string only: HashImplementationIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-16",
+              "Scope": "Candidate string only: FixedInvocationAdapter",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-17",
+              "Scope": "Candidate string only: ActualParameterIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-18",
+              "Scope": "Candidate string only: FrozenHandoff",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-19",
+              "Scope": "Candidate string only: SamePayloadDutUse",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-20",
+              "Scope": "Candidate string only: DutInvocation",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-21",
+              "Scope": "Candidate string only: D007ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-22",
+              "Scope": "Candidate string only: TimingAndOuterStop",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-23",
+              "Scope": "Candidate string only: PrivateFailureRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-TYPE",
+              "Scope": "Exact request result type",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-01",
+              "Scope": "Refusal string only: RequestCode",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-02",
+              "Scope": "Refusal string only: ReservationQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-03",
+              "Scope": "Refusal string only: Disposition",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-04",
+              "Scope": "Refusal string only: LocalAttemptQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-05",
+              "Scope": "Refusal string only: ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-06",
+              "Scope": "Refusal string only: ResourceSettlement",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-07",
+              "Scope": "Refusal string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-TYPE",
+              "Scope": "Exact request result type",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-01",
+              "Scope": "Refusal string only: RequestCode",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-02",
+              "Scope": "Refusal string only: ReservationQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-03",
+              "Scope": "Refusal string only: Disposition",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-04",
+              "Scope": "Refusal string only: LocalAttemptQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-05",
+              "Scope": "Refusal string only: ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-06",
+              "Scope": "Refusal string only: ResourceSettlement",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-07",
+              "Scope": "Refusal string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-01",
+              "Scope": "New carrier-owned native fixture, not oracle/private candidate input",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-02",
+              "Scope": "Carrier zero-shape precheck",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-03",
+              "Scope": "Independent preparation relation before DUT use",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-01",
+              "Scope": "Complete controller parses without errors",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-02",
+              "Scope": "Full source has only ten top-level function definitions",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-03",
+              "Scope": "Fresh initially empty in-process runspace opened",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-04",
+              "Scope": "Complete fixed controller definition load returned no success output",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-05",
+              "Scope": "All six observed controller-load streams empty",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-01",
+              "Scope": "Exact fixed function and one object Payload parameter",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-02",
+              "Scope": "Loaded fixed helper body equals the verified source body",
+              "Passed": false
+            }
+          ],
+          "Uncovered": [
+            "POSITIVE_FIXED_SHA_BRANCH",
+            "CANDIDATE_EQUAL_OR_FAILURE_BRANCHES",
+            "CONCURRENT_OR_REPEATED_BATCH_RESERVATION",
+            "CALLEE_REFERENCE_INSTRUMENTATION",
+            "EXCLUSIVE_IMMUTABLE_FREEZE",
+            "TRUSTED_HOST_AND_FULL_DEPENDENCY_CLOSURE",
+            "FAILURE_AND_CLEANUP_COEXISTENCE_INJECTION",
+            "ADVERSARIAL_TIMEOUT_OUTPUT_OR_RESOURCE_EXHAUSTION",
+            "COMPLETE_DESCENDANT_SETTLEMENT",
+            "FULL_189_ITEM_PLAN"
+          ],
+          "RealDriverRead": false,
+          "SourceAdmission": false,
+          "ActualBusinessCapture": false,
+          "Integration": false,
+          "AggregateVerdict": "NOT ISSUED",
+          "PreservedLimitations": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN"
+        }
+      },
+      "FailureStageQualification": "The original fixed stage string was stale; the failed check was ADAPTER-BIND-02, before a helper attempt."
+    },
+    {
+      "Attempt": 3,
+      "HarnessSourceSHA256": "D5673189564FFE362E844EB262A9B3AC004B8A6A917D7C16AF09C497BA9F0FE9",
+      "CapturedParentRecord": {
+        "SupervisorSourceSHA256": "D51D146D9091D217FB24B4554600B9DC37ADCFF51A2DD1140DDF97DBCE2E947C",
+        "Outcome": "LOCAL_CHILD_NONZERO_EXIT_OBSERVED",
+        "ElapsedMilliseconds": 2067,
+        "LaunchAttempted": true,
+        "InputCloseReturned": true,
+        "ChildExitObserved": true,
+        "StopRequested": false,
+        "ExitCode": 1,
+        "StdoutBytes": 10810,
+        "StderrBytes": 0,
+        "FailureType": null,
+        "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+        "TemporaryDirectory": "C:\\Users\\Administrator\\AppData\\Local\\Packages\\sandbox.{c04d5ab2-8c63-4a9b-b19e-4721f00bd89d}\\AC\\Temp\\dsp004-d007-local-603096b71d0b490ab34158a897b73ae2",
+        "InputSnapshotQualification": "FIXED HARNESS SNAPSHOT VERIFIED AGAIN IN CHILD; NOT TRUSTED ROOT",
+        "StopQualification": "NO ADVERSARIAL STOP OR COMPLETE DESCENDANT SETTLEMENT PROOF",
+        "Child": {
+          "Scope": "LOCAL_SYNTHETIC_SLOT_REFUSAL_AND_SEPARATE_FIXED_HELPER_VALIDATION_ONLY",
+          "Outcome": "LOCAL_SYNTHETIC_CHECKS_FAIL",
+          "AcceptedSlotSourceSHA256": "904146E082C2CAE73E2E25BAD1549C15DD076E6E206A6FC0854E18A43DA543B3",
+          "ControllerSourceSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+          "CompileCompleted": true,
+          "SlotPreparationCalls": 1,
+          "SlotRequestCalls": 2,
+          "SlotRequestCodes": [
+            "FIRST_REQUEST_REFUSED_UNBOUND",
+            "REPEATED_REQUEST_REFUSED"
+          ],
+          "ControllerDefinitionLoadAttempts": 1,
+          "LocalFixedHelperAttempts": 1,
+          "LocalFixedHelperNormalReturns": 1,
+          "CheckCount": 75,
+          "PassedChecks": 75,
+          "FailedChecks": 0,
+          "UniqueCheckIds": 75,
+          "PrimaryFailureType": "System.Management.Automation.PropertyNotFoundException",
+          "FailureStage": "FIXED_HELPER_INVOCATION_AND_RETURN_CHECKS",
+          "CleanupFailureTypes": [],
+          "CleanupObservation": "LOCAL DISPOSE CALLS RETURNED ONLY; COMPLETE RESOURCE SETTLEMENT NOT ESTABLISHED",
+          "FailureRetentionQualification": "ACTUAL EXCEPTIONS RETAINED LOCALLY; ONLY TYPE METADATA EXPORTED; NO CROSS-PROCESS OBJECT RETENTION CLAIM",
+          "OracleDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "AcceptedSlotDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "NewCarrierDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "NewCarrierPostCallDigestSHA256": null,
+          "RecordedK003LiteralSHA256": "6405563F9A39B39F8E63D4330C497A76C99B38F4FE4662B0A6E310F355B69210",
+          "OracleQualification": "SEPARATE INPUT AND API PATH; SAME DOTNET CRYPTO STACK; NOT INDEPENDENT CRYPTO IMPLEMENTATION",
+          "HandoffQualification": "NEW CARRIER PREPARATION ARRAY EQUALS COMMAND SLOT REFERENCE; CALLEE PARAMETER IDENTITY NOT INSTRUMENTED; EXCLUSIVITY AND FREEZE NOT ESTABLISHED",
+          "AcceptedSlotQualification": "NO PRIVATE ARRAY ACCESS OR OUTCOME TRANSFER; ORIGINAL API STILL REFUSES DUT DISPATCH",
+          "LocalD007Qualification": "NO COMPLETE QUALIFIED SYNTHETIC HELPER RETURN; FULL D007 ADMISSION AND ITEM COMPLETION NOT ESTABLISHED",
+          "SlotMetadata": {
+            "PreparationRelation": "DIFFERENT_FROM_RECORDED_LITERAL",
+            "ObservationCode": "INTERNAL_SLOT_REFERENCE_RECORDED_ONLY",
+            "SyntheticDigestHex": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+            "FixedTargetName": "Test-DSP004DriverBytesInMemory",
+            "FixedParameterName": "Payload",
+            "RecordedParameterSignature": "SINGLE OBJECT PARAMETER; BYTE ARRAY VALUE REQUIRED",
+            "ParameterSlotQualification": "INTERNAL PREPARATION-TO-SLOT REFERENCE ONLY; ACTUAL ARGUMENT BINDING NOT OBSERVED",
+            "PayloadRetentionQualification": "PRIVATE REFERENCE ONLY; EXCLUSIVE OWNERSHIP, FREEZE AND LIFETIME NOT ESTABLISHED",
+            "DigestRetentionQualification": "PRIVATE REFERENCE ONLY; IMPLEMENTATION IDENTITY AND TRUST NOT ESTABLISHED",
+            "ExceptionRetentionQualification": "NO PREPARATION EXCEPTION REFERENCE RECORDED",
+            "DigestQualification": "SYNTHETIC BYTE DIGEST ONLY; RECORDED LITERAL COMPARISON; NOT REAL SOURCE VERIFICATION",
+            "Authority": "NOT ESTABLISHED",
+            "SourceAdmission": "NOT ESTABLISHED",
+            "TrustedLoadIdentity": "UNBOUND",
+            "HashImplementationIdentity": "UNBOUND",
+            "FixedInvocationAdapter": "NOT IMPLEMENTED",
+            "ActualParameterIdentity": "NOT OBSERVED",
+            "FrozenHandoff": "NOT IMPLEMENTED",
+            "SamePayloadDutUse": "NOT ESTABLISHED",
+            "DutInvocation": "NOT PERFORMED BY THIS API",
+            "D007ItemOutcome": "NOT DETERMINED BY THIS API",
+            "TimingAndOuterStop": "NOT ESTABLISHED",
+            "PrivateFailureRetentionQualification": "NO EXCEPTION GETTER OR FORMATTING; FAILURE RETENTION LIMITED"
+          },
+          "FixedHelperMetadata": {},
+          "RuntimeMetadata": null,
+          "Checks": [
+            {
+              "Id": "SLOT-SRC-01",
+              "Scope": "Fixed accepted source byte length",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-SRC-02",
+              "Scope": "Exact accepted source snapshot SHA",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-SRC-03",
+              "Scope": "No source BOM",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-01",
+              "Scope": "Complete fixed controller byte length",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-02",
+              "Scope": "Complete controller snapshot SHA",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-03",
+              "Scope": "No controller source BOM",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-01",
+              "Scope": "No preexisting candidate type",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-02",
+              "Scope": "Three compiler-reported types including the private slot type; no private-member access",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-03",
+              "Scope": "Exact compiler-reported type identities only",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-01",
+              "Scope": "Sealed type with no public constructor",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-02",
+              "Scope": "No public raw fields",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-03",
+              "Scope": "Exactly preparation and refusal request methods",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-04",
+              "Scope": "Zero-argument preparation shape",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-05",
+              "Scope": "Zero-argument per-instance refusal request shape",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-06",
+              "Scope": "23 read-only non-indexed string properties; no private-field reflection",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-07",
+              "Scope": "Sealed readonly request metadata only",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-01",
+              "Scope": "Independent native oracle fixture shape",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-02",
+              "Scope": "Oracle fixture all-zero content",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-03",
+              "Scope": "Full oracle digest",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-04",
+              "Scope": "Synthetic mismatch relation only; no real driver verification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-RUN-01",
+              "Scope": "Exact candidate result type",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-RUN-02",
+              "Scope": "Preparation digest equals separate oracle",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-01",
+              "Scope": "Candidate string only: PreparationRelation",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-02",
+              "Scope": "Candidate string only: ObservationCode",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-03",
+              "Scope": "Candidate string only: SyntheticDigestHex",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-04",
+              "Scope": "Candidate string only: FixedTargetName",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-05",
+              "Scope": "Candidate string only: FixedParameterName",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-06",
+              "Scope": "Candidate string only: RecordedParameterSignature",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-07",
+              "Scope": "Candidate string only: ParameterSlotQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-08",
+              "Scope": "Candidate string only: PayloadRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-09",
+              "Scope": "Candidate string only: DigestRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-10",
+              "Scope": "Candidate string only: ExceptionRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-11",
+              "Scope": "Candidate string only: DigestQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-12",
+              "Scope": "Candidate string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-13",
+              "Scope": "Candidate string only: SourceAdmission",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-14",
+              "Scope": "Candidate string only: TrustedLoadIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-15",
+              "Scope": "Candidate string only: HashImplementationIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-16",
+              "Scope": "Candidate string only: FixedInvocationAdapter",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-17",
+              "Scope": "Candidate string only: ActualParameterIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-18",
+              "Scope": "Candidate string only: FrozenHandoff",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-19",
+              "Scope": "Candidate string only: SamePayloadDutUse",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-20",
+              "Scope": "Candidate string only: DutInvocation",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-21",
+              "Scope": "Candidate string only: D007ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-22",
+              "Scope": "Candidate string only: TimingAndOuterStop",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-23",
+              "Scope": "Candidate string only: PrivateFailureRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-TYPE",
+              "Scope": "Exact request result type",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-01",
+              "Scope": "Refusal string only: RequestCode",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-02",
+              "Scope": "Refusal string only: ReservationQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-03",
+              "Scope": "Refusal string only: Disposition",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-04",
+              "Scope": "Refusal string only: LocalAttemptQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-05",
+              "Scope": "Refusal string only: ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-06",
+              "Scope": "Refusal string only: ResourceSettlement",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-07",
+              "Scope": "Refusal string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-TYPE",
+              "Scope": "Exact request result type",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-01",
+              "Scope": "Refusal string only: RequestCode",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-02",
+              "Scope": "Refusal string only: ReservationQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-03",
+              "Scope": "Refusal string only: Disposition",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-04",
+              "Scope": "Refusal string only: LocalAttemptQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-05",
+              "Scope": "Refusal string only: ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-06",
+              "Scope": "Refusal string only: ResourceSettlement",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-07",
+              "Scope": "Refusal string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-01",
+              "Scope": "New carrier-owned native fixture, not oracle/private candidate input",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-02",
+              "Scope": "Carrier zero-shape precheck",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-03",
+              "Scope": "Independent preparation relation before DUT use",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-01",
+              "Scope": "Complete controller parses without errors",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-02",
+              "Scope": "Full source has only ten top-level function definitions",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-03",
+              "Scope": "Fresh initially empty in-process runspace opened",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-04",
+              "Scope": "Complete fixed controller definition load returned no success output",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-05",
+              "Scope": "All six observed controller-load streams empty",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-01",
+              "Scope": "Exact fixed function and one object Payload parameter",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-02",
+              "Scope": "Loaded whole function definition equals the verified source definition",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-03",
+              "Scope": "One actual command slot and one Payload argument",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-04",
+              "Scope": "Preparation-array reference equals actual command-slot value; NOT callee instrumentation",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-RETURN-01",
+              "Scope": "Exactly one captured success-stream object",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-RETURN-02",
+              "Scope": "All six observed helper streams empty",
+              "Passed": true
+            }
+          ],
+          "Uncovered": [
+            "POSITIVE_FIXED_SHA_BRANCH",
+            "CANDIDATE_EQUAL_OR_FAILURE_BRANCHES",
+            "CONCURRENT_OR_REPEATED_BATCH_RESERVATION",
+            "CALLEE_REFERENCE_INSTRUMENTATION",
+            "EXCLUSIVE_IMMUTABLE_FREEZE",
+            "TRUSTED_HOST_AND_FULL_DEPENDENCY_CLOSURE",
+            "FAILURE_AND_CLEANUP_COEXISTENCE_INJECTION",
+            "ADVERSARIAL_TIMEOUT_OUTPUT_OR_RESOURCE_EXHAUSTION",
+            "COMPLETE_DESCENDANT_SETTLEMENT",
+            "FULL_189_ITEM_PLAN"
+          ],
+          "RealDriverRead": false,
+          "SourceAdmission": false,
+          "ActualBusinessCapture": false,
+          "Integration": false,
+          "AggregateVerdict": "NOT ISSUED",
+          "PreservedLimitations": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN"
+        }
+      }
+    },
+    {
+      "Attempt": 4,
+      "HarnessSourceSHA256": "49D058C495432D6028ED32D33A356CCA0D0F7B02FC8A162FBFB607266C643749",
+      "CapturedParentRecord": {
+        "SupervisorSourceSHA256": "8AACC28D45F9BCFE14DD143116D1861819EAFCDE7B733B75400530216835CD54",
+        "Outcome": "LOCAL_CHILD_NORMAL_RETURN_OBSERVED",
+        "ElapsedMilliseconds": 2052,
+        "LaunchAttempted": true,
+        "InputCloseReturned": true,
+        "ChildExitObserved": true,
+        "StopRequested": false,
+        "ExitCode": 0,
+        "StdoutBytes": 12470,
+        "StderrBytes": 0,
+        "FailureType": null,
+        "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+        "TemporaryDirectory": "C:\\Users\\Administrator\\AppData\\Local\\Packages\\sandbox.{86ab2a8c-4c1a-4c3f-8532-29d2fff7f11c}\\AC\\Temp\\dsp004-d007-local-e0b30723896048299fb28d5d803f2bdb",
+        "InputSnapshotQualification": "FIXED HARNESS SNAPSHOT VERIFIED AGAIN IN CHILD; NOT TRUSTED ROOT",
+        "StopQualification": "NO ADVERSARIAL STOP OR COMPLETE DESCENDANT SETTLEMENT PROOF",
+        "Child": {
+          "Scope": "LOCAL_SYNTHETIC_SLOT_REFUSAL_AND_SEPARATE_FIXED_HELPER_VALIDATION_ONLY",
+          "Outcome": "LOCAL_SYNTHETIC_CHECKS_PASS",
+          "AcceptedSlotSourceSHA256": "904146E082C2CAE73E2E25BAD1549C15DD076E6E206A6FC0854E18A43DA543B3",
+          "ControllerSourceSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+          "CompileCompleted": true,
+          "SlotPreparationCalls": 1,
+          "SlotRequestCalls": 2,
+          "SlotRequestCodes": [
+            "FIRST_REQUEST_REFUSED_UNBOUND",
+            "REPEATED_REQUEST_REFUSED"
+          ],
+          "ControllerDefinitionLoadAttempts": 1,
+          "LocalFixedHelperAttempts": 1,
+          "LocalFixedHelperNormalReturns": 1,
+          "CheckCount": 85,
+          "PassedChecks": 85,
+          "FailedChecks": 0,
+          "UniqueCheckIds": 85,
+          "PrimaryFailureType": null,
+          "FailureStage": null,
+          "CleanupFailureTypes": [],
+          "CleanupObservation": "LOCAL DISPOSE CALLS RETURNED ONLY; COMPLETE RESOURCE SETTLEMENT NOT ESTABLISHED",
+          "FailureRetentionQualification": "ACTUAL EXCEPTIONS RETAINED LOCALLY; ONLY TYPE METADATA EXPORTED; NO CROSS-PROCESS OBJECT RETENTION CLAIM",
+          "OracleDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "AcceptedSlotDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "NewCarrierDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "NewCarrierPostCallDigestSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+          "RecordedK003LiteralSHA256": "6405563F9A39B39F8E63D4330C497A76C99B38F4FE4662B0A6E310F355B69210",
+          "OracleQualification": "SEPARATE INPUT AND API PATH; SAME DOTNET CRYPTO STACK; NOT INDEPENDENT CRYPTO IMPLEMENTATION",
+          "HandoffQualification": "NEW CARRIER PREPARATION ARRAY EQUALS COMMAND SLOT REFERENCE; CALLEE PARAMETER IDENTITY NOT INSTRUMENTED; EXCLUSIVITY AND FREEZE NOT ESTABLISHED",
+          "AcceptedSlotQualification": "NO PRIVATE ARRAY ACCESS OR OUTCOME TRANSFER; ORIGINAL API STILL REFUSES DUT DISPATCH",
+          "LocalD007Qualification": "ONE SYNTHETIC MISMATCH HELPER RETURN OBSERVED; FULL D007 ADMISSION AND ITEM COMPLETION NOT ESTABLISHED",
+          "SlotMetadata": {
+            "PreparationRelation": "DIFFERENT_FROM_RECORDED_LITERAL",
+            "ObservationCode": "INTERNAL_SLOT_REFERENCE_RECORDED_ONLY",
+            "SyntheticDigestHex": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+            "FixedTargetName": "Test-DSP004DriverBytesInMemory",
+            "FixedParameterName": "Payload",
+            "RecordedParameterSignature": "SINGLE OBJECT PARAMETER; BYTE ARRAY VALUE REQUIRED",
+            "ParameterSlotQualification": "INTERNAL PREPARATION-TO-SLOT REFERENCE ONLY; ACTUAL ARGUMENT BINDING NOT OBSERVED",
+            "PayloadRetentionQualification": "PRIVATE REFERENCE ONLY; EXCLUSIVE OWNERSHIP, FREEZE AND LIFETIME NOT ESTABLISHED",
+            "DigestRetentionQualification": "PRIVATE REFERENCE ONLY; IMPLEMENTATION IDENTITY AND TRUST NOT ESTABLISHED",
+            "ExceptionRetentionQualification": "NO PREPARATION EXCEPTION REFERENCE RECORDED",
+            "DigestQualification": "SYNTHETIC BYTE DIGEST ONLY; RECORDED LITERAL COMPARISON; NOT REAL SOURCE VERIFICATION",
+            "Authority": "NOT ESTABLISHED",
+            "SourceAdmission": "NOT ESTABLISHED",
+            "TrustedLoadIdentity": "UNBOUND",
+            "HashImplementationIdentity": "UNBOUND",
+            "FixedInvocationAdapter": "NOT IMPLEMENTED",
+            "ActualParameterIdentity": "NOT OBSERVED",
+            "FrozenHandoff": "NOT IMPLEMENTED",
+            "SamePayloadDutUse": "NOT ESTABLISHED",
+            "DutInvocation": "NOT PERFORMED BY THIS API",
+            "D007ItemOutcome": "NOT DETERMINED BY THIS API",
+            "TimingAndOuterStop": "NOT ESTABLISHED",
+            "PrivateFailureRetentionQualification": "NO EXCEPTION GETTER OR FORMATTING; FAILURE RETENTION LIMITED"
+          },
+          "FixedHelperMetadata": {
+            "TextCheck": "FIXED_DRIVER_SHA_MISMATCH",
+            "Authority": "NOT ESTABLISHED",
+            "SourceAdmission": "NOT ESTABLISHED",
+            "FrozenHandoff": "NOT IMPLEMENTED",
+            "ChildLengthEofShaVerification": "NOT OBSERVED",
+            "CaseCompletion": "NOT ESTABLISHED"
+          },
+          "RuntimeMetadata": {
+            "PSVersion": "7.6.5",
+            "Framework": ".NET 10.0.11",
+            "Architecture": "X64",
+            "CryptoAssembly": "System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+            "PowerShellAssembly": "System.Management.Automation, Version=7.6.0.500, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+            "InnerRunspaceLanguageMode": "FullLanguage",
+            "Qualification": "OBSERVED LOCAL METADATA ONLY; NOT TRUSTED ROOT OR TRANSITIVE DEPENDENCY VERIFICATION"
+          },
+          "Checks": [
+            {
+              "Id": "SLOT-SRC-01",
+              "Scope": "Fixed accepted source byte length",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-SRC-02",
+              "Scope": "Exact accepted source snapshot SHA",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-SRC-03",
+              "Scope": "No source BOM",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-01",
+              "Scope": "Complete fixed controller byte length",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-02",
+              "Scope": "Complete controller snapshot SHA",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-SRC-03",
+              "Scope": "No controller source BOM",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-01",
+              "Scope": "No preexisting candidate type",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-02",
+              "Scope": "Three compiler-reported types including the private slot type; no private-member access",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-LOAD-03",
+              "Scope": "Exact compiler-reported type identities only",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-01",
+              "Scope": "Sealed type with no public constructor",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-02",
+              "Scope": "No public raw fields",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-03",
+              "Scope": "Exactly preparation and refusal request methods",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-04",
+              "Scope": "Zero-argument preparation shape",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-05",
+              "Scope": "Zero-argument per-instance refusal request shape",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-06",
+              "Scope": "23 read-only non-indexed string properties; no private-field reflection",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-API-07",
+              "Scope": "Sealed readonly request metadata only",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-01",
+              "Scope": "Independent native oracle fixture shape",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-02",
+              "Scope": "Oracle fixture all-zero content",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-03",
+              "Scope": "Full oracle digest",
+              "Passed": true
+            },
+            {
+              "Id": "ORACLE-04",
+              "Scope": "Synthetic mismatch relation only; no real driver verification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-RUN-01",
+              "Scope": "Exact candidate result type",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-RUN-02",
+              "Scope": "Preparation digest equals separate oracle",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-01",
+              "Scope": "Candidate string only: PreparationRelation",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-02",
+              "Scope": "Candidate string only: ObservationCode",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-03",
+              "Scope": "Candidate string only: SyntheticDigestHex",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-04",
+              "Scope": "Candidate string only: FixedTargetName",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-05",
+              "Scope": "Candidate string only: FixedParameterName",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-06",
+              "Scope": "Candidate string only: RecordedParameterSignature",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-07",
+              "Scope": "Candidate string only: ParameterSlotQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-08",
+              "Scope": "Candidate string only: PayloadRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-09",
+              "Scope": "Candidate string only: DigestRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-10",
+              "Scope": "Candidate string only: ExceptionRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-11",
+              "Scope": "Candidate string only: DigestQualification",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-12",
+              "Scope": "Candidate string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-13",
+              "Scope": "Candidate string only: SourceAdmission",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-14",
+              "Scope": "Candidate string only: TrustedLoadIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-15",
+              "Scope": "Candidate string only: HashImplementationIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-16",
+              "Scope": "Candidate string only: FixedInvocationAdapter",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-17",
+              "Scope": "Candidate string only: ActualParameterIdentity",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-18",
+              "Scope": "Candidate string only: FrozenHandoff",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-19",
+              "Scope": "Candidate string only: SamePayloadDutUse",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-20",
+              "Scope": "Candidate string only: DutInvocation",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-21",
+              "Scope": "Candidate string only: D007ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-22",
+              "Scope": "Candidate string only: TimingAndOuterStop",
+              "Passed": true
+            },
+            {
+              "Id": "SLOT-META-23",
+              "Scope": "Candidate string only: PrivateFailureRetentionQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-TYPE",
+              "Scope": "Exact request result type",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-01",
+              "Scope": "Refusal string only: RequestCode",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-02",
+              "Scope": "Refusal string only: ReservationQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-03",
+              "Scope": "Refusal string only: Disposition",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-04",
+              "Scope": "Refusal string only: LocalAttemptQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-05",
+              "Scope": "Refusal string only: ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-06",
+              "Scope": "Refusal string only: ResourceSettlement",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-1-META-07",
+              "Scope": "Refusal string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-TYPE",
+              "Scope": "Exact request result type",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-01",
+              "Scope": "Refusal string only: RequestCode",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-02",
+              "Scope": "Refusal string only: ReservationQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-03",
+              "Scope": "Refusal string only: Disposition",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-04",
+              "Scope": "Refusal string only: LocalAttemptQualification",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-05",
+              "Scope": "Refusal string only: ItemOutcome",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-06",
+              "Scope": "Refusal string only: ResourceSettlement",
+              "Passed": true
+            },
+            {
+              "Id": "REQUEST-2-META-07",
+              "Scope": "Refusal string only: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-01",
+              "Scope": "New carrier-owned native fixture, not oracle/private candidate input",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-02",
+              "Scope": "Carrier zero-shape precheck",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-PREP-03",
+              "Scope": "Independent preparation relation before DUT use",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-01",
+              "Scope": "Complete controller parses without errors",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-02",
+              "Scope": "Full source has only ten top-level function definitions",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-03",
+              "Scope": "Fresh initially empty in-process runspace opened",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-04",
+              "Scope": "Complete fixed controller definition load returned no success output",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-LOAD-05",
+              "Scope": "All six observed controller-load streams empty",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-01",
+              "Scope": "Exact fixed function and one object Payload parameter",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-02",
+              "Scope": "Loaded whole function definition equals the verified source definition",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-03",
+              "Scope": "One actual command slot and one Payload argument",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-BIND-04",
+              "Scope": "Preparation-array reference equals actual command-slot value; NOT callee instrumentation",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-RETURN-01",
+              "Scope": "Exactly one captured success-stream object",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-RETURN-02",
+              "Scope": "All six observed helper streams empty",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-RETURN-03",
+              "Scope": "Exactly six returned metadata properties",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-META-01",
+              "Scope": "Independent fixed literal comparison: TextCheck",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-META-02",
+              "Scope": "Independent fixed literal comparison: Authority",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-META-03",
+              "Scope": "Independent fixed literal comparison: SourceAdmission",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-META-04",
+              "Scope": "Independent fixed literal comparison: FrozenHandoff",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-META-05",
+              "Scope": "Independent fixed literal comparison: ChildLengthEofShaVerification",
+              "Passed": true
+            },
+            {
+              "Id": "DUT-META-06",
+              "Scope": "Independent fixed literal comparison: CaseCompletion",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-POST-01",
+              "Scope": "Post-call content observation only; not absence of transient mutation",
+              "Passed": true
+            },
+            {
+              "Id": "ADAPTER-POST-02",
+              "Scope": "Command slot still holds the same carrier reference after normal return",
+              "Passed": true
+            },
+            {
+              "Id": "BOUNDARY-01",
+              "Scope": "Exact local invocation counts, no retry/189-item loop",
+              "Passed": true
+            }
+          ],
+          "Uncovered": [
+            "POSITIVE_FIXED_SHA_BRANCH",
+            "CANDIDATE_EQUAL_OR_FAILURE_BRANCHES",
+            "CONCURRENT_OR_REPEATED_BATCH_RESERVATION",
+            "CALLEE_REFERENCE_INSTRUMENTATION",
+            "EXCLUSIVE_IMMUTABLE_FREEZE",
+            "TRUSTED_HOST_AND_FULL_DEPENDENCY_CLOSURE",
+            "FAILURE_AND_CLEANUP_COEXISTENCE_INJECTION",
+            "ADVERSARIAL_TIMEOUT_OUTPUT_OR_RESOURCE_EXHAUSTION",
+            "COMPLETE_DESCENDANT_SETTLEMENT",
+            "FULL_189_ITEM_PLAN"
+          ],
+          "RealDriverRead": false,
+          "SourceAdmission": false,
+          "ActualBusinessCapture": false,
+          "Integration": false,
+          "AggregateVerdict": "NOT ISSUED",
+          "PreservedLimitations": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN"
+        }
+      }
+    }
+  ],
+  "AdditionalDiagnostic": {
+    "Scope": "COMPLETE_FIXED_CONTROLLER_DEFINITION_LOAD_ONLY_NO_HELPER_INVOCATION",
+    "LoadAttempts": 1,
+    "LoadOutputCount": 0,
+    "LoadErrors": 0,
+    "DutCalls": 0,
+    "LoadedAstType": "System.Management.Automation.Language.FunctionDefinitionAst",
+    "LoadedExtentEqualsWholeFunction": true,
+    "LoadedExtentEqualsBody": false,
+    "EmptyInitialSessionStateDefaultLanguageMode": "NoLanguage"
+  },
+  "BatchCounts": {
+    "ValidationChildLaunches": 4,
+    "SlotPreparationCalls": 4,
+    "SlotRequestCalls": 8,
+    "ControllerDefinitionLoadAttempts": 5,
+    "LocalFixedHelperAttempts": 2,
+    "LocalFixedHelperNormalReturns": 2,
+    "CompleteQualifiedHelperComparisons": 1,
+    "Full189ItemPlanInvocations": 0
+  },
+  "PreservedLimitations": "ALL LIMITED PRESERVED; POSITIVE SHA BRANCH NOT COVERED; FULL D007 COMPLETION NOT ESTABLISHED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN"
+}
