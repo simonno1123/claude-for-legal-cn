@@ -125,8 +125,13 @@ def check_marketplace(errors: list[str]) -> None:
             fail(errors, f"{source} does not contain .claude-plugin/plugin.json")
             continue
         plugin_json = load_json(manifest, errors)
-        if plugin_json and plugin_json.get("name") != name:
-            fail(errors, f"{rel(manifest)} name does not match marketplace entry {name}")
+        if plugin_json:
+            for field in ("name", "description", "author"):
+                if plugin_json.get(field) != plugin.get(field):
+                    fail(
+                        errors,
+                        f"{rel(manifest)} {field} does not match marketplace entry {name}",
+                    )
 
 
 def check_mcp(errors: list[str]) -> None:

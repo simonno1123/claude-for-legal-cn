@@ -25,6 +25,9 @@ jobs:
       - name: China localization regression
         run: python3 scripts/localization-regression.py
 
+      - name: Marketplace field-consistency regression
+        run: python3 scripts/test-marketplace-consistency.py
+
       - name: Legal-data smoke test
         run: bash scripts/test-legal-data.sh
 
