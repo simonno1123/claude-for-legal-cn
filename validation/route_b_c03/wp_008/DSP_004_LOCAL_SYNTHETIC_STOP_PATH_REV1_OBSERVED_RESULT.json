@@ -1,0 +1,528 @@
+{
+  "StorageQualification": "Parsed full parent JSON from the actual local tool output, rendered with two-space indentation and repository LF; not an unmodified raw console transcript.",
+  "RecordKind": "LOCAL_NEW_SYNTHETIC_STOP_ADAPTER_OBSERVATION_NOT_OWNER_ACCEPTANCE",
+  "Outcome": "LOCAL_SYNTHETIC_STOP_CHECKS_PASS",
+  "AcceptedRev2SHA256": "FA6625FA2917B056801A598B445C3A68E86A147C2A237260893A784B4449A066",
+  "NewTestCarrierSHA256": "14A50ABB4AF415316A862572197162BB1A4DA5C79C277FD255587E3D84C4041B",
+  "CompileCompleted": true,
+  "BatchCalls": 1,
+  "RefusalCalls": 1,
+  "CheckCount": 47,
+  "UniqueCheckIds": 47,
+  "FailedChecks": 0,
+  "PrimaryValidationFailureType": null,
+  "Cases": [
+    {
+      "CaseId": "S-01",
+      "FirstReason": "SYNTHETIC_CONTROL_CAPTURED_ONLY",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": true,
+      "ChildExitObserved": true,
+      "ExitCode": 0,
+      "StopLatched": false,
+      "KillRequested": false,
+      "KillCallReturned": false,
+      "StdoutTaskEnded": true,
+      "StderrTaskEnded": true,
+      "StdoutEofObserved": true,
+      "StderrEofObserved": true,
+      "StdoutReadCount": 52,
+      "StderrReadCount": 0,
+      "SyntheticFrameQualified": true,
+      "ControlBodyRecorded": true,
+      "StopResultNotRestored": false,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": 480,
+      "ElapsedMilliseconds": 480,
+      "PrimaryFailureType": null,
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "S-02",
+      "FirstReason": "SYNTHETIC_TEST_DEADLINE",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": true,
+      "ChildExitObserved": true,
+      "ExitCode": -1,
+      "StopLatched": true,
+      "KillRequested": true,
+      "KillCallReturned": true,
+      "StdoutTaskEnded": true,
+      "StderrTaskEnded": true,
+      "StdoutEofObserved": true,
+      "StderrEofObserved": true,
+      "StdoutReadCount": 52,
+      "StderrReadCount": 0,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": true,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": 5024,
+      "PrimaryFailureType": "System.TimeoutException",
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "S-03",
+      "FirstReason": "STDOUT_OVER_BUDGET",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": true,
+      "ChildExitObserved": true,
+      "ExitCode": -1,
+      "StopLatched": true,
+      "KillRequested": true,
+      "KillCallReturned": true,
+      "StdoutTaskEnded": true,
+      "StderrTaskEnded": true,
+      "StdoutEofObserved": false,
+      "StderrEofObserved": true,
+      "StdoutReadCount": 65537,
+      "StderrReadCount": 0,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": true,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": 447,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "S-04",
+      "FirstReason": "UNEXPECTED_STDERR",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": true,
+      "ChildExitObserved": true,
+      "ExitCode": -1,
+      "StopLatched": true,
+      "KillRequested": true,
+      "KillCallReturned": true,
+      "StdoutTaskEnded": true,
+      "StderrTaskEnded": true,
+      "StdoutEofObserved": true,
+      "StderrEofObserved": false,
+      "StdoutReadCount": 0,
+      "StderrReadCount": 1,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": true,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": 434,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "S-05",
+      "FirstReason": "ACK_ABSENT",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": true,
+      "ChildExitObserved": true,
+      "ExitCode": 0,
+      "StopLatched": true,
+      "KillRequested": false,
+      "KillCallReturned": false,
+      "StdoutTaskEnded": true,
+      "StderrTaskEnded": true,
+      "StdoutEofObserved": true,
+      "StderrEofObserved": true,
+      "StdoutReadCount": 29,
+      "StderrReadCount": 0,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": true,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": 477,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "S-06",
+      "FirstReason": "NONZERO_CHILD_EXIT",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": true,
+      "ChildExitObserved": true,
+      "ExitCode": 7,
+      "StopLatched": true,
+      "KillRequested": false,
+      "KillCallReturned": false,
+      "StdoutTaskEnded": true,
+      "StderrTaskEnded": true,
+      "StdoutEofObserved": true,
+      "StderrEofObserved": true,
+      "StdoutReadCount": 52,
+      "StderrReadCount": 0,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": true,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": 484,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "S-07",
+      "FirstReason": "START_FAILURE",
+      "ExecutableFileSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "StartAttempted": true,
+      "ChildStarted": false,
+      "ChildExitObserved": false,
+      "ExitCode": -1,
+      "StopLatched": true,
+      "KillRequested": false,
+      "KillCallReturned": false,
+      "StdoutTaskEnded": false,
+      "StderrTaskEnded": false,
+      "StdoutEofObserved": false,
+      "StderrEofObserved": false,
+      "StdoutReadCount": -1,
+      "StderrReadCount": -1,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": true,
+      "LocalProcessDisposeReturned": true,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": 3,
+      "PrimaryFailureType": "System.ComponentModel.Win32Exception",
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "SHORT TEST CASE BUDGET 5000MS; OFFSET MAPPED TO SHARED PURE CLASSIFIER; NOT REV2 120SECOND EXECUTION",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    }
+  ],
+  "Repeat": [
+    {
+      "CaseId": "BATCH-REPEAT",
+      "FirstReason": "REPEATED_TEST_BATCH_REFUSED",
+      "ExecutableFileSHA256": null,
+      "StartAttempted": false,
+      "ChildStarted": false,
+      "ChildExitObserved": false,
+      "ExitCode": -1,
+      "StopLatched": false,
+      "KillRequested": false,
+      "KillCallReturned": false,
+      "StdoutTaskEnded": false,
+      "StderrTaskEnded": false,
+      "StdoutEofObserved": false,
+      "StderrEofObserved": false,
+      "StdoutReadCount": -1,
+      "StderrReadCount": -1,
+      "SyntheticFrameQualified": false,
+      "ControlBodyRecorded": false,
+      "StopResultNotRestored": false,
+      "LocalProcessDisposeReturned": false,
+      "CompletionDecisionElapsedMilliseconds": -1,
+      "ElapsedMilliseconds": -1,
+      "PrimaryFailureType": null,
+      "SecondaryFailureCount": 0,
+      "ObservationScope": "NEW INDEPENDENT SYNTHETIC TEST ADAPTER; NOT REV2 PUBLIC RUNTIME PATH",
+      "AckQualification": "SYNTHETIC OUTPUT FRAME ONLY; NO INPUT SHA VERIFICATION OR AUTHORITY",
+      "TimeQualification": "NOT TIMED; REPEATED TEST BATCH REFUSED",
+      "SettlementQualification": "SINGLE CHILD/TASK OBSERVATIONS ONLY; COMPLETE RESOURCES AND DESCENDANTS NOT ESTABLISHED",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    }
+  ],
+  "Checks": [
+    {
+      "Id": "API-01",
+      "Scope": "New test carrier has one fixed zero-argument entry; no path/script/clock injection",
+      "Passed": true
+    },
+    {
+      "Id": "SET-01",
+      "Scope": "Seven unique live synthetic scenario records",
+      "Passed": true
+    },
+    {
+      "Id": "S-01-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-01-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-01-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-01-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-01-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "S-02-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-02-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-02-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-02-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-02-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "S-03-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-03-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-03-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-03-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-03-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "S-04-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-04-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-04-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-04-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-04-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "S-05-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-05-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-05-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-05-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-05-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "S-06-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-06-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-06-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-06-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-06-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "S-07-CAUSE",
+      "Scope": "Independent fixed expected cause, not generated from returned outcome",
+      "Passed": true
+    },
+    {
+      "Id": "S-07-SCOPE",
+      "Scope": "Literal scope/authority disclaimers only; not independent non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "S-07-STATE",
+      "Scope": "Actual local state combination; stop never restores body/confirmation qualification",
+      "Passed": true
+    },
+    {
+      "Id": "S-07-READ",
+      "Scope": "Actual observed read-task state; absent tasks are not reported as EOF",
+      "Passed": true
+    },
+    {
+      "Id": "S-07-CLEAN",
+      "Scope": "Dispose returned and no secondary failure observed; NOT full resource/descendant settlement",
+      "Passed": true
+    },
+    {
+      "Id": "CONTROL-01",
+      "Scope": "Exact independent synthetic control byte count and short normal sample",
+      "Passed": true
+    },
+    {
+      "Id": "TIMEOUT-01",
+      "Scope": "Real short timeout and this child exit/read completion only; synthetic body stays discarded",
+      "Passed": true
+    },
+    {
+      "Id": "STDOUT-01",
+      "Scope": "One stdout detection byte; no fabricated normal EOF after stopping read",
+      "Passed": true
+    },
+    {
+      "Id": "STDERR-01",
+      "Scope": "One stderr detection byte; zero body budget respected",
+      "Passed": true
+    },
+    {
+      "Id": "MISSINGACK-01",
+      "Scope": "Exit zero/EOF cannot repair absent synthetic confirmation",
+      "Passed": true
+    },
+    {
+      "Id": "NONZERO-01",
+      "Scope": "Actual nonzero exit with body discarded by this NEW test policy",
+      "Passed": true
+    },
+    {
+      "Id": "STARTFAIL-01",
+      "Scope": "Actual fixed missing-executable start failure type",
+      "Passed": true
+    },
+    {
+      "Id": "REPEAT-01",
+      "Scope": "Actual repeat of new test carrier refused in the same compiled assembly",
+      "Passed": true
+    },
+    {
+      "Id": "REPEAT-02",
+      "Scope": "Refused repeat has no invented launch/frame/time observations",
+      "Passed": true
+    },
+    {
+      "Id": "REPEAT-03",
+      "Scope": "Six started synthetic children, seven start attempts, no second batch",
+      "Passed": true
+    }
+  ],
+  "AcceptedRev2PublicEntry": "NOT CALLED BY THIS NEW BATCH CODE PATH",
+  "InputShaVerification": "NOT PERFORMED; CONFIRMATION MARKERS ARE FIXED SYNTHETIC OUTPUT",
+  "Scope": "NEW TEST ADAPTER ONLY; SHARED PURE CLASSIFIERS DO NOT TRANSFER REAL REV2 PATH COVERAGE",
+  "StopQualification": "REAL SHORT SINGLE-CHILD OBSERVATIONS ONLY; NOT HARD REALTIME OR COMPLETE DESCENDANT/RESOURCE PROOF",
+  "ExceptionQualification": "ORIGINAL OBJECTS HELD PRIVATELY IN ORIGIN PROCESS ONLY; NO MESSAGE/STACK OR CROSS-PROCESS RETENTION CLAIM",
+  "Uncovered": [
+    "REV2_ACTUAL_120_SECOND_PATH",
+    "ALL_DESCENDANT_AND_RESOURCE_SETTLEMENT",
+    "SYNCHRONOUS_CALL_HARD_BOUNDS",
+    "COMPLEX_CANCEL_AND_RESOURCE_EXHAUSTION",
+    "PRIMARY_PLUS_CLEANUP_FAILURE_INJECTION",
+    "TRUSTED_ROOT_AND_TRANSITIVE_DEPENDENCIES",
+    "POSITIVE_DRIVER_SHA",
+    "CALLEE_REFERENCE_AND_FREEZE",
+    "FULL_189_ITEM_PLAN"
+  ],
+  "Preserved": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN; NO SOURCE ADMISSION, ACTUAL CAPTURE OR INTEGRATION"
+}
