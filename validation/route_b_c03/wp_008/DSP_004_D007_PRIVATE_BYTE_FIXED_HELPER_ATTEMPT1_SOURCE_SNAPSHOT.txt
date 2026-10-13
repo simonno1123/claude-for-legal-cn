@@ -1,0 +1,305 @@
+#nullable enable
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Management.Automation;
+using System.Management.Automation.Language;
+using System.Management.Automation.Runspaces;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading;
+
+namespace Dsp004D007PrivateFixedHelper
+{
+// New unaccepted closed local candidate. No historical private-array access,
+// real Driver/Bootstrap, arbitrary inputs, callbacks, switches or integration.
+// Caller command-slot reference checks are NOT callee identity/freeze proof.
+public sealed class Dsp004D007PrivateByteFixedHelperHandoffCandidateRev1
+{
+    private const string ControllerPath = "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_OUTER_CONTROLLER_CANDIDATE_REV1.ps1";
+    private const string ControllerSha = "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB";
+    private const string RecordedDriverSha = "6405563F9A39B39F8E63D4330C497A76C99B38F4FE4662B0A6E310F355B69210";
+    private const string Target = "Test-DSP004DriverBytesInMemory";
+    private const string Parameter = "Payload";
+    private static int reserved;
+    private Dsp004D007PrivateByteFixedHelperHandoffCandidateRev1() { }
+
+    public static Observation RunFixedLocalD007Probe()
+    {
+        var state = new RetainedState();
+        if (Interlocked.Exchange(ref reserved, 1) != 0)
+        {
+            state.Outcome = "REPEATED_LOCAL_D007_REQUEST_REFUSED";
+            state.RepeatRefused = true;
+            return new Observation(state);
+        }
+        var timer = Stopwatch.StartNew();
+        SHA256? preparationHasher = null;
+        Runspace? runspace = null;
+        PowerShell? loader = null;
+        PowerShell? invocation = null;
+        string stage = "CONTROLLER_SNAPSHOT";
+        try
+        {
+            state.ControllerReadAttempts = 1;
+            state.ControllerSnapshot = File.ReadAllBytes(ControllerPath);
+            state.ControllerSnapshotSha = Convert.ToHexString(SHA256.HashData(state.ControllerSnapshot));
+            Require(state.ControllerSnapshot.Length == 25573 && string.Equals(state.ControllerSnapshotSha, ControllerSha, StringComparison.Ordinal));
+            state.ControllerSnapshotVerified = true;
+            string controllerText = new UTF8Encoding(false, true).GetString(state.ControllerSnapshot);
+            stage = "DEFINITION_STRUCTURE";
+            VerifyDefinitions(controllerText);
+            state.DefinitionStructureVerified = true;
+
+            stage = "PRIVATE_SYNTHETIC_PREPARATION";
+            state.Payload = new byte[20177];
+            state.PayloadCreated = true;
+            state.ZeroShapeBeforeDigest = HasZeroShape(state.Payload);
+            Require(state.ZeroShapeBeforeDigest);
+            preparationHasher = SHA256.Create();
+            state.PreparationHashImplementationType = preparationHasher.GetType().FullName;
+            state.PreparationHashCalls = 1;
+            state.Digest = preparationHasher.ComputeHash(state.Payload);
+            Require(state.Digest.GetType() == typeof(byte[]) && state.Digest.Length == 32);
+            state.PreparedDigestHex = Convert.ToHexString(state.Digest);
+            state.ZeroShapeAfterDigest = HasZeroShape(state.Payload);
+            state.DifferentFromRecordedDriverLiteral = !string.Equals(state.PreparedDigestHex, RecordedDriverSha, StringComparison.Ordinal);
+            Require(state.ZeroShapeAfterDigest && state.DifferentFromRecordedDriverLiteral);
+
+            stage = "FIXED_DEFINITION_LOAD";
+            var initial = InitialSessionState.Create();
+            initial.LanguageMode = PSLanguageMode.FullLanguage;
+            runspace = RunspaceFactory.CreateRunspace(initial);
+            runspace.Open();
+            state.RunspaceOpened = true;
+            loader = PowerShell.Create();
+            loader.Runspace = runspace;
+            loader.AddScript(controllerText, false);
+            state.LoadAttempts = 1;
+            var loadOutput = loader.Invoke();
+            state.LoadReturned = true;
+            state.LoadOutputCount = loadOutput.Count;
+            state.LoadNonOutputStreamCount = CountStreams(loader);
+            RetainErrors(state, loader, "LOAD_ERROR_STREAM");
+            Require(!loader.HadErrors && state.LoadOutputCount == 0 && state.LoadNonOutputStreamCount == 0);
+
+            stage = "CALLER_PARAMETER_BINDING";
+            invocation = PowerShell.Create();
+            invocation.Runspace = runspace;
+            invocation.AddCommand(Target);
+            invocation.AddParameter(Parameter, state.Payload);
+            state.CallerCommandShapeBefore = HasFixedCommand(invocation);
+            Require(state.CallerCommandShapeBefore);
+            object parameterValue = invocation.Commands.Commands[0].Parameters[0].Value;
+            state.CallerParameterNativeByteArray = parameterValue.GetType() == typeof(byte[]);
+            state.CallerParameterSamePreparedReferenceBefore = ReferenceEquals(state.Payload, parameterValue);
+            Require(state.CallerParameterNativeByteArray && state.CallerParameterSamePreparedReferenceBefore && HasZeroShape(state.Payload));
+
+            stage = "FIXED_HELPER_INVOKE";
+            state.HelperInvokeAttempts = 1;
+            var returned = invocation.Invoke();
+            state.HelperInvokeReturned = true;
+            state.HelperOutputCount = returned.Count;
+            state.HelperNonOutputStreamCount = CountStreams(invocation);
+            RetainErrors(state, invocation, "HELPER_ERROR_STREAM");
+            Require(!invocation.HadErrors && state.HelperOutputCount == 1 && state.HelperNonOutputStreamCount == 0);
+            state.HeldNativeReturn = returned[0];
+
+            stage = "POST_INVOKE_CALLER_REFERENCE";
+            state.CallerCommandShapeAfter = HasFixedCommand(invocation);
+            Require(state.CallerCommandShapeAfter);
+            state.CallerParameterSamePreparedReferenceAfter = ReferenceEquals(state.Payload, invocation.Commands.Commands[0].Parameters[0].Value);
+            state.ZeroShapeAfterInvoke = HasZeroShape(state.Payload);
+            Require(state.CallerParameterSamePreparedReferenceAfter && state.ZeroShapeAfterInvoke);
+
+            stage = "NATIVE_RETURN_COMPARISON";
+            CompareNativeReturn(state, returned[0]);
+            state.NativeComparisonCompleted = true;
+        }
+        catch (Exception original) { state.KeepPrimary(stage, original); }
+        finally
+        {
+            if (invocation != null)
+            {
+                try { invocation.Dispose(); state.InvocationDisposeReturned = true; }
+                catch (Exception original) { state.KeepCleanup("INVOCATION_DISPOSE", original); }
+            }
+            if (loader != null)
+            {
+                try { loader.Dispose(); state.LoaderDisposeReturned = true; }
+                catch (Exception original) { state.KeepCleanup("LOADER_DISPOSE", original); }
+            }
+            if (runspace != null)
+            {
+                if (state.RunspaceOpened)
+                {
+                    try { runspace.Close(); state.RunspaceCloseReturned = true; }
+                    catch (Exception original) { state.KeepCleanup("RUNSPACE_CLOSE", original); }
+                }
+                try { runspace.Dispose(); state.RunspaceDisposeReturned = true; }
+                catch (Exception original) { state.KeepCleanup("RUNSPACE_DISPOSE", original); }
+            }
+            if (preparationHasher != null)
+            {
+                try { preparationHasher.Dispose(); state.PreparationHasherDisposeReturned = true; }
+                catch (Exception original) { state.KeepCleanup("PREPARATION_HASHER_DISPOSE", original); }
+            }
+            state.ElapsedMilliseconds = timer.ElapsedMilliseconds;
+        }
+        state.LocalComparisonPass = state.NativeComparisonCompleted && state.Primary == null && state.Secondary.Count == 0 &&
+            state.InvocationDisposeReturned && state.LoaderDisposeReturned && state.RunspaceCloseReturned && state.RunspaceDisposeReturned && state.PreparationHasherDisposeReturned;
+        state.Outcome = state.LocalComparisonPass ? "LOCAL_D007_NATIVE_HELPER_COMPARISON_PASS" : "LOCAL_D007_NOT_COMPLETED";
+        return new Observation(state);
+    }
+
+    private static bool HasZeroShape(byte[] value)
+    {
+        if (value.GetType() != typeof(byte[]) || value.Length != 20177) return false;
+        foreach (byte item in value) if (item != 0) return false;
+        return true;
+    }
+    private static bool HasFixedCommand(PowerShell invocation)
+    {
+        if (invocation.Commands.Commands.Count != 1) return false;
+        var command = invocation.Commands.Commands[0];
+        return !command.IsScript && string.Equals(command.CommandText, Target, StringComparison.Ordinal) && command.Parameters.Count == 1 &&
+            string.Equals(command.Parameters[0].Name, Parameter, StringComparison.Ordinal) && command.Parameters[0].Value != null;
+    }
+    private static void VerifyDefinitions(string text)
+    {
+        Token[] tokens; ParseError[] errors;
+        ScriptBlockAst ast = Parser.ParseInput(text, out tokens, out errors);
+        string[] names = { "Get-DSP004CaseContract", "Get-DSP004StatusCombinations", "Get-DSP004FixedContract", "Test-DSP004RequestedCaseText", "Test-DSP004DriverBytesInMemory", "Test-DSP004FrameBytesInMemory", "Get-DSP004ReadObservationClassification", "Get-DSP004WriteObservationClassification", "Get-DSP004FutureBootstrapText", "Invoke-DSP004SingleCase" };
+        Require(errors.Length == 0 && ast.ParamBlock == null && ast.BeginBlock == null && ast.ProcessBlock == null && ast.DynamicParamBlock == null && ast.UsingStatements.Count == 0 && ast.EndBlock != null && ast.EndBlock.Statements.Count == 10);
+        for (int index = 0; index < names.Length; index++)
+            Require(ast.EndBlock!.Statements[index] is FunctionDefinitionAst function && string.Equals(function.Name, names[index], StringComparison.Ordinal));
+    }
+    private static int CountStreams(PowerShell pipeline) => pipeline.Streams.Error.Count + pipeline.Streams.Warning.Count + pipeline.Streams.Debug.Count + pipeline.Streams.Verbose.Count + pipeline.Streams.Information.Count + pipeline.Streams.Progress.Count;
+    private static void RetainErrors(RetainedState state, PowerShell pipeline, string stage)
+    {
+        foreach (ErrorRecord error in pipeline.Streams.Error)
+        {
+            state.HeldErrorRecords.Add(error);
+            state.KeepPrimary(stage, error.Exception);
+        }
+    }
+    private static void CompareNativeReturn(RetainedState state, PSObject actual)
+    {
+        var expected = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            { "TextCheck", "FIXED_DRIVER_SHA_MISMATCH" }, { "Authority", "NOT ESTABLISHED" },
+            { "SourceAdmission", "NOT ESTABLISHED" }, { "FrozenHandoff", "NOT IMPLEMENTED" },
+            { "ChildLengthEofShaVerification", "NOT OBSERVED" }, { "CaseCompletion", "NOT ESTABLISHED" }
+        };
+        var names = new HashSet<string>(StringComparer.Ordinal);
+        foreach (PSPropertyInfo property in actual.Properties)
+        {
+            Require(names.Add(property.Name) && expected.ContainsKey(property.Name) && property.Value != null && property.Value.GetType() == typeof(string));
+            Require(string.Equals((string)property.Value, expected[property.Name], StringComparison.Ordinal));
+        }
+        Require(names.Count == 6);
+        state.TargetTextCheck = (string)actual.Properties["TextCheck"].Value;
+        state.TargetAuthority = (string)actual.Properties["Authority"].Value;
+        state.TargetSourceAdmission = (string)actual.Properties["SourceAdmission"].Value;
+        state.TargetFrozenHandoff = (string)actual.Properties["FrozenHandoff"].Value;
+        state.TargetChildVerification = (string)actual.Properties["ChildLengthEofShaVerification"].Value;
+        state.TargetCaseCompletion = (string)actual.Properties["CaseCompletion"].Value;
+    }
+    private static void Require(bool condition) { if (!condition) throw new InvalidOperationException("FIXED_LOCAL_D007_GUARD_REJECTED"); }
+
+    internal sealed class RetainedState
+    {
+        internal byte[]? ControllerSnapshot;
+        internal byte[]? Payload;
+        internal byte[]? Digest;
+        internal PSObject? HeldNativeReturn;
+        internal readonly List<ErrorRecord> HeldErrorRecords = new List<ErrorRecord>();
+        internal Exception? Primary;
+        internal string? PrimaryStage;
+        internal readonly List<KeyValuePair<string, Exception>> Secondary = new List<KeyValuePair<string, Exception>>();
+        internal string Outcome = "LOCAL_D007_NOT_COMPLETED";
+        internal string? ControllerSnapshotSha, PreparedDigestHex, PreparationHashImplementationType;
+        internal string? TargetTextCheck, TargetAuthority, TargetSourceAdmission, TargetFrozenHandoff, TargetChildVerification, TargetCaseCompletion;
+        internal int ControllerReadAttempts, PreparationHashCalls, LoadAttempts, HelperInvokeAttempts;
+        internal int LoadOutputCount = -1, LoadNonOutputStreamCount = -1, HelperOutputCount = -1, HelperNonOutputStreamCount = -1;
+        internal bool RepeatRefused, ControllerSnapshotVerified, DefinitionStructureVerified, PayloadCreated;
+        internal bool ZeroShapeBeforeDigest, ZeroShapeAfterDigest, DifferentFromRecordedDriverLiteral;
+        internal bool RunspaceOpened, LoadReturned, CallerCommandShapeBefore, CallerParameterNativeByteArray;
+        internal bool CallerParameterSamePreparedReferenceBefore, HelperInvokeReturned, CallerCommandShapeAfter;
+        internal bool CallerParameterSamePreparedReferenceAfter, ZeroShapeAfterInvoke, NativeComparisonCompleted, LocalComparisonPass;
+        internal bool InvocationDisposeReturned, LoaderDisposeReturned, RunspaceCloseReturned, RunspaceDisposeReturned, PreparationHasherDisposeReturned;
+        internal long ElapsedMilliseconds = -1;
+        internal void KeepPrimary(string stage, Exception original)
+        {
+            if (Primary == null) { Primary = original; PrimaryStage = stage; }
+            else Secondary.Add(new KeyValuePair<string, Exception>(stage, original));
+        }
+        internal void KeepCleanup(string stage, Exception original) { Secondary.Add(new KeyValuePair<string, Exception>(stage, original)); }
+    }
+
+    public sealed class Observation
+    {
+        private readonly RetainedState held;
+        internal Observation(RetainedState held) { this.held = held; }
+        public string Outcome => held.Outcome;
+        public bool RepeatRefused => held.RepeatRefused;
+        public int ControllerReadAttempts => held.ControllerReadAttempts;
+        public string? ControllerSnapshotSHA256 => held.ControllerSnapshotSha;
+        public bool ControllerSnapshotVerified => held.ControllerSnapshotVerified;
+        public bool DefinitionStructureVerified => held.DefinitionStructureVerified;
+        public bool PrivatePayloadCreated => held.PayloadCreated;
+        public int PrivatePayloadLength => held.Payload?.Length ?? -1;
+        public bool ZeroShapeBeforeDigest => held.ZeroShapeBeforeDigest;
+        public bool ZeroShapeAfterDigest => held.ZeroShapeAfterDigest;
+        public int PreparationHashCalls => held.PreparationHashCalls;
+        public string? PreparedSyntheticSHA256 => held.PreparedDigestHex;
+        public string? PreparationHashImplementationType => held.PreparationHashImplementationType;
+        public bool DifferentFromRecordedDriverLiteral => held.DifferentFromRecordedDriverLiteral;
+        public int DefinitionLoadAttempts => held.LoadAttempts;
+        public bool DefinitionLoadReturned => held.LoadReturned;
+        public int DefinitionLoadOutputCount => held.LoadOutputCount;
+        public int DefinitionLoadNonOutputStreamCount => held.LoadNonOutputStreamCount;
+        public bool CallerCommandShapeBefore => held.CallerCommandShapeBefore;
+        public bool CallerParameterNativeByteArray => held.CallerParameterNativeByteArray;
+        public bool CallerParameterSamePreparedReferenceBefore => held.CallerParameterSamePreparedReferenceBefore;
+        public int HelperInvokeAttempts => held.HelperInvokeAttempts;
+        public bool HelperInvokeReturned => held.HelperInvokeReturned;
+        public int HelperOutputCount => held.HelperOutputCount;
+        public int HelperNonOutputStreamCount => held.HelperNonOutputStreamCount;
+        public bool CallerCommandShapeAfter => held.CallerCommandShapeAfter;
+        public bool CallerParameterSamePreparedReferenceAfter => held.CallerParameterSamePreparedReferenceAfter;
+        public bool ZeroShapeAfterInvoke => held.ZeroShapeAfterInvoke;
+        public bool NativeComparisonCompleted => held.NativeComparisonCompleted;
+        public bool LocalComparisonPass => held.LocalComparisonPass;
+        public string? TargetTextCheck => held.TargetTextCheck;
+        public string? TargetAuthority => held.TargetAuthority;
+        public string? TargetSourceAdmission => held.TargetSourceAdmission;
+        public string? TargetFrozenHandoff => held.TargetFrozenHandoff;
+        public string? TargetChildLengthEofShaVerification => held.TargetChildVerification;
+        public string? TargetCaseCompletion => held.TargetCaseCompletion;
+        public bool InvocationDisposeReturned => held.InvocationDisposeReturned;
+        public bool LoaderDisposeReturned => held.LoaderDisposeReturned;
+        public bool RunspaceCloseReturned => held.RunspaceCloseReturned;
+        public bool RunspaceDisposeReturned => held.RunspaceDisposeReturned;
+        public bool PreparationHasherDisposeReturned => held.PreparationHasherDisposeReturned;
+        public long ElapsedMilliseconds => held.ElapsedMilliseconds;
+        public string? PrimaryFailureType => held.Primary?.GetType().FullName;
+        public string? PrimaryFailureStage => held.PrimaryStage;
+        public int SecondaryFailureCount => held.Secondary.Count;
+        public string SecondaryFailureStagesAndTypes
+        {
+            get { var values = new List<string>(); foreach (var item in held.Secondary) values.Add(item.Key + ":" + item.Value.GetType().FullName); return string.Join(";", values); }
+        }
+        public string InputScope => "NEW PRIVATE SYNTHETIC ZERO ARRAY ONLY; NO HISTORICAL PAYLOAD OR REAL DRIVER";
+        public string DigestQualification => "PREPARATION INTERFACE INDEPENDENT OF HELPER; SAME DOTNET CRYPTO STACK; NOT PROVIDER INDEPENDENCE OR SOURCE VERIFICATION";
+        public string ReferenceQualification => "CALLER COMMAND PARAMETER REFERENCE OBSERVATION ONLY; CALLEE REFERENCE AND FREEZE NOT ESTABLISHED";
+        public string SourceQualification => "FIXED LOCAL SNAPSHOT INTEGRITY ONLY; NOT SOURCE ADMISSION OR TRUSTED DEPENDENCY ROOT";
+        public string ResourceQualification => "LOCAL DISPOSE/CLOSE RETURNS ONLY; NOT COMPLETE ENGINE/RESOURCE SETTLEMENT OR HARD STOP PROOF";
+        public string RetentionQualification => "RAW ARRAYS/RETURN/ORIGINAL EXCEPTIONS PRIVATE IN THIS PROCESS ONLY; NO CROSS-PROCESS RETENTION PROOF";
+        public string Authority => "NOT ESTABLISHED";
+        public string SourceAdmission => "NOT ESTABLISHED";
+        public string PositiveDriverSHA => "NOT COVERED";
+    }
+}
+}

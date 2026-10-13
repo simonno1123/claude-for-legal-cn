@@ -1,0 +1,3525 @@
+{
+  "RecordKind": "NEW_PRIVATE_SYNTHETIC_D007_FIXED_HELPER_NATIVE_COMPARISON_ONLY",
+  "Outcome": "LOCAL_D007_PRIVATE_FIXED_HELPER_CHECKS_PASS",
+  "CandidateSHA256": "666BF56D68FAC64F67E25B55DA26173593E30E8FEC9D4AC89B5DC489B1E4AFD3",
+  "FixtureListSHA256": "46AF48E3227BF85CD0612D2FA6D5D92DFFE6F242D0E1785BA9CF1FCBFC34C53C",
+  "ControllerSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+  "Compiled": true,
+  "PublicProbeCalls": 2,
+  "NewPlanItemIds": [
+    "D-007"
+  ],
+  "PriorRecordUniqueItemIds": 188,
+  "CombinedLocalPurePlanItems": 189,
+  "OutsideNewSyntheticOracleSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+  "DigestOracleQualification": "SEPARATE NEW ZERO ARRAY; NEVER PASSED TO CANDIDATE OR HELPER; SAME DOTNET CRYPTO STACK; NOT CRYPTO PROVIDER INDEPENDENCE",
+  "FirstNativeObservation": {
+    "Actual": {
+      "Outcome": "LOCAL_D007_NATIVE_HELPER_COMPARISON_PASS",
+      "RepeatRefused": false,
+      "ControllerReadAttempts": 1,
+      "ControllerSnapshotSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+      "ControllerSnapshotVerified": true,
+      "DefinitionStructureVerified": true,
+      "PrivatePayloadCreated": true,
+      "PrivatePayloadLength": 20177,
+      "ZeroShapeBeforeDigest": true,
+      "ZeroShapeAfterDigest": true,
+      "PreparationHashCalls": 1,
+      "PreparedSyntheticSHA256": "EC0093EB638D86DDEB4C901BD4C2A2B6583E313F4B3FE61AC7F5FD27465EED33",
+      "PreparationHashImplementationType": "System.Security.Cryptography.SHA256+Implementation",
+      "DifferentFromRecordedDriverLiteral": true,
+      "DefinitionLoadAttempts": 1,
+      "DefinitionLoadReturned": true,
+      "DefinitionLoadOutputCount": 0,
+      "DefinitionLoadNonOutputStreamCount": 0,
+      "CallerCommandShapeBefore": true,
+      "CallerParameterNativeByteArray": true,
+      "CallerParameterSamePreparedReferenceBefore": true,
+      "HelperInvokeAttempts": 1,
+      "HelperInvokeReturned": true,
+      "HelperOutputCount": 1,
+      "HelperNonOutputStreamCount": 0,
+      "CallerCommandShapeAfter": true,
+      "CallerParameterSamePreparedReferenceAfter": true,
+      "ZeroShapeAfterInvoke": true,
+      "NativeComparisonCompleted": true,
+      "LocalComparisonPass": true,
+      "TargetTextCheck": "FIXED_DRIVER_SHA_MISMATCH",
+      "TargetAuthority": "NOT ESTABLISHED",
+      "TargetSourceAdmission": "NOT ESTABLISHED",
+      "TargetFrozenHandoff": "NOT IMPLEMENTED",
+      "TargetChildLengthEofShaVerification": "NOT OBSERVED",
+      "TargetCaseCompletion": "NOT ESTABLISHED",
+      "InvocationDisposeReturned": true,
+      "LoaderDisposeReturned": true,
+      "RunspaceCloseReturned": true,
+      "RunspaceDisposeReturned": true,
+      "PreparationHasherDisposeReturned": true,
+      "ElapsedMilliseconds": 50,
+      "PrimaryFailureType": null,
+      "PrimaryFailureStage": null,
+      "SecondaryFailureCount": 0,
+      "SecondaryFailureStagesAndTypes": "",
+      "InputScope": "NEW PRIVATE SYNTHETIC ZERO ARRAY ONLY; NO HISTORICAL PAYLOAD OR REAL DRIVER",
+      "DigestQualification": "PREPARATION INTERFACE INDEPENDENT OF HELPER; SAME DOTNET CRYPTO STACK; NOT PROVIDER INDEPENDENCE OR SOURCE VERIFICATION",
+      "ReferenceQualification": "CALLER COMMAND PARAMETER REFERENCE OBSERVATION ONLY; CALLEE REFERENCE AND FREEZE NOT ESTABLISHED",
+      "SourceQualification": "FIXED LOCAL SNAPSHOT INTEGRITY ONLY; NOT SOURCE ADMISSION OR TRUSTED DEPENDENCY ROOT",
+      "ResourceQualification": "LOCAL DISPOSE/CLOSE RETURNS ONLY; NOT COMPLETE ENGINE/RESOURCE SETTLEMENT OR HARD STOP PROOF",
+      "RetentionQualification": "RAW ARRAYS/RETURN/ORIGINAL EXCEPTIONS PRIVATE IN THIS PROCESS ONLY; NO CROSS-PROCESS RETENTION PROOF",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED",
+      "PositiveDriverSHA": "NOT COVERED"
+    },
+    "NativeTypes": {
+      "Outcome": "System.String",
+      "RepeatRefused": "System.Boolean",
+      "ControllerReadAttempts": "System.Int32",
+      "ControllerSnapshotSHA256": "System.String",
+      "ControllerSnapshotVerified": "System.Boolean",
+      "DefinitionStructureVerified": "System.Boolean",
+      "PrivatePayloadCreated": "System.Boolean",
+      "PrivatePayloadLength": "System.Int32",
+      "ZeroShapeBeforeDigest": "System.Boolean",
+      "ZeroShapeAfterDigest": "System.Boolean",
+      "PreparationHashCalls": "System.Int32",
+      "PreparedSyntheticSHA256": "System.String",
+      "PreparationHashImplementationType": "System.String",
+      "DifferentFromRecordedDriverLiteral": "System.Boolean",
+      "DefinitionLoadAttempts": "System.Int32",
+      "DefinitionLoadReturned": "System.Boolean",
+      "DefinitionLoadOutputCount": "System.Int32",
+      "DefinitionLoadNonOutputStreamCount": "System.Int32",
+      "CallerCommandShapeBefore": "System.Boolean",
+      "CallerParameterNativeByteArray": "System.Boolean",
+      "CallerParameterSamePreparedReferenceBefore": "System.Boolean",
+      "HelperInvokeAttempts": "System.Int32",
+      "HelperInvokeReturned": "System.Boolean",
+      "HelperOutputCount": "System.Int32",
+      "HelperNonOutputStreamCount": "System.Int32",
+      "CallerCommandShapeAfter": "System.Boolean",
+      "CallerParameterSamePreparedReferenceAfter": "System.Boolean",
+      "ZeroShapeAfterInvoke": "System.Boolean",
+      "NativeComparisonCompleted": "System.Boolean",
+      "LocalComparisonPass": "System.Boolean",
+      "TargetTextCheck": "System.String",
+      "TargetAuthority": "System.String",
+      "TargetSourceAdmission": "System.String",
+      "TargetFrozenHandoff": "System.String",
+      "TargetChildLengthEofShaVerification": "System.String",
+      "TargetCaseCompletion": "System.String",
+      "InvocationDisposeReturned": "System.Boolean",
+      "LoaderDisposeReturned": "System.Boolean",
+      "RunspaceCloseReturned": "System.Boolean",
+      "RunspaceDisposeReturned": "System.Boolean",
+      "PreparationHasherDisposeReturned": "System.Boolean",
+      "ElapsedMilliseconds": "System.Int64",
+      "PrimaryFailureType": "System.String",
+      "PrimaryFailureStage": "System.String",
+      "SecondaryFailureCount": "System.Int32",
+      "SecondaryFailureStagesAndTypes": "System.String",
+      "InputScope": "System.String",
+      "DigestQualification": "System.String",
+      "ReferenceQualification": "System.String",
+      "SourceQualification": "System.String",
+      "ResourceQualification": "System.String",
+      "RetentionQualification": "System.String",
+      "Authority": "System.String",
+      "SourceAdmission": "System.String",
+      "PositiveDriverSHA": "System.String"
+    }
+  },
+  "SameAssemblyRepeatObservation": {
+    "Actual": {
+      "Outcome": "REPEATED_LOCAL_D007_REQUEST_REFUSED",
+      "RepeatRefused": true,
+      "ControllerReadAttempts": 0,
+      "ControllerSnapshotSHA256": null,
+      "ControllerSnapshotVerified": false,
+      "DefinitionStructureVerified": false,
+      "PrivatePayloadCreated": false,
+      "PrivatePayloadLength": -1,
+      "ZeroShapeBeforeDigest": false,
+      "ZeroShapeAfterDigest": false,
+      "PreparationHashCalls": 0,
+      "PreparedSyntheticSHA256": null,
+      "PreparationHashImplementationType": null,
+      "DifferentFromRecordedDriverLiteral": false,
+      "DefinitionLoadAttempts": 0,
+      "DefinitionLoadReturned": false,
+      "DefinitionLoadOutputCount": -1,
+      "DefinitionLoadNonOutputStreamCount": -1,
+      "CallerCommandShapeBefore": false,
+      "CallerParameterNativeByteArray": false,
+      "CallerParameterSamePreparedReferenceBefore": false,
+      "HelperInvokeAttempts": 0,
+      "HelperInvokeReturned": false,
+      "HelperOutputCount": -1,
+      "HelperNonOutputStreamCount": -1,
+      "CallerCommandShapeAfter": false,
+      "CallerParameterSamePreparedReferenceAfter": false,
+      "ZeroShapeAfterInvoke": false,
+      "NativeComparisonCompleted": false,
+      "LocalComparisonPass": false,
+      "TargetTextCheck": null,
+      "TargetAuthority": null,
+      "TargetSourceAdmission": null,
+      "TargetFrozenHandoff": null,
+      "TargetChildLengthEofShaVerification": null,
+      "TargetCaseCompletion": null,
+      "InvocationDisposeReturned": false,
+      "LoaderDisposeReturned": false,
+      "RunspaceCloseReturned": false,
+      "RunspaceDisposeReturned": false,
+      "PreparationHasherDisposeReturned": false,
+      "ElapsedMilliseconds": -1,
+      "PrimaryFailureType": null,
+      "PrimaryFailureStage": null,
+      "SecondaryFailureCount": 0,
+      "SecondaryFailureStagesAndTypes": "",
+      "InputScope": "NEW PRIVATE SYNTHETIC ZERO ARRAY ONLY; NO HISTORICAL PAYLOAD OR REAL DRIVER",
+      "DigestQualification": "PREPARATION INTERFACE INDEPENDENT OF HELPER; SAME DOTNET CRYPTO STACK; NOT PROVIDER INDEPENDENCE OR SOURCE VERIFICATION",
+      "ReferenceQualification": "CALLER COMMAND PARAMETER REFERENCE OBSERVATION ONLY; CALLEE REFERENCE AND FREEZE NOT ESTABLISHED",
+      "SourceQualification": "FIXED LOCAL SNAPSHOT INTEGRITY ONLY; NOT SOURCE ADMISSION OR TRUSTED DEPENDENCY ROOT",
+      "ResourceQualification": "LOCAL DISPOSE/CLOSE RETURNS ONLY; NOT COMPLETE ENGINE/RESOURCE SETTLEMENT OR HARD STOP PROOF",
+      "RetentionQualification": "RAW ARRAYS/RETURN/ORIGINAL EXCEPTIONS PRIVATE IN THIS PROCESS ONLY; NO CROSS-PROCESS RETENTION PROOF",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED",
+      "PositiveDriverSHA": "NOT COVERED"
+    },
+    "NativeTypes": {
+      "Outcome": "System.String",
+      "RepeatRefused": "System.Boolean",
+      "ControllerReadAttempts": "System.Int32",
+      "ControllerSnapshotSHA256": "System.String",
+      "ControllerSnapshotVerified": "System.Boolean",
+      "DefinitionStructureVerified": "System.Boolean",
+      "PrivatePayloadCreated": "System.Boolean",
+      "PrivatePayloadLength": "System.Int32",
+      "ZeroShapeBeforeDigest": "System.Boolean",
+      "ZeroShapeAfterDigest": "System.Boolean",
+      "PreparationHashCalls": "System.Int32",
+      "PreparedSyntheticSHA256": "System.String",
+      "PreparationHashImplementationType": "System.String",
+      "DifferentFromRecordedDriverLiteral": "System.Boolean",
+      "DefinitionLoadAttempts": "System.Int32",
+      "DefinitionLoadReturned": "System.Boolean",
+      "DefinitionLoadOutputCount": "System.Int32",
+      "DefinitionLoadNonOutputStreamCount": "System.Int32",
+      "CallerCommandShapeBefore": "System.Boolean",
+      "CallerParameterNativeByteArray": "System.Boolean",
+      "CallerParameterSamePreparedReferenceBefore": "System.Boolean",
+      "HelperInvokeAttempts": "System.Int32",
+      "HelperInvokeReturned": "System.Boolean",
+      "HelperOutputCount": "System.Int32",
+      "HelperNonOutputStreamCount": "System.Int32",
+      "CallerCommandShapeAfter": "System.Boolean",
+      "CallerParameterSamePreparedReferenceAfter": "System.Boolean",
+      "ZeroShapeAfterInvoke": "System.Boolean",
+      "NativeComparisonCompleted": "System.Boolean",
+      "LocalComparisonPass": "System.Boolean",
+      "TargetTextCheck": "System.String",
+      "TargetAuthority": "System.String",
+      "TargetSourceAdmission": "System.String",
+      "TargetFrozenHandoff": "System.String",
+      "TargetChildLengthEofShaVerification": "System.String",
+      "TargetCaseCompletion": "System.String",
+      "InvocationDisposeReturned": "System.Boolean",
+      "LoaderDisposeReturned": "System.Boolean",
+      "RunspaceCloseReturned": "System.Boolean",
+      "RunspaceDisposeReturned": "System.Boolean",
+      "PreparationHasherDisposeReturned": "System.Boolean",
+      "ElapsedMilliseconds": "System.Int64",
+      "PrimaryFailureType": "System.String",
+      "PrimaryFailureStage": "System.String",
+      "SecondaryFailureCount": "System.Int32",
+      "SecondaryFailureStagesAndTypes": "System.String",
+      "InputScope": "System.String",
+      "DigestQualification": "System.String",
+      "ReferenceQualification": "System.String",
+      "SourceQualification": "System.String",
+      "ResourceQualification": "System.String",
+      "RetentionQualification": "System.String",
+      "Authority": "System.String",
+      "SourceAdmission": "System.String",
+      "PositiveDriverSHA": "System.String"
+    }
+  },
+  "CheckCount": 815,
+  "UniqueCheckIds": 815,
+  "FailedChecks": 0,
+  "PrimaryValidationFailureType": null,
+  "PrimaryValidationFailureStage": null,
+  "Checks": [
+    {
+      "Id": "PRE.CANDIDATE_FIXED_SHA_LENGTH",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.FIXTURE_FIXED_SHA_LENGTH",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.ONE_D007_ONE_K003",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.D007_NATIVE_SHAPE_FROM_FIXED_LIST",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.D007_INDEPENDENT_EXPECTED_TEXT",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.D007_DIGEST_PRECONDITION_RECORDED",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.K003_RECORDED_LITERAL_ONLY",
+      "Pass": true
+    },
+    {
+      "Id": "PRE.NEGATIVE_FIELDS_FROM_FIXED_LIST",
+      "Pass": true
+    },
+    {
+      "Id": "ORACLE.NATIVE_NEW_ZERO_BYTES",
+      "Pass": true
+    },
+    {
+      "Id": "ORACLE.FULL_HEX_AND_RECORD_INEQUALITY_BEFORE_PROBE",
+      "Pass": true
+    },
+    {
+      "Id": "COMPILE.TYPE_NOT_ALREADY_LOADED",
+      "Pass": true
+    },
+    {
+      "Id": "COMPILE.EXACT_PUBLIC_TYPE",
+      "Pass": true
+    },
+    {
+      "Id": "API.ONLY_FIXED_ZERO_ARGUMENT_ENTRY",
+      "Pass": true
+    },
+    {
+      "Id": "API.NO_PUBLIC_CONSTRUCTOR_FIELDS_OR_EVENTS",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.PUBLIC_PROPERTIES_PRESENT",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.Outcome",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.Outcome",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.Outcome",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.RepeatRefused",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.RepeatRefused",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.RepeatRefused",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.SecondaryFailureStagesAndTypes",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.SecondaryFailureStagesAndTypes",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.SecondaryFailureStagesAndTypes",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.GETTER_ONLY.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SAFE_NATIVE_TYPE.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_VALUE.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.OUTCOME",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.SOURCE_ONCE_EXACT_SHA",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.PRIVATE_SHAPE_PREPARATION_ONCE",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NEW_DIGEST_VS_INDEPENDENT_OUTSIDE_ORACLE",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.FIXED_DEFINITIONS_LOADED_ONCE_SILENT",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.CALLER_COMMAND_AND_SAME_REFERENCE_BEFORE",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.HELPER_ONCE_ONE_RESULT_SILENT_OTHER_STREAMS",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.CALLER_COMMAND_AND_SAME_REFERENCE_AFTER",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_TARGET.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_TARGET.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_TARGET.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_TARGET.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_TARGET.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_TARGET.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NATIVE_COMPARISON_COMPLETE",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.LOCAL_CLEANUP_RETURN.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.LOCAL_CLEANUP_RETURN.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.LOCAL_CLEANUP_RETURN.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.LOCAL_CLEANUP_RETURN.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.LOCAL_CLEANUP_RETURN.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.NO_PRIMARY_OR_SECONDARY_FAILURE",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.LOCAL_TIMER_OBSERVATION_ONLY",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "FIRST.QUALIFICATION.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.PUBLIC_PROPERTIES_PRESENT",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.Outcome",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.Outcome",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.Outcome",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.RepeatRefused",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.RepeatRefused",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.RepeatRefused",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.SecondaryFailureStagesAndTypes",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.SecondaryFailureStagesAndTypes",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.SecondaryFailureStagesAndTypes",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.GETTER_ONLY.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.SAFE_NATIVE_TYPE.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NATIVE_VALUE.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.EXACT_REFUSAL",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.ControllerSnapshotVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.DefinitionStructureVerified",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.PrivatePayloadCreated",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.ZeroShapeBeforeDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.ZeroShapeAfterDigest",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.DifferentFromRecordedDriverLiteral",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.DefinitionLoadReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.CallerCommandShapeBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.CallerParameterNativeByteArray",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.CallerParameterSamePreparedReferenceBefore",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.HelperInvokeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.CallerCommandShapeAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.CallerParameterSamePreparedReferenceAfter",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.ZeroShapeAfterInvoke",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.NativeComparisonCompleted",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.LocalComparisonPass",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.InvocationDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.LoaderDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.RunspaceCloseReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.RunspaceDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_ACTIVITY.PreparationHasherDisposeReturned",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.ZERO_ATTEMPTS.ControllerReadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.ZERO_ATTEMPTS.PreparationHashCalls",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.ZERO_ATTEMPTS.DefinitionLoadAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.ZERO_ATTEMPTS.HelperInvokeAttempts",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.ZERO_ATTEMPTS.SecondaryFailureCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_OBSERVATION.PrivatePayloadLength",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_OBSERVATION.DefinitionLoadOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_OBSERVATION.DefinitionLoadNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_OBSERVATION.HelperOutputCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_OBSERVATION.HelperNonOutputStreamCount",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_OBSERVATION.ElapsedMilliseconds",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.ControllerSnapshotSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.PreparedSyntheticSHA256",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.PreparationHashImplementationType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.TargetTextCheck",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.TargetAuthority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.TargetSourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.TargetFrozenHandoff",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.TargetChildLengthEofShaVerification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.TargetCaseCompletion",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.PrimaryFailureType",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_NEW_VALUE.PrimaryFailureStage",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.NO_SECONDARY_FAILURE",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.InputScope",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.DigestQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.ReferenceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.SourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.ResourceQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.RetentionQualification",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.Authority",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.SourceAdmission",
+      "Pass": true
+    },
+    {
+      "Id": "REPEAT.QUALIFICATION.PositiveDriverSHA",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.EXACT_RECORD_SHA.1",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.RECORDED_OUTCOME_COUNT.1",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-001",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-002",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-003",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-004",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-005",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-006",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-007",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-008",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-009",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-010",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-011",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-012",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-013",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-014",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-015",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-016",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-017",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-018",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-019",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-020",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-021",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-022",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-023",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-024",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-025",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-026",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-027",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-028",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-029",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-030",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-031",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-032",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-033",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-034",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-035",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-036",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-037",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-038",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-039",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-040",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-041",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-042",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-043",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-044",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-045",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-046",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-047",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-048",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-049",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-050",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-051",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RD-052",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-001",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-002",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-003",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-004",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-005",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-006",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-007",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-008",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-009",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-010",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-011",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-012",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-013",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-014",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-015",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-016",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-017",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-018",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-019",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-020",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-021",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-022",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-023",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-024",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-025",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-026",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-027",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-028",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-029",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-030",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-031",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-032",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-033",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-034",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-035",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-036",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-037",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-038",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-039",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-040",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-041",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-042",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-043",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.WR-044",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.EXACT_RECORD_SHA.2",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.RECORDED_OUTCOME_COUNT.2",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.M-001",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.M-002",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.M-003",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.M-004",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.M-005",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.M-006",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-001",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-002",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-003",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-004",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-005",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-006",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-007",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-008",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-009",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-010",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-011",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-012",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-013",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-014",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-015",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-016",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-017",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.RQ-018",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.D-001",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.D-002",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.D-003",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.D-004",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.D-005",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.D-006",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-001",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-002",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-003",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-004",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-005",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-006",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-007",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-008",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-009",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-010",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-011",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-012",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-013",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-014",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-015",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-016",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-017",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-018",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-019",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-020",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-021",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-022",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-023",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-024",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-025",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-026",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-027",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-028",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-029",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-030",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-031",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-032",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-033",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-034",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-035",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-036",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-037",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-038",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-039",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-040",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-041",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-042",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-043",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-044",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-045",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-046",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-047",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-048",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-049",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-050",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-051",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-052",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-053",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-054",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-055",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-056",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-057",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-058",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-059",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-060",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-061",
+      "Pass": true
+    },
+    {
+      "Id": "PRIOR.UNIQUE_ID.F-062",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PRIOR_188_EXCLUDES_D007",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.M-001",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.M-002",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.M-003",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.M-004",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.M-005",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.M-006",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-001",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-002",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-003",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-004",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-005",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-006",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-007",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-008",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-009",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-010",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-011",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-012",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-013",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-014",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-015",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-016",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-017",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RQ-018",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-001",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-002",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-003",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-004",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-005",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-006",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.D-007",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-001",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-002",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-003",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-004",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-005",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-006",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-007",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-008",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-009",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-010",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-011",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-012",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-013",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-014",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-015",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-016",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-017",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-018",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-019",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-020",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-021",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-022",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-023",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-024",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-025",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-026",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-027",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-028",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-029",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-030",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-031",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-032",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-033",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-034",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-035",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-036",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-037",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-038",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-039",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-040",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-041",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-042",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-043",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-044",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-045",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-046",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-047",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-048",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-049",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-050",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-051",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-052",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-053",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-054",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-055",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-056",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-057",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-058",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-059",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-060",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-061",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.F-062",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-001",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-002",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-003",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-004",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-005",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-006",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-007",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-008",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-009",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-010",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-011",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-012",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-013",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-014",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-015",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-016",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-017",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-018",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-019",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-020",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-021",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-022",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-023",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-024",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-025",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-026",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-027",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-028",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-029",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-030",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-031",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-032",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-033",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-034",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-035",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-036",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-037",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-038",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-039",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-040",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-041",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-042",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-043",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-044",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-045",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-046",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-047",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-048",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-049",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-050",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-051",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.RD-052",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-001",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-002",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-003",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-004",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-005",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-006",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-007",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-008",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-009",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-010",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-011",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-012",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-013",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-014",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-015",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-016",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-017",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-018",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-019",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-020",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-021",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-022",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-023",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-024",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-025",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-026",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-027",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-028",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-029",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-030",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-031",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-032",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-033",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-034",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-035",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-036",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-037",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-038",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-039",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-040",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-041",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-042",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-043",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.PLAN_UNIQUE.WR-044",
+      "Pass": true
+    },
+    {
+      "Id": "COVERAGE.NEW_D007_NOT_AN_EXTRA_REPEAT_CASE",
+      "Pass": true
+    },
+    {
+      "Id": "POST.CANDIDATE_UNCHANGED",
+      "Pass": true
+    }
+  ],
+  "CoverageQualification": "188 PRIOR RECORDED LOCAL PURE ITEMS PLUS ONE NEW D007 OBSERVATION; NOT FORMAL 189 ITEM ACCEPTANCE OR OVERALL EXECUTION QUALIFICATION",
+  "PreservedLimited": "ALL LIMITED RETAINED; CALLEE REFERENCE/FREEZE, TRUSTED DEPENDENCIES, HARD STOP, COMPLETE RESOURCE SETTLEMENT NOT ESTABLISHED",
+  "PositiveDriverSHA": "NOT COVERED",
+  "SourceAdmission": "NOT ESTABLISHED",
+  "ActualCapture": "NOT AUTHORIZED / NOT PERFORMED",
+  "Integration": "NOT AUTHORIZED / NOT PERFORMED",
+  "CandidateAcceptance": "PENDING PROJECT OWNER DECISION",
+  "DSP004": "OPEN / HOLD",
+  "B01": "OPEN",
+  "B02": "OPEN"
+}

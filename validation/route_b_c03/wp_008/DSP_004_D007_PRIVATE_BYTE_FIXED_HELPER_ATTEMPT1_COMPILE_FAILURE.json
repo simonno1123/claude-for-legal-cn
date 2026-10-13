@@ -1,0 +1,8 @@
+{
+  "RecordKind": "COMPILE_ONLY_FAILURE_NO_FIXTURE_OR_HELPER_INVOCATION",
+  "SourceSHA256": "55B949C55B29820AC35562E5A992B69358A3552AEF2575D4877B44C8CBD7355B",
+  "ExitCode": 1,
+  "CompilerDiagnostic": "Add-Type: (199,35): error CS8600: Converting null literal or possible null value to non-nullable type.\r\n            Require(string.Equals((string)property.Value, expected[property.Name], StringComparison.Ordinal));\r\n                                  ^\r\n",
+  "FixturePreparation": "NOT INVOKED",
+  "HelperInvocation": "NOT INVOKED"
+}
