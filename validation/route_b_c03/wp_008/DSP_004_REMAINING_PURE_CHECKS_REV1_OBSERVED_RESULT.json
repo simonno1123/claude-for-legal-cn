@@ -1,0 +1,4343 @@
+{
+  "RecordKind": "LOCAL_FIXED_REMAINING_PURE_CHECKS_NOT_ACCEPTANCE_OR_COMPLETE_189",
+  "Outcome": "LOCAL_REMAINING_PURE_CHECKS_PASS",
+  "FixtureListSHA256": "46AF48E3227BF85CD0612D2FA6D5D92DFFE6F242D0E1785BA9CF1FCBFC34C53C",
+  "ControllerSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+  "Loads": 1,
+  "DirectPipelineInvocations": 95,
+  "ItemCount": 92,
+  "NativeComparisonPassCount": 92,
+  "CheckCount": 373,
+  "UniqueCheckIds": 373,
+  "FailedChecks": 0,
+  "PrimaryValidationFailureType": null,
+  "CleanupFailures": [],
+  "RunspaceCloseCallReturned": true,
+  "RunspaceDisposeCallReturned": true,
+  "Cases": [
+    {
+      "Id": "M-001",
+      "InputNativeType": "NO_PARAMETERS",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "CaseId": "FULL_ENTRY_LITERAL_RECORDS",
+          "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+          "Level": "FULL_ENTRY_LOCAL_OBSERVATION"
+        },
+        {
+          "CaseId": "FULL_ENTRY_OCCUPIED_SLOT",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "FULL_ENTRY_PRECONDITION_REFUSAL"
+        },
+        {
+          "CaseId": "HELPER_SYNTHETIC_SHA_REFUSAL",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "NON_ASSET_PRIVATE_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_OWNED_SLOT",
+          "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_MISSING_SLOT",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_REPLACED_SLOT",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_TABLE_IDENTITY",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "CARRIER_REFERENCE_CONSTRUCTION",
+          "Observation": "CONSTRUCTION_ASSERTIONS_OBSERVED",
+          "Level": "SYNTHETIC_CARRIER_CONSTRUCTION"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "M-002",
+      "InputNativeType": "NO_PARAMETERS",
+      "InputByteCount": null,
+      "Captured": [
+        "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+        "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|NOT_RUN|STOP_BATCH",
+        "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|INCOMPLETE|STOP_BATCH",
+        "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|NOT_RUN|STOP_BATCH",
+        "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|INCOMPLETE|STOP_BATCH",
+        "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+        "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|CONSTRUCTION_ASSERTIONS_OBSERVED|END_CASE",
+        "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|NOT_RUN|STOP_BATCH",
+        "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|INCOMPLETE|STOP_BATCH",
+        "DRIVER_ALREADY_USED|NO_NEW_OBSERVATION|NOT_RUN|STOP_BATCH",
+        "UNBOUND_CASE|NO_OBSERVATION|NOT_RUN|STOP_BATCH"
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "M-003",
+      "InputNativeType": "NO_PARAMETERS",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "CandidateQualification": "SOURCE CANDIDATE ONLY - NOT EXECUTION READY",
+          "DriverPath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_VALIDATION_DRIVER_REV1.py",
+          "DriverSha256": "6405563F9A39B39F8E63D4330C497A76C99B38F4FE4662B0A6E310F355B69210",
+          "DriverBodyBytes": 20177,
+          "DriverInputCeiling": 65536,
+          "DriverTailDetectionBytes": 1,
+          "CallerPath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_CALLER_CANDIDATE_REV1.py",
+          "CallerSha256": "EF554C3051318BD305EDE6B8511C433C1BB9E20B10E93E5FB5F71C9AFF7A7E63",
+          "ReaderPath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_EXPECTED_BASELINE_READER_CANDIDATE_REV1.py",
+          "ReaderSha256": "AE1389EDA1C3B9129A0546DA5764C1F68A6B0193A22DA3431CAA89BAB8DC0727",
+          "BaselinePath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+          "BaselineSha256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+          "StdoutBodyBudget": 256,
+          "StdoutDetectionBudget": 1,
+          "StderrBodyBudget": 0,
+          "StderrDetectionBudget": 1,
+          "WholeCaseDeadlineSeconds": 30,
+          "StopConfirmationMaximumSeconds": 5,
+          "FrameMarker": "DSP004-STATUS-V1",
+          "CaseContract": [
+            {
+              "CaseId": "FULL_ENTRY_LITERAL_RECORDS",
+              "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+              "Level": "FULL_ENTRY_LOCAL_OBSERVATION"
+            },
+            {
+              "CaseId": "FULL_ENTRY_OCCUPIED_SLOT",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "FULL_ENTRY_PRECONDITION_REFUSAL"
+            },
+            {
+              "CaseId": "HELPER_SYNTHETIC_SHA_REFUSAL",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "NON_ASSET_PRIVATE_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_OWNED_SLOT",
+              "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_MISSING_SLOT",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_REPLACED_SLOT",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_TABLE_IDENTITY",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "CARRIER_REFERENCE_CONSTRUCTION",
+              "Observation": "CONSTRUCTION_ASSERTIONS_OBSERVED",
+              "Level": "SYNTHETIC_CARRIER_CONSTRUCTION"
+            }
+          ],
+          "StatusCombinations": [
+            "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+            "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|NOT_RUN|STOP_BATCH",
+            "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|INCOMPLETE|STOP_BATCH",
+            "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|NOT_RUN|STOP_BATCH",
+            "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|INCOMPLETE|STOP_BATCH",
+            "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+            "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|CONSTRUCTION_ASSERTIONS_OBSERVED|END_CASE",
+            "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|NOT_RUN|STOP_BATCH",
+            "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|INCOMPLETE|STOP_BATCH",
+            "DRIVER_ALREADY_USED|NO_NEW_OBSERVATION|NOT_RUN|STOP_BATCH",
+            "UNBOUND_CASE|NO_OBSERVATION|NOT_RUN|STOP_BATCH"
+          ],
+          "OuterReasons": [
+            "START_NOT_PERMITTED",
+            "START_FAILED",
+            "INPUT_REJECTED",
+            "OUTPUT_REJECTED",
+            "TIMEOUT",
+            "EXIT_UNCONFIRMED"
+          ],
+          "AuthorityChannel": "UNBOUND - NO ACCEPTANCE OR ENABLE INTERFACE",
+          "ControllerFullShaBinding": "EXTERNAL - NOT SELF-COMPUTED AUTHORITY",
+          "BootstrapTextEncodingAndShaBinding": "EXTERNAL - UNBOUND",
+          "LiveAdapters": "NOT IMPLEMENTED - START REFUSED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "M-004",
+      "InputNativeType": "NO_PARAMETERS",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "CaseId": "FULL_ENTRY_LITERAL_RECORDS",
+          "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+          "Level": "FULL_ENTRY_LOCAL_OBSERVATION"
+        },
+        {
+          "CaseId": "FULL_ENTRY_OCCUPIED_SLOT",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "FULL_ENTRY_PRECONDITION_REFUSAL"
+        },
+        {
+          "CaseId": "HELPER_SYNTHETIC_SHA_REFUSAL",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "NON_ASSET_PRIVATE_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_OWNED_SLOT",
+          "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_MISSING_SLOT",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_REPLACED_SLOT",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "HELPER_CLEAN_TABLE_IDENTITY",
+          "Observation": "EXPECTED_REFUSAL_OBSERVED",
+          "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+        },
+        {
+          "CaseId": "CARRIER_REFERENCE_CONSTRUCTION",
+          "Observation": "CONSTRUCTION_ASSERTIONS_OBSERVED",
+          "Level": "SYNTHETIC_CARRIER_CONSTRUCTION"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": {
+        "CallerCopyChanged": true,
+        "FirstHashtableDifferent": true
+      },
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "M-005",
+      "InputNativeType": "NO_PARAMETERS",
+      "InputByteCount": null,
+      "Captured": [
+        "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+        "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|NOT_RUN|STOP_BATCH",
+        "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|INCOMPLETE|STOP_BATCH",
+        "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|NOT_RUN|STOP_BATCH",
+        "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|INCOMPLETE|STOP_BATCH",
+        "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+        "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+        "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+        "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+        "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|CONSTRUCTION_ASSERTIONS_OBSERVED|END_CASE",
+        "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|NOT_RUN|STOP_BATCH",
+        "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|INCOMPLETE|STOP_BATCH",
+        "DRIVER_ALREADY_USED|NO_NEW_OBSERVATION|NOT_RUN|STOP_BATCH",
+        "UNBOUND_CASE|NO_OBSERVATION|NOT_RUN|STOP_BATCH"
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": {
+        "CallerCaptureSlotChanged": true,
+        "CaptureQualification": "ARRAY CAPTURE OWNED BY TEST; NOT A DIRECT FUNCTION ARRAY RETURN"
+      },
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "M-006",
+      "InputNativeType": "NO_PARAMETERS",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "CandidateQualification": "SOURCE CANDIDATE ONLY - NOT EXECUTION READY",
+          "DriverPath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_VALIDATION_DRIVER_REV1.py",
+          "DriverSha256": "6405563F9A39B39F8E63D4330C497A76C99B38F4FE4662B0A6E310F355B69210",
+          "DriverBodyBytes": 20177,
+          "DriverInputCeiling": 65536,
+          "DriverTailDetectionBytes": 1,
+          "CallerPath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_CALLER_CANDIDATE_REV1.py",
+          "CallerSha256": "EF554C3051318BD305EDE6B8511C433C1BB9E20B10E93E5FB5F71C9AFF7A7E63",
+          "ReaderPath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/validation/route_b_c03/wp_008/DSP_004_EXPECTED_BASELINE_READER_CANDIDATE_REV1.py",
+          "ReaderSha256": "AE1389EDA1C3B9129A0546DA5764C1F68A6B0193A22DA3431CAA89BAB8DC0727",
+          "BaselinePath": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5/docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+          "BaselineSha256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+          "StdoutBodyBudget": 256,
+          "StdoutDetectionBudget": 1,
+          "StderrBodyBudget": 0,
+          "StderrDetectionBudget": 1,
+          "WholeCaseDeadlineSeconds": 30,
+          "StopConfirmationMaximumSeconds": 5,
+          "FrameMarker": "DSP004-STATUS-V1",
+          "CaseContract": [
+            {
+              "CaseId": "FULL_ENTRY_LITERAL_RECORDS",
+              "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+              "Level": "FULL_ENTRY_LOCAL_OBSERVATION"
+            },
+            {
+              "CaseId": "FULL_ENTRY_OCCUPIED_SLOT",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "FULL_ENTRY_PRECONDITION_REFUSAL"
+            },
+            {
+              "CaseId": "HELPER_SYNTHETIC_SHA_REFUSAL",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "NON_ASSET_PRIVATE_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_OWNED_SLOT",
+              "Observation": "LOCAL_ASSERTIONS_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_MISSING_SLOT",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_REPLACED_SLOT",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "HELPER_CLEAN_TABLE_IDENTITY",
+              "Observation": "EXPECTED_REFUSAL_OBSERVED",
+              "Level": "SYNTHETIC_CLEANUP_HELPER_PROBE"
+            },
+            {
+              "CaseId": "CARRIER_REFERENCE_CONSTRUCTION",
+              "Observation": "CONSTRUCTION_ASSERTIONS_OBSERVED",
+              "Level": "SYNTHETIC_CARRIER_CONSTRUCTION"
+            }
+          ],
+          "StatusCombinations": [
+            "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+            "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|NOT_RUN|STOP_BATCH",
+            "FULL_ENTRY_LITERAL_RECORDS|FULL_ENTRY_LOCAL_OBSERVATION|INCOMPLETE|STOP_BATCH",
+            "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|NOT_RUN|STOP_BATCH",
+            "FULL_ENTRY_OCCUPIED_SLOT|FULL_ENTRY_PRECONDITION_REFUSAL|INCOMPLETE|STOP_BATCH",
+            "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_SYNTHETIC_SHA_REFUSAL|NON_ASSET_PRIVATE_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|LOCAL_ASSERTIONS_OBSERVED|END_CASE",
+            "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_OWNED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_MISSING_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_REPLACED_SLOT|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|EXPECTED_REFUSAL_OBSERVED|END_CASE",
+            "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|NOT_RUN|STOP_BATCH",
+            "HELPER_CLEAN_TABLE_IDENTITY|SYNTHETIC_CLEANUP_HELPER_PROBE|INCOMPLETE|STOP_BATCH",
+            "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|CONSTRUCTION_ASSERTIONS_OBSERVED|END_CASE",
+            "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|NOT_RUN|STOP_BATCH",
+            "CARRIER_REFERENCE_CONSTRUCTION|SYNTHETIC_CARRIER_CONSTRUCTION|INCOMPLETE|STOP_BATCH",
+            "DRIVER_ALREADY_USED|NO_NEW_OBSERVATION|NOT_RUN|STOP_BATCH",
+            "UNBOUND_CASE|NO_OBSERVATION|NOT_RUN|STOP_BATCH"
+          ],
+          "OuterReasons": [
+            "START_NOT_PERMITTED",
+            "START_FAILED",
+            "INPUT_REJECTED",
+            "OUTPUT_REJECTED",
+            "TIMEOUT",
+            "EXIT_UNCONFIRMED"
+          ],
+          "AuthorityChannel": "UNBOUND - NO ACCEPTANCE OR ENABLE INTERFACE",
+          "ControllerFullShaBinding": "EXTERNAL - NOT SELF-COMPUTED AUTHORITY",
+          "BootstrapTextEncodingAndShaBinding": "EXTERNAL - UNBOUND",
+          "LiveAdapters": "NOT IMPLEMENTED - START REFUSED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": {
+        "CallerPropertiesChanged": true,
+        "CaseArraysDifferent": true,
+        "FirstHashtablesDifferent": true,
+        "StatusArraysDifferent": true
+      },
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-001",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-002",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-003",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-004",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-005",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-006",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-007",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-008",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        true
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-009",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-010",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-011",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-012",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-013",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-014",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-015",
+      "InputNativeType": "ABSENT_NULL",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-016",
+      "InputNativeType": "System.Boolean",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-017",
+      "InputNativeType": "System.Int32",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "RQ-018",
+      "InputNativeType": "System.Object[]",
+      "InputByteCount": null,
+      "Captured": [
+        false
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "D-001",
+      "InputNativeType": "ABSENT_NULL",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "TextCheck": "NATIVE_BYTES_REQUIRED",
+          "Authority": "NOT ESTABLISHED",
+          "SourceAdmission": "NOT ESTABLISHED",
+          "FrozenHandoff": "NOT IMPLEMENTED",
+          "ChildLengthEofShaVerification": "NOT OBSERVED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "D-002",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "TextCheck": "NATIVE_BYTES_REQUIRED",
+          "Authority": "NOT ESTABLISHED",
+          "SourceAdmission": "NOT ESTABLISHED",
+          "FrozenHandoff": "NOT IMPLEMENTED",
+          "ChildLengthEofShaVerification": "NOT OBSERVED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "D-003",
+      "InputNativeType": "System.Int32",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "TextCheck": "NATIVE_BYTES_REQUIRED",
+          "Authority": "NOT ESTABLISHED",
+          "SourceAdmission": "NOT ESTABLISHED",
+          "FrozenHandoff": "NOT IMPLEMENTED",
+          "ChildLengthEofShaVerification": "NOT OBSERVED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "D-004",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 0,
+      "Captured": [
+        {
+          "TextCheck": "EXACT_DRIVER_LENGTH_REQUIRED",
+          "Authority": "NOT ESTABLISHED",
+          "SourceAdmission": "NOT ESTABLISHED",
+          "FrozenHandoff": "NOT IMPLEMENTED",
+          "ChildLengthEofShaVerification": "NOT OBSERVED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "D-005",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 20176,
+      "Captured": [
+        {
+          "TextCheck": "EXACT_DRIVER_LENGTH_REQUIRED",
+          "Authority": "NOT ESTABLISHED",
+          "SourceAdmission": "NOT ESTABLISHED",
+          "FrozenHandoff": "NOT IMPLEMENTED",
+          "ChildLengthEofShaVerification": "NOT OBSERVED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "D-006",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 20178,
+      "Captured": [
+        {
+          "TextCheck": "EXACT_DRIVER_LENGTH_REQUIRED",
+          "Authority": "NOT ESTABLISHED",
+          "SourceAdmission": "NOT ESTABLISHED",
+          "FrozenHandoff": "NOT IMPLEMENTED",
+          "ChildLengthEofShaVerification": "NOT OBSERVED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-001",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-002",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 92,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-003",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 95,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-004",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-005",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 93,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-006",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 96,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-007",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 112,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-008",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 96,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-009",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 99,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-010",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 107,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-011",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 91,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-012",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 94,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-013",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-014",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 93,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-015",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 96,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-016",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 110,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-017",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 94,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-018",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 97,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-019",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 111,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-020",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 95,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-021",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 98,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-022",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 121,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "END_CASE",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-023",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 98,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-024",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 101,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-025",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 75,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": true,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-026",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 64,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": true,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-027",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 95,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-028",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 75,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": true,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-029",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 64,
+      "Captured": [
+        {
+          "TextCheck": "ALLOWLISTED_FRAME_TEXT_ONLY",
+          "RecordedAction": "STOP_BATCH",
+          "ProtectionRecord": true,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-030",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-031",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-032",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 75,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-033",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 75,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-034",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-035",
+      "InputNativeType": "System.String",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-036",
+      "InputNativeType": "ABSENT_NULL",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-037",
+      "InputNativeType": "System.Object[]",
+      "InputByteCount": null,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-038",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 0,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-039",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 257,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-040",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 1,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-041",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 107,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-042",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-043",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 111,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-044",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-045",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-046",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-047",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-048",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 216,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-049",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-050",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-051",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-052",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-053",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-054",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 111,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-055",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-056",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 110,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-057",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 90,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-058",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 79,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-059",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 114,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-060",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 109,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-061",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    },
+    {
+      "Id": "F-062",
+      "InputNativeType": "System.Byte[]",
+      "InputByteCount": 108,
+      "Captured": [
+        {
+          "TextCheck": "FRAME_REJECTED",
+          "RecordedAction": "NO_MATCH",
+          "ProtectionRecord": false,
+          "Qualification": "IN-MEMORY TEXT CHECK ONLY - NOT AUTHENTICATED",
+          "PeerEof": "NOT OBSERVED",
+          "TaskSettlement": "NOT OBSERVED",
+          "ProcessExit": "NOT OBSERVED",
+          "Deadline": "NOT OBSERVED",
+          "Authority": "NOT ESTABLISHED",
+          "CaseCompletion": "NOT ESTABLISHED"
+        }
+      ],
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "CopyMutation": null,
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS",
+      "Qualification": "LOCAL SYNTHETIC PURE CHECK ONLY; NO SOURCE ADMISSION OR CASE COMPLETION"
+    }
+  ],
+  "Checks": [
+    {
+      "Id": "HASH-LIST",
+      "Passed": true
+    },
+    {
+      "Id": "HASH-CONTROLLER",
+      "Passed": true
+    },
+    {
+      "Id": "REFERENCES-01",
+      "Passed": true
+    },
+    {
+      "Id": "AST-01",
+      "Passed": true
+    },
+    {
+      "Id": "LOAD-01",
+      "Passed": true
+    },
+    {
+      "Id": "M-001-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "M-001-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "M-001-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "M-001-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "M-002-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "M-002-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "M-002-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "M-002-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "M-003-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "M-003-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "M-003-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "M-003-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "M-004-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "M-004-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "M-004-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "M-004-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "M-005-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "M-005-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "M-005-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "M-005-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "M-006-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "M-006-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "M-006-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "M-006-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-001-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-001-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-001-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-001-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-002-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-002-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-002-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-002-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-003-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-003-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-003-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-003-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-004-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-004-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-004-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-004-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-005-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-005-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-005-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-005-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-006-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-006-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-006-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-006-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-007-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-007-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-007-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-007-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-008-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-008-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-008-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-008-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-009-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-009-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-009-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-009-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-010-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-010-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-010-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-010-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-011-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-011-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-011-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-011-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-012-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-012-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-012-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-012-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-013-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-013-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-013-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-013-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-014-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-014-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-014-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-014-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-015-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-015-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-015-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-015-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-016-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-016-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-016-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-016-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-017-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-017-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-017-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-017-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-018-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-018-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-018-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RQ-018-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "D-001-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "D-001-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "D-001-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "D-001-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "D-002-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "D-002-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "D-002-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "D-002-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "D-003-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "D-003-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "D-003-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "D-003-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "D-004-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "D-004-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "D-004-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "D-004-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "D-005-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "D-005-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "D-005-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "D-005-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "D-006-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "D-006-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "D-006-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "D-006-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-001-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-001-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-001-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-001-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-002-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-002-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-002-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-002-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-003-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-003-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-003-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-003-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-004-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-004-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-004-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-004-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-005-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-005-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-005-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-005-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-006-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-006-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-006-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-006-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-007-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-007-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-007-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-007-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-008-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-008-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-008-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-008-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-009-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-009-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-009-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-009-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-010-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-010-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-010-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-010-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-011-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-011-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-011-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-011-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-012-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-012-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-012-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-012-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-013-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-013-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-013-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-013-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-014-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-014-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-014-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-014-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-015-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-015-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-015-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-015-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-016-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-016-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-016-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-016-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-017-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-017-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-017-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-017-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-018-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-018-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-018-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-018-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-019-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-019-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-019-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-019-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-020-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-020-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-020-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-020-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-021-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-021-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-021-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-021-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-022-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-022-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-022-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-022-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-023-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-023-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-023-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-023-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-024-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-024-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-024-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-024-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-025-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-025-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-025-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-025-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-026-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-026-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-026-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-026-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-027-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-027-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-027-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-027-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-028-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-028-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-028-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-028-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-029-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-029-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-029-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-029-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-030-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-030-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-030-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-030-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-031-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-031-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-031-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-031-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-032-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-032-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-032-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-032-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-033-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-033-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-033-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-033-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-034-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-034-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-034-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-034-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-035-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-035-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-035-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-035-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-036-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-036-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-036-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-036-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-037-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-037-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-037-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-037-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-038-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-038-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-038-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-038-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-039-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-039-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-039-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-039-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-040-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-040-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-040-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-040-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-041-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-041-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-041-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-041-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-042-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-042-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-042-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-042-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-043-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-043-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-043-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-043-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-044-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-044-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-044-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-044-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-045-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-045-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-045-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-045-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-046-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-046-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-046-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-046-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-047-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-047-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-047-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-047-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-048-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-048-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-048-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-048-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-049-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-049-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-049-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-049-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-050-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-050-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-050-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-050-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-051-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-051-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-051-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-051-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-052-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-052-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-052-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-052-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-053-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-053-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-053-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-053-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-054-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-054-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-054-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-054-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-055-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-055-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-055-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-055-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-056-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-056-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-056-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-056-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-057-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-057-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-057-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-057-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-058-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-058-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-058-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-058-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-059-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-059-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-059-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-059-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-060-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-060-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-060-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-060-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-061-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-061-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-061-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-061-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "F-062-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "F-062-SHAPE",
+      "Passed": true
+    },
+    {
+      "Id": "F-062-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "F-062-LIMITS",
+      "Passed": true
+    }
+  ],
+  "D003Qualification": "INT32 ZERO PER REV2 INTRODUCTORY CLARIFICATION; HISTORICAL INT[] ROW UNCHANGED",
+  "D007": "NOT_RUN; SAME PRIVATE PREPARED BYTE HANDOFF NOT REBOUND OR SUBSTITUTED",
+  "UpstreamPathAndHashQualification": "RECORDED IN CANDIDATE TEXT ONLY - NOT INDEPENDENTLY VERIFIED",
+  "Excluded": [
+    "RD_WR_REEXECUTION",
+    "POSITIVE_DRIVER_SHA",
+    "REAL_DRIVER_BOOTSTRAP",
+    "SOURCE_ADMISSION",
+    "ACTUAL_CAPTURE",
+    "INTEGRATION",
+    "OTHER_PROJECTS"
+  ],
+  "Preserved": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01/B-02 OPEN; NO AGGREGATE OR FULL-189 VERDICT"
+}

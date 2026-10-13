@@ -1,0 +1,6493 @@
+{
+  "RecordKind": "LOCAL_FIXED_REPORTED_READ_WRITE_CLASSIFICATION_NOT_IO_OR_ACCEPTANCE",
+  "Outcome": "LOCAL_REPORTED_RW_CLASSIFICATION_CHECKS_PASS",
+  "FixtureListSHA256": "46AF48E3227BF85CD0612D2FA6D5D92DFFE6F242D0E1785BA9CF1FCBFC34C53C",
+  "ControllerSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+  "LoadCount": 1,
+  "LoadOutputCount": 0,
+  "ClassifierCalls": 96,
+  "NativeComparisonPassCount": 96,
+  "CheckCount": 390,
+  "UniqueCheckIds": 390,
+  "FailedChecks": 0,
+  "PrimaryValidationFailureType": null,
+  "CleanupFailures": [],
+  "RunspaceCloseCallReturned": true,
+  "RunspaceDisposeCallReturned": true,
+  "Cases": [
+    {
+      "Id": "RD-001",
+      "SourceLine": 362,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_BODY_BYTES_ONLY - SHORT_READ_IS_NOT_EOF",
+        "ReportedBodyBytesAfter": 1,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=System.Int32",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-002",
+      "SourceLine": 363,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "4",
+        "S-N",
+        "2",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_BODY_BYTES_ONLY - SHORT_READ_IS_NOT_EOF",
+        "ReportedBodyBytesAfter": 2,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=System.Int32",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-003",
+      "SourceLine": 364,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "255",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_BODY_BYTES_ONLY - SHORT_READ_IS_NOT_EOF",
+        "ReportedBodyBytesAfter": 256,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=System.Int32",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-004",
+      "SourceLine": 365,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "256",
+        "1",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_POSITIVE_NORMAL_READ_ZERO_ONLY",
+        "ReportedBodyBytesAfter": 256,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=System.Int32",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-005",
+      "SourceLine": 366,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_POSITIVE_NORMAL_READ_ZERO_ONLY",
+        "ReportedBodyBytesAfter": 0,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=System.Int32",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-006",
+      "SourceLine": 367,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDERR",
+        "0",
+        "1",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_POSITIVE_NORMAL_READ_ZERO_ONLY",
+        "ReportedBodyBytesAfter": 0,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=System.Int32",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-007",
+      "SourceLine": 368,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "256",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_DETECTION_BYTE - REJECT_OUTPUT",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "PRESENT - NEVER PUBLISH OR CONTINUE DRAINING",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-008",
+      "SourceLine": 369,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "255",
+        "2",
+        "S-N",
+        "2",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_DETECTION_BYTE - REJECT_OUTPUT",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "PRESENT - NEVER PUBLISH OR CONTINUE DRAINING",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-009",
+      "SourceLine": 370,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "257",
+        "S-N",
+        "257",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_DETECTION_BYTE - REJECT_OUTPUT",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "PRESENT - NEVER PUBLISH OR CONTINUE DRAINING",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-010",
+      "SourceLine": 371,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDERR",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_DETECTION_BYTE - REJECT_OUTPUT",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "PRESENT - NEVER PUBLISH OR CONTINUE DRAINING",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-011",
+      "SourceLine": 372,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-P",
+        "-1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "ORIGINAL_READ_PENDING - NO EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-012",
+      "SourceLine": 373,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-F",
+        "-1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_READ_FAILURE - NO EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-013",
+      "SourceLine": 374,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-C",
+        "-1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_READ_FAILURE - NO EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-014",
+      "SourceLine": 375,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-S",
+        "-1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_READ_FAILURE - NO EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-015",
+      "SourceLine": 376,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "0",
+        "true",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_OR_LOCAL_CLOSE - NO NORMAL_EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-016",
+      "SourceLine": 377,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_OR_LOCAL_CLOSE - NO NORMAL_EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-017",
+      "SourceLine": 378,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "true",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_OR_LOCAL_CLOSE - NO NORMAL_EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-018",
+      "SourceLine": 379,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-P",
+        "-1",
+        "false",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_OR_LOCAL_CLOSE - NO NORMAL_EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-019",
+      "SourceLine": 380,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-F",
+        "-1",
+        "true",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_OR_LOCAL_CLOSE - NO NORMAL_EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-020",
+      "SourceLine": 381,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "256",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_OR_LOCAL_CLOSE - NO NORMAL_EOF_INFERENCE",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-021",
+      "SourceLine": 382,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "stdout",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-022",
+      "SourceLine": 383,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "OTHER",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-023",
+      "SourceLine": 384,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "null",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "ABSENT_NULL",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-024",
+      "SourceLine": 385,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "-1",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-025",
+      "SourceLine": 386,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "257",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-026",
+      "SourceLine": 387,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDERR",
+        "1",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-027",
+      "SourceLine": 388,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "0",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-028",
+      "SourceLine": 389,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "-1",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-029",
+      "SourceLine": 390,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "256",
+        "2",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-030",
+      "SourceLine": 391,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDERR",
+        "0",
+        "2",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-031",
+      "SourceLine": 392,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "258",
+        "S-N",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-032",
+      "SourceLine": 393,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "UNKNOWN",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-033",
+      "SourceLine": 394,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "ran_to_completion",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-034",
+      "SourceLine": 395,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "-1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-035",
+      "SourceLine": 396,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "2",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-036",
+      "SourceLine": 397,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-P",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-037",
+      "SourceLine": 398,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-F",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-038",
+      "SourceLine": 399,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-C",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-039",
+      "SourceLine": 400,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-S",
+        "0",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-040",
+      "SourceLine": 401,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "string:0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.String",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-041",
+      "SourceLine": 402,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "string:1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-042",
+      "SourceLine": 403,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "string:1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-043",
+      "SourceLine": 404,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "null",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "ABSENT_NULL",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-044",
+      "SourceLine": 405,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "int:0",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-045",
+      "SourceLine": 406,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "int:0"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Int32"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-046",
+      "SourceLine": 407,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "int:0",
+        "0",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-047",
+      "SourceLine": 408,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "null",
+        "1",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "ABSENT_NULL",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-048",
+      "SourceLine": 409,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "null",
+        "S-N",
+        "1",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "ABSENT_NULL",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-049",
+      "SourceLine": 410,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-N",
+        "null",
+        "false",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "ABSENT_NULL",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-050",
+      "SourceLine": 411,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "0",
+        "S-N",
+        "0",
+        "false",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-051",
+      "SourceLine": 412,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "UNKNOWN",
+        "1",
+        "true",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "RD-052",
+      "SourceLine": 413,
+      "Function": "Get-DSP004ReadObservationClassification",
+      "InputTokens": [
+        "STDOUT",
+        "0",
+        "1",
+        "S-F",
+        "0",
+        "true",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_READ_RECORD",
+        "ReportedBodyBytesAfter": null,
+        "DetectionByte": "NOT CLASSIFIED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ActualPeerEof": "NOT OBSERVED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ReportedBodyBytesAfter=ABSENT_NULL",
+        "DetectionByte=System.String",
+        "Qualification=System.String",
+        "ActualPeerEof=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-001",
+      "SourceLine": 420,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_FULL_RANGE_TASK_NORMAL_ONLY",
+        "ActualPartialProgress": "NO BYTE COUNT - CHILD RECEIPT REMAINS UNVERIFIED",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-002",
+      "SourceLine": 421,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "PENDING",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_FULL_RANGE_TASK_NORMAL_ONLY",
+        "ActualPartialProgress": "NO BYTE COUNT - CHILD RECEIPT REMAINS UNVERIFIED",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-003",
+      "SourceLine": 422,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-P",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "ORIGINAL_WRITE_PENDING - NO NORMAL_INPUT_CLOSE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-004",
+      "SourceLine": 423,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-P",
+        "PENDING",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "ORIGINAL_WRITE_PENDING - NO NORMAL_INPUT_CLOSE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-005",
+      "SourceLine": 424,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-F",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_WRITE_FAILURE - PARTIAL_PROGRESS_UNKNOWN",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-006",
+      "SourceLine": 425,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-C",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_WRITE_FAILURE - PARTIAL_PROGRESS_UNKNOWN",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-007",
+      "SourceLine": 426,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-S",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_WRITE_FAILURE - PARTIAL_PROGRESS_UNKNOWN",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-008",
+      "SourceLine": 427,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "TIMED_OUT",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "WAIT_FAILED - ORIGINAL_TASK_SETTLEMENT_SEPARATE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-009",
+      "SourceLine": 428,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "CANCELED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "WAIT_FAILED - ORIGINAL_TASK_SETTLEMENT_SEPARATE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-010",
+      "SourceLine": 429,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "FAULTED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "WAIT_FAILED - ORIGINAL_TASK_SETTLEMENT_SEPARATE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-011",
+      "SourceLine": 430,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-P",
+        "TIMED_OUT",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "WAIT_FAILED - ORIGINAL_TASK_SETTLEMENT_SEPARATE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-012",
+      "SourceLine": 431,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-F",
+        "TIMED_OUT",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "WAIT_FAILED - ORIGINAL_TASK_SETTLEMENT_SEPARATE",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-013",
+      "SourceLine": 432,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-S",
+        "PENDING",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_WRITE_FAILURE - PARTIAL_PROGRESS_UNKNOWN",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-014",
+      "SourceLine": 433,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "ENDED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_LATCHED - LATE_COMPLETION_CANNOT_RESTORE_RESULT",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-015",
+      "SourceLine": 434,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "TIMED_OUT",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_LATCHED - LATE_COMPLETION_CANNOT_RESTORE_RESULT",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-016",
+      "SourceLine": 435,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-P",
+        "ENDED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_LATCHED - LATE_COMPLETION_CANNOT_RESTORE_RESULT",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-017",
+      "SourceLine": 436,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-F",
+        "CANCELED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_LATCHED - LATE_COMPLETION_CANNOT_RESTORE_RESULT",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-018",
+      "SourceLine": 437,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-S",
+        "FAULTED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_LATCHED - LATE_COMPLETION_CANNOT_RESTORE_RESULT",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-019",
+      "SourceLine": 438,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "CANCELED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "STOP_LATCHED - LATE_COMPLETION_CANNOT_RESTORE_RESULT",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-020",
+      "SourceLine": 439,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-C",
+        "PENDING",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "REPORTED_WRITE_FAILURE - PARTIAL_PROGRESS_UNKNOWN",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-021",
+      "SourceLine": 440,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "1",
+        "20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-022",
+      "SourceLine": 441,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "-1",
+        "20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-023",
+      "SourceLine": 442,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "0",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-024",
+      "SourceLine": 443,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20176",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-025",
+      "SourceLine": 444,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20178",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-026",
+      "SourceLine": 445,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "string:0",
+        "20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.String",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-027",
+      "SourceLine": 446,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "string:20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-028",
+      "SourceLine": 447,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "UNKNOWN",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-029",
+      "SourceLine": 448,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "ran_to_completion",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-030",
+      "SourceLine": 449,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "null",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "ABSENT_NULL",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-031",
+      "SourceLine": 450,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "UNKNOWN",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-032",
+      "SourceLine": 451,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "ended",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-033",
+      "SourceLine": 452,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "null",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "ABSENT_NULL",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-034",
+      "SourceLine": 453,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "ENDED",
+        "int:0"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Int32"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-035",
+      "SourceLine": 454,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "1",
+        "20177",
+        "S-N",
+        "ENDED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-036",
+      "SourceLine": 455,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20176",
+        "S-N",
+        "TIMED_OUT",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-037",
+      "SourceLine": 456,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "UNKNOWN",
+        "FAULTED",
+        "true"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-038",
+      "SourceLine": 457,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "ENDED",
+        "null"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "ABSENT_NULL"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-039",
+      "SourceLine": 458,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "null",
+        "20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "ABSENT_NULL",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-040",
+      "SourceLine": 459,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "null",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "ABSENT_NULL",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-041",
+      "SourceLine": 460,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "int:0",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-042",
+      "SourceLine": 461,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "20177",
+        "S-N",
+        "int:0",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int32",
+        "System.String",
+        "System.Int32",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-043",
+      "SourceLine": 462,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "0",
+        "int64:20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int32",
+        "System.Int64",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    },
+    {
+      "Id": "WR-044",
+      "SourceLine": 463,
+      "Function": "Get-DSP004WriteObservationClassification",
+      "InputTokens": [
+        "int64:0",
+        "20177",
+        "S-N",
+        "ENDED",
+        "false"
+      ],
+      "NativeInputTypes": [
+        "System.Int64",
+        "System.Int32",
+        "System.String",
+        "System.String",
+        "System.Boolean"
+      ],
+      "OutputCount": 1,
+      "Streams": {
+        "Error": 0,
+        "Warning": 0,
+        "Debug": 0,
+        "Verbose": 0,
+        "Information": 0,
+        "Progress": 0
+      },
+      "Actual": {
+        "Classification": "INVALID_REPORTED_WRITE_RECORD",
+        "ActualPartialProgress": "UNKNOWN",
+        "WriteByteCount": "NOT RETURNED BY INTERFACE",
+        "ChildLengthEofShaVerification": "NOT OBSERVED",
+        "InputClose": "NOT PERFORMED",
+        "AutomaticResend": "PROHIBITED",
+        "Qualification": "REPORTED OBSERVATIONS ONLY - NOT INDEPENDENTLY VERIFIED",
+        "ResourceOwnership": "NOT IMPLEMENTED",
+        "CaseCompletion": "NOT ESTABLISHED"
+      },
+      "NativeReturnTypes": [
+        "Classification=System.String",
+        "ActualPartialProgress=System.String",
+        "WriteByteCount=System.String",
+        "ChildLengthEofShaVerification=System.String",
+        "InputClose=System.String",
+        "AutomaticResend=System.String",
+        "Qualification=System.String",
+        "ResourceOwnership=System.String",
+        "CaseCompletion=System.String"
+      ],
+      "Comparison": "LOCAL_NATIVE_COMPARISON_PASS"
+    }
+  ],
+  "Checks": [
+    {
+      "Id": "HASH-LIST",
+      "Passed": true
+    },
+    {
+      "Id": "HASH-CONTROLLER",
+      "Passed": true
+    },
+    {
+      "Id": "ALIASES-01",
+      "Passed": true
+    },
+    {
+      "Id": "TABLE-01",
+      "Passed": true
+    },
+    {
+      "Id": "AST-01",
+      "Passed": true
+    },
+    {
+      "Id": "LOAD-01",
+      "Passed": true
+    },
+    {
+      "Id": "RD-001-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-001-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-001-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-001-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-002-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-002-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-002-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-002-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-003-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-003-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-003-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-003-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-004-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-004-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-004-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-004-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-005-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-005-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-005-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-005-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-006-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-006-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-006-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-006-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-007-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-007-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-007-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-007-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-008-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-008-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-008-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-008-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-009-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-009-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-009-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-009-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-010-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-010-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-010-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-010-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-011-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-011-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-011-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-011-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-012-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-012-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-012-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-012-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-013-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-013-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-013-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-013-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-014-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-014-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-014-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-014-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-015-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-015-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-015-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-015-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-016-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-016-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-016-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-016-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-017-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-017-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-017-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-017-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-018-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-018-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-018-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-018-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-019-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-019-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-019-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-019-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-020-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-020-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-020-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-020-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-021-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-021-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-021-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-021-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-022-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-022-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-022-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-022-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-023-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-023-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-023-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-023-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-024-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-024-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-024-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-024-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-025-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-025-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-025-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-025-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-026-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-026-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-026-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-026-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-027-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-027-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-027-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-027-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-028-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-028-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-028-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-028-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-029-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-029-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-029-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-029-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-030-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-030-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-030-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-030-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-031-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-031-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-031-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-031-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-032-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-032-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-032-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-032-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-033-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-033-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-033-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-033-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-034-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-034-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-034-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-034-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-035-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-035-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-035-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-035-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-036-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-036-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-036-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-036-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-037-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-037-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-037-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-037-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-038-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-038-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-038-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-038-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-039-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-039-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-039-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-039-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-040-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-040-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-040-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-040-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-041-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-041-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-041-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-041-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-042-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-042-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-042-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-042-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-043-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-043-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-043-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-043-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-044-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-044-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-044-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-044-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-045-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-045-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-045-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-045-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-046-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-046-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-046-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-046-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-047-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-047-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-047-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-047-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-048-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-048-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-048-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-048-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-049-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-049-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-049-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-049-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-050-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-050-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-050-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-050-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-051-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-051-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-051-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-051-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-052-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "RD-052-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "RD-052-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "RD-052-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-001-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-001-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-001-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-001-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-002-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-002-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-002-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-002-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-003-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-003-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-003-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-003-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-004-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-004-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-004-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-004-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-005-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-005-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-005-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-005-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-006-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-006-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-006-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-006-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-007-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-007-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-007-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-007-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-008-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-008-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-008-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-008-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-009-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-009-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-009-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-009-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-010-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-010-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-010-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-010-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-011-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-011-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-011-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-011-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-012-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-012-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-012-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-012-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-013-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-013-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-013-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-013-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-014-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-014-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-014-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-014-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-015-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-015-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-015-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-015-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-016-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-016-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-016-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-016-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-017-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-017-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-017-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-017-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-018-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-018-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-018-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-018-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-019-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-019-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-019-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-019-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-020-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-020-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-020-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-020-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-021-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-021-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-021-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-021-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-022-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-022-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-022-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-022-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-023-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-023-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-023-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-023-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-024-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-024-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-024-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-024-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-025-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-025-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-025-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-025-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-026-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-026-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-026-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-026-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-027-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-027-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-027-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-027-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-028-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-028-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-028-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-028-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-029-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-029-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-029-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-029-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-030-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-030-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-030-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-030-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-031-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-031-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-031-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-031-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-032-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-032-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-032-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-032-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-033-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-033-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-033-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-033-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-034-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-034-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-034-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-034-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-035-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-035-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-035-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-035-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-036-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-036-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-036-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-036-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-037-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-037-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-037-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-037-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-038-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-038-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-038-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-038-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-039-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-039-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-039-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-039-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-040-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-040-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-040-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-040-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-041-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-041-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-041-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-041-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-042-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-042-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-042-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-042-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-043-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-043-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-043-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-043-LIMITS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-044-CHANNELS",
+      "Passed": true
+    },
+    {
+      "Id": "WR-044-SURFACE",
+      "Passed": true
+    },
+    {
+      "Id": "WR-044-VALUES",
+      "Passed": true
+    },
+    {
+      "Id": "WR-044-LIMITS",
+      "Passed": true
+    }
+  ],
+  "Scope": "RD-001..052 AND WR-001..044 ONLY; CALLER-SUPPLIED SYNTHETIC EVENT RECORDS, NOT ACTUAL I/O",
+  "Serialization": "NATIVE TYPE/VALUE COMPARISON BEFORE JSON; JSON ALONE DOES NOT PRESERVE INT32/INT64 IDENTITY",
+  "Excluded": [
+    "M_6",
+    "RQ_18",
+    "D_7",
+    "F_62",
+    "REAL_DRIVER_OR_BOOTSTRAP",
+    "REAL_READ_WRITE_TASKS",
+    "SOURCE_ADMISSION",
+    "ACTUAL_CAPTURE",
+    "INTEGRATION",
+    "OTHER_PROJECTS"
+  ],
+  "CleanupQualification": "LOCAL CLOSE/DISPOSE CALL RETURN OBSERVATIONS ONLY; NOT FULL ENGINE OR RESOURCE SETTLEMENT",
+  "Preserved": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN; NO AGGREGATE OR FULL-189 VERDICT"
+}

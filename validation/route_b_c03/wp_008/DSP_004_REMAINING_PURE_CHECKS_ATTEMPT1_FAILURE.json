@@ -1,0 +1,53 @@
+{
+  "RecordKind": "LOCAL_FIXED_REMAINING_PURE_CHECKS_NOT_ACCEPTANCE_OR_COMPLETE_189",
+  "Outcome": "LOCAL_REMAINING_PURE_CHECKS_FAIL",
+  "FixtureListSHA256": "46AF48E3227BF85CD0612D2FA6D5D92DFFE6F242D0E1785BA9CF1FCBFC34C53C",
+  "ControllerSHA256": "891311B08078692C7D012EC5A3C80AFEC255A2B4E6E55BC9AD001B67CC6B47FB",
+  "Loads": 1,
+  "DirectPipelineInvocations": 1,
+  "ItemCount": 0,
+  "NativeComparisonPassCount": 0,
+  "CheckCount": 5,
+  "UniqueCheckIds": 5,
+  "FailedChecks": 0,
+  "PrimaryValidationFailureType": "System.Management.Automation.PropertyNotFoundException",
+  "CleanupFailures": [],
+  "RunspaceCloseCallReturned": true,
+  "RunspaceDisposeCallReturned": true,
+  "Cases": [],
+  "Checks": [
+    {
+      "Id": "HASH-LIST",
+      "Passed": true
+    },
+    {
+      "Id": "HASH-CONTROLLER",
+      "Passed": true
+    },
+    {
+      "Id": "REFERENCES-01",
+      "Passed": true
+    },
+    {
+      "Id": "AST-01",
+      "Passed": true
+    },
+    {
+      "Id": "LOAD-01",
+      "Passed": true
+    }
+  ],
+  "D003Qualification": "INT32 ZERO PER REV2 INTRODUCTORY CLARIFICATION; HISTORICAL INT[] ROW UNCHANGED",
+  "D007": "NOT_RUN; SAME PRIVATE PREPARED BYTE HANDOFF NOT REBOUND OR SUBSTITUTED",
+  "UpstreamPathAndHashQualification": "RECORDED IN CANDIDATE TEXT ONLY - NOT INDEPENDENTLY VERIFIED",
+  "Excluded": [
+    "RD_WR_REEXECUTION",
+    "POSITIVE_DRIVER_SHA",
+    "REAL_DRIVER_BOOTSTRAP",
+    "SOURCE_ADMISSION",
+    "ACTUAL_CAPTURE",
+    "INTEGRATION",
+    "OTHER_PROJECTS"
+  ],
+  "Preserved": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01/B-02 OPEN; NO AGGREGATE OR FULL-189 VERDICT"
+}
