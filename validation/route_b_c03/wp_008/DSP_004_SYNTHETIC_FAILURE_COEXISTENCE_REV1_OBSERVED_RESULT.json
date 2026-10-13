@@ -1,0 +1,694 @@
+{
+  "RecordKind": "LOCAL_SYNTHETIC_FAILURE_COEXISTENCE_OBSERVATION_NOT_OWNER_ACCEPTANCE",
+  "Outcome": "LOCAL_SYNTHETIC_FAILURE_COEXISTENCE_CHECKS_PASS",
+  "CandidateSHA256": "06D2729B96BEBE2EB3A29CEF66B91982CD3ABE73B0491D6BEE37C903A4E830D9",
+  "CompileCompleted": true,
+  "BatchCalls": 1,
+  "RefusalCalls": 1,
+  "CheckCount": 76,
+  "UniqueCheckIds": 76,
+  "FailedChecks": 0,
+  "PrimaryValidationFailureType": null,
+  "Cases": [
+    {
+      "CaseId": "F-01",
+      "FirstReason": "NO_SYNTHETIC_FAILURE",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": true,
+      "PrimaryFailurePresent": false,
+      "PrimaryFailureType": null,
+      "PrimaryReferenceRetained": false,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 3,
+      "CleanupFailureOccurrences": 0,
+      "CleanupFailureTypes": "",
+      "CleanupFailureStages": "",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": false,
+      "StopLatchedBeforeCleanup": false,
+      "SyntheticBodyRecorded": true,
+      "StoppedResultNotRestored": false,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 1,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-02",
+      "FirstReason": "PRIMARY_FAILURE",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": false,
+      "PrimaryFailurePresent": true,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "PrimaryReferenceRetained": true,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 3,
+      "CleanupFailureOccurrences": 0,
+      "CleanupFailureTypes": "",
+      "CleanupFailureStages": "",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": true,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-03",
+      "FirstReason": "CLEANUP_FAILURE_WITHOUT_PRIMARY",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": true,
+      "PrimaryFailurePresent": false,
+      "PrimaryFailureType": null,
+      "PrimaryReferenceRetained": false,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 2,
+      "CleanupFailureOccurrences": 1,
+      "CleanupFailureTypes": "System.InvalidOperationException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": false,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-04",
+      "FirstReason": "PRIMARY_FAILURE",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": false,
+      "PrimaryFailurePresent": true,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "PrimaryReferenceRetained": true,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 2,
+      "CleanupFailureOccurrences": 1,
+      "CleanupFailureTypes": "System.InvalidOperationException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": true,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-05",
+      "FirstReason": "PRIMARY_FAILURE",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": false,
+      "PrimaryFailurePresent": true,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "PrimaryReferenceRetained": true,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 1,
+      "CleanupFailureOccurrences": 2,
+      "CleanupFailureTypes": "System.InvalidOperationException;System.ObjectDisposedException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE;SYNTHETIC_DISPOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": true,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-06",
+      "FirstReason": "PRIMARY_FAILURE",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": false,
+      "PrimaryFailurePresent": true,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "PrimaryReferenceRetained": true,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 1,
+      "CleanupFailureOccurrences": 2,
+      "CleanupFailureTypes": "System.InvalidOperationException;System.InvalidOperationException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE;SYNTHETIC_DISPOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": true,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": true,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-07",
+      "FirstReason": "CLEANUP_FAILURE_WITHOUT_PRIMARY",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": true,
+      "PrimaryFailurePresent": false,
+      "PrimaryFailureType": null,
+      "PrimaryReferenceRetained": false,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 1,
+      "CleanupFailureOccurrences": 2,
+      "CleanupFailureTypes": "System.InvalidOperationException;System.ObjectDisposedException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE;SYNTHETIC_DISPOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": false,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 1,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-08",
+      "FirstReason": "PRIMARY_FAILURE",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": false,
+      "PrimaryFailurePresent": true,
+      "PrimaryFailureType": "System.InvalidOperationException",
+      "PrimaryReferenceRetained": true,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 2,
+      "CleanupFailureOccurrences": 1,
+      "CleanupFailureTypes": "System.InvalidOperationException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": true,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 2,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    },
+    {
+      "CaseId": "F-09",
+      "FirstReason": "CLEANUP_FAILURE_WITHOUT_PRIMARY",
+      "PrimaryAttempted": true,
+      "PrimaryReturned": true,
+      "PrimaryFailurePresent": false,
+      "PrimaryFailureType": null,
+      "PrimaryReferenceRetained": false,
+      "CleanupAttempts": 3,
+      "CleanupReturned": 2,
+      "CleanupFailureOccurrences": 1,
+      "CleanupFailureTypes": "System.InvalidOperationException",
+      "CleanupFailureStages": "SYNTHETIC_CLOSE",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": true,
+      "StopLatchedBeforeCleanup": false,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": true,
+      "CompletionAttempts": 2,
+      "HistoricalCompletionSuccesses": 1,
+      "RepeatRefused": false,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    }
+  ],
+  "Repeat": [
+    {
+      "CaseId": "F-REPEAT",
+      "FirstReason": "REPEATED_LOCAL_BATCH_REFUSED",
+      "PrimaryAttempted": false,
+      "PrimaryReturned": false,
+      "PrimaryFailurePresent": false,
+      "PrimaryFailureType": null,
+      "PrimaryReferenceRetained": false,
+      "CleanupAttempts": 0,
+      "CleanupReturned": 0,
+      "CleanupFailureOccurrences": 0,
+      "CleanupFailureTypes": "",
+      "CleanupFailureStages": "",
+      "AllCleanupReferencesRetained": true,
+      "SameExceptionHasTwoCleanupOccurrences": false,
+      "StopLatched": false,
+      "StopLatchedBeforeCleanup": false,
+      "SyntheticBodyRecorded": false,
+      "StoppedResultNotRestored": false,
+      "CompletionAttempts": 0,
+      "HistoricalCompletionSuccesses": 0,
+      "RepeatRefused": true,
+      "ObservationScope": "NEW FIXED IN-MEMORY SYNTHETIC OPERATIONS ONLY; NOT ACCEPTED SUPERVISOR OR PROCESS CLEANUP",
+      "IdentityQualification": "IN-PROCESS REFERENCE CHECK ONLY; NO CROSS-PROCESS RETENTION OR FREEZE PROOF",
+      "CleanupQualification": "SYNTHETIC DISPOSE METHODS ONLY; NO OS RESOURCE OR DESCENDANT SETTLEMENT CLAIM",
+      "Authority": "NOT ESTABLISHED",
+      "SourceAdmission": "NOT ESTABLISHED"
+    }
+  ],
+  "Checks": [
+    {
+      "Id": "API-01",
+      "Scope": "Closed fixed zero-argument public entry; public metadata inspection only",
+      "Passed": true
+    },
+    {
+      "Id": "SET-01",
+      "Scope": "Nine fixed unique local synthetic records",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-01-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-02-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-03-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-04-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-05-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-06-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-07-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-08-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-CAUSE",
+      "Scope": "First protective cause preserved; cleanup cannot overwrite a primary cause",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-PRIMARY",
+      "Scope": "Original primary exception reference or explicit absence; no cleanup-to-primary substitution",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-SECONDARY",
+      "Scope": "Ordered actual synthetic exception occurrences; same-instance duplicates retain both events",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-CLEANUP",
+      "Scope": "All three independent synthetic cleanup methods attempted; not OS cleanup proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-STOP",
+      "Scope": "Stop latch and final result rejection retained without fabricating a repeat refusal",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-COMPLETE",
+      "Scope": "Historical tentative completion distinct from final body; no late recovery after a stop",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-SCOPE",
+      "Scope": "Scope qualifications are recorded metadata, not external non-execution proof",
+      "Passed": true
+    },
+    {
+      "Id": "F-09-OUTPUT",
+      "Scope": "Public observation surface contains getter-only primitive metadata; no Exception/array export",
+      "Passed": true
+    },
+    {
+      "Id": "REPEAT-01",
+      "Scope": "Actual second request refused within the same compiled assembly",
+      "Passed": true
+    },
+    {
+      "Id": "REPEAT-02",
+      "Scope": "Refused request has no invented synthetic primary, cleanup or completion operation",
+      "Passed": true
+    }
+  ],
+  "ProcessStart": "NOT IMPLEMENTED OR CALLED IN THIS NEW BATCH",
+  "RealResourceCleanup": "NOT IMPLEMENTED OR CALLED; DISPOSE METHODS ARE FIXED SYNTHETIC OPERATIONS",
+  "AcceptedCandidateInvocation": "NONE IN THIS BATCH CODE PATH",
+  "CoverageQualification": "NEW IN-MEMORY CANDIDATE ONLY; NOT ACTUAL PROCESS/STREAM CLEANUP FAILURE INJECTION",
+  "ReferenceQualification": "ORIGINAL EXCEPTIONS RETAINED PRIVATELY IN THIS PROCESS; PUBLIC BOOLEANS ARE NOT CROSS-PROCESS OBJECT RETENTION",
+  "Uncovered": [
+    "ACCEPTED_SUPERVISOR_FAILURE_PATHS",
+    "REAL_PROCESS_STREAM_CLEANUP_FAILURE_INJECTION",
+    "ALL_DESCENDANT_AND_RESOURCE_SETTLEMENT",
+    "SYNCHRONOUS_CALL_HARD_BOUNDS",
+    "TRUSTED_ROOT_AND_TRANSITIVE_DEPENDENCIES",
+    "POSITIVE_DRIVER_SHA",
+    "CALLEE_REFERENCE_AND_FREEZE",
+    "FULL_189_ITEM_PLAN"
+  ],
+  "Preserved": "ALL LIMITED PRESERVED; DSP-004 OPEN / HOLD; B-01 AND B-02 OPEN; NO SOURCE ADMISSION, ACTUAL CAPTURE OR INTEGRATION"
+}
