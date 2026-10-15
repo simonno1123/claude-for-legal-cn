@@ -1,0 +1,11 @@
+{
+  "RecordVersion": "DSP004-JSON-GATE-CONVERSION-BOUNDARY-ATTEMPT2-FAILURE",
+  "Disposition": "COLLECTOR_FAILED_RETAINED_NOT_A_PASS",
+  "EntrySHA256": "7985CB5C18E307FF86659BAD8726195414988F7BC50C0431E576CD29C9214B8D",
+  "EntrySnapshot": "validation/route_b_c03/wp_008/DSP_004_JSON_GATE_CONVERSION_BOUNDARY_ATTEMPT1_ENTRY_SNAPSHOT.txt",
+  "OuterWaitBudgetMilliseconds": 15000,
+  "ObservedOuterExitCode": 1,
+  "ObservedOuterOutput": "ParentContainsErrorRecordException: \r\nLine |\r\n  23 |  $stdout=$outputTask.GetAwaiter().GetResult();$stderr=$errorTask.GetAw …\r\n     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Exception calling \"GetResult\" with \"0\" argument(s): \"Unable to translate bytes [D0] at index 621 from specified code page to Unicode.\"\r\n",
+  "ChildStructuredResult": "NOT RETAINED: strict UTF-8 stdout StreamReader task faulted before the collector could emit its archive",
+  "Qualification": "WaitTimedOut and exact child elapsed were not emitted by this failed collector; do not infer them. This failure does not establish a subject-parser defect."
+}

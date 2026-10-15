@@ -1,0 +1,17 @@
+{
+  "RecordVersion": "DSP004-JSON-GATE-CONVERSION-BOUNDARY-ATTEMPT1-FAILURE",
+  "Disposition": "ATTEMPT_INCOMPLETE_RETAINED_NOT_A_PASS",
+  "EntrySHA256": "7985CB5C18E307FF86659BAD8726195414988F7BC50C0431E576CD29C9214B8D",
+  "EntryBytes": 14391,
+  "EntrySnapshot": "validation/route_b_c03/wp_008/DSP_004_JSON_GATE_CONVERSION_BOUNDARY_ATTEMPT1_ENTRY_SNAPSHOT.txt",
+  "OuterCaptureBudgetMilliseconds": 15000,
+  "OuterCaptureObserved": "WaitForExit(15000) returned false; Kill and WaitForExit returned; outer collector threw ENTRY_TIMEOUT",
+  "OuterCollectorExitCode": 1,
+  "OuterCollectorOutput": "Exception: \r\nLine |\r\n  22 |  … 15000)){$process.Kill();$process.WaitForExit();throw 'ENTRY_TIMEOUT'}\r\n     |                                                   ~~~~~~~~~~~~~~~~~~~~~\r\n     | ENTRY_TIMEOUT\r\n",
+  "ChildStructuredResult": "NOT RETAINED: collector did not serialize child stdout/stderr after its timeout",
+  "CompletedCases": "NOT OBSERVED",
+  "CheckResults": "NOT OBSERVED",
+  "Diagnosis": "NOT YET ESTABLISHED",
+  "AcceptedSourceModification": "NONE",
+  "Limits": "Do not infer zero child output, exact elapsed time, subject defect, passing case counts, or formal WP-008 execution."
+}
