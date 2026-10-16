@@ -1,0 +1,405 @@
+{
+  "artifact_id": "DSP004-FORMAL-ACCEPTANCE-PREPARATION-CANDIDATE-REV1",
+  "artifact_type": "NON_OPERATIVE_PREPARATION_PROPOSAL_NOT_MANIFEST_NOT_RUNTIME_SCHEMA",
+  "project": "claude-for-legal-cn",
+  "scenario": "C03-TA-V-004",
+  "scope": "FORMAL_ACCEPTANCE_PREPARATION_ONLY",
+  "request_text": "继续把 DSP-004 做到可正式验收",
+  "request_effect": "PREPARE_PRECONDITIONS_NOT_ACCEPTANCE_OR_SOURCE_ADMISSION",
+  "retained_state": {
+    "dsp004": "OPEN / HOLD",
+    "b01": "OPEN",
+    "b02": "OPEN",
+    "limitations": "ALL_RETAINED"
+  },
+  "positive_decision_authority": "PROJECT_OWNER",
+  "source_binding_proposals": [
+    {
+      "source_role": "SRC004-E-PROJECT",
+      "boundary": "PROJECT",
+      "side": "EXPECTED",
+      "source_identity": "DSP004-EXPECTED-PROJECT-V1",
+      "source_version": "REV1 — DOCUMENT CANDIDATE VERSION ONLY",
+      "carrier": {
+        "path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+        "sha256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+        "bytes": 10820
+      },
+      "locator": "本文件第 3.1 节，Field = Expected Reference 的唯一表格行",
+      "recorded_reference": "SYNTHETIC-PROJECT-001",
+      "evidence_kind": "EXISTING_SYNTHETIC_EXPECTED_RECORD_ONLY",
+      "proposed_producer_role": "BASELINE_PREPARER",
+      "proposed_consumer_role": "FIXED_EXPECTED_READER",
+      "admission_effect": "NONE_GRANTED_BY_THIS_PACKAGE",
+      "use_binding": {
+        "variant_id": null,
+        "attempt_id": null,
+        "input_snapshot_sha256": null,
+        "authority_record": null
+      },
+      "capture_entry": null,
+      "capture_observation_sha256": null
+    },
+    {
+      "source_role": "SRC004-E-SESSION",
+      "boundary": "SESSION",
+      "side": "EXPECTED",
+      "source_identity": "DSP004-EXPECTED-SESSION-V1",
+      "source_version": "REV1 — DOCUMENT CANDIDATE VERSION ONLY",
+      "carrier": {
+        "path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+        "sha256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+        "bytes": 10820
+      },
+      "locator": "本文件第 3.2 节，Field = Expected Reference 的唯一表格行",
+      "recorded_reference": "SYNTHETIC-SESSION-001",
+      "evidence_kind": "EXISTING_SYNTHETIC_EXPECTED_RECORD_ONLY",
+      "proposed_producer_role": "BASELINE_PREPARER",
+      "proposed_consumer_role": "FIXED_EXPECTED_READER",
+      "admission_effect": "NONE_GRANTED_BY_THIS_PACKAGE",
+      "use_binding": {
+        "variant_id": null,
+        "attempt_id": null,
+        "input_snapshot_sha256": null,
+        "authority_record": null
+      },
+      "capture_entry": null,
+      "capture_observation_sha256": null
+    },
+    {
+      "source_role": "SRC004-E-PROVIDER",
+      "boundary": "PROVIDER",
+      "side": "EXPECTED",
+      "source_identity": "DSP004-EXPECTED-PROVIDER-V1",
+      "source_version": "REV1 — DOCUMENT CANDIDATE VERSION ONLY",
+      "carrier": {
+        "path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+        "sha256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+        "bytes": 10820
+      },
+      "locator": "本文件第 3.3 节，Field = Expected Reference 的唯一表格行",
+      "recorded_reference": "SYNTHETIC-PROVIDER-001",
+      "evidence_kind": "EXISTING_SYNTHETIC_EXPECTED_RECORD_ONLY",
+      "proposed_producer_role": "BASELINE_PREPARER",
+      "proposed_consumer_role": "FIXED_EXPECTED_READER",
+      "admission_effect": "NONE_GRANTED_BY_THIS_PACKAGE",
+      "use_binding": {
+        "variant_id": null,
+        "attempt_id": null,
+        "input_snapshot_sha256": null,
+        "authority_record": null
+      },
+      "capture_entry": null,
+      "capture_observation_sha256": null
+    },
+    {
+      "source_role": "SRC004-A-PROJECT",
+      "boundary": "PROJECT",
+      "side": "ACTUAL",
+      "source_identity": null,
+      "source_version": null,
+      "carrier": null,
+      "locator": null,
+      "recorded_reference": null,
+      "evidence_kind": "MISSING_CONTROLLED_CAPTURE_SOURCE",
+      "proposed_producer_role": "CONTROLLED_INVOCATION_CONTEXT_PRODUCER",
+      "proposed_consumer_role": "FIXED_ACTUAL_CAPTURE_ADAPTER",
+      "admission_effect": "NONE_GRANTED_BY_THIS_PACKAGE",
+      "use_binding": {
+        "variant_id": null,
+        "attempt_id": null,
+        "input_snapshot_sha256": null,
+        "authority_record": null
+      },
+      "capture_entry": null,
+      "capture_observation_sha256": null
+    },
+    {
+      "source_role": "SRC004-A-SESSION",
+      "boundary": "SESSION",
+      "side": "ACTUAL",
+      "source_identity": null,
+      "source_version": null,
+      "carrier": null,
+      "locator": null,
+      "recorded_reference": null,
+      "evidence_kind": "MISSING_CONTROLLED_CAPTURE_SOURCE",
+      "proposed_producer_role": "CONTROLLED_INVOCATION_CONTEXT_PRODUCER",
+      "proposed_consumer_role": "FIXED_ACTUAL_CAPTURE_ADAPTER",
+      "admission_effect": "NONE_GRANTED_BY_THIS_PACKAGE",
+      "use_binding": {
+        "variant_id": null,
+        "attempt_id": null,
+        "input_snapshot_sha256": null,
+        "authority_record": null
+      },
+      "capture_entry": null,
+      "capture_observation_sha256": null
+    },
+    {
+      "source_role": "SRC004-A-PROVIDER",
+      "boundary": "PROVIDER",
+      "side": "ACTUAL",
+      "source_identity": null,
+      "source_version": null,
+      "carrier": null,
+      "locator": null,
+      "recorded_reference": null,
+      "evidence_kind": "MISSING_CONTROLLED_CAPTURE_SOURCE",
+      "proposed_producer_role": "CONTROLLED_INVOCATION_CONTEXT_PRODUCER",
+      "proposed_consumer_role": "FIXED_ACTUAL_CAPTURE_ADAPTER",
+      "admission_effect": "NONE_GRANTED_BY_THIS_PACKAGE",
+      "use_binding": {
+        "variant_id": null,
+        "attempt_id": null,
+        "input_snapshot_sha256": null,
+        "authority_record": null
+      },
+      "capture_entry": null,
+      "capture_observation_sha256": null
+    }
+  ],
+  "root_binding_proposals": [
+    {
+      "root_id": "PROJECT_ROOT",
+      "recorded_location": "C:/Users/Administrator/Documents/claude-for-legal-cn-phase2.5",
+      "source_reference": ".codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_WP_008_V3_2_V2_2_DESIGN_PAIR_ADOPTION_RECORD.md",
+      "location_qualification": "WORKSPACE_LOCATOR_ONLY_NOT_TRUST_OR_READ_GRANT",
+      "canonical_directory_identity": null,
+      "resolver_identity": null,
+      "case_policy": null,
+      "reparse_policy": null,
+      "check_to_use_integrity_evidence": null,
+      "authority_acceptance_record": null,
+      "read_phase_policy": null,
+      "permitted_purpose": "DSP004_FORMAL_ACCEPTANCE_PREPARATION_ONLY",
+      "binding_state": "NOT_ESTABLISHED_BY_THIS_PACKAGE",
+      "read_authority_granted": false
+    },
+    {
+      "root_id": "VENV_ROOT",
+      "recorded_location": ".venv-validation",
+      "source_reference": "validation/route_b_c03/wp_008/ENVIRONMENT_MANIFEST.md",
+      "location_qualification": "HISTORICAL_PREPARATION_RECORD_ONLY_NOT_CURRENT_VERIFICATION",
+      "canonical_directory_identity": null,
+      "resolver_identity": null,
+      "case_policy": null,
+      "reparse_policy": null,
+      "check_to_use_integrity_evidence": null,
+      "authority_acceptance_record": null,
+      "read_phase_policy": null,
+      "permitted_purpose": "DSP004_FORMAL_ACCEPTANCE_PREPARATION_ONLY",
+      "binding_state": "NOT_ESTABLISHED_BY_THIS_PACKAGE",
+      "read_authority_granted": false
+    },
+    {
+      "root_id": "RUNTIME_ROOT",
+      "recorded_location": null,
+      "source_reference": null,
+      "location_qualification": "REQUIRES_EXACT_CONFIG_DERIVATION_NO_DISCOVERY_OR_FALLBACK",
+      "canonical_directory_identity": null,
+      "resolver_identity": null,
+      "case_policy": null,
+      "reparse_policy": null,
+      "check_to_use_integrity_evidence": null,
+      "authority_acceptance_record": null,
+      "read_phase_policy": null,
+      "permitted_purpose": "DSP004_FORMAL_ACCEPTANCE_PREPARATION_ONLY",
+      "binding_state": "NOT_ESTABLISHED_BY_THIS_PACKAGE",
+      "read_authority_granted": false
+    },
+    {
+      "root_id": "SYSTEM_ROOT",
+      "recorded_location": null,
+      "source_reference": null,
+      "location_qualification": "REQUIRES_EXACT_HOST_SOURCE_NO_INFERRED_SYSTEM_DIRECTORY",
+      "canonical_directory_identity": null,
+      "resolver_identity": null,
+      "case_policy": null,
+      "reparse_policy": null,
+      "check_to_use_integrity_evidence": null,
+      "authority_acceptance_record": null,
+      "read_phase_policy": null,
+      "permitted_purpose": "DSP004_FORMAL_ACCEPTANCE_PREPARATION_ONLY",
+      "binding_state": "NOT_ESTABLISHED_BY_THIS_PACKAGE",
+      "read_authority_granted": false
+    }
+  ],
+  "role_separation": {
+    "expected_source_must_not_be_rewritten_by_actual_producer": true,
+    "actual_reference_must_not_be_backfilled_from_expected": true,
+    "same_call_requires_controlled_capture_not_correlation_equality": true,
+    "reviewer_must_be_separate_from_materializer_for_independent_review": true,
+    "real_person_identity_required": false,
+    "real_provider_required": false,
+    "null_provider_status_is_not_provider_identity": true
+  },
+  "next_inventory_scope_proposal": {
+    "project_record_paths": [
+      "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "scripts/phase2_runtime/route_b_c03/provider_port.py",
+      "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+      "validation/route_b_c03/wp_008/ENVIRONMENT_MANIFEST.md",
+      "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "validation/route_b_c03/wp_008/DSP_004_NATIVE_CONTRACT_CANDIDATE_REV1.py",
+      "validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_CALLER_CANDIDATE_REV1.py",
+      "validation/route_b_c03/wp_008/DSP_004_EXPECTED_BASELINE_READER_CANDIDATE_REV1.py",
+      "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md"
+    ],
+    "environment_record_paths": [
+      ".venv-validation/pyvenv.cfg",
+      ".venv-validation/Scripts/python.exe"
+    ],
+    "runtime_paths_after_config_binding": null,
+    "system_paths_after_host_binding": null,
+    "permission_state": "PROPOSED_ONLY_NOT_GRANTED_BY_THIS_PACKAGE",
+    "no_directory_wide_read_or_recursion": true,
+    "no_execution_or_environment_changes": true
+  },
+  "gates": [
+    {
+      "id": "DSP004-FA-01",
+      "order": 1,
+      "purpose": "PREPARATION_PACKAGE_SCOPE_AND_FIXED_SOURCE_REVIEW",
+      "state": "REVIEW_REQUIRED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-02",
+      "order": 2,
+      "purpose": "OWNER_SOURCE_PREPARATION_AND_ROOT_RECORD_SCOPE_DECISION",
+      "state": "OWNER_DECISION_REQUIRED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-03",
+      "order": 3,
+      "purpose": "SIX_SIDE_SOURCE_USE_AND_CONTROLLED_CAPTURE_CONTRACT",
+      "state": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-04",
+      "order": 4,
+      "purpose": "COMPLETE_TYPED_CONTRACT_AND_ARRAY_ORDER_POLICY",
+      "state": "DESIGN_AND_INDEPENDENT_REVIEW_REQUIRED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-05",
+      "order": 5,
+      "purpose": "CURRENT_INPUT_COMPARISON_AND_HARNESS_ACCEPTANCE",
+      "state": "SEPARATE_FIXED_SHA_DISPOSITION_REQUIRED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-06",
+      "order": 6,
+      "purpose": "STATIC_DEPENDENCY_STARTUP_AND_ISOLATION_EVIDENCE",
+      "state": "PRECONDITIONS_NOT_ESTABLISHED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-07",
+      "order": 7,
+      "purpose": "DETACHED_MANIFEST_ACCEPTANCE_AND_EXACT_RUN_AUTHORITY",
+      "state": "NOT_AUTHORIZED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    },
+    {
+      "id": "DSP004-FA-08",
+      "order": 8,
+      "purpose": "RECORDED_VALIDATION_REVIEW_AND_OWNER_ACCEPTANCE",
+      "state": "NOT_AUTHORIZED",
+      "completed": false,
+      "positive_decision_authority": "PROJECT_OWNER",
+      "automatic_transition": false
+    }
+  ],
+  "source_identity_basis": [
+    {
+      "Path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+      "SHA256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+      "Bytes": 16475
+    },
+    {
+      "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+      "Bytes": 4555
+    },
+    {
+      "Path": "scripts/phase2_runtime/route_b_c03/provider_port.py",
+      "SHA256": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+      "Bytes": 870
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+      "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+      "Bytes": 770
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ENVIRONMENT_MANIFEST.md",
+      "SHA256": "EFCF1A783199F58387BDBB0704563ED943A5E6A3E319A04CE6D58E57FC5CA531",
+      "Bytes": 4107
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "SHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+      "Bytes": 10820
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_NATIVE_CONTRACT_CANDIDATE_REV1.py",
+      "SHA256": "1544B7D8101493072E9BCA5C23B09C3C811F1B52CB1E9F5A8D73C976576FC312",
+      "Bytes": 5381
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_CALLER_CANDIDATE_REV1.py",
+      "SHA256": "EF554C3051318BD305EDE6B8511C433C1BB9E20B10E93E5FB5F71C9AFF7A7E63",
+      "Bytes": 8227
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_EXPECTED_BASELINE_READER_CANDIDATE_REV1.py",
+      "SHA256": "AE1389EDA1C3B9129A0546DA5764C1F68A6B0193A22DA3431CAA89BAB8DC0727",
+      "Bytes": 9033
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md",
+      "SHA256": "538283D7E48520B56B90ACA42A705A43AFEA468AF6DE8B7A46AE34636A3805AA",
+      "Bytes": 14774
+    }
+  ],
+  "not_authorized": [
+    "ACCEPTANCE",
+    "SOURCE_ADMISSION",
+    "ACTUAL_CAPTURE",
+    "FORMAL_VALIDATION_RUN",
+    "MANIFEST_GENERATION",
+    "ACCEPTED_FILE_MODIFICATION",
+    "BUSINESS_INTEGRATION",
+    "DEPLOYMENT",
+    "REAL_MATTER",
+    "REAL_PROVIDER",
+    "CREDENTIAL",
+    "NETWORK",
+    "PACKAGE_INSTALL",
+    "INDEPENDENT_ACOS",
+    "OTHER_PROJECT"
+  ],
+  "review_status": "NOT_INDEPENDENTLY_REVIEWED",
+  "qualification": "EMPTY_FACTS_ARE_PREPARATION_GAPS_NOT_VALIDATED_BINDINGS"
+}
