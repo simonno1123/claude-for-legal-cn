@@ -1,0 +1,1545 @@
+{
+  "B-01": "OPEN",
+  "B-02": "OPEN",
+  "aggregate_privacy_security_legal_verdict": "NOT_ISSUED",
+  "attempt": 2,
+  "business_sources": "NOT_ADMITTED",
+  "cases": [
+    {
+      "case": "NORMAL",
+      "elapsed_seconds_observed": 0.984,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "NORMAL",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 0,
+        "dispatch_attempts_or_unknown": 158,
+        "kill_requested": false,
+        "kill_returned": false,
+        "last_report_determination": "PASS",
+        "last_report_phase": "ORACLE",
+        "maximum_active_observed": 1,
+        "native_errors_held": 0,
+        "native_supplement_reports": 8,
+        "pass_reports": 158,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": null,
+        "reports": 158,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "NATIVE_DIRECTORY_REPORTED_COMPLETE",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "EARLY_STOP",
+      "elapsed_seconds_observed": 0.375,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "EARLY_STOP",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 0,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": false,
+        "kill_returned": false,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 0,
+        "native_supplement_reports": 8,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": null,
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "EARLY_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "BAD_B_SHA",
+      "elapsed_seconds_observed": 0.25,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "BAD_B_SHA",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 2,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "STOP_LATCHED",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "BAD_ORDER",
+      "elapsed_seconds_observed": 0.281,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "BAD_ORDER",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 2,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "STOP_LATCHED",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "TRUNCATED_SOURCE",
+      "elapsed_seconds_observed": 0.25,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "TRUNCATED_SOURCE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "REPORT_EOF",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "EXTRA_SOURCE",
+      "elapsed_seconds_observed": 0.235,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "EXTRA_SOURCE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "REPORT_EOF",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "KEEP_CODE_OPEN",
+      "elapsed_seconds_observed": 0.734,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "KEEP_CODE_OPEN",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "DEADLINE",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "BAD_COMMAND",
+      "elapsed_seconds_observed": 0.359,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "BAD_COMMAND",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 8,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "REPORT_EOF",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "NEXT_DUPLICATE",
+      "elapsed_seconds_observed": 0.422,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "NEXT_DUPLICATE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 2,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": "PASS",
+        "last_report_phase": "SUT",
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 8,
+        "pass_reports": 1,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "REPORT_EOF",
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "EXTRA_AFTER_STOP",
+      "elapsed_seconds_observed": 1.125,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "EXTRA_AFTER_STOP",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 158,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": "PASS",
+        "last_report_phase": "ORACLE",
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 8,
+        "pass_reports": 158,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "REPORT_EOF",
+        "reports": 158,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "HANG",
+      "elapsed_seconds_observed": 0.641,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "HANG",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "DEADLINE",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "STDOUT",
+      "elapsed_seconds_observed": 0.187,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "STDOUT",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "FORBIDDEN_STDOUT_BYTE",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 1
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "STDERR",
+      "elapsed_seconds_observed": 0.204,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "STDERR",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "FORBIDDEN_STDERR_BYTE",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 1,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "BAD_READY",
+      "elapsed_seconds_observed": 0.203,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "BAD_READY",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "READY_FRAME",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "PARTIAL",
+      "elapsed_seconds_observed": 0.672,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "PARTIAL",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "DEADLINE",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "OVERLONG",
+      "elapsed_seconds_observed": 0.265,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "OVERLONG",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "REPORT_OVERFLOW",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "EARLY_EOF",
+      "elapsed_seconds_observed": 0.188,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "EARLY_EOF",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 0,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "REPORT_EOF",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "DUPLICATE",
+      "elapsed_seconds_observed": 0.172,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "DUPLICATE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 2,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": "PASS",
+        "last_report_phase": "SUT",
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 1,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "REPORT_ORDER_OR_ID",
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "OUT_OF_ORDER",
+      "elapsed_seconds_observed": 0.187,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "OUT_OF_ORDER",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "REPORT_ORDER_OR_ID",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "SETUP_NE",
+      "elapsed_seconds_observed": 0.203,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "SETUP_NE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 0,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": false,
+        "kill_returned": false,
+        "last_report_determination": "NOT_EVALUABLE",
+        "last_report_phase": "SETUP",
+        "maximum_active_observed": 1,
+        "native_errors_held": 0,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": null,
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "STOPPED_ON_NONPASS",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "CASE_FAIL",
+      "elapsed_seconds_observed": 0.203,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "CASE_FAIL",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 0,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": false,
+        "kill_returned": false,
+        "last_report_determination": "FAIL",
+        "last_report_phase": "SUT",
+        "maximum_active_observed": 1,
+        "native_errors_held": 0,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": null,
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "STOPPED_ON_NONPASS",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "TRAILER",
+      "elapsed_seconds_observed": 0.188,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "TRAILER",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": "FAIL",
+        "last_report_phase": "SUT",
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "EXTRA_REPORT_AFTER_STOPPED",
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "REAL_INTERRUPT",
+      "elapsed_seconds_observed": 0.219,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "REAL_INTERRUPT",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 78,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "REPORT_EOF",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "DESCENDANT",
+      "elapsed_seconds_observed": 0.218,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "DESCENDANT",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 0,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": null,
+        "last_report_phase": null,
+        "maximum_active_observed": 3,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": false,
+        "reason": "DESCENDANT_STOP_EXERCISE",
+        "reports": 0,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "STDOUT_LATE",
+      "elapsed_seconds_observed": 0.188,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "STDOUT_LATE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": "FAIL",
+        "last_report_phase": "SUT",
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "FORBIDDEN_STDOUT_BYTE",
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 0,
+          "stdout": 1
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "STDERR_LATE",
+      "elapsed_seconds_observed": 0.187,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 0,
+      "outer_error_type": null,
+      "outer_kill_requested": false,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": {
+        "active_after_stop": 0,
+        "case": "STDERR_LATE",
+        "child_created": true,
+        "child_resumed": true,
+        "cleanup_errors_held": 0,
+        "direct_exit_observed": 79,
+        "dispatch_attempts_or_unknown": 1,
+        "kill_requested": true,
+        "kill_returned": true,
+        "last_report_determination": "FAIL",
+        "last_report_phase": "SUT",
+        "maximum_active_observed": 1,
+        "native_errors_held": 1,
+        "native_supplement_reports": 0,
+        "pass_reports": 0,
+        "qualification": "UNVERIFIED_REPORT",
+        "ready_observed": true,
+        "reason": "FORBIDDEN_STDERR_BYTE",
+        "reports": 1,
+        "scope_clean_observed": true,
+        "standard_bytes_detected": {
+          "stderr": 1,
+          "stdout": 0
+        },
+        "standard_eof_observed": {
+          "stderr": true,
+          "stdout": true
+        },
+        "status": "PROTECTED_STOP",
+        "tail_status": "NOT_INFERRED_FROM_REPORTS",
+        "writers_settled": true
+      },
+      "test_determination": "PASS"
+    },
+    {
+      "case": "HOST_HANG",
+      "elapsed_seconds_observed": 0.453,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 79,
+      "outer_error_type": null,
+      "outer_kill_requested": true,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": null,
+      "test_determination": "PASS"
+    },
+    {
+      "case": "HOST_STALL_WITH_CHILD",
+      "elapsed_seconds_observed": 0.469,
+      "outer_active_after_stop": 0,
+      "outer_direct_exit": 79,
+      "outer_error_type": null,
+      "outer_kill_requested": true,
+      "outer_scope_clean_observed": true,
+      "outer_standard_bytes_detected": {
+        "stderr": 0,
+        "stdout": 0
+      },
+      "outer_standard_eof_observed": {
+        "stderr": true,
+        "stdout": true
+      },
+      "outer_writers_settled": true,
+      "qualification": "LOCAL_SYNTHETIC_OBSERVATION_NOT_FORMAL_ACCEPTANCE",
+      "subject_report": null,
+      "test_determination": "PASS"
+    }
+  ],
+  "compilation": [
+    {
+      "determination": "PASS",
+      "file": "windows_scope.py"
+    },
+    {
+      "determination": "PASS",
+      "file": "supervisor_rev3.py"
+    },
+    {
+      "determination": "PASS",
+      "file": "bootstrap_rev2.py"
+    },
+    {
+      "determination": "PASS",
+      "file": "carrier_rev4.py"
+    },
+    {
+      "determination": "PASS",
+      "file": "fault_fixture.py"
+    },
+    {
+      "determination": "PASS",
+      "file": "run_batch.py"
+    }
+  ],
+  "counts": {
+    "failed": 0,
+    "passed": 28,
+    "planned": 28
+  },
+  "dsp004": "OPEN / HOLD",
+  "elapsed_seconds_observed": 10.25,
+  "formal_acceptance": "NOT_ESTABLISHED_BY_THIS_RUN",
+  "new_source_hashes": {
+    "bootstrap_rev2.py": "37FF5D3F67A297AC6BF83FFB50B23C693BA4A50A77820AC787FBAB223A1B4EC4",
+    "carrier_rev4.py": "A16904C8E67EAF4B459F0DB9688D3C685269810AD0D0CB3911BF03B852F1E11A",
+    "fault_fixture.py": "D7196E075A8F175F257BE3AC6C751445AEBD02D731E9A5648E68CDB3FF1C12D8",
+    "run_batch.py": "55BC649EFA0BF3EFA4F1F5F79F77C0CCE98357913950705908A4FDF26CA7F75E",
+    "supervisor_rev3.py": "DE982F0BD9BDA422EB2DA5E7B3EDC4B5A4DAC8E305305FDD4016C938FF84C1FD",
+    "windows_scope.py": "829C6392E8385A348E7D0D7DFF06756C42AF080C87F93C15A2264E0C63C98230"
+  },
+  "pins_sha256": "B2D18ED84887F62C96C940DE31B5F659EB4E1F946CE30862C24DFCD69A82D0E0",
+  "protected_after": {
+    "scripts/phase2_runtime/route_b_c03/contracts.py": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845"
+  },
+  "protected_before": {
+    "scripts/phase2_runtime/route_b_c03/contracts.py": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845"
+  },
+  "remaining_limited": [
+    "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+    "UNOBSERVED_OS_SCHEDULES_AND_NATIVE_SYNCHRONOUS_CALLS",
+    "DURABLE_NATIVE_ERROR_PRESERVATION_AFTER_HOST_DEATH",
+    "FULL_189_INPUT_PLAN_AND_D007_BUSINESS_SOURCE_PATH",
+    "FORMAL_SOURCE_ADMISSION_ACCEPTANCE_INTEGRATION_DEPLOYMENT"
+  ],
+  "runtime_after": {
+    "executable": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "flags": {
+      "dont_write_bytecode": true,
+      "isolated": 1,
+      "no_site": 1
+    },
+    "full_dependency_provenance": "LIMITED",
+    "runtime_hashes": {
+      "python.exe": "B07B03B9BA866A341A3C13EE69710FBC8D43D4CE2523DEE13F6DF5C25378D15B",
+      "python3.dll": "F91CA7E29E8B4CC9ED7A4A935C1B2558C5C8F23398CB20D7048F977AA16FCE8B",
+      "python312.dll": "3B33D49D879DBF3A8AA3FFF1BF3859275E76C188A3ADEC4E7FFE728243652A87",
+      "vcruntime140.dll": "D5E4D9A3E835FA679450145D6A7D94E36573A509317111904D9B3712C30D9066",
+      "vcruntime140_1.dll": "1F2D41C4AA5DB0BC33EBF7B66D72943A817D7CE6CBE880502A9403823633093F"
+    },
+    "sys_path_recorded": [
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip",
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs",
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib",
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python"
+    ],
+    "version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "runtime_before": {
+    "executable": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "flags": {
+      "dont_write_bytecode": true,
+      "isolated": 1,
+      "no_site": 1
+    },
+    "full_dependency_provenance": "LIMITED",
+    "runtime_hashes": {
+      "python.exe": "B07B03B9BA866A341A3C13EE69710FBC8D43D4CE2523DEE13F6DF5C25378D15B",
+      "python3.dll": "F91CA7E29E8B4CC9ED7A4A935C1B2558C5C8F23398CB20D7048F977AA16FCE8B",
+      "python312.dll": "3B33D49D879DBF3A8AA3FFF1BF3859275E76C188A3ADEC4E7FFE728243652A87",
+      "vcruntime140.dll": "D5E4D9A3E835FA679450145D6A7D94E36573A509317111904D9B3712C30D9066",
+      "vcruntime140_1.dll": "1F2D41C4AA5DB0BC33EBF7B66D72943A817D7CE6CBE880502A9403823633093F"
+    },
+    "sys_path_recorded": [
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip",
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs",
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib",
+      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python"
+    ],
+    "version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "status": "PASS"
+}

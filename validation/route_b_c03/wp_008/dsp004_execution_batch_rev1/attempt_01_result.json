@@ -1,0 +1,23 @@
+{
+  "B-01": "OPEN",
+  "B-02": "OPEN",
+  "aggregate_privacy_security_legal_verdict": "NOT_ISSUED",
+  "attempt": 1,
+  "business_sources": "NOT_ADMITTED",
+  "cases": [],
+  "compilation": [],
+  "compilation_failure_details": null,
+  "dsp004": "OPEN / HOLD",
+  "elapsed_seconds_observed": 0.0,
+  "formal_acceptance": "NOT_ESTABLISHED_BY_THIS_RUN",
+  "remaining_limited": [
+    "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+    "UNOBSERVED_OS_SCHEDULES_AND_NATIVE_SYNCHRONOUS_CALLS",
+    "DURABLE_NATIVE_ERROR_PRESERVATION_AFTER_HOST_DEATH",
+    "FULL_189_INPUT_PLAN_AND_D007_BUSINESS_SOURCE_PATH",
+    "FORMAL_SOURCE_ADMISSION_ACCEPTANCE_INTEGRATION_DEPLOYMENT"
+  ],
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "status": "FAIL",
+  "unexpected_error_type": "PermissionError"
+}

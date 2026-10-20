@@ -1,0 +1,35 @@
+{
+  "scope": "LOCAL_SYNTHETIC_ONLY_NOT_FORMAL_ACCEPTANCE",
+  "new_files": {
+    "WIN": {
+      "file": "windows_scope.py",
+      "bytes": 19272,
+      "sha256": "829C6392E8385A348E7D0D7DFF06756C42AF080C87F93C15A2264E0C63C98230"
+    },
+    "SUP": {
+      "file": "supervisor_rev3.py",
+      "bytes": 14734,
+      "sha256": "DE982F0BD9BDA422EB2DA5E7B3EDC4B5A4DAC8E305305FDD4016C938FF84C1FD"
+    },
+    "BOOT": {
+      "file": "bootstrap_rev2.py",
+      "bytes": 12498,
+      "sha256": "37FF5D3F67A297AC6BF83FFB50B23C693BA4A50A77820AC787FBAB223A1B4EC4"
+    },
+    "N": {
+      "file": "carrier_rev4.py",
+      "bytes": 62240,
+      "sha256": "A16904C8E67EAF4B459F0DB9688D3C685269810AD0D0CB3911BF03B852F1E11A"
+    },
+    "FAULT": {
+      "file": "fault_fixture.py",
+      "bytes": 3841,
+      "sha256": "D7196E075A8F175F257BE3AC6C751445AEBD02D731E9A5648E68CDB3FF1C12D8"
+    },
+    "DRIVER": {
+      "file": "run_batch.py",
+      "bytes": 20848,
+      "sha256": "55BC649EFA0BF3EFA4F1F5F79F77C0CCE98357913950705908A4FDF26CA7F75E"
+    }
+  }
+}
