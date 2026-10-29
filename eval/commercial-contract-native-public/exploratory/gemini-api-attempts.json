@@ -1,0 +1,91 @@
+{
+  "_public_copy_notice": "De-identified publication copy, not a byte-exact original tool record. Session/job identifiers are non-resolvable public aliases. Local originals are preserved and excluded from this publication; historical raw/preservation claims and original hashes refer to those local originals. No new model execution or acceptance is implied.",
+  "recordPurpose": "Exploratory model-call attempts only; not scoring or product acceptance.",
+  "recordedClientDate": "2026-10-28",
+  "realProfileOrMatterAccessed": false,
+  "originalFullTextAttempt": {
+    "promptPath": "../prompts/gemini-full-text-trial.txt",
+    "promptSHA256": "8D6B31BBC83F96EABC80BFB2618C17CB0C2EAE880799ED6E925325A8A07EBA38",
+    "requestedBackend": "api",
+    "serviceReportedJob": {
+      "jobId": "public-job-01",
+      "status": "failed",
+      "done": true,
+      "threadId": null,
+      "response": null,
+      "model": null,
+      "backend": null,
+      "duration_ms": null,
+      "stop_reason": null,
+      "error": "Gemini API failed with HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "createdAt": "2026-10-27T12:03:15Z",
+      "startedAt": "2026-10-27T12:03:15Z",
+      "completedAt": "2026-10-27T12:03:32Z",
+      "updatedAt": "2026-10-27T12:03:32Z",
+      "resumeHint": "Call review_status with this jobId until done=true."
+    },
+    "relationToUserPastedOutput": "NOT ESTABLISHED; user-pasted text was not obtained from this API job."
+  },
+  "missingAttachmentAttempt": {
+    "promptPath": "../prompts/gemini-missing-text-trial.txt",
+    "promptSHA256": "AF6273372B1162C8F1D6A40565EF78EED01038C93AB0C02E5AB101CC9FC9D138",
+    "requestedBackend": "api",
+    "initialServiceReportedJob": {
+      "jobId": "public-job-02",
+      "status": "queued",
+      "done": false,
+      "threadId": null,
+      "response": null,
+      "model": null,
+      "backend": null,
+      "duration_ms": null,
+      "stop_reason": null,
+      "error": null,
+      "createdAt": "2026-10-28T00:35:52Z",
+      "startedAt": null,
+      "completedAt": null,
+      "updatedAt": "2026-10-28T00:35:52Z",
+      "resumeHint": "Call review_status with this jobId until done=true."
+    },
+    "laterStatusRead": {
+      "outcome": "Transport closed",
+      "resultObtained": false
+    },
+    "modelAndBackendReturned": null,
+    "outputTextObtained": false,
+    "resubmitted": false,
+    "executionOutcomeAtInterruptedStatusRead": "UNKNOWN; queued receipt is not evidence of completed inference.",
+    "finalServiceReportedJob": {
+      "jobId": "public-job-02",
+      "status": "failed",
+      "done": true,
+      "threadId": null,
+      "response": null,
+      "model": null,
+      "backend": null,
+      "duration_ms": null,
+      "stop_reason": null,
+      "error": "Background review worker exited before writing a final result",
+      "createdAt": "2026-10-28T00:35:52Z",
+      "startedAt": "2026-10-28T00:35:52Z",
+      "completedAt": "2026-10-28T01:54:11Z",
+      "updatedAt": "2026-10-28T01:54:11Z",
+      "resumeHint": "Call review_status with this jobId until done=true."
+    },
+    "latestExecutionOutcome": "FAILED; worker exited before writing a final result. No API response text obtained."
+  },
+  "boundaries": [
+    "No score or legal acceptance issued.",
+    "No plugin interface, repeatability, profile isolation or matter storage proved.",
+    "No original sample, skill, accepted file or DSP-004 content modified.",
+    "No new request should be submitted merely because status retrieval failed."
+  ],
+  "userTransferredMissingText": {
+    "localPath": "gemini-missing-user-paste-01.md",
+    "origin": "User pasted text into this conversation; not obtained from the API job.",
+    "modelVersion": null,
+    "actualPromptAndSessionIndependentlyVerified": false,
+    "notAPIJobResponse": true,
+    "formalScoreIssued": false
+  }
+}

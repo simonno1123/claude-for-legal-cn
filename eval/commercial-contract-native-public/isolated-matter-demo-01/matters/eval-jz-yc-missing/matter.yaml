@@ -1,0 +1,73 @@
+# PUBLIC DE-IDENTIFIED COPY — NOT FOR DIRECT HOST IMPORT.
+# File paths are relative to the repository root; source hashes identify unchanged contract and source-opinion bytes.
+{
+  "version": 1,
+  "slug": "eval-jz-yc-missing",
+  "title": "JZ-YC-2026-S001缺附件合成演示",
+  "matter_type": "设备买卖合同（虚构演示）",
+  "owner": "演示负责人（虚构岗位）",
+  "status": "on_hold",
+  "opened_at": "2026-10-29",
+  "updated_at": "2026-10-29T14:39:17.815+08:00",
+  "deadline": null,
+  "confidentiality": "standard",
+  "participants": [],
+  "related_matters": [],
+  "source_files": [
+    "eval/commercial-contract-native-public/sample-pack-v2/投喂版/02-合同-关键附件缺失版-投喂.md"
+  ],
+  "key_facts": [
+    "本次材料提供合同正文、附件三《质量保证承诺书》和附件四《授权委托书》。",
+    "附件一《技术规格书》、附件二《价款明细与交付计划》明确未随附。",
+    "第5.5款约定每批货物到货且收到相应金额发票后30日内付款，并留存该批货物价款的5%。",
+    "第7.2款记载15个工作日质量验收，第7.3款记载到货3日内未书面提出质量异议视为验收合格。"
+  ],
+  "module_fields": {
+    "business_line": "设备采购（虚构演示）",
+    "our_entity": "乙川贸易有限公司（虚构）",
+    "our_role": "买方",
+    "counterparty": "甲州智造有限公司（虚构）",
+    "contract_type": "设备买卖合同",
+    "contract_id": "JZ-YC-2026-S001（虚构）",
+    "amount": 3860000,
+    "currency": "CNY",
+    "tax_basis": "合同第5.1款记载含13%增值税；未确认实际纳税人或抵扣条件。",
+    "legal_reviewer": "人工法律复核岗位（未完成；非真实个人身份）",
+    "legal_review_status": "未经人工法律复核；不是法律意见接受或P0验收通过。",
+    "business_start_date": "本次未提供，待确认；opened_at仅为演示建档日期。",
+    "contract_term": "实际起止日期本次未确定。",
+    "renewal_notice": "本次未确定，不生成续约节点。",
+    "cancellation_notice": "本次未确定，不生成取消通知日期。",
+    "material_index": {
+      "main_contract": "已提供：source_files所列关键附件缺失版，含正文及附件三、四。",
+      "annex_1": "本次未提供：《技术规格书》。",
+      "annex_2": "本次未提供：《价款明细与交付计划》。",
+      "annex_3": "已提供：同一输入内《质量保证承诺书》。",
+      "annex_4": "已提供：同一输入内《授权委托书》。",
+      "orders": "本次未提供。",
+      "supplemental_agreements": "本次未提供。",
+      "approvals": "本次未提供。",
+      "sealing_records": "只有合同签署页及附件中的虚构用印描述；实际用印或授权审批凭证未提供。",
+      "invoices": "本次未提供。",
+      "acceptance_records": "本次未提供。"
+    },
+    "unknown_facts": {
+      "actual_signing": "本次未提供，待确认。",
+      "actual_payment": "本次未提供，待确认。",
+      "actual_delivery_or_acceptance": "本次未提供，待确认。",
+      "ratification": "本次未提供，待确认。",
+      "internal_authority_or_risk_policy": "本次未提供，待确认。"
+    },
+    "risk_tags": {
+      "data_export": "本次未核实，不自动标为无。",
+      "foreign_dispute_resolution": "未核实境外因素；不验证虚构仲裁机构的实际受理能力。",
+      "ip_transfer": "本次未核实，不自动标为无。",
+      "automatic_renewal": "本次未核实，不生成续约节点。",
+      "state_owned_or_government_client": "本次未核实，不自动标为无。"
+    },
+    "source_sha256": "156B1731B84E513BA0A7FC0C3D8B45158A4FC6BC32BA2560DFE3D467AA1E68FE",
+    "opinion_source": "eval/commercial-contract-native-public/exploratory/contract-review-opinion-draft-20261029.md",
+    "opinion_source_sha256": "9850DE6868D54E37F59693A06016581860A1835BCD78ECD0022F4C8F9B762C00",
+    "scope": "仅项目内手工文件留存与归档恢复演示；非原生宿主或完整插件运行。"
+  }
+}

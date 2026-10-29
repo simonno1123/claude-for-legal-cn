@@ -129,10 +129,15 @@ are fine.
 ### Plugin AGENTS.md is a template, not project context
 
 Each `<plugin>/AGENTS.md` is a practice-profile template that the
-`cold-start-interview` skill copies to `~/.claude/plugins/config/claude-for-legal-cn/<plugin>/CLAUDE.md`
+`cold-start-interview` skill copies to `~/.claude/plugins/config/claude-for-legal/<plugin>/CLAUDE.md`
 on the user's machine. It is *not* loaded as project context when the plugin is
 installed — `claude plugin validate` warns about this and the warning is
 expected. Don't "fix" it by moving the content into a skill.
+
+The repository/marketplace name is `claude-for-legal-cn`; existing local state
+keeps the compatibility root `claude-for-legal`. This naming distinction does
+not authorize a parallel state root, data migration, or access to user state
+outside the current task's approved scope.
 
 ### `external_plugins/` is vendor-maintained
 

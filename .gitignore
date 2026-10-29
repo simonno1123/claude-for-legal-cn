@@ -11,3 +11,10 @@ gemini_api.md
 *.key
 review-packets/
 review-results/
+
+# Local original P0 trial records. Only de-identified public copies are committed.
+/eval/commercial-contract-native/README.md
+/eval/commercial-contract-native/IMPROVEMENT_PLAN.md
+/eval/commercial-contract-native/exploratory/
+/eval/commercial-contract-native/isolated-matter-demo-01/
+/eval/commercial-contract-native/prompts/

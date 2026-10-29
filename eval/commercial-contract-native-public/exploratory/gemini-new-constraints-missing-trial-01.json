@@ -1,0 +1,56 @@
+{
+  "_public_copy_notice": "De-identified publication copy, not a byte-exact original tool record. Session/job identifiers are non-resolvable public aliases. Local originals are preserved and excluded from this publication; historical raw/preservation claims and original hashes refer to those local originals. No new model execution or acceptance is implied.",
+  "purpose": "One non-scored text-only trial of newly added generic constraints; not full skill or plugin validation.",
+  "recordedClientDate": "2026-10-28",
+  "request": {
+    "backend": "api",
+    "requestedModelOverride": null,
+    "promptPath": "../prompts/gemini-new-constraints-missing-trial-rev1.txt",
+    "promptSHA256": "D7DA623D6729CDA8008AD5AF1CB3D6A508DB88073DD40EEAA0DCBD94E8525977",
+    "contractSHA256": "156B1731B84E513BA0A7FC0C3D8B45158A4FC6BC32BA2560DFE3D467AA1E68FE",
+    "ruleSources": [
+      {
+        "path": "../../../commercial-legal/skills/review/SKILL.md",
+        "fileSHA256": "2BDF7E1266B0EED97EDE375C96F69D6FC508226897EE74306A73E842EE03331F",
+        "sent": "Only added red-flag qualification bullet and materials-boundary section; not whole file."
+      },
+      {
+        "path": "../../../commercial-legal/skills/vendor-agreement-review/SKILL.md",
+        "fileSHA256": "F32FADAE915AEE45C4D2DF9461C307EC032F427AA31EEDCAEB5E1D7B40A77345",
+        "sent": "Only materials-boundary and evidence-expression section; not whole file."
+      }
+    ],
+    "configurationOrScoringAnswersSent": false,
+    "previousOutputSent": false
+  },
+  "result": {
+    "status": "FAILED_NO_REVIEW_TEXT",
+    "error": "Gemini API failed with HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "observedModel": null,
+    "observedBackend": null,
+    "threadIdReturned": null,
+    "reviewTextObtained": false,
+    "automaticRetries": 0,
+    "rawToolResult": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\": \"Gemini API failed with HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"}"
+        }
+      ],
+      "isError": true
+    }
+  },
+  "interpretation": [
+    "No model-output evaluation is possible without output.",
+    "Input differs from the earlier generic trial, whose exact model/session was not independently verified; this is not a controlled A/B or same-configuration repeatability result.",
+    "Static input-boundary review is not legal scoring, human acceptance, plugin integration or matter storage evidence."
+  ],
+  "unchangedScope": {
+    "skillSourceModifiedInThisTrial": false,
+    "originalSampleOrAnswersModified": false,
+    "realProfileOrMatterAccessed": false,
+    "trackerWritten": false,
+    "gitCommitOrPush": false
+  }
+}
