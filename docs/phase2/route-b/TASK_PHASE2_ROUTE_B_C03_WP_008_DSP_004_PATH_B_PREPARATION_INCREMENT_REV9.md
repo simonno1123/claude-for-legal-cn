@@ -1,0 +1,102 @@
+# DSP-004 路径 B 筹备增量 REV9
+
+本增量只记录路径 B 下的下一项筹备事实：FA-05 选项表候选已经写下，三个选项都没有被选中。它不接受资产，不准入来源，不生成 Manifest，不授权正式运行，也不关闭 DSP-004。
+
+依据仍是路径 B 签署记录。原句是：`签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。`
+
+本步授权原句是：`写下一项筹备文档，不准入、不接受资产、不关 DSP-004.`
+
+| 项目 | 值 |
+| --- | --- |
+| 前一增量 | `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.md` |
+| 前一增量说明 | `5D90088CA5FE820FD766DAB37CB4AC8502F612EF4F5101F5718B9AB85B31DAA2`（10123 字节） |
+| 前一增量 JSON | `E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B`（9629 字节） |
+| 本增量 JSON | `validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.json` |
+| 本增量 JSON SHA-256 | `80A76D83CE91B012608F784712F76B329F37AA7B93A5A3073C5DDE3122165C09` |
+| 本增量 JSON 字节 | 8091 |
+
+DSP-004 保持 `OPEN / HOLD`。B-01、B-02 保持 `OPEN`。REV1 至 REV8 已经记下的筹备事实保持原样。本增量不改它们。
+
+## 1. 新增筹备事实：FA-05 选项表
+
+REV8 把下一项筹备缺口排在 `DSP004-FA-05`。它仍停在 REV1 已经记下的事实。三个已经排好的选项现在写入选项表。`Signed` 与 `Accepted` 均为 false。准入状态是 `NOT_ADMITTED`。三个选项的 `Selected` 与 `Opened` 都是 false。没有任何选项被选中，也没有任何选项被打开。
+
+| 文件 | 字节 | SHA-256 |
+| --- | --- | --- |
+| `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md` | 10924 | `6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4` |
+| `validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json` | 12147 | `88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8` |
+
+选项表重新散列、且本增量仍不接受的在库身份是：
+
+| 文件 | 字节 | SHA-256 | 本增量后的状态 |
+| --- | --- | --- | --- |
+| `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.md` | 10123 | `5D90088CA5FE820FD766DAB37CB4AC8502F612EF4F5101F5718B9AB85B31DAA2` | 已绑定，未接受 |
+| `validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.json` | 9629 | `E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B` | 已绑定，未接受 |
+| `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md` | 15149 | `E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474` | 已引用，未准入 |
+| `validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json` | 17687 | `26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26` | 已引用，未准入 |
+
+REV8 JSON 的 9629 字节与 `E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B` 与 REV8 说明所记一致，也与 PR #12 所记一致。当前 `HEAD` 在写入本增量之前是 `7d73f50ede1b5e4ec8aa55f85270eb50b9cafa92`。
+
+选项表记下的三个选项是：
+
+- `KEEP_REV1_RECORD`。`Selected` 为 false。`Opened` 为 false。输入候选仍是 `NOT_ADMITTED`。没有 Harness SHA 被接受。四个文件的字节仍与 REV1、REV7、REV8 所记身份相同。本次只用标准库重新散列。散列不是调用，也不是执行。
+- `FUTURE_STATIC_IDENTITY_NOTE_ONLY`。`Selected` 为 false。`Opened` 为 false。若日后另有授权，可以只做字节身份注记。本增量不写那份注记。
+- `NOT_AVAILABLE_UNDER_PATH_B`。`Selected` 为 false。`Opened` 为 false。路径 B 不准入输入候选，不接受 Harness SHA，也不运行 `identity_gate` 或 Fixture。本增量不把这一项选成当前做法。
+
+维持 REV1 时仍核对到的四个文件是：
+
+| 文件 | 字节 | SHA-256 |
+| --- | --- | --- |
+| `validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json` | 107849 | `A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430` |
+| `validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json` | 68768 | `92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5` |
+| `validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json` | 770 | `9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8` |
+| `scripts/phase2_runtime/route_b_c03/identity_gate.py` | 4555 | `9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445` |
+
+`DSP004-FA-05` 仍未完成。`DSP004-FA-06` 仍是 `未建立充分前提`。`DSP004-FA-03` 仍是 `MISSING_BINDING_AND_ACTUAL_ENTRY`。`DSP004-FA-04` 仍未完成。B-01 保持 `OPEN`。B-02 保持 `OPEN`。
+
+三个实际侧仍为 null / `UNBOUND`：`SRC004-A-PROJECT`、`SRC004-A-SESSION`、`SRC004-A-PROVIDER`。REV1 点名的七个既有捕获候选仍是 `NOT_SELECTED` / `NOT_ADMITTED`。
+
+## 2. 剩余筹备缺口的次序
+
+这一节只给仍留着的筹备缺口排次序。它不打开任何进一步的交付物，不选中 FA-05 的任何一个选项，也不修复任何 BLOCK。
+
+1. `DSP004-FA-06` 仍是 `未建立充分前提`。登记和独立复核都未接受。最近的资产决定是哪些 LIMITED 可以保留。本增量不写处置文件。
+2. `AP-006` 与 `AP-009` 的缺口注记已经写下，准入状态是 `NOT_ADMITTED`。两条政策仍是 `NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT`。BLOCK 代码仍是 `NO_RUNTIME_ROOT_LOCATOR`，且未修复。实际定位仍是 null。清点读集里的候选行数仍是 0。十行 `REQUIRES_RUNTIME_ROOT` 仍与这一缺口是同一道运行根障碍。本增量不打开定位交付物，也不读取 `ENVIRONMENT_MANIFEST.md`、历史 Windows 虚拟环境或工具缓存。
+3. `DSP004-FA-05` 的选项表已经写下，准入状态是 `NOT_ADMITTED`。三个选项都没有被选中，也都没有被打开。本增量不打开进一步的 FA-05 交付物。
+4. `AP-020`、`AP-021`、`AP-022` 的已准入唯一序列仍留在 REV5 已经记下的 BLOCK 之后。本增量不修复这些代码。
+5. Manifest、正式运行、`DSP004-FA-08` 和 DSP-004 关闭仍无授权，排在最后。
+
+## 3. 本增量故意不做的事
+
+- 不准入任何来源，不把任何固定 SHA 接受为正式合同、Manifest 或来源准入。
+- 不选中 `KEEP_REV1_RECORD`、`FUTURE_STATIC_IDENTITY_NOTE_ONLY` 或 `NOT_AVAILABLE_UNDER_PATH_B`。
+- 不准入 `SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json` 或 `SCENARIO_INPUT_BINDING.json`。
+- 不把四个文件的 SHA `A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430`、`92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5`、`9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8` 与 `9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445` 接受为正式合同。
+- 不把选项表的 SHA `6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4` 与 `88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8` 接受为正式合同或来源准入。
+- 不把两个 REV3 SHA `AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F` 与 `39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123` 接受为正式 B-02 合同。
+- 不把缺口注记的 SHA `E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474` 与 `26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26` 接受为正式合同或来源准入。
+- 不完成 `DSP004-FA-03`，也不完成 `DSP004-FA-04`。B-01 与 B-02 保持 `OPEN`。
+- 不完成 `DSP004-FA-05`。三个选项保持未选中。
+- 不完成 `DSP004-FA-06`。它仍是 `未建立充分前提`。本增量不处置任何 FA-06 行。
+- 不修复 `NO_RUNTIME_ROOT_LOCATOR`，也不修复 `AP-020`、`AP-021`、`AP-022` 的 BLOCK。
+- 不执行捕获代码、`identity_gate`、Fixture、场景运行器或受测模块。
+- 不创建 `validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json`。
+- 不生成 Manifest，不授权正式运行，不完成 `DSP004-FA-08`，不关闭 DSP-004。
+- 不为来源与根候选 SHA `57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93` 新增第二份设计复核文件。
+- 不打开任何进一步的交付物。
+- 不改商业 P0。
+
+## 4. 仍须以后的资产级决定
+
+路径 B 没有代替下列决定：
+
+- 哪些依赖、启动、隔离、停止与清理 LIMITED 可以保留
+- 导入闭包、两侧调用身份、检查到使用的防替换，以及 T0 / PE / OS 证据
+- `AP-006` 与 `AP-009` 在运行根确立之后的实际定位
+- 三个实际侧的来源身份、版本、载体、定位、产生者职责、授权和已经绑定的捕获入口
+- 另一次获准调用；只有那次调用发生时才允许读取实际引用
+- 是否对两个 REV3 SHA 作固定 SHA 接受
+- 是否对 FA-03、ORDERED 清点、FA-06 登记、运行根缺口注记或本选项表的固定 SHA 作接受或准入
+- 是否消除或继续保留四项已经点名的 LIMITED 审查项
+- 是否在 FA-05 的三个未选选项里另作授权
+- Manifest、正式运行和 DSP-004 关闭

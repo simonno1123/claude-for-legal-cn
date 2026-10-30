@@ -1,0 +1,293 @@
+{
+  "RecordKind": "DSP004_FA05_OPTIONS_SHEET_CANDIDATE",
+  "Outcome": "OPTIONS_RECORDED_NONE_SELECTED_NOT_ADMITTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "FA05_OPTIONS_SHEET_NOT_SELECTED_NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+  "AnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "Formation": {
+    "GitHead": "7d73f50ede1b5e4ec8aa55f85270eb50b9cafa92",
+    "RecordedAtUtc": "2026-10-30T22:31:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_ONLY",
+    "HashingIsIdentityOnly": true,
+    "HashingIsNotACall": true,
+    "HashingIsNotExecution": true,
+    "SubjectModulesImported": false,
+    "CaptureCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "IdentityGateImported": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "InputCandidateAdmitted": false,
+    "HarnessShaAccepted": false,
+    "BlockCodesRepaired": false,
+    "ItemsDisposed": false,
+    "PriorIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.md",
+        "SHA256": "5D90088CA5FE820FD766DAB37CB4AC8502F612EF4F5101F5718B9AB85B31DAA2",
+        "Bytes": 10123,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.json",
+        "SHA256": "E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B",
+        "Bytes": 9629,
+        "MatchesShaRecordedInRev8Markdown": true,
+        "MatchesPr12RecordedIdentity": true,
+        "Accepted": false
+      }
+    }
+  },
+  "CitedNotAccepted": {
+    "RuntimeRootGapNote": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+        "SHA256": "E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474",
+        "Bytes": 15149,
+        "MatchesRev8RecordedIdentity": true
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json",
+        "SHA256": "26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26",
+        "Bytes": 17687,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "MatchesRev8RecordedIdentity": true
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorOpened": false,
+      "BlockRepaired": false,
+      "RowsDisposed": 0
+    }
+  },
+  "FA05": {
+    "State": "INCOMPLETE",
+    "StillAtRev1Record": true,
+    "InputCandidateAdmission": "NOT_ADMITTED",
+    "HarnessShaAccepted": false,
+    "SyntheticChecksAreNotInputAdmission": true,
+    "SyntheticCheckCountRecordedAtRev1": 189,
+    "IsolationFailureAndFixtureBlockedIsolatedRemainTwoLayers": true,
+    "ThisSheetReranThoseLayers": false,
+    "Completed": false
+  },
+  "Options": [
+    {
+      "OptionId": "KEEP_REV1_RECORD",
+      "AlreadyRankedOrder": 1,
+      "Selected": false,
+      "Opened": false,
+      "InputCandidateAdmission": "NOT_ADMITTED",
+      "HarnessShaAccepted": false,
+      "HashingIsIdentityOnly": true,
+      "HashingIsNotACall": true,
+      "HashingIsNotExecution": true,
+      "IdentityGateCalled": false,
+      "FixturesExecuted": false,
+      "FilesStillMatchRev1Rev7Rev8": [
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+          "Bytes": 107849,
+          "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+          "MatchesRev1RecordedIdentity": true,
+          "MatchesRev7RecordedIdentity": true,
+          "MatchesRev8RecordedIdentity": true,
+          "RecordedRev1State": "NOT_ADMITTED",
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+          "Bytes": 68768,
+          "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+          "MatchesRev1RecordedIdentity": true,
+          "MatchesRev7RecordedIdentity": true,
+          "MatchesRev8RecordedIdentity": true,
+          "RecordedRev1State": "NOT_OVERWRITTEN",
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+          "Bytes": 770,
+          "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+          "MatchesRev1RecordedIdentity": true,
+          "MatchesRev7RecordedIdentity": true,
+          "MatchesRev8RecordedIdentity": true,
+          "RecordedRev1State": "STILL_REQUIRES_BLOCKED_ISOLATED_AND_BOUNDARY_MISMATCH",
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        },
+        {
+          "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+          "Bytes": 4555,
+          "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+          "MatchesRev1RecordedIdentity": true,
+          "MatchesRev7RecordedIdentity": true,
+          "MatchesRev8RecordedIdentity": true,
+          "RecordedRev1State": "STILL_RECORDED_AS_REJECTED_ISOLATION_FAILURE",
+          "Executed": false,
+          "Called": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        }
+      ],
+      "Note": "Input candidate remains NOT_ADMITTED. No Harness SHA is accepted. The four files were re-hashed with the Python standard library only and still match the REV1, REV7, and REV8 recorded identities. Hashing is identity only. It is not a call and it is not execution. identity_gate.py was not imported or called. The fixture file was not executed. None of the four SHA values is accepted as a formal contract."
+    },
+    {
+      "OptionId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+      "AlreadyRankedOrder": 2,
+      "Selected": false,
+      "Opened": false,
+      "NoteWritten": false,
+      "Note": "A later authorization could record byte identity only. This sheet does not write that note."
+    },
+    {
+      "OptionId": "NOT_AVAILABLE_UNDER_PATH_B",
+      "AlreadyRankedOrder": 3,
+      "Selected": false,
+      "Opened": false,
+      "Note": "Path B does not admit the input candidate, accept a Harness SHA, or run identity_gate or fixtures. This sheet records that option and does not select it."
+    }
+  ],
+  "Guardrails": {
+    "AnyOptionSelected": false,
+    "AnyOptionOpened": false,
+    "ScenarioInputBindingAdmitted": false,
+    "ScenarioInputBindingStarAdmitted": false,
+    "HarnessShaAcceptedAsFormalContract": false,
+    "FixtureShaAcceptedAsFormalContract": false,
+    "IdentityGateShaAcceptedAsFormalContract": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "CaptureCodeExecuted": false,
+    "SourceAdmitted": false,
+    "AssetAccepted": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "DSP004Closed": false,
+    "FA06RowsDisposed": false,
+    "BlockCodesRepaired": false
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and the independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This sheet does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note is already recorded on main and is NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. Candidate row count in the inventory read set stays 0. The ten REQUIRES_RUNTIME_ROOT rows share this barrier and stay undisposed. This sheet does not open a locator.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "INCOMPLETE",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "This options sheet records the three options already ranked in REV7 and REV8. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. No option is selected. No further FA-05 deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_CODES_UNREPAIRED",
+      "Note": "Admitted unique sequences remain after the REV5 record. This sheet does not repair those BLOCK codes.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidates": [
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "ExistingCaptureCandidatesExecuted": false,
+  "Rev3ShasNotAccepted": [
+    "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+    "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123"
+  ],
+  "SourceRootShaNoSecondDesignReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  }
+}
