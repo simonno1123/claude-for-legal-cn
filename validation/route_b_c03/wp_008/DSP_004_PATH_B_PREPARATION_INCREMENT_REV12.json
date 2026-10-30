@@ -1,0 +1,258 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV11.md",
+      "SHA256": "455917864A70F5D8A0A861A57A1AEC8F2F6FF6C9FF8EDF2A1DBCBA344F7DEA33",
+      "Bytes": 11359,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV11.json",
+      "SHA256": "77B3812FFF704A4F9F71F93592372049E30C9CB140D18EC01B888B3E1C5ECC5D",
+      "Bytes": 9550,
+      "MatchesShaRecordedInRev11Markdown": true,
+      "MatchesPr15RecordedIdentity": true,
+      "Accepted": false
+    }
+  },
+  "NewPreparationFact": "FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+  "Review": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "7EFB324FAEC1F33EDAF87444FB82C79A1115C4EB0DBE4928F1CA2F6960F6E69A",
+      "Bytes": 17974
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "3BEC8B6BE1173C4A22374F21C3726218F8F16AA7C520C9391D10B1752889755A",
+      "Bytes": 35336,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "StaticChecks": 21,
+      "StaticChecksPassed": 21,
+      "Findings": 6,
+      "OptionListsMismatched": 0,
+      "OptionsSelected": 0,
+      "OptionsOpened": 0,
+      "HarnessShasAccepted": 0
+    }
+  },
+  "ReviewedSheet": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+      "SHA256": "6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4",
+      "Bytes": 10924
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+      "SHA256": "88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8",
+      "Bytes": 12147,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "HarnessShaAccepted": false,
+      "InputCandidateAdmitted": false
+    },
+    "Options": [
+      {
+        "OptionId": "KEEP_REV1_RECORD",
+        "AlreadyRankedOrder": 1,
+        "Selected": false,
+        "Opened": false,
+        "Admission": "NOT_ADMITTED",
+        "SelectedByThisIncrement": false,
+        "FilesStillMatchRev1Rev7Rev8Rev9AndDisk": [
+          {
+            "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+            "Bytes": 107849,
+            "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+            "Executed": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          },
+          {
+            "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+            "Bytes": 68768,
+            "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+            "Executed": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          },
+          {
+            "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+            "Bytes": 770,
+            "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+            "Executed": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          },
+          {
+            "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+            "Bytes": 4555,
+            "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+            "Executed": false,
+            "Called": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          }
+        ]
+      },
+      {
+        "OptionId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "AlreadyRankedOrder": 2,
+        "Selected": false,
+        "Opened": false,
+        "Admission": "NOT_ADMITTED",
+        "NoteWritten": false,
+        "SelectedByThisIncrement": false
+      },
+      {
+        "OptionId": "NOT_AVAILABLE_UNDER_PATH_B",
+        "AlreadyRankedOrder": 3,
+        "Selected": false,
+        "Opened": false,
+        "Admission": "NOT_ADMITTED",
+        "SelectedByThisIncrement": false
+      }
+    ]
+  },
+  "CitedNotAccepted": {
+    "Rev9Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.md",
+        "SHA256": "AB7D4233FBDF41A362BFD0360AC9BCB82C7C45D280BB55FECB801ABD0C18D159",
+        "Bytes": 9220
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.json",
+        "SHA256": "80A76D83CE91B012608F784712F76B329F37AA7B93A5A3073C5DDE3122165C09",
+        "Bytes": 8091
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "RuntimeRootGapNote": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+        "SHA256": "E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474",
+        "Bytes": 15149
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json",
+        "SHA256": "26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26",
+        "Bytes": 17687
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorOpened": false,
+      "BlockRepaired": false
+    }
+  },
+  "FurtherDeliverableOpened": false,
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and its independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This increment does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note stays recorded and NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. Candidate row count in the inventory read set stays 0. The ten REQUIRES_RUNTIME_ROOT rows share this barrier and stay undisposed. No further locator is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "OPTIONS_SHEET_REVIEWED_NOT_ACCEPTED_NONE_SELECTED",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetReviewed": true,
+      "OptionsSheetReviewAccepted": false,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "The FA-05 options sheet now has an independent static review. The review is not accepted. Admission stays NOT_ADMITTED. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. No option is selected. No further FA-05 deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_NOTE_REVIEWED_NOT_ACCEPTED_CODES_UNREPAIRED",
+      "BlockNoteRecorded": true,
+      "BlockNoteReviewed": true,
+      "BlockNoteReviewAccepted": false,
+      "BlockNoteAdmission": "NOT_ADMITTED",
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "SequencesMerged": false,
+      "Note": "The AP-020, AP-021, and AP-022 BLOCK note already has the REV11 independent static review. That review is not accepted. Admission stays NOT_ADMITTED. The codes stay unrepaired. Actual sequence locators stay null. Candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED. No repair deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "AnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  }
+}
