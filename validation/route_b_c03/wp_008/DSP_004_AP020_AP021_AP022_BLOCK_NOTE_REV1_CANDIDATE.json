@@ -1,0 +1,433 @@
+{
+  "RecordKind": "DSP004_AP020_AP021_AP022_BLOCK_NOTE_CANDIDATE",
+  "Outcome": "BLOCK_NOTE_RECORDED_CODES_UNREPAIRED_NOT_ADMITTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "AP020_AP021_AP022_BLOCK_NOTE_NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE.md",
+  "BlocksRepaired": false,
+  "LocatorsAdmitted": false,
+  "SequencesMerged": false,
+  "SequencesSelected": false,
+  "UniqueLocatorEstablished": false,
+  "AppearanceMatchIsPass": false,
+  "AppearanceMatchIsAdmission": false,
+  "Formation": {
+    "GitHead": "9cfc1e8b4ed4b6494c330e6c8950856ed9bf2c70",
+    "RecordedAtUtc": "2026-10-30T22:46:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_ONLY",
+    "HashingIsIdentityOnly": true,
+    "HashingIsNotACall": true,
+    "HashingIsNotExecution": true,
+    "SubjectModulesImported": false,
+    "CaptureCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "IdentityGateImported": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "DirectoryOrderUsed": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "BlockCodesRepaired": false,
+    "SequencesMerged": false,
+    "SequencesPicked": false,
+    "RowsReordered": false,
+    "RowsAdded": false,
+    "DuplicatesRemoved": false,
+    "ItemsDisposed": false,
+    "IndependentReviewChecksRerun": false,
+    "PriorIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.md",
+        "SHA256": "AB7D4233FBDF41A362BFD0360AC9BCB82C7C45D280BB55FECB801ABD0C18D159",
+        "Bytes": 9220,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.json",
+        "SHA256": "80A76D83CE91B012608F784712F76B329F37AA7B93A5A3073C5DDE3122165C09",
+        "Bytes": 8091,
+        "MatchesShaRecordedInRev9Markdown": true,
+        "MatchesPr13RecordedIdentity": true,
+        "Accepted": false
+      }
+    }
+  },
+  "CitedNotAccepted": {
+    "OrderedInventory": {
+      "Role": "ALREADY_ON_MAIN_ORDERED_INVENTORY_REV1_CANDIDATE_RESTATED_NOT_ADMITTED",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858,
+        "MatchesRev4AndRev5RecordedIdentity": true,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "MatchesRev4AndRev5RecordedIdentity": true
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorAdmittedByThisNote": false,
+      "SequenceMergedByThisNote": false
+    },
+    "IndependentStaticReview": {
+      "Role": "REV5_FA03_AND_ORDERED_INVENTORY_FINDINGS_RESTATED_NOT_RERUN",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+        "SHA256": "3723F4A36E3EF9761AEE094A49D579DFAC22D317E2870FAB702B1D02A7FA51AC",
+        "Bytes": 11092,
+        "MatchesRev5RecordedIdentity": true,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.json",
+        "SHA256": "48AB6F18FEEB43FD15EF342B5E5516655EB8EE619261AABAF367D227027FB6A1",
+        "Bytes": 18456,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "MatchesRev5RecordedIdentity": true
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "ChecksRerunByThisNote": false,
+      "StaticChecksRecordedByReview": 21,
+      "PassMeaningRecordedByReview": "A passed check means the code has a read-set basis. It does not mean the policy passed, and it does not admit a source.",
+      "FindingsCited": [
+        "IR-13.AP020_THREE_BLOCKS_GROUNDED",
+        "IR-14.AP021_TWO_BLOCKS_GROUNDED",
+        "IR-15.AP022_FIVE_BLOCKS_AND_V002_DIVERGENCE",
+        "IR-16.NO_REORDER_DEDUPE_OR_ADDED_ROWS"
+      ]
+    }
+  },
+  "Policies": [
+    {
+      "PolicyId": "AP-020",
+      "ManifestPathPattern": "input_contract.fixtures",
+      "SourceRefSelector": "manifest_identity.fixture_catalog",
+      "Mode": "ORDERED",
+      "ElementIdentityKey": "scenario_id",
+      "LocatorStatus": "CANDIDATE_ROWS_RECORDED_SEQUENCE_NOT_ADMITTED",
+      "RowStatus": "CANDIDATE_LOCATOR",
+      "Admission": "NOT_ADMITTED",
+      "ActualSequenceLocator": null,
+      "UniqueLocatorEstablished": false,
+      "CandidateRowCount": 17,
+      "CatalogArtifactPresent": false,
+      "ConcatenatedIntoCatalog": false,
+      "DirectoryOrderUsed": false,
+      "NamedRangeIsASource": false,
+      "AppearanceOfFifteenScenarioIdsIsPass": false,
+      "AppearanceOfFifteenScenarioIdsIsAdmission": false,
+      "BlocksRepaired": false,
+      "BlockCodes": [
+        {
+          "Code": "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "No fixture_catalog artifact is in the read set. The fifteen fixture files were not concatenated into a catalog sequence."
+        },
+        {
+          "Code": "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "Each fixture file is one object. scenario_id matches the filename. The only array is an empty expected_permitted_write_set. Filename agreement is not a catalog sequence."
+        },
+        {
+          "Code": "FIXTURE_IDENTITIES_IS_A_MAP",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "fixture_identities is a JSON object in both unadmitted bindings. Key order was not adopted as an ORDERED sequence. Equal objects do not make a unique admitted catalog."
+        }
+      ],
+      "InventoryRestatement": "Seventeen candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED: fifteen separate fixture objects named C03-TA-V-001 through C03-TA-V-015, plus two fixture_identities object rows. ActualSequenceLocator stays null. This note does not concatenate those files and does not admit any path.",
+      "ReviewRestatement": "IR-13 records exactly these three unrepaired BLOCK codes. Neither binding contains fixture_catalog. This note does not rerun IR-13 and does not repair the codes."
+    },
+    {
+      "PolicyId": "AP-021",
+      "ManifestPathPattern": "input_contract.scenarios",
+      "SourceRefSelector": "input_contract.binding",
+      "Mode": "ORDERED",
+      "ElementIdentityKey": "scenario_id",
+      "LocatorStatus": "CANDIDATE_ROWS_RECORDED_SEQUENCE_NOT_ADMITTED",
+      "RowStatus": "CANDIDATE_LOCATOR",
+      "Admission": "NOT_ADMITTED",
+      "ActualSequenceLocator": null,
+      "UniqueLocatorEstablished": false,
+      "CandidateRowCount": 2,
+      "ArraysMerged": false,
+      "EitherArraySelected": false,
+      "AppearanceMatchIsPass": false,
+      "AppearanceMatchIsAdmission": false,
+      "BlocksRepaired": false,
+      "RecordedCandidateRowsNotAdmitted": [
+        {
+          "Status": "CANDIDATE_LOCATOR",
+          "Admission": "NOT_ADMITTED",
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+          "Position": "$.scenarios",
+          "FieldByteOffsetRecordedByInventory": 24523,
+          "Count": 15,
+          "CandidateStateAsWritten": "MATERIALIZED_NOT_REVIEWED_NOT_ADMITTED",
+          "Selected": false,
+          "AdmittedByThisNote": false
+        },
+        {
+          "Status": "CANDIDATE_LOCATOR",
+          "Admission": "NOT_ADMITTED",
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+          "Position": "$.scenarios",
+          "FieldByteOffsetRecordedByInventory": 40336,
+          "Count": 15,
+          "CandidateStateAsWritten": "MATERIALIZED_NOT_FORMALLY_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED",
+          "Selected": false,
+          "AdmittedByThisNote": false
+        }
+      ],
+      "BlockCodes": [
+        {
+          "Code": "LOCATOR_NOT_UNIQUE",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "Two unadmitted files each have a $.scenarios array. Neither array is selected. The arrays are not merged."
+        },
+        {
+          "Code": "SOURCE_NOT_ADMITTED",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "Both files write a not-admitted state. Appearance match from C03-TA-V-001 through C03-TA-V-015 is not a pass and not admission."
+        }
+      ],
+      "NonBlockDisposition": {
+        "Code": "OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED",
+        "Disposition": "RECORDED_NOT_INSERTED",
+        "IsBlock": false,
+        "Repaired": false,
+        "InsertedByThisNote": false,
+        "Meaning": "The V2 comparison rule CR-003-EXACT-IDENTITY-MISMATCH-TO-FIXTURE carries scenario_id C03-TA-V-003 outside $.scenarios. The review left it outside the array. This note does not insert it."
+      },
+      "InventoryRestatement": "Both $.scenarios arrays are C03-TA-V-001 through C03-TA-V-015 once. Field offsets recorded by the inventory are 24523 and 40336. ActualSequenceLocator stays null. UniqueLocatorEstablished stays false. This note does not merge the arrays and does not pick either file.",
+      "ReviewRestatement": "IR-14 records exactly these two unrepaired BLOCK codes. OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED stays RECORDED_NOT_INSERTED and is not a BLOCK. This note does not rerun IR-14."
+    },
+    {
+      "PolicyId": "AP-022",
+      "ManifestPathPattern": "input_contract.scenarios[].variants",
+      "SourceRefSelector": "input_contract.binding",
+      "Mode": "ORDERED",
+      "PolicyIdentityKey": "variant_id",
+      "PolicyField": "variants",
+      "ObservedField": "stimulus_variants",
+      "ObservedIdentityField": "stimulus_binding_id",
+      "VariantIdOccurrences": 0,
+      "VariantsKeyOccurrences": 0,
+      "FieldRenamed": false,
+      "IdentityKeySubstituted": false,
+      "LocatorStatus": "CANDIDATE_ROWS_RECORDED_SEQUENCE_NOT_ADMITTED",
+      "RowStatus": "CANDIDATE_LOCATOR",
+      "Admission": "NOT_ADMITTED",
+      "ActualSequenceLocator": null,
+      "UniqueLocatorEstablished": false,
+      "CandidateRowCount": 30,
+      "WithinFileItemCounts": [
+        25,
+        28
+      ],
+      "SequencesDifferOn": [
+        "C03-TA-V-002"
+      ],
+      "C03TaV002Counts": [
+        2,
+        5
+      ],
+      "BothOrdersRetained": true,
+      "FourteenScenariosMatchInAppearanceAndRemainTwoRows": true,
+      "AppearanceMatchIsPass": false,
+      "AppearanceMatchIsAdmission": false,
+      "UnreachableAuthorityComparisonDeleted": false,
+      "V2FiveItemsCopiedIntoOriginalBinding": false,
+      "BlocksRepaired": false,
+      "BlockCodes": [
+        {
+          "Code": "POLICY_IDENTITY_FIELD_ABSENT",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "variant_id occurs zero times in both binding files. stimulus_binding_id and design_variant_id were not substituted for it."
+        },
+        {
+          "Code": "OBSERVED_FIELD_NAME_DIFFERS",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "The observed field is stimulus_variants. The policy path says variants. The key variants occurs zero times. The field was not renamed."
+        },
+        {
+          "Code": "LOCATOR_NOT_UNIQUE",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "Thirty rows belong to two unadmitted files. Fourteen scenarios match in appearance and remain two rows. Matching appearance does not collapse them into one admitted sequence."
+        },
+        {
+          "Code": "SOURCE_NOT_ADMITTED",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "Neither binding file is an admitted input_contract.binding."
+        },
+        {
+          "Code": "CANDIDATE_SEQUENCES_DIFFER",
+          "Disposition": "BLOCK",
+          "Repaired": false,
+          "Meaning": "C03-TA-V-002 retains both orders: two items in the original binding and five items in the V2 candidate. Neither list was edited."
+        }
+      ],
+      "InventoryRestatement": "Each scenario has one candidate row in each unadmitted file, at $.scenarios[n].stimulus_variants. Counts stay 25 and 28. Both C03-TA-V-002 orders stay. SB-002-UNREACHABLE-AUTHORITY-COMPARISON was not deleted. The five V2 items were not copied into the original binding. ActualSequenceLocator stays null. This note does not merge or pick a sequence.",
+      "ReviewRestatement": "IR-15 records exactly these five unrepaired BLOCK codes. IR-16 records row count 30, with Reordered, ItemsInvented, and DuplicatesRemoved false. This note does not rerun those checks and does not add, delete, or reorder rows."
+    }
+  ],
+  "NotDone": {
+    "BlockCodesRepaired": false,
+    "SequencesMerged": false,
+    "SequencesPicked": false,
+    "LocatorsAdmitted": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "CaptureCodeExecuted": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "FA05OptionSelected": false,
+    "FA06RowsDisposed": false,
+    "Rev3ShasAcceptedAsFormalB02Contract": false,
+    "SourceRootReviewFileAdded": false,
+    "RuntimeDependencyManifestCreated": false,
+    "FurtherDeliverableOpened": false
+  },
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidates": [
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+    "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "ExistingCaptureCandidatesExecuted": false,
+  "Rev3ShasNotAccepted": [
+    "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+    "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123"
+  ],
+  "SourceRootShaNoSecondDesignReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+  "RuntimeDependencyManifestPathAbsent": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and the independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This note does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note stays recorded and NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. Candidate row count in the inventory read set stays 0. The ten REQUIRES_RUNTIME_ROOT rows share this barrier and stay undisposed. This note does not open a locator.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "INCOMPLETE",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "The FA-05 options sheet stays recorded and NOT_ADMITTED. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. No option is selected. This note does not open a further FA-05 deliverable.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_CODES_UNREPAIRED",
+      "BlockNoteRecorded": true,
+      "BlockNoteAdmission": "NOT_ADMITTED",
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "SequencesMerged": false,
+      "Note": "This BLOCK note records the unrepaired codes already on the ORDERED inventory and in the REV5 review. The codes stay unrepaired. Actual sequence locators stay null. Candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED. No sequence is merged or selected. No repair deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  }
+}
