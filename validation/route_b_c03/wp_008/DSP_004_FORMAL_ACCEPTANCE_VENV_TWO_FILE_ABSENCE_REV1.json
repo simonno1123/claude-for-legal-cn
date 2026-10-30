@@ -1,0 +1,54 @@
+{
+  "RecordKind": "DSP004_FORMAL_ACCEPTANCE_SECTION4_TWO_FILE_READ_ONLY_CHECK",
+  "Outcome": "BOTH_TARGETS_ABSENT_NO_FILE_OBSERVATION",
+  "Qualification": "ABSENCE ONLY. NOT A VENV_ROOT BINDING, NOT FA-02 COMPLETION, NOT ENVIRONMENT ACCEPTANCE.",
+  "Authorization": "Follow-on after the in-repo preparation review: check the two section-4 paths if they exist in this workspace. Do not execute them and do not modify a venv.",
+  "CheckedAtUtc": "2026-10-30T08:14:56Z",
+  "RepositoryRoot": "/workspace",
+  "Branch": "cursor/dsp004-prep-package-review-3ca1",
+  "GitHead": "bb69dc2d96103e99a308dbe9eddaeebfa88e07d3",
+  "HostNote": "Linux agent workspace. The proposed executable path is the Windows-shaped Scripts/python.exe from the preparation package. No other interpreter path was probed.",
+  "Method": "Existence test of the parent directory and the two relative paths only. No file was opened.",
+  "ParentDirectory": {
+    "Path": ".venv-validation",
+    "Exists": false,
+    "ListerMessage": "ls: cannot access '.venv-validation': No such file or directory"
+  },
+  "Targets": [
+    {
+      "Path": ".venv-validation/pyvenv.cfg",
+      "Exists": false,
+      "BytesRead": 0,
+      "SHA256": null,
+      "MetadataRead": false,
+      "ConfigFieldsRead": false
+    },
+    {
+      "Path": ".venv-validation/Scripts/python.exe",
+      "Exists": false,
+      "BytesRead": 0,
+      "SHA256": null,
+      "MetadataRead": false,
+      "ConfigFieldsRead": false,
+      "Executed": false
+    }
+  ],
+  "NotDone": [
+    "NO_SHA256",
+    "NO_SIZE_OR_MTIME",
+    "NO_PYVENV_CFG_FIELDS",
+    "NO_PYTHON_EXECUTION",
+    "NO_MODULE_IMPORT",
+    "NO_VENV_MODIFICATION",
+    "NO_ALTERNATE_PATH_PROBE",
+    "NO_RUNTIME_OR_SYSTEM_ROOT_DISCOVERY",
+    "NO_HISTORICAL_WINDOWS_HASH_REUSE_AS_THIS_OBSERVATION"
+  ],
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "VENV_ROOT": "NOT_ESTABLISHED",
+    "FA02": "STILL_OWNER_DECISION_REQUIRED"
+  }
+}
