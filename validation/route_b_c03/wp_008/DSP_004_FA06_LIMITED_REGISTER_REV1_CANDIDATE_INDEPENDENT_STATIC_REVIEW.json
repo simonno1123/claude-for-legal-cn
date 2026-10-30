@@ -1,0 +1,1496 @@
+{
+  "RecordKind": "DSP004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "ReviewBase": {
+    "GitHeadAtReview": "cbebe00a1d7557ab47a8052dbba7221f94073637",
+    "FA06MaterializationCommit": "cbebe00a1d7557ab47a8052dbba7221f94073637",
+    "FormationHeadRecordedByRegister": "2a9636f45aa12bcfd9edefb045f6e764b6acfc29",
+    "RecordedAtUtc": "2026-10-30T21:41:21Z",
+    "PriorPreparationIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV6.md",
+        "SHA256": "4FFE7A40F5307EE6F2485F26ECA6719F0671E075843C18A5586D43B338B1518C",
+        "Bytes": 4301
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV6.json",
+        "SHA256": "48AB526A92412AFCD3CDB982E7A68FB936D5D6325C26C7506C83428A16799FDA",
+        "Bytes": 2845
+      }
+    },
+    "ComparedWith": [
+      "PATH_B_PREPARATION_INCREMENT_REV6",
+      "PR_10"
+    ],
+    "Method": "LOCAL_PYTHON_SHA256_AND_JSON_STRUCTURE_ONLY",
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "RowsReorderedByThisReview": false,
+    "RowsDisposedByThisReview": false,
+    "RowsAddedByThisReview": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "AssetAcceptanceGranted": false
+  },
+  "ReviewedRegister": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "AAF90D311F2C85C48EF652E903D4B430D1F339F1FA465527DE679087F30B2305",
+      "Bytes": 22701
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254",
+      "Bytes": 38377
+    },
+    "IdentityMatchesRev6AndPr10": true,
+    "UnchangedSinceMaterializationCommit": true,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "FA06Completed": false,
+    "AcceptedAsFormalContract": false,
+    "RowCount": 61,
+    "MarkdownAgreesWithJson": true,
+    "EvidenceStateCounts": {
+      "EVIDENCE_PRESENT_UNACCEPTED": 35,
+      "EVIDENCE_ABSENT": 16,
+      "REQUIRES_RUNTIME_ROOT": 10
+    },
+    "EveryRowDisposed": false
+  },
+  "Checks": [
+    {
+      "CheckId": "IR-01.FA06_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "22701 bytes and SHA-256 AAF90D311F2C85C48EF652E903D4B430D1F339F1FA465527DE679087F30B2305 match the identity recorded in preparation increment REV6 and materialized by PR #10."
+    },
+    {
+      "CheckId": "IR-02.FA06_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "38377 bytes and SHA-256 500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254 match the identity recorded in preparation increment REV6 and materialized by PR #10."
+    },
+    {
+      "CheckId": "IR-03.CANDIDATE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "Both candidate files are UTF-8 without BOM, CR, or trailing whitespace. The narrative embeds its companion JSON SHA-256 and does not embed this review SHA."
+    },
+    {
+      "CheckId": "IR-04.BYTES_UNCHANGED_SINCE_MATERIALIZATION",
+      "Passed": true,
+      "Detail": "The register files were added at cbebe00a1d7557ab47a8052dbba7221f94073637, which is HEAD. The fifteen source paths, the two absence records, and the witness file have the same git blob at formation head 2a9636f45aa12bcfd9edefb045f6e764b6acfc29 and at HEAD."
+    },
+    {
+      "CheckId": "IR-05.MARKDOWN_JSON_AGREE",
+      "Passed": true,
+      "Detail": "The narrative tables and the JSON rows agree on 61 rows, source order, item ids, titles, written states, and the three evidence states."
+    },
+    {
+      "CheckId": "IR-06.EVIDENCE_VOCABULARY_AND_COUNTS",
+      "Passed": true,
+      "Detail": "Every evidence state is EVIDENCE_PRESENT_UNACCEPTED (35), EVIDENCE_ABSENT (16), or REQUIRES_RUNTIME_ROOT (10). Every Disposed flag is false. No fourth status appears."
+    },
+    {
+      "CheckId": "IR-07.SOURCE_POINTERS_TRACE",
+      "Passed": true,
+      "Detail": "Each of the 61 rows cites a file that exists on main. Recorded bytes and SHA-256 match the file. Item id, title, and written state occur in that file. No row source is a CAPTURE_RESULT path."
+    },
+    {
+      "CheckId": "IR-08.NO_ROW_DISPOSED_OR_ADMITTED",
+      "Passed": true,
+      "Detail": "The register records Signed false, Accepted false, Admission NOT_ADMITTED, and FA06Completed false. Gate DSP004-FA-06 remains PRECONDITIONS_NOT_ESTABLISHED / 未建立充分前提. This review disposes no row."
+    },
+    {
+      "CheckId": "IR-09.NO_EXPECTED_OR_SYNTHETIC_BORROW",
+      "Passed": true,
+      "Detail": "No row title or written state is SYNTHETIC-PROJECT-001, SYNTHETIC-SESSION-001, SYNTHETIC-PROVIDER-001, or the expected-baseline SHA. attempt_02_result.json has scope LOCAL_SYNTHETIC_ONLY and status PASS, and it has no expected field. Those two header values are not copied into rows 55-61."
+    },
+    {
+      "CheckId": "IR-10.SEVEN_CAPTURE_RESULTS_NOT_SELECTED",
+      "Passed": true,
+      "Detail": "All seven DSP_004_CAPTURE_RESULT_* files remain at the FA-03 recorded bytes and SHA-256. Selected is false and Admission is NOT_ADMITTED. attempt_02 names those paths under protected_before and protected_after. No register row uses them as a source, and this review did not import or execute them."
+    },
+    {
+      "CheckId": "IR-11.NO_MANIFEST_CREATED",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created. Rows that quote Manifest keep the source written state. Those states are NOT AUTHORIZED, BLOCKED, NOT ESTABLISHED, design-requirement criteria, no PASS asserted, proposal-gate headings, or the sentence that does not create the manifest file. None records that the file exists. RuntimeDependencyManifestPresent is false."
+    },
+    {
+      "CheckId": "IR-12.FOUR_NAMED_ITEMS_RETAINED",
+      "Passed": true,
+      "Detail": "C03-WP008-V3-RQ-021, C03-WP008-V3-G-017, C03-WP008-RDM-V2-RQ-018, and C03-WP008-RDM-V2-G-014 remain single rows, EVIDENCE_PRESENT_UNACCEPTED, Disposed false. This review does not mark them eliminated."
+    },
+    {
+      "CheckId": "IR-13.VENV_ABSENCE_NOT_A_ROW",
+      "Passed": true,
+      "Detail": "The two formal-acceptance venv absence files match the recorded hashes, contain no LIMITED entry, and contribute no row."
+    },
+    {
+      "CheckId": "IR-14.WITNESS_SHORT_NAMES_NO_FIFTH_ROW",
+      "Passed": true,
+      "Detail": "The static-check witness matches its recorded hash. It does not contain the four full item ids. Its sentence names V3.2 RQ-021, G-017 and V2.2 RQ-018, G-014, in that order, and says those LIMITED entries are not eliminated. No fifth row was added from that file."
+    },
+    {
+      "CheckId": "IR-15.EXCLUDED_ITEMS_NOT_INSERTED",
+      "Passed": true,
+      "Detail": "LR-06 through LR-12 remain in the trusted-import proposal and are not rows. RDM-V2-01 through RDM-V2-05 remain in Plan V2.2 and are not rows."
+    },
+    {
+      "CheckId": "IR-16.RUNTIME_ROOT_CELL_NOT_A_DESIGN_REVIEW",
+      "Passed": true,
+      "Detail": "Row 48 cites the RUNTIME_ROOT cell under the column 不能据此认定. The title is that cell. This review adds no design-review file for source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93."
+    },
+    {
+      "CheckId": "IR-17.ACTUAL_SIDES_UNBOUND",
+      "Passed": true,
+      "Detail": "SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER remain Binding UNBOUND in the FA-03 candidate, with SourceIdentity and CaptureEntry null. The register does not bind them."
+    },
+    {
+      "CheckId": "IR-18.SUBJECTS_NOT_EXECUTED",
+      "Passed": true,
+      "Detail": "No subject module was imported or executed. identity_gate was not called. Fixtures and scenario runners were not executed. Commercial P0 was not run and was not modified. ENVIRONMENT_MANIFEST.md, the historical Windows virtual environment, and tool caches were not read."
+    },
+    {
+      "CheckId": "IR-19.REV3_SHA_NOT_FORMAL_CONTRACT",
+      "Passed": true,
+      "Detail": "Typed-contract REV3 remains 29240 bytes SHA-256 AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F. Array-policy REV3 remains 16317 bytes SHA-256 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123. Neither SHA is accepted as the formal B-02 contract."
+    },
+    {
+      "CheckId": "IR-20.DUPLICATE_IDS_RETAINED",
+      "Passed": true,
+      "Detail": "Repeated item ids across different sources stay separate rows. full_dependency_provenance stays two rows, distinguished by runtime_after and runtime_before. This review did not merge or drop them. The header occurrence of RDM-DSP-002 is not row 42; row 42 is the resulting-state pair after DSP002-G-018."
+    },
+    {
+      "CheckId": "IR-21.ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "This review records Signed false, Accepted false, and Admission NOT_ADMITTED. The reviewed register is not a formal contract, a Manifest, or a source admission. No FA-06 row is disposed."
+    }
+  ],
+  "EvidenceStateOrders": {
+    "EVIDENCE_PRESENT_UNACCEPTED": [
+      1,
+      6,
+      11,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      39,
+      40,
+      42,
+      45,
+      47,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      58
+    ],
+    "EVIDENCE_ABSENT": [
+      3,
+      4,
+      8,
+      9,
+      13,
+      14,
+      26,
+      37,
+      38,
+      41,
+      43,
+      44,
+      46,
+      56,
+      57,
+      59
+    ],
+    "REQUIRES_RUNTIME_ROOT": [
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      48,
+      55,
+      60,
+      61
+    ]
+  },
+  "SourceGroups": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+      "Bytes": 36436,
+      "SHA256": "F3C3DCA20F5FC0AB22A38F61B5A6C2EE9B437AD949C18E93E27CB0D550AF0B4C",
+      "Orders": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+      "Bytes": 38995,
+      "SHA256": "07FD553F641CF52EF54FABFCFAD448CC2D432C8A0279082E6DB899EB8C900910",
+      "Orders": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "Bytes": 54703,
+      "SHA256": "6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA",
+      "Orders": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "Bytes": 27557,
+      "SHA256": "AC90F5DA143256FBC4F9409F0130FCB11D187E97DA550C72931B9209C3E71516",
+      "Orders": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/V003_LIMITED_COMPARISON_RULE_DRAFT.md",
+      "Bytes": 17452,
+      "SHA256": "9A856FCC23FEAC15A32CB7CD68BF3A33B33801B6D3947AB646CB6FD2AD7E08C9",
+      "Orders": [
+        36
+      ]
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/V003_LIMITED_COMPARISON_RULE_STATIC_CHECK.md",
+      "Bytes": 14449,
+      "SHA256": "A46CCD928EE8CC4EB46D6BEBCBCF7CF53176EF2BF6ACC1116BDCDFBB9309A1D5",
+      "Orders": [
+        37,
+        38
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL.md",
+      "Bytes": 19838,
+      "SHA256": "85D7A4029D9667EFF7922CEDAA19570A7C6A68F36C2D6A66401F291B5F135A24",
+      "Orders": [
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.md",
+      "Bytes": 8630,
+      "SHA256": "9B0A3C048E479B714083952E76CF6620A2AE046EA23D2CC95192D967CF5A6736",
+      "Orders": [
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md",
+      "Bytes": 14774,
+      "SHA256": "538283D7E48520B56B90ACA42A705A43AFEA468AF6DE8B7A46AE34636A3805AA",
+      "Orders": [
+        46,
+        47
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+      "Bytes": 21257,
+      "SHA256": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+      "Orders": [
+        48
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_1_CANDIDATE.md",
+      "Bytes": 49702,
+      "SHA256": "3432D99D22AA288668C8D4E2CF58975A794ED545B62EB05FCA9E0B41525AEDDB",
+      "Orders": [
+        49
+      ]
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "Bytes": 54109,
+      "SHA256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD",
+      "Orders": [
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/README.md",
+      "Bytes": 5952,
+      "SHA256": "BBAD8F847687531313C42F188AFDB24A2B9DAF645D9D7BDD6CFEFC06F19A0F64",
+      "Orders": [
+        53
+      ]
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/RESUMPTION_RESULT.md",
+      "Bytes": 7419,
+      "SHA256": "2705BBDF9AAFC580DF6AE09EC51BC887011D54496E1296A8C243B367BAA8658A",
+      "Orders": [
+        54
+      ]
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "Bytes": 50434,
+      "SHA256": "967B146EA3DECC79106DE191D83C79934BF16CDB8161B6230DBB8EECCF53D148",
+      "Orders": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    }
+  ],
+  "RowsReviewed": [
+    {
+      "Order": 1,
+      "ItemId": "Current materialization authority",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 2,
+      "ItemId": "RDM-V2-06",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 3,
+      "ItemId": "RDM-V2-07",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 4,
+      "ItemId": "RDM-V2-08",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 5,
+      "ItemId": "RDM-V2-09",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 6,
+      "ItemId": "Prior joint review disposition",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 7,
+      "ItemId": "RDM-V2-06",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 8,
+      "ItemId": "RDM-V2-07",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 9,
+      "ItemId": "RDM-V2-08",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 10,
+      "ItemId": "RDM-V2-09",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 11,
+      "ItemId": "Latest joint review of V3.1 / V2.1",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 12,
+      "ItemId": "RDM-V2-06",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 13,
+      "ItemId": "RDM-V2-07",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 14,
+      "ItemId": "RDM-V2-08",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 15,
+      "ItemId": "RDM-V2-09",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 16,
+      "ItemId": "C03-WP008-RDM-V2-RQ-018",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 17,
+      "ItemId": "C03-WP008-RDM-V2-G-014",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 18,
+      "ItemId": "TI-001",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 19,
+      "ItemId": "TI-002",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 20,
+      "ItemId": "TI-003",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 21,
+      "ItemId": "TI-004",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 22,
+      "ItemId": "TI-005",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 23,
+      "ItemId": "TI-006",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 24,
+      "ItemId": "TI-007",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 25,
+      "ItemId": "TI-008",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 26,
+      "ItemId": "T0",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 27,
+      "ItemId": "T1",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 28,
+      "ItemId": "T2",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 29,
+      "ItemId": "T3",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 30,
+      "ItemId": "T4",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 31,
+      "ItemId": "LR-01",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 32,
+      "ItemId": "LR-02",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 33,
+      "ItemId": "LR-03",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 34,
+      "ItemId": "LR-04",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 35,
+      "ItemId": "LR-05",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_TRUSTED_IMPORT_AND_INPUT_BINDING_LIMITED_REVISION_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 36,
+      "ItemId": "V-003 有限比较规则草案",
+      "SourcePath": "validation/route_b_c03/wp_008/V003_LIMITED_COMPARISON_RULE_DRAFT.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 37,
+      "ItemId": "Python 导入、编译、构造与场景执行",
+      "SourcePath": "validation/route_b_c03/wp_008/V003_LIMITED_COMPARISON_RULE_STATIC_CHECK.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 38,
+      "ItemId": "Harness、完整依赖与执行方案",
+      "SourcePath": "validation/route_b_c03/wp_008/V003_LIMITED_COMPARISON_RULE_STATIC_CHECK.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 39,
+      "ItemId": "Artifact type",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 40,
+      "ItemId": "DSP002-RQ-018",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 41,
+      "ItemId": "DSP002-G-018",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 42,
+      "ItemId": "RDM-DSP-002",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_RDM_DSP_002_AUTHORITY_COMPARISON_REACHABILITY_LIMITED_SUBJECT_DESIGN_PROPOSAL.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 43,
+      "ItemId": "DSP004-FA-06",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 44,
+      "ItemId": "DSP004-R-06",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 45,
+      "ItemId": "DSP004-R-07",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 46,
+      "ItemId": "DSP004-R-06",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 47,
+      "ItemId": "DSP004-R-07",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 48,
+      "ItemId": "RUNTIME_ROOT",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 49,
+      "ItemId": "Prior joint review disposition",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_1_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 50,
+      "ItemId": "Latest joint review of V3.1 / V2.1",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 51,
+      "ItemId": "C03-WP008-V3-RQ-021",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 52,
+      "ItemId": "C03-WP008-V3-G-017",
+      "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 53,
+      "ItemId": "保留 LIMITED",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/README.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 54,
+      "ItemId": "LIMITED / 未覆盖",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/RESUMPTION_RESULT.md",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 55,
+      "ItemId": "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 56,
+      "ItemId": "UNOBSERVED_OS_SCHEDULES_AND_NATIVE_SYNCHRONOUS_CALLS",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 57,
+      "ItemId": "DURABLE_NATIVE_ERROR_PRESERVATION_AFTER_HOST_DEATH",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 58,
+      "ItemId": "FULL_189_INPUT_PLAN_AND_D007_BUSINESS_SOURCE_PATH",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 59,
+      "ItemId": "FORMAL_SOURCE_ADMISSION_ACCEPTANCE_INTEGRATION_DEPLOYMENT",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "EVIDENCE_ABSENT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 60,
+      "ItemId": "full_dependency_provenance",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    },
+    {
+      "Order": 61,
+      "ItemId": "full_dependency_provenance",
+      "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+      "Disposed": false,
+      "SourcePointerMatch": true,
+      "ItemTitleAndWrittenStateInSource": true,
+      "BorrowedExpectedOrSyntheticValue": false,
+      "ImpliesCaptureResultSelection": false,
+      "ImpliesManifestCreated": false,
+      "DisposedByThisReview": false
+    }
+  ],
+  "Findings": [
+    {
+      "FindingId": "F-01",
+      "Kind": "WITNESS_USES_SHORT_NAMES",
+      "Orders": [
+        16,
+        17,
+        51,
+        52
+      ],
+      "Detail": "The witness sentence is: V3.2 RQ-021, G-017 and V2.2 RQ-018, G-014 are not eliminated. The four full ids are not substrings of that file. They are the existing rows in Plan V2.2 and package V3.2. No fifth row was added, and none of the four rows is disposed."
+    },
+    {
+      "FindingId": "F-02",
+      "Kind": "ATTEMPT02_STATES_ARE_CLASSIFICATIONS",
+      "Orders": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "Detail": "Rows 55-59 share the remaining_limited array. The written state is that key, not a distinct per-item token. Row 55 is REQUIRES_RUNTIME_ROOT because the label is full dependency provenance and both runtime objects say LIMITED. Rows 56 and 57 are EVIDENCE_ABSENT from the unobserved and durable-preservation labels. Row 58 is EVIDENCE_PRESENT_UNACCEPTED because the 189-plan label is present and is not accepted. Row 59 is EVIDENCE_ABSENT beside formal_acceptance NOT_ESTABLISHED_BY_THIS_RUN. Rows 60 and 61 cite full_dependency_provenance LIMITED under runtime_after and runtime_before. Scope LOCAL_SYNTHETIC_ONLY and status PASS were not copied. Runtime hashes and the executable path were not copied, and the path was not opened."
+    },
+    {
+      "FindingId": "F-03",
+      "Kind": "MANIFEST_QUOTES_DO_NOT_CREATE_A_MANIFEST",
+      "Orders": [
+        2,
+        3,
+        7,
+        8,
+        12,
+        13,
+        15,
+        16,
+        17,
+        40,
+        41,
+        43,
+        51
+      ],
+      "Detail": "These rows quote a source sentence that names a Manifest. Each keeps that source's own written state: NOT AUTHORIZED, BLOCKED, NOT ESTABLISHED, design-requirement criteria, no PASS asserted, a proposal-gate heading, or the sentence that does not create PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json. The file is absent. No row implies that a Manifest was created."
+    },
+    {
+      "FindingId": "F-04",
+      "Kind": "CAPTURE_PATHS_NAMED_BUT_NOT_SELECTED",
+      "Orders": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "Detail": "attempt_02_result.json names the seven capture-candidate paths in protected_before and protected_after. No register row selects one. Current bytes still match the FA-03 record. This review hashed those bytes and did not import them."
+    },
+    {
+      "FindingId": "F-05",
+      "Kind": "RUNTIME_ROOT_CELL_ONLY",
+      "Orders": [
+        48
+      ],
+      "Detail": "Row 48 is the RUNTIME_ROOT intersection with the column 不能据此认定. The title is the cell 完整依赖来源、闭包或检查到使用保护. The written state is that column header. This is not a second design review of SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93."
+    },
+    {
+      "FindingId": "F-06",
+      "Kind": "DUPLICATE_IDS_KEPT",
+      "Orders": [
+        42,
+        60,
+        61
+      ],
+      "Detail": "RDM-DSP-002 also appears in the proposal header. Row 42 is the resulting-state pair after DSP002-G-018. full_dependency_provenance is kept twice. Nothing was merged or disposed."
+    }
+  ],
+  "InspectedNoRow": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_VENV_TWO_FILE_ABSENCE_REV1.md",
+      "Bytes": 2536,
+      "SHA256": "8272F12D37A625455B9CC80962C504285D47E67794BB2CAC750E9684A6B72AAE",
+      "Reason": "没有 LIMITED 条目。两路径不存在仍只属于 FA-02，不改写成依赖处置。"
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_VENV_TWO_FILE_ABSENCE_REV1.json",
+      "Bytes": 1965,
+      "SHA256": "D8142F5B8CFF55BE0AE26F652A7A09D86BC2E6172DC592D62D9230260A115E97",
+      "Reason": "没有 LIMITED 条目。两路径不存在仍只属于 FA-02，不改写成依赖处置。"
+    }
+  ],
+  "LimitedSetWitness": {
+    "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_STATIC_CHECK.md",
+    "Bytes": 5420,
+    "SHA256": "D8263E8CCFBCF7892FB4BE5EBE8B34CFD32A25F12CD29606CC562D4803EEC668",
+    "LiteralFullIdsPresent": false,
+    "ShortNameSentencePresent": true,
+    "NewItemAdded": false,
+    "RowsEliminated": false
+  },
+  "ExcludedItemsNotInserted": {
+    "LR-06 through LR-12": true,
+    "RDM-V2-01 through RDM-V2-05": true
+  },
+  "NamedLimitedItems": [
+    {
+      "ItemId": "C03-WP008-V3-RQ-021",
+      "Order": 51,
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "Eliminated": false
+    },
+    {
+      "ItemId": "C03-WP008-V3-G-017",
+      "Order": 52,
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "Eliminated": false
+    },
+    {
+      "ItemId": "C03-WP008-RDM-V2-RQ-018",
+      "Order": 16,
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "Eliminated": false
+    },
+    {
+      "ItemId": "C03-WP008-RDM-V2-G-014",
+      "Order": 17,
+      "EvidenceState": "EVIDENCE_PRESENT_UNACCEPTED",
+      "Disposed": false,
+      "Eliminated": false
+    }
+  ],
+  "ExistingCaptureCandidates": {
+    "Count": 7,
+    "Selection": "NOT_SELECTED",
+    "Admission": "NOT_ADMITTED",
+    "BytesStillMatchFA03Record": true,
+    "ImportedOrExecutedByThisReview": false,
+    "Files": [
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+        "Bytes": 18301,
+        "SHA256": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+        "Bytes": 10678,
+        "SHA256": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+        "Bytes": 47292,
+        "SHA256": "2C03E9D87BB747A58491CB3B992780FE4252ABDDCF4F35B1A2BC4F0078C4E942",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+        "Bytes": 53568,
+        "SHA256": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+        "Bytes": 57623,
+        "SHA256": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+        "Bytes": 29736,
+        "SHA256": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+        "Bytes": 51610,
+        "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      }
+    ]
+  },
+  "ActualSides": [
+    {
+      "SourceRole": "SRC004-A-PROJECT",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-SESSION",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-PROVIDER",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    }
+  ],
+  "Rev3Shas": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "AcceptedAsFormalB02Contract": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "AcceptedAsFormalB02Contract": false
+    }
+  ],
+  "RuntimeDependencyManifestPath": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+  "RuntimeDependencyManifestPresent": false,
+  "StillMissing": [
+    "disposition of which dependency, startup, isolation, stop, and cleanup LIMITED rows may be retained",
+    "import closure, both call-side identities, check-to-use substitution protection, and T0 / PE / OS evidence",
+    "an admitted actual locator for AP-006 and AP-009 after a runtime root exists",
+    "source identity, version, carrier, locator, producer duty, authority, and a bound capture entry for SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER",
+    "fixed SHA acceptance of the FA-06 register",
+    "fixed SHA acceptance of the FA-03 candidate or the ORDERED inventory",
+    "fixed SHA acceptance of REV3 SHA AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F or 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123 as the formal B-02 contract",
+    "elimination or continued retention of C03-WP008-V3-RQ-021, C03-WP008-V3-G-017, C03-WP008-RDM-V2-RQ-018, and C03-WP008-RDM-V2-G-014",
+    "Manifest, formal run, and closure of DSP-004"
+  ],
+  "Summary": {
+    "StaticChecks": 21,
+    "StaticChecksPassed": 21,
+    "PassMeaning": "Identity matches the REV6 record, markdown and JSON agree, and each row traces to a file already on main. A passed check does not admit a source, accept a SHA, dispose an FA-06 row, or close DSP-004.",
+    "Findings": 6,
+    "RowsDisposed": 0,
+    "TextBlockingIdentityMismatches": 0,
+    "GatesCompleted": 0,
+    "FormalContractAccepted": false,
+    "SourceAdmissionGranted": false,
+    "FA03Completed": false,
+    "FA04Completed": false,
+    "FA06Completed": false,
+    "FA08Completed": false,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  },
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE FA-06 LIMITED REGISTER REV1 CANDIDATE ONLY. FINDINGS ONLY. ACCEPTED IS FALSE. SIGNED IS FALSE. ADMISSION IS NOT_ADMITTED. THIS RECORD DOES NOT DISPOSE ANY FA-06 ROW AND DOES NOT CLOSE B-01, B-02, FA-03, FA-04, FA-06, FA-08, OR DSP-004."
+}
