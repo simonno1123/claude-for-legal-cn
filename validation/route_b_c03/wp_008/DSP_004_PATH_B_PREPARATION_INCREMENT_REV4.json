@@ -1,0 +1,120 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV3.md",
+      "SHA256": "D8AED53ECE1FD4396F1E187F8840911497051D8FCE260C5FC3F3DC1499BE0F60",
+      "Bytes": 4208
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV3.json",
+      "SHA256": "D6D94630A3B99A04306DC9DF07A524E372CE97C9E1119F45C49B1E1290319F7A",
+      "Bytes": 2493
+    }
+  },
+  "NewPreparationFact": "ORDERED_SOURCE_LOCATOR_INVENTORY_CANDIDATE_NOT_ADMITTED",
+  "Inventory": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+      "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+      "Bytes": 15858
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+      "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+      "Bytes": 70228,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    }
+  },
+  "OrderedLocatorSummary": {
+    "AP-006": {
+      "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "ActualLocator": null,
+      "Admission": "NOT_ADMITTED"
+    },
+    "AP-009": {
+      "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "ActualLocator": null,
+      "Admission": "NOT_ADMITTED"
+    },
+    "AP-020": {
+      "RowStatus": "CANDIDATE_LOCATOR",
+      "Admission": "NOT_ADMITTED",
+      "ActualSequenceLocator": null,
+      "CatalogArtifactPresent": false,
+      "BlockCodes": [
+        "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+        "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+        "FIXTURE_IDENTITIES_IS_A_MAP"
+      ]
+    },
+    "AP-021": {
+      "RowStatus": "CANDIDATE_LOCATOR",
+      "Admission": "NOT_ADMITTED",
+      "ActualSequenceLocator": null,
+      "UniqueLocatorEstablished": false,
+      "BlockCodes": [
+        "LOCATOR_NOT_UNIQUE",
+        "SOURCE_NOT_ADMITTED"
+      ]
+    },
+    "AP-022": {
+      "RowStatus": "CANDIDATE_LOCATOR",
+      "Admission": "NOT_ADMITTED",
+      "ActualSequenceLocator": null,
+      "VariantIdPresent": false,
+      "SequencesDifferOn": [
+        "C03-TA-V-002"
+      ],
+      "BlockCodes": [
+        "POLICY_IDENTITY_FIELD_ABSENT",
+        "OBSERVED_FIELD_NAME_DIFFERS",
+        "LOCATOR_NOT_UNIQUE",
+        "SOURCE_NOT_ADMITTED",
+        "CANDIDATE_SEQUENCES_DIFFER"
+      ]
+    }
+  },
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "DuplicatesRemoved": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE"
+  }
+}
