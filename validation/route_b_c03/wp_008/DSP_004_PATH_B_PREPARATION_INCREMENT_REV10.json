@@ -1,0 +1,219 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.md",
+      "SHA256": "AB7D4233FBDF41A362BFD0360AC9BCB82C7C45D280BB55FECB801ABD0C18D159",
+      "Bytes": 9220,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.json",
+      "SHA256": "80A76D83CE91B012608F784712F76B329F37AA7B93A5A3073C5DDE3122165C09",
+      "Bytes": 8091,
+      "MatchesShaRecordedInRev9Markdown": true,
+      "MatchesPr13RecordedIdentity": true,
+      "Accepted": false
+    }
+  },
+  "NewPreparationFact": "AP020_AP021_AP022_BLOCK_NOTE_NOT_ADMITTED",
+  "BlockNote": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE.md",
+      "SHA256": "01A98020D1E2524D1E6F953F028950A02BD317BE45A4E973E43B37B953FF5A27",
+      "Bytes": 15543
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE.json",
+      "SHA256": "C1C00CEA5DF3D5EBE0BB7861308339B32007CC6FD97E5957981B49D1AEFBCA3D",
+      "Bytes": 19308,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "BlocksRepaired": false,
+      "LocatorsAdmitted": false,
+      "SequencesMerged": false,
+      "SequencesSelected": false,
+      "UniqueLocatorEstablished": false,
+      "AppearanceMatchIsPass": false,
+      "AppearanceMatchIsAdmission": false
+    },
+    "Policies": [
+      {
+        "PolicyId": "AP-020",
+        "RowStatus": "CANDIDATE_LOCATOR",
+        "Admission": "NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "UniqueLocatorEstablished": false,
+        "CandidateRowCount": 17,
+        "BlockCodes": [
+          "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+          "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+          "FIXTURE_IDENTITIES_IS_A_MAP"
+        ],
+        "Repaired": false
+      },
+      {
+        "PolicyId": "AP-021",
+        "RowStatus": "CANDIDATE_LOCATOR",
+        "Admission": "NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "UniqueLocatorEstablished": false,
+        "CandidateRowCount": 2,
+        "BlockCodes": [
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED"
+        ],
+        "Repaired": false,
+        "NonBlockDisposition": "OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED",
+        "NonBlockState": "RECORDED_NOT_INSERTED"
+      },
+      {
+        "PolicyId": "AP-022",
+        "RowStatus": "CANDIDATE_LOCATOR",
+        "Admission": "NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "UniqueLocatorEstablished": false,
+        "CandidateRowCount": 30,
+        "BlockCodes": [
+          "POLICY_IDENTITY_FIELD_ABSENT",
+          "OBSERVED_FIELD_NAME_DIFFERS",
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED",
+          "CANDIDATE_SEQUENCES_DIFFER"
+        ],
+        "Repaired": false,
+        "BothOrdersRetained": true
+      }
+    ]
+  },
+  "CitedNotAccepted": {
+    "OrderedInventory": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorAdmitted": false
+    },
+    "IndependentStaticReview": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+        "SHA256": "3723F4A36E3EF9761AEE094A49D579DFAC22D317E2870FAB702B1D02A7FA51AC",
+        "Bytes": 11092
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.json",
+        "SHA256": "48AB6F18FEEB43FD15EF342B5E5516655EB8EE619261AABAF367D227027FB6A1",
+        "Bytes": 18456
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "ChecksRerun": false
+    }
+  },
+  "FurtherDeliverableOpened": false,
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and the independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This increment does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note stays recorded and NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. Candidate row count in the inventory read set stays 0. The ten REQUIRES_RUNTIME_ROOT rows share this barrier and stay undisposed. No further locator is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "INCOMPLETE",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "The FA-05 options sheet stays recorded and NOT_ADMITTED. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. No option is selected. No further FA-05 deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_CODES_UNREPAIRED",
+      "BlockNoteRecorded": true,
+      "BlockNoteAdmission": "NOT_ADMITTED",
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "SequencesMerged": false,
+      "Note": "The AP-020, AP-021, and AP-022 BLOCK note is recorded and is NOT_ADMITTED. The codes stay unrepaired. Actual sequence locators stay null. Candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED. No sequence is merged or selected. No repair deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  }
+}
