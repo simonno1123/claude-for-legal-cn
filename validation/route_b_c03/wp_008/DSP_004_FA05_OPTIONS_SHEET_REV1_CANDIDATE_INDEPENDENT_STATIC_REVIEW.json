@@ -1,0 +1,683 @@
+{
+  "RecordKind": "DSP004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "ReviewBase": {
+    "GitHeadAtReview": "13320d0292092cd9e0b99cc0012b63fc08689145",
+    "OptionsSheetMaterializationCommit": "9cfc1e8b4ed4b6494c330e6c8950856ed9bf2c70",
+    "FormationHeadRecordedBySheet": "7d73f50ede1b5e4ec8aa55f85270eb50b9cafa92",
+    "RecordedAtUtc": "2026-10-30T23:00:00Z",
+    "PriorPreparationIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV11.md",
+        "SHA256": "455917864A70F5D8A0A861A57A1AEC8F2F6FF6C9FF8EDF2A1DBCBA344F7DEA33",
+        "Bytes": 11359,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV11.json",
+        "SHA256": "77B3812FFF704A4F9F71F93592372049E30C9CB140D18EC01B888B3E1C5ECC5D",
+        "Bytes": 9550,
+        "MatchesShaRecordedInRev11Markdown": true,
+        "Accepted": false
+      }
+    },
+    "ComparedWith": [
+      "PATH_B_PREPARATION_INCREMENT_REV11",
+      "PATH_B_PREPARATION_INCREMENT_REV9",
+      "PR_13",
+      "PATH_B_PREPARATION_INCREMENT_REV8",
+      "PATH_B_PREPARATION_INCREMENT_REV7",
+      "PATH_B_PREPARATION_INCREMENT_REV1",
+      "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1"
+    ],
+    "Method": "LOCAL_PYTHON_SHA256_AND_JSON_STRUCTURE_ONLY",
+    "HashingIsIdentityOnly": true,
+    "HashingIsNotACall": true,
+    "HashingIsNotExecution": true,
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "IdentityGateImported": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CaptureCodeImported": false,
+    "CaptureCodeExecuted": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "Rev1LayersRerun": false,
+    "OptionSelectedByThisReview": false,
+    "OptionOpenedByThisReview": false,
+    "FutureStaticIdentityNoteWritten": false,
+    "HarnessShaAcceptedByThisReview": false,
+    "InputCandidateAdmittedByThisReview": false,
+    "BlockCodesRepairedByThisReview": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "AssetAcceptanceGranted": false,
+    "FurtherDeliverableOpened": false
+  },
+  "ReviewedSheet": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+      "SHA256": "6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4",
+      "Bytes": 10924
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+      "SHA256": "88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8",
+      "Bytes": 12147
+    },
+    "IdentityMatchesRev9AndPr13": true,
+    "UnchangedSinceMaterializationCommit": true,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "SheetNewPreparationFact": "FA05_OPTIONS_SHEET_NOT_SELECTED_NOT_ADMITTED",
+    "AcceptedAsFormalContract": false,
+    "AnyOptionSelected": false,
+    "AnyOptionOpened": false,
+    "HarnessShaAccepted": false,
+    "InputCandidateAdmitted": false,
+    "MarkdownAgreesWithJson": true
+  },
+  "CitedNotAccepted": {
+    "Rev9Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.md",
+        "SHA256": "AB7D4233FBDF41A362BFD0360AC9BCB82C7C45D280BB55FECB801ABD0C18D159",
+        "Bytes": 9220
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV9.json",
+        "SHA256": "80A76D83CE91B012608F784712F76B329F37AA7B93A5A3073C5DDE3122165C09",
+        "Bytes": 8091,
+        "MatchesShaRecordedInRev9Markdown": true
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "Rev8Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.md",
+        "SHA256": "5D90088CA5FE820FD766DAB37CB4AC8502F612EF4F5101F5718B9AB85B31DAA2",
+        "Bytes": 10123
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.json",
+        "SHA256": "E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B",
+        "Bytes": 9629,
+        "MatchesShaRecordedInRev8Markdown": true
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "Rev7Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.md",
+        "SHA256": "1167FB1144495AF0BE11D7D172E889E675918785759D2D27B149EF4913BF42FB",
+        "Bytes": 8112
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.json",
+        "SHA256": "21FC18821036AB38C7855766B93236865EDE0DDE03795834ABA848F8A122A3C1",
+        "Bytes": 7310
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "Rev1Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV1.md",
+        "SHA256": "F612F938B9F7897DFE71D4B9E5668D98C9C83B89368C18309E12963A22AE6ED0",
+        "Bytes": 7595
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV1.json",
+        "SHA256": "045D2DC6C9ED53CB8F795E670A35653576095AE4D2224139F426CFF01C39CA4B",
+        "Bytes": 5737
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LayersRerun": false
+    },
+    "RuntimeRootGapNote": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+        "SHA256": "E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474",
+        "Bytes": 15149
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json",
+        "SHA256": "26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26",
+        "Bytes": 17687
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorOpened": false,
+      "BlockRepaired": false
+    },
+    "FA03Candidate": {
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.json",
+        "SHA256": "73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A",
+        "Bytes": 12081
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "ActualSidesBoundByThisReview": false
+    }
+  },
+  "Checks": [
+    {
+      "CheckId": "IR-01.SHEET_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "10924 bytes and SHA-256 6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4 match the identity recorded in preparation increment REV9 and materialized by PR #13. This review does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-02.SHEET_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "12147 bytes and SHA-256 88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8 match the identity recorded in preparation increment REV9 and materialized by PR #13. That JSON SHA is the SHA written in the sheet narrative. This review does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-03.CANDIDATE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "Both sheet files are UTF-8 without BOM, CR, or trailing whitespace, and both end with a newline. The narrative embeds its companion JSON SHA-256 and byte count. It does not embed this review SHA."
+    },
+    {
+      "CheckId": "IR-04.BYTES_UNCHANGED_SINCE_MATERIALIZATION",
+      "Passed": true,
+      "Detail": "The sheet files were added at 9cfc1e8b4ed4b6494c330e6c8950856ed9bf2c70 and have the same git blob at HEAD 13320d0292092cd9e0b99cc0012b63fc08689145. They did not exist at the formation head recorded by the sheet, 7d73f50ede1b5e4ec8aa55f85270eb50b9cafa92. REV1, REV7, REV8, and the runtime-root gap note have the same git blob at that formation head and at HEAD."
+    },
+    {
+      "CheckId": "IR-05.REV11_INCREMENT_IDENTITY",
+      "Passed": true,
+      "Detail": "REV11 markdown is 11359 bytes SHA-256 455917864A70F5D8A0A861A57A1AEC8F2F6FF6C9FF8EDF2A1DBCBA344F7DEA33. REV11 JSON is 9550 bytes SHA-256 77B3812FFF704A4F9F71F93592372049E30C9CB140D18EC01B888B3E1C5ECC5D. That JSON SHA is the SHA written in the REV11 narrative. Neither SHA is accepted."
+    },
+    {
+      "CheckId": "IR-06.REV9_INCREMENT_IDENTITY",
+      "Passed": true,
+      "Detail": "REV9 markdown is 9220 bytes SHA-256 AB7D4233FBDF41A362BFD0360AC9BCB82C7C45D280BB55FECB801ABD0C18D159. REV9 JSON is 8091 bytes SHA-256 80A76D83CE91B012608F784712F76B329F37AA7B93A5A3073C5DDE3122165C09. That JSON SHA is the SHA written in the REV9 narrative. The sheet bytes match the identity REV9 recorded. Neither SHA is accepted."
+    },
+    {
+      "CheckId": "IR-07.CITED_INCREMENT_AND_GAP_NOTE_IDENTITY",
+      "Passed": true,
+      "Detail": "REV8 markdown is 10123 bytes SHA-256 5D90088CA5FE820FD766DAB37CB4AC8502F612EF4F5101F5718B9AB85B31DAA2. REV8 JSON is 9629 bytes SHA-256 E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B. The runtime-root gap note markdown is 15149 bytes SHA-256 E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474. Its JSON is 17687 bytes SHA-256 26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26. REV7 markdown is 8112 bytes SHA-256 1167FB1144495AF0BE11D7D172E889E675918785759D2D27B149EF4913BF42FB. REV7 JSON is 7310 bytes SHA-256 21FC18821036AB38C7855766B93236865EDE0DDE03795834ABA848F8A122A3C1. These match the identities the sheet cites for REV8 and the gap note, and the REV7 bytes that hold the earlier option list. None of these SHAs is accepted or admitted."
+    },
+    {
+      "CheckId": "IR-08.SHEET_ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "The sheet records Signed false, Accepted false, and Admission NOT_ADMITTED. AnyOptionSelected and AnyOptionOpened are false. HarnessShaAccepted is false. InputCandidateAdmitted is false. Its own preparation fact remains FA05_OPTIONS_SHEET_NOT_SELECTED_NOT_ADMITTED. Each option Admission for this review is NOT_ADMITTED."
+    },
+    {
+      "CheckId": "IR-09.OPTION_LIST_MATCHES_REV7_REV8_REV9",
+      "Passed": true,
+      "Detail": "The sheet Options array, the REV7 FA-05 Options array, the REV8 FA-05 Options array, and the REV9 OptionsSheet Options array are the same three OptionId values in the same order: KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, NOT_AVAILABLE_UNDER_PATH_B. The sheet AlreadyRankedOrder values are 1, 2, and 3. Each Selected flag is false and each Opened flag is false. Note strings are not claimed to be byte-identical. List agreement is not a selection and is not admission."
+    },
+    {
+      "CheckId": "IR-10.NO_OPTION_SELECTED_OR_OPENED",
+      "Passed": true,
+      "Detail": "KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B each remain Selected false and Opened false on the sheet and on REV7, REV8, and REV9. FUTURE_STATIC_IDENTITY_NOTE_ONLY records NoteWritten false. This review does not select an option, does not open an option, and does not write the future static identity note."
+    },
+    {
+      "CheckId": "IR-11.FOUR_FILE_IDENTITIES_MATCH",
+      "Passed": true,
+      "Detail": "The four KEEP_REV1_RECORD files match the sheet, REV1 InputHarness, REV7, REV8, REV9, and the bytes on disk. SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json is 107849 bytes SHA-256 A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430, state NOT_ADMITTED. SCENARIO_INPUT_BINDING.json is 68768 bytes SHA-256 92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5, sheet state NOT_OVERWRITTEN, matching the REV1 narrative 未覆盖 and the REV1 object OldBindingLeftUntouched. fixtures/C03-TA-V-004.json is 770 bytes SHA-256 9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8, still recorded as BLOCKED_ISOLATED / BOUNDARY_MISMATCH. identity_gate.py is 4555 bytes SHA-256 9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445, still recorded as REJECTED — ISOLATION FAILURE. Executed and Admitted are false. Called is false where that field is present. None of the four SHA values is accepted. Hashing is not a call and is not execution."
+    },
+    {
+      "CheckId": "IR-12.FA05_FIELDS_STILL_AT_REV1_RECORD",
+      "Passed": true,
+      "Detail": "The sheet FA05 object records State INCOMPLETE, StillAtRev1Record true, InputCandidateAdmission NOT_ADMITTED, HarnessShaAccepted false, SyntheticCheckCountRecordedAtRev1 189, SyntheticChecksAreNotInputAdmission true, IsolationFailureAndFixtureBlockedIsolatedRemainTwoLayers true, ThisSheetReranThoseLayers false, and Completed false. The count 189 and the two-layer sentence match the REV1 narrative. REV1 JSON records HarnessShaAccepted false and GateCompleted false. This review did not rerun those layers."
+    },
+    {
+      "CheckId": "IR-13.MARKDOWN_JSON_AGREE",
+      "Passed": true,
+      "Detail": "The sheet narrative and the sheet JSON agree on the three option identifiers, Selected false, Opened false, the four file paths, byte counts, and SHA-256 values, the NOT_ADMITTED input candidate, the unaccepted Harness SHA, the 189 synthetic checks, the two layers that the sheet did not rerun, Signed false, Accepted false, and Admission NOT_ADMITTED."
+    },
+    {
+      "CheckId": "IR-14.GUARDRAILS_ALL_FALSE",
+      "Passed": true,
+      "Detail": "Every Guardrails flag on the sheet is false: AnyOptionSelected, AnyOptionOpened, ScenarioInputBindingAdmitted, ScenarioInputBindingStarAdmitted, HarnessShaAcceptedAsFormalContract, FixtureShaAcceptedAsFormalContract, IdentityGateShaAcceptedAsFormalContract, IdentityGateCalled, FixturesExecuted, ScenarioRunnersExecuted, CaptureCodeExecuted, SourceAdmitted, AssetAccepted, ManifestCreated, FormalRunAuthorized, DSP004Closed, FA06RowsDisposed, and BlockCodesRepaired. This review does not flip any of them."
+    },
+    {
+      "CheckId": "IR-15.NO_HARNESS_SHA_ACCEPTED",
+      "Passed": true,
+      "Detail": "The sheet, REV1, REV7, REV8, and REV9 each record that no Harness SHA is accepted. REV1 InputHarness.HarnessShaAccepted is false. The sheet records no accepted Harness digest. This review does not accept a Harness SHA."
+    },
+    {
+      "CheckId": "IR-16.SEVEN_CAPTURE_RESULTS_NOT_SELECTED",
+      "Passed": true,
+      "Detail": "The sheet lists the same seven DSP_004_CAPTURE_RESULT_* paths recorded by the FA-03 candidate. Their current bytes and SHA-256 values match that candidate and the REV11 review record. Selected is false and Admission is NOT_ADMITTED. This review hashed those bytes and did not import, select, or execute them."
+    },
+    {
+      "CheckId": "IR-17.ACTUAL_SIDES_UNBOUND",
+      "Passed": true,
+      "Detail": "The sheet ActualSidesRemainNull list is SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER. The FA-03 candidate still records Binding UNBOUND on each, with SourceIdentity and CaptureEntry null. The candidate JSON remains 12081 bytes SHA-256 73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A. This review does not bind them and does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-18.NO_MANIFEST_CREATED",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created. No Manifest was generated. No formal run was authorized. FA-08 was not completed. DSP-004 was not closed."
+    },
+    {
+      "CheckId": "IR-19.REV3_AND_SOURCE_ROOT_SHA_NOT_ACCEPTED",
+      "Passed": true,
+      "Detail": "Typed-contract REV3 remains 29240 bytes SHA-256 AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F. Array-policy REV3 remains 16317 bytes SHA-256 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123. Neither SHA is accepted as the formal B-02 contract. Source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93 remains 21257 bytes. This review adds no design-review file for that SHA and does not accept it."
+    },
+    {
+      "CheckId": "IR-20.SUBJECTS_NOT_EXECUTED",
+      "Passed": true,
+      "Detail": "No subject module was imported or executed. identity_gate was hashed and was not imported or called. The fixture file was hashed and was not executed. Scenario runners were not executed. Capture code was not imported or executed. Commercial P0 was not run and was not modified. ENVIRONMENT_MANIFEST.md, the historical Windows virtual environment, and tool caches were not read. No BLOCK code was repaired."
+    },
+    {
+      "CheckId": "IR-21.ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "This review records Signed false, Accepted false, and Admission NOT_ADMITTED. NewPreparationFact is FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED. The reviewed sheet is not a formal contract, a Manifest, or a source admission. No option is selected. No option is admitted."
+    }
+  ],
+  "OptionComparison": {
+    "ComparedSources": [
+      "FA05_OPTIONS_SHEET_REV1_CANDIDATE",
+      "PATH_B_PREPARATION_INCREMENT_REV7",
+      "PATH_B_PREPARATION_INCREMENT_REV8",
+      "PATH_B_PREPARATION_INCREMENT_REV9"
+    ],
+    "OrderPreserved": true,
+    "AnyOptionSelected": false,
+    "AnyOptionOpened": false,
+    "SelectionPerformedByThisReview": false,
+    "NoteStringsClaimedByteIdentical": false,
+    "Options": [
+      {
+        "OptionId": "KEEP_REV1_RECORD",
+        "AlreadyRankedOrder": 1,
+        "SheetSelected": false,
+        "SheetOpened": false,
+        "Rev7Selected": false,
+        "Rev7Opened": false,
+        "Rev8Selected": false,
+        "Rev8Opened": false,
+        "Rev9Selected": false,
+        "Rev9Opened": false,
+        "ListsMatch": true,
+        "SelectedByThisReview": false,
+        "OpenedByThisReview": false,
+        "Admission": "NOT_ADMITTED",
+        "InputCandidateAdmission": "NOT_ADMITTED",
+        "HarnessShaAccepted": false,
+        "FilesStillMatchRev1Rev7Rev8Rev9AndDisk": [
+          {
+            "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+            "Bytes": 107849,
+            "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+            "RecordedRev1State": "NOT_ADMITTED",
+            "MatchesDisk": true,
+            "Executed": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          },
+          {
+            "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+            "Bytes": 68768,
+            "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+            "RecordedRev1State": "NOT_OVERWRITTEN",
+            "MatchesDisk": true,
+            "Executed": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          },
+          {
+            "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+            "Bytes": 770,
+            "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+            "RecordedRev1State": "STILL_REQUIRES_BLOCKED_ISOLATED_AND_BOUNDARY_MISMATCH",
+            "MatchesDisk": true,
+            "Executed": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          },
+          {
+            "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+            "Bytes": 4555,
+            "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+            "RecordedRev1State": "STILL_RECORDED_AS_REJECTED_ISOLATION_FAILURE",
+            "MatchesDisk": true,
+            "Executed": false,
+            "Called": false,
+            "Admitted": false,
+            "AcceptedAsFormalContract": false
+          }
+        ]
+      },
+      {
+        "OptionId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "AlreadyRankedOrder": 2,
+        "SheetSelected": false,
+        "SheetOpened": false,
+        "Rev7Selected": false,
+        "Rev7Opened": false,
+        "Rev8Selected": false,
+        "Rev8Opened": false,
+        "Rev9Selected": false,
+        "Rev9Opened": false,
+        "ListsMatch": true,
+        "SelectedByThisReview": false,
+        "OpenedByThisReview": false,
+        "NoteWritten": false,
+        "NoteWrittenByThisReview": false,
+        "Admission": "NOT_ADMITTED"
+      },
+      {
+        "OptionId": "NOT_AVAILABLE_UNDER_PATH_B",
+        "AlreadyRankedOrder": 3,
+        "SheetSelected": false,
+        "SheetOpened": false,
+        "Rev7Selected": false,
+        "Rev7Opened": false,
+        "Rev8Selected": false,
+        "Rev8Opened": false,
+        "Rev9Selected": false,
+        "Rev9Opened": false,
+        "ListsMatch": true,
+        "SelectedByThisReview": false,
+        "OpenedByThisReview": false,
+        "Admission": "NOT_ADMITTED"
+      }
+    ]
+  },
+  "Findings": [
+    {
+      "FindingId": "F-01",
+      "Kind": "OPTION_LISTS_MATCH_NONE_SELECTED",
+      "Options": [
+        "KEEP_REV1_RECORD",
+        "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "NOT_AVAILABLE_UNDER_PATH_B"
+      ],
+      "Detail": "The three OptionId values on the sheet match REV7, REV8, and REV9 in the same order. Each Selected flag is false and each Opened flag is false. The sheet ranks them 1, 2, and 3. List agreement is not a selection and is not admission. This review selects none of them."
+    },
+    {
+      "FindingId": "F-02",
+      "Kind": "FOUR_FILE_IDENTITIES_MATCH_NOT_ACCEPTED",
+      "Options": [
+        "KEEP_REV1_RECORD"
+      ],
+      "Detail": "The four files named under KEEP_REV1_RECORD match the byte counts and SHA-256 values recorded by REV1, REV7, REV8, REV9, and the sheet, and they match the bytes on disk. The input candidate stays NOT_ADMITTED. The original binding stays NOT_OVERWRITTEN. The fixture stays recorded as BLOCKED_ISOLATED / BOUNDARY_MISMATCH. identity_gate.py stays recorded as REJECTED — ISOLATION FAILURE. None of the four SHA values is accepted. The files were not executed, and identity_gate.py was not called."
+    },
+    {
+      "FindingId": "F-03",
+      "Kind": "FA05_STILL_AT_REV1_RECORD",
+      "Options": [],
+      "Detail": "The sheet keeps FA-05 INCOMPLETE and StillAtRev1Record true. The recorded synthetic-check count is 189, and the sheet says those checks are not input admission. The isolation-failure layer and the fixture BLOCKED_ISOLATED layer stay two layers. ThisSheetReranThoseLayers is false. This review did not rerun them and did not mark either layer as a pass."
+    },
+    {
+      "FindingId": "F-04",
+      "Kind": "HARNESS_SHA_NOT_ACCEPTED",
+      "Options": [],
+      "Detail": "The sheet, REV1, REV7, REV8, and REV9 each record HarnessShaAccepted false or the sentence that no Harness SHA is accepted. The sheet records no accepted Harness digest. This review does not accept a Harness SHA."
+    },
+    {
+      "FindingId": "F-05",
+      "Kind": "FUTURE_NOTE_UNWRITTEN_AND_PATH_B_OPTION_UNOPENED",
+      "Options": [
+        "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "NOT_AVAILABLE_UNDER_PATH_B"
+      ],
+      "Detail": "FUTURE_STATIC_IDENTITY_NOTE_ONLY stays Selected false and Opened false, and NoteWritten is false. This review does not write that note. NOT_AVAILABLE_UNDER_PATH_B stays Selected false and Opened false. Recording that Path B does not admit the input candidate, accept a Harness SHA, or run identity_gate or fixtures is not a selection of that option."
+    },
+    {
+      "FindingId": "F-06",
+      "Kind": "REV11_AND_SHEET_IDENTITY_BOUND_NOT_ACCEPTED",
+      "Options": [],
+      "Detail": "REV11 markdown is 11359 bytes SHA-256 455917864A70F5D8A0A861A57A1AEC8F2F6FF6C9FF8EDF2A1DBCBA344F7DEA33. REV11 JSON is 9550 bytes SHA-256 77B3812FFF704A4F9F71F93592372049E30C9CB140D18EC01B888B3E1C5ECC5D, which is the SHA written in the REV11 narrative. The sheet markdown is 10924 bytes SHA-256 6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4. The sheet JSON is 12147 bytes SHA-256 88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8. This review does not accept those SHAs."
+    }
+  ],
+  "ExistingCaptureCandidates": {
+    "Count": 7,
+    "Selection": "NOT_SELECTED",
+    "Admission": "NOT_ADMITTED",
+    "BytesStillMatchFA03Record": true,
+    "ImportedOrExecutedByThisReview": false,
+    "Files": [
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+        "Bytes": 18301,
+        "SHA256": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+        "Bytes": 10678,
+        "SHA256": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+        "Bytes": 47292,
+        "SHA256": "2C03E9D87BB747A58491CB3B992780FE4252ABDDCF4F35B1A2BC4F0078C4E942",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+        "Bytes": 53568,
+        "SHA256": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+        "Bytes": 57623,
+        "SHA256": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+        "Bytes": 29736,
+        "SHA256": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+        "Bytes": 51610,
+        "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      }
+    ]
+  },
+  "ActualSides": [
+    {
+      "SourceRole": "SRC004-A-PROJECT",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-SESSION",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-PROVIDER",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    }
+  ],
+  "Rev3Shas": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "AcceptedAsFormalB02Contract": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "AcceptedAsFormalB02Contract": false
+    }
+  ],
+  "SourceRootShaNoSecondDesignReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+  "SourceRootBytes": 21257,
+  "SourceRootAccepted": false,
+  "SourceRootReviewFileAdded": false,
+  "RuntimeDependencyManifestPath": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+  "RuntimeDependencyManifestPresent": false,
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and its independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This review does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note stays recorded and NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. This review does not open a locator and does not read ENVIRONMENT_MANIFEST.md, the historical Windows virtual environment, or tool caches.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "OPTIONS_SHEET_REVIEWED_NOT_ACCEPTED_NONE_SELECTED",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetReviewed": true,
+      "OptionsSheetReviewAccepted": false,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "The FA-05 options sheet now has this independent static review. The review is not accepted. Admission stays NOT_ADMITTED. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. No option is selected. No further FA-05 deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_NOTE_REVIEWED_NOT_ACCEPTED_CODES_UNREPAIRED",
+      "BlockNoteRecorded": true,
+      "BlockNoteReviewed": true,
+      "BlockNoteReviewAccepted": false,
+      "BlockNoteAdmission": "NOT_ADMITTED",
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "SequencesMerged": false,
+      "Note": "The AP-020, AP-021, and AP-022 BLOCK note already has the REV11 independent static review. That review is not accepted. Admission stays NOT_ADMITTED. The BLOCK codes stay unrepaired. This review does not repair them and does not open a repair deliverable.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "StillMissing": [
+    "a selected FA-05 option",
+    "acceptance of this independent static review of the FA-05 options sheet",
+    "acceptance of any Harness SHA",
+    "admission of the input candidate",
+    "fixed SHA acceptance of the FA-05 options sheet",
+    "fixed SHA acceptance of the four KEEP_REV1_RECORD files",
+    "disposition of which dependency, startup, isolation, stop, and cleanup LIMITED rows may be retained",
+    "an admitted actual locator for AP-006 and AP-009 after a runtime root exists",
+    "repair of the AP-020, AP-021, and AP-022 BLOCK codes",
+    "an admitted unique sequence for AP-020, AP-021, and AP-022",
+    "fixed SHA acceptance of REV3 SHA AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F or 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123 as the formal B-02 contract",
+    "fixed SHA acceptance of source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+    "source identity, version, carrier, locator, producer duty, authority, and a bound capture entry for SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER",
+    "Manifest, formal run, FA-08, and closure of DSP-004"
+  ],
+  "Summary": {
+    "StaticChecks": 21,
+    "StaticChecksPassed": 21,
+    "PassMeaning": "Identity matches the REV9 and REV11 records, and the sheet option list and KEEP_REV1_RECORD file fields match REV7, REV8, REV9, and the REV1 record. A passed check does not accept a SHA, select an option, admit a source, or close DSP-004.",
+    "Findings": 6,
+    "TextBlockingIdentityMismatches": 0,
+    "OptionListsMismatched": 0,
+    "OptionsSelected": 0,
+    "OptionsOpened": 0,
+    "HarnessShasAccepted": 0,
+    "GatesCompleted": 0,
+    "FormalContractAccepted": false,
+    "SourceAdmissionGranted": false,
+    "FA03Completed": false,
+    "FA04Completed": false,
+    "FA05Completed": false,
+    "FA06Completed": false,
+    "FA08Completed": false,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  },
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "AnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE FA-05 OPTIONS SHEET REV1 CANDIDATE ONLY. FINDINGS ONLY. ACCEPTED IS FALSE. SIGNED IS FALSE. ADMISSION IS NOT_ADMITTED. THIS RECORD DOES NOT SELECT KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, OR NOT_AVAILABLE_UNDER_PATH_B. THIS RECORD DOES NOT ACCEPT THE SHEET SHA, A HARNESS SHA, OR ANY PRIOR CANDIDATE SHA, AND DOES NOT CLOSE B-01, B-02, FA-03, FA-04, FA-05, FA-06, FA-08, OR DSP-004."
+}
