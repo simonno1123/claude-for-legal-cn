@@ -1,0 +1,369 @@
+{
+  "RecordKind": "DSP004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_UNSIGNED",
+  "Outcome": "UNSIGNED_RECOMMENDATIONS_ONLY",
+  "DirectionNote": "继续推 is recorded as preparation along the formal-acceptance track. It is not a signed selection of handoff path A or path B, and it accepts no asset.",
+  "AutoAccepted": false,
+  "ManifestCreated": false,
+  "SubjectModulesExecuted": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA01": "IN_REPO_REVIEW_RECORDED_OWNER_ACCEPTANCE_NOT_GIVEN"
+  },
+  "InRepoReviewFact": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_PREPARATION_REV1_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "AA06168C4E128B33A488D1FCBF905EAD421BAAA3129EE9844B962AED71FCBB25",
+      "Bytes": 10208
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_PREPARATION_REV1_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "459BAB3E2D5C06395E7AF2E5AF89BB556311C2B16846053964AF5A1AE47902D5",
+      "Bytes": 11573
+    },
+    "Commit": "bb69dc2d96103e99a308dbe9eddaeebfa88e07d3",
+    "OwnerAccepted": false,
+    "PinnedGateCompleted": false
+  },
+  "Section4TwoFileCheck": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_VENV_TWO_FILE_ABSENCE_REV1.md",
+      "SHA256": "8272F12D37A625455B9CC80962C504285D47E67794BB2CAC750E9684A6B72AAE",
+      "Bytes": 2536
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_VENV_TWO_FILE_ABSENCE_REV1.json",
+      "SHA256": "D8142F5B8CFF55BE0AE26F652A7A09D86BC2E6172DC592D62D9230260A115E97",
+      "Bytes": 1965
+    },
+    "Outcome": "BOTH_TARGETS_ABSENT_NO_FILE_OBSERVATION"
+  },
+  "SourceRootDesignReviewFile": {
+    "Added": false,
+    "Candidate": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+      "SHA256": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+      "Bytes": 21257,
+      "Commit": "25a65aae4212823c09e0b6acb0287cb933148468"
+    },
+    "Constraint": "Section A says the batch review output is delivered in session and does not add a second review file. Section E says not to generate another review file.",
+    "UnsignedRecommendation": "在单独写明“允许为 SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93 新增一份复核文件”之前，不补写该候选的在库设计复核。"
+  },
+  "Items": [
+    {
+      "Id": "DSP004-FA-02",
+      "Also": ["DSP004-R-02"],
+      "GateState": "OWNER_DECISION_REQUIRED",
+      "MissingFacts": [
+        "Owner has not decided the preparation-root scope.",
+        "This workspace has no .venv-validation/pyvenv.cfg and no .venv-validation/Scripts/python.exe, so no SHA or config fields were read.",
+        "Resolver, case policy, reparse policy, and check-to-use evidence are still absent."
+      ],
+      "Pinned": [
+        {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_PREPARATION_CANDIDATE_REV1.json",
+          "SHA256": "127521BAF310DDF57C33336B8A17B29D40002E4419A5E5CCB0ED029562DB24E2",
+          "Bytes": 15464
+        }
+      ],
+      "UnsignedRecommendation": "确认两文件 ABSENT 记录有效，VENV_ROOT 继续 NOT ESTABLISHED，并禁止改扫其他解释器。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-FA-03",
+      "Also": ["DSP004-R-01"],
+      "GateState": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+      "MissingFacts": [
+        "SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER still have null identity, carrier, and capture observation.",
+        "Expected-side use binding still has null variant_id, attempt_id, input_snapshot_sha256, and authority_record."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+          "SHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+          "Bytes": 10820
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_EXPECTED_BASELINE_READER_CANDIDATE_REV1.py",
+          "SHA256": "AE1389EDA1C3B9129A0546DA5764C1F68A6B0193A22DA3431CAA89BAB8DC0727",
+          "Bytes": 9033
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_CALLER_CANDIDATE_REV1.py",
+          "SHA256": "EF554C3051318BD305EDE6B8511C433C1BB9E20B10E93E5FB5F71C9AFF7A7E63",
+          "Bytes": 8227
+        }
+      ],
+      "UnsignedRecommendation": "三项实际侧保持 UNBOUND；下一次至多授权新的捕获设计候选，不准入、不执行、不从预期回填。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-FA-04",
+      "Also": ["DSP004-R-03"],
+      "GateState": "DESIGN_TEXT_EXISTS_ACCEPTANCE_OPEN",
+      "MissingFacts": [
+        "B-02 REV3 typed-contract and array-policy files exist and are not fixed-SHA accepted.",
+        "No in-repo independent review of those two files is recorded.",
+        "Actual ordered sequence sources for AP-006, AP-009, AP-020, AP-021, and AP-022 are not filled."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+          "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+          "Bytes": 29240
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+          "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+          "Bytes": 16317
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+          "SHA256": "6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA",
+          "Bytes": 54703
+        }
+      ],
+      "UnsignedRecommendation": "不把上述两个 REV3 SHA 当作正式合同；若继续，先单独授权对这两个字节的在库只读复核。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-FA-05",
+      "Also": ["DSP004-R-05"],
+      "GateState": "SEPARATE_FIXED_SHA_DISPOSITION_REQUIRED",
+      "MissingFacts": [
+        "The V3.2/V2.2 input candidate is not an admitted input.",
+        "Native gate results are not accepted as the fixture comparison map.",
+        "No harness SHA is accepted for a formal run."
+      ],
+      "Pinned": [
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+          "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+          "Bytes": 107849
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+          "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+          "Bytes": 68768
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+          "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+          "Bytes": 770
+        },
+        {
+          "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+          "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+          "Bytes": 4555
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+          "SHA256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD",
+          "Bytes": 54109
+        }
+      ],
+      "UnsignedRecommendation": "输入候选保持 NOT ADMITTED；不覆盖旧绑定文件；不把 ISOLATION FAILURE 记成 Fixture 通过。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-FA-06",
+      "Also": ["DSP004-R-06"],
+      "GateState": "PRECONDITIONS_NOT_ESTABLISHED",
+      "MissingFacts": [
+        "Import closure, both-side call identity, and check-to-use protection are not established.",
+        "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+          "SHA256": "6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA",
+          "Bytes": 54703
+        }
+      ],
+      "UnsignedRecommendation": "依赖与隔离 LIMITED 全部保留，不创建 PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-FA-07",
+      "Also": ["DSP004-R-08"],
+      "GateState": "NOT_AUTHORIZED",
+      "MissingFacts": [
+        "No detached Manifest exists or is authorized.",
+        "No exact formal-run authority exists."
+      ],
+      "Pinned": [],
+      "UnsignedRecommendation": "不生成 Manifest，不授权正式运行。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-FA-08",
+      "Also": ["DSP004-R-08"],
+      "GateState": "NOT_AUTHORIZED",
+      "MissingFacts": [
+        "No formal validation record has been accepted.",
+        "Owner has not given a final acceptance or close decision."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md",
+          "SHA256": "538283D7E48520B56B90ACA42A705A43AFEA468AF6DE8B7A46AE34636A3805AA",
+          "Bytes": 14774
+        }
+      ],
+      "UnsignedRecommendation": "不作出最终接受，DSP-004 保持 OPEN / HOLD。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-01",
+      "Also": ["DSP004-FA-03"],
+      "GateState": "UNBOUND / HOLD",
+      "MissingFacts": [
+        "Six sides still need separate expected and actual identity, version, SHA, producer duty, authority, location, and scope.",
+        "The same untrusted caller cannot fill both sides and then prove them."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/DSP_004_SOURCE_USE_AND_INPUT_EXTENSION_REV1_CANDIDATE.md",
+          "SHA256": "F4B995D8F2DA424E68D94EA7E31FB6387F628C7681BEF5CC05807A29D6684A2F",
+          "Bytes": 24541
+        }
+      ],
+      "UnsignedRecommendation": "六侧继续 UNBOUND / HOLD；关联字符串相等不算实际证据。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-02",
+      "Also": ["DSP004-FA-02"],
+      "GateState": "OPEN",
+      "MissingFacts": [
+        "PROJECT_ROOT, VENV_ROOT, RUNTIME_ROOT, and SYSTEM_ROOT have no pre-Manifest approval.",
+        "The historical Windows locator is not this workspace, and the two proposed venv files are absent here."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_ENVIRONMENT_IDENTITY_REBINDING_REV1_CANDIDATE.md",
+          "SHA256": "DC6DAA71B5ADB99E1E2FF61FD535B51C661C7671E3E08F651046740300B329EA",
+          "Bytes": 15112
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ENVIRONMENT_MANIFEST.md",
+          "SHA256": "EFCF1A783199F58387BDBB0704563ED943A5E6A3E319A04CE6D58E57FC5CA531",
+          "Bytes": 4107
+        }
+      ],
+      "UnsignedRecommendation": "四根继续 OPEN；历史环境记录不改为本次观察，也不追认准备资格。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-03",
+      "Also": ["DSP004-FA-04"],
+      "GateState": "OPEN",
+      "MissingFacts": [
+        "Each formal member, type, nullability, range, and array path still needs an approved policy.",
+        "Detached external authority for the contract is not bound."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+          "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+          "Bytes": 29240
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+          "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+          "Bytes": 16317
+        }
+      ],
+      "UnsignedRecommendation": "B-02 继续 OPEN；不把玩具投影或未接受的 REV3 文本宣布为正式全合同。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-04",
+      "Also": [],
+      "GateState": "COMMIT_SUBJECT_IS_NOT_ACCEPTANCE",
+      "MissingFacts": [
+        "No in-repo Owner acceptance points at the source-use candidate SHA.",
+        "Commit f3a41bca5d6857f2bb22a6a51c10895ea84ef076 is titled as accepted, while the file still says review pending and not accepted."
+      ],
+      "Pinned": [
+        {
+          "Path": "docs/phase2/route-b/DSP_004_SOURCE_USE_AND_INPUT_EXTENSION_REV1_CANDIDATE.md",
+          "SHA256": "F4B995D8F2DA424E68D94EA7E31FB6387F628C7681BEF5CC05807A29D6684A2F",
+          "Bytes": 24541
+        }
+      ],
+      "UnsignedRecommendation": "以该文件字节为状态来源；提交标题中的 accepted 不构成接受，且不改写历史。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-05",
+      "Also": ["DSP004-FA-05"],
+      "GateState": "NOT_ADMITTED",
+      "MissingFacts": [
+        "Current full input, native-to-fixture mapping, and harness acceptance are undisposed.",
+        "189 synthetic checks are not an input admission."
+      ],
+      "Pinned": [
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+          "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+          "Bytes": 107849
+        }
+      ],
+      "UnsignedRecommendation": "不覆盖 SCENARIO_INPUT_BINDING.json，不从输入数据导入任意模块或函数。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-06",
+      "Also": ["DSP004-FA-06"],
+      "GateState": "LIMITED",
+      "MissingFacts": [
+        "Reference and freeze semantics, full resolution, import closure, and T0, PE, or OS evidence are missing.",
+        "Check-to-use substitution protection is missing."
+      ],
+      "Pinned": [],
+      "UnsignedRecommendation": "保持 LIMITED；私有子进程和模块槽位删除不等于生产可信装载。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-07",
+      "Also": [],
+      "GateState": "LIMITED_RETAINED",
+      "MissingFacts": [
+        "Owner has not stated which stop and cleanup LIMITED items may remain.",
+        "Synchronous read, startup, Kill, Close, Dispose, and descendant cleanup are not proven."
+      ],
+      "Pinned": [],
+      "UnsignedRecommendation": "保留全部既有停止与清理 LIMITED，不宣告零 I/O、零残留或物理硬停止。",
+      "Signed": false,
+      "Accepted": false
+    },
+    {
+      "Id": "DSP004-R-08",
+      "Also": ["DSP004-FA-07", "DSP004-FA-08"],
+      "GateState": "NOT_AUTHORIZED",
+      "MissingFacts": [
+        "Manifest generation, review, and acceptance have no authorized preparation sources.",
+        "Run authority, run-evidence review, and an Owner close decision are absent."
+      ],
+      "Pinned": [],
+      "UnsignedRecommendation": "未授权来源准入、实际业务捕获、集成或部署；不自动触发任何阶段。",
+      "Signed": false,
+      "Accepted": false
+    }
+  ]
+}

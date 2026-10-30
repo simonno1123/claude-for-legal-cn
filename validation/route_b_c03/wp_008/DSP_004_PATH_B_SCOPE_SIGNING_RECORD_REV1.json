@@ -1,0 +1,53 @@
+{
+  "RecordKind": "DSP004_PATH_B_SCOPE_SIGNING_RECORD_ONLY",
+  "ExactSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "SentenceMatch": "EXACT",
+  "DecisionAuthority": "PROJECT_OWNER",
+  "RecordedAtUtc": "2026-10-30T08:18:53Z",
+  "RecordedAtNote": "Agent receipt time of the Owner sentence. The sentence itself contains no clock.",
+  "Context": {
+    "PullRequest": "https://github.com/simonno1123/claude-for-legal-cn/pull/2",
+    "Branch": "cursor/dsp004-prep-package-review-3ca1",
+    "HeadBeforeThisRecord": "4710fe9b09eb9e4e91e748baf7a025f42c2a91f8",
+    "PacketMarkdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.md",
+      "SHA256": "9B0A3C048E479B714083952E76CF6620A2AE046EA23D2CC95192D967CF5A6736",
+      "Bytes": 8630
+    },
+    "PacketJson": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.json",
+      "SHA256": "3E6773EF54B6F6F1E253B42FAF92D5714C4BDE36EA6B7CFCF4E5A73359AC3BDC",
+      "Bytes": 15824
+    }
+  },
+  "Effect": {
+    "ContinueFormalAcceptancePreparation": true,
+    "AssetAcceptanceGranted": false,
+    "DSP004Closed": false,
+    "FA08Completed": false,
+    "FA01OwnerAccepted": false,
+    "ManifestAuthorized": false,
+    "FormalRunAuthorized": false,
+    "SourceAdmissionGranted": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceRootSecondReviewFileAuthorized": false,
+    "SourceRootShaStillUnauthorizedForNewReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93"
+  },
+  "AbsenceCheck": {
+    "ConsistentWithPathB": true,
+    "Reason": "The packet FA-02 recommendation confirms a negative existence result and accepts no environment asset.",
+    "ObservationJson": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_VENV_TWO_FILE_ABSENCE_REV1.json",
+      "SHA256": "D8142F5B8CFF55BE0AE26F652A7A09D86BC2E6172DC592D62D9230260A115E97",
+      "Bytes": 1965
+    },
+    "Confirmation": "PREPARATION_FACT_ONLY",
+    "VENV_ROOT": "NOT_ESTABLISHED",
+    "FA02Completed": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  }
+}

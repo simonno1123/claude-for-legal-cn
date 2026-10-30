@@ -1,0 +1,274 @@
+{
+  "RecordKind": "DSP004_FORMAL_ACCEPTANCE_PREPARATION_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "STATIC_PASS_LIMITED_PREPARATION_TEXT_AND_FIXED_IDENTITY_ONLY",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_PREPARATION_REV1_INDEPENDENT_STATIC_REVIEW.md",
+  "ReviewBase": {
+    "GitHeadAtReview": "f5b66ab4c2fb03e919c9a1c1d3b88d338026d513",
+    "PackageMaterializationCommit": "4005b37a98cb0783dcba46bd684f65103f48074b",
+    "HandoffCommit": "6f0b4a72a8caf70561dac74373120f58616f1f3e",
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "EnvironmentFilesRead": false,
+    "PinnedFilesModified": false,
+    "AcceptanceGranted": false,
+    "SourceAdmissionGranted": false,
+    "ManifestCreated": false,
+    "GatesCompletedByThisReview": 0,
+    "PathAOrPathBSelected": false
+  },
+  "ReviewedIdentities": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_PREPARATION_PACKAGE_REV1.md",
+      "SHA256": "FD27724FF5DB9C7F2DCC5175FD6B4E588F1961D73ADC2807E9EF2DE8004D4055",
+      "Bytes": 11121
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_PREPARATION_CANDIDATE_REV1.json",
+      "SHA256": "127521BAF310DDF57C33336B8A17B29D40002E4419A5E5CCB0ED029562DB24E2",
+      "Bytes": 15464
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_PREPARATION_REV1_STATIC_CHECK.json",
+      "SHA256": "B121068AEF2EC1F3BB4B62435FECD4FDE2687179F85A0E6411E18BC28F327912",
+      "Bytes": 10828
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "IR-01.PACKAGE_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "11121 bytes match the author static-check identity"
+    },
+    {
+      "CheckId": "IR-02.PREPARATION_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "15464 bytes match the package statement and the author static-check identity"
+    },
+    {
+      "CheckId": "IR-03.AUTHOR_STATIC_CHECK_IDENTITY",
+      "Passed": true,
+      "Detail": "Author record remains IndependentReviewPerformed false; this file does not rewrite it"
+    },
+    {
+      "CheckId": "IR-04.PROTECTED_INPUTS_35",
+      "Passed": true,
+      "Detail": "35/35 author-check protected paths match current bytes, including the handoff section 7 set"
+    },
+    {
+      "CheckId": "IR-05.SIX_UNIQUE_SOURCE_ROLES",
+      "Passed": true,
+      "Detail": "SRC004-E/A for PROJECT, SESSION, PROVIDER; no duplicate roles"
+    },
+    {
+      "CheckId": "IR-06.EXPECTED_LITERAL_FIDELITY",
+      "Passed": true,
+      "Detail": "Three expected rows keep the baseline locator, identity, version, and synthetic reference; each reference string occurs once in the baseline"
+    },
+    {
+      "CheckId": "IR-07.ACTUAL_SIDE_UNFILLED",
+      "Passed": true,
+      "Detail": "Three actual roles keep null identity, carrier, and capture observation"
+    },
+    {
+      "CheckId": "IR-08.NO_ADMISSION_EFFECT",
+      "Passed": true,
+      "Detail": "Every source proposal admission_effect is NONE_GRANTED_BY_THIS_PACKAGE"
+    },
+    {
+      "CheckId": "IR-09.FOUR_ROOTS_UNBOUND",
+      "Passed": true,
+      "Detail": "PROJECT_ROOT, VENV_ROOT, RUNTIME_ROOT, SYSTEM_ROOT remain NOT_ESTABLISHED_BY_THIS_PACKAGE with read_authority_granted false"
+    },
+    {
+      "CheckId": "IR-10.EIGHT_GATES_OPEN",
+      "Passed": true,
+      "Detail": "DSP004-FA-01 through FA-08 stay completed false"
+    },
+    {
+      "CheckId": "IR-11.REVIEW_STATUS_UNCHANGED",
+      "Passed": true,
+      "Detail": "Preparation JSON review_status remains NOT_INDEPENDENTLY_REVIEWED"
+    },
+    {
+      "CheckId": "IR-12.FIXTURE_AND_GATE_NOT_EQUATED",
+      "Passed": true,
+      "Detail": "C03-TA-V-004 still expects BLOCKED_ISOLATED / BOUNDARY_MISMATCH; identity_gate.py still returns REJECTED — ISOLATION FAILURE for matter id, version, or actor and has no project, session, or provider parameter"
+    },
+    {
+      "CheckId": "IR-13.RUNTIME_MANIFEST_ABSENT",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created"
+    },
+    {
+      "CheckId": "IR-14.ENVIRONMENT_FILES_NOT_READ",
+      "Passed": true,
+      "Detail": "The two proposed .venv-validation paths were not opened; permission_state remains PROPOSED_ONLY_NOT_GRANTED_BY_THIS_PACKAGE"
+    },
+    {
+      "CheckId": "IR-15.NO_FORMAL_MANIFEST",
+      "Passed": true,
+      "Detail": "This review adds a preparation-review record only"
+    },
+    {
+      "CheckId": "IR-16.PACKAGE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "Package markdown, preparation JSON, and author static check are UTF-8 without BOM, CR, or trailing whitespace"
+    },
+    {
+      "CheckId": "IR-17.LATER_SOURCE_USE_PINS",
+      "Passed": true,
+      "Detail": "17/17 REF identities in the source-use candidate match current bytes"
+    },
+    {
+      "CheckId": "IR-18.LATER_SOURCE_ROOT_PINS",
+      "Passed": true,
+      "Detail": "7/7 section B identities in the source-root candidate match current bytes"
+    },
+    {
+      "CheckId": "IR-19.LATER_ENVIRONMENT_DOC_PINS",
+      "Passed": true,
+      "Detail": "Environment-identity candidate document pins for the two B-02 candidates and Plan V2.2 match; the seven historical environment-file observations were not re-read"
+    }
+  ],
+  "Summary": {
+    "StaticChecks": 19,
+    "StaticChecksPassed": 19,
+    "ProtectedInputsMatched": 35,
+    "SourceUseRefsMatched": 17,
+    "SourceRootRefsMatched": 7,
+    "TextBlockingDefects": 0,
+    "GatesCompleted": 0,
+    "RootBindingsEstablished": 0,
+    "ActualSourcesEstablished": 0,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "RetainedGaps": [
+    {
+      "Id": "DSP004-FA-01",
+      "State": "REVIEW_RECORDED_GATE_STILL_OPEN",
+      "Reason": "This record is the missing in-repo read-only review. The pinned gate stays completed false because positive decision authority remains Project Owner."
+    },
+    {
+      "Id": "DSP004-FA-02",
+      "MapsTo": "DSP004-R-02",
+      "State": "OWNER_DECISION_REQUIRED",
+      "Reason": "Owner has not decided the read-only root inventory scope. The two environment paths stay unauthorized."
+    },
+    {
+      "Id": "DSP004-FA-03",
+      "MapsTo": "DSP004-R-01",
+      "State": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+      "Reason": "Actual Project, Session, and Provider capture sources remain null."
+    },
+    {
+      "Id": "DSP004-FA-04",
+      "MapsTo": "DSP004-R-03",
+      "State": "DESIGN_TEXT_EXISTS_ACCEPTANCE_OPEN",
+      "Reason": "B-02 REV3 typed-contract and array-policy candidates exist at the SHAs below and still leave B-02 OPEN. They do not complete this gate."
+    },
+    {
+      "Id": "DSP004-FA-05",
+      "MapsTo": "DSP004-R-05",
+      "State": "SEPARATE_FIXED_SHA_DISPOSITION_REQUIRED",
+      "Reason": "Current full input, comparison mapping, and harness acceptance remain undisposed."
+    },
+    {
+      "Id": "DSP004-FA-06",
+      "MapsTo": "DSP004-R-06",
+      "State": "PRECONDITIONS_NOT_ESTABLISHED",
+      "Reason": "Dependency, startup, isolation, and retained LIMITED items remain undisposed."
+    },
+    {
+      "Id": "DSP004-FA-07",
+      "MapsTo": "DSP004-R-08",
+      "State": "NOT_AUTHORIZED",
+      "Reason": "No detached Manifest acceptance or exact run authority."
+    },
+    {
+      "Id": "DSP004-FA-08",
+      "State": "NOT_AUTHORIZED",
+      "Reason": "No recorded formal validation and no Owner final acceptance. DSP-004 is not CLOSED."
+    },
+    {
+      "Id": "DSP004-R-04",
+      "State": "COMMIT_SUBJECT_IS_NOT_ACCEPTANCE",
+      "Commit": "f3a41bca5d6857f2bb22a6a51c10895ea84ef076",
+      "CommitSubject": "docs(route-b): back up accepted DSP-004 source-use design REV1",
+      "File": "docs/phase2/route-b/DSP_004_SOURCE_USE_AND_INPUT_EXTENSION_REV1_CANDIDATE.md",
+      "FileFormationStatus": "MATERIALIZED — INDEPENDENT STATIC REVIEW PENDING / NOT ACCEPTED",
+      "Reason": "The commit subject uses accepted. The file bytes still say independent static review pending and not accepted. History was not rewritten."
+    },
+    {
+      "Id": "DSP004-R-07",
+      "State": "LIMITED_RETAINED",
+      "Reason": "Stop and cleanup limits stay with the Owner. This review does not declare zero I/O or physical halt."
+    },
+    {
+      "Id": "DSP004-PATH-CHOICE",
+      "State": "UNSELECTED",
+      "Reason": "Handoff section 6 path A and path B remain unselected. This review follows neither closure path."
+    },
+    {
+      "Id": "DSP004-SOURCE-ROOT-REVIEW",
+      "State": "IN_REPO_DESIGN_REVIEW_STILL_ABSENT",
+      "File": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+      "Commit": "25a65aae4212823c09e0b6acb0287cb933148468",
+      "Reason": "Formation status remains OWN FIXED-SHA INDEPENDENT STATIC REVIEW PENDING / NOT ACCEPTED. Reference SHA pins match. Writing-block 31684 has no separate in-repo transcript, so external wording fidelity is not established here. That candidate told its own batch not to add a second review file."
+    }
+  ],
+  "LaterChainIdentities": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_ENVIRONMENT_IDENTITY_REBINDING_REV1_CANDIDATE.md",
+      "SHA256": "DC6DAA71B5ADB99E1E2FF61FD535B51C661C7671E3E08F651046740300B329EA",
+      "Bytes": 15112
+    },
+    {
+      "Path": "docs/phase2/route-b/DSP_004_SOURCE_USE_AND_INPUT_EXTENSION_REV1_CANDIDATE.md",
+      "SHA256": "F4B995D8F2DA424E68D94EA7E31FB6387F628C7681BEF5CC05807A29D6684A2F",
+      "Bytes": 24541
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+      "SHA256": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+      "Bytes": 21257
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "SHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+      "Bytes": 10820
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "SHA256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD",
+      "Bytes": 54109
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "SHA256": "6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA",
+      "Bytes": 54703
+    },
+    {
+      "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+      "Bytes": 4555
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+      "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+      "Bytes": 770
+    }
+  ],
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE FORMAL ACCEPTANCE PREPARATION PACKAGE ONLY. NOT OWNER ACCEPTANCE, SOURCE ADMISSION, MANIFEST, RUN AUTHORITY, OR DSP-004 CLOSURE."
+}
