@@ -1,0 +1,326 @@
+{
+  "RecordKind": "DSP004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE",
+  "Outcome": "DESIGN_CANDIDATE_ONLY_NOT_ADMITTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写 FA-03 捕获设计候选，不准入、不执行、不从预期回填.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.md",
+  "Formation": {
+    "GitHead": "7c23f63cb11345fd7a405a8ee6ee5bf009517881",
+    "RecordedAtUtc": "2026-10-30T15:36:22Z",
+    "Method": "DESIGN_TEXT_ONLY_BYTE_HASH_AND_OPENING_TEXT_READ",
+    "SubjectModulesImported": false,
+    "CaptureCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "FixtureResultsWritten": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "PriorIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV2.md",
+        "SHA256": "618A913DED00C719FABF6D4AB37AEFAA1F9A604FF10EB08276D5CEF18A3DDBFD",
+        "Bytes": 3121
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV2.json",
+        "SHA256": "BFAFB7A0867156E164EACD8FEB76DF9655F658B6F33FF42A892675BB6356EBED",
+        "Bytes": 2578
+      }
+    }
+  },
+  "Gate": {
+    "Id": "DSP004-FA-03",
+    "State": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "Completed": false,
+    "PositiveDecisionAuthority": "PROJECT_OWNER",
+    "AutomaticTransition": false
+  },
+  "RoleSeparation": {
+    "ExpectedMaintainerRole": "BASELINE_PREPARER",
+    "ProducerRole": "CONTROLLED_INVOCATION_CONTEXT_PRODUCER",
+    "CaptureEntryRole": "FIXED_ACTUAL_CAPTURE_ADAPTER",
+    "ReviewerRole": "INDEPENDENT_READ_ONLY_REVIEWER",
+    "ProducerIsDistinctFromCaptureEntry": true,
+    "CaptureEntryBound": false,
+    "ExpectedMaintainerMayRewriteFrozenExpecteds": false,
+    "ProducerMayRewriteFrozenExpecteds": false,
+    "CaptureEntryMayRewriteFrozenExpecteds": false,
+    "PendingCallerMayRewriteFrozenExpecteds": false,
+    "FrozenExpectedChangeRequiresNewAuthorizedCarrierAndSha": true,
+    "SameCallerMayFillBothSidesAndProveThem": false
+  },
+  "ActualReadRule": {
+    "When": "SEPARATELY_AUTHORIZED_FUTURE_CALL_ONLY",
+    "Reader": "CAPTURE_ENTRY_NOT_PRODUCER",
+    "PerformedByThisCandidate": false,
+    "PreserveNativeType": true,
+    "NativeTypeSubstitutesForbidden": [
+      "TYPE_NAME_STRING",
+      "JSON_ROUND_TRIP",
+      "REPR_OR_STRINGIFY",
+      "SUBCLASS_OR_RELOADED_SAME_NAME",
+      "NORMALIZED_STRING"
+    ],
+    "PreserveProvenance": true,
+    "ProvenanceFilledByThisCandidate": false,
+    "UnobservedActuals": "ABSENT",
+    "JsonNullMeans": "UNBOUND_ABSENCE_NOT_AN_ACQUIRED_NONE",
+    "BackfillFromExpected": false
+  },
+  "NotActualSideIdentity": [
+    {
+      "Kind": "AUDIT_CORRELATION_ID_EQUALITY",
+      "IsActualSideIdentity": false
+    },
+    {
+      "Kind": "STIMULUS_FRAMES",
+      "Fields": [
+        "frame.project_reference",
+        "frame.session_reference",
+        "frame.provider_reference"
+      ],
+      "IsActualSideIdentity": false
+    },
+    {
+      "Kind": "NOT_SELECTED",
+      "IsActualSideIdentity": false
+    },
+    {
+      "Kind": "FORBIDDEN_CALL_RESULTS",
+      "IsActualSideIdentity": false
+    }
+  ],
+  "ForbiddenByThisCandidate": {
+    "CallIdentityGate": true,
+    "WriteFixtureResults": true,
+    "PrefillVariantId": true,
+    "PrefillAttemptId": true,
+    "PrefillInputSnapshotSha256": true,
+    "ExecuteCaptureCode": true,
+    "AdmitCaptureEntry": true,
+    "BackfillActualFromExpected": true,
+    "LoadExistingCaptureCandidatesAsEntries": true
+  },
+  "UseBinding": {
+    "variant_id": null,
+    "attempt_id": null,
+    "input_snapshot_sha256": null,
+    "authority_record": null,
+    "PrefilledByThisCandidate": false
+  },
+  "ActualSides": [
+    {
+      "SourceRole": "SRC004-A-PROJECT",
+      "Boundary": "PROJECT",
+      "Side": "ACTUAL",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "SourceVersion": null,
+      "Carrier": null,
+      "Locator": null,
+      "RecordedReference": null,
+      "CaptureEntry": null,
+      "CaptureObservationSha256": null
+    },
+    {
+      "SourceRole": "SRC004-A-SESSION",
+      "Boundary": "SESSION",
+      "Side": "ACTUAL",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "SourceVersion": null,
+      "Carrier": null,
+      "Locator": null,
+      "RecordedReference": null,
+      "CaptureEntry": null,
+      "CaptureObservationSha256": null
+    },
+    {
+      "SourceRole": "SRC004-A-PROVIDER",
+      "Boundary": "PROVIDER",
+      "Side": "ACTUAL",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "SourceVersion": null,
+      "Carrier": null,
+      "Locator": null,
+      "RecordedReference": null,
+      "CaptureEntry": null,
+      "CaptureObservationSha256": null
+    }
+  ],
+  "ExpectedReferencesNotUsedAsActuals": [
+    {
+      "ExpectedRole": "SRC004-E-PROJECT",
+      "ExpectedIdentity": "DSP004-EXPECTED-PROJECT-V1",
+      "Value": "SYNTHETIC-PROJECT-001",
+      "CarrierPath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "CarrierSHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+      "CopiedToActual": false
+    },
+    {
+      "ExpectedRole": "SRC004-E-SESSION",
+      "ExpectedIdentity": "DSP004-EXPECTED-SESSION-V1",
+      "Value": "SYNTHETIC-SESSION-001",
+      "CarrierPath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "CarrierSHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+      "CopiedToActual": false
+    },
+    {
+      "ExpectedRole": "SRC004-E-PROVIDER",
+      "ExpectedIdentity": "DSP004-EXPECTED-PROVIDER-V1",
+      "Value": "SYNTHETIC-PROVIDER-001",
+      "CarrierPath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "CarrierSHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+      "CopiedToActual": false
+    }
+  ],
+  "ExistingCaptureCandidates": [
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+      "SHA256": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+      "Bytes": 18301,
+      "OpeningTextRole": "STRUCTURAL_METADATA_VALIDATOR_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+      "SHA256": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+      "Bytes": 10678,
+      "OpeningTextRole": "FIXED_BYTE_RECEIVER_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+      "SHA256": "2C03E9D87BB747A58491CB3B992780FE4252ABDDCF4F35B1A2BC4F0078C4E942",
+      "Bytes": 47292,
+      "OpeningTextRole": "CLOSED_VALIDATION_CARRIER_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+      "SHA256": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+      "Bytes": 53568,
+      "OpeningTextRole": "CLOSED_VALIDATION_CARRIER_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+      "SHA256": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845",
+      "Bytes": 57623,
+      "OpeningTextRole": "CLOSED_VALIDATION_CARRIER_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+      "SHA256": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+      "Bytes": 29736,
+      "OpeningTextRole": "REFUSING_OUTER_SUPERVISOR_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+      "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+      "Bytes": 51610,
+      "OpeningTextRole": "REFUSING_OUTER_SUPERVISOR_NOT_A_CAPTURE_ENTRY",
+      "Selected": false,
+      "Admission": "NOT_ADMITTED",
+      "ImportedOrExecuted": false
+    }
+  ],
+  "CitedNotAccepted": [
+    {
+      "Role": "EXPECTED_BASELINE",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SYNTHETIC_EXPECTED_BASELINE_REV1.md",
+      "SHA256": "BE8C55796587BBA65E22B048291E1688A8B076D02DA2A48DE412919BEB10F368",
+      "Bytes": 10820,
+      "Accepted": false,
+      "Modified": false
+    },
+    {
+      "Role": "EXPECTED_BASELINE_READER",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_EXPECTED_BASELINE_READER_CANDIDATE_REV1.py",
+      "SHA256": "AE1389EDA1C3B9129A0546DA5764C1F68A6B0193A22DA3431CAA89BAB8DC0727",
+      "Bytes": 9033,
+      "Accepted": false,
+      "ImportedOrExecuted": false
+    },
+    {
+      "Role": "CONTROLLED_BASELINE_HANDOFF_CALLER",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CONTROLLED_BASELINE_HANDOFF_CALLER_CANDIDATE_REV1.py",
+      "SHA256": "EF554C3051318BD305EDE6B8511C433C1BB9E20B10E93E5FB5F71C9AFF7A7E63",
+      "Bytes": 8227,
+      "Accepted": false,
+      "ImportedOrExecuted": false,
+      "IsActualCaptureEntry": false
+    },
+    {
+      "Role": "SOURCE_USE_DESIGN",
+      "Path": "docs/phase2/route-b/DSP_004_SOURCE_USE_AND_INPUT_EXTENSION_REV1_CANDIDATE.md",
+      "SHA256": "F4B995D8F2DA424E68D94EA7E31FB6387F628C7681BEF5CC05807A29D6684A2F",
+      "Bytes": 24541,
+      "Accepted": false
+    },
+    {
+      "Role": "IDENTITY_GATE_NOT_CALLED",
+      "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+      "Bytes": 4555,
+      "Called": false,
+      "Accepted": false
+    },
+    {
+      "Role": "NULL_PROVIDER_PORT_TEXT_ONLY",
+      "Path": "scripts/phase2_runtime/route_b_c03/provider_port.py",
+      "SHA256": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+      "Bytes": 870,
+      "Imported": false,
+      "NotSelectedStatusIsActualSideIdentity": false,
+      "Accepted": false
+    },
+    {
+      "Role": "FIXTURE_NOT_WRITTEN",
+      "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+      "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+      "Bytes": 770,
+      "WrittenByThisCandidate": false,
+      "Accepted": false
+    }
+  ],
+  "StillMissing": [
+    "actual source identity, version, carrier, locator, producer duty, authority, location, and scope for SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER",
+    "a bound capture entry distinct from the producer",
+    "variant_id, attempt_id, input_snapshot_sha256, and authority_record",
+    "a separately authorized future call, which is the only occasion on which actual references may be read"
+  ],
+  "FixedShaAcceptedAsFormalContract": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA08Completed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  }
+}
