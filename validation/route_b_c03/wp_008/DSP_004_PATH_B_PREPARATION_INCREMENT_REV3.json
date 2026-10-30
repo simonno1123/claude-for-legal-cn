@@ -1,0 +1,68 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写 FA-03 捕获设计候选，不准入、不执行、不从预期回填.",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV2.md",
+      "SHA256": "618A913DED00C719FABF6D4AB37AEFAA1F9A604FF10EB08276D5CEF18A3DDBFD",
+      "Bytes": 3121
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV2.json",
+      "SHA256": "BFAFB7A0867156E164EACD8FEB76DF9655F658B6F33FF42A892675BB6356EBED",
+      "Bytes": 2578
+    }
+  },
+  "NewPreparationFact": "FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_NOT_ADMITTED",
+  "DesignCandidate": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.md",
+      "SHA256": "479BDD82584A9189EB54D5518D5D5C23C9C478DF39AF68622F345CBCA2F58789",
+      "Bytes": 10668
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.json",
+      "SHA256": "73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A",
+      "Bytes": 12081,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "GateId": "DSP004-FA-03",
+    "GateState": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "GateCompleted": false,
+    "CaptureEntryAdmitted": false,
+    "Executed": false,
+    "BackfillFromExpected": false
+  },
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "UseBindingPrefilled": false,
+  "IdentityGateCalled": false,
+  "FixtureResultsWritten": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  }
+}
