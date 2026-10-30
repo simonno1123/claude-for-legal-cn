@@ -1,0 +1,256 @@
+{
+  "RecordKind": "DSP004_B02_REV3_CANDIDATES_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "REVIEW_RECORDED_FORMAL_CONTRACT_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_REV3_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "ReviewBase": {
+    "GitHeadAtReview": "24c702bbde24c0ea392c064de9fac46e601bdfb6",
+    "CandidateMaterializationCommit": "60491b56d88583c676a1c2ce856953e96865be7e",
+    "RecordedAtUtc": "2026-10-30T12:41:24Z",
+    "PriorPreparationIncrement": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV1.md",
+      "SHA256": "F612F938B9F7897DFE71D4B9E5668D98C9C83B89368C18309E12963A22AE6ED0",
+      "Bytes": 7595
+    },
+    "Method": "LOCAL_PYTHON_SHA256_AND_TEXT_STRUCTURE_ONLY",
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "AssetAcceptanceGranted": false
+  },
+  "ReviewedCandidates": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "IdentityMatchesExpected": true,
+      "UnchangedSinceMaterializationCommit": true,
+      "AcceptedAsFormalContract": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "IdentityMatchesExpected": true,
+      "UnchangedSinceMaterializationCommit": true,
+      "AcceptedAsFormalContract": false
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "IR-01.TYPED_CONTRACT_IDENTITY",
+      "Passed": true,
+      "Detail": "29240 bytes and SHA-256 AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F match the identity named before this review."
+    },
+    {
+      "CheckId": "IR-02.ARRAY_POLICY_IDENTITY",
+      "Passed": true,
+      "Detail": "16317 bytes and SHA-256 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123 match the identity named before this review."
+    },
+    {
+      "CheckId": "IR-03.CANDIDATE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "Both candidates are UTF-8 without BOM, CR, or trailing whitespace."
+    },
+    {
+      "CheckId": "IR-04.BYTES_UNCHANGED_SINCE_MATERIALIZATION",
+      "Passed": true,
+      "Detail": "git diff against 60491b56d88583c676a1c2ce856953e96865be7e is empty for both candidate paths."
+    },
+    {
+      "CheckId": "IR-05.ELEVEN_TOP_LEVEL_GROUPS",
+      "Passed": true,
+      "Detail": "Typed-contract section 2 lists manifest_identity, root_bindings, runtime_identity, import_contract, trusted_operation_contract, input_contract, entries, excluded_sets, closure_evidence, aggregate_identity, and governance."
+    },
+    {
+      "CheckId": "IR-06.THIRTY_TWO_POLICIES",
+      "Passed": true,
+      "Detail": "AP-001 through AP-032 occur once each. Modes are 27 SET_SORTED and 5 ORDERED. The section 5 group counts, including manifest_identity 0 and governance 0, sum to 32 and match the path prefixes."
+    },
+    {
+      "CheckId": "IR-07.ARRAY_PATH_CORRESPONDENCE",
+      "Passed": true,
+      "Detail": "Twenty-nine typed members are written as arrays and map onto registry paths. The other three registry paths are the import denied-module set, the excluded denied-module set, and the denied-capability set. Entry.read_phase remains a comma-joined string. No thirty-third array member was found."
+    },
+    {
+      "CheckId": "IR-08.ORDERED_FIVE_SOURCES_UNFILLED",
+      "Passed": true,
+      "Detail": "AP-006, AP-009, AP-020, AP-021, and AP-022 have selector text. Sections 3.1 and 5 say the actual source values are not filled. Section 4.3 says a missing item cannot pass because the table exists."
+    },
+    {
+      "CheckId": "IR-09.CITED_DESIGN_DOCUMENT_PINS",
+      "Passed": true,
+      "Detail": "Plan V2.2 is 54703 bytes SHA-256 6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA. Execution Package V3.2 is 54109 bytes SHA-256 87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD. Both still match the pins inside the candidates. This re-check accepts neither file."
+    },
+    {
+      "CheckId": "IR-10.NO_MUTUAL_SHA_EMBED",
+      "Passed": true,
+      "Detail": "Neither candidate contains the other file SHA-256. Companion paths are locators only."
+    },
+    {
+      "CheckId": "IR-11.NO_MANIFEST_CREATED",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created. No Manifest was generated."
+    },
+    {
+      "CheckId": "IR-12.NO_SOURCE_ROOT_SECOND_REVIEW",
+      "Passed": true,
+      "Detail": "No design-review file was added for source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93."
+    },
+    {
+      "CheckId": "IR-13.SUBJECTS_NOT_EXECUTED",
+      "Passed": true,
+      "Detail": "No subject module was imported or executed. Commercial P0 was not run and was not modified."
+    },
+    {
+      "CheckId": "IR-14.ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "Signed and Accepted stay false. Neither reviewed SHA is the formal B-02 contract."
+    }
+  ],
+  "Structure": {
+    "TypedContractSections": ["0", "0.1", "0.2", "1", "1.1", "1.2", "1.3", "2", "3", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "4", "5", "5.1", "5.2", "5.3", "5.4", "6"],
+    "TopLevelGroups": [
+      "manifest_identity",
+      "root_bindings",
+      "runtime_identity",
+      "import_contract",
+      "trusted_operation_contract",
+      "input_contract",
+      "entries",
+      "excluded_sets",
+      "closure_evidence",
+      "aggregate_identity",
+      "governance"
+    ],
+    "PolicyIds": "AP-001 through AP-032",
+    "SetSortedCount": 27,
+    "OrderedCount": 5,
+    "DeclaredGroupCounts": {
+      "manifest_identity": 0,
+      "root_bindings": 4,
+      "runtime_identity": 4,
+      "import_contract": 5,
+      "trusted_operation_contract": 5,
+      "input_contract": 6,
+      "entries": 1,
+      "excluded_sets": 3,
+      "closure_evidence": 3,
+      "aggregate_identity": 1,
+      "governance": 0,
+      "total": 32
+    },
+    "DeclaredCountsMatchPathPrefixes": true,
+    "ArrayMembersWrittenAsArray": 29,
+    "ClosedSetsRegisteredAsArrayPaths": [
+      "import_contract.denied_modules",
+      "excluded_sets.denied_modules",
+      "excluded_sets.denied_capabilities"
+    ],
+    "EntryFieldCount": 15,
+    "EntryReadPhaseRemainsString": true,
+    "EntryCategoryRows": 12,
+    "DeniedModuleNamesInTypedContract": 12,
+    "DeniedCapabilityNamesInTypedContract": 10,
+    "ExclusionCategoryNamesInTypedContract": 10,
+    "RegistryRestatesThoseMemberNames": false
+  },
+  "OrderedGaps": [
+    {
+      "PolicyId": "AP-006",
+      "Path": "runtime_identity.declared_startup_sequence",
+      "Mode": "ORDERED",
+      "Selector": "runtime_identity.startup_contract",
+      "ActualSequenceSourceFilled": false
+    },
+    {
+      "PolicyId": "AP-009",
+      "Path": "import_contract.lookup_order",
+      "Mode": "ORDERED",
+      "Selector": "import_contract.origin_policy",
+      "ActualSequenceSourceFilled": false
+    },
+    {
+      "PolicyId": "AP-020",
+      "Path": "input_contract.fixtures",
+      "Mode": "ORDERED",
+      "Selector": "manifest_identity.fixture_catalog",
+      "ActualSequenceSourceFilled": false
+    },
+    {
+      "PolicyId": "AP-021",
+      "Path": "input_contract.scenarios",
+      "Mode": "ORDERED",
+      "Selector": "input_contract.binding",
+      "ActualSequenceSourceFilled": false
+    },
+    {
+      "PolicyId": "AP-022",
+      "Path": "input_contract.scenarios[].variants",
+      "Mode": "ORDERED",
+      "Selector": "input_contract.binding",
+      "ActualSequenceSourceFilled": false,
+      "PerScenarioRegistrationRowsFilled": false
+    }
+  ],
+  "SixRevisionFidelity": {
+    "Established": false,
+    "TypedContractNamesRevisions": "A—F",
+    "LettersAssignedInEitherBody": false,
+    "ArrayPolicySection4Subsections": ["4.1", "4.2", "4.3", "4.4", "4.5"],
+    "SessionLocators": ["writing 87426", "writing 90376"],
+    "SessionLocatorsAreRepositoryFiles": false,
+    "SeparateRev2OrRev3AppendixFileFound": false,
+    "Reason": "The array-policy heading says six REV3 revision rules and then numbers five subsections. Subsection 4.3 states both the ORDERED completeness rule and the NOT_APPLICABLE rule. The letters A through F are not written on those rules. Session writings 87426 and 90376 are not repository files, so this review does not reconstruct them."
+  },
+  "CitedDesignDocuments": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+      "SHA256": "6AD0CFD1FBEB09A5100B577DC1FD2E66054E3155AB299D697CEAD81425DF00BA",
+      "Bytes": 54703,
+      "MatchesCandidatePin": true,
+      "Accepted": false
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "SHA256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD",
+      "Bytes": 54109,
+      "MatchesCandidatePin": true,
+      "Accepted": false
+    }
+  ],
+  "StillMissingForB02": [
+    "fixed SHA acceptance of either physical REV3 candidate",
+    "actual source file, unique sequence locator, and per-scenario registration rows for AP-006, AP-009, AP-020, AP-021, and AP-022",
+    "four-root, case, reparse, and alias facts",
+    "admission of the concrete input, variants, observations, and reachability",
+    "exclusion-category membership and loader-branch classification basis",
+    "encoder, generator, and runtime verification of the policies",
+    "D-007, trusted load, output isolation, timing, and outer stop",
+    "in-repo fidelity of the six REV3 revisions against session writings 87426 and 90376"
+  ],
+  "Summary": {
+    "StaticChecks": 14,
+    "StaticChecksPassed": 14,
+    "PassMeaning": "Identity and structure checks hold, and the candidates keep the ORDERED gaps visible. A passed check does not close B-02.",
+    "TextBlockingIdentityMismatches": 0,
+    "GatesCompleted": 0,
+    "FormalContractAccepted": false,
+    "FA04Completed": false,
+    "FA08Completed": false,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE TWO REV3 DOCUMENT CANDIDATES ONLY. NEITHER SHA IS ACCEPTED AS THE FORMAL B-02 CONTRACT. THIS RECORD DOES NOT CLOSE B-02, FA-04, FA-08, OR DSP-004."
+}
