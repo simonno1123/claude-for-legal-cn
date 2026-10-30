@@ -1,0 +1,370 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerBatchAuthorization": "After REV13 merge, write the next and, for this batch, last pre-wall preparation document: an owner asset-decision register that lists decisions that still require owner action, without making those decisions. Stop at the asset wall: do not admit sources, accept asset SHAs, select FA-05 options, dispose FA-06 rows, repair BLOCKs, create a Manifest, authorize a formal run, or close DSP-004 / B-01 / B-02.",
+  "PreviouslyRecordedOwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PreviouslyRecordedOwnerStepSentenceReissued": false,
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV13.md",
+      "SHA256": "8871255CD154EB6748CA3B28C0A8A2F6C9629D72AF9AD38C1BF3A5A3E1950EB9",
+      "Bytes": 14474,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV13.json",
+      "SHA256": "C27EA37C75D1735B0DE5309EA7C8712C78F28C7FEF9443F53796678C26BAF04B",
+      "Bytes": 14201,
+      "MatchesShaRecordedInRev13Markdown": true,
+      "Accepted": false
+    },
+    "NewPreparationFact": "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+    "FieldMatch": {
+      "SignedFalse": true,
+      "AcceptedFalse": true,
+      "Admission": "NOT_ADMITTED",
+      "RetainedDsp004": "OPEN / HOLD",
+      "B01": "OPEN",
+      "B02": "OPEN",
+      "Dsp004Closed": false,
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "RuntimeRootAdmitted": false,
+      "ManifestCreated": false,
+      "FormalRunAuthorized": false,
+      "FA08Completed": false,
+      "CitedIdentitiesMatchDisk": true,
+      "CitedIdentityTriples": 20,
+      "PassMeansFieldMatchNotAcceptance": true
+    }
+  },
+  "NewPreparationFact": "OWNER_ASSET_DECISION_REGISTER_REV1_NOT_ADMITTED",
+  "Register": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+      "Bytes": 37989,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+      "Bytes": 82247,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "DecisionRowCount": 15,
+      "DecidedRowCount": 0,
+      "SelectedRowCount": 0,
+      "OpenedRowCount": 0,
+      "ChecksPassed": 16,
+      "CheckCount": 16,
+      "PassMeansFieldMatchNotAcceptance": true
+    }
+  },
+  "DecisionRows": [
+    {
+      "DecisionId": "OD-01",
+      "Subject": "FA06_BUCKET_EVIDENCE_PRESENT_UNACCEPTED",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-02",
+      "Subject": "FA06_BUCKET_EVIDENCE_ABSENT",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-03",
+      "Subject": "FA06_BUCKET_REQUIRES_RUNTIME_ROOT",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-04",
+      "Subject": "IMPORT_CLOSURE_CALL_IDENTITY_CHECK_TO_USE_T0_PE_OS",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-05",
+      "Subject": "RUNTIME_ROOT_LOCATOR_AP006_AP009",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-06",
+      "Subject": "AP020_AP021_AP022_BLOCK_REPAIR",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-07",
+      "Subject": "AP020_AP021_AP022_ACTUAL_SEQUENCE_LOCATORS",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-08",
+      "Subject": "THREE_ACTUAL_SIDES",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-09",
+      "Subject": "AUTHORIZED_CALL_TO_READ_ACTUAL_REFERENCES",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-10",
+      "Subject": "REV3_SHA_ACCEPTANCE",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-11",
+      "Subject": "PRIOR_CANDIDATE_SHA_ACCEPTANCE",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-12",
+      "Subject": "HARNESS_SHA_ACCEPTANCE",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-13",
+      "Subject": "FOUR_NAMED_LIMITED_REVIEW_ITEMS",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-14",
+      "Subject": "FA05_OPTION_SELECTION",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    {
+      "DecisionId": "OD-15",
+      "Subject": "MANIFEST_FORMAL_RUN_FA08_DSP004_CLOSE",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    }
+  ],
+  "FurtherDeliverableOpened": false,
+  "LastPreWallPreparationDocumentForThisBatch": true,
+  "AssetWallCrossed": false,
+  "AnyDecisionTaken": false,
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-04",
+        "OD-13"
+      ],
+      "Note": "FA-06 retention and the three evidence buckets stay undecided. OD-01, OD-02, and OD-03 are not retained and not disposed. OD-04 supplies no import-closure evidence. OD-13 neither eliminates nor decides to keep the four named LIMITED items. No disposition document is opened.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "GAP_NOTE_REVIEWED_NOT_ACCEPTED_NOT_LOCATABLE",
+      "DecisionIds": [
+        "OD-05"
+      ],
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "LocatorSupplied": false,
+      "Note": "OD-05 lists provide-or-refuse and selects neither. The REV13 review stays unaccepted. Both policies stay NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT. No runtime-root locator is admitted.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "OPTIONS_SHEET_REVIEWED_NOT_ACCEPTED_NONE_SELECTED",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "OD-14 leaves KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B unselected and unopened. The REV12 review stays unaccepted.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_NOTE_REVIEWED_NOT_ACCEPTED_CODES_UNREPAIRED",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "Note": "OD-06 does not repair the BLOCK codes and does not record a repair method. OD-07 does not admit actual sequence locators. OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED stays RECORDED_NOT_INSERTED. The REV11 review stays unaccepted.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "ACTUAL_SIDES_AND_AUTHORIZED_CALL",
+      "State": "UNBOUND_CALL_NOT_OPENED",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Note": "OD-08 leaves the three actual sides UNBOUND and the seven capture candidates NOT_SELECTED. OD-09 does not open another call that would be allowed to read actual references.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 6,
+      "GapId": "PRIOR_SHA_ACCEPTANCE",
+      "State": "UNDECIDED_NOT_ACCEPTED",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Note": "OD-10 does not accept the two REV3 SHAs as a formal B-02 contract. OD-11 does not accept the REV13 section 4 candidate SHAs or source-root 57BAF161. OD-12 does not accept any Harness SHA. Refusal is also unselected.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 7,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Note": "OD-15 leaves Manifest generation, a formal run, FA-08, and closure of DSP-004 unauthorized. No choice on that row is selected.",
+      "DeliverableOpened": false,
+      "Decided": false
+    }
+  ],
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "PathsInvented": false,
+  "StartupSequenceInvented": false,
+  "ImportSequenceInvented": false,
+  "RuntimeRootAdmitted": false,
+  "LocatorOpened": false,
+  "AnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "BlocksRepaired": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "HarnessShaAccepted": false,
+  "SourceRootShaAccepted": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  }
+}
