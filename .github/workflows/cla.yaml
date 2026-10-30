@@ -44,4 +44,4 @@ jobs:
           # too — the human PR opener still has to sign either way.
           allowlist: "iainmcgin,claude,claude[bot],dependabot[bot],github-actions[bot],renovate[bot],noreply@anthropic.com,cursoragent,cursoragent@cursor.com"
           # Cursor cloud-agent PRs: human opener signs; commits may be only from allowlisted cursoragent.
-          require-opener-as-author: false
+          require-opener-as-author: "false"
