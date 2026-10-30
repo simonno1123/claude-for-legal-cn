@@ -1,0 +1,941 @@
+{
+  "RecordKind": "DSP004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "ReviewBase": {
+    "GitHeadAtReview": "181f0de9d4ba49390e79ae33092958039fdeb5ba",
+    "GapNoteMaterializationCommit": "7d73f50ede1b5e4ec8aa55f85270eb50b9cafa92",
+    "GapNoteMaterializationPullRequest": 12,
+    "FormationHeadRecordedByNote": "d2f8f62536cb2de3ab8c09e634281202a1e19487",
+    "RecordedAtUtc": "2026-10-30T23:11:43Z",
+    "PriorPreparationIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.md",
+        "SHA256": "E44A36331C3679C04B3923E000077F1AF83329B075AF5D27ECD19DD92D68D063",
+        "Bytes": 12277,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.json",
+        "SHA256": "1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17",
+        "Bytes": 10089,
+        "MatchesShaRecordedInRev12Markdown": true,
+        "MatchesPr16RecordedIdentity": true,
+        "Accepted": false
+      }
+    },
+    "ComparedWith": [
+      "PATH_B_PREPARATION_INCREMENT_REV12",
+      "PATH_B_PREPARATION_INCREMENT_REV8",
+      "PR_12",
+      "PATH_B_PREPARATION_INCREMENT_REV7",
+      "ORDERED_SOURCE_LOCATOR_INVENTORY_REV1",
+      "FA06_LIMITED_REGISTER_REV1",
+      "FA06_LIMITED_REGISTER_INDEPENDENT_STATIC_REVIEW",
+      "FA05_OPTIONS_SHEET_REV1"
+    ],
+    "Method": "LOCAL_PYTHON_SHA256_AND_JSON_STRUCTURE_ONLY",
+    "HashingIsIdentityOnly": true,
+    "HashingIsNotACall": true,
+    "HashingIsNotExecution": true,
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "IdentityGateImported": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CaptureCodeImported": false,
+    "CaptureCodeExecuted": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "DirectoryOrderUsed": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "PathsInvented": false,
+    "ActualLocationAttempted": false,
+    "LocatorOpened": false,
+    "RuntimeRootAdmitted": false,
+    "BlockCodesRepairedByThisReview": false,
+    "RowsDisposedByThisReview": false,
+    "FA06ReviewChecksRerun": false,
+    "OptionSelectedByThisReview": false,
+    "OptionOpenedByThisReview": false,
+    "HarnessShaAcceptedByThisReview": false,
+    "InputCandidateAdmittedByThisReview": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "AssetAcceptanceGranted": false,
+    "FurtherDeliverableOpened": false
+  },
+  "ReviewedNote": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+      "SHA256": "E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474",
+      "Bytes": 15149
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json",
+      "SHA256": "26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26",
+      "Bytes": 17687
+    },
+    "IdentityMatchesRev8AndPr12": true,
+    "IdentityMatchesRev12Citation": true,
+    "UnchangedSinceMaterializationCommit": true,
+    "AbsentAtFormationHead": true,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "NoteNewPreparationFact": "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_NOT_ADMITTED",
+    "NoteNewPreparationFactRewritten": false,
+    "AcceptedAsFormalContract": false,
+    "LocatorSuppliedByNote": false,
+    "LocatorOpened": false,
+    "RuntimeRootAdmitted": false,
+    "BlockCodesRepaired": false,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "RowsDisposed": 0,
+    "MarkdownAgreesWithJson": true
+  },
+  "CitedNotAccepted": {
+    "Rev8Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.md",
+        "SHA256": "5D90088CA5FE820FD766DAB37CB4AC8502F612EF4F5101F5718B9AB85B31DAA2",
+        "Bytes": 10123,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV8.json",
+        "SHA256": "E512F379D32634F5F6C25DE3980BA1CE9D0DAB35BEB9837AECB43A5EC2C98B2B",
+        "Bytes": 9629,
+        "Accepted": false
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "Rev7Increment": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.md",
+        "SHA256": "1167FB1144495AF0BE11D7D172E889E675918785759D2D27B149EF4913BF42FB",
+        "Bytes": 8112,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.json",
+        "SHA256": "21FC18821036AB38C7855766B93236865EDE0DDE03795834ABA848F8A122A3C1",
+        "Bytes": 7310,
+        "MatchesShaRecordedInRev7Markdown": true,
+        "Accepted": false
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "OrderedInventory": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED"
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "FA06Register": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.md",
+        "SHA256": "AAF90D311F2C85C48EF652E903D4B430D1F339F1FA465527DE679087F30B2305",
+        "Bytes": 22701,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.json",
+        "SHA256": "500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254",
+        "Bytes": 38377,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "FA06Completed": false,
+        "RowCount": 61,
+        "RequiresRuntimeRootCount": 10
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "RowsDisposed": 0
+    },
+    "FA06IndependentReview": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+        "SHA256": "776FE8B24D6F0DFD31EC577393C66A84C16A99C1494CE8BF060A4AA59D814928",
+        "Bytes": 14868,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+        "SHA256": "1EDA163811CB0EF31E32898B968C39C7A464B55C1DD73D1EC83F30F68F6415BA",
+        "Bytes": 59047,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED"
+      },
+      "ChecksRerunByThisReview": false,
+      "FindingsCited": [
+        "F-02",
+        "F-03",
+        "F-05"
+      ],
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "FA05OptionsSheet": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+        "SHA256": "6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4",
+        "Bytes": 10924,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+        "SHA256": "88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8",
+        "Bytes": 12147,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "AnyOptionSelected": false,
+        "AnyOptionOpened": false,
+        "HarnessShaAccepted": false
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "SelectedByThisReview": false
+    }
+  },
+  "Checks": [
+    {
+      "CheckId": "IR-01.GAP_NOTE_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "15149 bytes and SHA-256 E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474 match the identity recorded in preparation increment REV8, materialized by PR #12, and cited again by REV12. This review does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-02.GAP_NOTE_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "17687 bytes and SHA-256 26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26 match the SHA embedded in the gap-note markdown and the identity recorded by REV8 and REV12. This review does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-03.CANDIDATE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "Both gap-note files are UTF-8, without a BOM, without CR, and without trailing whitespace, and each ends with a newline. The markdown embeds its JSON SHA and does not embed its own SHA."
+    },
+    {
+      "CheckId": "IR-04.BYTES_UNCHANGED_SINCE_MATERIALIZATION",
+      "Passed": true,
+      "Detail": "The gap-note files were added at 7d73f50ede1b5e4ec8aa55f85270eb50b9cafa92 and have the same git blob at HEAD 181f0de9d4ba49390e79ae33092958039fdeb5ba. They did not exist at the formation head recorded by the note, d2f8f62536cb2de3ab8c09e634281202a1e19487. The ORDERED inventory, the FA-06 register, the FA-06 review, and REV7 have the same git blob at that formation head and at HEAD."
+    },
+    {
+      "CheckId": "IR-05.REV12_INCREMENT_IDENTITY",
+      "Passed": true,
+      "Detail": "REV12 markdown is 12277 bytes, E44A36331C3679C04B3923E000077F1AF83329B075AF5D27ECD19DD92D68D063. REV12 JSON is 10089 bytes, 1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17, which is the SHA written in the REV12 markdown and the identity recorded by PR #16. This review does not accept those SHAs."
+    },
+    {
+      "CheckId": "IR-06.ORDERED_INVENTORY_IDENTITY",
+      "Passed": true,
+      "Detail": "The ORDERED inventory markdown is 15858 bytes, 8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5. Its JSON is 70228 bytes, 86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7. Both match the gap note and the REV4 record. This review does not admit them."
+    },
+    {
+      "CheckId": "IR-07.FA06_REGISTER_AND_REVIEW_IDENTITY",
+      "Passed": true,
+      "Detail": "The FA-06 register markdown is 22701 bytes, AAF90D311F2C85C48EF652E903D4B430D1F339F1FA465527DE679087F30B2305. Its JSON is 38377 bytes, 500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254. The FA-06 review markdown is 14868 bytes, 776FE8B24D6F0DFD31EC577393C66A84C16A99C1494CE8BF060A4AA59D814928. Its JSON is 59047 bytes, 1EDA163811CB0EF31E32898B968C39C7A464B55C1DD73D1EC83F30F68F6415BA. All four match the gap note. This review does not rerun the 21 FA-06 checks and does not admit those SHAs."
+    },
+    {
+      "CheckId": "IR-08.NOTE_ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "The gap note Signed and Accepted flags are false. Admission is NOT_ADMITTED. Its preparation fact remains AP006_AP009_RUNTIME_ROOT_GAP_NOTE_NOT_ADMITTED. LocatorSuppliedByThisNote, LocatorOpened, BlockCodesRepaired, PathsInvented, StartupSequenceInvented, ImportSequenceInvented, and ActualLocationAttempted are false. RowsDisposed is 0."
+    },
+    {
+      "CheckId": "IR-09.AP006_FIELDS_MATCH_INVENTORY",
+      "Passed": true,
+      "Detail": "AP-006 on the gap note matches the ORDERED inventory: runtime_identity.declared_startup_sequence, runtime_identity.startup_contract, ORDERED, NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT, actual locator null, candidate row count 0, admission NOT_ADMITTED, BLOCK code NO_RUNTIME_ROOT_LOCATOR, Repaired false. Field agreement is not a locator and is not admission."
+    },
+    {
+      "CheckId": "IR-10.AP009_FIELDS_MATCH_INVENTORY",
+      "Passed": true,
+      "Detail": "AP-009 on the gap note matches the ORDERED inventory: import_contract.lookup_order, import_contract.origin_policy, ORDERED, NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT, actual locator null, candidate row count 0, admission NOT_ADMITTED, BLOCK code NO_RUNTIME_ROOT_LOCATOR, Repaired false. Field agreement is not a locator and is not admission."
+    },
+    {
+      "CheckId": "IR-11.TEN_REQUIRES_RUNTIME_ROOT_ROWS_MATCH_REGISTER",
+      "Passed": true,
+      "Detail": "The ten gap-note rows are orders 2, 5, 7, 10, 12, 15, 48, 55, 60, and 61. Order, ItemId, Title, SourcePath, WrittenState, EvidenceState, and Disposed match the FA-06 register and the FA-06 review EvidenceStateOrders list. Every Disposed flag is false. The register count of REQUIRES_RUNTIME_ROOT is 10. Row agreement is not disposition."
+    },
+    {
+      "CheckId": "IR-12.NO_RUNTIME_ROOT_LOCATOR_SUPPLIED",
+      "Passed": true,
+      "Detail": "Both actual locators stay null. Both candidate row counts stay 0. The note supplies no locator. This review supplies no runtime-root path, startup sequence, or import order. ENVIRONMENT_MANIFEST.md, historical Windows virtual environments, and tool caches were not read. NO_RUNTIME_ROOT_LOCATOR stays unrepaired."
+    },
+    {
+      "CheckId": "IR-13.MARKDOWN_JSON_AGREE",
+      "Passed": true,
+      "Detail": "The gap-note markdown and JSON agree on the two policies, the ten row orders and titles, the unrepaired BLOCK code, null locators, zero candidate rows, Signed false, Accepted false, admission NOT_ADMITTED, and the note preparation fact. The markdown describes the three FA-05 choices in Chinese. The JSON keeps OptionId values KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B, each Selected false and Opened false. Agreement is not admission."
+    },
+    {
+      "CheckId": "IR-14.NO_REPAIR_CLAIMED",
+      "Passed": true,
+      "Detail": "Repaired is false on AP-006 and AP-009. BlockCodesRepaired is false. All ten REQUIRES_RUNTIME_ROOT rows stay Disposed false. FA-06 stays incomplete. This review repairs no BLOCK and disposes no row."
+    },
+    {
+      "CheckId": "IR-15.FA05_OPTIONS_NOT_SELECTED",
+      "Passed": true,
+      "Detail": "The gap note and the FA-05 options sheet list KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B in that order. Every Selected flag and every Opened flag is false. The four KEEP_REV1_RECORD file identities still match the note, the sheet, and the current disk. No Harness SHA is accepted. This review selects none and opens none."
+    },
+    {
+      "CheckId": "IR-16.SEVEN_CAPTURE_RESULTS_NOT_SELECTED",
+      "Passed": true,
+      "Detail": "The seven DSP_004_CAPTURE_RESULT_* files still match the byte identities recorded by the FA-03 candidate. Selection stays NOT_SELECTED. Admission stays NOT_ADMITTED. This review hashed bytes only. It did not import, select, or execute them."
+    },
+    {
+      "CheckId": "IR-17.ACTUAL_SIDES_UNBOUND",
+      "Passed": true,
+      "Detail": "SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER stay UNBOUND. Source identity and capture entry stay null. The FA-03 candidate JSON is still 12081 bytes, 73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A. This review does not bind the sides and does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-18.NO_MANIFEST_CREATED",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent. ManifestCreated and FormalRunAuthorized stay false. Quoting a Manifest sentence in an FA-06 row does not create the file."
+    },
+    {
+      "CheckId": "IR-19.REV3_AND_SOURCE_ROOT_SHA_NOT_ACCEPTED",
+      "Passed": true,
+      "Detail": "The typed-contract REV3 file is still 29240 bytes, AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F. The array-policy REV3 file is still 16317 bytes, 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123. The source-and-root candidate is still 21257 bytes, 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93. None is accepted. This review is not a second design review of the source-root SHA. Row 48 stays the register cell only."
+    },
+    {
+      "CheckId": "IR-20.SUBJECTS_NOT_EXECUTED",
+      "Passed": true,
+      "Detail": "identity_gate.py was not imported or called. Fixtures were not executed. Scenario runners were not run. Capture code was not imported or executed. Subject modules were not imported. The FA-06 review checks were not rerun. Commercial P0 was not executed or changed."
+    },
+    {
+      "CheckId": "IR-21.ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "This review Signed and Accepted flags are false. Admission is NOT_ADMITTED. DSP-004 stays OPEN / HOLD. B-01 and B-02 stay OPEN. FA-03 stays MISSING_BINDING_AND_ACTUAL_ENTRY. FA-04, FA-05, and FA-08 stay incomplete. FA-06 stays 未建立充分前提. No runtime root is admitted."
+    }
+  ],
+  "PolicyFieldComparison": {
+    "ComparedSources": [
+      "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1",
+      "ORDERED_SOURCE_LOCATOR_INVENTORY_REV1"
+    ],
+    "FieldsCompared": [
+      "PolicyId",
+      "ManifestPathPattern",
+      "SourceRefSelector",
+      "Mode",
+      "LocatorStatus",
+      "ActualLocator",
+      "CandidateRowCount",
+      "Admission",
+      "BlockCode",
+      "BlockDisposition",
+      "Repaired",
+      "InventoryDetail"
+    ],
+    "ListsMatch": true,
+    "PolicyFieldsMismatched": 0,
+    "RuntimeRootAdmitted": false,
+    "LocatorSuppliedByThisReview": false,
+    "Policies": [
+      {
+        "PolicyId": "AP-006",
+        "ManifestPathPattern": "runtime_identity.declared_startup_sequence",
+        "SourceRefSelector": "runtime_identity.startup_contract",
+        "Mode": "ORDERED",
+        "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+        "ActualLocator": null,
+        "CandidateRowCount": 0,
+        "Admission": "NOT_ADMITTED",
+        "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+        "BlockDisposition": "BLOCK",
+        "Repaired": false,
+        "InventoryDetail": "No startup-sequence artifact, SHA, or unique locator is in the read set. The actual locator stays null.",
+        "FieldsMatch": true,
+        "LocatorSuppliedByThisReview": false
+      },
+      {
+        "PolicyId": "AP-009",
+        "ManifestPathPattern": "import_contract.lookup_order",
+        "SourceRefSelector": "import_contract.origin_policy",
+        "Mode": "ORDERED",
+        "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+        "ActualLocator": null,
+        "CandidateRowCount": 0,
+        "Admission": "NOT_ADMITTED",
+        "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+        "BlockDisposition": "BLOCK",
+        "Repaired": false,
+        "InventoryDetail": "No search-sequence artifact, SHA, or unique locator is in the read set. The actual locator stays null.",
+        "FieldsMatch": true,
+        "LocatorSuppliedByThisReview": false
+      }
+    ]
+  },
+  "RequiresRuntimeRootRowComparison": {
+    "ComparedSources": [
+      "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1",
+      "FA06_LIMITED_REGISTER_REV1",
+      "FA06_LIMITED_REGISTER_INDEPENDENT_STATIC_REVIEW"
+    ],
+    "FieldsCompared": [
+      "Order",
+      "ItemId",
+      "Title",
+      "SourcePath",
+      "WrittenState",
+      "EvidenceState",
+      "Disposed"
+    ],
+    "Orders": [
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      48,
+      55,
+      60,
+      61
+    ],
+    "RegisterRequiresRuntimeRootCount": 10,
+    "RowsMatch": true,
+    "RequiresRuntimeRootRowsMismatched": 0,
+    "RowsDisposed": 0,
+    "SameRuntimeRootBarrier": true,
+    "BarrierStatement": "The ten REQUIRES_RUNTIME_ROOT rows share the same unrepaired NO_RUNTIME_ROOT_LOCATOR barrier already recorded for AP-006 and AP-009. This review does not locate a runtime root and does not repair the BLOCK.",
+    "Rows": [
+      {
+        "Order": 2,
+        "ItemId": "RDM-V2-06",
+        "Title": "Authorize static Manifest generation with accepted input, harness, runtime roots and origin-policy evidence",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+        "WrittenState": "NOT AUTHORIZED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 5,
+        "ItemId": "RDM-V2-09",
+        "Title": "Establish separately accepted environment/startup/network assurances and exact run authority",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+        "WrittenState": "BLOCKED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 7,
+        "ItemId": "RDM-V2-06",
+        "Title": "Authorize static Manifest generation with accepted input, harness, runtime roots and origin-policy evidence",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+        "WrittenState": "NOT AUTHORIZED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 10,
+        "ItemId": "RDM-V2-09",
+        "Title": "Establish separately accepted environment/startup/network assurances and exact run authority",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+        "WrittenState": "BLOCKED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 12,
+        "ItemId": "RDM-V2-06",
+        "Title": "Before generation, separately authorize and accept exact preparation root-binding sources and the complete typed encoding/array-order policy; then authorize static Manifest generation with accepted input, harness, environment and origin-policy evidence",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+        "WrittenState": "NOT AUTHORIZED / ROOT AND ENCODING PREREQUISITES NOT ESTABLISHED BY THIS DOCUMENT",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 15,
+        "ItemId": "RDM-V2-09",
+        "Title": "Establish separately accepted environment/startup/network assurances and exact run authority; reference and recheck the already accepted preparation root bindings and completed Manifest, not create the root source retroactively",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+        "WrittenState": "BLOCKED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 48,
+        "ItemId": "RUNTIME_ROOT",
+        "Title": "完整依赖来源、闭包或检查到使用保护",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+        "WrittenState": "不能据此认定",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 55,
+        "ItemId": "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+        "Title": "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+        "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+        "WrittenState": "remaining_limited",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 60,
+        "ItemId": "full_dependency_provenance",
+        "Title": "LIMITED",
+        "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+        "WrittenState": "runtime_after",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 61,
+        "ItemId": "full_dependency_provenance",
+        "Title": "LIMITED",
+        "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+        "WrittenState": "runtime_before",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "FieldsMatchRegister": true,
+        "AcceptedByThisReview": false,
+        "DisposedByThisReview": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      }
+    ]
+  },
+  "Findings": [
+    {
+      "FindingId": "F-01",
+      "Kind": "POLICY_FIELDS_MATCH_NOT_LOCATABLE",
+      "Policies": [
+        "AP-006",
+        "AP-009"
+      ],
+      "Detail": "AP-006 and AP-009 on the gap note match the ORDERED inventory field for field. Both stay NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT. Both actual locators stay null. Both candidate row counts stay 0. Both BLOCK codes stay NO_RUNTIME_ROOT_LOCATOR and unrepaired. Field agreement is not a runtime-root locator and is not admission."
+    },
+    {
+      "FindingId": "F-02",
+      "Kind": "TEN_ROWS_MATCH_UNDISPOSED",
+      "Orders": [
+        2,
+        5,
+        7,
+        10,
+        12,
+        15,
+        48,
+        55,
+        60,
+        61
+      ],
+      "Detail": "The ten REQUIRES_RUNTIME_ROOT rows match the FA-06 register on Order, ItemId, Title, SourcePath, WrittenState, EvidenceState, and Disposed. The order list also matches the FA-06 review. Every Disposed flag is false. Row agreement does not dispose a row and does not admit a runtime root."
+    },
+    {
+      "FindingId": "F-03",
+      "Kind": "CITED_FA06_FINDINGS_NOT_RERUN",
+      "FindingsCited": [
+        "F-02",
+        "F-03",
+        "F-05"
+      ],
+      "Detail": "The gap note cites FA-06 review findings F-02, F-03, and F-05. F-02 records rows 55, 60, and 61 as classifications, and LOCAL_SYNTHETIC_ONLY and PASS were not copied into the register rows. F-03 records that Manifest sentences, including rows 2, 7, 12, and 15, do not create PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json. F-05 records that row 48 is only the RUNTIME_ROOT cell and is not a second design review of SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93. This review does not rerun those checks and does not add a seventh finding that disposes a row."
+    },
+    {
+      "FindingId": "F-04",
+      "Kind": "RUNTIME_ROOT_LOCATOR_NOT_ADMITTED",
+      "Detail": "No runtime-root locator is admitted. No startup sequence is invented. No import lookup order is invented. No path is invented. ENVIRONMENT_MANIFEST.md was not read. Historical Windows virtual environments were not read. Tool caches were not read. NO_RUNTIME_ROOT_LOCATOR stays unrepaired."
+    },
+    {
+      "FindingId": "F-05",
+      "Kind": "FA05_OPTIONS_REMAIN_UNSELECTED",
+      "Options": [
+        "KEEP_REV1_RECORD",
+        "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "NOT_AVAILABLE_UNDER_PATH_B"
+      ],
+      "Detail": "The gap note and the FA-05 options sheet keep the same three OptionId values in the same order. Each Selected flag is false and each Opened flag is false. The four file identities still match disk. No Harness SHA is accepted. This review selects none of the options and does not write a later byte-identity note."
+    },
+    {
+      "FindingId": "F-06",
+      "Kind": "CAPTURE_CANDIDATES_AND_ACTUAL_SIDES_UNCHANGED",
+      "Detail": "The seven capture-candidate files still match the FA-03 record and stay NOT_SELECTED / NOT_ADMITTED. The three actual sides stay UNBOUND. This review does not bind them and does not create a Manifest."
+    }
+  ],
+  "FA05OptionsNotSelected": [
+    {
+      "OptionId": "KEEP_REV1_RECORD",
+      "AlreadyRankedOrder": 1,
+      "Selected": false,
+      "Opened": false,
+      "Admission": "NOT_ADMITTED",
+      "SelectedByThisReview": false,
+      "HarnessShaAccepted": false,
+      "FilesStillMatchNoteSheetAndDisk": [
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+          "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+          "Bytes": 107849,
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+          "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+          "Bytes": 68768,
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+          "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+          "Bytes": 770,
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        },
+        {
+          "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+          "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+          "Bytes": 4555,
+          "Executed": false,
+          "Admitted": false,
+          "AcceptedAsFormalContract": false
+        }
+      ]
+    },
+    {
+      "OptionId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+      "AlreadyRankedOrder": 2,
+      "Selected": false,
+      "Opened": false,
+      "Admission": "NOT_ADMITTED",
+      "NoteWritten": false,
+      "SelectedByThisReview": false
+    },
+    {
+      "OptionId": "NOT_AVAILABLE_UNDER_PATH_B",
+      "AlreadyRankedOrder": 3,
+      "Selected": false,
+      "Opened": false,
+      "Admission": "NOT_ADMITTED",
+      "SelectedByThisReview": false
+    }
+  ],
+  "ExistingCaptureCandidates": {
+    "Count": 7,
+    "Selection": "NOT_SELECTED",
+    "Admission": "NOT_ADMITTED",
+    "BytesStillMatchFA03Record": true,
+    "ImportedOrExecutedByThisReview": false,
+    "Files": [
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+        "SHA256": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+        "Bytes": 18301,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+        "SHA256": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+        "Bytes": 10678,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+        "SHA256": "2C03E9D87BB747A58491CB3B992780FE4252ABDDCF4F35B1A2BC4F0078C4E942",
+        "Bytes": 47292,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+        "SHA256": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+        "Bytes": 53568,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+        "SHA256": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845",
+        "Bytes": 57623,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+        "SHA256": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+        "Bytes": 29736,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+        "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+        "Bytes": 51610,
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      }
+    ]
+  },
+  "ActualSides": [
+    {
+      "SourceRole": "SRC004-A-PROJECT",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-SESSION",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-PROVIDER",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    }
+  ],
+  "Rev3Shas": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "Role": "TYPED_CONTRACT_REV3",
+      "AcceptedAsFormalB02Contract": false
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "AcceptedAsFormalB02Contract": false
+    }
+  ],
+  "SourceRootShaNoSecondDesignReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+  "SourceRootBytes": 21257,
+  "SourceRootAccepted": false,
+  "SourceRootReviewFileAdded": false,
+  "RuntimeDependencyManifestPath": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+  "RuntimeDependencyManifestPresent": false,
+  "NotRead": [
+    "ENVIRONMENT_MANIFEST.md",
+    "HISTORICAL_WINDOWS_VENV",
+    "TOOL_CACHES"
+  ],
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and its independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This review does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "GAP_NOTE_REVIEWED_NOT_ACCEPTED_NOT_LOCATABLE",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteReviewed": true,
+      "GapNoteReviewAccepted": false,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "ActualLocator": null,
+      "CandidateRowCount": 0,
+      "RuntimeRootAdmitted": false,
+      "Note": "The AP-006 and AP-009 runtime-root gap note now has this independent static review. The review is not accepted. Admission stays NOT_ADMITTED. Both policies stay NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT. Actual locators stay null. Candidate row count stays 0. NO_RUNTIME_ROOT_LOCATOR stays unrepaired. The ten REQUIRES_RUNTIME_ROOT rows stay undisposed. No runtime root locator is admitted. No further locator is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "OPTIONS_SHEET_REVIEWED_NOT_ACCEPTED_NONE_SELECTED",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetReviewed": true,
+      "OptionsSheetReviewAccepted": false,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "The FA-05 options sheet already has the REV12 independent static review. That review is not accepted. Admission stays NOT_ADMITTED. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. This review selects none of them.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_NOTE_REVIEWED_NOT_ACCEPTED_CODES_UNREPAIRED",
+      "BlockNoteRecorded": true,
+      "BlockNoteReviewed": true,
+      "BlockNoteReviewAccepted": false,
+      "BlockNoteAdmission": "NOT_ADMITTED",
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "SequencesMerged": false,
+      "Note": "The AP-020, AP-021, and AP-022 BLOCK note already has the REV11 independent static review. That review is not accepted. Admission stays NOT_ADMITTED. The codes stay unrepaired. Actual sequence locators stay null. Candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED. No repair deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "StillMissing": [
+    "disposition of which dependency, startup, isolation, stop, and cleanup LIMITED rows may be retained",
+    "an admitted actual locator for AP-006 and AP-009 after a runtime root exists",
+    "repair of NO_RUNTIME_ROOT_LOCATOR",
+    "acceptance of this independent static review of the AP-006 and AP-009 runtime-root gap note",
+    "fixed SHA acceptance of the AP-006 and AP-009 runtime-root gap note",
+    "a selected FA-05 option",
+    "acceptance of the independent static review of the FA-05 options sheet",
+    "acceptance of any Harness SHA",
+    "repair of the AP-020, AP-021, and AP-022 BLOCK codes",
+    "an admitted unique sequence for AP-020, AP-021, and AP-022",
+    "fixed SHA acceptance of REV3 SHA AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F or 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123 as the formal B-02 contract",
+    "fixed SHA acceptance of source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+    "source identity, version, carrier, locator, producer duty, authority, and a bound capture entry for SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER",
+    "Manifest, formal run, FA-08, and closure of DSP-004"
+  ],
+  "Summary": {
+    "StaticChecks": 21,
+    "StaticChecksPassed": 21,
+    "PassMeaning": "Identity matches the REV8 and REV12 records, the AP-006 and AP-009 fields match the ORDERED inventory, and the ten REQUIRES_RUNTIME_ROOT rows match the FA-06 register. A passed check does not accept a SHA, admit a runtime root, repair NO_RUNTIME_ROOT_LOCATOR, select an FA-05 option, or close DSP-004.",
+    "Findings": 6,
+    "TextBlockingIdentityMismatches": 0,
+    "PolicyFieldsMismatched": 0,
+    "RequiresRuntimeRootRowsMismatched": 0,
+    "RuntimeRootsAdmitted": 0,
+    "LocatorsSupplied": 0,
+    "BlocksRepaired": 0,
+    "OptionsSelected": 0,
+    "OptionsOpened": 0,
+    "HarnessShasAccepted": 0,
+    "GatesCompleted": 0,
+    "FormalContractAccepted": false,
+    "SourceAdmissionGranted": false,
+    "FA03Completed": false,
+    "FA04Completed": false,
+    "FA05Completed": false,
+    "FA06Completed": false,
+    "FA08Completed": false,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  },
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "PathsInvented": false,
+  "StartupSequenceInvented": false,
+  "ImportSequenceInvented": false,
+  "RuntimeRootAdmitted": false,
+  "LocatorOpened": false,
+  "AnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE AP-006 AP-009 RUNTIME-ROOT GAP NOTE REV1 CANDIDATE ONLY. FINDINGS ONLY. ACCEPTED IS FALSE. SIGNED IS FALSE. ADMISSION IS NOT_ADMITTED. THIS RECORD DOES NOT ADMIT A RUNTIME ROOT, DOES NOT REPAIR NO_RUNTIME_ROOT_LOCATOR, DOES NOT SELECT KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, OR NOT_AVAILABLE_UNDER_PATH_B, DOES NOT ACCEPT THE GAP-NOTE SHA, A HARNESS SHA, OR ANY PRIOR CANDIDATE SHA, AND DOES NOT CLOSE B-01, B-02, FA-03, FA-04, FA-05, FA-06, FA-08, OR DSP-004."
+}
