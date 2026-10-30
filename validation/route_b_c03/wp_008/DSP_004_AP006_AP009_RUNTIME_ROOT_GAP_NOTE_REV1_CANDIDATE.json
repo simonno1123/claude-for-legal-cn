@@ -1,0 +1,428 @@
+{
+  "RecordKind": "DSP004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_CANDIDATE",
+  "Outcome": "GAP_RECORDED_NOT_LOCATED_NOT_ADMITTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+  "Formation": {
+    "GitHead": "d2f8f62536cb2de3ab8c09e634281202a1e19487",
+    "RecordedAtUtc": "2026-10-30T21:59:03Z",
+    "Method": "LOCAL_PYTHON_SHA256_AND_ALREADY_ON_MAIN_TEXT_READ_ONLY",
+    "SubjectModulesImported": false,
+    "CaptureCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "DirectoryOrderUsed": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "PathsInvented": false,
+    "ActualLocationAttempted": false,
+    "LocatorOpened": false,
+    "BlockCodesRepaired": false,
+    "ItemsReordered": false,
+    "ItemsInvented": false,
+    "ItemsDisposed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "PriorIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.md",
+        "SHA256": "1167FB1144495AF0BE11D7D172E889E675918785759D2D27B149EF4913BF42FB",
+        "Bytes": 8112,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.json",
+        "SHA256": "21FC18821036AB38C7855766B93236865EDE0DDE03795834ABA848F8A122A3C1",
+        "Bytes": 7310,
+        "MatchesShaRecordedInRev7Markdown": true,
+        "Accepted": false
+      }
+    }
+  },
+  "OrderedInventory": {
+    "Role": "ALREADY_ON_MAIN_FACTS_FOR_AP006_AND_AP009_ONLY",
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+      "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+      "Bytes": 15858,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+      "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+      "Bytes": 70228,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "PoliciesCited": [
+      {
+        "PolicyId": "AP-006",
+        "ManifestPathPattern": "runtime_identity.declared_startup_sequence",
+        "SourceRefSelector": "runtime_identity.startup_contract",
+        "Mode": "ORDERED",
+        "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+        "ActualLocator": null,
+        "CandidateRowCount": 0,
+        "Admission": "NOT_ADMITTED",
+        "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+        "BlockDisposition": "BLOCK",
+        "Repaired": false,
+        "InventoryDetail": "No startup-sequence artifact, SHA, or unique locator is in the read set. The actual locator stays null."
+      },
+      {
+        "PolicyId": "AP-009",
+        "ManifestPathPattern": "import_contract.lookup_order",
+        "SourceRefSelector": "import_contract.origin_policy",
+        "Mode": "ORDERED",
+        "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+        "ActualLocator": null,
+        "CandidateRowCount": 0,
+        "Admission": "NOT_ADMITTED",
+        "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+        "BlockDisposition": "BLOCK",
+        "Repaired": false,
+        "InventoryDetail": "No search-sequence artifact, SHA, or unique locator is in the read set. The actual locator stays null."
+      }
+    ],
+    "AcceptedAsFormalContract": false,
+    "LocatorSuppliedByThisNote": false
+  },
+  "FA06Register": {
+    "Role": "ALREADY_ON_MAIN_REQUIRES_RUNTIME_ROOT_ROWS_NOT_DISPOSED",
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "AAF90D311F2C85C48EF652E903D4B430D1F339F1FA465527DE679087F30B2305",
+      "Bytes": 22701,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254",
+      "Bytes": 38377,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "FA06Completed": false,
+      "RowCount": 61,
+      "RequiresRuntimeRootCount": 10
+    },
+    "IndependentReview": {
+      "Role": "FINDINGS_ONLY_ALREADY_ON_MAIN",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+        "SHA256": "776FE8B24D6F0DFD31EC577393C66A84C16A99C1494CE8BF060A4AA59D814928",
+        "Bytes": 14868,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+        "SHA256": "1EDA163811CB0EF31E32898B968C39C7A464B55C1DD73D1EC83F30F68F6415BA",
+        "Bytes": 59047,
+        "Signed": false,
+        "Accepted": false,
+        "Admission": "NOT_ADMITTED",
+        "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED"
+      },
+      "ChecksRerunByThisNote": false,
+      "FindingsCited": [
+        "F-02",
+        "F-03",
+        "F-05"
+      ],
+      "RequiresRuntimeRootOrdersRecordedByReview": [
+        2,
+        5,
+        7,
+        10,
+        12,
+        15,
+        48,
+        55,
+        60,
+        61
+      ],
+      "RowsDisposed": 0
+    },
+    "RequiresRuntimeRootRows": [
+      {
+        "Order": 2,
+        "ItemId": "RDM-V2-06",
+        "Title": "Authorize static Manifest generation with accepted input, harness, runtime roots and origin-policy evidence",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+        "WrittenState": "NOT AUTHORIZED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 5,
+        "ItemId": "RDM-V2-09",
+        "Title": "Establish separately accepted environment/startup/network assurances and exact run authority",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_CANDIDATE.md",
+        "WrittenState": "BLOCKED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 7,
+        "ItemId": "RDM-V2-06",
+        "Title": "Authorize static Manifest generation with accepted input, harness, runtime roots and origin-policy evidence",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+        "WrittenState": "NOT AUTHORIZED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 10,
+        "ItemId": "RDM-V2-09",
+        "Title": "Establish separately accepted environment/startup/network assurances and exact run authority",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_1_CANDIDATE.md",
+        "WrittenState": "BLOCKED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 12,
+        "ItemId": "RDM-V2-06",
+        "Title": "Before generation, separately authorize and accept exact preparation root-binding sources and the complete typed encoding/array-order policy; then authorize static Manifest generation with accepted input, harness, environment and origin-policy evidence",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+        "WrittenState": "NOT AUTHORIZED / ROOT AND ENCODING PREREQUISITES NOT ESTABLISHED BY THIS DOCUMENT",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 15,
+        "ItemId": "RDM-V2-09",
+        "Title": "Establish separately accepted environment/startup/network assurances and exact run authority; reference and recheck the already accepted preparation root bindings and completed Manifest, not create the root source retroactively",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN_REVISION_V2_2_CANDIDATE.md",
+        "WrittenState": "BLOCKED",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 48,
+        "ItemId": "RUNTIME_ROOT",
+        "Title": "完整依赖来源、闭包或检查到使用保护",
+        "SourcePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_SOURCE_ROOT_ADMISSION_PREPARATION_REV1_CANDIDATE.md",
+        "WrittenState": "不能据此认定",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false,
+        "SecondDesignReviewOfSourceRootSha": false
+      },
+      {
+        "Order": 55,
+        "ItemId": "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+        "Title": "FULL_DEPENDENCY_PROVENANCE_AND_CHECK_TO_USE",
+        "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+        "WrittenState": "remaining_limited",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 60,
+        "ItemId": "full_dependency_provenance",
+        "Title": "LIMITED",
+        "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+        "WrittenState": "runtime_after",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      },
+      {
+        "Order": 61,
+        "ItemId": "full_dependency_provenance",
+        "Title": "LIMITED",
+        "SourcePath": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+        "WrittenState": "runtime_before",
+        "EvidenceState": "REQUIRES_RUNTIME_ROOT",
+        "Disposed": false,
+        "AcceptedByThisNote": false
+      }
+    ],
+    "SameRuntimeRootBarrier": true,
+    "BarrierStatement": "The ten REQUIRES_RUNTIME_ROOT rows share the same unrepaired NO_RUNTIME_ROOT_LOCATOR barrier already recorded for AP-006 and AP-009. This note does not locate a runtime root and does not repair the BLOCK.",
+    "RowsDisposed": 0,
+    "AcceptedAsFormalContract": false
+  },
+  "NotRead": [
+    "ENVIRONMENT_MANIFEST.md",
+    "HISTORICAL_WINDOWS_VENV",
+    "TOOL_CACHES"
+  ],
+  "NotDone": {
+    "DirectoryOrderUsed": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "PathsInvented": false,
+    "ActualLocationAttempted": false,
+    "LocatorOpened": false,
+    "BlockCodesRepaired": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "CaptureCodeExecuted": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceRootReviewFileAdded": false,
+    "Rev3ShasAcceptedAsFormalB02Contract": false,
+    "ItemsDisposed": false
+  },
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "Rev3ShasNotAccepted": [
+    "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+    "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123"
+  ],
+  "SourceRootShaNoSecondDesignReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and the independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This note does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "This gap note records the barrier already on main. AP-006 and AP-009 stay not locatable. Actual locators stay null. Candidate row count in the inventory read set stays 0. The ten REQUIRES_RUNTIME_ROOT rows share this barrier and stay undisposed. No locator is opened. No path, startup sequence, or import sequence is invented.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "INCOMPLETE",
+      "Note": "FA-05 stays at the REV1 record. None of the options below is selected, and none is opened.",
+      "Options": [
+        {
+          "OptionId": "KEEP_REV1_RECORD",
+          "Selected": false,
+          "Opened": false,
+          "FilesStillMatchRev1": [
+            {
+              "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+              "Bytes": 107849,
+              "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+              "Executed": false,
+              "Admitted": false
+            },
+            {
+              "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+              "Bytes": 68768,
+              "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+              "Executed": false,
+              "Admitted": false
+            },
+            {
+              "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+              "Bytes": 770,
+              "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+              "Executed": false,
+              "Admitted": false
+            },
+            {
+              "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+              "Bytes": 4555,
+              "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+              "Executed": false,
+              "Admitted": false
+            }
+          ],
+          "Note": "Input candidate remains NOT_ADMITTED. No Harness SHA is accepted. The four files were re-hashed with the Python standard library only. identity_gate.py was not called. The fixture file was not executed."
+        },
+        {
+          "OptionId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+          "Selected": false,
+          "Opened": false,
+          "Note": "A later authorization could record byte identity only. This note does not write that note."
+        },
+        {
+          "OptionId": "NOT_AVAILABLE_UNDER_PATH_B",
+          "Selected": false,
+          "Opened": false,
+          "Note": "Path B does not admit the input candidate, accept a Harness SHA, or run identity_gate or fixtures."
+        }
+      ],
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_CODES_UNREPAIRED",
+      "Note": "Admitted unique sequences remain after the REV5 record. This note does not repair those BLOCK codes.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  }
+}

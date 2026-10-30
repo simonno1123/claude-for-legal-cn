@@ -1,0 +1,253 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.md",
+      "SHA256": "1167FB1144495AF0BE11D7D172E889E675918785759D2D27B149EF4913BF42FB",
+      "Bytes": 8112,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV7.json",
+      "SHA256": "21FC18821036AB38C7855766B93236865EDE0DDE03795834ABA848F8A122A3C1",
+      "Bytes": 7310,
+      "Accepted": false
+    }
+  },
+  "NewPreparationFact": "AP006_AP009_RUNTIME_ROOT_GAP_NOTE_NOT_ADMITTED",
+  "GapNote": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+      "SHA256": "E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474",
+      "Bytes": 15149
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json",
+      "SHA256": "26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26",
+      "Bytes": 17687,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorOpened": false,
+      "BlockRepaired": false,
+      "RowsDisposed": 0
+    }
+  },
+  "BarrierRemains": {
+    "AP-006": {
+      "ManifestPathPattern": "runtime_identity.declared_startup_sequence",
+      "SourceRefSelector": "runtime_identity.startup_contract",
+      "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "ActualLocator": null,
+      "CandidateRowCount": 0,
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "AP-009": {
+      "ManifestPathPattern": "import_contract.lookup_order",
+      "SourceRefSelector": "import_contract.origin_policy",
+      "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "ActualLocator": null,
+      "CandidateRowCount": 0,
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "RequiresRuntimeRootOrders": [
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      48,
+      55,
+      60,
+      61
+    ],
+    "RequiresRuntimeRootRowCount": 10,
+    "RowsDisposed": 0,
+    "SameRuntimeRootBarrier": true
+  },
+  "CitedNotAccepted": {
+    "OrderedInventory": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "FA06Register": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.md",
+        "SHA256": "AAF90D311F2C85C48EF652E903D4B430D1F339F1FA465527DE679087F30B2305",
+        "Bytes": 22701
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.json",
+        "SHA256": "500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254",
+        "Bytes": 38377
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Disposed": false
+    },
+    "FA06IndependentReview": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+        "SHA256": "776FE8B24D6F0DFD31EC577393C66A84C16A99C1494CE8BF060A4AA59D814928",
+        "Bytes": 14868
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+        "SHA256": "1EDA163811CB0EF31E32898B968C39C7A464B55C1DD73D1EC83F30F68F6415BA",
+        "Bytes": 59047
+      },
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "FindingsOnly": true
+    }
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and the independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This increment does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note is recorded and is NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. Candidate row count in the inventory read set stays 0. The ten REQUIRES_RUNTIME_ROOT rows share this barrier and stay undisposed. No further locator is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "INCOMPLETE",
+      "Note": "FA-05 stays at the REV1 record. None of the options below is selected, and none is opened.",
+      "Options": [
+        {
+          "OptionId": "KEEP_REV1_RECORD",
+          "Selected": false,
+          "Opened": false,
+          "FilesStillMatchRev1": [
+            {
+              "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+              "Bytes": 107849,
+              "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+              "Executed": false,
+              "Admitted": false
+            },
+            {
+              "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+              "Bytes": 68768,
+              "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+              "Executed": false,
+              "Admitted": false
+            },
+            {
+              "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+              "Bytes": 770,
+              "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+              "Executed": false,
+              "Admitted": false
+            },
+            {
+              "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+              "Bytes": 4555,
+              "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+              "Executed": false,
+              "Admitted": false
+            }
+          ],
+          "Note": "Input candidate remains NOT_ADMITTED. No Harness SHA is accepted. The four files were re-hashed with the Python standard library only. identity_gate.py was not called. The fixture file was not executed."
+        },
+        {
+          "OptionId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+          "Selected": false,
+          "Opened": false,
+          "Note": "A later authorization could record byte identity only. This increment does not write that note."
+        },
+        {
+          "OptionId": "NOT_AVAILABLE_UNDER_PATH_B",
+          "Selected": false,
+          "Opened": false,
+          "Note": "Path B does not admit the input candidate, accept a Harness SHA, or run identity_gate or fixtures."
+        }
+      ],
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_CODES_UNREPAIRED",
+      "Note": "Admitted unique sequences remain after the REV5 record. This increment does not repair those BLOCK codes.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  }
+}
