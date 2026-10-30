@@ -1,0 +1,158 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "SigningRecord": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV1.md",
+      "SHA256": "EBD2F1F000447F40EDF70342F68083E49A71D995DF139A0854A6241E9AF8B02C",
+      "Bytes": 2635
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV1.json",
+      "SHA256": "E92CAD5CBA87D974430735B53491B85F837BF5FECCE0AEBF629ADE1BAB05E025",
+      "Bytes": 2242
+    }
+  },
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "FA02": {
+    "AbsenceConfirmation": "PREPARATION_FACT_ONLY",
+    "Observation": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_ACCEPTANCE_VENV_TWO_FILE_ABSENCE_REV1.json",
+      "SHA256": "D8142F5B8CFF55BE0AE26F652A7A09D86BC2E6172DC592D62D9230260A115E97",
+      "Bytes": 1965
+    },
+    "Targets": [
+      ".venv-validation/pyvenv.cfg",
+      ".venv-validation/Scripts/python.exe"
+    ],
+    "VENV_ROOT": "NOT_ESTABLISHED",
+    "GateCompleted": false,
+    "StillMissing": [
+      "resolver identity and version",
+      "case policy and reparse policy",
+      "check-to-use integrity",
+      "PROJECT_ROOT, RUNTIME_ROOT, and SYSTEM_ROOT approval"
+    ]
+  },
+  "CaptureOutline": {
+    "Kind": "DESIGN_OUTLINE_NOT_CODE",
+    "Admission": "NONE",
+    "Execution": "NONE",
+    "BackfillFromExpected": false,
+    "ActualSidesRemainNull": [
+      "SRC004-A-PROJECT",
+      "SRC004-A-SESSION",
+      "SRC004-A-PROVIDER"
+    ],
+    "ExistingFilesNotSelected": [
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+        "SHA256": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+        "Bytes": 18301
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+        "SHA256": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+        "Bytes": 10678
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+        "SHA256": "2C03E9D87BB747A58491CB3B992780FE4252ABDDCF4F35B1A2BC4F0078C4E942",
+        "Bytes": 47292
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+        "SHA256": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+        "Bytes": 53568
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+        "SHA256": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845",
+        "Bytes": 57623
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+        "SHA256": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+        "Bytes": 29736
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+        "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+        "Bytes": 51610
+      }
+    ]
+  },
+  "B02Inventory": {
+    "FormalContract": false,
+    "GateCompleted": false,
+    "TypedContract": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240
+    },
+    "ArrayPolicy": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317
+    },
+    "DeclaredArrayPolicyCounts": {
+      "manifest_identity": 0,
+      "root_bindings": 4,
+      "runtime_identity": 4,
+      "import_contract": 5,
+      "trusted_operation_contract": 5,
+      "input_contract": 6,
+      "entries": 1,
+      "excluded_sets": 3,
+      "closure_evidence": 3,
+      "aggregate_identity": 1,
+      "governance": 0,
+      "total": 32
+    },
+    "OrderedPoliciesWithoutActualSequenceSource": [
+      "AP-006",
+      "AP-009",
+      "AP-020",
+      "AP-021",
+      "AP-022"
+    ]
+  },
+  "InputHarness": {
+    "InputCandidate": {
+      "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+      "SHA256": "A8AB66D73513B81DBBED5CB56952EEA72C2CE0DB950D521BB49ED0A3D5073430",
+      "Bytes": 107849,
+      "Admission": "NOT_ADMITTED"
+    },
+    "OldBindingLeftUntouched": {
+      "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+      "SHA256": "92303974B76DFB9C4ECFDBE452EFB4728E0EEB861FFB1D2EDC7660EFFD27EEA5",
+      "Bytes": 68768
+    },
+    "Fixture": {
+      "Path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+      "SHA256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+      "Bytes": 770,
+      "ExpectedState": "BLOCKED_ISOLATED",
+      "ExpectedReasonClass": "BOUNDARY_MISMATCH"
+    },
+    "IdentityGate": {
+      "Path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
+      "SHA256": "9E57E16C2AA1B7235EB5DE8C89A8F05319B7876AE1CF7715FBE6BE624647F445",
+      "Bytes": 4555,
+      "IsolationResult": "REJECTED — ISOLATION FAILURE"
+    },
+    "HarnessShaAccepted": false,
+    "GateCompleted": false
+  }
+}
