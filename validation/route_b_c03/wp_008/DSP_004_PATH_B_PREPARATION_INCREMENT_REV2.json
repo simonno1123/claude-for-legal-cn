@@ -1,0 +1,71 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV1.md",
+      "SHA256": "F612F938B9F7897DFE71D4B9E5668D98C9C83B89368C18309E12963A22AE6ED0",
+      "Bytes": 7595
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV1.json",
+      "SHA256": "045D2DC6C9ED53CB8F795E670A35653576095AE4D2224139F426CFF01C39CA4B",
+      "Bytes": 5737
+    }
+  },
+  "NewPreparationFact": "IN_REPO_INDEPENDENT_STATIC_REVIEW_OF_TWO_REV3_DOCUMENT_CANDIDATES",
+  "Review": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_REV3_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "4B627A2A3FAE41B32081FF8E0F0866B198CAF04E23496D30D5886FEEAEEE188B",
+      "Bytes": 7806
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_B02_REV3_CANDIDATES_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "21D053CAD383598857F1DDCE170AB28759A035B85C7A3D967C5C20B9AC5AEEB0",
+      "Bytes": 11088,
+      "Signed": false,
+      "Accepted": false
+    }
+  },
+  "ReviewedCandidates": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "AcceptedAsFormalContract": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "AcceptedAsFormalContract": false
+    }
+  ],
+  "OrderedPoliciesWithoutActualSequenceSource": [
+    "AP-006",
+    "AP-009",
+    "AP-020",
+    "AP-021",
+    "AP-022"
+  ],
+  "SixRevisionFidelityEstablished": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA04Completed": false,
+  "FA08Completed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  }
+}
