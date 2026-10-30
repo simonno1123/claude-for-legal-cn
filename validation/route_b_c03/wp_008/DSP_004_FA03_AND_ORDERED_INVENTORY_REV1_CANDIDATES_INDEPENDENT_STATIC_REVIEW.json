@@ -1,0 +1,407 @@
+{
+  "RecordKind": "DSP004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "ReviewBase": {
+    "GitHeadAtReview": "c54e0878a0dce044dae660748114132b94d90dd8",
+    "FA03MaterializationCommit": "531ca6f0476e235b90430fa5fb9ec9523b12e2ef",
+    "OrderedInventoryMaterializationCommit": "c54e0878a0dce044dae660748114132b94d90dd8",
+    "RecordedAtUtc": "2026-10-30T21:06:29Z",
+    "PriorPreparationIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV4.md",
+        "SHA256": "9A366811EB030B99292EC8C33389833A50B3327D41CE315913E49766B57AF119",
+        "Bytes": 5273
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV4.json",
+        "SHA256": "85001CCA85F01F526E4C8C9E0AD61E38BFCC8A532C933FE5CB14E7D65BDC1951",
+        "Bytes": 3955
+      }
+    },
+    "ComparedWith": [
+      "PATH_B_PREPARATION_INCREMENT_REV3",
+      "PATH_B_PREPARATION_INCREMENT_REV4",
+      "PR_7",
+      "PR_8"
+    ],
+    "Method": "LOCAL_PYTHON_SHA256_AND_JSON_STRUCTURE_ONLY",
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "RowsReorderedByThisReview": false,
+    "RowsDedupedByThisReview": false,
+    "RowsAddedByThisReview": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "AssetAcceptanceGranted": false
+  },
+  "ReviewedCandidates": [
+    {
+      "Role": "FA03_CAPTURE_ENTRY_DESIGN_REV1",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.md",
+        "SHA256": "479BDD82584A9189EB54D5518D5D5C23C9C478DF39AF68622F345CBCA2F58789",
+        "Bytes": 10668
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.json",
+        "SHA256": "73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A",
+        "Bytes": 12081
+      },
+      "IdentityMatchesRev3AndPr7": true,
+      "UnchangedSinceMaterializationCommit": true,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "AcceptedAsFormalContract": false
+    },
+    {
+      "Role": "ORDERED_SOURCE_LOCATOR_INVENTORY_REV1",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228
+      },
+      "IdentityMatchesRev4AndPr8": true,
+      "UnchangedSinceMaterializationCommit": true,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "AcceptedAsFormalContract": false
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "IR-01.FA03_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "10668 bytes and SHA-256 479BDD82584A9189EB54D5518D5D5C23C9C478DF39AF68622F345CBCA2F58789 match the identity recorded in preparation increment REV3 and materialized by PR #7."
+    },
+    {
+      "CheckId": "IR-02.FA03_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "12081 bytes and SHA-256 73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A match the identity recorded in preparation increment REV3 and materialized by PR #7."
+    },
+    {
+      "CheckId": "IR-03.ORDERED_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "15858 bytes and SHA-256 8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5 match the identity recorded in preparation increment REV4 and materialized by PR #8."
+    },
+    {
+      "CheckId": "IR-04.ORDERED_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "70228 bytes and SHA-256 86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7 match the identity recorded in preparation increment REV4 and materialized by PR #8."
+    },
+    {
+      "CheckId": "IR-05.CANDIDATE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "All four candidate files are UTF-8 without BOM, CR, or trailing whitespace. Each narrative embeds only its own companion JSON SHA-256. Neither candidate contains the other candidate SHA-256."
+    },
+    {
+      "CheckId": "IR-06.BYTES_UNCHANGED_SINCE_MATERIALIZATION",
+      "Passed": true,
+      "Detail": "git diff from 531ca6f0476e235b90430fa5fb9ec9523b12e2ef to c54e0878a0dce044dae660748114132b94d90dd8 is empty for both FA-03 paths. The ORDERED inventory paths were materialized at that HEAD and have no later commit."
+    },
+    {
+      "CheckId": "IR-07.FA03_NO_EXPECTED_BACKFILL",
+      "Passed": true,
+      "Detail": "ActualReadRule.BackfillFromExpected is false. ForbiddenByThisCandidate.BackfillActualFromExpected is true. CopiedToActual is false for SYNTHETIC-PROJECT-001, SYNTHETIC-SESSION-001, and SYNTHETIC-PROVIDER-001. UseBinding variant_id, attempt_id, input_snapshot_sha256, and authority_record are null."
+    },
+    {
+      "CheckId": "IR-08.FA03_ADMISSION_AND_ACCEPTANCE_FLAGS",
+      "Passed": true,
+      "Detail": "The FA-03 candidate records Signed false, Accepted false, and Admission NOT_ADMITTED. CaptureEntryBound is false. This review does not admit the capture entry."
+    },
+    {
+      "CheckId": "IR-09.SEVEN_CAPTURE_RESULTS_NOT_SELECTED",
+      "Passed": true,
+      "Detail": "All seven DSP_004_CAPTURE_RESULT_* files remain Selected false and Admission NOT_ADMITTED. Their current bytes and SHA-256 still match the FA-03 record. This review hashed those bytes and did not import or execute them."
+    },
+    {
+      "CheckId": "IR-10.THREE_ACTUAL_SIDES_UNBOUND",
+      "Passed": true,
+      "Detail": "SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER are Binding UNBOUND. SourceIdentity, SourceVersion, Carrier, Locator, RecordedReference, CaptureEntry, and CaptureObservationSha256 are null on each side."
+    },
+    {
+      "CheckId": "IR-11.FA03_GATE_MISSING_BINDING",
+      "Passed": true,
+      "Detail": "Gate DSP004-FA-03 remains MISSING_BINDING_AND_ACTUAL_ENTRY with Completed false. FA03Completed is false."
+    },
+    {
+      "CheckId": "IR-12.AP006_AP009_NOT_LOCATABLE",
+      "Passed": true,
+      "Detail": "AP-006 and AP-009 are NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT. ActualLocator is null and CandidateRows is empty. Each has one unrepaired BLOCK, NO_RUNTIME_ROOT_LOCATOR. The two binding files contain none of startup_contract, origin_policy, declared_startup_sequence, or lookup_order. ENVIRONMENT_MANIFEST.md, the historical Windows virtual environment, and tool caches were not read."
+    },
+    {
+      "CheckId": "IR-13.AP020_THREE_BLOCKS_GROUNDED",
+      "Passed": true,
+      "Detail": "AP-020 has exactly three unrepaired BLOCK codes: FIXTURE_CATALOG_ARTIFACT_ABSENT, FIXTURE_FILES_ARE_SEPARATE_OBJECTS, and FIXTURE_IDENTITIES_IS_A_MAP. Neither binding contains fixture_catalog. Each of the fifteen fixture files is one object whose scenario_id matches the filename; the only array is an empty expected_permitted_write_set. fixture_identities is a JSON object in both files, with the same fifteen path keys and values equal to those file SHA-256 digests. Seventeen candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED. ActualSequenceLocator stays null."
+    },
+    {
+      "CheckId": "IR-14.AP021_TWO_BLOCKS_GROUNDED",
+      "Passed": true,
+      "Detail": "AP-021 has exactly two unrepaired BLOCK codes: LOCATOR_NOT_UNIQUE and SOURCE_NOT_ADMITTED. Both $.scenarios arrays are C03-TA-V-001 through C03-TA-V-015 once, at field offsets 24523 and 40336. Written states are MATERIALIZED_NOT_REVIEWED_NOT_ADMITTED and MATERIALIZED_NOT_FORMALLY_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED. OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED is RECORDED_NOT_INSERTED, not a BLOCK. The V2 comparison-rule scenario_id C03-TA-V-003 was not inserted into $.scenarios."
+    },
+    {
+      "CheckId": "IR-15.AP022_FIVE_BLOCKS_AND_V002_DIVERGENCE",
+      "Passed": true,
+      "Detail": "AP-022 has exactly five unrepaired BLOCK codes: POLICY_IDENTITY_FIELD_ABSENT, OBSERVED_FIELD_NAME_DIFFERS, LOCATOR_NOT_UNIQUE, SOURCE_NOT_ADMITTED, and CANDIDATE_SEQUENCES_DIFFER. variant_id occurs zero times. The observed field is stimulus_variants; the key variants occurs zero times. C03-TA-V-002 retains both orders: two items in the original binding and five items in the V2 candidate. The other fourteen scenarios match in appearance and remain two rows. Counts stay 25 and 28. SB-002-UNREACHABLE-AUTHORITY-COMPARISON was not deleted, and the five V2 items were not copied into the original binding."
+    },
+    {
+      "CheckId": "IR-16.NO_REORDER_DEDUPE_OR_ADDED_ROWS",
+      "Passed": true,
+      "Detail": "Inventory formation flags Reordered, ItemsInvented, and DuplicatesRemoved are false. Row counts remain AP-006 0, AP-009 0, AP-020 17, AP-021 2, and AP-022 30. Observed AP-022 orders match the binding JSON. This review did not reorder, dedupe, or add rows."
+    },
+    {
+      "CheckId": "IR-17.NO_MANIFEST_CREATED",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created. No Manifest was generated. No formal run was authorized."
+    },
+    {
+      "CheckId": "IR-18.NO_SOURCE_ROOT_SECOND_REVIEW",
+      "Passed": true,
+      "Detail": "No design-review file was added for source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93."
+    },
+    {
+      "CheckId": "IR-19.SUBJECTS_NOT_EXECUTED",
+      "Passed": true,
+      "Detail": "No subject module was imported or executed. identity_gate was not called. Fixtures and scenario runners were not executed. Commercial P0 was not run and was not modified."
+    },
+    {
+      "CheckId": "IR-20.REV3_SHA_NOT_FORMAL_CONTRACT",
+      "Passed": true,
+      "Detail": "Array-policy REV3 remains 16317 bytes SHA-256 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123. Typed-contract REV3 remains 29240 bytes SHA-256 AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F. Neither SHA is accepted as the formal B-02 contract."
+    },
+    {
+      "CheckId": "IR-21.ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "This review records Signed false, Accepted false, and Admission NOT_ADMITTED. Neither reviewed candidate is a formal contract, a Manifest, or a source admission."
+    }
+  ],
+  "FA03Findings": {
+    "BackfillFromExpected": false,
+    "BackfillForbiddenByCandidate": true,
+    "SyntheticValuesCopiedToActual": false,
+    "Admission": "NOT_ADMITTED",
+    "Signed": false,
+    "Accepted": false,
+    "GateId": "DSP004-FA-03",
+    "GateState": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "GateCompleted": false,
+    "CaptureEntryBound": false,
+    "ActualSides": [
+      {
+        "SourceRole": "SRC004-A-PROJECT",
+        "Binding": "UNBOUND",
+        "SourceIdentity": null,
+        "CaptureEntry": null
+      },
+      {
+        "SourceRole": "SRC004-A-SESSION",
+        "Binding": "UNBOUND",
+        "SourceIdentity": null,
+        "CaptureEntry": null
+      },
+      {
+        "SourceRole": "SRC004-A-PROVIDER",
+        "Binding": "UNBOUND",
+        "SourceIdentity": null,
+        "CaptureEntry": null
+      }
+    ],
+    "ExistingCaptureCandidates": {
+      "Count": 7,
+      "Selection": "NOT_SELECTED",
+      "Admission": "NOT_ADMITTED",
+      "BytesStillMatchRecordedHashes": true,
+      "ImportedOrExecutedByThisReview": false
+    }
+  },
+  "OrderedBlockGrounding": {
+    "ReadSet": [
+      "validation/route_b_c03/wp_008/fixtures/C03-TA-V-001.json through C03-TA-V-015.json",
+      "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+      "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json"
+    ],
+    "NotRead": [
+      "ENVIRONMENT_MANIFEST.md",
+      "HISTORICAL_WINDOWS_VENV",
+      "TOOL_CACHES"
+    ],
+    "RowCounts": {
+      "AP-006": 0,
+      "AP-009": 0,
+      "AP-020": 17,
+      "AP-021": 2,
+      "AP-022": 30
+    },
+    "Policies": [
+      {
+        "PolicyId": "AP-006",
+        "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+        "ActualLocator": null,
+        "BlockCodes": [
+          "NO_RUNTIME_ROOT_LOCATOR"
+        ],
+        "BlockCount": 1,
+        "Repaired": false,
+        "Grounded": true
+      },
+      {
+        "PolicyId": "AP-009",
+        "LocatorStatus": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+        "ActualLocator": null,
+        "BlockCodes": [
+          "NO_RUNTIME_ROOT_LOCATOR"
+        ],
+        "BlockCount": 1,
+        "Repaired": false,
+        "Grounded": true
+      },
+      {
+        "PolicyId": "AP-020",
+        "LocatorStatus": "CANDIDATE_ROWS_RECORDED_SEQUENCE_NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "Admission": "NOT_ADMITTED",
+        "BlockCodes": [
+          "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+          "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+          "FIXTURE_IDENTITIES_IS_A_MAP"
+        ],
+        "BlockCount": 3,
+        "Repaired": false,
+        "Grounded": true,
+        "CatalogArtifactPresent": false,
+        "FixtureIdentitiesIsObject": true,
+        "FixtureIdentityMapsEqual": true,
+        "FixtureIdentityValuesMatchFileSha256": true
+      },
+      {
+        "PolicyId": "AP-021",
+        "LocatorStatus": "CANDIDATE_ROWS_RECORDED_SEQUENCE_NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "Admission": "NOT_ADMITTED",
+        "BlockCodes": [
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED"
+        ],
+        "BlockCount": 2,
+        "Repaired": false,
+        "Grounded": true,
+        "ScenarioFieldOffsets": [
+          24523,
+          40336
+        ],
+        "NonBlockDisposition": {
+          "Code": "OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED",
+          "Disposition": "RECORDED_NOT_INSERTED",
+          "InsertedByThisReview": false
+        }
+      },
+      {
+        "PolicyId": "AP-022",
+        "LocatorStatus": "CANDIDATE_ROWS_RECORDED_SEQUENCE_NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "Admission": "NOT_ADMITTED",
+        "BlockCodes": [
+          "POLICY_IDENTITY_FIELD_ABSENT",
+          "OBSERVED_FIELD_NAME_DIFFERS",
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED",
+          "CANDIDATE_SEQUENCES_DIFFER"
+        ],
+        "BlockCount": 5,
+        "Repaired": false,
+        "Grounded": true,
+        "VariantIdOccurrences": 0,
+        "ObservedField": "stimulus_variants",
+        "PolicyField": "variants",
+        "SequencesDifferOn": [
+          "C03-TA-V-002"
+        ],
+        "C03TaV002Counts": [
+          2,
+          5
+        ],
+        "BothOrdersRetained": true,
+        "WithinFileItemCounts": [
+          25,
+          28
+        ],
+        "WithinFileCrossScenarioDuplicates": false
+      }
+    ]
+  },
+  "Rev3Shas": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "AcceptedAsFormalB02Contract": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "AcceptedAsFormalB02Contract": false
+    }
+  ],
+  "StillMissing": [
+    "admission of the FA-03 capture entry",
+    "source identity, version, carrier, locator, producer duty, authority, and a bound capture entry for SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER",
+    "a separately authorized future call before any actual reference is read",
+    "variant_id, attempt_id, input_snapshot_sha256, and authority_record",
+    "fixed SHA acceptance of either reviewed candidate",
+    "fixed SHA acceptance of REV3 SHA AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F or 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123 as the formal B-02 contract",
+    "an admitted actual locator for AP-006 and AP-009 after a runtime root exists",
+    "an admitted unique sequence for AP-020, AP-021, and AP-022",
+    "repair of the AP-020, AP-021, and AP-022 BLOCK codes",
+    "Manifest, formal run, and closure of DSP-004"
+  ],
+  "Summary": {
+    "StaticChecks": 21,
+    "StaticChecksPassed": 21,
+    "PassMeaning": "Identity matches the REV3 and REV4 records, the FA-03 gate stays unbound, and each ORDERED BLOCK code has a read-set basis. A passed check does not admit a source, accept a SHA, or close B-02.",
+    "TextBlockingIdentityMismatches": 0,
+    "GatesCompleted": 0,
+    "FormalContractAccepted": false,
+    "SourceAdmissionGranted": false,
+    "FA03Completed": false,
+    "FA04Completed": false,
+    "FA08Completed": false,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE"
+  },
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE FA-03 CAPTURE-ENTRY DESIGN CANDIDATE REV1 AND THE ORDERED SOURCE-LOCATOR INVENTORY REV1 ONLY. FINDINGS ONLY. ACCEPTED IS FALSE. SIGNED IS FALSE. ADMISSION IS NOT_ADMITTED. THIS RECORD DOES NOT CLOSE B-01, B-02, FA-03, FA-04, FA-08, OR DSP-004."
+}
