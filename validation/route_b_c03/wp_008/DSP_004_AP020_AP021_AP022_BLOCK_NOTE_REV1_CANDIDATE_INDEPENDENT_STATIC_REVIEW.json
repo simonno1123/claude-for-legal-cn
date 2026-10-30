@@ -1,0 +1,684 @@
+{
+  "RecordKind": "DSP004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW_ONLY",
+  "Outcome": "REVIEW_RECORDED_FINDINGS_ONLY_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "AP020_AP021_AP022_BLOCK_NOTE_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "ReviewBase": {
+    "GitHeadAtReview": "8a4e67da27594e33a8f323b763e00ba0ccaef3e8",
+    "BlockNoteMaterializationCommit": "8a4e67da27594e33a8f323b763e00ba0ccaef3e8",
+    "FormationHeadRecordedByNote": "9cfc1e8b4ed4b6494c330e6c8950856ed9bf2c70",
+    "RecordedAtUtc": "2026-10-30T22:51:00Z",
+    "PriorPreparationIncrement": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV10.md",
+        "SHA256": "F27B5298638183DE96A313FB01FB7A0E565593D2E4337987087F6F8C720076F7",
+        "Bytes": 9927,
+        "Accepted": false
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV10.json",
+        "SHA256": "A4A1B268B3DD1E7BAE4DCC2C729B931AF9E554F552E0FF8CA1EF3F63E7F59188",
+        "Bytes": 8376,
+        "MatchesShaRecordedInRev10Markdown": true,
+        "Accepted": false
+      }
+    },
+    "ComparedWith": [
+      "PATH_B_PREPARATION_INCREMENT_REV10",
+      "PR_14",
+      "ORDERED_SOURCE_LOCATOR_INVENTORY_REV1",
+      "FA03_AND_ORDERED_INVENTORY_INDEPENDENT_STATIC_REVIEW_REV5"
+    ],
+    "Method": "LOCAL_PYTHON_SHA256_AND_JSON_STRUCTURE_ONLY",
+    "HashingIsIdentityOnly": true,
+    "HashingIsNotACall": true,
+    "HashingIsNotExecution": true,
+    "SubjectModulesImported": false,
+    "SubjectCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "IdentityGateImported": false,
+    "FixturesOpened": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CaptureCodeImported": false,
+    "CaptureCodeExecuted": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "BindingFilesOpened": false,
+    "Rev5ChecksRerun": false,
+    "BlockCodesRepairedByThisReview": false,
+    "LocatorsAdmittedByThisReview": false,
+    "SequencesMergedByThisReview": false,
+    "SequencesSelectedByThisReview": false,
+    "RowsReorderedByThisReview": false,
+    "RowsAddedByThisReview": false,
+    "DuplicatesRemovedByThisReview": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "SourceRootReviewFileAdded": false,
+    "AssetAcceptanceGranted": false,
+    "FurtherDeliverableOpened": false
+  },
+  "ReviewedNote": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE.md",
+      "SHA256": "01A98020D1E2524D1E6F953F028950A02BD317BE45A4E973E43B37B953FF5A27",
+      "Bytes": 15543
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_AP020_AP021_AP022_BLOCK_NOTE_REV1_CANDIDATE.json",
+      "SHA256": "C1C00CEA5DF3D5EBE0BB7861308339B32007CC6FD97E5957981B49D1AEFBCA3D",
+      "Bytes": 19308
+    },
+    "IdentityMatchesRev10AndPr14": true,
+    "UnchangedSinceMaterializationCommit": true,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "NoteNewPreparationFact": "AP020_AP021_AP022_BLOCK_NOTE_NOT_ADMITTED",
+    "AcceptedAsFormalContract": false,
+    "BlocksRepaired": false,
+    "LocatorsAdmitted": false,
+    "SequencesMerged": false,
+    "SequencesSelected": false,
+    "UniqueLocatorEstablished": false,
+    "AppearanceMatchIsPass": false,
+    "AppearanceMatchIsAdmission": false,
+    "IndependentReviewChecksRerun": false,
+    "MarkdownAgreesWithJson": true
+  },
+  "CitedNotAccepted": {
+    "OrderedInventory": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228
+      },
+      "SameBlobAtFormationHeadAndReviewHead": true,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "LocatorAdmittedByThisReview": false
+    },
+    "Rev5IndependentStaticReview": {
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+        "SHA256": "3723F4A36E3EF9761AEE094A49D579DFAC22D317E2870FAB702B1D02A7FA51AC",
+        "Bytes": 11092
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.json",
+        "SHA256": "48AB6F18FEEB43FD15EF342B5E5516655EB8EE619261AABAF367D227027FB6A1",
+        "Bytes": 18456
+      },
+      "SameBlobAtFormationHeadAndReviewHead": true,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "ChecksRerunByThisReview": false,
+      "FindingsCitedByNote": [
+        "IR-13.AP020_THREE_BLOCKS_GROUNDED",
+        "IR-14.AP021_TWO_BLOCKS_GROUNDED",
+        "IR-15.AP022_FIVE_BLOCKS_AND_V002_DIVERGENCE",
+        "IR-16.NO_REORDER_DEDUPE_OR_ADDED_ROWS"
+      ]
+    }
+  },
+  "Checks": [
+    {
+      "CheckId": "IR-01.BLOCK_NOTE_MARKDOWN_IDENTITY",
+      "Passed": true,
+      "Detail": "15543 bytes and SHA-256 01A98020D1E2524D1E6F953F028950A02BD317BE45A4E973E43B37B953FF5A27 match the identity recorded in preparation increment REV10 and materialized by PR #14. This review does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-02.BLOCK_NOTE_JSON_IDENTITY",
+      "Passed": true,
+      "Detail": "19308 bytes and SHA-256 C1C00CEA5DF3D5EBE0BB7861308339B32007CC6FD97E5957981B49D1AEFBCA3D match the identity recorded in preparation increment REV10 and materialized by PR #14. This review does not accept that SHA."
+    },
+    {
+      "CheckId": "IR-03.CANDIDATE_TEXT_FORMAT",
+      "Passed": true,
+      "Detail": "Both note files are UTF-8 without BOM, CR, or trailing whitespace, and both end with a newline. The narrative embeds its companion JSON SHA-256 and byte count. It does not embed this review SHA."
+    },
+    {
+      "CheckId": "IR-04.BYTES_UNCHANGED_SINCE_MATERIALIZATION",
+      "Passed": true,
+      "Detail": "The note files were added at 8a4e67da27594e33a8f323b763e00ba0ccaef3e8, which is HEAD. They did not exist at the formation head recorded by the note, 9cfc1e8b4ed4b6494c330e6c8950856ed9bf2c70. The ORDERED inventory and the REV5 review have the same git blob at that formation head and at HEAD."
+    },
+    {
+      "CheckId": "IR-05.REV10_INCREMENT_IDENTITY",
+      "Passed": true,
+      "Detail": "REV10 markdown is 9927 bytes SHA-256 F27B5298638183DE96A313FB01FB7A0E565593D2E4337987087F6F8C720076F7. REV10 JSON is 8376 bytes SHA-256 A4A1B268B3DD1E7BAE4DCC2C729B931AF9E554F552E0FF8CA1EF3F63E7F59188. That JSON SHA is the SHA written in the REV10 narrative. Neither SHA is accepted."
+    },
+    {
+      "CheckId": "IR-06.ORDERED_INVENTORY_IDENTITY",
+      "Passed": true,
+      "Detail": "ORDERED inventory markdown is 15858 bytes SHA-256 8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5. ORDERED inventory JSON is 70228 bytes SHA-256 86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7. Both match the identity the note cites and the identity recorded by REV4 and REV5. Neither SHA is admitted."
+    },
+    {
+      "CheckId": "IR-07.REV5_REVIEW_IDENTITY",
+      "Passed": true,
+      "Detail": "The FA-03 and ORDERED review markdown is 11092 bytes SHA-256 3723F4A36E3EF9761AEE094A49D579DFAC22D317E2870FAB702B1D02A7FA51AC. Its JSON is 18456 bytes SHA-256 48AB6F18FEEB43FD15EF342B5E5516655EB8EE619261AABAF367D227027FB6A1. Both match the identity the note cites. This review does not rerun that review's 21 checks and does not admit those SHAs."
+    },
+    {
+      "CheckId": "IR-08.NOTE_ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "The note records Signed false, Accepted false, and Admission NOT_ADMITTED. BlocksRepaired, LocatorsAdmitted, SequencesMerged, and SequencesSelected are false. UniqueLocatorEstablished is false. AppearanceMatchIsPass and AppearanceMatchIsAdmission are false. Its own preparation fact remains AP020_AP021_AP022_BLOCK_NOTE_NOT_ADMITTED."
+    },
+    {
+      "CheckId": "IR-09.AP020_BLOCK_LIST_MATCHES_INVENTORY",
+      "Passed": true,
+      "Detail": "AP-020 BLOCK codes in the note, in the inventory Findings with Disposition BLOCK, and in REV5 IR-13 are the same list in the same order: FIXTURE_CATALOG_ARTIFACT_ABSENT, FIXTURE_FILES_ARE_SEPARATE_OBJECTS, FIXTURE_IDENTITIES_IS_A_MAP. Each Repaired flag is false. Candidate row count is 17, every row Status is CANDIDATE_LOCATOR, and every row Admission is NOT_ADMITTED. The inventory rows are 15 at $.scenario_id and 2 at $.fixture_identities. ActualSequenceLocator is null. UniqueLocatorEstablished is false. Selectors match: input_contract.fixtures and manifest_identity.fixture_catalog. This review did not open the fixture files and did not repair the codes."
+    },
+    {
+      "CheckId": "IR-10.AP021_BLOCK_LIST_MATCHES_INVENTORY",
+      "Passed": true,
+      "Detail": "AP-021 BLOCK codes in the note, in the inventory Findings with Disposition BLOCK, and in REV5 IR-14 are LOCATOR_NOT_UNIQUE and SOURCE_NOT_ADMITTED, in that order. Each Repaired flag is false. OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED stays Disposition RECORDED_NOT_INSERTED. The note sets IsBlock false and InsertedByThisNote false. Two candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED, at $.scenarios, field offsets 24523 and 40336, count 15, with the inventory written states MATERIALIZED_NOT_REVIEWED_NOT_ADMITTED and MATERIALIZED_NOT_FORMALLY_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED. ActualSequenceLocator is null. UniqueLocatorEstablished is false. Neither row is selected. The arrays are not merged. This review did not open the binding files."
+    },
+    {
+      "CheckId": "IR-11.AP022_BLOCK_LIST_MATCHES_INVENTORY",
+      "Passed": true,
+      "Detail": "AP-022 BLOCK codes in the note, in the inventory Findings, and in REV5 IR-15 are POLICY_IDENTITY_FIELD_ABSENT, OBSERVED_FIELD_NAME_DIFFERS, LOCATOR_NOT_UNIQUE, SOURCE_NOT_ADMITTED, and CANDIDATE_SEQUENCES_DIFFER, in that order. Each Repaired flag is false. Candidate row count is 30, every row Status is CANDIDATE_LOCATOR, and every row Admission is NOT_ADMITTED. Within-file stimulus counts stay 25 and 28. C03-TA-V-002 retains both orders, counts 2 and 5. Fourteen other scenario rows match in appearance and remain two rows. AppearanceMatchIsPass is false. ActualSequenceLocator is null. UniqueLocatorEstablished is false. variant_id occurrences stay 0 and the variants key occurrences stay 0. FieldRenamed is false. Neither order was merged or selected. This review did not open the binding files and did not repair the codes."
+    },
+    {
+      "CheckId": "IR-12.ROW_COUNTS_AND_FORMATION_FLAGS",
+      "Passed": true,
+      "Detail": "Inventory candidate-row counts for the three policies are AP-020 17, AP-021 2, and AP-022 30, matching the note and REV5 IR-16. Inventory formation flags Reordered, ItemsInvented, and DuplicatesRemoved are false. The note records RowsReordered, RowsAdded, and DuplicatesRemoved false. This review did not reorder, add, or dedupe rows."
+    },
+    {
+      "CheckId": "IR-13.MARKDOWN_JSON_AGREE",
+      "Passed": true,
+      "Detail": "The note narrative and the note JSON agree on the three BLOCK lists, the row counts 17, 2, and 30, null actual sequence locators, UniqueLocatorEstablished false, the AP-021 offsets 24523 and 40336, the non-block disposition OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED / RECORDED_NOT_INSERTED, and the statement that appearance match is not a pass and not admission."
+    },
+    {
+      "CheckId": "IR-14.NO_REPAIR_CLAIMED",
+      "Passed": true,
+      "Detail": "No Repaired or BlocksRepaired flag in the note JSON is true. NotDone.BlockCodesRepaired is false. The narrative does not claim a repair. This review repairs no BLOCK code, including NO_RUNTIME_ROOT_LOCATOR."
+    },
+    {
+      "CheckId": "IR-15.APPEARANCE_IS_NOT_A_PASS",
+      "Passed": true,
+      "Detail": "Inventory AP-021 rows record AppearanceEqualsNamedRange001Through015 true together with MatchIsNotAPass true and MatchIsNotAdmission true. The note records AppearanceMatchIsPass false and AppearanceMatchIsAdmission false. AP-022 records fourteen appearance matches that remain two rows, and C03-TA-V-002 retains both orders. Appearance is not recorded as a pass or as admission."
+    },
+    {
+      "CheckId": "IR-16.SEVEN_CAPTURE_RESULTS_NOT_SELECTED",
+      "Passed": true,
+      "Detail": "All seven DSP_004_CAPTURE_RESULT_* files remain at the FA-03 recorded bytes and SHA-256. Selected is false and Admission is NOT_ADMITTED. This review hashed those bytes and did not import, select, or execute them."
+    },
+    {
+      "CheckId": "IR-17.ACTUAL_SIDES_UNBOUND",
+      "Passed": true,
+      "Detail": "SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER remain Binding UNBOUND in the FA-03 candidate, with SourceIdentity and CaptureEntry null. The note does not bind them. This review does not bind them."
+    },
+    {
+      "CheckId": "IR-18.NO_MANIFEST_CREATED",
+      "Passed": true,
+      "Detail": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json is absent and was not created. No Manifest was generated. No formal run was authorized. FA-08 was not completed. DSP-004 was not closed."
+    },
+    {
+      "CheckId": "IR-19.REV3_AND_SOURCE_ROOT_SHA_NOT_ACCEPTED",
+      "Passed": true,
+      "Detail": "Typed-contract REV3 remains 29240 bytes SHA-256 AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F. Array-policy REV3 remains 16317 bytes SHA-256 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123. Neither SHA is accepted as the formal B-02 contract. Source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93 remains 21257 bytes. This review adds no design-review file for that SHA and does not accept it."
+    },
+    {
+      "CheckId": "IR-20.SUBJECTS_NOT_EXECUTED",
+      "Passed": true,
+      "Detail": "No subject module was imported or executed. identity_gate was not imported or called. Fixture files and binding files were not opened. Fixtures and scenario runners were not executed. Capture code was not imported or executed. Commercial P0 was not run and was not modified. ENVIRONMENT_MANIFEST.md, the historical Windows virtual environment, and tool caches were not read."
+    },
+    {
+      "CheckId": "IR-21.ACCEPTANCE_FLAGS_FALSE",
+      "Passed": true,
+      "Detail": "This review records Signed false, Accepted false, and Admission NOT_ADMITTED. NewPreparationFact is AP020_AP021_AP022_BLOCK_NOTE_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED. The reviewed note is not a formal contract, a Manifest, or a source admission. No locator is admitted."
+    }
+  ],
+  "BlockCodeComparison": {
+    "ComparedSources": [
+      "BLOCK_NOTE_REV1_CANDIDATE",
+      "ORDERED_SOURCE_LOCATOR_INVENTORY_REV1",
+      "REV5_ORDERED_BLOCK_GROUNDING"
+    ],
+    "FixtureBytesReopened": false,
+    "BindingFilesReopened": false,
+    "CodesRepaired": false,
+    "LocatorsAdmitted": false,
+    "Policies": [
+      {
+        "PolicyId": "AP-020",
+        "NoteBlockCodes": [
+          "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+          "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+          "FIXTURE_IDENTITIES_IS_A_MAP"
+        ],
+        "InventoryBlockCodes": [
+          "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+          "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+          "FIXTURE_IDENTITIES_IS_A_MAP"
+        ],
+        "Rev5BlockCodes": [
+          "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+          "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+          "FIXTURE_IDENTITIES_IS_A_MAP"
+        ],
+        "ListsMatch": true,
+        "OrderPreserved": true,
+        "Repaired": false,
+        "CandidateRowCount": 17,
+        "RowStatus": "CANDIDATE_LOCATOR",
+        "Admission": "NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "UniqueLocatorEstablished": false,
+        "InventoryRowPositions": {
+          "$.scenario_id": 15,
+          "$.fixture_identities": 2
+        },
+        "NonBlockFindings": []
+      },
+      {
+        "PolicyId": "AP-021",
+        "NoteBlockCodes": [
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED"
+        ],
+        "InventoryBlockCodes": [
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED"
+        ],
+        "Rev5BlockCodes": [
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED"
+        ],
+        "ListsMatch": true,
+        "OrderPreserved": true,
+        "Repaired": false,
+        "CandidateRowCount": 2,
+        "RowStatus": "CANDIDATE_LOCATOR",
+        "Admission": "NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "UniqueLocatorEstablished": false,
+        "ArraysMerged": false,
+        "EitherArraySelected": false,
+        "RecordedCandidateRowsNotAdmitted": [
+          {
+            "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING.json",
+            "Position": "$.scenarios",
+            "FieldByteOffsetRecordedByInventory": 24523,
+            "Count": 15,
+            "CandidateStateAsWritten": "MATERIALIZED_NOT_REVIEWED_NOT_ADMITTED",
+            "Status": "CANDIDATE_LOCATOR",
+            "Admission": "NOT_ADMITTED",
+            "Selected": false,
+            "AdmittedByThisReview": false
+          },
+          {
+            "Path": "validation/route_b_c03/wp_008/SCENARIO_INPUT_BINDING_V3_2_V2_2_REVISION_CANDIDATE_V2.json",
+            "Position": "$.scenarios",
+            "FieldByteOffsetRecordedByInventory": 40336,
+            "Count": 15,
+            "CandidateStateAsWritten": "MATERIALIZED_NOT_FORMALLY_REVIEWED_NOT_ACCEPTED_NOT_ADMITTED",
+            "Status": "CANDIDATE_LOCATOR",
+            "Admission": "NOT_ADMITTED",
+            "Selected": false,
+            "AdmittedByThisReview": false
+          }
+        ],
+        "NonBlockDisposition": {
+          "Code": "OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED",
+          "Disposition": "RECORDED_NOT_INSERTED",
+          "IsBlock": false,
+          "Repaired": false,
+          "InsertedByThisReview": false
+        }
+      },
+      {
+        "PolicyId": "AP-022",
+        "NoteBlockCodes": [
+          "POLICY_IDENTITY_FIELD_ABSENT",
+          "OBSERVED_FIELD_NAME_DIFFERS",
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED",
+          "CANDIDATE_SEQUENCES_DIFFER"
+        ],
+        "InventoryBlockCodes": [
+          "POLICY_IDENTITY_FIELD_ABSENT",
+          "OBSERVED_FIELD_NAME_DIFFERS",
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED",
+          "CANDIDATE_SEQUENCES_DIFFER"
+        ],
+        "Rev5BlockCodes": [
+          "POLICY_IDENTITY_FIELD_ABSENT",
+          "OBSERVED_FIELD_NAME_DIFFERS",
+          "LOCATOR_NOT_UNIQUE",
+          "SOURCE_NOT_ADMITTED",
+          "CANDIDATE_SEQUENCES_DIFFER"
+        ],
+        "ListsMatch": true,
+        "OrderPreserved": true,
+        "Repaired": false,
+        "CandidateRowCount": 30,
+        "RowStatus": "CANDIDATE_LOCATOR",
+        "Admission": "NOT_ADMITTED",
+        "ActualSequenceLocator": null,
+        "UniqueLocatorEstablished": false,
+        "WithinFileItemCounts": [
+          25,
+          28
+        ],
+        "SequencesDifferOn": [
+          "C03-TA-V-002"
+        ],
+        "C03TaV002Counts": [
+          2,
+          5
+        ],
+        "BothOrdersRetained": true,
+        "FourteenScenariosMatchInAppearanceAndRemainTwoRows": true,
+        "AppearanceMatchIsPass": false,
+        "AppearanceMatchIsAdmission": false,
+        "SequencesMerged": false,
+        "SequencesSelected": false,
+        "VariantIdOccurrences": 0,
+        "VariantsKeyOccurrences": 0,
+        "FieldRenamed": false,
+        "NonBlockFindings": []
+      }
+    ]
+  },
+  "Findings": [
+    {
+      "FindingId": "F-01",
+      "Kind": "BLOCK_CODE_LISTS_MATCH",
+      "Policies": [
+        "AP-020",
+        "AP-021",
+        "AP-022"
+      ],
+      "Detail": "Each note BLOCK list matches the inventory Findings whose Disposition is BLOCK, and matches the REV5 OrderedBlockGrounding list, including order. AP-020 has three codes, AP-021 has two, and AP-022 has five. Every compared Repaired flag is false. List agreement is not a repair and is not admission."
+    },
+    {
+      "FindingId": "F-02",
+      "Kind": "NON_BLOCK_STAYS_OUTSIDE_THE_BLOCK_LIST",
+      "Policies": [
+        "AP-021"
+      ],
+      "Detail": "OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED is present on the inventory AP-021 Findings with Disposition RECORDED_NOT_INSERTED. The note records the same code with IsBlock false and InsertedByThisNote false. It is not one of the two AP-021 BLOCK codes. This review did not insert it into $.scenarios."
+    },
+    {
+      "FindingId": "F-03",
+      "Kind": "APPEARANCE_IS_NOT_A_PASS",
+      "Policies": [
+        "AP-021",
+        "AP-022"
+      ],
+      "Detail": "The inventory records an appearance match on both AP-021 $.scenarios arrays and sets MatchIsNotAPass and MatchIsNotAdmission true. The note sets AppearanceMatchIsPass and AppearanceMatchIsAdmission false. For AP-022, fourteen scenarios match in appearance and remain two rows. C03-TA-V-002 retains both orders, counts 2 and 5. SB-002-UNREACHABLE-AUTHORITY-COMPARISON stays on the original two-item order in the inventory record. The five-item order was not copied across, and neither order was selected."
+    },
+    {
+      "FindingId": "F-04",
+      "Kind": "UNIQUE_LOCATOR_NOT_ESTABLISHED",
+      "Policies": [
+        "AP-020",
+        "AP-021",
+        "AP-022"
+      ],
+      "Detail": "UniqueLocatorEstablished is false on the note and on each of the three inventory policies. ActualSequenceLocator is null on each. Every candidate row is CANDIDATE_LOCATOR / NOT_ADMITTED. Counts stay 17, 2, and 30. This review admits no locator."
+    },
+    {
+      "FindingId": "F-05",
+      "Kind": "NO_REPAIR_AND_REV5_CHECKS_NOT_RERUN",
+      "Policies": [
+        "AP-020",
+        "AP-021",
+        "AP-022"
+      ],
+      "Detail": "The note cites REV5 IR-13, IR-14, IR-15, and IR-16 and records IndependentReviewChecksRerun false. This review compared those cited code lists with the inventory JSON. It did not rerun the fixture-byte grounding, did not open fixture or binding files, did not repair any code, and did not open a repair deliverable."
+    },
+    {
+      "FindingId": "F-06",
+      "Kind": "REV10_IDENTITY_BOUND_NOT_ACCEPTED",
+      "Policies": [],
+      "Detail": "REV10 markdown is 9927 bytes SHA-256 F27B5298638183DE96A313FB01FB7A0E565593D2E4337987087F6F8C720076F7. REV10 JSON is 8376 bytes SHA-256 A4A1B268B3DD1E7BAE4DCC2C729B931AF9E554F552E0FF8CA1EF3F63E7F59188, which is the SHA written in the REV10 narrative. The note bytes match the identity REV10 recorded. This review does not accept the REV10 SHAs or the note SHAs."
+    }
+  ],
+  "ExistingCaptureCandidates": {
+    "Count": 7,
+    "Selection": "NOT_SELECTED",
+    "Admission": "NOT_ADMITTED",
+    "BytesStillMatchFA03Record": true,
+    "ImportedOrExecutedByThisReview": false,
+    "Files": [
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_CONTRACT_CANDIDATE_REV1.py",
+        "Bytes": 18301,
+        "SHA256": "E9472328847617EBF629FB01A0A163C0805226690600E5E13EBE1209E2F6705C",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_FIXED_BOOTSTRAP_CANDIDATE_REV1.py",
+        "Bytes": 10678,
+        "SHA256": "4281385A8694C870A96E7EC7B98A9CB027A470C1AC2EE5F31BABCF9D56F46007",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV1.py",
+        "Bytes": 47292,
+        "SHA256": "2C03E9D87BB747A58491CB3B992780FE4252ABDDCF4F35B1A2BC4F0078C4E942",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV2.py",
+        "Bytes": 53568,
+        "SHA256": "634AC0CB18B0877B619A4FFAEFBBD4AA95C8DEBAACD7018FEBFB6A4C18B03365",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_VALIDATION_CARRIER_CANDIDATE_REV3.py",
+        "Bytes": 57623,
+        "SHA256": "329EC4A1C12351667F9A52946E4E11F6B01E287796FBDE42211FE5861CC14845",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV1.cs",
+        "Bytes": 29736,
+        "SHA256": "36C90727CA87F6F6235546B8A380784CED13E40E94F2CA7799C01EE0FC094B35",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+        "Bytes": 51610,
+        "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+        "Selected": false,
+        "Admission": "NOT_ADMITTED",
+        "ImportedOrExecutedByThisReview": false
+      }
+    ]
+  },
+  "ActualSides": [
+    {
+      "SourceRole": "SRC004-A-PROJECT",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-SESSION",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    },
+    {
+      "SourceRole": "SRC004-A-PROVIDER",
+      "Binding": "UNBOUND",
+      "SourceIdentity": null,
+      "CaptureEntry": null
+    }
+  ],
+  "Rev3Shas": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "AcceptedAsFormalB02Contract": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "AcceptedAsFormalB02Contract": false
+    }
+  ],
+  "SourceRootShaNoSecondDesignReviewFile": "57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+  "SourceRootBytes": 21257,
+  "SourceRootAccepted": false,
+  "SourceRootReviewFileAdded": false,
+  "RuntimeDependencyManifestPath": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+  "RuntimeDependencyManifestPresent": false,
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "Note": "FA-06 retention is still unaccepted. The register and its independent review stay NOT_ADMITTED. The nearest asset decision is which LIMITED rows may be retained. This review does not open a disposition document and does not dispose any row.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT",
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "GapNoteRecorded": true,
+      "GapNoteAdmission": "NOT_ADMITTED",
+      "Note": "The runtime-root gap note stays recorded and NOT_ADMITTED. AP-006 and AP-009 stay not locatable. Actual locators stay null. This review does not open a locator and does not read ENVIRONMENT_MANIFEST.md, the historical Windows virtual environment, or tool caches.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "INCOMPLETE",
+      "OptionsSheetRecorded": true,
+      "OptionsSheetAdmission": "NOT_ADMITTED",
+      "AnyOptionSelected": false,
+      "AnyOptionOpened": false,
+      "Note": "The FA-05 options sheet stays recorded and NOT_ADMITTED. KEEP_REV1_RECORD, FUTURE_STATIC_IDENTITY_NOTE_ONLY, and NOT_AVAILABLE_UNDER_PATH_B stay unselected and unopened. This review selects no option and opens no further FA-05 deliverable.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_NOTE_REVIEWED_NOT_ACCEPTED_CODES_UNREPAIRED",
+      "BlockNoteRecorded": true,
+      "BlockNoteReviewed": true,
+      "BlockNoteReviewAccepted": false,
+      "BlockNoteAdmission": "NOT_ADMITTED",
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "SequencesMerged": false,
+      "Note": "The AP-020, AP-021, and AP-022 BLOCK note has this independent static review. The review is not accepted. Admission stays NOT_ADMITTED. The BLOCK codes stay unrepaired. Actual sequence locators stay null. Candidate rows stay CANDIDATE_LOCATOR / NOT_ADMITTED. No repair deliverable is opened.",
+      "DeliverableOpened": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "Note": "Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false
+    }
+  ],
+  "StillMissing": [
+    "disposition of which dependency, startup, isolation, stop, and cleanup LIMITED rows may be retained",
+    "an admitted actual locator for AP-006 and AP-009 after a runtime root exists",
+    "a selected FA-05 option",
+    "acceptance of this independent static review of the AP-020, AP-021, and AP-022 BLOCK note",
+    "repair of the AP-020, AP-021, and AP-022 BLOCK codes",
+    "an admitted unique sequence for AP-020, AP-021, and AP-022",
+    "fixed SHA acceptance of the BLOCK note",
+    "fixed SHA acceptance of the ORDERED inventory or the REV5 review",
+    "fixed SHA acceptance of REV3 SHA AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F or 39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123 as the formal B-02 contract",
+    "fixed SHA acceptance of source-and-root SHA 57BAF161E3C2616F15F576F07D9BC106C0103B57710DCAF9727E6033A75C7D93",
+    "source identity, version, carrier, locator, producer duty, authority, and a bound capture entry for SRC004-A-PROJECT, SRC004-A-SESSION, and SRC004-A-PROVIDER",
+    "Manifest, formal run, FA-08, and closure of DSP-004"
+  ],
+  "Summary": {
+    "StaticChecks": 21,
+    "StaticChecksPassed": 21,
+    "PassMeaning": "Identity matches the REV10 record, and the note BLOCK lists for AP-020, AP-021, and AP-022 match the ORDERED inventory and the REV5 review. A passed check does not accept a SHA, admit a locator, repair a BLOCK, or close DSP-004.",
+    "Findings": 6,
+    "TextBlockingIdentityMismatches": 0,
+    "BlockListsMismatched": 0,
+    "CodesRepaired": 0,
+    "LocatorsAdmitted": 0,
+    "GatesCompleted": 0,
+    "FormalContractAccepted": false,
+    "SourceAdmissionGranted": false,
+    "FA03Completed": false,
+    "FA04Completed": false,
+    "FA05Completed": false,
+    "FA06Completed": false,
+    "FA08Completed": false,
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提"
+  },
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "ItemsDisposed": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "Qualification": "INDEPENDENT STATIC REVIEW OF THE AP-020 AP-021 AP-022 BLOCK NOTE REV1 CANDIDATE ONLY. FINDINGS ONLY. ACCEPTED IS FALSE. SIGNED IS FALSE. ADMISSION IS NOT_ADMITTED. THIS RECORD DOES NOT ACCEPT THE NOTE SHA, DOES NOT ADMIT A LOCATOR, DOES NOT REPAIR A BLOCK, AND DOES NOT CLOSE B-01, B-02, FA-03, FA-04, FA-05, FA-06, FA-08, OR DSP-004."
+}
