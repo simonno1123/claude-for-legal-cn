@@ -1,0 +1,134 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV4.md",
+      "SHA256": "9A366811EB030B99292EC8C33389833A50B3327D41CE315913E49766B57AF119",
+      "Bytes": 5273
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV4.json",
+      "SHA256": "85001CCA85F01F526E4C8C9E0AD61E38BFCC8A532C933FE5CB14E7D65BDC1951",
+      "Bytes": 3955
+    }
+  },
+  "NewPreparationFact": "FA03_AND_ORDERED_INVENTORY_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+  "Review": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "3723F4A36E3EF9761AEE094A49D579DFAC22D317E2870FAB702B1D02A7FA51AC",
+      "Bytes": 11092
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_AND_ORDERED_INVENTORY_REV1_CANDIDATES_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "48AB6F18FEEB43FD15EF342B5E5516655EB8EE619261AABAF367D227027FB6A1",
+      "Bytes": 18456,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    }
+  },
+  "ReviewedCandidates": [
+    {
+      "Role": "FA03_CAPTURE_ENTRY_DESIGN_REV1",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.md",
+        "SHA256": "479BDD82584A9189EB54D5518D5D5C23C9C478DF39AF68622F345CBCA2F58789",
+        "Bytes": 10668
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_FA03_CAPTURE_ENTRY_DESIGN_CANDIDATE_REV1.json",
+        "SHA256": "73DCBAB6AC60E79955C8755D820D9377DCEF1D2F32CABB01EA279DA9B81D859A",
+        "Bytes": 12081
+      },
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "GateState": "MISSING_BINDING_AND_ACTUAL_ENTRY"
+    },
+    {
+      "Role": "ORDERED_SOURCE_LOCATOR_INVENTORY_REV1",
+      "Markdown": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.md",
+        "SHA256": "8072CE39E665990DEA6EFCC0BC57E04BEB1FC9744E8387EB92060BBD65B1C9E5",
+        "Bytes": 15858
+      },
+      "Json": {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_B02_ORDERED_SOURCE_LOCATOR_INVENTORY_REV1_CANDIDATE.json",
+        "SHA256": "86C610B77CAD18A169EDBE18F792A6B69B6BE4E98B327B50B49E012F14D357E7",
+        "Bytes": 70228
+      },
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    }
+  ],
+  "OrderedBlockCodesRemainUnrepaired": {
+    "AP-006": [
+      "NO_RUNTIME_ROOT_LOCATOR"
+    ],
+    "AP-009": [
+      "NO_RUNTIME_ROOT_LOCATOR"
+    ],
+    "AP-020": [
+      "FIXTURE_CATALOG_ARTIFACT_ABSENT",
+      "FIXTURE_FILES_ARE_SEPARATE_OBJECTS",
+      "FIXTURE_IDENTITIES_IS_A_MAP"
+    ],
+    "AP-021": [
+      "LOCATOR_NOT_UNIQUE",
+      "SOURCE_NOT_ADMITTED"
+    ],
+    "AP-022": [
+      "POLICY_IDENTITY_FIELD_ABSENT",
+      "OBSERVED_FIELD_NAME_DIFFERS",
+      "LOCATOR_NOT_UNIQUE",
+      "SOURCE_NOT_ADMITTED",
+      "CANDIDATE_SEQUENCES_DIFFER"
+    ]
+  },
+  "SequencesDifferOn": [
+    "C03-TA-V-002"
+  ],
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "Reordered": false,
+  "ItemsInvented": false,
+  "DuplicatesRemoved": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE"
+  }
+}
