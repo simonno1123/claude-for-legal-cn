@@ -28,6 +28,9 @@ jobs:
       - name: Marketplace field-consistency regression
         run: python3 scripts/test-marketplace-consistency.py
 
+      - name: Plugin reference reachability
+        run: python3 scripts/check-plugin-references.py
+
       - name: Legal-data smoke test
         run: bash scripts/test-legal-data.sh
 
