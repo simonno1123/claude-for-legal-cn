@@ -1,0 +1,487 @@
+{
+  "RecordKind": "DSP004_OD04_EVIDENCE_INVENTORY_FROM_REPOSITORY_RECORDS_NON_ACCEPTANCE",
+  "Outcome": "INVENTORY_AND_GAPS_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "OwnerAuthorization": "2026-10-31: Owner chose option 1 (change a decision) -> OD-04 supplement evidence; owner cannot supply the Windows validation host, so the owner instructed: inventory only what the GitHub repository already records for OD-04, list the gaps, admit nothing, do not change OD-04, do not close DSP-004.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_EVIDENCE_INVENTORY_REV1_CANDIDATE.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "e9d4a54fcf5b5de04da7272c8684a09a6497c5fe",
+    "RecordedAtUtc": "2026-10-31T13:50:00Z",
+    "Method": "PYTHON_STDLIB_SHA256_JSON_MARKDOWN_TABLE_AND_AST_PARSE_READ_ONLY",
+    "Host": "CLOUD_LINUX_CONTAINER_NOT_VALIDATION_HOST",
+    "ValidationHostAccessed": false,
+    "ToolCacheRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "EnvironmentManifestRead": true,
+    "EnvironmentManifestReadNote": "During exploration the recorder ran a text search over ENVIRONMENT_MANIFEST.md. Its content is not used, quoted, or bound by this record. All environment identities here come from the Plan, the rebinding candidate, and attempt_02.",
+    "RepositoryModulesImportedOrExecuted": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "RuntimeRootLocatorSupplied": false,
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "BoundSources": [
+    {
+      "Role": "RDM_PREPARATION_PLAN",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_PYTHON_RUNTIME_DEPENDENCY_MANIFEST_PREPARATION_PLAN.md",
+      "SHA256": "8C23436CD6CD7ADE9FFC30C44241D1D944A203AC00F0605B366B9F1658BBC239",
+      "Bytes": 22369,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "ENVIRONMENT_IDENTITY_REBINDING_REV1_CANDIDATE",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_ENVIRONMENT_IDENTITY_REBINDING_REV1_CANDIDATE.md",
+      "SHA256": "DC6DAA71B5ADB99E1E2FF61FD535B51C661C7671E3E08F651046740300B329EA",
+      "Bytes": 15112,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "ATTEMPT02_RESULT_LOCAL_SYNTHETIC_ONLY",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/attempt_02_result.json",
+      "SHA256": "967B146EA3DECC79106DE191D83C79934BF16CDB8161B6230DBB8EECCF53D148",
+      "Bytes": 50434,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "BATCH_RESUMPTION_RESULT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/RESUMPTION_RESULT.md",
+      "SHA256": "2705BBDF9AAFC580DF6AE09EC51BC887011D54496E1296A8C243B367BAA8658A",
+      "Bytes": 7419,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "BATCH_CANDIDATE_PINS",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/candidate_pins.json",
+      "SHA256": "B2D18ED84887F62C96C940DE31B5F659EB4E1F946CE30862C24DFCD69A82D0E0",
+      "Bytes": 1036,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "OD04Components": [
+    {
+      "Component": "IMPORT_CLOSURE",
+      "State": "PARTIAL_TEXTUAL_ONLY",
+      "RepositoryFragments": [
+        "Plan section 4: subject static-import textual inventory (ten subject files)",
+        "This inventory: module-level and nested direct imports of the six batch harness files, by AST"
+      ],
+      "Missing": [
+        "recursive standard-library file closure with exact bytes and SHA",
+        "built-in and frozen module lists of the accepted interpreter",
+        "resolution of non-standard import names to exact files",
+        "extension-module (PYD) closure"
+      ]
+    },
+    {
+      "Component": "CALL_IDENTITY_BOTH_SIDES",
+      "State": "ABSENT",
+      "RepositoryFragments": [
+        "attempt_02_result.json records the executable used and sys.path for one local synthetic run (LIMITED, LOCAL_SYNTHETIC_ONLY)"
+      ],
+      "Missing": [
+        "accepted caller identity",
+        "accepted callee identity",
+        "binding of both sides to one accepted runtime"
+      ]
+    },
+    {
+      "Component": "CHECK_TO_USE_ANTI_SUBSTITUTION",
+      "State": "ABSENT",
+      "RepositoryFragments": [
+        "attempt_02 runtime_before equals runtime_after for five named files during one run",
+        "Rebinding candidate section 1.3: read-before/after metadata equal, no ReparsePoint on listed parents"
+      ],
+      "Missing": [
+        "protection covering the interval from check to use",
+        "frozen or immutable runtime root",
+        "evidence that the runtime root is not replaced between runs (records show it was)"
+      ]
+    },
+    {
+      "Component": "T0_PREPROCESS_IDENTITY",
+      "State": "ABSENT",
+      "RepositoryFragments": [
+        "Validation execution package V3 defines T0; no T0 observation is recorded"
+      ],
+      "Missing": [
+        "accepted launcher/environment verification before Python starts"
+      ]
+    },
+    {
+      "Component": "PE",
+      "State": "PARTIAL_IDENTITY_ONLY",
+      "RepositoryFragments": [
+        "SHA identities of python.exe, python3.dll, python312.dll, vcruntime140.dll, vcruntime140_1.dll in three generations (see RuntimeIdentityGenerations)"
+      ],
+      "Missing": [
+        "PE import tables of these files",
+        "every PYD with bytes and SHA",
+        "runtime-owned DLL dependencies of each PYD",
+        "reviewed static PE resolver and its limits"
+      ]
+    },
+    {
+      "Component": "OS",
+      "State": "ABSENT",
+      "RepositoryFragments": [
+        "Rebinding candidate section 3.2: SYSTEM_ROOT source, directory, and OS dependency closure not obtained"
+      ],
+      "Missing": [
+        "accepted host identity",
+        "every OS-supplied DLL with exact root, bytes, and SHA",
+        "resolver search order"
+      ]
+    }
+  ],
+  "RuntimeIdentityGenerations": [
+    {
+      "RowRef": "EIR-003",
+      "File": "python.exe",
+      "PlanRecorded": {
+        "Bytes": 91648,
+        "SHA256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA"
+      },
+      "PriorSessionObserved": {
+        "Bytes": 107312,
+        "SHA256": "B847BB9F4E48C19F585C8BF7D8B355F3F8C6D2125717ECE9C9D7E16FB9F09DE8"
+      },
+      "LatestRecordedObservation": {
+        "Bytes": 107304,
+        "SHA256": "B07B03B9BA866A341A3C13EE69710FBC8D43D4CE2523DEE13F6DF5C25378D15B"
+      },
+      "Attempt02RuntimeBefore": "B07B03B9BA866A341A3C13EE69710FBC8D43D4CE2523DEE13F6DF5C25378D15B",
+      "Attempt02RuntimeAfter": "B07B03B9BA866A341A3C13EE69710FBC8D43D4CE2523DEE13F6DF5C25378D15B",
+      "Attempt02MatchesLatestObservation": true,
+      "LatestMatchesPlan": false,
+      "DistinctRecordedIdentities": 3
+    },
+    {
+      "RowRef": "EIR-004",
+      "File": "python3.dll",
+      "PlanRecorded": {
+        "Bytes": 56320,
+        "SHA256": "2D2330CE33D1443C67B1804BBF1A561653499DD4DCF8918048747CC17D1A63C4"
+      },
+      "PriorSessionObserved": {
+        "Bytes": 71984,
+        "SHA256": "FE6A4470D1F6BAD6A2BFEB7258884B94538A21A508CF8A23E4CA3EC74962CE49"
+      },
+      "LatestRecordedObservation": {
+        "Bytes": 71984,
+        "SHA256": "F91CA7E29E8B4CC9ED7A4A935C1B2558C5C8F23398CB20D7048F977AA16FCE8B"
+      },
+      "Attempt02RuntimeBefore": "F91CA7E29E8B4CC9ED7A4A935C1B2558C5C8F23398CB20D7048F977AA16FCE8B",
+      "Attempt02RuntimeAfter": "F91CA7E29E8B4CC9ED7A4A935C1B2558C5C8F23398CB20D7048F977AA16FCE8B",
+      "Attempt02MatchesLatestObservation": true,
+      "LatestMatchesPlan": false,
+      "DistinctRecordedIdentities": 3
+    },
+    {
+      "RowRef": "EIR-005",
+      "File": "python312.dll",
+      "PlanRecorded": {
+        "Bytes": 6969856,
+        "SHA256": "64A1DAD031E97F13B1A0BAC26C689D8E14A18D7DD1EAB06E17F70E22373F4EEC"
+      },
+      "PriorSessionObserved": {
+        "Bytes": 6985520,
+        "SHA256": "2B6FFFDE96CF24A57FCA642AAEFD5788816AB5EF8624EA63B722CBCEB94D49B1"
+      },
+      "LatestRecordedObservation": {
+        "Bytes": 6985520,
+        "SHA256": "3B33D49D879DBF3A8AA3FFF1BF3859275E76C188A3ADEC4E7FFE728243652A87"
+      },
+      "Attempt02RuntimeBefore": "3B33D49D879DBF3A8AA3FFF1BF3859275E76C188A3ADEC4E7FFE728243652A87",
+      "Attempt02RuntimeAfter": "3B33D49D879DBF3A8AA3FFF1BF3859275E76C188A3ADEC4E7FFE728243652A87",
+      "Attempt02MatchesLatestObservation": true,
+      "LatestMatchesPlan": false,
+      "DistinctRecordedIdentities": 3
+    },
+    {
+      "RowRef": "EIR-006",
+      "File": "vcruntime140.dll",
+      "PlanRecorded": {
+        "Bytes": 124544,
+        "SHA256": "D5E4D9A3E835FA679450145D6A7D94E36573A509317111904D9B3712C30D9066"
+      },
+      "PriorSessionObserved": {
+        "SameAsPlan": true
+      },
+      "LatestRecordedObservation": {
+        "Bytes": 124544,
+        "SHA256": "D5E4D9A3E835FA679450145D6A7D94E36573A509317111904D9B3712C30D9066"
+      },
+      "Attempt02RuntimeBefore": "D5E4D9A3E835FA679450145D6A7D94E36573A509317111904D9B3712C30D9066",
+      "Attempt02RuntimeAfter": "D5E4D9A3E835FA679450145D6A7D94E36573A509317111904D9B3712C30D9066",
+      "Attempt02MatchesLatestObservation": true,
+      "LatestMatchesPlan": true,
+      "DistinctRecordedIdentities": 1
+    },
+    {
+      "RowRef": "EIR-007",
+      "File": "vcruntime140_1.dll",
+      "PlanRecorded": {
+        "Bytes": 49792,
+        "SHA256": "1F2D41C4AA5DB0BC33EBF7B66D72943A817D7CE6CBE880502A9403823633093F"
+      },
+      "PriorSessionObserved": {
+        "SameAsPlan": true
+      },
+      "LatestRecordedObservation": {
+        "Bytes": 49792,
+        "SHA256": "1F2D41C4AA5DB0BC33EBF7B66D72943A817D7CE6CBE880502A9403823633093F"
+      },
+      "Attempt02RuntimeBefore": "1F2D41C4AA5DB0BC33EBF7B66D72943A817D7CE6CBE880502A9403823633093F",
+      "Attempt02RuntimeAfter": "1F2D41C4AA5DB0BC33EBF7B66D72943A817D7CE6CBE880502A9403823633093F",
+      "Attempt02MatchesLatestObservation": true,
+      "LatestMatchesPlan": true,
+      "DistinctRecordedIdentities": 1
+    }
+  ],
+  "AttemptReportedInterpreterVersion": "3.12.14",
+  "PyvenvCfgVersionText": "3.12.13",
+  "HarnessDirectImports": [
+    {
+      "PinKey": "WIN",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/windows_scope.py",
+      "Bytes": 19272,
+      "SHA256": "829C6392E8385A348E7D0D7DFF06756C42AF080C87F93C15A2264E0C63C98230",
+      "PinMatch": true,
+      "ModuleLevelImports": [
+        "__future__",
+        "ctypes",
+        "msvcrt",
+        "os",
+        "subprocess",
+        "threading",
+        "time"
+      ],
+      "NestedImports": []
+    },
+    {
+      "PinKey": "SUP",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/supervisor_rev3.py",
+      "Bytes": 14734,
+      "SHA256": "DE982F0BD9BDA422EB2DA5E7B3EDC4B5A4DAC8E305305FDD4016C938FF84C1FD",
+      "PinMatch": true,
+      "ModuleLevelImports": [
+        "__future__",
+        "dsp004_windows_scope",
+        "time"
+      ],
+      "NestedImports": [
+        "hashlib"
+      ]
+    },
+    {
+      "PinKey": "BOOT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/bootstrap_rev2.py",
+      "Bytes": 12498,
+      "SHA256": "37FF5D3F67A297AC6BF83FFB50B23C693BA4A50A77820AC787FBAB223A1B4EC4",
+      "PinMatch": true,
+      "ModuleLevelImports": [
+        "__future__",
+        "ctypes",
+        "hashlib",
+        "importlib.machinery",
+        "io",
+        "msvcrt",
+        "os",
+        "sys",
+        "types"
+      ],
+      "NestedImports": []
+    },
+    {
+      "PinKey": "N",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/carrier_rev4.py",
+      "Bytes": 62240,
+      "SHA256": "A16904C8E67EAF4B459F0DB9688D3C685269810AD0D0CB3911BF03B852F1E11A",
+      "PinMatch": true,
+      "ModuleLevelImports": [
+        "__future__",
+        "dataclasses",
+        "hashlib",
+        "importlib.machinery",
+        "io",
+        "math",
+        "os",
+        "stat",
+        "sys",
+        "types"
+      ],
+      "NestedImports": []
+    },
+    {
+      "PinKey": "FAULT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/fault_fixture.py",
+      "Bytes": 3841,
+      "SHA256": "D7196E075A8F175F257BE3AC6C751445AEBD02D731E9A5648E68CDB3FF1C12D8",
+      "PinMatch": true,
+      "ModuleLevelImports": [
+        "io",
+        "msvcrt",
+        "os",
+        "sys",
+        "time"
+      ],
+      "NestedImports": [
+        "subprocess"
+      ]
+    },
+    {
+      "PinKey": "DRIVER",
+      "Path": "validation/route_b_c03/wp_008/dsp004_execution_batch_rev1/run_batch.py",
+      "Bytes": 20848,
+      "SHA256": "55BC649EFA0BF3EFA4F1F5F79F77C0CCE98357913950705908A4FDF26CA7F75E",
+      "PinMatch": true,
+      "ModuleLevelImports": [
+        "__future__",
+        "hashlib",
+        "importlib.machinery",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "sys",
+        "time",
+        "types"
+      ],
+      "NestedImports": []
+    }
+  ],
+  "HarnessUniqueImportNames": [
+    "__future__",
+    "ctypes",
+    "dataclasses",
+    "dsp004_windows_scope",
+    "hashlib",
+    "importlib.machinery",
+    "io",
+    "json",
+    "math",
+    "msvcrt",
+    "os",
+    "pathlib",
+    "stat",
+    "subprocess",
+    "sys",
+    "threading",
+    "time",
+    "types"
+  ],
+  "HarnessNonStandardImportNames": [
+    "dsp004_windows_scope"
+  ],
+  "Findings": [
+    {
+      "FindingId": "OD04-INV-F01",
+      "Topic": "RUNTIME_CORE_IDENTITY_NOT_STABLE",
+      "Detail": "python.exe, python3.dll, and python312.dll each have three distinct recorded identities: Plan, prior session, latest observation. vcruntime140.dll and vcruntime140_1.dll have one. The runtime root changed at least twice."
+    },
+    {
+      "FindingId": "OD04-INV-F02",
+      "Topic": "ATTEMPT02_USED_LATEST_OBSERVED_BYTES",
+      "Detail": "attempt_02 runtime_before and runtime_after hashes equal EIR-003 to EIR-007 for all five files. The local synthetic run used the latest observed runtime bytes, not the Plan-recorded bytes."
+    },
+    {
+      "FindingId": "OD04-INV-F03",
+      "Topic": "VERSION_TEXT_VS_REPORTED_VERSION",
+      "Detail": "pyvenv.cfg version text is 3.12.13 (rebinding candidate section 3.1). attempt_02 reports interpreter version 3.12.14. The configuration text is stale relative to the runtime that ran. This record does not infer cause."
+    },
+    {
+      "FindingId": "OD04-INV-F04",
+      "Topic": "RUNTIME_ROOT_IS_TOOL_MANAGED",
+      "Detail": "Rebinding candidate section 3.1 records the pyvenv.cfg home as a tool-managed runtime cache. Together with F01, records show the base runtime bytes changed between observations without a project-side record of the change. Check-to-use anti-substitution cannot be established from repository records under this layout. No locator is supplied here; OD-05 REFUSE_LOCATOR is unchanged."
+    },
+    {
+      "FindingId": "OD04-INV-F05",
+      "Topic": "HARNESS_CAPABILITY_IMPORTS",
+      "Detail": "Batch harness direct imports include ctypes, msvcrt, subprocess, threading. Non-standard import names: dsp004_windows_scope. These are textual AST results, not resolved files and not an executed capability result."
+    },
+    {
+      "FindingId": "OD04-INV-F06",
+      "Topic": "HOST_ONLY_EVIDENCE_ABSENT",
+      "Detail": "No PYD identity, OS DLL identity, PE import table, standard-library file SHA, or T0 observation exists in the repository or its history. These can only come from the validation host."
+    }
+  ],
+  "OD04Decision": {
+    "SelectedKey": "DEFER_WITHOUT_EVIDENCE",
+    "State": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS",
+    "ChangedByThisRecord": false,
+    "EvidenceSupplied": false,
+    "Note": "Inventory of existing records is not new evidence and does not satisfy OD-04."
+  },
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "RuntimeDependencyManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS"
+  },
+  "Checks": [
+    {
+      "CheckId": "INV-01.PLAN_ROWS",
+      "Passed": true,
+      "Detail": "Plan records five RUNTIME_ROOT identities: ['python.exe', 'python3.dll', 'python312.dll', 'vcruntime140.dll', 'vcruntime140_1.dll']."
+    },
+    {
+      "CheckId": "INV-02.EIR_ROWS",
+      "Passed": true,
+      "Detail": "Rebinding candidate has 7 EIR rows and 3 prior-session rows."
+    },
+    {
+      "CheckId": "INV-03.ATTEMPT02_STABLE_IN_RUN",
+      "Passed": true,
+      "Detail": "attempt_02 runtime_before equals runtime_after for all five files."
+    },
+    {
+      "CheckId": "INV-04.ATTEMPT02_EQUALS_LATEST",
+      "Passed": true,
+      "Detail": "attempt_02 hashes equal EIR-003..EIR-007."
+    },
+    {
+      "CheckId": "INV-05.CORE_CHANGED",
+      "Passed": true,
+      "Detail": "Distinct identities per file: python.exe=3, python3.dll=3, python312.dll=3, vcruntime140.dll=1, vcruntime140_1.dll=1."
+    },
+    {
+      "CheckId": "INV-06.HARNESS_PINS",
+      "Passed": true,
+      "Detail": "Six harness files match candidate_pins.json bytes and SHA."
+    },
+    {
+      "CheckId": "INV-07.NO_ADMISSION",
+      "Passed": true,
+      "Detail": "Signed and Accepted are false. Admission is NOT_ADMITTED. OD-04 is unchanged."
+    }
+  ],
+  "CheckCount": 7,
+  "ChecksPassed": 7,
+  "PassMeansFieldMatchNotAcceptance": true
+}
