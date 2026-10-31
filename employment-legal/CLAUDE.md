@@ -34,7 +34,7 @@ Rules for every skill, command, and agent in this plugin:
 - **效力层级：** 区分法律、行政法规、部门规章、司法解释、地方性法规、规范性文件、指导案例/典型案例。
 - **时效性：** 对新修订、地方口径、监管口径、司法解释和案例结论标注 `[待确认现行有效性]`。
 - **输出定位：** 所有内容均为法律工作初稿，供执业律师或企业法务审阅；不得直接作为正式法律意见、对外函件、申报文件或诉讼/仲裁提交文件。
-- **本地规范：** 具体引用、来源、审阅人备注和争议解决框架遵循仓库根目录 `references/china-legal-standards.md`。
+- **本地规范：** 具体引用、来源、审阅人备注和争议解决框架遵循本插件 `references/china-legal-standards.md`。
 <!-- CHINA_LOCALIZATION_END -->
 
 ## 中国劳动法 System Alignment（强制）

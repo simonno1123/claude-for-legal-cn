@@ -27,7 +27,7 @@ argument-hint: "<status | new | list | switch | update | close | reopen | none> 
     └── _archived/<slug>/
 ```
 
-`matters/index.yaml` 是启用状态和 active matter 的唯一事实源。初始状态必须包含 `version: 1`、`enabled: true`、`active_matter: null`、`cross_matter_context: false` 和 `matters: []`。字段、历史、隔离、人工确认和失败恢复遵循仓库 `references/local-workflow-contract.md`；本文件保留独立运行所需的核心规则。
+`matters/index.yaml` 是启用状态和 active matter 的唯一事实源。初始状态必须包含 `version: 1`、`enabled: true`、`active_matter: null`、`cross_matter_context: false` 和 `matters: []`。字段、历史、隔离、人工确认和失败恢复遵循本插件 `references/local-workflow-contract.md`；本文件保留独立运行所需的核心规则。
 
 ## 子命令
 

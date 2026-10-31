@@ -38,7 +38,7 @@
 - [2025修订仲裁法](https://legalinfo.moj.gov.cn/pub/sfbzhfx/zt/2025nzt0120/xcgvxxddzcf/202509/t20250915_525094.html)第27—31、37、96条，2026-03-01施行：区分协议形成、仲裁效力异议和法院受理后的处理；第27条第三款还包含仲裁庭提示并记录等条件，不能把未否认单独当作全部要件。
 - [最高法旧仲裁法解释，法释〔2006〕7号公布文本](https://www.court.gov.cn/fabu/xiangqing/1053.html)第3、7条：分别涉及机构确定和选择性约定的规则／例外。该页引用旧法号；使用时联查新法及相关解释，不凭网页在线宣告其对全部新法情形均适用，也不擅自宣告其废止。
 
-上述为规范文字核对，没有取得本轮实时类案原文。需要裁审倾向或类似案件分析时，按根级 `references/china-case-authority.md` 和 `references/case-authority-sources.json` 核查；案例不能替代法律或司法解释，不编造案号或裁判结论。
+上述为规范文字核对，没有取得本轮实时类案原文。需要裁审倾向或类似案件分析时，按本插件 `references/china-case-authority.md` 和 `references/case-authority-sources.json` 核查；案例不能替代法律或司法解释，不编造案号或裁判结论。
 
 ## 人工确认门
 
