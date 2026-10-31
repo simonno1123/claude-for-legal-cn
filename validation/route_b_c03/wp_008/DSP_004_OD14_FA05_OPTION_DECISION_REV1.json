@@ -1,0 +1,405 @@
+{
+  "RecordKind": "DSP004_OD14_FA05_OPTION_DECISION_RECORD",
+  "Outcome": "DECISION_RECORDED_FINDINGS_ONLY_NOT_ADMITTED",
+  "FindingsOnly": true,
+  "DecisionRecorded": true,
+  "AcceptanceInstrument": false,
+  "Candidate": true,
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "OD14_FA05_KEEP_REV1_RECORD_RECORDED_NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "OwnerBatchAuthorization": "Project Owner 张纯熙 selected OD-14 KEEP_REV1_RECORD after PR #19. Record that choice. Do not open or write a future static identity note. Do not mark FA-05 completed beyond recording the selection. Do not admit the options sheet or the REV12 independent review. Do not change the OD-05 REFUSE_LOCATOR record. Do not invent a runtime root. Do not admit a source, accept an asset SHA, a Harness SHA, a REV3 SHA, or a source-root SHA, repair a BLOCK, dispose an FA-06 row, create a Manifest, authorize a formal run, complete FA-08, or close DSP-004 / B-01 / B-02.",
+  "PreviouslyRecordedOwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PreviouslyRecordedOwnerStepSentenceReissued": false,
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD14_FA05_OPTION_DECISION_REV1.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "8160eee3e42b8a44305545705eef95a89f99477b",
+    "MaterializedFrom": "PR #19",
+    "RecordedAtUtc": "2026-10-31T00:20:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_AND_JSON_READ_ONLY",
+    "HashingIsIdentityOnly": true,
+    "HashingIsNotACall": true,
+    "HashingIsNotExecution": true,
+    "SubjectModulesImported": false,
+    "CaptureCodeExecuted": false,
+    "IdentityGateCalled": false,
+    "IdentityGateImported": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "FixtureResultsWritten": false,
+    "CommercialP0Executed": false,
+    "CommercialP0Changed": false,
+    "EnvironmentManifestRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "ToolCacheRead": false,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "LocatorPathSupplied": false,
+    "FutureStaticIdentityNoteWritten": false,
+    "OptionsSheetMutated": false,
+    "OptionsSheetAdmitted": false,
+    "OptionsReviewAdmitted": false,
+    "OptionsReviewAccepted": false,
+    "ManifestCreated": false,
+    "FormalRunAuthorized": false,
+    "RuntimeDependencyManifestCreated": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false,
+    "HarnessShaAccepted": false,
+    "Rev3ShasAcceptedAsFormalB02Contract": false,
+    "SourceRootShaAccepted": false,
+    "SourceRootReviewFileAdded": false,
+    "BlockCodesRepaired": false,
+    "ItemsDisposed": false,
+    "FA05Completed": false
+  },
+  "Decision": {
+    "DecisionId": "OD-14",
+    "Subject": "FA05_OPTION_SELECTION",
+    "Title": "在三个未选的 FA-05 选项中选择一项",
+    "Question": "Select one FA-05 option.",
+    "Owner": "张纯熙",
+    "Selected": true,
+    "SelectedMeaning": "Selected is true only because KEEP_REV1_RECORD is the selected choice. FUTURE_STATIC_IDENTITY_NOTE_ONLY and NOT_AVAILABLE_UNDER_PATH_B stay Selected false.",
+    "SelectedChoiceId": "KEEP_REV1_RECORD",
+    "Decided": true,
+    "Opened": false,
+    "OpenedMeaning": "Opened follows the REV1 register. True would mean a follow-on note or other FA-05 deliverable was opened. KEEP_REV1_RECORD opens none of those. The future static identity note is not written.",
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "Choices": [
+      {
+        "ChoiceId": "KEEP_REV1_RECORD",
+        "Label": "KEEP_REV1_RECORD",
+        "Selected": true,
+        "Opened": false
+      },
+      {
+        "ChoiceId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "Label": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+        "Selected": false,
+        "Opened": false
+      },
+      {
+        "ChoiceId": "NOT_AVAILABLE_UNDER_PATH_B",
+        "Label": "NOT_AVAILABLE_UNDER_PATH_B",
+        "Selected": false,
+        "Opened": false
+      }
+    ],
+    "FutureStaticIdentityNoteWritten": false,
+    "OptionsSheetAdmitted": false,
+    "OptionsSheetMutated": false,
+    "OptionsReviewAdmitted": false,
+    "OptionsReviewAccepted": false,
+    "FA05Completed": false,
+    "SelectionDoesNotCompleteFA05": true,
+    "SelectionDoesNotAdmitSheet": true,
+    "SelectionDoesNotAdmitReview": true,
+    "HarnessShaAccepted": false,
+    "Rev3ShasAcceptedAsFormalB02Contract": false,
+    "SourceRootShaAccepted": false
+  },
+  "OnDiskOptionsSheetLeftUnchanged": {
+    "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+    "FileMutated": false,
+    "AnyOptionSelected": false,
+    "AnyOptionOpened": false,
+    "Admission": "NOT_ADMITTED",
+    "NewPreparationFact": "FA05_OPTIONS_SHEET_NOT_SELECTED_NOT_ADMITTED",
+    "FA05Completed": false,
+    "Note": "The options sheet stays the SHA-bound unselected sheet. This record is the later OD-14 choice. It does not rewrite the sheet and does not admit it."
+  },
+  "OnDiskOptionsReviewLeftUnaccepted": {
+    "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+    "FileMutated": false,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "NewPreparationFact": "FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+    "FutureStaticIdentityNoteWritten": false,
+    "OptionSelectedByThisReview": false,
+    "Note": "The REV12 independent static review stays unaccepted. Binding its bytes is not admission."
+  },
+  "RegisterRev1Od14LeftUnchanged": {
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+    "FileMutated": false,
+    "Selected": false,
+    "Decided": false,
+    "Opened": false,
+    "KeepRev1RecordSelected": false,
+    "FutureStaticIdentityNoteOnlySelected": false,
+    "NotAvailableUnderPathBSelected": false,
+    "Note": "REV1 stays the SHA-bound undecided register. This record is the later OD-14 choice. It does not rewrite REV1."
+  },
+  "Od05LeftUnchanged": {
+    "DecisionId": "OD-05",
+    "SelectedChoiceId": "REFUSE_LOCATOR",
+    "ProvideLocatorSelected": false,
+    "Decided": true,
+    "Opened": false,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "RuntimeRootAdmitted": false,
+    "LocatorPath": null,
+    "StartupSequence": null,
+    "ImportQueryOrder": null,
+    "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+    "BlockRepaired": false,
+    "ThisRecordDoesNotChangeOd05": true,
+    "Note": "OD-05 stays the REV15 REFUSE_LOCATOR record. This OD-14 record re-hashes that decision and does not change it."
+  },
+  "OtherDecisionIdsLeftUndecided": [
+    "OD-01",
+    "OD-02",
+    "OD-03",
+    "OD-04",
+    "OD-06",
+    "OD-07",
+    "OD-08",
+    "OD-09",
+    "OD-10",
+    "OD-11",
+    "OD-12",
+    "OD-13",
+    "OD-15"
+  ],
+  "BoundIdentities": [
+    {
+      "Role": "REV15_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV15.md",
+      "SHA256": "ECFE6BC3F44E549789342C02125A60111B0D995D1287F0E1EFA700424FEA4943",
+      "Bytes": 12006,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV15_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV15.json",
+      "SHA256": "E3817F182B51460F7E8C59CF0104A6355A21CA3B8474970EECD3944670590DA9",
+      "Bytes": 20253,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OD05_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.md",
+      "SHA256": "30CA669C6EFE30EDDEE294CF2CAF2B9C3109E168E211753DDF62229EC3700192",
+      "Bytes": 9876,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OD05_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.json",
+      "SHA256": "96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0",
+      "Bytes": 14234,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OVERLAY_REV2_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.md",
+      "SHA256": "A069DE20BEE610B0FF4E7DD3FBC4F02654C3469C0F673DEC1421F75B52870A3A",
+      "Bytes": 6210,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OVERLAY_REV2_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.json",
+      "SHA256": "8BFE26CAF66524E43B4D11AE8909ED7F1ADDE13BCF8FA7B1DD852137A89B55CF",
+      "Bytes": 16111,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REGISTER_REV1_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+      "Bytes": 37989,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REGISTER_REV1_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+      "Bytes": 82247,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_SHEET_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+      "SHA256": "6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4",
+      "Bytes": 10924,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_SHEET_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+      "SHA256": "88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8",
+      "Bytes": 12147,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_REVIEW_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "7EFB324FAEC1F33EDAF87444FB82C79A1115C4EB0DBE4928F1CA2F6960F6E69A",
+      "Bytes": 17974,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_REVIEW_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "3BEC8B6BE1173C4A22374F21C3726218F8F16AA7C520C9391D10B1752889755A",
+      "Bytes": 35336,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV12_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.md",
+      "SHA256": "E44A36331C3679C04B3923E000077F1AF83329B075AF5D27ECD19DD92D68D063",
+      "Bytes": 12277,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV12_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.json",
+      "SHA256": "1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17",
+      "Bytes": 10089,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "PassMeansFieldMatchNotAcceptance": true,
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "CaptureCodeExecuted": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "RowsDisposed": 0,
+  "BlocksRepaired": false,
+  "RuntimeRootLocatorSupplied": false,
+  "RuntimeRootAdmitted": false,
+  "PathsInvented": false,
+  "StartupSequenceInvented": false,
+  "ImportSequenceInvented": false,
+  "FutureStaticIdentityNoteWritten": false,
+  "OptionsSheetMutated": false,
+  "OptionsSheetAdmitted": false,
+  "OptionsReviewAccepted": false,
+  "OptionsReviewAdmitted": false,
+  "ActualSequenceLocatorsAdmitted": false,
+  "ActualSidesBound": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "HarnessShaAccepted": false,
+  "SourceRootShaAccepted": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "AnyOptionOpened": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "B01Closed": false,
+  "B02Closed": false,
+  "RegisterRev1Mutated": false,
+  "OverlayRev2Mutated": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "OD14-01.KEEP_REV1_RECORD_SELECTED",
+      "Passed": true,
+      "Detail": "OD-14 Selected is true only because KEEP_REV1_RECORD is selected. Decided is true. Opened is false. Recording the choice is not acceptance and does not complete FA-05."
+    },
+    {
+      "CheckId": "OD14-02.OTHER_TWO_UNSELECTED_UNOPENED",
+      "Passed": true,
+      "Detail": "FUTURE_STATIC_IDENTITY_NOTE_ONLY and NOT_AVAILABLE_UNDER_PATH_B stay Selected false and Opened false. No future static identity note was written."
+    },
+    {
+      "CheckId": "OD14-03.NOT_SIGNED_NOT_ADMITTED",
+      "Passed": true,
+      "Detail": "Signed and Accepted are false. Admission is NOT_ADMITTED. The record is findings-only."
+    },
+    {
+      "CheckId": "OD14-04.SHEET_BOUND_UNMUTATED_NOT_ADMITTED",
+      "Passed": true,
+      "Detail": "FA-05 sheet markdown is 10924 bytes 6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4. FA-05 sheet JSON is 12147 bytes 88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8. On that file every option stays Selected false and Opened false. Admission stays NOT_ADMITTED. Fact stays FA05_OPTIONS_SHEET_NOT_SELECTED_NOT_ADMITTED. The sheet was not rewritten and was not admitted."
+    },
+    {
+      "CheckId": "OD14-05.REV12_REVIEW_BOUND_NOT_ACCEPTED",
+      "Passed": true,
+      "Detail": "REV12 review markdown is 17974 bytes 7EFB324FAEC1F33EDAF87444FB82C79A1115C4EB0DBE4928F1CA2F6960F6E69A. REV12 review JSON is 35336 bytes 3BEC8B6BE1173C4A22374F21C3726218F8F16AA7C520C9391D10B1752889755A. Fact stays FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED. Signed and Accepted stay false. Admission stays NOT_ADMITTED. The review was not admitted."
+    },
+    {
+      "CheckId": "OD14-06.REV12_INCREMENT_FACT",
+      "Passed": true,
+      "Detail": "REV12 markdown is 12277 bytes E44A36331C3679C04B3923E000077F1AF83329B075AF5D27ECD19DD92D68D063. REV12 JSON is 10089 bytes 1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17. Its fact stays FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED. Signed, Accepted, and admission stay false / NOT_ADMITTED."
+    },
+    {
+      "CheckId": "OD14-07.REV15_AND_OD05_REHASH_UNCHANGED",
+      "Passed": true,
+      "Detail": "REV15 markdown is 12006 bytes ECFE6BC3F44E549789342C02125A60111B0D995D1287F0E1EFA700424FEA4943. REV15 JSON is 20253 bytes E3817F182B51460F7E8C59CF0104A6355A21CA3B8474970EECD3944670590DA9, the SHA embedded in the REV15 markdown. OD-05 decision markdown is 9876 bytes 30CA669C6EFE30EDDEE294CF2CAF2B9C3109E168E211753DDF62229EC3700192. OD-05 JSON is 14234 bytes 96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0. Selected choice stays REFUSE_LOCATOR. RuntimeRootAdmitted stays false. This record does not change OD-05."
+    },
+    {
+      "CheckId": "OD14-08.REGISTER_AND_OVERLAY_REV2_UNMUTATED",
+      "Passed": true,
+      "Detail": "Register REV1 stays 37989 / 0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91 and 82247 / EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3. On that file OD-14 is still undecided and all three choices are still unselected. Overlay REV2 stays 6210 / A069DE20BEE610B0FF4E7DD3FBC4F02654C3469C0F673DEC1421F75B52870A3A and 16111 / 8BFE26CAF66524E43B4D11AE8909ED7F1ADDE13BCF8FA7B1DD852137A89B55CF, with one decided row. Neither file was rewritten."
+    },
+    {
+      "CheckId": "OD14-09.FA05_NOT_COMPLETED",
+      "Passed": true,
+      "Detail": "FA-05 stays INCOMPLETE. Recording KEEP_REV1_RECORD does not complete FA-05. The on-disk sheet still says Completed false."
+    },
+    {
+      "CheckId": "OD14-10.OTHER_ROWS_AND_OD03_UNMOVED",
+      "Passed": true,
+      "Detail": "OD-01, OD-02, OD-03, OD-04, and OD-06 through OD-13, and OD-15, stay undecided in this record. Orders 2, 5, 7, 10, 12, 15, 48, 55, 60, 61 stay undisposed. No BLOCK is repaired."
+    },
+    {
+      "CheckId": "OD14-11.RETAINED_OPEN_HOLD",
+      "Passed": true,
+      "Detail": "DSP-004 stays OPEN / HOLD. B-01 and B-02 stay OPEN. Manifest, formal run, and FA-08 stay unauthorized. No runtime-root path was invented."
+    },
+    {
+      "CheckId": "OD14-12.ASSET_WALL_NOT_CROSSED",
+      "Passed": true,
+      "Detail": "No source is admitted. No Harness SHA, REV3 SHA, or source-root SHA is accepted. Hashing is identity only. A passed check means the on-disk fields match the recorded preparation state."
+    }
+  ],
+  "CheckCount": 12,
+  "ChecksPassed": 12
+}
