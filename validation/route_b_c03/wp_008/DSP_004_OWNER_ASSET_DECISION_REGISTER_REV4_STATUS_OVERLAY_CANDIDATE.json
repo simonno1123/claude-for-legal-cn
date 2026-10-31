@@ -1,0 +1,636 @@
+{
+  "RecordKind": "DSP004_OWNER_ASSET_DECISION_STATUS_OVERLAY_CANDIDATE",
+  "Outcome": "PATH_B_CONSISTENT_OWNER_DECISIONS_RECORDED_NOT_ADMITTED",
+  "FindingsOnly": true,
+  "DecisionRecorded": true,
+  "Candidate": true,
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "OWNER_ASSET_DECISION_STATUS_OVERLAY_REV4_NOT_ADMITTED",
+  "PointsAtPreparationFact": "PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17_RECORDED_NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV4_STATUS_OVERLAY_CANDIDATE.md",
+  "SelfShaNotEmbedded": true,
+  "SupersedesRegisterRev1": false,
+  "RegisterRev1Mutated": false,
+  "RegisterRev1Admitted": false,
+  "RegisterRev1Accepted": false,
+  "OverlayRev2Mutated": false,
+  "OverlayRev3Mutated": false,
+  "AssetWallCrossed": false,
+  "Formation": {
+    "GitHeadBeforeThisOverlay": "9c3e7ca03f76606484d53d30f3b01813cae6b6aa",
+    "MaterializedFrom": "PR #20",
+    "RecordedAtUtc": "2026-10-31T00:30:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_AND_JSON_READ_ONLY",
+    "HashingIsIdentityOnly": true,
+    "Writer": {
+      "Name": "Cursor Agent",
+      "Email": "cursoragent@cursor.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "BoundRegisterRev1": {
+    "Role": "REV1_MD",
+    "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+    "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+    "Bytes": 37989,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundRegisterRev1Json": {
+    "Role": "REV1_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+    "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+    "Bytes": 82247,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundOverlayRev2": {
+    "Role": "REV2_MD",
+    "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.md",
+    "SHA256": "A069DE20BEE610B0FF4E7DD3FBC4F02654C3469C0F673DEC1421F75B52870A3A",
+    "Bytes": 6210,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundOverlayRev2Json": {
+    "Role": "REV2_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.json",
+    "SHA256": "8BFE26CAF66524E43B4D11AE8909ED7F1ADDE13BCF8FA7B1DD852137A89B55CF",
+    "Bytes": 16111,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundOverlayRev3": {
+    "Role": "REV3_MD",
+    "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV3_STATUS_OVERLAY_CANDIDATE.md",
+    "SHA256": "972F15B5E1C4BAE478DFD1BD2BAA3271DB5D47C0CDA47ADCA7FF7920F5DC0C4A",
+    "Bytes": 9306,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundOverlayRev3Json": {
+    "Role": "REV3_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV3_STATUS_OVERLAY_CANDIDATE.json",
+    "SHA256": "F93F3CFD7E7342D301D722D9978734FCF7BFA8B53EB747D525D9881B98C67800",
+    "Bytes": 25452,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundOd05": {
+    "Role": "OD05_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.json",
+    "SHA256": "96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0",
+    "Bytes": 14234,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundOd14": {
+    "Role": "OD14_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OD14_FA05_OPTION_DECISION_REV1.json",
+    "SHA256": "E382AE8D8AD6F6033A7526C79559BE641AC0A2AED51D3500523A76A0C0E7982A",
+    "Bytes": 17592,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "BoundBatch": {
+    "Markdown": {
+      "Role": "BATCH_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17.md",
+      "SHA256": "481CAF0A5683CDA608AD5FB26499C92BAAD72F72F8C33E25D6A227F547BD36C3",
+      "Bytes": 14550,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "BATCH_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17.json",
+      "SHA256": "0049114F55C4636E631FA62E4C09A277D53DB0B274C74516E81A3B829EA1D67C",
+      "Bytes": 78109,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17_RECORDED_NOT_ADMITTED"
+  },
+  "DecisionRowCount": 15,
+  "DecidedRowCount": 15,
+  "SelectedRowCount": 14,
+  "OpenedRowCount": 0,
+  "UndecidedRowCount": 0,
+  "AnyRowSelected": true,
+  "AnyRowDecided": true,
+  "AnyRowOpened": false,
+  "Rows": [
+    {
+      "DecisionId": "OD-01",
+      "Subject": "FA06_BUCKET_EVIDENCE_PRESENT_UNACCEPTED",
+      "Title": "保留或处置 FA-06 里证据状态为 EVIDENCE_PRESENT_UNACCEPTED 的行",
+      "Selected": true,
+      "SelectedChoiceId": "RETAIN",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "RETAIN_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "RETAIN",
+          "Label": "保留",
+          "Selected": true
+        },
+        {
+          "ChoiceId": "DISPOSE",
+          "Label": "处置",
+          "Selected": false
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-02",
+      "Subject": "FA06_BUCKET_EVIDENCE_ABSENT",
+      "Title": "保留或处置 FA-06 里证据状态为 EVIDENCE_ABSENT 的行",
+      "Selected": true,
+      "SelectedChoiceId": "RETAIN",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "RETAIN_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "RETAIN",
+          "Label": "保留",
+          "Selected": true
+        },
+        {
+          "ChoiceId": "DISPOSE",
+          "Label": "处置",
+          "Selected": false
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-03",
+      "Subject": "FA06_BUCKET_REQUIRES_RUNTIME_ROOT",
+      "Title": "保留或处置 FA-06 里证据状态为 REQUIRES_RUNTIME_ROOT 的行",
+      "Selected": true,
+      "SelectedChoiceId": "RETAIN",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "RETAIN_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "RETAIN",
+          "Label": "保留",
+          "Selected": true
+        },
+        {
+          "ChoiceId": "DISPOSE",
+          "Label": "处置",
+          "Selected": false
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-04",
+      "Subject": "IMPORT_CLOSURE_CALL_IDENTITY_CHECK_TO_USE_T0_PE_OS",
+      "Title": "导入闭包、两侧调用身份、检查到使用的防替换，以及 T0 / PE / OS 证据",
+      "Selected": true,
+      "SelectedChoiceId": "DEFER_WITHOUT_EVIDENCE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "DEFER_WITHOUT_EVIDENCE",
+          "Label": "路径 B 下不补新证据",
+          "Selected": true,
+          "Admitted": false,
+          "EvidenceSupplied": false
+        }
+      ],
+      "ClosedOptionTableExists": false,
+      "AdmitOrSupplyOccurred": false
+    },
+    {
+      "DecisionId": "OD-05",
+      "Subject": "RUNTIME_ROOT_LOCATOR_AP006_AP009",
+      "Title": "提供或拒绝 AP-006 与 AP-009 的运行根定位",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE_LOCATOR",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_LOCATOR_RECORDED_NOT_ADMITTED",
+      "RecordSource": "PRIOR_REV15_BOUND_BY_REHASH",
+      "ChangedByThisOverlay": false,
+      "Choices": [
+        {
+          "ChoiceId": "PROVIDE_LOCATOR",
+          "Label": "提供运行根定位",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE_LOCATOR",
+          "Label": "拒绝提供运行根定位",
+          "Selected": true
+        }
+      ],
+      "RuntimeRootAdmitted": false,
+      "BlockRepaired": false
+    },
+    {
+      "DecisionId": "OD-06",
+      "Subject": "AP020_AP021_AP022_BLOCK_REPAIR",
+      "Title": "是否以及如何修复 AP-020、AP-021、AP-022 的 BLOCK",
+      "Selected": true,
+      "SelectedChoiceId": "LEAVE_UNREPAIRED",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "LEAVE_UNREPAIRED_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "REPAIR",
+          "Label": "修复",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "LEAVE_UNREPAIRED",
+          "Label": "保持未修复",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-07",
+      "Subject": "AP020_AP021_AP022_ACTUAL_SEQUENCE_LOCATORS",
+      "Title": "准入或拒绝 AP-020、AP-021、AP-022 的实际序列定位",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "ADMIT",
+          "Label": "准入",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE",
+          "Label": "拒绝",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-08",
+      "Subject": "THREE_ACTUAL_SIDES",
+      "Title": "准入或拒绝三个实际侧及其捕获入口",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "ADMIT",
+          "Label": "准入",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE",
+          "Label": "拒绝",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-09",
+      "Subject": "AUTHORIZED_CALL_TO_READ_ACTUAL_REFERENCES",
+      "Title": "是否另作一次获准调用，以便读取实际引用",
+      "Selected": true,
+      "SelectedChoiceId": "DO_NOT_AUTHORIZE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "DO_NOT_AUTHORIZE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "AUTHORIZE_CALL",
+          "Label": "授权调用",
+          "Selected": false,
+          "Opened": false
+        },
+        {
+          "ChoiceId": "DO_NOT_AUTHORIZE",
+          "Label": "不授权",
+          "Selected": true,
+          "Opened": false
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-10",
+      "Subject": "REV3_SHA_ACCEPTANCE",
+      "Title": "是否把两个 REV3 SHA 接受为正式 B-02 合同",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "ACCEPT",
+          "Label": "接受",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE",
+          "Label": "拒绝",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-11",
+      "Subject": "PRIOR_CANDIDATE_SHA_ACCEPTANCE",
+      "Title": "是否接受或准入此前候选的固定 SHA",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "ACCEPT",
+          "Label": "接受",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE",
+          "Label": "拒绝",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-12",
+      "Subject": "HARNESS_SHA_ACCEPTANCE",
+      "Title": "是否接受任何 Harness SHA",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "ACCEPT",
+          "Label": "接受",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE",
+          "Label": "拒绝",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-13",
+      "Subject": "FOUR_NAMED_LIMITED_REVIEW_ITEMS",
+      "Title": "四项已经点名的 LIMITED 审查项是消除还是继续保留",
+      "Selected": true,
+      "SelectedChoiceId": "RETAIN",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "RETAIN_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "ELIMINATE",
+          "Label": "消除",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "RETAIN",
+          "Label": "保留",
+          "Selected": true
+        }
+      ]
+    },
+    {
+      "DecisionId": "OD-14",
+      "Subject": "FA05_OPTION_SELECTION",
+      "Title": "在三个未选的 FA-05 选项中选择一项",
+      "Selected": true,
+      "SelectedChoiceId": "KEEP_REV1_RECORD",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "KEEP_REV1_RECORD_RECORDED_NOT_ADMITTED",
+      "RecordSource": "PRIOR_REV16_BOUND_BY_REHASH",
+      "ChangedByThisOverlay": false,
+      "Choices": [
+        {
+          "ChoiceId": "KEEP_REV1_RECORD",
+          "Label": "KEEP_REV1_RECORD",
+          "Selected": true,
+          "Opened": false
+        },
+        {
+          "ChoiceId": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+          "Label": "FUTURE_STATIC_IDENTITY_NOTE_ONLY",
+          "Selected": false,
+          "Opened": false
+        },
+        {
+          "ChoiceId": "NOT_AVAILABLE_UNDER_PATH_B",
+          "Label": "NOT_AVAILABLE_UNDER_PATH_B",
+          "Selected": false,
+          "Opened": false
+        }
+      ],
+      "FA05Completed": false,
+      "FutureStaticIdentityNoteWritten": false
+    },
+    {
+      "DecisionId": "OD-15",
+      "Subject": "MANIFEST_FORMAL_RUN_FA08_DSP004_CLOSE",
+      "Title": "Manifest、正式运行、FA-08 与关闭 DSP-004",
+      "Selected": false,
+      "SelectedChoiceId": null,
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNAUTHORIZED_DO_NOT_AUTHORIZE_RECORDED_NOT_ADMITTED",
+      "RecordSource": "THIS_BATCH",
+      "ChangedByThisOverlay": true,
+      "Choices": [
+        {
+          "ChoiceId": "AUTHORIZE_MANIFEST",
+          "Label": "授权 Manifest",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "AUTHORIZE_FORMAL_RUN",
+          "Label": "授权正式运行",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "COMPLETE_FA08",
+          "Label": "完成 FA-08",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "CLOSE_DSP004",
+          "Label": "关闭 DSP-004",
+          "Selected": false
+        }
+      ],
+      "PathBStance": "DO_NOT_AUTHORIZE",
+      "RecordedState": "UNAUTHORIZED",
+      "DSP004Closed": false,
+      "CloseDsp004Selected": false
+    }
+  ],
+  "PassMeansFieldMatchNotAcceptance": true,
+  "RowsDisposed": 0,
+  "BlocksRepaired": false,
+  "RuntimeRootAdmitted": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "HarnessShaAccepted": false,
+  "SourceRootShaAccepted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "FA08Completed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "OV4-01.FIFTEEN_ROWS_DECIDED",
+      "Passed": true,
+      "Detail": "The overlay has 15 rows. Every row is Decided true and Opened false. Signed and Accepted are false. Admission is NOT_ADMITTED."
+    },
+    {
+      "CheckId": "OV4-02.OD15_UNSELECTED_ACTIONS",
+      "Passed": true,
+      "Detail": "OD-15 Selected is false. The four action choices are Selected false. CLOSE_DSP004 is not selected. DSP-004 stays open."
+    },
+    {
+      "CheckId": "OV4-03.CHOICE_KEYS",
+      "Passed": true,
+      "Detail": "Choice keys are RETAIN, RETAIN, RETAIN, DEFER_WITHOUT_EVIDENCE, REFUSE_LOCATOR, LEAVE_UNREPAIRED, REFUSE, REFUSE, DO_NOT_AUTHORIZE, REFUSE, REFUSE, REFUSE, RETAIN, KEEP_REV1_RECORD, and null for OD-15."
+    },
+    {
+      "CheckId": "OV4-04.REGISTER_REV1_UNMUTATED",
+      "Passed": true,
+      "Detail": "REV1 register bytes stay the undecided snapshot. This overlay does not rewrite REV1, REV2, or REV3."
+    },
+    {
+      "CheckId": "OV4-05.OD05_OD14_REHASH",
+      "Passed": true,
+      "Detail": "OD-05 stays REFUSE_LOCATOR and OD-14 stays KEEP_REV1_RECORD. Their decision files are re-hashed and not rewritten."
+    },
+    {
+      "CheckId": "OV4-06.BATCH_BOUND",
+      "Passed": true,
+      "Detail": "Batch JSON is 78109 bytes 0049114F55C4636E631FA62E4C09A277D53DB0B274C74516E81A3B829EA1D67C. Batch markdown is 14550 bytes 481CAF0A5683CDA608AD5FB26499C92BAAD72F72F8C33E25D6A227F547BD36C3. Binding is not acceptance."
+    },
+    {
+      "CheckId": "OV4-07.NO_DISPOSE_NO_REPAIR",
+      "Passed": true,
+      "Detail": "No FA-06 row is disposed. No BLOCK is repaired. No runtime root is supplied. No actual side is bound."
+    },
+    {
+      "CheckId": "OV4-08.NO_SHA_ACCEPTANCE",
+      "Passed": true,
+      "Detail": "No REV3 SHA, prior candidate SHA, source-root SHA, or Harness SHA is accepted."
+    },
+    {
+      "CheckId": "OV4-09.OPEN_HOLD",
+      "Passed": true,
+      "Detail": "DSP-004 stays OPEN / HOLD. B-01 and B-02 stay OPEN. Manifest, formal run, and FA-08 stay unauthorized."
+    },
+    {
+      "CheckId": "OV4-10.ASSET_WALL_NOT_CROSSED",
+      "Passed": true,
+      "Detail": "The overlay is additive and NOT_ADMITTED. A passed check does not accept REV1 or any cited SHA."
+    }
+  ],
+  "CheckCount": 10,
+  "ChecksPassed": 10
+}

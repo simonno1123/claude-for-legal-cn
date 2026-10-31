@@ -1,0 +1,316 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "OwnerBatchAuthorization": "2026-10-30: 批量完成后续项目进度，减少人为干预. Record Path-B-consistent refuse, retain, leave-unrepaired, and do-not-authorize owner decisions only. Do not invent assets. Do not close DSP-004. Do not change OD-05 REFUSE_LOCATOR or OD-14 KEEP_REV1_RECORD; bind them by re-hash.",
+  "PreviouslyRecordedOwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PreviouslyRecordedOwnerStepSentenceReissued": false,
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV17.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "9c3e7ca03f76606484d53d30f3b01813cae6b6aa",
+    "MaterializedFrom": "PR #20",
+    "RecordedAtUtc": "2026-10-31T00:30:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_AND_JSON_READ_ONLY",
+    "HashingIsIdentityOnly": true,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "EnvironmentManifestRead": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "FutureStaticIdentityNoteWritten": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false,
+    "Writer": {
+      "Name": "Cursor Agent",
+      "Email": "cursoragent@cursor.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV16_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV16.md",
+      "SHA256": "217CA6A36DB3EED5518DA99209B958EBB291B5058BC9750AFAA65F23BF386B3C",
+      "Bytes": 13470,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV16_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV16.json",
+      "SHA256": "EFB6C33952C36B700CAE294CC61DD9A6D66D870162F43D7A6DC4D015E04CD570",
+      "Bytes": 24280,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "OD14_FA05_KEEP_REV1_RECORD_RECORDED_NOT_ADMITTED",
+    "FieldMatch": {
+      "SignedFalse": true,
+      "AcceptedFalse": true,
+      "Admission": "NOT_ADMITTED",
+      "RetainedDsp004": "OPEN / HOLD",
+      "Dsp004Closed": false,
+      "SelectedChoiceId": "KEEP_REV1_RECORD"
+    }
+  },
+  "NewPreparationFact": "PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17_RECORDED_NOT_ADMITTED",
+  "BatchDecisionRecord": {
+    "Markdown": {
+      "Role": "BATCH_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17.md",
+      "SHA256": "481CAF0A5683CDA608AD5FB26499C92BAAD72F72F8C33E25D6A227F547BD36C3",
+      "Bytes": 14550,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "BATCH_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17.json",
+      "SHA256": "0049114F55C4636E631FA62E4C09A277D53DB0B274C74516E81A3B829EA1D67C",
+      "Bytes": 78109,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17_RECORDED_NOT_ADMITTED"
+  },
+  "StatusOverlay": {
+    "Markdown": {
+      "Role": "OVERLAY_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV4_STATUS_OVERLAY_CANDIDATE.md",
+      "SHA256": "D8D418D18DF5017757B25323865AF0AABCA8E1AD34BE2A21EA14CE58E2863189",
+      "Bytes": 8435,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "OVERLAY_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV4_STATUS_OVERLAY_CANDIDATE.json",
+      "SHA256": "802F8882A0674C0A6356E7F1DDB24D70F8D665B71653B996CBE1A7F42A8F3651",
+      "Bytes": 19974,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "OWNER_ASSET_DECISION_STATUS_OVERLAY_REV4_NOT_ADMITTED"
+  },
+  "FurtherDeliverableOpened": false,
+  "AssetWallCrossed": false,
+  "RegisterRev1Mutated": false,
+  "OverlayRev2Mutated": false,
+  "OverlayRev3Mutated": false,
+  "Od05RecordMutated": false,
+  "Od14RecordMutated": false,
+  "RowsDisposed": 0,
+  "BlocksRepaired": false,
+  "RuntimeRootAdmitted": false,
+  "RuntimeRootLocatorSupplied": false,
+  "PathsInvented": false,
+  "StartupSequenceInvented": false,
+  "ImportSequenceInvented": false,
+  "ActualSequenceLocatorsAdmitted": false,
+  "ActualSidesBound": false,
+  "AuthorizeCall": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "HarnessShaAccepted": false,
+  "SourceRootShaAccepted": false,
+  "SourceRootReviewFileAdded": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CloseDsp004Selected": false,
+  "DSP004Closed": false,
+  "B01Closed": false,
+  "B02Closed": false,
+  "CommercialP0Changed": false,
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "EnvironmentManifestRead": false,
+  "PassMeansFieldMatchNotAcceptance": true,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-13"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "RETAIN is recorded. DISPOSE and ELIMINATE are false. The FA-06 register stays NOT_ADMITTED."
+    },
+    {
+      "Rank": 2,
+      "GapId": "RUNTIME_ROOT",
+      "State": "REFUSE_LOCATOR",
+      "DecisionIds": [
+        "OD-05",
+        "OD-03"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "OD-05 stays REFUSE_LOCATOR. OD-03 RETAIN does not supply a locator."
+    },
+    {
+      "Rank": 3,
+      "GapId": "OD-04",
+      "State": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS",
+      "DecisionIds": [
+        "OD-04"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Explicitly left without new evidence. No import closure, call identity, anti-substitution, or T0/PE/OS evidence was supplied."
+    },
+    {
+      "Rank": 4,
+      "GapId": "FA-05",
+      "State": "INCOMPLETE",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "KEEP_REV1_RECORD stays the bound choice. The future static identity note is not written."
+    },
+    {
+      "Rank": 5,
+      "GapId": "AP-020-AP-022",
+      "State": "LEAVE_UNREPAIRED_AND_REFUSE",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "BLOCK codes stay unrepaired. Actual sequence locators stay null."
+    },
+    {
+      "Rank": 6,
+      "GapId": "ACTUAL_SIDES",
+      "State": "UNBOUND_DO_NOT_AUTHORIZE",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Three sides stay UNBOUND. No call to read actual references is authorized."
+    },
+    {
+      "Rank": 7,
+      "GapId": "SHA_ACCEPTANCE",
+      "State": "REFUSE",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "REV3 SHAs, prior candidate SHAs including 57BAF161, and Harness SHAs are not accepted."
+    },
+    {
+      "Rank": 8,
+      "GapId": "OD-15",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Manifest, formal run, FA-08, and DSP-004 closure stay unauthorized. CLOSE_DSP004 is Selected false."
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "INC17-01.BATCH_FACT",
+      "Passed": true,
+      "Detail": "The new fact is PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17_RECORDED_NOT_ADMITTED. Batch JSON is 78109 bytes 0049114F55C4636E631FA62E4C09A277D53DB0B274C74516E81A3B829EA1D67C. Signed and Accepted are false. Admission is NOT_ADMITTED."
+    },
+    {
+      "CheckId": "INC17-02.CHOICES",
+      "Passed": true,
+      "Detail": "OD-01 RETAIN, OD-02 RETAIN, OD-03 RETAIN, OD-04 DEFER_WITHOUT_EVIDENCE, OD-05 REFUSE_LOCATOR unchanged, OD-06 LEAVE_UNREPAIRED, OD-07 REFUSE, OD-08 REFUSE, OD-09 DO_NOT_AUTHORIZE, OD-10 REFUSE, OD-11 REFUSE, OD-12 REFUSE, OD-13 RETAIN, OD-14 KEEP_REV1_RECORD unchanged. OD-15 action choices stay Selected false."
+    },
+    {
+      "CheckId": "INC17-03.OD15_OPEN_HOLD",
+      "Passed": true,
+      "Detail": "CLOSE_DSP004 is Selected false. DSP-004 stays OPEN / HOLD. B-01 and B-02 stay OPEN. The runtime dependency manifest is absent."
+    },
+    {
+      "CheckId": "INC17-04.OVERLAY_REV4",
+      "Passed": true,
+      "Detail": "Overlay fact is OWNER_ASSET_DECISION_STATUS_OVERLAY_REV4_NOT_ADMITTED. Overlay JSON is 19974 bytes 802F8882A0674C0A6356E7F1DDB24D70F8D665B71653B996CBE1A7F42A8F3651. Fifteen rows are decided. None are opened. REV1 is not rewritten."
+    },
+    {
+      "CheckId": "INC17-05.REV16_BOUND",
+      "Passed": true,
+      "Detail": "REV16 JSON remains 24280 bytes EFB6C33952C36B700CAE294CC61DD9A6D66D870162F43D7A6DC4D015E04CD570. Its fact remains OD14_FA05_KEEP_REV1_RECORD_RECORDED_NOT_ADMITTED."
+    },
+    {
+      "CheckId": "INC17-06.OD05_OD14_UNMUTATED",
+      "Passed": true,
+      "Detail": "OD-05 stays REFUSE_LOCATOR and OD-14 stays KEEP_REV1_RECORD. This increment re-hashes those records and does not rewrite them."
+    },
+    {
+      "CheckId": "INC17-07.REGISTER_AND_PRIOR_OVERLAYS",
+      "Passed": true,
+      "Detail": "REV1, REV2, and REV3 stay unmutated. REV1 still has fifteen undecided rows. REV3 still records only OD-05 and OD-14."
+    },
+    {
+      "CheckId": "INC17-08.NO_REPAIR_NO_ADMISSION",
+      "Passed": true,
+      "Detail": "No BLOCK is repaired. No actual sequence locator is admitted. No actual side is bound. No call to read actual references is authorized. No FA-06 row is disposed."
+    },
+    {
+      "CheckId": "INC17-09.NO_SHA_ACCEPTANCE",
+      "Passed": true,
+      "Detail": "No REV3 SHA is accepted as a formal B-02 contract. Source-root 57BAF161 is not accepted. No Harness SHA is accepted. No second source-root design review file is added."
+    },
+    {
+      "CheckId": "INC17-10.NO_RUNTIME_ROOT",
+      "Passed": true,
+      "Detail": "No runtime-root path, startup sequence, or import-query order is invented. OD-03 RETAIN uses the refused locator only as context."
+    },
+    {
+      "CheckId": "INC17-11.OPEN_HOLD",
+      "Passed": true,
+      "Detail": "DSP-004 stays OPEN / HOLD. B-01 and B-02 stay OPEN. FA-03, FA-04, FA-05, FA-06, and FA-08 stay incomplete in the retained state."
+    },
+    {
+      "CheckId": "INC17-12.ASSET_WALL_NOT_CROSSED",
+      "Passed": true,
+      "Detail": "No source is admitted and no asset SHA is accepted. Hashing is identity only. A passed check means the on-disk fields match the recorded preparation state."
+    }
+  ],
+  "CheckCount": 12,
+  "ChecksPassed": 12
+}
