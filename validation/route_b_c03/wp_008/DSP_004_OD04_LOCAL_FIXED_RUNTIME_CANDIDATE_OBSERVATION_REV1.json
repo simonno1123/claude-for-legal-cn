@@ -1,0 +1,1740 @@
+{
+  "RecordKind": "DSP004_OD04_LOCAL_FIXED_RUNTIME_CANDIDATE_OBSERVATION_NON_ACCEPTANCE",
+  "Outcome": "CANDIDATE_OBSERVATION_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "OwnerAuthorization": "2026-10-31: Owner said the local machine has Python installed and to continue OD-04. Owner approved read-only access to the per-user CPython install folder and to the system DLL folder through access prompts. Record a candidate observation only; admit nothing; do not change OD-04; do not close DSP-004.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_LOCAL_FIXED_RUNTIME_CANDIDATE_OBSERVATION_REV1.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "ca88b7ae8dfd40704034bdb9327c526ed52f5fa9",
+    "RecordedAtUtc": "2026-10-31T15:30:00Z",
+    "Method": "READ_ONLY_FILE_BRIDGE_COPY_THEN_SHA256_STATIC_PE_IMPORT_PARSE_AND_PYTHON_AST_PARSE",
+    "HostKind": "OWNER_WINDOWS_X64_DESKTOP_NOT_RECORDED_VALIDATION_HOST",
+    "RootToken": "CANDIDATE_RUNTIME_ROOT",
+    "RootLocatorRecorded": false,
+    "RootLocatorNote": "The per-user install folder is known to the owner. This record uses only root-relative paths.",
+    "InterpreterExecuted": false,
+    "RepositoryModulesImportedOrExecuted": false,
+    "StagedFilesExecuted": false,
+    "ToolCacheRead": false,
+    "EnvironmentManifestRead": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "Resolver": {
+    "Primary": "pe_min.py minimal static reader (import dir 1 + delay import dir 13)",
+    "CrossCheck": "Ubuntu LLVM 18.1.3 llvm-objdump -p, normal imports only, export-table self name excluded",
+    "NormalImportAgreementFiles": 44,
+    "FilesTotal": 44,
+    "Limits": [
+      "llvm-objdump 18 does not list delay-import DLL names; delay imports come from pe_min.py only",
+      "api-ms-win-* API-set names are not resolved to host DLLs",
+      "no search-order simulation, no SxS/manifest handling, no loader execution"
+    ]
+  },
+  "VersionEvidence": {
+    "Source": "NEWS.txt",
+    "Bytes": 1790373,
+    "SHA256": "64ED57507CEC59380F87C4B0EE57F202E2F54C2FC0B3FB41446A031DF3EC17E4",
+    "StatedVersion": "3.12.10 final",
+    "StatedReleaseDate": "2025-04-08",
+    "InterpreterRun": false
+  },
+  "RuntimePeFiles": [
+    {
+      "RelPath": "DLLs/_asyncio.pyd",
+      "Bytes": 74096,
+      "SHA256": "C77DE90CAD749087A0C5DC5E19D78D24F6EF44E7E5AC19B8420CFC0CEA62395D",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_bz2.pyd",
+      "Bytes": 86896,
+      "SHA256": "65F610646D10D5BABEA080E060D244B546EC52C54012E5E937DC72DCC2E2E7BC",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_ctypes.pyd",
+      "Bytes": 127480,
+      "SHA256": "0E56107A891100535F2DA79D85A5AE65FF1227B4765BD108F8593AC1A1110D81",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "libffi-8.dll",
+        "ole32.dll",
+        "oleaut32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_ctypes_test.pyd",
+      "Bytes": 38392,
+      "SHA256": "DCEB02AFC2055F55F4944497C739EB0DEEB1CFEE4132AE802EB424E6EDE1D01F",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "oleaut32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_decimal.pyd",
+      "Bytes": 262000,
+      "SHA256": "AEACFEAD2BEFCC0768063A037BB64BD32109AE09CB144E5F571B04DD7965DB9D",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_elementtree.pyd",
+      "Bytes": 135160,
+      "SHA256": "5009A9A53C03EF8387443B5CF6CE08E5C3A79727466A0B931C5BBCA915BF89CA",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_hashlib.pyd",
+      "Bytes": 68976,
+      "SHA256": "03D233DBACE599168EAFFEC823DE6ED7BEEC8C2A4EBFE9B8A3D8E042A59AF3BA",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "libcrypto-3.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_lzma.pyd",
+      "Bytes": 161136,
+      "SHA256": "E3DEECC1F59A3B811C608861DECD84DE1E8DF8BAFD5E2B39188861318C5A38CF",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_msi.pyd",
+      "Bytes": 46584,
+      "SHA256": "B49332BAE154EBDD8C3D5E7DDFDDE336D9C47F91BA028DC67BAFB2420B3DBB5C",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "cabinet.dll",
+        "kernel32.dll",
+        "msi.dll",
+        "python312.dll",
+        "rpcrt4.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_multiprocessing.pyd",
+      "Bytes": 37368,
+      "SHA256": "2C636DF7059CB0DD7E978DD735C7C5C8DDB09CF94754CF9E232296B96C5C545A",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_overlapped.pyd",
+      "Bytes": 57336,
+      "SHA256": "662126FF80C3A1B4CEDF74074029C12AE4743E6D3B37376E39AC70AACB7D4D3C",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_queue.pyd",
+      "Bytes": 33784,
+      "SHA256": "48E76E0AD63F6932B4A77B5819F41C1E7595636CA8D9E824F0943A14B8BB5035",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_socket.pyd",
+      "Bytes": 85496,
+      "SHA256": "3EFA4636CF9E350856F6927D67A4C2564BF9BD2758A00BBF17D3AECE5B60016D",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "iphlpapi.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "rpcrt4.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_sqlite3.pyd",
+      "Bytes": 126184,
+      "SHA256": "64B51DF2805C58B023A875E8AE3BE7AC7F61EF664F32CA6C90F6315DA47EF0BC",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "sqlite3.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_ssl.pyd",
+      "Bytes": 179432,
+      "SHA256": "0BC527D2DBC50009F43B2ED5D5982C4F63F4B647647FFA9EDA612DCDA80F6040",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "crypt32.dll",
+        "kernel32.dll",
+        "libcrypto-3.dll",
+        "libssl-3.dll",
+        "python312.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testbuffer.pyd",
+      "Bytes": 58216,
+      "SHA256": "282730E6D724B1BBD5CB1AE4BF7BCA8C926300F8EA407BB0EA3C290EC18171D1",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testcapi.pyd",
+      "Bytes": 307192,
+      "SHA256": "A9EF0D24868B88EF85030166F341AC3CB3A7C246C6FC3EEB7B8364CCDD965786",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testclinic.pyd",
+      "Bytes": 68840,
+      "SHA256": "FE057479C5A0725C86955D32C3144189FEBF4BD9B465020F50C2B9D1B0BF4807",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testconsole.pyd",
+      "Bytes": 30064,
+      "SHA256": "F594BD798ABF4F1FEFBF785B81238DD812B5FF5F34597493A5CFD5246BF713FD",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testimportmultiple.pyd",
+      "Bytes": 27504,
+      "SHA256": "8FBD69ECD8AD56E6EF68CB34DF4CF264A65DE0494A8F044FDA56224680664C1F",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testinternalcapi.pyd",
+      "Bytes": 52728,
+      "SHA256": "1E81A0F036D8C6538D6EB980807258AFDCA22AA01535164EC0F2C46DFAEA4C22",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testmultiphase.pyd",
+      "Bytes": 41840,
+      "SHA256": "69C8896D1A21B0D8711F9B327875D23D037F884E7F9FBE305840CD1F0C943538",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_testsinglephase.pyd",
+      "Bytes": 32624,
+      "SHA256": "65ADE81CBA80C618EAA47C2AC2B5EB0028D3A45C0349A6F2FB4FC79BFC0275F5",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_tkinter.pyd",
+      "Bytes": 68600,
+      "SHA256": "ED2F7B2C9984032CFB046923B45BB745F6E819730C086E559777665B45E8390E",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "tcl86t.dll",
+        "tk86t.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_uuid.pyd",
+      "Bytes": 27128,
+      "SHA256": "ACCE4F281D7FFB2DEC0997527FAF25B1DF62AD7BD3032C568DDCF65C90EDC867",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "rpcrt4.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_wmi.pyd",
+      "Bytes": 40304,
+      "SHA256": "A980F1E7A29842BD946863FC2693FBEB555A9DC0F9E1630DFED9A2FCDEF3ECE2",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "oleaut32.dll",
+        "propsys.dll",
+        "python312.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "DelayImports": [
+        "ole32.dll"
+      ],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/_zoneinfo.pyd",
+      "Bytes": 49656,
+      "SHA256": "76F1439CDA82AB6976DF6BA505C4079444703F6D44D8B0259CE59C0FF4279FB4",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/libcrypto-3.dll",
+      "Bytes": 5231472,
+      "SHA256": "CCFFFDDCD3DEFB8D899026298AF9AF43BC186130F8483D77E97C93233D5F27D7",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "bcrypt.dll",
+        "kernel32.dll",
+        "user32.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/libffi-8.dll",
+      "Bytes": 39696,
+      "SHA256": "EFF52743773EB550FCC6CE3EFC37C85724502233B6B002A35496D828BD7B280A",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/libssl-3.dll",
+      "Bytes": 794992,
+      "SHA256": "007142039F04D04E0ED607BDA53DE095E5BC6A8A10D26ECEDDE94EA7D2D7EEFE",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "libcrypto-3.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/pyexpat.pyd",
+      "Bytes": 205304,
+      "SHA256": "D615E193D1AFFCDBFE504E90D3621CBDCFF94BF72B79D899126534507FD6D27A",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/select.pyd",
+      "Bytes": 33136,
+      "SHA256": "D4D7181B11DB0BD22A6CD5CDA6F8583D1F5C77615FD0A6CA33350619D6E0438A",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/sqlite3.dll",
+      "Bytes": 1583608,
+      "SHA256": "8DAA45684BF6688FCA28D956B2E8942F2FA98F656675CE68E6D61DD869848A7A",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/tcl86t.dll",
+      "Bytes": 1841896,
+      "SHA256": "B894E0C9A7D2B56F9F202DE5044221CFC0938CBD9FFACA6B6793BBA486E28081",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "netapi32.dll",
+        "user32.dll",
+        "userenv.dll",
+        "vcruntime140.dll",
+        "ws2_32.dll",
+        "zlib1.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/tk86t.dll",
+      "Bytes": 1590776,
+      "SHA256": "3883976D6270C44CF43B0F4E3B925259A36C42F586680A93DFE6A3FDFB5B4939",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "comctl32.dll",
+        "comdlg32.dll",
+        "gdi32.dll",
+        "imm32.dll",
+        "kernel32.dll",
+        "ole32.dll",
+        "shell32.dll",
+        "user32.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/unicodedata.pyd",
+      "Bytes": 1140592,
+      "SHA256": "208EE1CD3CBAD0828433CA7246B05BE2B1FF5569983D27D296C0B38888585488",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/winsound.pyd",
+      "Bytes": 31736,
+      "SHA256": "100E8D676777603C7258DAF9B2F23EF001F09F1596D8708DE359326FFF72BDDD",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "user32.dll",
+        "vcruntime140.dll",
+        "winmm.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "DLLs/zlib1.dll",
+      "Bytes": 148336,
+      "SHA256": "A3A9487DD7A27BE0296731513A5C1D9005BD3ACF5861CCBE0AABCA3984F51C4F",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "kernel32.dll",
+        "msvcrt.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "python.exe",
+      "Bytes": 104952,
+      "SHA256": "4D6F5F81A4BCA11191C4C7C6B43632694D0A4CE74E068619D8FDC161D469859A",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "python3.dll",
+      "Bytes": 70376,
+      "SHA256": "FB975A606E7FBF74F64260E3F60C3490B4F74A183C0926FD6ED1AC4C52AC7B1C",
+      "Format": "coff-x86-64",
+      "Imports": [],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "python312.dll",
+      "Bytes": 6945272,
+      "SHA256": "9A0E3435AAA680D868150F87AB3E388AD2EEBC22F87E036155C7B4EDA8CD2120",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "advapi32.dll",
+        "api-ms-win-core-path-l1-1-0.dll",
+        "api-ms-win-crt-conio-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-process-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "bcrypt.dll",
+        "kernel32.dll",
+        "vcruntime140.dll",
+        "version.dll",
+        "ws2_32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "pythonw.exe",
+      "Bytes": 104304,
+      "SHA256": "D72294FB338BC2FC8896D25A7395A4DB466425427E1559E77185D5135A830681",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "kernel32.dll",
+        "python312.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "vcruntime140.dll",
+      "Bytes": 120400,
+      "SHA256": "052AD6A20D375957E82AA6A3C441EA548D89BE0981516CA7EB306E063D5027F4",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    },
+    {
+      "RelPath": "vcruntime140_1.dll",
+      "Bytes": 49776,
+      "SHA256": "6A99BC0128E0C7D6CBBF615FCC26909565E17D4CA3451B97F8987F9C6ACBC6C8",
+      "Format": "coff-x86-64",
+      "Imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll"
+      ],
+      "DelayImports": [],
+      "HasAuthenticodeBlob": true
+    }
+  ],
+  "OsDependencyNames": {
+    "Named": [
+      "advapi32.dll",
+      "bcrypt.dll",
+      "cabinet.dll",
+      "comctl32.dll",
+      "comdlg32.dll",
+      "crypt32.dll",
+      "gdi32.dll",
+      "imm32.dll",
+      "iphlpapi.dll",
+      "kernel32.dll",
+      "msi.dll",
+      "msvcrt.dll",
+      "netapi32.dll",
+      "ole32.dll",
+      "oleaut32.dll",
+      "propsys.dll",
+      "rpcrt4.dll",
+      "shell32.dll",
+      "user32.dll",
+      "userenv.dll",
+      "version.dll",
+      "winmm.dll",
+      "ws2_32.dll"
+    ],
+    "ApiSets": [
+      "api-ms-win-core-path-l1-1-0.dll",
+      "api-ms-win-crt-conio-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-process-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll"
+    ],
+    "NamedUsedBy": {
+      "advapi32.dll": [
+        "DLLs/libcrypto-3.dll",
+        "DLLs/tcl86t.dll",
+        "DLLs/tk86t.dll",
+        "python312.dll"
+      ],
+      "bcrypt.dll": [
+        "DLLs/libcrypto-3.dll",
+        "python312.dll"
+      ],
+      "cabinet.dll": [
+        "DLLs/_msi.pyd"
+      ],
+      "comctl32.dll": [
+        "DLLs/tk86t.dll"
+      ],
+      "comdlg32.dll": [
+        "DLLs/tk86t.dll"
+      ],
+      "crypt32.dll": [
+        "DLLs/_ssl.pyd"
+      ],
+      "gdi32.dll": [
+        "DLLs/tk86t.dll"
+      ],
+      "imm32.dll": [
+        "DLLs/tk86t.dll"
+      ],
+      "iphlpapi.dll": [
+        "DLLs/_socket.pyd"
+      ],
+      "kernel32.dll": [
+        "DLLs/_asyncio.pyd",
+        "DLLs/_bz2.pyd",
+        "DLLs/_ctypes.pyd",
+        "DLLs/_ctypes_test.pyd",
+        "DLLs/_decimal.pyd",
+        "DLLs/_elementtree.pyd",
+        "DLLs/_hashlib.pyd",
+        "DLLs/_lzma.pyd",
+        "DLLs/_msi.pyd",
+        "DLLs/_multiprocessing.pyd",
+        "DLLs/_overlapped.pyd",
+        "DLLs/_queue.pyd",
+        "DLLs/_socket.pyd",
+        "DLLs/_sqlite3.pyd",
+        "DLLs/_ssl.pyd",
+        "DLLs/_testbuffer.pyd",
+        "DLLs/_testcapi.pyd",
+        "DLLs/_testclinic.pyd",
+        "DLLs/_testconsole.pyd",
+        "DLLs/_testimportmultiple.pyd",
+        "DLLs/_testinternalcapi.pyd",
+        "DLLs/_testmultiphase.pyd",
+        "DLLs/_testsinglephase.pyd",
+        "DLLs/_tkinter.pyd",
+        "DLLs/_uuid.pyd",
+        "DLLs/_wmi.pyd",
+        "DLLs/_zoneinfo.pyd",
+        "DLLs/libcrypto-3.dll",
+        "DLLs/libffi-8.dll",
+        "DLLs/libssl-3.dll",
+        "DLLs/pyexpat.pyd",
+        "DLLs/select.pyd",
+        "DLLs/sqlite3.dll",
+        "DLLs/tcl86t.dll",
+        "DLLs/tk86t.dll",
+        "DLLs/unicodedata.pyd",
+        "DLLs/winsound.pyd",
+        "DLLs/zlib1.dll",
+        "python.exe",
+        "python312.dll",
+        "pythonw.exe",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "msi.dll": [
+        "DLLs/_msi.pyd"
+      ],
+      "msvcrt.dll": [
+        "DLLs/zlib1.dll"
+      ],
+      "netapi32.dll": [
+        "DLLs/tcl86t.dll"
+      ],
+      "ole32.dll": [
+        "DLLs/_ctypes.pyd",
+        "DLLs/_wmi.pyd",
+        "DLLs/tk86t.dll"
+      ],
+      "oleaut32.dll": [
+        "DLLs/_ctypes.pyd",
+        "DLLs/_ctypes_test.pyd",
+        "DLLs/_wmi.pyd"
+      ],
+      "propsys.dll": [
+        "DLLs/_wmi.pyd"
+      ],
+      "rpcrt4.dll": [
+        "DLLs/_msi.pyd",
+        "DLLs/_socket.pyd",
+        "DLLs/_uuid.pyd"
+      ],
+      "shell32.dll": [
+        "DLLs/tk86t.dll"
+      ],
+      "user32.dll": [
+        "DLLs/libcrypto-3.dll",
+        "DLLs/tcl86t.dll",
+        "DLLs/tk86t.dll",
+        "DLLs/winsound.pyd"
+      ],
+      "userenv.dll": [
+        "DLLs/tcl86t.dll"
+      ],
+      "version.dll": [
+        "python312.dll"
+      ],
+      "winmm.dll": [
+        "DLLs/winsound.pyd"
+      ],
+      "ws2_32.dll": [
+        "DLLs/_multiprocessing.pyd",
+        "DLLs/_overlapped.pyd",
+        "DLLs/_socket.pyd",
+        "DLLs/_ssl.pyd",
+        "DLLs/libcrypto-3.dll",
+        "DLLs/select.pyd",
+        "DLLs/tcl86t.dll",
+        "python312.dll"
+      ]
+    },
+    "BytesObtained": false,
+    "Reason": "file bridge refused hard-linked system DLLs"
+  },
+  "ImportTimeClosure": {
+    "Seeds": "harness direct imports (REV18 inventory) plus subject direct imports (Plan section 4)",
+    "Rule": "module and class bodies including top-level if/try branches; function bodies excluded",
+    "ResolvedLibFiles": [
+      {
+        "Module": "__future__",
+        "RelPath": "Lib/__future__.py",
+        "Bytes": 5365,
+        "SHA256": "BF11D13B6C9B2B8706BE425ADDF399965738622BB4CC553217BE16399C51D51A"
+      },
+      {
+        "Module": "_collections_abc",
+        "RelPath": "Lib/_collections_abc.py",
+        "Bytes": 33262,
+        "SHA256": "D0C7B4810D0D6E22968223599E2051AA2148C8CE435CAD8798644E7B682A9147"
+      },
+      {
+        "Module": "_py_abc",
+        "RelPath": "Lib/_py_abc.py",
+        "Bytes": 6336,
+        "SHA256": "8F790C97331A66EA442964314843F7CC8863FB3D9B899183F6D02598D4361A5C"
+      },
+      {
+        "Module": "_threading_local",
+        "RelPath": "Lib/_threading_local.py",
+        "Bytes": 7462,
+        "SHA256": "27BB2BD201E6157EFDD807EC5E3F3C5A8E0EA2EA2E86ED475A59DE8C6442A0EB"
+      },
+      {
+        "Module": "_weakrefset",
+        "RelPath": "Lib/_weakrefset.py",
+        "Bytes": 6098,
+        "SHA256": "CF8031A6E21150438F3D2964C4152615B91A03894616D5B6930E0F14F44DABDA"
+      },
+      {
+        "Module": "abc",
+        "RelPath": "Lib/abc.py",
+        "Bytes": 6726,
+        "SHA256": "D51C54428495CD62A5DA4360315FA84F692B5AA9DB21BE986B3E14A83F7CF288"
+      },
+      {
+        "Module": "ast",
+        "RelPath": "Lib/ast.py",
+        "Bytes": 66292,
+        "SHA256": "57CF6E193F932DCFA3B7080E189D689F510C700D95C3B27E7E8A0D48D2166C2D"
+      },
+      {
+        "Module": "codecs",
+        "RelPath": "Lib/codecs.py",
+        "Bytes": 37999,
+        "SHA256": "000CF1D683C677ED3DE6D8E284376F81DEF4B91F93D68EE41BDF07C4E04CEA77"
+      },
+      {
+        "Module": "collections",
+        "RelPath": "Lib/collections/__init__.py",
+        "Bytes": 53970,
+        "SHA256": "58D1F234B7845FF280F8A195A795F206BC62CE42732CAECAF06E6A133DDD6F15"
+      },
+      {
+        "Module": "collections.abc",
+        "RelPath": "Lib/collections/abc.py",
+        "Bytes": 122,
+        "SHA256": "7AD86878712FC6682863F12208F4CED5DAF2DD82B6FF5ED58207DE29D0EFA410"
+      },
+      {
+        "Module": "contextlib",
+        "RelPath": "Lib/contextlib.py",
+        "Bytes": 28437,
+        "SHA256": "A53B1DB774F19C6B1E4320C2BC64058C49E3FBA58B20B9C1158E5A8D02069890"
+      },
+      {
+        "Module": "copy",
+        "RelPath": "Lib/copy.py",
+        "Bytes": 8704,
+        "SHA256": "4A28A8FAE74106D128DDEED0B59EF38DEAB2F7B8B9D3BD006130C3CF75B42D34"
+      },
+      {
+        "Module": "copyreg",
+        "RelPath": "Lib/copyreg.py",
+        "Bytes": 7831,
+        "SHA256": "EA2363638FE83E8E5B007013A821841371A615D99414B3C2F8F19152CA109A07"
+      },
+      {
+        "Module": "ctypes",
+        "RelPath": "Lib/ctypes/__init__.py",
+        "Bytes": 18789,
+        "SHA256": "8FC533F8AE18A7CA06DCE88FC8DCA5EAE61F2A4198CEB9D4B4B5A69862AA42EE"
+      },
+      {
+        "Module": "ctypes._endian",
+        "RelPath": "Lib/ctypes/_endian.py",
+        "Bytes": 2613,
+        "SHA256": "8C5B9AC7306DCF98856C9B815A5FC604BA0F47ACAB15AC47AD858499C6981579"
+      },
+      {
+        "Module": "dataclasses",
+        "RelPath": "Lib/dataclasses.py",
+        "Bytes": 63673,
+        "SHA256": "3A445BF68189AA04546431FF21084971ADFE07BF0BF6639105472C855D0E053B"
+      },
+      {
+        "Module": "dis",
+        "RelPath": "Lib/dis.py",
+        "Bytes": 31032,
+        "SHA256": "123ADD22BA17877928A397A279EC7F59C822BBFC6A381423955D8FDF7E47FA54"
+      },
+      {
+        "Module": "encodings",
+        "RelPath": "Lib/encodings/__init__.py",
+        "Bytes": 6058,
+        "SHA256": "8B997E9F7BEEF09DE01C34AC34191866D3AB25E17164E08F411940B070BC3E74"
+      },
+      {
+        "Module": "encodings.aliases",
+        "RelPath": "Lib/encodings/aliases.py",
+        "Bytes": 16228,
+        "SHA256": "1893CFB597BC5EAFD38EF03AC85D8874620112514EB42660408811929CC0D6F8"
+      },
+      {
+        "Module": "enum",
+        "RelPath": "Lib/enum.py",
+        "Bytes": 83648,
+        "SHA256": "5F6126EE55609A8FC27BE206803703597E2EFDCAAD1FB80AB975ECD0E63CD6AA"
+      },
+      {
+        "Module": "fnmatch",
+        "RelPath": "Lib/fnmatch.py",
+        "Bytes": 6184,
+        "SHA256": "146D27A2853CD14C95EE49CC6130B9F84E2A56618DD1BE695CDDB20489460425"
+      },
+      {
+        "Module": "functools",
+        "RelPath": "Lib/functools.py",
+        "Bytes": 38949,
+        "SHA256": "F0CA5DD563498F8971E410FE9F37083CFCFF2052A0F48EFCFBE07D6975754864"
+      },
+      {
+        "Module": "genericpath",
+        "RelPath": "Lib/genericpath.py",
+        "Bytes": 5468,
+        "SHA256": "C540A28C560234D4D00D3451DFDDE05B404F81A38BDE87086CE8773021E1CC1B"
+      },
+      {
+        "Module": "hashlib",
+        "RelPath": "Lib/hashlib.py",
+        "Bytes": 9602,
+        "SHA256": "F0C8900585062C567A283CB782C3C867F86C38516E30F1F98A04FFA775B9A013"
+      },
+      {
+        "Module": "importlib",
+        "RelPath": "Lib/importlib/__init__.py",
+        "Bytes": 4922,
+        "SHA256": "80CA1730BD367F664AE4BAFBE73326BDCAA60FA1029033A9210A355A5168C0FA"
+      },
+      {
+        "Module": "importlib._bootstrap",
+        "RelPath": "Lib/importlib/_bootstrap.py",
+        "Bytes": 58608,
+        "SHA256": "B9B30C578A34F70508768EEAC35FAB4A0095E369A7F5D7D3275C310E605D4313"
+      },
+      {
+        "Module": "importlib._bootstrap_external",
+        "RelPath": "Lib/importlib/_bootstrap_external.py",
+        "Bytes": 71155,
+        "SHA256": "255750F5267B487DBB99B1DEED48B50A4524F4DBBA38D40AA0F9CD5A063F7C62"
+      },
+      {
+        "Module": "importlib.machinery",
+        "RelPath": "Lib/importlib/machinery.py",
+        "Bytes": 900,
+        "SHA256": "9A2EE437C38E45CDF7559F613F57209B5B11C0824A9069192B9EBD5A2CEEFA1A"
+      },
+      {
+        "Module": "inspect",
+        "RelPath": "Lib/inspect.py",
+        "Bytes": 130558,
+        "SHA256": "07FF418CDA6EB3F187CDB83B51E7DA34E9524ED3CB68235DBCD0EFCBDE49014C"
+      },
+      {
+        "Module": "io",
+        "RelPath": "Lib/io.py",
+        "Bytes": 3681,
+        "SHA256": "D70646D9C063DD0AC4293591639DE75A100731D9F091F916FBCA4857CD8A044E"
+      },
+      {
+        "Module": "ipaddress",
+        "RelPath": "Lib/ipaddress.py",
+        "Bytes": 81504,
+        "SHA256": "98E5D9E9235C4381265D84D3B4D8125822CBFBE352E747190C8BE877F6CEC2D5"
+      },
+      {
+        "Module": "json",
+        "RelPath": "Lib/json/__init__.py",
+        "Bytes": 14379,
+        "SHA256": "FEB17670E443E5DB2723F217727DCC5D5E155C40E4E6935B16061C88542F24E7"
+      },
+      {
+        "Module": "json.decoder",
+        "RelPath": "Lib/json/decoder.py",
+        "Bytes": 12882,
+        "SHA256": "9F4CC83197BF1B13FEE3CE71A044A4B4987A7EEECD8768206ABD31A78E0A3D16"
+      },
+      {
+        "Module": "json.encoder",
+        "RelPath": "Lib/json/encoder.py",
+        "Bytes": 16518,
+        "SHA256": "497CC84D2B3936F2A25EC6E561A9A3266C4BC4C9661F5841C3B6EC31EAA0EDB9"
+      },
+      {
+        "Module": "json.scanner",
+        "RelPath": "Lib/json/scanner.py",
+        "Bytes": 2507,
+        "SHA256": "B2577F9DB9F69A0A27F251776349238B17B8B214A01128E7477B0F7D8E24A186"
+      },
+      {
+        "Module": "keyword",
+        "RelPath": "Lib/keyword.py",
+        "Bytes": 1137,
+        "SHA256": "1F28F509383273238AD86EDA04A96343FA0DC10EEAF3189439959D75CDAC0A0B"
+      },
+      {
+        "Module": "linecache",
+        "RelPath": "Lib/linecache.py",
+        "Bytes": 5985,
+        "SHA256": "30AF1D7D7D3C999BB1EE983F3228F8964B5D59DED653AB018D31B73F25A2576F"
+      },
+      {
+        "Module": "locale",
+        "RelPath": "Lib/locale.py",
+        "Bytes": 80378,
+        "SHA256": "F2A5793C0D629730C9F60EF11509484E04A92697CE603B30B7E9F1137CC48742"
+      },
+      {
+        "Module": "logging",
+        "RelPath": "Lib/logging/__init__.py",
+        "Bytes": 85782,
+        "SHA256": "38FDE6B46E26E58B558F709FE2941CF41C64BEEAD59E03089DE76553DC8975C1"
+      },
+      {
+        "Module": "ntpath",
+        "RelPath": "Lib/ntpath.py",
+        "Bytes": 32762,
+        "SHA256": "E62526627FE0129120E452F99B05B84965A57451E5AD8D29F0D5F3276CC2C489"
+      },
+      {
+        "Module": "opcode",
+        "RelPath": "Lib/opcode.py",
+        "Bytes": 13667,
+        "SHA256": "3EDC2765EFB81769F13E958C742F77159CFE6466D2298F656C5A31274EE6537D"
+      },
+      {
+        "Module": "operator",
+        "RelPath": "Lib/operator.py",
+        "Bytes": 11432,
+        "SHA256": "C57B6816CFDDFA6E4A126583FCA0A2563234018DAEC2CFB9B5142D855546955C"
+      },
+      {
+        "Module": "os",
+        "RelPath": "Lib/os.py",
+        "Bytes": 41980,
+        "SHA256": "C1549BF7CE4ACF22F760F5076149AFA5250FAF24BCAB9515890F590EE78D927B"
+      },
+      {
+        "Module": "pathlib",
+        "RelPath": "Lib/pathlib.py",
+        "Bytes": 52487,
+        "SHA256": "CD1557DEDCAA1BE0459CD59760C5EBAC83A3E412E0E1B5BC0B1A82A19563A090"
+      },
+      {
+        "Module": "posixpath",
+        "RelPath": "Lib/posixpath.py",
+        "Bytes": 17870,
+        "SHA256": "4A50991174A61362A0D612B86D05230B05C7AE282291733E32C87699168C857B"
+      },
+      {
+        "Module": "re",
+        "RelPath": "Lib/re/__init__.py",
+        "Bytes": 16700,
+        "SHA256": "778CDCA1FE51CDDB7671D7A158C6BDECEE1B7967E9F4A0DDF41CFB5320568C42"
+      },
+      {
+        "Module": "re._casefix",
+        "RelPath": "Lib/re/_casefix.py",
+        "Bytes": 5550,
+        "SHA256": "B0DEE234E5F8096FC9C1B035EC52D0B1B50CC1F3AEA20B360B8BE902E53AC752"
+      },
+      {
+        "Module": "re._compiler",
+        "RelPath": "Lib/re/_compiler.py",
+        "Bytes": 27169,
+        "SHA256": "618F17ADD086B1DC5314A4E68E9B02A7072CBFB0A401791FD5963DABCD03098C"
+      },
+      {
+        "Module": "re._constants",
+        "RelPath": "Lib/re/_constants.py",
+        "Bytes": 6150,
+        "SHA256": "8DF304954CA75DCD98B9F1F5E3CB5347ADC6EACCFC461A94AB914E1B0085E9AB"
+      },
+      {
+        "Module": "re._parser",
+        "RelPath": "Lib/re/_parser.py",
+        "Bytes": 42281,
+        "SHA256": "BCC84F06D54E2D28506350A60BC1AAAA0EFDA4221F4CEEB05B2D0F48C712C479"
+      },
+      {
+        "Module": "reprlib",
+        "RelPath": "Lib/reprlib.py",
+        "Bytes": 7362,
+        "SHA256": "53C0C775ACD2C7EA3405271E2B8619A5FDC0567A63F263199D594626616184CD"
+      },
+      {
+        "Module": "selectors",
+        "RelPath": "Lib/selectors.py",
+        "Bytes": 20294,
+        "SHA256": "C33AE11C98B22294D106D21C60F853025EEF0FBE86F4B534D35761DFA0B825CF"
+      },
+      {
+        "Module": "signal",
+        "RelPath": "Lib/signal.py",
+        "Bytes": 2589,
+        "SHA256": "0B7E3D3D39A120142DBF4875D7D79579CAD8FEE662ADD30C2375A797F0D2386E"
+      },
+      {
+        "Module": "stat",
+        "RelPath": "Lib/stat.py",
+        "Bytes": 5680,
+        "SHA256": "E514FD41E2933DD1F06BE315FB42A62E67B33D04571435A4815A18F490E0F6CE"
+      },
+      {
+        "Module": "string",
+        "RelPath": "Lib/string.py",
+        "Bytes": 12095,
+        "SHA256": "C5F415046D856B81BF227A605A410E7A9F250F477A8BA2418689159E2EF4D70B"
+      },
+      {
+        "Module": "struct",
+        "RelPath": "Lib/struct.py",
+        "Bytes": 272,
+        "SHA256": "EADBCC540C3B6496E52449E712ECA3694E31E1D935AF0F1E26CFF0E3CC370945"
+      },
+      {
+        "Module": "subprocess",
+        "RelPath": "Lib/subprocess.py",
+        "Bytes": 90963,
+        "SHA256": "E9886605CCAC88BCFE2330A1B4CD8F132CBAF97EBB6834B1DCB5A69B127B8D5B"
+      },
+      {
+        "Module": "textwrap",
+        "RelPath": "Lib/textwrap.py",
+        "Bytes": 20209,
+        "SHA256": "CAD00069B2A25A585604D2FA774C288CF5ED70D4464AFAC16EDF821F3A4AFD5F"
+      },
+      {
+        "Module": "threading",
+        "RelPath": "Lib/threading.py",
+        "Bytes": 61908,
+        "SHA256": "FEB12E11FD550B71869A8960D6E8C0151E3B1FDC7A2DF08A4BF5900AFFC11C8A"
+      },
+      {
+        "Module": "token",
+        "RelPath": "Lib/token.py",
+        "Bytes": 2654,
+        "SHA256": "B4324F039278FA84F7A6FD0B9C51190216AC0CAC19E5B1EA4282D8919A114693"
+      },
+      {
+        "Module": "tokenize",
+        "RelPath": "Lib/tokenize.py",
+        "Bytes": 22164,
+        "SHA256": "F386E9870735B6BA7CE4893C0FAF0475FE5B6A5F47DA7D717433FC488A7BB3B0"
+      },
+      {
+        "Module": "traceback",
+        "RelPath": "Lib/traceback.py",
+        "Bytes": 47580,
+        "SHA256": "A6939A8B264D5AB6BF9B32FF247A7419D6E613FD899D0EEBE6565207EE87D0F6"
+      },
+      {
+        "Module": "types",
+        "RelPath": "Lib/types.py",
+        "Bytes": 11326,
+        "SHA256": "D7CE485ECD8D4D1531D8F710E538B4D1A49378AFACB6FF9231E48C645A9FA95E"
+      },
+      {
+        "Module": "typing",
+        "RelPath": "Lib/typing.py",
+        "Bytes": 122330,
+        "SHA256": "26506916777C5FB375F98D13824895ADB110565A12A9674C03CB596332E13C43"
+      },
+      {
+        "Module": "urllib",
+        "RelPath": "Lib/urllib/__init__.py",
+        "Bytes": 0,
+        "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "Module": "urllib.parse",
+        "RelPath": "Lib/urllib/parse.py",
+        "Bytes": 46938,
+        "SHA256": "8E1026B2DE5FB7EF9265BF512B6BA11923C3A8BFA48A8B2158475C07C255E1A1"
+      },
+      {
+        "Module": "warnings",
+        "RelPath": "Lib/warnings.py",
+        "Bytes": 22507,
+        "SHA256": "0CDD7709B5F38F2A3A1D84893D5D652EAAFFD96FB1182E953513998ED09A2E34"
+      },
+      {
+        "Module": "weakref",
+        "RelPath": "Lib/weakref.py",
+        "Bytes": 22187,
+        "SHA256": "6721C34BA3C404BF4A443890ED374B546A870C958935A6AA4FDF634876A5A980"
+      }
+    ],
+    "NonLibNames": [
+      {
+        "Module": "_abc",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_ast",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_codecs",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_collections",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_ctypes",
+        "Disposition": "EXTENSION_PYD_IN_DLLS"
+      },
+      {
+        "Module": "_frozen_importlib",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_frozen_importlib_external",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_functools",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_hashlib",
+        "Disposition": "EXTENSION_PYD_IN_DLLS"
+      },
+      {
+        "Module": "_imp",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_io",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_json",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_locale",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_opcode",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_operator",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_posixsubprocess",
+        "Disposition": "NON_WINDOWS_MODULE_PLATFORM_GUARDED"
+      },
+      {
+        "Module": "_signal",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_sre",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_stat",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_string",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_struct",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_thread",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_tokenize",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_typing",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_warnings",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_weakref",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "_winapi",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "atexit",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "builtins",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "errno",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "fcntl",
+        "Disposition": "NON_WINDOWS_MODULE_PLATFORM_GUARDED"
+      },
+      {
+        "Module": "itertools",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "marshal",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "math",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "msvcrt",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "nt",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "posix",
+        "Disposition": "NON_WINDOWS_MODULE_PLATFORM_GUARDED"
+      },
+      {
+        "Module": "select",
+        "Disposition": "EXTENSION_PYD_IN_DLLS"
+      },
+      {
+        "Module": "sys",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "time",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      },
+      {
+        "Module": "winreg",
+        "Disposition": "BUILTIN_OR_FROZEN_NOT_STATICALLY_VERIFIED"
+      }
+    ]
+  },
+  "AllEdgesClosure": {
+    "Closed": false,
+    "ResolvedModules": 102,
+    "PendingFiles": [
+      "_compat_pickle.py",
+      "bz2.py",
+      "difflib.py",
+      "email/__init__.py",
+      "email/message.py",
+      "importlib/_abc.py",
+      "importlib/metadata/_text.py",
+      "importlib/resources/_common.py",
+      "importlib/resources/_itertools.py",
+      "importlib/resources/_legacy.py",
+      "importlib/resources/abc.py",
+      "lzma.py",
+      "pdb.py",
+      "pprint.py",
+      "tarfile.py",
+      "zipfile/__init__.py"
+    ]
+  },
+  "OD04Components": [
+    {
+      "Component": "IMPORT_CLOSURE",
+      "State": "IMPORT_TIME_CLOSURE_HASHED_CANDIDATE",
+      "Missing": [
+        "frozen module set verified on host",
+        "dynamic encodings",
+        "all-edges upper bound",
+        "binding to accepted harness bytes"
+      ]
+    },
+    {
+      "Component": "CALL_IDENTITY_BOTH_SIDES",
+      "State": "ABSENT",
+      "Missing": [
+        "requires execution or an accepted launcher"
+      ]
+    },
+    {
+      "Component": "CHECK_TO_USE_ANTI_SUBSTITUTION",
+      "State": "ABSENT",
+      "Missing": [
+        "writable per-user Lib and __pycache__",
+        "no freeze or ACL evidence"
+      ]
+    },
+    {
+      "Component": "T0_PREPROCESS_IDENTITY",
+      "State": "ABSENT",
+      "Missing": [
+        "pre-start verification design and observation"
+      ]
+    },
+    {
+      "Component": "PE",
+      "State": "RUNTIME_PE_IDENTITY_AND_IMPORTS_CANDIDATE",
+      "Missing": [
+        "Authenticode verification",
+        "reviewed resolver acceptance",
+        "search-order simulation"
+      ]
+    },
+    {
+      "Component": "OS",
+      "State": "NAMES_ONLY",
+      "Missing": [
+        "OS DLL bytes and SHA (bridge refused hard links)",
+        "API-set resolution",
+        "host OS build identity"
+      ]
+    }
+  ],
+  "Findings": [
+    {
+      "FindingId": "OD04-LFR-F01",
+      "Topic": "NOT_THE_RECORDED_VALIDATION_HOST",
+      "Detail": "This machine is a different Windows host from the one in the repository records: a different user profile, no project working copy in Documents, no tool runtime cache in the profile. Its observations are a new candidate, not evidence for the previously recorded environment."
+    },
+    {
+      "FindingId": "OD04-LFR-F02",
+      "Topic": "FIXED_USER_INSTALLED_RUNTIME",
+      "Detail": "The candidate runtime is a per-user CPython install, not a tool-managed cache. NEWS.txt names 3.12.10 final, release date 2025-04-08. Runtime file modification times observed through the bridge all fall on 2025-04-08 UTC. Version comes from NEWS.txt text only; the interpreter was not run."
+    },
+    {
+      "FindingId": "OD04-LFR-F03",
+      "Topic": "PE_CLOSURE_INSIDE_RUNTIME",
+      "Detail": "44 PE files hashed. All are x86-64 and carry an Authenticode blob (signature not verified). Imports resolve inside the runtime except 23 named system DLLs and 14 API-set names. One delay import exists: _wmi.pyd -> ole32.dll."
+    },
+    {
+      "FindingId": "OD04-LFR-F04",
+      "Topic": "OS_DLL_BYTES_NOT_OBTAINED",
+      "Detail": "Read access to the system DLL folder was granted, but the file bridge refused every system DLL because each is hard-linked (component store). OS DLL bytes and SHA are not recorded. API-set names are not resolved to host DLLs."
+    },
+    {
+      "FindingId": "OD04-LFR-F05",
+      "Topic": "IMPORT_TIME_CLOSURE",
+      "Detail": "From the harness and subject direct imports, the import-time closure (module bodies and class bodies, including top-level if/try branches; function bodies excluded) resolves to 68 Lib files, all hashed. 41 names are not Lib files; their dispositions are listed. Encodings loaded by name at run time are not statically resolvable."
+    },
+    {
+      "FindingId": "OD04-LFR-F06",
+      "Topic": "ALL_EDGES_CLOSURE_NOT_CLOSED",
+      "Detail": "Following every import statement including function bodies pulls in much of the standard library. The scan stopped with 102 modules resolved and 16 files still to read. This upper bound is not closed."
+    },
+    {
+      "FindingId": "OD04-LFR-F07",
+      "Topic": "FROZEN_MODULES_AND_BYTECODE_CACHE",
+      "Detail": "CPython 3.11 and later load some start-up modules (for example os, stat, ntpath, codecs, io, abc) from frozen copies inside python312.dll, so their Lib SHA is not the code that runs. Lib __pycache__ files observed were written 2026-10-30T21:03Z, so the Lib tree is writable by the user and holds bytecode the loader may prefer. Both limit check-to-use. The frozen list is CPython behaviour, not verified on this host."
+    },
+    {
+      "FindingId": "OD04-LFR-F08",
+      "Topic": "STILL_ABSENT",
+      "Detail": "Not obtainable with read-only file access and no execution: T0 pre-start verification, two-side call identity, check-to-use protection, OS DLL bytes. The harness and subject sources are not on this machine."
+    }
+  ],
+  "OD04Decision": {
+    "SelectedKey": "DEFER_WITHOUT_EVIDENCE",
+    "ChangedByThisRecord": false,
+    "EvidenceSupplied": false,
+    "Note": "Candidate observation on a new host. Not admitted and not evidence for the recorded environment."
+  },
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "RuntimeRootAdmitted": false,
+  "ManifestCreated": false,
+  "RuntimeDependencyManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS"
+  },
+  "Checks": [
+    {
+      "CheckId": "LFR-01.PE_COUNT",
+      "Passed": true,
+      "Detail": "44 runtime PE files hashed and parsed."
+    },
+    {
+      "CheckId": "LFR-02.RESOLVER_AGREE",
+      "Passed": true,
+      "Detail": "Two readers agree on normal imports for every file."
+    },
+    {
+      "CheckId": "LFR-03.ALL_X64",
+      "Passed": true,
+      "Detail": "All PE files are x86-64."
+    },
+    {
+      "CheckId": "LFR-04.IMPORT_TIME_CLOSED",
+      "Passed": true,
+      "Detail": "Import-time closure has no unread Lib file; 68 files hashed."
+    },
+    {
+      "CheckId": "LFR-05.ALL_EDGES_OPEN",
+      "Passed": true,
+      "Detail": "All-edges closure is recorded as not closed."
+    },
+    {
+      "CheckId": "LFR-06.NO_ADMISSION",
+      "Passed": true,
+      "Detail": "Signed and Accepted are false. Admission is NOT_ADMITTED. OD-04 unchanged."
+    }
+  ],
+  "CheckCount": 6,
+  "ChecksPassed": 6,
+  "PassMeansFieldMatchNotAcceptance": true
+}
