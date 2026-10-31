@@ -1,0 +1,246 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "OwnerBatchAuthorization": "2026-10-31: Owner chose option 1 (change a decision) -> OD-04 supplement evidence; owner cannot supply the Windows validation host, so the owner instructed: inventory only what the GitHub repository already records for OD-04, list the gaps, admit nothing, do not change OD-04, do not close DSP-004.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV18.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "e9d4a54fcf5b5de04da7272c8684a09a6497c5fe",
+    "RecordedAtUtc": "2026-10-31T13:50:00Z",
+    "Method": "PYTHON_STDLIB_SHA256_JSON_MARKDOWN_TABLE_AND_AST_PARSE_READ_ONLY",
+    "Host": "CLOUD_LINUX_CONTAINER_NOT_VALIDATION_HOST",
+    "ValidationHostAccessed": false,
+    "ToolCacheRead": false,
+    "HistoricalWindowsVenvRead": false,
+    "EnvironmentManifestRead": true,
+    "EnvironmentManifestReadNote": "During exploration the recorder ran a text search over ENVIRONMENT_MANIFEST.md. Its content is not used, quoted, or bound by this record. All environment identities here come from the Plan, the rebinding candidate, and attempt_02.",
+    "RepositoryModulesImportedOrExecuted": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScenarioRunnersExecuted": false,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "RuntimeRootLocatorSupplied": false,
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    },
+    "GitHeadBeforeThisIncrement": "e9d4a54fcf5b5de04da7272c8684a09a6497c5fe",
+    "MaterializedFrom": "PR #22 merge"
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV17_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV17.md",
+      "SHA256": "CF474672F16301D1C246ACDA058D2689E536D10BC5954251E7498C0A616404E4",
+      "Bytes": 8129,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV17_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV17.json",
+      "SHA256": "EA33B5D5962EA929560C391D6AFCB3299FAD5A3E9C017D48E9E0C1882678E3E5",
+      "Bytes": 11789,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "PATH_B_CONSISTENT_OWNER_DECISIONS_BATCH_REV17_RECORDED_NOT_ADMITTED",
+    "FieldMatch": {
+      "SignedFalse": true,
+      "AcceptedFalse": true,
+      "Admission": "NOT_ADMITTED",
+      "RetainedDsp004": "OPEN / HOLD",
+      "Dsp004Closed": false,
+      "Od04Key": "DEFER_WITHOUT_EVIDENCE"
+    }
+  },
+  "NewPreparationFact": "OD04_REPOSITORY_EVIDENCE_INVENTORY_REV1_RECORDED_NOT_ADMITTED",
+  "InventoryRecord": {
+    "Markdown": {
+      "Role": "OD04_INVENTORY_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_EVIDENCE_INVENTORY_REV1_CANDIDATE.md",
+      "SHA256": "C88AB81A9511836FA22B43BA8F536B652436F6B34366104F47248AA9916FCA1E",
+      "Bytes": 8273,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "OD04_INVENTORY_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04_EVIDENCE_INVENTORY_REV1_CANDIDATE.json",
+      "SHA256": "81873771A15954217A8C89AE9B359FD4D0FDB2AA50D4D79EC825ADC1A2724761",
+      "Bytes": 17820,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "OD04_REPOSITORY_EVIDENCE_INVENTORY_REV1_RECORDED_NOT_ADMITTED"
+  },
+  "OD04Changed": false,
+  "OD04EvidenceSupplied": false,
+  "FurtherDeliverableOpened": false,
+  "AssetWallCrossed": false,
+  "RegisterRev1Mutated": false,
+  "OverlayRev4Mutated": false,
+  "Od05RecordMutated": false,
+  "Od14RecordMutated": false,
+  "RuntimeRootAdmitted": false,
+  "RuntimeRootLocatorSupplied": false,
+  "PathsInvented": false,
+  "StartupSequenceInvented": false,
+  "ImportSequenceInvented": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "RuntimeDependencyManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "CloseDsp004Selected": false,
+  "DSP004Closed": false,
+  "B01Closed": false,
+  "B02Closed": false,
+  "CommercialP0Changed": false,
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "PassMeansFieldMatchNotAcceptance": true,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-13"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "RETAIN is recorded. DISPOSE and ELIMINATE are false. The FA-06 register stays NOT_ADMITTED."
+    },
+    {
+      "Rank": 2,
+      "GapId": "RUNTIME_ROOT",
+      "State": "REFUSE_LOCATOR",
+      "DecisionIds": [
+        "OD-05",
+        "OD-03"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "OD-05 stays REFUSE_LOCATOR. OD-03 RETAIN does not supply a locator."
+    },
+    {
+      "Rank": 3,
+      "GapId": "OD-04",
+      "State": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS",
+      "DecisionIds": [
+        "OD-04"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Still without new evidence. REV18 inventories repository records only: partial textual import list and five runtime-file identities across three generations. Call identity, check-to-use, T0, PYD, OS, and PE import evidence are absent and can only come from the validation host."
+    },
+    {
+      "Rank": 4,
+      "GapId": "FA-05",
+      "State": "INCOMPLETE",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "KEEP_REV1_RECORD stays the bound choice. The future static identity note is not written."
+    },
+    {
+      "Rank": 5,
+      "GapId": "AP-020-AP-022",
+      "State": "LEAVE_UNREPAIRED_AND_REFUSE",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "BLOCK codes stay unrepaired. Actual sequence locators stay null."
+    },
+    {
+      "Rank": 6,
+      "GapId": "ACTUAL_SIDES",
+      "State": "UNBOUND_DO_NOT_AUTHORIZE",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Three sides stay UNBOUND. No call to read actual references is authorized."
+    },
+    {
+      "Rank": 7,
+      "GapId": "SHA_ACCEPTANCE",
+      "State": "REFUSE",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "REV3 SHAs, prior candidate SHAs including 57BAF161, and Harness SHAs are not accepted."
+    },
+    {
+      "Rank": 8,
+      "GapId": "OD-15",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Manifest, formal run, FA-08, and DSP-004 closure stay unauthorized. CLOSE_DSP004 is Selected false."
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "INC18-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV17 JSON re-hash equals the SHA cited in the REV17 narrative."
+    },
+    {
+      "CheckId": "INC18-02.INVENTORY_FACT",
+      "Passed": true,
+      "Detail": "Inventory JSON 17820 bytes 81873771A15954217A8C89AE9B359FD4D0FDB2AA50D4D79EC825ADC1A2724761. 7/7 field checks pass. Admission NOT_ADMITTED."
+    },
+    {
+      "CheckId": "INC18-03.OD04_UNCHANGED",
+      "Passed": true,
+      "Detail": "OD-04 stays DEFER_WITHOUT_EVIDENCE / OWNER_HELD_OPEN_NO_CLOSED_OPTIONS."
+    },
+    {
+      "CheckId": "INC18-04.OPEN_HOLD",
+      "Passed": true,
+      "Detail": "DSP-004 stays OPEN / HOLD. OD-15 actions stay unselected."
+    }
+  ],
+  "CheckCount": 4,
+  "ChecksPassed": 4
+}
