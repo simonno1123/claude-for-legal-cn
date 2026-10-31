@@ -1,0 +1,601 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "OwnerBatchAuthorization": "After REV15 merge, record Project Owner 张纯熙's OD-14 choice KEEP_REV1_RECORD and continue Path B formal-acceptance preparation only. Do not open or write a future static identity note. Do not mark FA-05 completed beyond recording the selection. Do not admit the options sheet or the REV12 independent review. Do not change OD-05 REFUSE_LOCATOR. Do not invent a runtime root. Do not admit sources, accept asset SHAs, Harness SHAs, REV3 SHAs, or source-root SHAs, repair BLOCKs, dispose FA-06 rows, bind actual sides, create a Manifest, authorize a formal run, complete FA-08, or close DSP-004 / B-01 / B-02.",
+  "PreviouslyRecordedOwnerStepSentence": "写下一项筹备文档，不准入、不接受资产、不关 DSP-004.",
+  "PreviouslyRecordedOwnerStepSentenceReissued": false,
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV16.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "8160eee3e42b8a44305545705eef95a89f99477b",
+    "MaterializedFrom": "PR #19",
+    "RecordedAtUtc": "2026-10-31T00:20:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_AND_JSON_READ_ONLY",
+    "HashingIsIdentityOnly": true,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "EnvironmentManifestRead": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "FutureStaticIdentityNoteWritten": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV15.md",
+      "SHA256": "ECFE6BC3F44E549789342C02125A60111B0D995D1287F0E1EFA700424FEA4943",
+      "Bytes": 12006,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV15.json",
+      "SHA256": "E3817F182B51460F7E8C59CF0104A6355A21CA3B8474970EECD3944670590DA9",
+      "Bytes": 20253,
+      "Accepted": false,
+      "MatchesShaRecordedInRev15Markdown": true
+    },
+    "NewPreparationFact": "OD05_RUNTIME_ROOT_LOCATOR_REFUSED_RECORDED_NOT_ADMITTED",
+    "FieldMatch": {
+      "SignedFalse": true,
+      "AcceptedFalse": true,
+      "Admission": "NOT_ADMITTED",
+      "RetainedDsp004": "OPEN / HOLD",
+      "B01": "OPEN",
+      "B02": "OPEN",
+      "Dsp004Closed": false,
+      "SelectedChoiceId": "REFUSE_LOCATOR",
+      "RuntimeRootAdmitted": false,
+      "FA05Completed": false,
+      "ManifestCreated": false,
+      "FormalRunAuthorized": false,
+      "FA08Completed": false,
+      "PassMeansFieldMatchNotAcceptance": true
+    }
+  },
+  "NewPreparationFact": "OD14_FA05_KEEP_REV1_RECORD_RECORDED_NOT_ADMITTED",
+  "OwnerDecision": {
+    "Owner": "张纯熙",
+    "DecisionId": "OD-14",
+    "Subject": "FA05_OPTION_SELECTION",
+    "Selected": true,
+    "SelectedMeaning": "Selected is true only because KEEP_REV1_RECORD is the selected choice.",
+    "SelectedChoiceId": "KEEP_REV1_RECORD",
+    "KeepRev1RecordSelected": true,
+    "FutureStaticIdentityNoteOnlySelected": false,
+    "NotAvailableUnderPathBSelected": false,
+    "Decided": true,
+    "Opened": false,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "FutureStaticIdentityNoteWritten": false,
+    "OptionsSheetAdmitted": false,
+    "OptionsReviewAdmitted": false,
+    "FA05Completed": false
+  },
+  "Od05Unchanged": {
+    "DecisionId": "OD-05",
+    "SelectedChoiceId": "REFUSE_LOCATOR",
+    "Decided": true,
+    "Opened": false,
+    "Signed": false,
+    "Accepted": false,
+    "Admission": "NOT_ADMITTED",
+    "RuntimeRootAdmitted": false,
+    "Changed": false
+  },
+  "DecisionRecord": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD14_FA05_OPTION_DECISION_REV1.md",
+      "SHA256": "DA0871EBAAE92B48C40043AA9CDAF3387EC447610F9DD7BA6BA4DE5953F756E9",
+      "Bytes": 11599,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD14_FA05_OPTION_DECISION_REV1.json",
+      "SHA256": "E382AE8D8AD6F6033A7526C79559BE641AC0A2AED51D3500523A76A0C0E7982A",
+      "Bytes": 17592,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "SelectedChoiceId": "KEEP_REV1_RECORD",
+      "Decided": true,
+      "Opened": false,
+      "FA05Completed": false,
+      "ChecksPassed": 12,
+      "CheckCount": 12,
+      "PassMeansFieldMatchNotAcceptance": true
+    }
+  },
+  "StatusOverlay": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV3_STATUS_OVERLAY_CANDIDATE.md",
+      "SHA256": "972F15B5E1C4BAE478DFD1BD2BAA3271DB5D47C0CDA47ADCA7FF7920F5DC0C4A",
+      "Bytes": 9306,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV3_STATUS_OVERLAY_CANDIDATE.json",
+      "SHA256": "F93F3CFD7E7342D301D722D9978734FCF7BFA8B53EB747D525D9881B98C67800",
+      "Bytes": 25452,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "NewPreparationFact": "OWNER_ASSET_DECISION_STATUS_OVERLAY_REV3_NOT_ADMITTED",
+      "DecidedRowCount": 2,
+      "UndecidedRowCount": 13,
+      "OpenedRowCount": 0,
+      "RegisterRev1Mutated": false,
+      "OverlayRev2Mutated": false,
+      "ChecksPassed": 10,
+      "CheckCount": 10,
+      "PassMeansFieldMatchNotAcceptance": true
+    }
+  },
+  "RegisterRev1": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+      "Bytes": 37989,
+      "Accepted": false,
+      "Mutated": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+      "Bytes": 82247,
+      "Accepted": false,
+      "Signed": false,
+      "Admission": "NOT_ADMITTED",
+      "DecidedRowCount": 0,
+      "OnDiskOd05Decided": false,
+      "OnDiskOd14Decided": false,
+      "OnDiskOd14KeepRev1RecordSelected": false,
+      "Mutated": false
+    }
+  },
+  "OverlayRev2": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.md",
+      "SHA256": "A069DE20BEE610B0FF4E7DD3FBC4F02654C3469C0F673DEC1421F75B52870A3A",
+      "Bytes": 6210,
+      "Accepted": false,
+      "Mutated": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.json",
+      "SHA256": "8BFE26CAF66524E43B4D11AE8909ED7F1ADDE13BCF8FA7B1DD852137A89B55CF",
+      "Bytes": 16111,
+      "Accepted": false,
+      "Signed": false,
+      "Admission": "NOT_ADMITTED",
+      "NewPreparationFact": "OWNER_ASSET_DECISION_STATUS_OVERLAY_REV2_NOT_ADMITTED",
+      "DecidedRowCount": 1,
+      "Mutated": false
+    }
+  },
+  "OptionsSheet": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+      "SHA256": "6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4",
+      "Bytes": 10924,
+      "Accepted": false,
+      "Admitted": false,
+      "Mutated": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+      "SHA256": "88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8",
+      "Bytes": 12147,
+      "Accepted": false,
+      "Signed": false,
+      "Admission": "NOT_ADMITTED",
+      "NewPreparationFact": "FA05_OPTIONS_SHEET_NOT_SELECTED_NOT_ADMITTED",
+      "OnDiskAnyOptionSelected": false,
+      "OnDiskAnyOptionOpened": false,
+      "FA05Completed": false,
+      "Mutated": false,
+      "Admitted": false
+    }
+  },
+  "OptionsReview": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "7EFB324FAEC1F33EDAF87444FB82C79A1115C4EB0DBE4928F1CA2F6960F6E69A",
+      "Bytes": 17974,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "3BEC8B6BE1173C4A22374F21C3726218F8F16AA7C520C9391D10B1752889755A",
+      "Bytes": 35336,
+      "Accepted": false,
+      "Signed": false,
+      "Admission": "NOT_ADMITTED",
+      "NewPreparationFact": "FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+      "Admitted": false
+    }
+  },
+  "Rev12": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.md",
+      "SHA256": "E44A36331C3679C04B3923E000077F1AF83329B075AF5D27ECD19DD92D68D063",
+      "Bytes": 12277,
+      "Accepted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.json",
+      "SHA256": "1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17",
+      "Bytes": 10089,
+      "Accepted": false,
+      "MatchesShaRecordedInRev12Markdown": true
+    },
+    "NewPreparationFact": "FA05_OPTIONS_SHEET_INDEPENDENT_STATIC_REVIEW_NOT_ACCEPTED",
+    "Admission": "NOT_ADMITTED"
+  },
+  "BoundIdentities": [
+    {
+      "Role": "REV15_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV15.md",
+      "SHA256": "ECFE6BC3F44E549789342C02125A60111B0D995D1287F0E1EFA700424FEA4943",
+      "Bytes": 12006,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV15_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV15.json",
+      "SHA256": "E3817F182B51460F7E8C59CF0104A6355A21CA3B8474970EECD3944670590DA9",
+      "Bytes": 20253,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OD05_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.md",
+      "SHA256": "30CA669C6EFE30EDDEE294CF2CAF2B9C3109E168E211753DDF62229EC3700192",
+      "Bytes": 9876,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OD05_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.json",
+      "SHA256": "96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0",
+      "Bytes": 14234,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OVERLAY_REV2_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.md",
+      "SHA256": "A069DE20BEE610B0FF4E7DD3FBC4F02654C3469C0F673DEC1421F75B52870A3A",
+      "Bytes": 6210,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "OVERLAY_REV2_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.json",
+      "SHA256": "8BFE26CAF66524E43B4D11AE8909ED7F1ADDE13BCF8FA7B1DD852137A89B55CF",
+      "Bytes": 16111,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REGISTER_REV1_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+      "Bytes": 37989,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REGISTER_REV1_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+      "Bytes": 82247,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_SHEET_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.md",
+      "SHA256": "6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4",
+      "Bytes": 10924,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_SHEET_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE.json",
+      "SHA256": "88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8",
+      "Bytes": 12147,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_REVIEW_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "7EFB324FAEC1F33EDAF87444FB82C79A1115C4EB0DBE4928F1CA2F6960F6E69A",
+      "Bytes": 17974,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "FA05_REVIEW_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA05_OPTIONS_SHEET_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "3BEC8B6BE1173C4A22374F21C3726218F8F16AA7C520C9391D10B1752889755A",
+      "Bytes": 35336,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV12_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.md",
+      "SHA256": "E44A36331C3679C04B3923E000077F1AF83329B075AF5D27ECD19DD92D68D063",
+      "Bytes": 12277,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV12_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV12.json",
+      "SHA256": "1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17",
+      "Bytes": 10089,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Od03SideEffect": {
+    "DecisionId": "OD-03",
+    "Selected": false,
+    "Decided": false,
+    "Opened": false,
+    "Disposed": false,
+    "RetainedAsDecision": false,
+    "Orders": [
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      48,
+      55,
+      60,
+      61
+    ],
+    "SideEffect": "CONTEXT_ONLY_ROW_STILL_UNDECIDED"
+  },
+  "FurtherDeliverableOpened": false,
+  "FutureStaticIdentityNoteWritten": false,
+  "AssetWallCrossed": false,
+  "RegisterRev1Mutated": false,
+  "OverlayRev2Mutated": false,
+  "OptionsSheetMutated": false,
+  "OptionsSheetAdmitted": false,
+  "OptionsReviewAdmitted": false,
+  "OnDiskSheetAnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "BlocksRepaired": false,
+  "RowsDisposed": 0,
+  "RuntimeRootAdmitted": false,
+  "LocatorOpened": false,
+  "PathsInvented": false,
+  "StartupSequenceInvented": false,
+  "ImportSequenceInvented": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "HarnessShaAccepted": false,
+  "SourceRootShaAccepted": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "RuntimeDependencyManifestCreated": false,
+  "SourceRootReviewFileAdded": false,
+  "FA03Completed": false,
+  "FA04Completed": false,
+  "FA05Completed": false,
+  "FA06Completed": false,
+  "FA08Completed": false,
+  "CommercialP0Changed": false,
+  "DSP004Closed": false,
+  "ActualSidesRemainNull": [
+    "SRC004-A-PROJECT",
+    "SRC004-A-SESSION",
+    "SRC004-A-PROVIDER"
+  ],
+  "ExistingCaptureCandidatesSelection": "NOT_SELECTED",
+  "ExistingCaptureCandidatesAdmission": "NOT_ADMITTED",
+  "IdentityGateCalled": false,
+  "FixturesExecuted": false,
+  "ScenarioRunnersExecuted": false,
+  "FixtureResultsWritten": false,
+  "EnvironmentManifestRead": false,
+  "HistoricalWindowsVenvRead": false,
+  "ToolCacheRead": false,
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "DSP004-FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-04",
+        "OD-13"
+      ],
+      "Note": "OD-01, OD-02, OD-03, OD-04, and OD-13 stay undecided. OD-05 REFUSE_LOCATOR is context for OD-03 only. The ten REQUIRES_RUNTIME_ROOT rows stay undisposed. No disposition document is opened.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 2,
+      "GapId": "AP-006 and AP-009",
+      "State": "LOCATOR_REFUSED_RECORDED_STILL_NOT_LOCATABLE",
+      "DecisionIds": [
+        "OD-05"
+      ],
+      "BlockCode": "NO_RUNTIME_ROOT_LOCATOR",
+      "Repaired": false,
+      "LocatorSupplied": false,
+      "SelectedChoiceId": "REFUSE_LOCATOR",
+      "Note": "OD-05 stays REFUSE_LOCATOR. This increment re-hashes that decision and does not change it. PROVIDE_LOCATOR stays unselected. No runtime-root path, startup sequence, or import-query order was supplied. Both policies stay NOT_LOCATABLE_WITHOUT_RUNTIME_ROOT.",
+      "DeliverableOpened": false,
+      "Decided": true,
+      "Opened": false
+    },
+    {
+      "Rank": 3,
+      "GapId": "DSP004-FA-05",
+      "State": "KEEP_REV1_RECORD_RECORDED_SHEET_NOT_ADMITTED_FA05_INCOMPLETE",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "SelectedChoiceId": "KEEP_REV1_RECORD",
+      "AnyOptionOpened": false,
+      "FutureStaticIdentityNoteWritten": false,
+      "OptionsSheetAdmitted": false,
+      "OptionsReviewAccepted": false,
+      "FA05Completed": false,
+      "Note": "OD-14 records KEEP_REV1_RECORD. FUTURE_STATIC_IDENTITY_NOTE_ONLY and NOT_AVAILABLE_UNDER_PATH_B stay unselected and unopened. No future static identity note is written. The options sheet stays NOT_ADMITTED and unmutated, with every on-disk Selected flag still false. The REV12 review stays unaccepted. FA-05 stays INCOMPLETE. Recording the selection does not complete FA-05.",
+      "DeliverableOpened": false,
+      "Decided": true,
+      "Opened": false
+    },
+    {
+      "Rank": 4,
+      "GapId": "AP-020 AP-021 AP-022",
+      "State": "BLOCK_NOTE_REVIEWED_NOT_ACCEPTED_CODES_UNREPAIRED",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Repaired": false,
+      "UniqueLocatorEstablished": false,
+      "Note": "OD-06 and OD-07 stay undecided. BLOCK codes stay unrepaired. Actual sequence locators stay null. OUT_OF_ARRAY_OCCURRENCE_NOT_MERGED stays RECORDED_NOT_INSERTED.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 5,
+      "GapId": "ACTUAL_SIDES_AND_AUTHORIZED_CALL",
+      "State": "UNBOUND_CALL_NOT_OPENED",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Note": "OD-08 and OD-09 stay undecided. The three actual sides stay UNBOUND. No further call is opened.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 6,
+      "GapId": "PRIOR_SHA_ACCEPTANCE",
+      "State": "UNDECIDED_NOT_ACCEPTED",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Note": "OD-10, OD-11, and OD-12 stay undecided. No REV3 SHA, prior candidate SHA, source-root SHA, or Harness SHA is accepted.",
+      "DeliverableOpened": false,
+      "Decided": false
+    },
+    {
+      "Rank": 7,
+      "GapId": "MANIFEST_FORMAL_RUN_DSP004_CLOSE",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Note": "OD-15 stays undecided. Manifest generation, a formal run, FA-08, and closure of DSP-004 stay unauthorized.",
+      "DeliverableOpened": false,
+      "Decided": false
+    }
+  ],
+  "PassMeansFieldMatchNotAcceptance": true,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "REV16-01.REV15_IDENTITY_AND_FIELDS",
+      "Passed": true,
+      "Detail": "REV15 markdown is 12006 bytes ECFE6BC3F44E549789342C02125A60111B0D995D1287F0E1EFA700424FEA4943. REV15 JSON is 20253 bytes E3817F182B51460F7E8C59CF0104A6355A21CA3B8474970EECD3944670590DA9, the SHA embedded in the REV15 markdown. Fact, Signed, Accepted, Admission, REFUSE_LOCATOR, and OPEN / HOLD match. RuntimeRootAdmitted there stays false."
+    },
+    {
+      "CheckId": "REV16-02.OD05_DECISION_UNCHANGED",
+      "Passed": true,
+      "Detail": "OD-05 decision stays 9876 / 30CA669C6EFE30EDDEE294CF2CAF2B9C3109E168E211753DDF62229EC3700192 and 14234 / 96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0. Selected choice stays REFUSE_LOCATOR. This increment does not change it."
+    },
+    {
+      "CheckId": "REV16-03.OVERLAY_REV2_UNCHANGED",
+      "Passed": true,
+      "Detail": "Overlay REV2 stays 6210 / A069DE20BEE610B0FF4E7DD3FBC4F02654C3469C0F673DEC1421F75B52870A3A and 16111 / 8BFE26CAF66524E43B4D11AE8909ED7F1ADDE13BCF8FA7B1DD852137A89B55CF. It still records one decided row. It was not rewritten."
+    },
+    {
+      "CheckId": "REV16-04.REGISTER_REV1_UNMUTATED",
+      "Passed": true,
+      "Detail": "Register REV1 stays 37989 / 0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91 and 82247 / EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3. On that file OD-14 is still undecided and KEEP_REV1_RECORD is still unselected. The file was not rewritten into an admitted asset."
+    },
+    {
+      "CheckId": "REV16-05.OD14_DECISION_FLAGS",
+      "Passed": true,
+      "Detail": "The OD-14 decision record selects KEEP_REV1_RECORD only, Decided true, Opened false, Signed false, Accepted false, Admission NOT_ADMITTED. Its 12 checks passed as field matches. FA-05 stays incomplete."
+    },
+    {
+      "CheckId": "REV16-06.OVERLAY_REV3_FLAGS",
+      "Passed": true,
+      "Detail": "The REV3 overlay records two decided rows, OD-05 REFUSE_LOCATOR and OD-14 KEEP_REV1_RECORD, and thirteen undecided rows. Signed, Accepted, and admission stay false / NOT_ADMITTED. REV1 and REV2 were not mutated."
+    },
+    {
+      "CheckId": "REV16-07.FA05_SHEET_REHASH_NOT_ADMITTED",
+      "Passed": true,
+      "Detail": "FA-05 sheet stays 10924 / 6C6F505258E30C1A31033E35C85797969CD387D79357E312830DF17DB785BEC4 and 12147 / 88F4B087169910561F51874E83C4B41A4D7873916136048F1A3DFF30E287CAF8. Admission stays NOT_ADMITTED. Every on-disk option stays unselected. The sheet was not mutated."
+    },
+    {
+      "CheckId": "REV16-08.REV12_REVIEW_REHASH_NOT_ACCEPTED",
+      "Passed": true,
+      "Detail": "REV12 review stays 17974 / 7EFB324FAEC1F33EDAF87444FB82C79A1115C4EB0DBE4928F1CA2F6960F6E69A and 35336 / 3BEC8B6BE1173C4A22374F21C3726218F8F16AA7C520C9391D10B1752889755A. REV12 JSON stays 10089 bytes 1C84529D4746327835622CDCA713F6FC714D992CAC474A8425C322B6EAEDDB17. The review fact stays unaccepted and NOT_ADMITTED."
+    },
+    {
+      "CheckId": "REV16-09.FA05_NOT_COMPLETED_NO_FUTURE_NOTE",
+      "Passed": true,
+      "Detail": "FA-05 stays INCOMPLETE. No future static identity note was written. FUTURE_STATIC_IDENTITY_NOTE_ONLY stays unselected and unopened."
+    },
+    {
+      "CheckId": "REV16-10.NO_PATH_INVENTED_BLOCKS_UNDISPOSED",
+      "Passed": true,
+      "Detail": "No runtime-root path, startup sequence, or import-query order was written. NO_RUNTIME_ROOT_LOCATOR stays unrepaired. OD-03 stays undecided. Orders 2, 5, 7, 10, 12, 15, 48, 55, 60, 61 stay undisposed. AP-020, AP-021, and AP-022 BLOCK codes stay unrepaired."
+    },
+    {
+      "CheckId": "REV16-11.OTHER_GATES_UNMOVED",
+      "Passed": true,
+      "Detail": "Actual sides stay unbound. No Harness, REV3, or source-root SHA is accepted. Manifest, formal run, and FA-08 stay unauthorized."
+    },
+    {
+      "CheckId": "REV16-12.RETAINED_OPEN_HOLD",
+      "Passed": true,
+      "Detail": "This increment is Signed false and Accepted false. Admission is NOT_ADMITTED. DSP-004 stays OPEN / HOLD. B-01 and B-02 stay OPEN. A passed check means the on-disk fields match the recorded preparation state. It does not admit a source, accept an asset SHA, or close DSP-004."
+    }
+  ],
+  "CheckCount": 12,
+  "ChecksPassed": 12
+}
