@@ -1,0 +1,483 @@
+{
+  "RecordKind": "DSP004_OWNER_ASSET_DECISION_STATUS_OVERLAY_CANDIDATE",
+  "Outcome": "OD05_REFUSE_LOCATOR_RECORDED_OTHER_ROWS_UNDECIDED_NOT_ADMITTED",
+  "FindingsOnly": true,
+  "DecisionRecorded": true,
+  "Candidate": true,
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "OWNER_ASSET_DECISION_STATUS_OVERLAY_REV2_NOT_ADMITTED",
+  "ScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV2_STATUS_OVERLAY_CANDIDATE.md",
+  "SelfShaNotEmbedded": true,
+  "SupersedesRegisterRev1": false,
+  "RegisterRev1Mutated": false,
+  "RegisterRev1Admitted": false,
+  "RegisterRev1Accepted": false,
+  "AssetWallCrossed": false,
+  "Formation": {
+    "GitHeadBeforeThisOverlay": "a3685c8641661de8118bba3021f1520cee6d57d8",
+    "MaterializedFrom": "PR #18",
+    "RecordedAtUtc": "2026-10-31T00:45:00Z",
+    "Method": "LOCAL_PYTHON_STDLIB_SHA256_AND_JSON_READ_ONLY",
+    "HashingIsIdentityOnly": true,
+    "PathsInvented": false,
+    "StartupSequenceInvented": false,
+    "ImportSequenceInvented": false,
+    "LocatorPathSupplied": false,
+    "EnvironmentManifestRead": false,
+    "SourceAdmissionGranted": false,
+    "AssetAcceptanceGranted": false,
+    "BlockCodesRepaired": false,
+    "ItemsDisposed": false
+  },
+  "BoundRegisterRev1": {
+    "Markdown": {
+      "Role": "REGISTER_REV1_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+      "Bytes": 37989,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REGISTER_REV1_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+      "Bytes": 82247,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "OnDiskOd05StillUndecided": true,
+    "Note": "REV1 remains the undecided snapshot. This overlay records the later OD-05 choice beside it."
+  },
+  "BoundDecisionRecord": {
+    "Markdown": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.md",
+      "SHA256": "30CA669C6EFE30EDDEE294CF2CAF2B9C3109E168E211753DDF62229EC3700192",
+      "Bytes": 9876,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.json",
+      "SHA256": "96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0",
+      "Bytes": 14234,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED"
+    },
+    "NewPreparationFact": "OD05_RUNTIME_ROOT_LOCATOR_REFUSED_RECORDED_NOT_ADMITTED"
+  },
+  "DecisionRowCount": 15,
+  "DecidedRowCount": 1,
+  "SelectedRowCount": 1,
+  "OpenedRowCount": 0,
+  "UndecidedRowCount": 14,
+  "AnyRowSelected": true,
+  "AnyRowDecided": true,
+  "AnyRowOpened": false,
+  "SelectedChoiceId": "REFUSE_LOCATOR",
+  "Rows": [
+    {
+      "DecisionId": "OD-01",
+      "Subject": "FA06_BUCKET_EVIDENCE_PRESENT_UNACCEPTED",
+      "Title": "保留或处置 FA-06 里证据状态为 EVIDENCE_PRESENT_UNACCEPTED 的行",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-02",
+      "Subject": "FA06_BUCKET_EVIDENCE_ABSENT",
+      "Title": "保留或处置 FA-06 里证据状态为 EVIDENCE_ABSENT 的行",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-03",
+      "Subject": "FA06_BUCKET_REQUIRES_RUNTIME_ROOT",
+      "Title": "保留或处置 FA-06 里证据状态为 REQUIRES_RUNTIME_ROOT 的行",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED",
+      "SideEffectFromOd05": "CONTEXT_ONLY_ROW_STILL_UNDECIDED",
+      "Disposed": false,
+      "RetainedAsDecision": false,
+      "Orders": [
+        2,
+        5,
+        7,
+        10,
+        12,
+        15,
+        48,
+        55,
+        60,
+        61
+      ]
+    },
+    {
+      "DecisionId": "OD-04",
+      "Subject": "IMPORT_CLOSURE_CALL_IDENTITY_CHECK_TO_USE_T0_PE_OS",
+      "Title": "导入闭包、两侧调用身份、检查到使用的防替换，以及 T0 / PE / OS 证据",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-05",
+      "Subject": "RUNTIME_ROOT_LOCATOR_AP006_AP009",
+      "Title": "提供或拒绝 AP-006 与 AP-009 的运行根定位",
+      "Selected": true,
+      "SelectedChoiceId": "REFUSE_LOCATOR",
+      "Decided": true,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "REFUSE_LOCATOR_RECORDED_NOT_ADMITTED",
+      "Choices": [
+        {
+          "ChoiceId": "PROVIDE_LOCATOR",
+          "Label": "提供运行根定位",
+          "Selected": false
+        },
+        {
+          "ChoiceId": "REFUSE_LOCATOR",
+          "Label": "拒绝提供运行根定位",
+          "Selected": true
+        }
+      ],
+      "DecisionRecord": {
+        "Markdown": {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.md",
+          "SHA256": "30CA669C6EFE30EDDEE294CF2CAF2B9C3109E168E211753DDF62229EC3700192",
+          "Bytes": 9876,
+          "Accepted": false
+        },
+        "Json": {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_OD05_RUNTIME_ROOT_LOCATOR_DECISION_REV1.json",
+          "SHA256": "96CD4504DF67A06F00968024F5877F685B99FE43B4144BFFA747FAEA054E62B0",
+          "Bytes": 14234,
+          "Accepted": false,
+          "Admission": "NOT_ADMITTED"
+        }
+      }
+    },
+    {
+      "DecisionId": "OD-06",
+      "Subject": "AP020_AP021_AP022_BLOCK_REPAIR",
+      "Title": "是否以及如何修复 AP-020、AP-021、AP-022 的 BLOCK",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-07",
+      "Subject": "AP020_AP021_AP022_ACTUAL_SEQUENCE_LOCATORS",
+      "Title": "准入或拒绝 AP-020、AP-021、AP-022 的实际序列定位",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-08",
+      "Subject": "THREE_ACTUAL_SIDES",
+      "Title": "准入或拒绝三个实际侧及其捕获入口",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-09",
+      "Subject": "AUTHORIZED_CALL_TO_READ_ACTUAL_REFERENCES",
+      "Title": "是否另作一次获准调用，以便读取实际引用",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-10",
+      "Subject": "REV3_SHA_ACCEPTANCE",
+      "Title": "是否把两个 REV3 SHA 接受为正式 B-02 合同",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-11",
+      "Subject": "PRIOR_CANDIDATE_SHA_ACCEPTANCE",
+      "Title": "是否接受或准入此前候选的固定 SHA",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-12",
+      "Subject": "HARNESS_SHA_ACCEPTANCE",
+      "Title": "是否接受任何 Harness SHA",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-13",
+      "Subject": "FOUR_NAMED_LIMITED_REVIEW_ITEMS",
+      "Title": "四项已经点名的 LIMITED 审查项是消除还是继续保留",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-14",
+      "Subject": "FA05_OPTION_SELECTION",
+      "Title": "在三个未选的 FA-05 选项中选择一项",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    },
+    {
+      "DecisionId": "OD-15",
+      "Subject": "MANIFEST_FORMAL_RUN_FA08_DSP004_CLOSE",
+      "Title": "Manifest、正式运行、FA-08 与关闭 DSP-004",
+      "Selected": false,
+      "Decided": false,
+      "Opened": false,
+      "Signed": false,
+      "Accepted": false,
+      "Admission": "NOT_ADMITTED",
+      "Status": "UNDECIDED"
+    }
+  ],
+  "Od03SideEffect": {
+    "DecisionId": "OD-03",
+    "Decided": false,
+    "Selected": false,
+    "Opened": false,
+    "Disposed": false,
+    "RetainedAsDecision": false,
+    "Orders": [
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      48,
+      55,
+      60,
+      61
+    ],
+    "Note": "OD-05 REFUSE_LOCATOR is context only. OD-03 stays undecided."
+  },
+  "BoundIdentities": [
+    {
+      "Role": "REV14_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV14.md",
+      "SHA256": "BE4292DCDE963D0657D038132ACD5197A0BAF64E1A32233E7539C5B2C5B7BE9D",
+      "Bytes": 13011,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV14_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV14.json",
+      "SHA256": "0F664D02C19F89C68609D85B9A97457A0D911A4B25A93F7030FADAC8463879EC",
+      "Bytes": 11918,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REGISTER_REV1_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.md",
+      "SHA256": "0821B18800B4FC9FF008160A80DA6E6D0DAD38273415CF6A62CADF05AD65AB91",
+      "Bytes": 37989,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REGISTER_REV1_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OWNER_ASSET_DECISION_REGISTER_REV1_CANDIDATE.json",
+      "SHA256": "EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3",
+      "Bytes": 82247,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV13_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV13.md",
+      "SHA256": "8871255CD154EB6748CA3B28C0A8A2F6C9629D72AF9AD38C1BF3A5A3E1950EB9",
+      "Bytes": 14474,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "REV13_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV13.json",
+      "SHA256": "C27EA37C75D1735B0DE5309EA7C8712C78F28C7FEF9443F53796678C26BAF04B",
+      "Bytes": 14201,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "GAP_NOTE_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.md",
+      "SHA256": "E6ED064272226185FCD10A5FDBE3AA192B742A5E728B0D55A973251AE3A9E474",
+      "Bytes": 15149,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "GAP_NOTE_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE.json",
+      "SHA256": "26C2C5C308570ACE020CD628D5E517BCEEFE2A96E04BFC57CE38F905163B0C26",
+      "Bytes": 17687,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "GAP_REVIEW_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "8BA8F456E528572A1EF758025BDF8698770B091399FDA3BB6718C0F1227CB4E6",
+      "Bytes": 20486,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "GAP_REVIEW_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_AP006_AP009_RUNTIME_ROOT_GAP_NOTE_REV1_CANDIDATE_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "6230D1977D39702FB19B4498A0AB65CEE3564E33FE5AB712E8451D38E2B93B09",
+      "Bytes": 43714,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "PassMeansFieldMatchNotAcceptance": true,
+  "RuntimeRootAdmitted": false,
+  "RuntimeRootLocatorSupplied": false,
+  "LocatorPath": null,
+  "StartupSequence": null,
+  "ImportQueryOrder": null,
+  "BlocksRepaired": false,
+  "RowsDisposed": 0,
+  "AnyOptionSelected": false,
+  "AnyOptionOpened": false,
+  "HarnessShaAccepted": false,
+  "Rev3ShasAcceptedAsFormalB02Contract": false,
+  "SourceRootShaAccepted": false,
+  "AssetAcceptanceGranted": false,
+  "SourceAdmissionGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "FA08Completed": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "OVL-01.REV1_IDENTITY_UNCHANGED",
+      "Passed": true,
+      "Detail": "REV1 JSON remains 82247 bytes EC5233D541108CF59EF1DF7BCAA3E9E64F9CE61D1B29A05D8F40DC900789CFF3. Its OD-05 row is still undecided. This overlay does not replace that file."
+    },
+    {
+      "CheckId": "OVL-02.DECISION_RECORD_BOUND_NOT_ADMITTED",
+      "Passed": true,
+      "Detail": "The OD-05 decision record is bound by the hashes written before this overlay. Binding does not admit it."
+    },
+    {
+      "CheckId": "OVL-03.OD05_REFUSE_ONLY",
+      "Passed": true,
+      "Detail": "Overlay OD-05 selects REFUSE_LOCATOR only. PROVIDE_LOCATOR stays unselected. Opened, Signed, and Accepted stay false. Admission is NOT_ADMITTED."
+    },
+    {
+      "CheckId": "OVL-04.OTHER_FOURTEEN_UNDECIDED",
+      "Passed": true,
+      "Detail": "OD-01 through OD-04 and OD-06 through OD-15 stay Selected false, Decided false, Opened false. One row is decided. Fourteen rows stay undecided."
+    },
+    {
+      "CheckId": "OVL-05.OVERALL_NOT_SIGNED_NOT_ADMITTED",
+      "Passed": true,
+      "Detail": "The overlay itself is Signed false, Accepted false, Admission NOT_ADMITTED."
+    },
+    {
+      "CheckId": "OVL-06.OD03_CONTEXT_ONLY",
+      "Passed": true,
+      "Detail": "OD-03 stays undecided. The ten REQUIRES_RUNTIME_ROOT rows stay undisposed. OD-05 is context only."
+    },
+    {
+      "CheckId": "OVL-07.NO_LOCATOR_SUPPLIED",
+      "Passed": true,
+      "Detail": "The overlay writes no runtime-root path, startup sequence, or import-query order. RuntimeRootAdmitted stays false."
+    },
+    {
+      "CheckId": "OVL-08.ASSET_WALL_NOT_CROSSED",
+      "Passed": true,
+      "Detail": "No source is admitted, no BLOCK is repaired, no FA-05 option is selected, and DSP-004 stays OPEN / HOLD. A passed check matches recorded preparation state."
+    }
+  ],
+  "CheckCount": 8,
+  "ChecksPassed": 8
+}
