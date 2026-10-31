@@ -1,0 +1,93 @@
+{
+  "_public_copy_notice": "De-identified public backup copy (2026-10-31), not a byte-exact original tool record. Real bridge/session identifiers are replaced with non-resolvable public aliases and local input paths are mapped to public repository-relative paths. Local originals remain unchanged and unpublished. Historical raw/preservation statements and original hashes refer to local originals. No new model execution, human legal approval, acceptance or runtime validation is implied.",
+  "purpose": "Authorized fictional full-contract substantive-rules text trial only; no scoring or formal P0 acceptance.",
+  "recordedClientDate": "2026-10-30",
+  "requestNumber": 1,
+  "variant": "full",
+  "authorization": {
+    "maximumRequests": 2,
+    "order": [
+      "full",
+      "missing"
+    ],
+    "stopOnFirstServiceFailure": true,
+    "clientAutomaticRetries": 0,
+    "rawResultsLocalOnly": true,
+    "profileOrMatterAccessAuthorized": false
+  },
+  "input": {
+    "path": "eval/commercial-contract-native-public/prompts/revised-substantive-trial-20261030-full.txt",
+    "sha256": "A78DDD3B351DF89612CAE59D12EE06E4CB1801CD0091CEFB9F6A662E498898F6",
+    "bytes": 41942,
+    "contractPath": "eval/commercial-contract-native-public/sample-pack-v2/投喂版/01-合同-完整版-投喂.md",
+    "contractSHA256": "8ED7BD82E5D69106D79CB7429E6D4205151D281F33DC10BCABDCCA5E5B768D84",
+    "ruleSources": [
+      {
+        "path": "commercial-legal/skills/review/SKILL.md",
+        "sha256": "57265943719FC36CB6E923F7874D9A63626A30DCB819042D33FF45BA6C45499C",
+        "bytes": 7636
+      },
+      {
+        "path": "commercial-legal/references/china-commercial-contract-playbook.md",
+        "sha256": "7A0EEEA75F34E529DA9C4437F9FD9CAAA6FE2107AA1C39F8575C5F1FEF4E29F7",
+        "bytes": 4679
+      },
+      {
+        "path": "commercial-legal/skills/vendor-agreement-review/SKILL.md",
+        "sha256": "5341213FC74CA2925F1C9FF6A1FA911A4989B87285BEE82394D9A9A5BD234C6C",
+        "bytes": 9525
+      },
+      {
+        "path": "commercial-legal/references/china-vendor-review-checklist.yaml",
+        "sha256": "921E1364E67C134DC737446DB4587CA2EBCA219F7D38FD329DE5A7E8C447A98E",
+        "bytes": 3371
+      },
+      {
+        "path": "commercial-legal/references/china-approval-and-seal-policy.md",
+        "sha256": "E4A425861E3556435BD47B68D908C661C424E24E8CF2ADAF2CCC77CA60C81801",
+        "bytes": 4370
+      },
+      {
+        "path": "commercial-legal/references/china-dispute-resolution.md",
+        "sha256": "AB8529C1BB16EEED415D968DD431FC87A83081BFFAC8FE0CF151F5C532A21EED",
+        "bytes": 4497
+      }
+    ],
+    "priorOutputsSent": false,
+    "acceptanceAnswersSent": false,
+    "fullPluginOrPreflightSent": false
+  },
+  "request": {
+    "backend": "api",
+    "modelOverride": null,
+    "tool": "review",
+    "freshRequest": true
+  },
+  "observation": {
+    "usableNonemptyResponse": false,
+    "coordinatorClassifiedFailure": true,
+    "classification": "TOOL ERROR",
+    "model": null,
+    "backend": null,
+    "threadId": null,
+    "duration_ms": null,
+    "stop_reason": null,
+    "clientResubmitted": false,
+    "toolCallThrew": false
+  },
+  "limitations": [
+    "The record preserves the complete MCP tool result, not provider HTTP wire bytes.",
+    "Tool-isolation, provider-internal retries and complete model runtime settings were not independently observed.",
+    "No null or missing metadata is converted to confirmed completion or independence.",
+    "This is rules-excerpt text review, not native plugin execution, profile/matter preflight, human legal review or acceptance."
+  ],
+  "toolResult": {
+    "content": [
+      {
+        "type": "text",
+        "text": "tool call error: tool call failed for `gemini-review/review`\n\nCaused by:\n    Transport closed"
+      }
+    ],
+    "isError": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_public_copy_notice": "De-identified public backup copy (2026-10-31), not a byte-exact original tool record. Real bridge/session identifiers are replaced with non-resolvable public aliases and local input paths are mapped to public repository-relative paths. Local originals remain unchanged and unpublished. Historical raw/preservation statements and original hashes refer to local originals. No new model execution, human legal approval, acceptance or runtime validation is implied.",
+  "record_type": "LOCAL RAW MCP FAILURE ENVELOPE — NO MODEL RESPONSE",
+  "batch": "P0 FIXED-INPUT REPEATABILITY SUPPLEMENT 20261031 R1",
+  "variant": "missing",
+  "coordinator_request_number": 2,
+  "authorization_scope": {
+    "maximum_model_requests": 2,
+    "model": "gemini-2.5-flash",
+    "backend": "api",
+    "new_independent_requests": true,
+    "stop_on_first_service_failure": true,
+    "auto_retry": false,
+    "model_or_backend_switch": false,
+    "outputs_local_only": true,
+    "scoring": false,
+    "profile_access": false,
+    "matter_or_tracker_operations": false,
+    "p0_acceptance": false
+  },
+  "input": {
+    "path": "eval/commercial-contract-native-public/prompts/revised-substantive-trial-20261030-missing.txt",
+    "sha256": "29F6FDF4D5CF427CFFA1FC2EA3F814A68B243015E59C260CEBAEB5DE4698B56D",
+    "utf8_bytes": 40020,
+    "contract_sha256": "156B1731B84E513BA0A7FC0C3D8B45158A4FC6BC32BA2560DFE3D467AA1E68FE",
+    "unchanged_from": "2026-10-30 postfix-r1 input",
+    "contains_working_draft_or_previous_response": false
+  },
+  "invocation": {
+    "tool": "gemini-review/review",
+    "backend_argument": "api",
+    "model_argument": "gemini-2.5-flash",
+    "system_override": false,
+    "reply_or_previous_thread_used": false
+  },
+  "coordinator_observed": {
+    "submitted_at_utc": "2026-10-31T01:28:12.217Z",
+    "returned_at_utc": "2026-10-31T01:28:18.325Z",
+    "readable_response_present": false,
+    "error_classification": "TOOL-REPORTED HTTP 503 / HIGH DEMAND",
+    "reported_model": null,
+    "reported_backend": null,
+    "reported_duration_ms": null,
+    "reported_stop_reason": null,
+    "provider_request_id": null
+  },
+  "disposition": {
+    "stop_triggered": true,
+    "request_budget_closed": true,
+    "retry_performed": false,
+    "fallback_performed": false,
+    "missing_reading_copy_created": false
+  },
+  "limitations": [
+    "The HTTP 503 and high-demand explanation are tool-reported; no original provider network transcript or request id was obtained.",
+    "No review body was obtained. This failure is not a legal-content determination or evidence of model answer quality.",
+    "Actual provider generation and server-side storage are not established by this record.",
+    "Do not turn this failed attempt into a second readable missing-annex review, or reuse the consumed batch without new authorization."
+  ],
+  "tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"error\":\"Gemini API failed with HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"}"
+      }
+    ],
+    "isError": true
+  }
+}
