@@ -1,0 +1,2 @@
+# Probe assets are recorded by exact bytes; do not normalize line endings.
+* -text
