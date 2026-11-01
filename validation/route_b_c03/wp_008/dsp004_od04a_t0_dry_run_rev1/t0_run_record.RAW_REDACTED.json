@@ -1,0 +1,944 @@
+{
+    "Kind":  "DSP004_OD04A_T0_DRY_RUN_RECORD_REV1",
+    "Outcome":  "PASS_T0_DRY_RUN",
+    "BlockCode":  null,
+    "Checks":  {
+                   "LockedFiles":  676,
+                   "HashMismatches":  0,
+                   "ExtraRuntimeFiles":  0,
+                   "PrefixEntriesBefore":  0,
+                   "AclBefore":  {
+                                     "Base":  "O:BAD:PAI(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)",
+                                     "Runtime":  "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+                                     "Prefix":  "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+                                     "PythonExe":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                                 },
+                   "Run":  {
+                               "ImagePathIsLockedPython":  true,
+                               "SystemParentIsSupervisor":  true,
+                               "ExitCodeZero":  true,
+                               "ReportParsed":  true,
+                               "NonceEchoed":  true,
+                               "ReportPidMatches":  true,
+                               "ReportPpidIsSupervisor":  true,
+                               "ReportExecutableIsLockedPython":  true,
+                               "IsolationFlags":  true,
+                               "PycachePrefixIsEmptyDir":  true,
+                               "NoCachedBytecodeUsed":  true,
+                               "SourceModulesAllBound":  true,
+                               "NativeModulesAllBound":  true,
+                               "PrefixStillEmpty":  true,
+                               "AclUnchanged":  true
+                           },
+                   "ReleasedUtc":  "2026-11-01T02:13:08.4011289Z"
+               },
+    "Supervisor":  {
+                       "ScriptSha256":  "54B735F2606344F12B80C82EF343836C3FABB6FF98680014ED1002CF3182DA47",
+                       "HostImage":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                       "HostImageSha256":  "60C9B29843624DD8AF6B6A7B26147753BE6AEEF65098B9A503CC50850AFE410F",
+                       "Pid":  6288,
+                       "PSVersion":  "5.1.26100.9711",
+                       "StartedUtc":  "2026-11-01T02:13:05.9319967Z"
+                   },
+    "BoundListSha256":  "F11E2920F63251135BAF9423B8DCFF3E9EDC0F57799291164568A112AB871627",
+    "T0":  {
+               "StopwatchTicks":  1003112210144,
+               "StopwatchFrequency":  10000000,
+               "Utc":  "2026-11-01T02:13:06.9620236Z"
+           },
+    "Child":  {
+                  "Arguments":  "-I -S -B -X \"pycache_prefix=C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\" \"C:\\Users\\USER\\Documents\\dsp004-probe\\probe_t0.py\"",
+                  "Pid":  11236,
+                  "SystemImagePath":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                  "SystemParentPid":  6288,
+                  "ExitCode":  0,
+                  "StderrBytes":  0,
+                  "Report":  {
+                                 "Nonce":  "E675982EFF889DE069F3AA715ED9E87F8DA0688FD91A7624813CE3EA2D23BD77",
+                                 "Pid":  11236,
+                                 "Ppid":  6288,
+                                 "Version":  "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+                                 "Executable":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                                 "Prefix":  "C:\\Program Files\\DSP004Runtime\\Python312",
+                                 "PycachePrefix":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix",
+                                 "DontWriteBytecode":  true,
+                                 "Flags":  {
+                                               "isolated":  1,
+                                               "no_site":  1,
+                                               "dont_write_bytecode":  1,
+                                               "ignore_environment":  1,
+                                               "no_user_site":  1
+                                           },
+                                 "Path":  [
+                                              "C:\\Program Files\\DSP004Runtime\\Python312\\python312.zip",
+                                              "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs",
+                                              "C:\\Program Files\\DSP004Runtime\\Python312\\Lib",
+                                              "C:\\Program Files\\DSP004Runtime\\Python312"
+                                          ],
+                                 "Seeds":  [
+                                               [
+                                                   "__future__",
+                                                   true
+                                               ],
+                                               [
+                                                   "ctypes",
+                                                   true
+                                               ],
+                                               [
+                                                   "msvcrt",
+                                                   true
+                                               ],
+                                               [
+                                                   "os",
+                                                   true
+                                               ],
+                                               [
+                                                   "subprocess",
+                                                   true
+                                               ],
+                                               [
+                                                   "threading",
+                                                   true
+                                               ],
+                                               [
+                                                   "time",
+                                                   true
+                                               ],
+                                               [
+                                                   "hashlib",
+                                                   true
+                                               ],
+                                               [
+                                                   "importlib.machinery",
+                                                   true
+                                               ],
+                                               [
+                                                   "io",
+                                                   true
+                                               ],
+                                               [
+                                                   "types",
+                                                   true
+                                               ],
+                                               [
+                                                   "dataclasses",
+                                                   true
+                                               ],
+                                               [
+                                                   "math",
+                                                   true
+                                               ],
+                                               [
+                                                   "stat",
+                                                   true
+                                               ],
+                                               [
+                                                   "json",
+                                                   true
+                                               ],
+                                               [
+                                                   "pathlib",
+                                                   true
+                                               ],
+                                               [
+                                                   "collections.abc",
+                                                   true
+                                               ],
+                                               [
+                                                   "enum",
+                                                   true
+                                               ],
+                                               [
+                                                   "re",
+                                                   true
+                                               ],
+                                               [
+                                                   "typing",
+                                                   true
+                                               ]
+                                           ],
+                                 "Modules":  [
+                                                 {
+                                                     "Name":  "__future__",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\__future__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\__future__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "__main__",
+                                                     "Origin":  "C:\\Users\\USER\\Documents\\dsp004-probe\\probe_t0.py",
+                                                     "Loader":  null,
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_abc",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_ast",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_blake2",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_codecs",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_codecs_cn",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_collections",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_collections_abc",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_ctypes",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\_ctypes.pyd",
+                                                     "Loader":  "ExtensionFileLoader",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_frozen_importlib",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_frozen_importlib_external",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_functools",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_hashlib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\_hashlib.pyd",
+                                                     "Loader":  "ExtensionFileLoader",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_imp",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_io",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_json",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_locale",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_multibytecodec",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_opcode",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_operator",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_signal",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_sre",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_stat",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_struct",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_thread",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_tokenize",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_typing",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_warnings",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_weakref",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_weakrefset",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\_weakrefset.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\_weakrefset.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "_winapi",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "abc",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "ast",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\ast.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\ast.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "builtins",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "codecs",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "collections",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\collections\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\collections\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "collections.abc",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\collections\\abc.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\collections\\abc.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "contextlib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\contextlib.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\contextlib.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "copy",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\copy.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\copy.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "copyreg",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\copyreg.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\copyreg.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "ctypes",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\ctypes\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\ctypes\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "ctypes._endian",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\ctypes\\_endian.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\ctypes\\_endian.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "dataclasses",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\dataclasses.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\dataclasses.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "dis",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\dis.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\dis.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "encodings",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "encodings.aliases",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\aliases.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\aliases.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "encodings.gbk",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\gbk.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\gbk.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "encodings.utf_8",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\utf_8.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\encodings\\utf_8.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "enum",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\enum.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\enum.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "errno",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "fnmatch",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\fnmatch.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\fnmatch.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "functools",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\functools.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\functools.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "genericpath",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "hashlib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\hashlib.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\hashlib.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "importlib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\importlib\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\importlib\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "importlib._bootstrap",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "importlib._bootstrap_external",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "importlib.machinery",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "inspect",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\inspect.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\inspect.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "io",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "ipaddress",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\ipaddress.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\ipaddress.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "itertools",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "json",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "json.decoder",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\decoder.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\decoder.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "json.encoder",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\encoder.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\encoder.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "json.scanner",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\scanner.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\json\\scanner.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "keyword",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\keyword.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\keyword.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "linecache",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\linecache.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\linecache.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "locale",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\locale.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\locale.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "marshal",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "math",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "msvcrt",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "nt",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "ntpath",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "opcode",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\opcode.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\opcode.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "operator",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\operator.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\operator.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "os",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "os.path",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "pathlib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\pathlib.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\pathlib.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "posixpath",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "re",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "re._casefix",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_casefix.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_casefix.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "re._compiler",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_compiler.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_compiler.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "re._constants",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_constants.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_constants.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "re._parser",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_parser.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\re\\_parser.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "reprlib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\reprlib.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\reprlib.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "signal",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\signal.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\signal.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "stat",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "struct",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\struct.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\struct.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "subprocess",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\subprocess.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\subprocess.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "sys",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "threading",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\threading.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\threading.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "time",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "token",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\token.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\token.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "tokenize",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\tokenize.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\tokenize.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "types",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\types.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\types.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "typing",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\typing.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\typing.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "typing.io",
+                                                     "Origin":  null,
+                                                     "Loader":  null,
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "typing.re",
+                                                     "Origin":  null,
+                                                     "Loader":  null,
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "urllib",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\urllib\\__init__.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\urllib\\__init__.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "urllib.parse",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\urllib\\parse.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\urllib\\parse.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "warnings",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\warnings.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\warnings.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "weakref",
+                                                     "Origin":  "C:\\Program Files\\DSP004Runtime\\Python312\\Lib\\weakref.py",
+                                                     "Loader":  "SourceFileLoader",
+                                                     "Cached":  "C:\\Program Files\\DSP004Runtime\\empty_pycache_prefix\\Program Files\\DSP004Runtime\\Python312\\Lib\\weakref.cpython-312.pyc",
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "winreg",
+                                                     "Origin":  "built-in",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 },
+                                                 {
+                                                     "Name":  "zipimport",
+                                                     "Origin":  "frozen",
+                                                     "Loader":  "type",
+                                                     "Cached":  null,
+                                                     "CachedExists":  false
+                                                 }
+                                             ],
+                                 "Natives":  [
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                                                 "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+                                                 "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+                                                 "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+                                                 "C:\\WINDOWS\\System32\\ucrtbase.dll",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\VCRUNTIME140.dll",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\python312.dll",
+                                                 "C:\\WINDOWS\\System32\\WS2_32.dll",
+                                                 "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+                                                 "C:\\WINDOWS\\System32\\msvcrt.dll",
+                                                 "C:\\WINDOWS\\System32\\RPCRT4.dll",
+                                                 "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+                                                 "C:\\WINDOWS\\System32\\sechost.dll",
+                                                 "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+                                                 "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\python3.DLL",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\_ctypes.pyd",
+                                                 "C:\\WINDOWS\\System32\\ole32.dll",
+                                                 "C:\\WINDOWS\\System32\\msvcp_win.dll",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\libffi-8.dll",
+                                                 "C:\\WINDOWS\\System32\\GDI32.dll",
+                                                 "C:\\WINDOWS\\System32\\win32u.dll",
+                                                 "C:\\WINDOWS\\System32\\gdi32full.dll",
+                                                 "C:\\WINDOWS\\System32\\USER32.dll",
+                                                 "C:\\WINDOWS\\System32\\combase.dll",
+                                                 "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+                                                 "C:\\WINDOWS\\System32\\IMM32.DLL",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\_hashlib.pyd",
+                                                 "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\libcrypto-3.dll",
+                                                 "C:\\WINDOWS\\System32\\psapi.DLL"
+                                             ]
+                             },
+                  "UnboundSourceModules":  [
+
+                                           ],
+                  "UnboundNativeModules":  [
+
+                                           ]
+              }
+}

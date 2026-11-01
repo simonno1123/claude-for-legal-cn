@@ -1,0 +1,217 @@
+{
+  "RecordKind": "DSP004_OD04A_T0_DRY_RUN_INDEPENDENT_STATIC_REVIEW",
+  "Outcome": "NOT_ADMITTED_AS_EVIDENCE",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "授权按 OD04-A 推进三步：①由所有者以管理员身份运行记录人提供的脚本，建立专用运行时目录并设置访问控制；②由记录人编写外层监督程序，审查后绑定其 SHA；③用监督程序做一次只跑清单探测的 T0 演练。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04A_T0_DRY_RUN_REV1_INDEPENDENT_STATIC_REVIEW.md",
+  "SelfShaNotEmbedded": true,
+  "Reviewer": {
+    "Kind": "FRESH_CONTEXT_SUBAGENT",
+    "Model": "Claude (same family as recorder)",
+    "AuthoredReviewedMaterial": false,
+    "Independence": "separate context; saw only repository material; same model family",
+    "ToolsUsed": "read-only file inspection; no Windows execution; no network"
+  },
+  "OwnerAuthorization": "2026-10-31: owner replied 按照你推荐的方案继续 to the recorder's recommendation of an independent review.",
+  "ReviewedCommit": "6b08ce275866c4ec7518b54a92f05ccdbd43f490",
+  "Reviewed": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04A_T0_DRY_RUN_REV1_RESULT.md",
+      "SHA256": "AE7A83D413C7049EBC96855E10E8BDB0A4A6BEADA7AE84BD16D2A66403676779",
+      "Bytes": 4842
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04A_T0_DRY_RUN_REV1_RESULT.json",
+      "SHA256": "69377802A25CD249FD2FEA337A37FBF84D84D1F5801641780A0F0BF6502CD79E",
+      "Bytes": 8331
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_runtime.ps1",
+      "SHA256": "C0CFB4FD0055ABBDCC5B1B61B1E2BB4C42A2F213761E27564F26435AF8CFB3A4",
+      "Bytes": 3978
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_runtime.cmd",
+      "SHA256": "50EF9235A7FC7271F4239E9C468CE9638A51C505BACAF48C373D45C85378E7C3",
+      "Bytes": 184
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/supervisor_t0.ps1",
+      "SHA256": "54B735F2606344F12B80C82EF343836C3FABB6FF98680014ED1002CF3182DA47",
+      "Bytes": 9346
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/probe_t0.py",
+      "SHA256": "54E4F4A15BC059C5965B937C0A28076BD7D627D366DE3E609511B00166DF11D7",
+      "Bytes": 3008
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/bound_list.json",
+      "SHA256": "F11E2920F63251135BAF9423B8DCFF3E9EDC0F57799291164568A112AB871627",
+      "Bytes": 107072
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/run_t0.cmd",
+      "SHA256": "251F2BB2D9989D331630224D34BE31D8056B9E9DD411D922A4A1FF603384B716",
+      "Bytes": 210
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_result.SANITIZED.json",
+      "SHA256": "7B95B2408577FD6F707AC574DEDB1224F9F8F74E9F0377340E61F40346FE195B",
+      "Bytes": 103609
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/t0_run_record.SANITIZED.json",
+      "SHA256": "B26FA11B548CAD06D0CDFEDB95A562D9F382A53C488BEFF455692AE4352183D4",
+      "Bytes": 29649
+    }
+  ],
+  "Findings": [
+    {
+      "Id": "IR-01",
+      "Severity": "BLOCKING",
+      "Title": "The trust root is the supervisor reporting on itself, and nothing outside it checks it. This fails PF-003 and the V3.2 T0 definition."
+    },
+    {
+      "Id": "IR-02",
+      "Severity": "MAJOR",
+      "Title": "10 of the 15 \"checks\" are claims the child makes about itself."
+    },
+    {
+      "Id": "IR-03",
+      "Severity": "MAJOR",
+      "Title": "Same-user process tampering is a non-elevated residual the documents leave out."
+    },
+    {
+      "Id": "IR-04",
+      "Severity": "MAJOR",
+      "Title": "The ACL layer depends on the token state, which is not recorded."
+    },
+    {
+      "Id": "IR-05",
+      "Severity": "MAJOR",
+      "Title": "The environment and inputs do not match PF-004 or the design."
+    },
+    {
+      "Id": "IR-06",
+      "Severity": "MAJOR",
+      "Title": "Check-to-use gaps for files Python could load that are not in the bound list."
+    },
+    {
+      "Id": "IR-07",
+      "Severity": "MAJOR",
+      "Title": "\"System DLLs bound and hashed\" means the files on disk, not the bytes mapped into the process."
+    },
+    {
+      "Id": "IR-08",
+      "Severity": "MAJOR",
+      "Title": "The runtime's authenticity is trust-on-first-use; the bound list only proves no change since setup."
+    },
+    {
+      "Id": "IR-09",
+      "Severity": "MAJOR",
+      "Title": "Which setup script actually ran is unsupported, and an elevated script ran from a user-writable folder."
+    },
+    {
+      "Id": "IR-10",
+      "Severity": "MAJOR",
+      "Title": "Step ② \"review, then bind its SHA\" did not happen before step ③."
+    },
+    {
+      "Id": "IR-11",
+      "Severity": "MAJOR",
+      "Title": "The committed records are re-serialized copies, not redactions of the raw files."
+    },
+    {
+      "Id": "IR-12",
+      "Severity": "MINOR",
+      "Title": "The probe sits in a user-writable path and reparse points are not checked."
+    },
+    {
+      "Id": "IR-13",
+      "Severity": "MINOR",
+      "Title": "Smaller gaps in what the record proves."
+    },
+    {
+      "Id": "IR-14",
+      "Severity": "MINOR",
+      "Title": "ACL details differ from the design."
+    },
+    {
+      "Id": "IR-15",
+      "Severity": "NOTE",
+      "Title": "The result documents overstate several points."
+    },
+    {
+      "Id": "IR-16",
+      "Severity": "NOTE",
+      "Title": "Authorization wording and timing."
+    },
+    {
+      "Id": "IR-17",
+      "Severity": "NOTE",
+      "Title": "The robocopy exclusions are not an ACL weakness."
+    }
+  ],
+  "SeverityCounts": {
+    "BLOCKING": 1,
+    "MAJOR": 10,
+    "MINOR": 3,
+    "NOTE": 3
+  },
+  "Verdict": "Not admitted as OD-04 evidence as-is. At most a non-evidentiary engineering dry-run observation with IR-01 to IR-11 recorded as explicit limitations.",
+  "QualificationConditions": [
+    "launcher bound before the run from an admin-protected location with host verification",
+    "supervisor-side enumeration of the child's modules",
+    "cleared and recorded environment consistent with PF-004",
+    "recorded token and UAC state",
+    "post-run tree scan and per-file ACL record",
+    "raw records verifiable against cited hashes, after independent review"
+  ],
+  "RecorderActionOnIR11": {
+    "Note": "Byte-substitution redactions of the raw records added. Applying the same rules to the owner's raw files reproduces them byte for byte. The REV23 re-serialized copies stay unchanged and are not a substitute for raw records.",
+    "Rules": [
+      {
+        "Find": "C:\\\\Users\\\\<owner-username> (as stored, with doubled backslashes)",
+        "Replace": "C:\\\\Users\\\\USER"
+      },
+      {
+        "Find": "S-1-5-21-<machine SID authority triple>",
+        "Replace": "S-1-5-21-MACHINE"
+      }
+    ],
+    "Files": [
+      {
+        "Raw": {
+          "Bytes": 167136,
+          "SHA256": "91B596C70E03CEEF9EA0A604995617C5CB119E543722C9003931C344CBA104A6"
+        },
+        "Redacted": {
+          "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_result.RAW_REDACTED.json",
+          "SHA256": "3D6D2FC9C89A8D13BE57973375FF3A2510D3F327D09086F3CB2075E517FB05A1",
+          "Bytes": 167036
+        }
+      },
+      {
+        "Raw": {
+          "Bytes": 73357,
+          "SHA256": "5AD894A3B614DD20F389D1E40C1632CB57693607187306B757C91C71461809E1"
+        },
+        "Redacted": {
+          "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/t0_run_record.RAW_REDACTED.json",
+          "SHA256": "DE62D15B9742D080EA666D38EB211C1028006654F4682AFBEFA99CDAF9EEF3C2",
+          "Bytes": 73355
+        }
+      }
+    ]
+  },
+  "ReviewerReportVerbatim": "# Independent static review: DSP-004 OD04-A T0 dry run REV1 (repo commit 6b08ce2)\n\nI read the scripts, the bound list, both sanitized records, the result documents, the signing record REV3, the design REV1 and V3.2 §§4, 6.1, 7–9. I made no edits, ran nothing on Windows and used no network.\n\n**What checks out:**\n- All eight committed asset SHA-256 values and byte counts match the result JSON.\n- `bound_list.json` matches the setup result's file list exactly: 653 files, same paths, bytes and SHA.\n- All 113 SHAs in REV19 (`DSP_004_OD04_LOCAL_FIXED_RUNTIME_CANDIDATE_OBSERVATION_REV1.json`) appear in the bound list.\n- The child's 30 native modules are exactly the 22 bound system DLLs plus 8 runtime files.\n\nThe record's numbers are internally consistent. The problems are about what those numbers prove.\n\n## Findings\n\n**IR-01 — BLOCKING — The trust root is the supervisor reporting on itself, and nothing outside it checks it. This fails PF-003 and the V3.2 T0 definition.**\nFiles: `supervisor_t0.ps1` L9, L38–42; `run_t0.cmd` L3; V3.2 §4.2 (\"a self-hash check alone cannot establish that trust\"), §6.1 T0 row (\"Accepted environment/launcher verification … Unverified executable … blocks startup\"); design REV1 L69.\n- **Script and bound list are user-writable and not locked.** The script, `bound_list.json` and the output record all sit in a user-writable folder. The only binding for `bound_list.json` is a constant inside that same script (L9). An edited script can carry any constant.\n- **`ScriptSha256` is not a check.** It is re-read from `$PSCommandPath` after PowerShell has already parsed the script, so it is a later re-read, not the bytes that ran. Nothing compares it to anything.\n- **`HostImageSha256` is only recorded.** Nothing compares it to an expected value.\n- **The PowerShell host can be substituted before any check runs:**\n  - `run_t0.cmd` calls bare `powershell.exe`. When the .cmd is double-clicked, cmd.exe searches the current directory first, which is the user-writable asset folder.\n  - cmd.exe also runs the HKCU `Command Processor\\AutoRun` command, which the user can write, before the batch file.\n  - `-NoProfile` does not stop module autoloading. `Get-Acl`, `Get-FileHash`, `Get-CimInstance` and `ConvertFrom-Json` are resolved through `PSModulePath`, which lists the user's own Documents module folder first.\n- **No pre-run binding exists.** No accepted, pre-run record binds the launcher. So the actual trust root is: the owner's non-elevated user session not being compromised, plus the recorder's statement that it \"checked byte for byte\" (result MD L30), for which no method or hashes are recorded.\n- The rest of the record (the PASS file, written into the same user-writable folder) cannot be stronger than this root. That is exactly the \"in-process self-check as initial trust root\" that PF-003 forbids, moved up one level to the supervisor.\n\n**IR-02 — MAJOR — 10 of the 15 \"checks\" are claims the child makes about itself.**\nFiles: `supervisor_t0.ps1` L131–144; `probe_t0.py` L25–43.\n- **Based on the child's own report (10):** ReportParsed, NonceEchoed, ReportPid, ReportPpid, ReportExecutable, IsolationFlags, PycachePrefixIsEmptyDir, NoCachedBytecodeUsed, SourceModulesAllBound, NativeModulesAllBound.\n- **Checked from the supervisor side (5):** ImagePathIsLockedPython, SystemParentIsSupervisor, ExitCodeZero, PrefixStillEmpty, AclUnchanged.\n- Every import-closure, PE, flags and bytecode claim therefore rests on code inside the observed process. The supervisor could have enumerated the child's modules from outside while the child waited on stdin, but does not.\n- The result documents present all 15 the same way (MD §3; JSON L110–126).\n\nWeaknesses in the in-process checks themselves:\n- **Can pass on empty data.** If `EnumProcessModulesEx` fails, `probe_t0.py` L43 silently returns `Natives: []`, and the supervisor then reports `NativeModulesAllBound = true` (L142/L144). The same applies to `Modules` (L139, L141).\n- **`__main__` is excluded from the origin check** (L141), so the script that actually ran is never compared with the locked probe.\n- **`PycachePrefixIsEmptyDir` is misnamed.** It is only a string comparison (L138), not an emptiness check.\n- In this run the lists are non-empty (106 modules, 30 natives), so the dry run itself did not pass on empty data. The logic would allow it in a future run.\n\n**IR-03 — MAJOR — Same-user process tampering is a non-elevated residual the documents leave out.**\nFiles: result MD L63–68; JSON L143–147.\n- Any medium-integrity process running as the owner can open both `python.exe` and the supervisor with full access: it can write their memory, inject a thread or attach a debugger.\n- The ACL and file locks protect files, not running processes. The nonce scheme does not detect in-process tampering.\n- The residual list names only \"elevated or kernel-level\" actors. That understates the exposure.\n\n**IR-04 — MAJOR — The ACL layer depends on the token state, which is not recorded.**\nFiles: design REV1 L36; `supervisor_t0.ps1` L38–42.\n- The ACL claim holds only if the supervisor and every other user process run with a UAC-filtered token. The owner is in Administrators.\n- The supervisor does not record its elevation or integrity level, whether UAC is on (EnableLUA), or whether this is the built-in Administrator account.\n- If the run was elevated, or UAC is off, layer 1 provides nothing. That cannot be ruled out from the record.\n\n**IR-05 — MAJOR — The environment and inputs do not match PF-004 or the design.**\nFiles: `supervisor_t0.ps1` L103–116; V3.2 PF-004 (\"Exact `-I -S -B` command … no extra CLI, stdin, environment input\"); design REV1 L65 (\"does not read … standard input\").\n- **Extra input channels.** The run adds `-X pycache_prefix=…` and sends the nonce over stdin. Both are extra channels V3.2 forbids. The result documents do not say so.\n- **The environment is not cleared or recorded.** The child inherits the supervisor's whole environment. `-I` only neutralizes `PYTHON*` variables.\n- **Concrete gap:** the `hashlib` seed loads `libcrypto-3.dll`. OpenSSL 3 loads its config by default and honours `OPENSSL_CONF` and `OPENSSL_MODULES`. That is a file read, possibly a provider DLL load, outside the bound list and steered by the user's environment. `PATH` (last step of DLL search) and `TEMP` are also inherited.\n- The `Path` list was not checked: `sys.path` is not asserted against an expected list, so registry or other path inputs are not enforced. This run's 4 entries look clean, but that is observed, not enforced.\n\n**IR-06 — MAJOR — Check-to-use gaps for files Python could load that are not in the bound list.**\nFiles: `supervisor_t0.ps1` L80–94, L141, L147–150.\n- **Some loaders are never checked.** Only `SourceFileLoader` origins and natives are compared. `SourcelessFileLoader` (a bare `.pyc` placed in `DLLs\\` or `Lib\\`), `zipimporter` (`python312.zip` is first on `sys.path`, per the record) and namespace packages are never checked.\n- **No post-run scan.** The extra-file scan runs once before spawn; there is none after the run. Directories are not locked. A file added to a sys.path directory between L80 and import would not be detected.\n- **ACL checked on 4 objects only.** It checks Base, Python312, the prefix folder and `python.exe`. It does not check `Lib`, `DLLs`, subfolders or the other 652 files. So \"users cannot add files anywhere in the tree\" is inferred from `icacls /reset /T /C /Q` with errors suppressed, not shown.\n- Today these gaps need admin rights only if the subfolder ACLs really are inherited, and the record does not show that.\n\n**IR-07 — MAJOR — \"System DLLs bound and hashed\" means the files on disk, not the bytes mapped into the process.**\nFiles: result MD §4 \"OS\" row; JSON L158–163.\n- Most of the 22 System32 DLLs are KnownDLLs (for example ntdll, kernel32, advapi32, rpcrt4, ole32, combase, user32, gdi32, psapi). These are mapped from `\\KnownDlls` sections created at boot, not from the file the supervisor locked. The lock and hash therefore do not bind what was actually mapped.\n- API-set resolution and NLS/locale data files are also loaded and not bound.\n- The residual list names only \"not loaded by this probe\" and \"Authenticode not verified\".\n\n**IR-08 — MAJOR — The runtime's authenticity is trust-on-first-use; the bound list only proves no change since setup.**\nFiles: `setup_runtime.ps1` L20–23, L33–35.\n- At setup, only the source `python.exe` (a small launcher) is hash-checked. The remaining 652 files, including `python312.dll` (which contains the frozen `os`, `io`, `importlib` code), `libcrypto-3.dll` and all `.py` files, were copied from the user-writable `%LOCALAPPDATA%` install.\n- The bound list is a snapshot of that copy (I confirmed setup == bound). The \"44/68/2 match\" with REV19/REV20 compares against observations of the same user-writable install, so it is not independent.\n- Authenticode on the runtime PE files was not verified either. The residual list mentions Authenticode only for system DLLs.\n\n**IR-09 — MAJOR — Which setup script actually ran is unsupported, and an elevated script ran from a user-writable folder.**\nFiles: `setup_runtime.ps1` L55–68; result MD L23; JSON L29.\n- `setup_result` records neither the script's SHA nor any timestamp. \"The committed file is the exact version that ran\" is a recorder assertion with no machine support.\n- The script ran elevated from a user-writable folder (`setup_runtime.cmd`), so any user-level process could have changed it before elevation.\n- With no timestamp, step ① cannot be shown to have happened after the authorization (around 01:55Z).\n\n**IR-10 — MAJOR — Step ② \"review, then bind its SHA\" did not happen before step ③.**\nFiles: signing REV3 sentence; git history.\n- The supervisor SHA `54B735…` first appears in commit 80cdb30, dated 2026-10-31 19:16 −0700 (02:16Z). The run's T0 was 02:13Z.\n- The signing record REV3 is in the same commit. No pre-run binding record exists.\n- The review was the recorder's own (MD L13). The design's own precondition (L69: review first, bind the SHA first) was not met as specified.\n\n**IR-11 — MAJOR — The committed records are re-serialized copies, not redactions of the raw files.**\nFiles: result MD L11–12; both `*.SANITIZED.json`.\n- The raw run record is 73,357 bytes; the committed copy is 29,649. The raw setup result is 167,136; the copy is 103,609. The copies use 1-space JSON indentation, whereas PowerShell 5.1's `ConvertTo-Json` writes 4-space indentation with two spaces after the colon.\n- So the copies were rewritten by the recorder, not produced by replacing a path prefix. Their content cannot be tied to the cited raw SHAs from anything in the repository.\n- The `AclAfter` values are not kept at all; only the boolean survives.\n\n**IR-12 — MINOR — The probe sits in a user-writable path and reparse points are not checked.**\nFiles: `supervisor_t0.ps1` L55, L65, L103.\n- The probe file is locked, but Python opens it later by path. A junction placed earlier on any user-writable ancestor folder can be re-pointed, because the held handle does not pin the junction.\n- Together with the `__main__` exclusion (IR-02), the script that executed is never compared with the locked file.\n- `-I` correctly keeps the script's folder off `sys.path`.\n\n**IR-13 — MINOR — Smaller gaps in what the record proves.**\nFiles: `supervisor_t0.ps1` L97, L111–121, L150.\n- \"T0 before Python start\" rests only on code order. The child's `CreationDate` is not captured, so it cannot be checked independently.\n- `StderrBytes` counts characters, not bytes, and stderr content is not checked.\n- The `NoCachedBytecodeUsed` probe uses `os.path.exists` at the end of the run, not at import time.\n- The parent-PID and report-PID checks add nothing beyond `Process.Start`. The real child-identity value is CIM `ExecutablePath` plus the held handle (which prevents PID reuse).\n- Within its scope the child-identity scheme is sound: no other process can satisfy CIM path, parent PID and the stdin-pipe nonce together. It does not identify the supervisor (IR-01), and it does not detect injection into the child (IR-03).\n\n**IR-14 — MINOR — ACL details differ from the design.**\nFiles: `setup_runtime.ps1` L27, L41–44; design REV1 L32–35.\n- The grant is read/execute to BUILTIN\\Users, not to \"the validating account\" as the design says. The owner is Administrators, so any elevated admin can rewrite the ACL.\n- The SDDL comparison strips the group (`supervisor_t0.ps1` L33). It fails closed on a group SID containing \"D\", so this is not a pass-on-error risk.\n\n**IR-15 — NOTE — The result documents overstate several points.**\n- MD §4 marks T0 and two-side identity as \"observed in the dry run\". JSON L170 says \"All six components now have candidate observations\".\n- Given IR-01/02/03, what was actually observed is: a timestamp and child-relative identity from an unaccepted launcher, on one run (n=1), on the owner's desktop. REV19 itself says this machine is \"NOT_RECORDED_VALIDATION_HOST\".\n- The residual list omits IR-03, IR-04, IR-05, IR-06, IR-07, IR-08, IR-09 and IR-11.\n\n**IR-16 — NOTE — Authorization wording and timing.**\n- The owner's reply \"合并，三步都授权\" is recorded as approval of a sentence the recorder drafted. \"合并\" (merge/combine) is ambiguous.\n- The authorization time is approximate (around 01:55Z). Scripts date the authorization as 2026-10-31 local time.\n\n**IR-17 — NOTE — The robocopy exclusions are not an ACL weakness.**\n- `/XD` matches directory names at any depth. Nothing the probe loaded was excluded.\n- A future harness importing an excluded package (for example tkinter) would fail. `*.pyc` and `__pycache__` were correctly excluded, and no `.pyc`, `.zip`, `._pth` or `.cfg` file is in the copied set.\n\n## Verdict\n\n**Not admitted as OD-04 evidence as-is.**\n\nThe numbers are internally consistent: 653 / 22 / 676 / 15-of-15 / empty prefix / ACL unchanged / no cached bytecode / modules bound. The code really does lock files before hashing them. But the PASS rests on a user-writable, self-hashed supervisor whose SHA was not bound before the run, launched through a host-resolution path the user can control (IR-01). That is the kind of trust root PF-003 and V3.2 §4.2 rule out.\n\nThe import-closure, PE and bytecode claims come from the child's own report (IR-02). Material residuals are missing from the documents: same-user tampering, token/UAC state, environment and OpenSSL inputs, loaders that are never checked, KnownDLLs, and trust-on-first-use of the runtime (IR-03 to IR-08). The repository holds only re-serialized derivatives of the raw records (IR-11).\n\nAt most it could be recorded as a non-evidentiary engineering dry-run observation, with IR-01 through IR-11 written in as explicit limitations. To qualify as T0/check-to-use evidence it would need:\n- a launcher bound before the run, from an admin-protected location, with its host verified;\n- supervisor-side module enumeration of the child;\n- a cleared, recorded environment that is consistent with PF-004;\n- recorded token and UAC state;\n- a post-run tree scan and a per-file ACL record;\n- raw records that can be checked against their cited hashes, after independent review.",
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}
