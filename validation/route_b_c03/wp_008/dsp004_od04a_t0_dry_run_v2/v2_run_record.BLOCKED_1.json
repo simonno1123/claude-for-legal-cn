@@ -1,0 +1,53 @@
+{
+    "Kind":  "DSP004_OD04A_T0_DRY_RUN_RECORD_V2",
+    "Outcome":  "BLOCKED",
+    "BlockCode":  "TOKEN_NOT_FILTERED_MEDIUM",
+    "BlockDetail":  {
+                        "AdminRoleActive":  true,
+                        "MediumIntegrity":  false,
+                        "HighOrSystemIntegrity":  true,
+                        "EnableLUA":  1
+                    },
+    "Pre":  {
+
+            },
+    "Checks":  {
+
+               },
+    "Values":  {
+                   "StartedUtc":  "2026-11-01T03:35:03.9087106Z",
+                   "OriginalPSModulePathEntries":  3,
+                   "HostPath":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                   "PSHOME":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0",
+                   "PSVersion":  "5.1.26100.9711",
+                   "SupervisorPid":  5400,
+                   "Parent":  {
+                                  "Pid":  2500,
+                                  "Ppid":  9704,
+                                  "Path":  "C:\\WINDOWS\\System32\\cmd.exe",
+                                  "CreatedUtc":  "2026-11-01T03:35:02.4813670Z",
+                                  "CommandLine":  "\"C:\\WINDOWS\\System32\\cmd.exe\" /C \"C:\\Program Files\\DSP004Runtime\\supervisor_v2\\run_v2.cmd\" "
+                              },
+                   "SupervisorCommandLine":  "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"  -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Program Files\\DSP004Runtime\\supervisor_v2\\supervisor_v2.ps1\"",
+                   "HostSha256":  "60C9B29843624DD8AF6B6A7B26147753BE6AEEF65098B9A503CC50850AFE410F",
+                   "OsBuild":  {
+                                   "CurrentBuild":  "26200",
+                                   "UBR":  9711,
+                                   "DisplayVersion":  "25H2"
+                               },
+                   "ClrInjectionVariableNames":  [
+
+                                                 ],
+                   "HostModuleCount":  82,
+                   "HostModulesOutsideWindows":  [
+                                                     "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26100.4-0\\MpOav.dll",
+                                                     "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26100.4-0\\MPCLIENT.DLL"
+                                                 ],
+                   "Token":  {
+                                 "AdminRoleActive":  true,
+                                 "MediumIntegrity":  false,
+                                 "HighOrSystemIntegrity":  true,
+                                 "EnableLUA":  1
+                             }
+               }
+}

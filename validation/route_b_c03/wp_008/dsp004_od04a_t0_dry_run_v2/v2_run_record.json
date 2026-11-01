@@ -1,0 +1,194 @@
+{
+    "Kind":  "DSP004_OD04A_T0_DRY_RUN_RECORD_V2",
+    "Outcome":  "PASS_T0_DRY_RUN_V2",
+    "BlockCode":  null,
+    "BlockDetail":  null,
+    "Pre":  {
+
+            },
+    "Checks":  {
+                   "LockedFiles":  679,
+                   "HashMismatches":  0,
+                   "TreeProblemsBefore":  0,
+                   "AclProblemsBefore":  0,
+                   "SignatureProblems":  0,
+                   "Run":  {
+                               "OI_ImagePathIsLockedPython":  true,
+                               "OI_ParentIsSupervisor":  true,
+                               "OI_CreatedNotBeforeT0Minus50ms":  true,
+                               "OI_ChildCommandLineExact":  true,
+                               "OI_NativeModulesNonEmpty":  true,
+                               "OI_NativeModulesAllBound":  true,
+                               "OI_ExitCodeZero":  true,
+                               "OI_StderrEmpty":  true,
+                               "CR_ReportParsed":  true,
+                               "CR_PidMatches":  true,
+                               "CR_ExecutableIsLocked":  true,
+                               "CR_MainFileIsProbe":  true,
+                               "CR_IsolationFlags":  true,
+                               "CR_NoPycachePrefix":  true,
+                               "CR_SourceModulesNonEmpty":  true,
+                               "CR_SourceModulesAllBound":  true,
+                               "CR_OnlyKnownLoaders":  true,
+                               "CR_NoLoaderModulesNotFileBacked":  true,
+                               "CR_SysPathExact":  true,
+                               "CR_EnvironMinimal":  true,
+                               "POST_HashesUnchanged":  true,
+                               "POST_TreeClean":  true,
+                               "POST_AclClean":  true
+                           }
+               },
+    "Values":  {
+                   "StartedUtc":  "2026-11-01T07:17:21.4004605Z",
+                   "OriginalPSModulePathEntries":  3,
+                   "HostPath":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                   "PSHOME":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0",
+                   "PSVersion":  "5.1.26100.9711",
+                   "SupervisorPid":  14268,
+                   "Parent":  {
+                                  "Pid":  8716,
+                                  "Ppid":  9704,
+                                  "Path":  "C:\\WINDOWS\\system32\\cmd.exe",
+                                  "CreatedUtc":  "2026-11-01T07:17:19.1638260Z",
+                                  "CommandLine":  "C:\\WINDOWS\\system32\\cmd.exe /c \"\"C:\\Program Files\\DSP004Runtime\\supervisor_v2\\run_v2.cmd\" \""
+                              },
+                   "SupervisorCommandLine":  "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"  -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Program Files\\DSP004Runtime\\supervisor_v2\\supervisor_v2.ps1\"",
+                   "HostSha256":  "60C9B29843624DD8AF6B6A7B26147753BE6AEEF65098B9A503CC50850AFE410F",
+                   "OsBuild":  {
+                                   "CurrentBuild":  "26200",
+                                   "UBR":  9711,
+                                   "DisplayVersion":  "25H2"
+                               },
+                   "ClrInjectionVariableNames":  [
+
+                                                 ],
+                   "HostModuleCount":  82,
+                   "HostModulesOutsideWindows":  [
+                                                     "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26100.4-0\\MpOav.dll",
+                                                     "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26100.4-0\\MPCLIENT.DLL"
+                                                 ],
+                   "Token":  {
+                                 "AdminRoleActive":  false,
+                                 "MediumIntegrity":  true,
+                                 "HighOrSystemIntegrity":  false,
+                                 "EnableLUA":  1
+                             },
+                   "Hijack":  {
+                                  "HKCUAutoRunPresent":  false,
+                                  "HKLMAutoRunPresent":  false,
+                                  "HKCUCmdAssociationOverride":  false
+                              },
+                   "BoundListSha256":  "8FE6ECF646F991D585EBD50D58BFDA5DEB88485615C6261673F8B1D180C2801E",
+                   "SupervisorSha256":  "2CCFCDD4738B41AD0B120108C5D6C47D0C9FE3299E7A37CC7A31A92EEA0A527F",
+                   "TreeFileCount":  657,
+                   "TreeDirCount":  50,
+                   "Signers":  [
+                                   "RUNTIME|CN=Python Software Foundation, O=Python Software Foundation, L=Beaverton, S=Oregon, C=US",
+                                   "RUNTIME|CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+                                   "SYSTEM|CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                               ],
+                   "OpenSslConfPresent":  false,
+                   "OpenSslModulesDirPresent":  false,
+                   "KnownDlls":  [
+                                     "kernel32.dll",
+                                     "wow64cpu.dll",
+                                     "wowarmhw.dll",
+                                     "xtajit.dll",
+                                     "advapi32.dll",
+                                     "clbcatq.dll",
+                                     "combase.dll",
+                                     "COMDLG32.dll",
+                                     "coml2.dll",
+                                     "difxapi.dll",
+                                     "gdi32.dll",
+                                     "gdiplus.dll",
+                                     "IMAGEHLP.dll",
+                                     "IMM32.dll",
+                                     "MSCTF.dll",
+                                     "MSVCRT.dll",
+                                     "NORMALIZ.dll",
+                                     "NSI.dll",
+                                     "ole32.dll",
+                                     "OLEAUT32.dll",
+                                     "PSAPI.DLL",
+                                     "rpcrt4.dll",
+                                     "sechost.dll",
+                                     "Setupapi.dll",
+                                     "SHCORE.dll",
+                                     "SHELL32.dll",
+                                     "SHLWAPI.dll",
+                                     "user32.dll",
+                                     "WLDAP32.dll",
+                                     "wow64.dll",
+                                     "wow64base.dll",
+                                     "wow64con.dll",
+                                     "wow64win.dll",
+                                     "WS2_32.dll",
+                                     "xtajit64.dll",
+                                     "xtajit64se.dll",
+                                     "xtajitf.dll",
+                                     "xtajitse.dll"
+                                 ],
+                   "T0":  {
+                              "Utc":  "2026-11-01T07:17:41.2927057Z",
+                              "StopwatchTicks":  1185854696501,
+                              "Frequency":  10000000
+                          },
+                   "ChildArgv":  "-I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v2\\probe_v2.py\"",
+                   "ChildEnvironmentNames":  [
+                                                 "PATH",
+                                                 "SystemDrive",
+                                                 "SystemRoot",
+                                                 "windir"
+                                             ],
+                   "Child":  {
+                                 "Pid":  14808,
+                                 "System":  {
+                                                "Pid":  14808,
+                                                "Ppid":  14268,
+                                                "Path":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                                                "CreatedUtc":  "2026-11-01T07:17:41.3401430Z",
+                                                "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v2\\probe_v2.py\""
+                                            },
+                                 "ExitCode":  0,
+                                 "NativeModules":  [
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                                                       "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+                                                       "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+                                                       "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+                                                       "C:\\WINDOWS\\System32\\ucrtbase.dll",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\VCRUNTIME140.dll",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\python312.dll",
+                                                       "C:\\WINDOWS\\System32\\WS2_32.dll",
+                                                       "C:\\WINDOWS\\System32\\RPCRT4.dll",
+                                                       "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+                                                       "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+                                                       "C:\\WINDOWS\\System32\\msvcrt.dll",
+                                                       "C:\\WINDOWS\\System32\\sechost.dll",
+                                                       "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+                                                       "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\python3.DLL",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\_ctypes.pyd",
+                                                       "C:\\WINDOWS\\System32\\ole32.dll",
+                                                       "C:\\WINDOWS\\System32\\msvcp_win.dll",
+                                                       "C:\\WINDOWS\\System32\\GDI32.dll",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\libffi-8.dll",
+                                                       "C:\\WINDOWS\\System32\\win32u.dll",
+                                                       "C:\\WINDOWS\\System32\\gdi32full.dll",
+                                                       "C:\\WINDOWS\\System32\\USER32.dll",
+                                                       "C:\\WINDOWS\\System32\\combase.dll",
+                                                       "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+                                                       "C:\\WINDOWS\\System32\\IMM32.DLL",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\_hashlib.pyd",
+                                                       "C:\\Program Files\\DSP004Runtime\\Python312\\DLLs\\libcrypto-3.dll"
+                                                   ],
+                                 "Stderr":  "",
+                                 "ExtraStdout":  "",
+                                 "ReportLine":  "{\"Pid\": 14808, \"Ppid\": 14268, \"Version\": \"3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]\", \"Executable\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\python.exe\", \"MainFile\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\supervisor_v2\\\\probe_v2.py\", \"Path\": [\"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\python312.zip\", \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\DLLs\", \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\", \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\"], \"PycachePrefix\": null, \"Flags\": {\"isolated\": 1, \"no_site\": 1, \"dont_write_bytecode\": 1, \"ignore_environment\": 1, \"no_user_site\": 1}, \"EnvironNames\": [\"PATH\", \"SYSTEMDRIVE\", \"SYSTEMROOT\", \"WINDIR\"], \"Seeds\": [[\"__future__\", true], [\"ctypes\", true], [\"msvcrt\", true], [\"os\", true], [\"subprocess\", true], [\"threading\", true], [\"time\", true], [\"hashlib\", true], [\"importlib.machinery\", true], [\"io\", true], [\"types\", true], [\"dataclasses\", true], [\"math\", true], [\"stat\", true], [\"json\", true], [\"pathlib\", true], [\"collections.abc\", true], [\"enum\", true], [\"re\", true], [\"typing\", true]], \"Modules\": [{\"Name\": \"__future__\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\__future__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"__main__\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\supervisor_v2\\\\probe_v2.py\", \"Loader\": null}, {\"Name\": \"_abc\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_ast\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_blake2\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_codecs\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_codecs_cn\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_collections\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_collections_abc\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"_ctypes\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\DLLs\\\\_ctypes.pyd\", \"Loader\": \"ExtensionFileLoader\"}, {\"Name\": \"_frozen_importlib\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"_frozen_importlib_external\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"_functools\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_hashlib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\DLLs\\\\_hashlib.pyd\", \"Loader\": \"ExtensionFileLoader\"}, {\"Name\": \"_imp\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_io\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_json\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_locale\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_multibytecodec\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_opcode\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_operator\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_signal\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_sre\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_stat\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_struct\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_thread\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_tokenize\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_typing\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_warnings\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_weakref\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"_weakrefset\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\_weakrefset.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"_winapi\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"abc\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"ast\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\ast.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"builtins\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"codecs\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"collections\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\collections\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"collections.abc\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\collections\\\\abc.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"contextlib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\contextlib.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"copy\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\copy.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"copyreg\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\copyreg.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"ctypes\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\ctypes\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"ctypes._endian\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\ctypes\\\\_endian.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"dataclasses\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\dataclasses.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"dis\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\dis.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"encodings\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\encodings\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"encodings.aliases\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\encodings\\\\aliases.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"encodings.gbk\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\encodings\\\\gbk.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"encodings.utf_8\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\encodings\\\\utf_8.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"enum\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\enum.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"errno\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"fnmatch\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\fnmatch.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"functools\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\functools.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"genericpath\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"hashlib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\hashlib.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"importlib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\importlib\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"importlib._bootstrap\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"importlib._bootstrap_external\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"importlib.machinery\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"inspect\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\inspect.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"io\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"ipaddress\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\ipaddress.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"itertools\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"json\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\json\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"json.decoder\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\json\\\\decoder.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"json.encoder\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\json\\\\encoder.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"json.scanner\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\json\\\\scanner.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"keyword\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\keyword.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"linecache\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\linecache.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"locale\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\locale.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"marshal\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"math\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"msvcrt\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"nt\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"ntpath\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"opcode\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\opcode.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"operator\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\operator.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"os\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"os.path\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"pathlib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\pathlib.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"posixpath\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"re\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\re\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"re._casefix\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\re\\\\_casefix.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"re._compiler\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\re\\\\_compiler.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"re._constants\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\re\\\\_constants.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"re._parser\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\re\\\\_parser.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"reprlib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\reprlib.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"signal\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\signal.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"stat\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}, {\"Name\": \"struct\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\struct.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"subprocess\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\subprocess.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"sys\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"threading\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\threading.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"time\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"token\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\token.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"tokenize\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\tokenize.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"types\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\types.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"typing\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\typing.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"typing.io\", \"Origin\": null, \"Loader\": null}, {\"Name\": \"typing.re\", \"Origin\": null, \"Loader\": null}, {\"Name\": \"urllib\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\urllib\\\\__init__.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"urllib.parse\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\urllib\\\\parse.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"warnings\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\warnings.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"weakref\", \"Origin\": \"C:\\\\Program Files\\\\DSP004Runtime\\\\Python312\\\\Lib\\\\weakref.py\", \"Loader\": \"SourceFileLoader\"}, {\"Name\": \"winreg\", \"Origin\": \"built-in\", \"Loader\": \"BuiltinImporter\"}, {\"Name\": \"zipimport\", \"Origin\": \"frozen\", \"Loader\": \"FrozenImporter\"}]}"
+                             },
+                   "ReleasedUtc":  "2026-11-01T07:17:44.2422818Z",
+                   "FailedChecks":  [
+
+                                    ]
+               }
+}
