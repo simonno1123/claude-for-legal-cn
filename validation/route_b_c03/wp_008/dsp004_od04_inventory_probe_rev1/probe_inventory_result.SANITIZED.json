@@ -1,0 +1,1183 @@
+{
+ "ProbeKind": "DSP004_OD04_INVENTORY_ONLY_PROBE_REV1",
+ "Version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+ "VersionInfo": [
+  3,
+  12,
+  10,
+  "final",
+  0
+ ],
+ "Implementation": "cpython",
+ "Executable": "CANDIDATE_RUNTIME_ROOT\\python.exe",
+ "BaseExecutable": "CANDIDATE_RUNTIME_ROOT\\python.exe",
+ "Prefix": "CANDIDATE_RUNTIME_ROOT",
+ "BasePrefix": "CANDIDATE_RUNTIME_ROOT",
+ "Flags": {
+  "bytes_warning": 0,
+  "debug": 0,
+  "dev_mode": false,
+  "dont_write_bytecode": 1,
+  "hash_randomization": 1,
+  "ignore_environment": 1,
+  "inspect": 0,
+  "int_max_str_digits": 4300,
+  "interactive": 0,
+  "isolated": 1,
+  "n_fields": 18,
+  "n_sequence_fields": 18,
+  "n_unnamed_fields": 0,
+  "no_site": 1,
+  "no_user_site": 1,
+  "optimize": 0,
+  "quiet": 0,
+  "safe_path": true,
+  "utf8_mode": 0,
+  "verbose": 0,
+  "warn_default_encoding": 0
+ },
+ "DontWriteBytecode": true,
+ "Path": [
+  "CANDIDATE_RUNTIME_ROOT\\python312.zip",
+  "CANDIDATE_RUNTIME_ROOT\\DLLs",
+  "CANDIDATE_RUNTIME_ROOT\\Lib",
+  "CANDIDATE_RUNTIME_ROOT"
+ ],
+ "BuiltinModuleNames": [
+  "_abc",
+  "_ast",
+  "_bisect",
+  "_blake2",
+  "_codecs",
+  "_codecs_cn",
+  "_codecs_hk",
+  "_codecs_iso2022",
+  "_codecs_jp",
+  "_codecs_kr",
+  "_codecs_tw",
+  "_collections",
+  "_contextvars",
+  "_csv",
+  "_datetime",
+  "_functools",
+  "_heapq",
+  "_imp",
+  "_io",
+  "_json",
+  "_locale",
+  "_lsprof",
+  "_md5",
+  "_multibytecodec",
+  "_opcode",
+  "_operator",
+  "_pickle",
+  "_random",
+  "_sha1",
+  "_sha2",
+  "_sha3",
+  "_signal",
+  "_sre",
+  "_stat",
+  "_statistics",
+  "_string",
+  "_struct",
+  "_symtable",
+  "_thread",
+  "_tokenize",
+  "_tracemalloc",
+  "_typing",
+  "_warnings",
+  "_weakref",
+  "_winapi",
+  "_xxinterpchannels",
+  "_xxsubinterpreters",
+  "array",
+  "atexit",
+  "audioop",
+  "binascii",
+  "builtins",
+  "cmath",
+  "errno",
+  "faulthandler",
+  "gc",
+  "itertools",
+  "marshal",
+  "math",
+  "mmap",
+  "msvcrt",
+  "nt",
+  "sys",
+  "time",
+  "winreg",
+  "xxsubtype",
+  "zlib"
+ ],
+ "FrozenModuleNames": [
+  "__hello__",
+  "__hello_alias__",
+  "__hello_only__",
+  "__phello__",
+  "__phello__.__init__",
+  "__phello__.ham",
+  "__phello__.ham.__init__",
+  "__phello__.ham.eggs",
+  "__phello__.spam",
+  "__phello_alias__",
+  "__phello_alias__.spam",
+  "_collections_abc",
+  "_frozen_importlib",
+  "_frozen_importlib_external",
+  "_sitebuiltins",
+  "abc",
+  "codecs",
+  "genericpath",
+  "importlib.machinery",
+  "importlib.util",
+  "io",
+  "ntpath",
+  "os",
+  "os.path",
+  "posixpath",
+  "runpy",
+  "site",
+  "stat",
+  "zipimport"
+ ],
+ "ModulesAtStartup": [
+  {
+   "Name": "__main__",
+   "Origin": "PROBE_DIR\\probe_inventory.py",
+   "Loader": null,
+   "Cached": null
+  },
+  {
+   "Name": "_abc",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_codecs",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_codecs_cn",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_frozen_importlib",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_frozen_importlib_external",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_imp",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_io",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_multibytecodec",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_signal",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_thread",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_warnings",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_weakref",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "abc",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "builtins",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "codecs",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "encodings",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings.aliases",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\aliases.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\aliases.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings.gbk",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\gbk.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\gbk.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings.utf_8",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\utf_8.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\utf_8.cpython-312.pyc"
+  },
+  {
+   "Name": "io",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "marshal",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "nt",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "sys",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "time",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "winreg",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "zipimport",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  }
+ ],
+ "SeedImports": [
+  {
+   "Seed": "__future__",
+   "Imported": true
+  },
+  {
+   "Seed": "ctypes",
+   "Imported": true
+  },
+  {
+   "Seed": "msvcrt",
+   "Imported": true
+  },
+  {
+   "Seed": "os",
+   "Imported": true
+  },
+  {
+   "Seed": "subprocess",
+   "Imported": true
+  },
+  {
+   "Seed": "threading",
+   "Imported": true
+  },
+  {
+   "Seed": "time",
+   "Imported": true
+  },
+  {
+   "Seed": "hashlib",
+   "Imported": true
+  },
+  {
+   "Seed": "importlib.machinery",
+   "Imported": true
+  },
+  {
+   "Seed": "io",
+   "Imported": true
+  },
+  {
+   "Seed": "types",
+   "Imported": true
+  },
+  {
+   "Seed": "dataclasses",
+   "Imported": true
+  },
+  {
+   "Seed": "math",
+   "Imported": true
+  },
+  {
+   "Seed": "stat",
+   "Imported": true
+  },
+  {
+   "Seed": "json",
+   "Imported": true
+  },
+  {
+   "Seed": "pathlib",
+   "Imported": true
+  },
+  {
+   "Seed": "collections.abc",
+   "Imported": true
+  },
+  {
+   "Seed": "enum",
+   "Imported": true
+  },
+  {
+   "Seed": "re",
+   "Imported": true
+  },
+  {
+   "Seed": "typing",
+   "Imported": true
+  }
+ ],
+ "ModulesAfterSeeds": [
+  {
+   "Name": "__future__",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\__future__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\__future__.cpython-312.pyc"
+  },
+  {
+   "Name": "__main__",
+   "Origin": "PROBE_DIR\\probe_inventory.py",
+   "Loader": null,
+   "Cached": null
+  },
+  {
+   "Name": "_abc",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_ast",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_blake2",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_codecs",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_codecs_cn",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_collections",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_collections_abc",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_ctypes",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\DLLs\\_ctypes.pyd",
+   "Loader": "ExtensionFileLoader",
+   "Cached": null
+  },
+  {
+   "Name": "_frozen_importlib",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_frozen_importlib_external",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_functools",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_hashlib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\DLLs\\_hashlib.pyd",
+   "Loader": "ExtensionFileLoader",
+   "Cached": null
+  },
+  {
+   "Name": "_imp",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_io",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_json",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_locale",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_multibytecodec",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_opcode",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_operator",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_signal",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_sre",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_stat",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_struct",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_thread",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_tokenize",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_typing",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_warnings",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_weakref",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "_weakrefset",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\_weakrefset.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\_weakrefset.cpython-312.pyc"
+  },
+  {
+   "Name": "_winapi",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "abc",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "ast",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\ast.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\ast.cpython-312.pyc"
+  },
+  {
+   "Name": "builtins",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "codecs",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "collections",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\collections\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\collections\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "collections.abc",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\collections\\abc.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\collections\\__pycache__\\abc.cpython-312.pyc"
+  },
+  {
+   "Name": "contextlib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\contextlib.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\contextlib.cpython-312.pyc"
+  },
+  {
+   "Name": "copy",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\copy.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\copy.cpython-312.pyc"
+  },
+  {
+   "Name": "copyreg",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\copyreg.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\copyreg.cpython-312.pyc"
+  },
+  {
+   "Name": "ctypes",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\ctypes\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\ctypes\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "ctypes._endian",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\ctypes\\_endian.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\ctypes\\__pycache__\\_endian.cpython-312.pyc"
+  },
+  {
+   "Name": "dataclasses",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\dataclasses.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\dataclasses.cpython-312.pyc"
+  },
+  {
+   "Name": "dis",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\dis.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\dis.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings.aliases",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\aliases.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\aliases.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings.gbk",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\gbk.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\gbk.cpython-312.pyc"
+  },
+  {
+   "Name": "encodings.utf_8",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\utf_8.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\encodings\\__pycache__\\utf_8.cpython-312.pyc"
+  },
+  {
+   "Name": "enum",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\enum.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\enum.cpython-312.pyc"
+  },
+  {
+   "Name": "errno",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "fnmatch",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\fnmatch.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\fnmatch.cpython-312.pyc"
+  },
+  {
+   "Name": "functools",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\functools.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\functools.cpython-312.pyc"
+  },
+  {
+   "Name": "genericpath",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "hashlib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\hashlib.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\hashlib.cpython-312.pyc"
+  },
+  {
+   "Name": "importlib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\importlib\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\importlib\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "importlib._bootstrap",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "importlib._bootstrap_external",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "importlib.machinery",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "inspect",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\inspect.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\inspect.cpython-312.pyc"
+  },
+  {
+   "Name": "io",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "ipaddress",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\ipaddress.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\ipaddress.cpython-312.pyc"
+  },
+  {
+   "Name": "itertools",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "json",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "json.decoder",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\decoder.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\__pycache__\\decoder.cpython-312.pyc"
+  },
+  {
+   "Name": "json.encoder",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\encoder.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\__pycache__\\encoder.cpython-312.pyc"
+  },
+  {
+   "Name": "json.scanner",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\scanner.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\json\\__pycache__\\scanner.cpython-312.pyc"
+  },
+  {
+   "Name": "keyword",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\keyword.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\keyword.cpython-312.pyc"
+  },
+  {
+   "Name": "linecache",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\linecache.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\linecache.cpython-312.pyc"
+  },
+  {
+   "Name": "locale",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\locale.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\locale.cpython-312.pyc"
+  },
+  {
+   "Name": "marshal",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "math",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "msvcrt",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "nt",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "ntpath",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "opcode",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\opcode.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\opcode.cpython-312.pyc"
+  },
+  {
+   "Name": "operator",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\operator.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\operator.cpython-312.pyc"
+  },
+  {
+   "Name": "os",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "os.path",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "pathlib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\pathlib.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\pathlib.cpython-312.pyc"
+  },
+  {
+   "Name": "posixpath",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "re",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "re._casefix",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\_casefix.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\__pycache__\\_casefix.cpython-312.pyc"
+  },
+  {
+   "Name": "re._compiler",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\_compiler.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\__pycache__\\_compiler.cpython-312.pyc"
+  },
+  {
+   "Name": "re._constants",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\_constants.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\__pycache__\\_constants.cpython-312.pyc"
+  },
+  {
+   "Name": "re._parser",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\_parser.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\re\\__pycache__\\_parser.cpython-312.pyc"
+  },
+  {
+   "Name": "reprlib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\reprlib.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\reprlib.cpython-312.pyc"
+  },
+  {
+   "Name": "signal",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\signal.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\signal.cpython-312.pyc"
+  },
+  {
+   "Name": "stat",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "struct",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\struct.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\struct.cpython-312.pyc"
+  },
+  {
+   "Name": "subprocess",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\subprocess.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\subprocess.cpython-312.pyc"
+  },
+  {
+   "Name": "sys",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "threading",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\threading.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\threading.cpython-312.pyc"
+  },
+  {
+   "Name": "time",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "token",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\token.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\token.cpython-312.pyc"
+  },
+  {
+   "Name": "tokenize",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\tokenize.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\tokenize.cpython-312.pyc"
+  },
+  {
+   "Name": "types",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\types.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\types.cpython-312.pyc"
+  },
+  {
+   "Name": "typing",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\typing.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\typing.cpython-312.pyc"
+  },
+  {
+   "Name": "typing.io",
+   "Origin": null,
+   "Loader": null,
+   "Cached": null
+  },
+  {
+   "Name": "typing.re",
+   "Origin": null,
+   "Loader": null,
+   "Cached": null
+  },
+  {
+   "Name": "urllib",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\urllib\\__init__.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\urllib\\__pycache__\\__init__.cpython-312.pyc"
+  },
+  {
+   "Name": "urllib.parse",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\urllib\\parse.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\urllib\\__pycache__\\parse.cpython-312.pyc"
+  },
+  {
+   "Name": "warnings",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\warnings.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\warnings.cpython-312.pyc"
+  },
+  {
+   "Name": "weakref",
+   "Origin": "CANDIDATE_RUNTIME_ROOT\\Lib\\weakref.py",
+   "Loader": "SourceFileLoader",
+   "Cached": "CANDIDATE_RUNTIME_ROOT\\Lib\\__pycache__\\weakref.cpython-312.pyc"
+  },
+  {
+   "Name": "winreg",
+   "Origin": "built-in",
+   "Loader": "type",
+   "Cached": null
+  },
+  {
+   "Name": "zipimport",
+   "Origin": "frozen",
+   "Loader": "type",
+   "Cached": null
+  }
+ ],
+ "NativeModulesLoaded": [
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\python.exe",
+   "Bytes": 104952,
+   "SHA256": "4D6F5F81A4BCA11191C4C7C6B43632694D0A4CE74E068619D8FDC161D469859A"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\SYSTEM32\\ntdll.dll",
+   "Bytes": 2558392,
+   "SHA256": "651AC9041AF8E6B5EBD331D53163244C0A27D36D1433F0F15CAC1F28C5F2E82C"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\KERNEL32.DLL",
+   "Bytes": 861992,
+   "SHA256": "E132EBA4166256E2F414B91FE7D5386590BC5EA8626AEE5AF9C9738383CF2AE1"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\KERNELBASE.dll",
+   "Bytes": 4254784,
+   "SHA256": "5C29B73622CE0976E1ADA566F31F2197BA0F8BEAEA89C3EC033366126172C3D0"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\ucrtbase.dll",
+   "Bytes": 1399656,
+   "SHA256": "DEDB7611E1ABC1FF3852DCAC3D4C93A048D729E25B061973B9969F22698F14CA"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\python312.dll",
+   "Bytes": 6945272,
+   "SHA256": "9A0E3435AAA680D868150F87AB3E388AD2EEBC22F87E036155C7B4EDA8CD2120"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\VCRUNTIME140.dll",
+   "Bytes": 120400,
+   "SHA256": "052AD6A20D375957E82AA6A3C441EA548D89BE0981516CA7EB306E063D5027F4"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\WS2_32.dll",
+   "Bytes": 553608,
+   "SHA256": "B123B00C46C415D7BAEAADA58C29C3E6920895DB836EE4C0CFEE49D738AF60AD"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\RPCRT4.dll",
+   "Bytes": 1182976,
+   "SHA256": "C060F02C11FB19C9C8A30B5077A87CDB17D4BE40F08070A539EC73EB53402775"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\SYSTEM32\\VERSION.dll",
+   "Bytes": 55192,
+   "SHA256": "CEA99F212AF557A9613150C5509631403ED0F05F5D9A06AC42039BD59B40E39A"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\msvcrt.dll",
+   "Bytes": 716104,
+   "SHA256": "FC1447DB4E4814CBCB002179A8003A41F383FC417879F628727043CAB8C25093"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\ADVAPI32.dll",
+   "Bytes": 795272,
+   "SHA256": "B864E1468A01A44F1901E03C05C1029E71655DD9ABDDD6D840BCFFF5E7227D44"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\sechost.dll",
+   "Bytes": 716104,
+   "SHA256": "B4A345AD9AF0635F50E27EEA8AE0FF37255DCA90E6D5991BDBC4806FB02AAA72"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\SYSTEM32\\bcrypt.dll",
+   "Bytes": 195128,
+   "SHA256": "D0FC7863D7B034DA33F34DC82B96A8604572598A217668A43FC9ECA3A8E2A8E1"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\bcryptprimitives.dll",
+   "Bytes": 732800,
+   "SHA256": "F0DBA794068893C9616B0B54BEF1BE8F904BE89EB2CB09B575D3D7FB1B5000F8"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\python3.DLL",
+   "Bytes": 70376,
+   "SHA256": "FB975A606E7FBF74F64260E3F60C3490B4F74A183C0926FD6ED1AC4C52AC7B1C"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\DLLs\\_ctypes.pyd",
+   "Bytes": 127480,
+   "SHA256": "0E56107A891100535F2DA79D85A5AE65FF1227B4765BD108F8593AC1A1110D81"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\ole32.dll",
+   "Bytes": 1720576,
+   "SHA256": "1053FFB858CDDBE29EAAA6A5B0836B88C7CD11FBD58605288600E507C06DB443"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\msvcp_win.dll",
+   "Bytes": 657784,
+   "SHA256": "B9DACD83201E59BB74E5282D8F0DCC8C428525409B4BC458A39EB8D2A9373A9A"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\GDI32.dll",
+   "Bytes": 187456,
+   "SHA256": "772C73E294A4C5F5E0D4146288AF95287A85C074D3AEE3FA9F320DC010D7DBFE"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\DLLs\\libffi-8.dll",
+   "Bytes": 39696,
+   "SHA256": "EFF52743773EB550FCC6CE3EFC37C85724502233B6B002A35496D828BD7B280A"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\win32u.dll",
+   "Bytes": 182632,
+   "SHA256": "D46A695DB805E808EFA63D1095CE3E1B6BE9C0155DAD405D444530EFC1ED0362"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\gdi32full.dll",
+   "Bytes": 1245368,
+   "SHA256": "52DE3E02898E9C0E243D08D5C51D54871E9BCE90DE883EFF7DF29A30FC8AEAC9"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\USER32.dll",
+   "Bytes": 1974768,
+   "SHA256": "F285937030BCB325CAD39EE5BE4818F6666241229ADEADEA4FF1AE469DFD7EF3"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\combase.dll",
+   "Bytes": 3783712,
+   "SHA256": "087F72ECC0C979A3B784AB319285AB64D053DFC0C274DF5B28FD40CF204A234F"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\OLEAUT32.dll",
+   "Bytes": 916120,
+   "SHA256": "E3FCDBBF040FD1E3C3504876CF060AC3908C134AC81B3D0C57F0F735769280EA"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\IMM32.DLL",
+   "Bytes": 212288,
+   "SHA256": "7E45F12C1C555E2407C5CA082BD925B34655278FDE4DBFAC53A0468CC1E77411"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\DLLs\\_hashlib.pyd",
+   "Bytes": 68976,
+   "SHA256": "03D233DBACE599168EAFFEC823DE6ED7BEEC8C2A4EBFE9B8A3D8E042A59AF3BA"
+  },
+  {
+   "Path": "CANDIDATE_RUNTIME_ROOT\\DLLs\\libcrypto-3.dll",
+   "Bytes": 5231472,
+   "SHA256": "CCFFFDDCD3DEFB8D899026298AF9AF43BC186130F8483D77E97C93233D5F27D7"
+  },
+  {
+   "Path": "SYSTEM_ROOT\\System32\\psapi.DLL",
+   "Bytes": 42864,
+   "SHA256": "6C8EBE6621224D11DED0C920873D67B5255FD515E8C4EA803CD587C8232BEE5C"
+  }
+ ],
+ "EnumProcessModulesOk": true
+}
