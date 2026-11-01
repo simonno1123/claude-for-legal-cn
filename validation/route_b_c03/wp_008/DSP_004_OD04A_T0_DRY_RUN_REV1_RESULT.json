@@ -1,0 +1,218 @@
+{
+  "RecordKind": "DSP004_OD04A_T0_DRY_RUN_RESULT_NON_ACCEPTANCE",
+  "Outcome": "PASS_T0_DRY_RUN",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "AuthorizingSentence": "授权按 OD04-A 推进三步：①由所有者以管理员身份运行记录人提供的脚本，建立专用运行时目录并设置访问控制；②由记录人编写外层监督程序，审查后绑定其 SHA；③用监督程序做一次只跑清单探测的 T0 演练。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04A_T0_DRY_RUN_REV1_RESULT.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "d5b594813293a23958c90cabdafbe19283ac3be1",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    },
+    "Review": "RECORDER_SELF_REVIEW_NOT_INDEPENDENT",
+    "RawRecordsKeptOnOwnerMachineOnly": true,
+    "RawSetupResult": {
+      "Bytes": 167136,
+      "SHA256": "91B596C70E03CEEF9EA0A604995617C5CB119E543722C9003931C344CBA104A6"
+    },
+    "RawT0RunRecord": {
+      "Bytes": 73357,
+      "SHA256": "5AD894A3B614DD20F389D1E40C1632CB57693607187306B757C91C71461809E1"
+    },
+    "SetupScriptVersionNote": "The setup_runtime.ps1 that ran is the recorder's earlier draft. It differs from the recorder's later local edit only in comment line 2 (a Chinese phrase removed later) and in line endings; code lines are identical. The committed file is the exact version that ran.",
+    "AssetsVerifiedOnDeviceBeforeRun": [
+      "supervisor_t0.ps1",
+      "probe_t0.py",
+      "bound_list.json",
+      "run_t0.cmd"
+    ]
+  },
+  "Assets": {
+    "setup_runtime.ps1": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_runtime.ps1",
+      "SHA256": "C0CFB4FD0055ABBDCC5B1B61B1E2BB4C42A2F213761E27564F26435AF8CFB3A4",
+      "Bytes": 3978
+    },
+    "setup_runtime.cmd": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_runtime.cmd",
+      "SHA256": "50EF9235A7FC7271F4239E9C468CE9638A51C505BACAF48C373D45C85378E7C3",
+      "Bytes": 184
+    },
+    "supervisor_t0.ps1": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/supervisor_t0.ps1",
+      "SHA256": "54B735F2606344F12B80C82EF343836C3FABB6FF98680014ED1002CF3182DA47",
+      "Bytes": 9346
+    },
+    "probe_t0.py": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/probe_t0.py",
+      "SHA256": "54E4F4A15BC059C5965B937C0A28076BD7D627D366DE3E609511B00166DF11D7",
+      "Bytes": 3008
+    },
+    "bound_list.json": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/bound_list.json",
+      "SHA256": "F11E2920F63251135BAF9423B8DCFF3E9EDC0F57799291164568A112AB871627",
+      "Bytes": 107072
+    },
+    "run_t0.cmd": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/run_t0.cmd",
+      "SHA256": "251F2BB2D9989D331630224D34BE31D8056B9E9DD411D922A4A1FF603384B716",
+      "Bytes": 210
+    },
+    "setup_result.SANITIZED.json": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/setup_result.SANITIZED.json",
+      "SHA256": "7B95B2408577FD6F707AC574DEDB1224F9F8F74E9F0377340E61F40346FE195B",
+      "Bytes": 103609
+    },
+    "t0_run_record.SANITIZED.json": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_rev1/t0_run_record.SANITIZED.json",
+      "SHA256": "B26FA11B548CAD06D0CDFEDB95A562D9F382A53C488BEFF455692AE4352183D4",
+      "Bytes": 29649
+    }
+  },
+  "Step1Setup": {
+    "RobocopyExitCode": 1,
+    "FileCount": 653,
+    "BaseOwner": "BUILTIN\\Administrators",
+    "PrefixEntryCount": 0,
+    "MatchesRev19Rev20": {
+      "RuntimePe": "44/44",
+      "LibClosure": "68/68",
+      "DynamicEncodings": "2/2"
+    }
+  },
+  "Step3Run": {
+    "Supervisor": {
+      "ScriptSha256": "54B735F2606344F12B80C82EF343836C3FABB6FF98680014ED1002CF3182DA47",
+      "HostImageSha256": "60C9B29843624DD8AF6B6A7B26147753BE6AEEF65098B9A503CC50850AFE410F",
+      "PSVersion": "5.1.26100.9711"
+    },
+    "BoundListSha256": "F11E2920F63251135BAF9423B8DCFF3E9EDC0F57799291164568A112AB871627",
+    "LockedFiles": 676,
+    "HashMismatches": 0,
+    "ExtraRuntimeFiles": 0,
+    "PrefixEntriesBefore": 0,
+    "AclBefore": {
+      "Base": "O:BAD:PAI(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)",
+      "Runtime": "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+      "Prefix": "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+      "PythonExe": "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+    },
+    "T0Utc": "2026-11-01T02:13:06.9620236Z",
+    "ChildVersion": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "ChildExitCode": 0,
+    "ChildChecks": {
+      "ImagePathIsLockedPython": true,
+      "SystemParentIsSupervisor": true,
+      "ExitCodeZero": true,
+      "ReportParsed": true,
+      "NonceEchoed": true,
+      "ReportPidMatches": true,
+      "ReportPpidIsSupervisor": true,
+      "ReportExecutableIsLockedPython": true,
+      "IsolationFlags": true,
+      "PycachePrefixIsEmptyDir": true,
+      "NoCachedBytecodeUsed": true,
+      "SourceModulesAllBound": true,
+      "NativeModulesAllBound": true,
+      "PrefixStillEmpty": true,
+      "AclUnchanged": true
+    }
+  },
+  "OD04Components": [
+    {
+      "Component": "T0_PREPROCESS_IDENTITY",
+      "State": "OBSERVED_IN_DRY_RUN",
+      "Basis": "supervisor locked and hashed 676 bound files, checked ACL and empty prefix, then recorded T0 before starting Python"
+    },
+    {
+      "Component": "CALL_IDENTITY_BOTH_SIDES",
+      "State": "OBSERVED_IN_DRY_RUN",
+      "Basis": "caller script and host image SHA recorded; child image path, system parent PID, report PID/PPID and nonce echo all matched"
+    },
+    {
+      "Component": "CHECK_TO_USE_ANTI_SUBSTITUTION",
+      "State": "ENFORCED_IN_DRY_RUN_WITH_RESIDUALS",
+      "Basis": "NTFS ACL + UAC on the runtime tree; deny-write/deny-delete handles held from before hashing until after the child exited; empty pycache prefix and no cached bytecode used",
+      "Residual": [
+        "an elevated or kernel-level actor",
+        "the supervisor script itself is not locked during its own run",
+        "self-review only"
+      ]
+    },
+    {
+      "Component": "IMPORT_CLOSURE",
+      "State": "OBSERVED_LOADED_SET_ALL_BOUND"
+    },
+    {
+      "Component": "PE",
+      "State": "ALL_LOADED_NATIVES_BOUND_AND_HASHED"
+    },
+    {
+      "Component": "OS",
+      "State": "LOADED_SYSTEM_DLLS_BOUND_AND_HASHED",
+      "Residual": [
+        "DLLs not loaded by this probe",
+        "Authenticode not verified"
+      ]
+    }
+  ],
+  "OD04Decision": {
+    "SelectedChoiceId": "OD04-A",
+    "Opened": true,
+    "EvidenceAdmitted": false,
+    "Note": "All six components now have candidate observations from one dry run. Admission needs an owner decision, preferably after an independent review."
+  },
+  "AssetAcceptanceGranted": false,
+  "RuntimeRootAdmitted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "HarnessOrSubjectExecuted": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OD04_A_DRY_RUN_PASSED_NOT_ADMITTED"
+  },
+  "Checks": [
+    {
+      "CheckId": "T0R-01.OUTCOME",
+      "Passed": true,
+      "Detail": "Supervisor outcome is PASS_T0_DRY_RUN."
+    },
+    {
+      "CheckId": "T0R-02.ALL_CHILD_CHECKS",
+      "Passed": true,
+      "Detail": "15/15 child and post checks true."
+    },
+    {
+      "CheckId": "T0R-03.LOCK_COUNT",
+      "Passed": true,
+      "Detail": "676 files locked: 653 runtime, 22 system DLLs, 1 probe."
+    },
+    {
+      "CheckId": "T0R-04.SCRIPT_SHA",
+      "Passed": true,
+      "Detail": "Supervisor SHA reported at run time equals the committed file."
+    },
+    {
+      "CheckId": "T0R-05.BOUND_LIST_SHA",
+      "Passed": true,
+      "Detail": "Bound list SHA at run time equals the committed file."
+    },
+    {
+      "CheckId": "T0R-06.NO_ADMISSION",
+      "Passed": true,
+      "Detail": "Admission NOT_ADMITTED; DSP-004 OPEN / HOLD."
+    }
+  ],
+  "CheckCount": 6,
+  "ChecksPassed": 6
+}
