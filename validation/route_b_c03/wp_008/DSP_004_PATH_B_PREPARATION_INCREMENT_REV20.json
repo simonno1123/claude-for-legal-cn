@@ -1,0 +1,217 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "改签路径 B：以本机 CPython 3.12.10 为验证机候选，授权一次只读清单探测运行（只读取解释器版本、内置与冻结模块、实际加载模块来源），不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "PriorScopeSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV20.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "023729790ce633065b58f2afa5c592a2e1767ead",
+    "MaterializedFrom": "PR #24 merge",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV19_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV19.md",
+      "SHA256": "9ED3A2DC4492F1E5C6249A488AF5CE79DDE3EB51579EC12780B5B4505D159124",
+      "Bytes": 4341,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV19_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV19.json",
+      "SHA256": "89320D6FA5C82C4996A58DCF0BEED538A28D2D66D1EEA81E8411BB3393D743D5",
+      "Bytes": 8001,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "NewPreparationFact": "OD04_LOCAL_FIXED_RUNTIME_CANDIDATE_OBSERVATION_REV1_RECORDED_NOT_ADMITTED"
+  },
+  "NewPreparationFacts": [
+    "PATH_B_SCOPE_RESIGNED_REV2_INVENTORY_PROBE_ONLY",
+    "OD04_INVENTORY_PROBE_REV1_OBSERVED_NOT_ADMITTED"
+  ],
+  "SigningRecord": {
+    "Markdown": {
+      "Role": "SIGN_REV2_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV2.md",
+      "SHA256": "2D3941021A15BB7116466531B7840171D420288332A29F773A61DE34F7BFD099",
+      "Bytes": 2127,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "SIGN_REV2_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV2.json",
+      "SHA256": "58C9600334D18A39F771EFDBD43CC396B3DFCD77E7E3B6881D656E6672211992",
+      "Bytes": 2034,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "ProbeResult": {
+    "Markdown": {
+      "Role": "PROBE_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_INVENTORY_PROBE_REV1_RESULT.md",
+      "SHA256": "A2A1EEE1B9D4C2F7571D43E630C1E4E66F2675F0BDA64DC086F1830DA3DC7843",
+      "Bytes": 4914,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "PROBE_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04_INVENTORY_PROBE_REV1_RESULT.json",
+      "SHA256": "E33211D39A7A279DFEA4878A0E2A2792354C8F5287C5912E4A18174E3A2F6D9A",
+      "Bytes": 18137,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "OD04Changed": false,
+  "AssetWallCrossed": false,
+  "RuntimeRootAdmitted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "CommercialP0Changed": false,
+  "PassMeansFieldMatchNotAcceptance": true,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-13"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "RETAIN is recorded. DISPOSE and ELIMINATE are false. The FA-06 register stays NOT_ADMITTED."
+    },
+    {
+      "Rank": 2,
+      "GapId": "RUNTIME_ROOT",
+      "State": "REFUSE_LOCATOR",
+      "DecisionIds": [
+        "OD-05",
+        "OD-03"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "OD-05 stays REFUSE_LOCATOR. OD-03 RETAIN does not supply a locator."
+    },
+    {
+      "Rank": 3,
+      "GapId": "OD-04",
+      "State": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS",
+      "DecisionIds": [
+        "OD-04"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "REV20 inventory probe ran once under the REV2 re-sign. Version, isolation, frozen set, loaded runtime natives (match REV19) and loaded system DLL SHA are observed. T0, caller-side identity and check-to-use stay absent. Not admitted."
+    },
+    {
+      "Rank": 4,
+      "GapId": "FA-05",
+      "State": "INCOMPLETE",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "KEEP_REV1_RECORD stays the bound choice. The future static identity note is not written."
+    },
+    {
+      "Rank": 5,
+      "GapId": "AP-020-AP-022",
+      "State": "LEAVE_UNREPAIRED_AND_REFUSE",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "BLOCK codes stay unrepaired. Actual sequence locators stay null."
+    },
+    {
+      "Rank": 6,
+      "GapId": "ACTUAL_SIDES",
+      "State": "UNBOUND_DO_NOT_AUTHORIZE",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Three sides stay UNBOUND. No call to read actual references is authorized."
+    },
+    {
+      "Rank": 7,
+      "GapId": "SHA_ACCEPTANCE",
+      "State": "REFUSE",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "REV3 SHAs, prior candidate SHAs including 57BAF161, and Harness SHAs are not accepted."
+    },
+    {
+      "Rank": 8,
+      "GapId": "OD-15",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Manifest, formal run, FA-08 and DSP-004 closure stay unauthorized under REV2. Only one inventory-only probe run was authorized."
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "INC20-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV19 JSON re-hash equals the SHA cited in the REV19 narrative."
+    },
+    {
+      "CheckId": "INC20-02.PROBE_FACT",
+      "Passed": true,
+      "Detail": "Probe result 6/6 field checks pass. Admission NOT_ADMITTED."
+    },
+    {
+      "CheckId": "INC20-03.OPEN_HOLD",
+      "Passed": true,
+      "Detail": "DSP-004 stays OPEN / HOLD."
+    }
+  ],
+  "CheckCount": 3,
+  "ChecksPassed": 3
+}

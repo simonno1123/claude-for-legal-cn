@@ -1,0 +1,545 @@
+{
+  "RecordKind": "DSP004_OD04_INVENTORY_PROBE_RESULT_NON_ACCEPTANCE",
+  "Outcome": "INVENTORY_PROBE_OBSERVED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "AuthorizingSentence": "改签路径 B：以本机 CPython 3.12.10 为验证机候选，授权一次只读清单探测运行（只读取解释器版本、内置与冻结模块、实际加载模块来源），不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_INVENTORY_PROBE_REV1_RESULT.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "023729790ce633065b58f2afa5c592a2e1767ead",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    },
+    "RunBy": "PROJECT_OWNER_DOUBLE_CLICKED_LAUNCHER",
+    "RunCount": 1,
+    "RawResultSha256": "5EA56E1430770B25BFA9BAD8ED79BF8C1F38D0FD56BB65792967BAD6F25A45DD",
+    "RawResultBytes": 33859,
+    "RawResultKeptOnOwnerMachineOnly": true,
+    "RawResultNote": "The raw file holds local absolute paths. The repository keeps a sanitized copy with root tokens.",
+    "ScriptAndLauncherByteIdenticalToCommitted": true,
+    "HarnessOrSubjectExecuted": false,
+    "IdentityGateCalled": false,
+    "FixturesExecuted": false,
+    "ScopeNote": "The probe also hashed loaded native module files read-only. The recorder disclosed this before the run as slightly beyond the three listed items; the owner then ran the probe."
+  },
+  "Assets": {
+    "Script": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04_inventory_probe_rev1/probe_inventory.py",
+      "SHA256": "F80157752DB49EF4F7D29FC398B00ADA6FAE23B38C7A1245F59D1E2BCEBF1E4F",
+      "Bytes": 4184
+    },
+    "Launcher": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04_inventory_probe_rev1/run_probe.cmd",
+      "SHA256": "12B6F6884B59DCD66DFB2A80EDF7735DC78B193AA9B8B8C9A245521F4700E861",
+      "Bytes": 259
+    },
+    "SanitizedResult": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04_inventory_probe_rev1/probe_inventory_result.SANITIZED.json",
+      "SHA256": "E2883ACD4612BD176DDB51487AD22411861B2F31331F38FA4AE720C3812194E9",
+      "Bytes": 27622
+    }
+  },
+  "Interpreter": {
+    "Version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "Implementation": "cpython",
+    "Flags": {
+      "bytes_warning": 0,
+      "debug": 0,
+      "dev_mode": false,
+      "dont_write_bytecode": 1,
+      "hash_randomization": 1,
+      "ignore_environment": 1,
+      "inspect": 0,
+      "int_max_str_digits": 4300,
+      "interactive": 0,
+      "isolated": 1,
+      "n_fields": 18,
+      "n_sequence_fields": 18,
+      "n_unnamed_fields": 0,
+      "no_site": 1,
+      "no_user_site": 1,
+      "optimize": 0,
+      "quiet": 0,
+      "safe_path": true,
+      "utf8_mode": 0,
+      "verbose": 0,
+      "warn_default_encoding": 0
+    },
+    "BuiltinModuleCount": 67,
+    "FrozenModuleNames": [
+      "__hello__",
+      "__hello_alias__",
+      "__hello_only__",
+      "__phello__",
+      "__phello__.__init__",
+      "__phello__.ham",
+      "__phello__.ham.__init__",
+      "__phello__.ham.eggs",
+      "__phello__.spam",
+      "__phello_alias__",
+      "__phello_alias__.spam",
+      "_collections_abc",
+      "_frozen_importlib",
+      "_frozen_importlib_external",
+      "_sitebuiltins",
+      "abc",
+      "codecs",
+      "genericpath",
+      "importlib.machinery",
+      "importlib.util",
+      "io",
+      "ntpath",
+      "os",
+      "os.path",
+      "posixpath",
+      "runpy",
+      "site",
+      "stat",
+      "zipimport"
+    ]
+  },
+  "LoadedRuntimeNatives": [
+    {
+      "RelPath": "python.exe",
+      "Bytes": 104952,
+      "SHA256": "4D6F5F81A4BCA11191C4C7C6B43632694D0A4CE74E068619D8FDC161D469859A",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "python312.dll",
+      "Bytes": 6945272,
+      "SHA256": "9A0E3435AAA680D868150F87AB3E388AD2EEBC22F87E036155C7B4EDA8CD2120",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "VCRUNTIME140.dll",
+      "Bytes": 120400,
+      "SHA256": "052AD6A20D375957E82AA6A3C441EA548D89BE0981516CA7EB306E063D5027F4",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "python3.DLL",
+      "Bytes": 70376,
+      "SHA256": "FB975A606E7FBF74F64260E3F60C3490B4F74A183C0926FD6ED1AC4C52AC7B1C",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "DLLs/_ctypes.pyd",
+      "Bytes": 127480,
+      "SHA256": "0E56107A891100535F2DA79D85A5AE65FF1227B4765BD108F8593AC1A1110D81",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "DLLs/libffi-8.dll",
+      "Bytes": 39696,
+      "SHA256": "EFF52743773EB550FCC6CE3EFC37C85724502233B6B002A35496D828BD7B280A",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "DLLs/_hashlib.pyd",
+      "Bytes": 68976,
+      "SHA256": "03D233DBACE599168EAFFEC823DE6ED7BEEC8C2A4EBFE9B8A3D8E042A59AF3BA",
+      "MatchesRev19Static": true
+    },
+    {
+      "RelPath": "DLLs/libcrypto-3.dll",
+      "Bytes": 5231472,
+      "SHA256": "CCFFFDDCD3DEFB8D899026298AF9AF43BC186130F8483D77E97C93233D5F27D7",
+      "MatchesRev19Static": true
+    }
+  ],
+  "LoadedSystemDlls": [
+    {
+      "Path": "SYSTEM_ROOT\\SYSTEM32\\ntdll.dll",
+      "Bytes": 2558392,
+      "SHA256": "651AC9041AF8E6B5EBD331D53163244C0A27D36D1433F0F15CAC1F28C5F2E82C",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\KERNEL32.DLL",
+      "Bytes": 861992,
+      "SHA256": "E132EBA4166256E2F414B91FE7D5386590BC5EA8626AEE5AF9C9738383CF2AE1",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\KERNELBASE.dll",
+      "Bytes": 4254784,
+      "SHA256": "5C29B73622CE0976E1ADA566F31F2197BA0F8BEAEA89C3EC033366126172C3D0",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\ucrtbase.dll",
+      "Bytes": 1399656,
+      "SHA256": "DEDB7611E1ABC1FF3852DCAC3D4C93A048D729E25B061973B9969F22698F14CA",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\WS2_32.dll",
+      "Bytes": 553608,
+      "SHA256": "B123B00C46C415D7BAEAADA58C29C3E6920895DB836EE4C0CFEE49D738AF60AD",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\RPCRT4.dll",
+      "Bytes": 1182976,
+      "SHA256": "C060F02C11FB19C9C8A30B5077A87CDB17D4BE40F08070A539EC73EB53402775",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\SYSTEM32\\VERSION.dll",
+      "Bytes": 55192,
+      "SHA256": "CEA99F212AF557A9613150C5509631403ED0F05F5D9A06AC42039BD59B40E39A",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\msvcrt.dll",
+      "Bytes": 716104,
+      "SHA256": "FC1447DB4E4814CBCB002179A8003A41F383FC417879F628727043CAB8C25093",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\ADVAPI32.dll",
+      "Bytes": 795272,
+      "SHA256": "B864E1468A01A44F1901E03C05C1029E71655DD9ABDDD6D840BCFFF5E7227D44",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\sechost.dll",
+      "Bytes": 716104,
+      "SHA256": "B4A345AD9AF0635F50E27EEA8AE0FF37255DCA90E6D5991BDBC4806FB02AAA72",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\SYSTEM32\\bcrypt.dll",
+      "Bytes": 195128,
+      "SHA256": "D0FC7863D7B034DA33F34DC82B96A8604572598A217668A43FC9ECA3A8E2A8E1",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\bcryptprimitives.dll",
+      "Bytes": 732800,
+      "SHA256": "F0DBA794068893C9616B0B54BEF1BE8F904BE89EB2CB09B575D3D7FB1B5000F8",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\ole32.dll",
+      "Bytes": 1720576,
+      "SHA256": "1053FFB858CDDBE29EAAA6A5B0836B88C7CD11FBD58605288600E507C06DB443",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\msvcp_win.dll",
+      "Bytes": 657784,
+      "SHA256": "B9DACD83201E59BB74E5282D8F0DCC8C428525409B4BC458A39EB8D2A9373A9A",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\GDI32.dll",
+      "Bytes": 187456,
+      "SHA256": "772C73E294A4C5F5E0D4146288AF95287A85C074D3AEE3FA9F320DC010D7DBFE",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\win32u.dll",
+      "Bytes": 182632,
+      "SHA256": "D46A695DB805E808EFA63D1095CE3E1B6BE9C0155DAD405D444530EFC1ED0362",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\gdi32full.dll",
+      "Bytes": 1245368,
+      "SHA256": "52DE3E02898E9C0E243D08D5C51D54871E9BCE90DE883EFF7DF29A30FC8AEAC9",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\USER32.dll",
+      "Bytes": 1974768,
+      "SHA256": "F285937030BCB325CAD39EE5BE4818F6666241229ADEADEA4FF1AE469DFD7EF3",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\combase.dll",
+      "Bytes": 3783712,
+      "SHA256": "087F72ECC0C979A3B784AB319285AB64D053DFC0C274DF5B28FD40CF204A234F",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\OLEAUT32.dll",
+      "Bytes": 916120,
+      "SHA256": "E3FCDBBF040FD1E3C3504876CF060AC3908C134AC81B3D0C57F0F735769280EA",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\IMM32.DLL",
+      "Bytes": 212288,
+      "SHA256": "7E45F12C1C555E2407C5CA082BD925B34655278FDE4DBFAC53A0468CC1E77411",
+      "InRev19NamedImports": true,
+      "LoadedByProbeOwnCode": false
+    },
+    {
+      "Path": "SYSTEM_ROOT\\System32\\psapi.DLL",
+      "Bytes": 42864,
+      "SHA256": "6C8EBE6621224D11DED0C920873D67B5255FD515E8C4EA803CD587C8232BEE5C",
+      "InRev19NamedImports": false,
+      "LoadedByProbeOwnCode": true
+    }
+  ],
+  "LoadedModules": {
+    "Frozen": [
+      "_collections_abc",
+      "_frozen_importlib",
+      "_frozen_importlib_external",
+      "abc",
+      "codecs",
+      "genericpath",
+      "importlib._bootstrap",
+      "importlib._bootstrap_external",
+      "importlib.machinery",
+      "io",
+      "ntpath",
+      "os",
+      "os.path",
+      "posixpath",
+      "stat",
+      "zipimport"
+    ],
+    "BuiltinCount": 34,
+    "Extension": [
+      "DLLs/_ctypes.pyd",
+      "DLLs/_hashlib.pyd"
+    ],
+    "SourceFromLib": [
+      "Lib/__future__.py",
+      "Lib/_weakrefset.py",
+      "Lib/ast.py",
+      "Lib/collections/__init__.py",
+      "Lib/collections/abc.py",
+      "Lib/contextlib.py",
+      "Lib/copy.py",
+      "Lib/copyreg.py",
+      "Lib/ctypes/__init__.py",
+      "Lib/ctypes/_endian.py",
+      "Lib/dataclasses.py",
+      "Lib/dis.py",
+      "Lib/encodings/__init__.py",
+      "Lib/encodings/aliases.py",
+      "Lib/encodings/gbk.py",
+      "Lib/encodings/utf_8.py",
+      "Lib/enum.py",
+      "Lib/fnmatch.py",
+      "Lib/functools.py",
+      "Lib/hashlib.py",
+      "Lib/importlib/__init__.py",
+      "Lib/inspect.py",
+      "Lib/ipaddress.py",
+      "Lib/json/__init__.py",
+      "Lib/json/decoder.py",
+      "Lib/json/encoder.py",
+      "Lib/json/scanner.py",
+      "Lib/keyword.py",
+      "Lib/linecache.py",
+      "Lib/locale.py",
+      "Lib/opcode.py",
+      "Lib/operator.py",
+      "Lib/pathlib.py",
+      "Lib/re/__init__.py",
+      "Lib/re/_casefix.py",
+      "Lib/re/_compiler.py",
+      "Lib/re/_constants.py",
+      "Lib/re/_parser.py",
+      "Lib/reprlib.py",
+      "Lib/signal.py",
+      "Lib/struct.py",
+      "Lib/subprocess.py",
+      "Lib/threading.py",
+      "Lib/token.py",
+      "Lib/tokenize.py",
+      "Lib/types.py",
+      "Lib/typing.py",
+      "Lib/urllib/__init__.py",
+      "Lib/urllib/parse.py",
+      "Lib/warnings.py",
+      "Lib/weakref.py"
+    ],
+    "DynamicEncodingsHashed": [
+      {
+        "RelPath": "Lib/encodings/gbk.py",
+        "Bytes": 1054,
+        "SHA256": "9C7828E3B9661E39D4D75419A12B9D132FA9D0B4DAEC36F3DF51AD1C3A638DE3",
+        "Reason": "encoding module loaded by name at run time"
+      },
+      {
+        "RelPath": "Lib/encodings/utf_8.py",
+        "Bytes": 1047,
+        "SHA256": "9C54C7DB8CE0722CA4DDB5F45D4E170357E37991AFB3FCDC091721BF6C09257E",
+        "Reason": "encoding module loaded by name at run time"
+      }
+    ]
+  },
+  "OD04Components": [
+    {
+      "Component": "IMPORT_CLOSURE",
+      "State": "OBSERVED_LOADED_SET_FOR_SEEDS",
+      "Missing": [
+        "bytecode cache vs source not distinguished",
+        "harness and subject not run"
+      ]
+    },
+    {
+      "Component": "CALL_IDENTITY_BOTH_SIDES",
+      "State": "CALLEE_SELF_REPORT_ONLY",
+      "Missing": [
+        "caller-side identity",
+        "binding to accepted harness"
+      ]
+    },
+    {
+      "Component": "CHECK_TO_USE_ANTI_SUBSTITUTION",
+      "State": "ABSENT",
+      "Missing": [
+        "protection between hash and use",
+        "writable Lib and __pycache__"
+      ]
+    },
+    {
+      "Component": "T0_PREPROCESS_IDENTITY",
+      "State": "ABSENT",
+      "Missing": [
+        "pre-start verification outside the interpreter"
+      ]
+    },
+    {
+      "Component": "PE",
+      "State": "OBSERVED_LOADED_RUNTIME_NATIVES_MATCH_STATIC",
+      "Missing": [
+        "Authenticode verification"
+      ]
+    },
+    {
+      "Component": "OS",
+      "State": "LOADED_SET_HASHED",
+      "Missing": [
+        "DLLs not loaded in this run",
+        "host OS build identity"
+      ]
+    }
+  ],
+  "Findings": [
+    {
+      "FindingId": "OD04-PRB-F01",
+      "Topic": "VERSION_CONFIRMED",
+      "Detail": "Interpreter reports 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]. This matches NEWS.txt 3.12.10 recorded in REV19."
+    },
+    {
+      "FindingId": "OD04-PRB-F02",
+      "Topic": "ISOLATION_FLAGS",
+      "Detail": "isolated, no_site, ignore_environment, no_user_site and dont_write_bytecode are all 1. sys.path holds only the runtime zip, DLLs, Lib and the runtime root."
+    },
+    {
+      "FindingId": "OD04-PRB-F03",
+      "Topic": "RUNTIME_NATIVES_MATCH_STATIC",
+      "Detail": "8 native modules loaded from the runtime root. All 8 match the REV19 static SHA."
+    },
+    {
+      "FindingId": "OD04-PRB-F04",
+      "Topic": "OS_DLL_SHA_OBTAINED_FOR_LOADED_SET",
+      "Detail": "22 system DLLs were loaded in this run and 22 were hashed read-only. This closes the REV19 OS-bytes gap for the loaded set only. psapi.dll was loaded by the probe's own enumeration code. Ten loaded DLLs were not in the REV19 named list because they come in transitively or through API sets. Eleven REV19 named DLLs were not loaded because no module needing them was imported."
+    },
+    {
+      "FindingId": "OD04-PRB-F05",
+      "Topic": "FROZEN_VERIFIED_ON_HOST",
+      "Detail": "The host reports 29 frozen module names. 16 of the loaded modules came from frozen copies, including os, stat, ntpath, codecs, io and abc. REV19 F07 is now verified on this host: for these modules the Lib file is not the running code."
+    },
+    {
+      "FindingId": "OD04-PRB-F06",
+      "Topic": "SOURCE_LOADED_VS_STATIC_CLOSURE",
+      "Detail": "51 modules were source-loaded from Lib. 49 are in the REV19 import-time closure; 2 are encoding modules loaded by name (Lib/encodings/gbk.py, Lib/encodings/utf_8.py), now hashed. gbk is the code page of a zh-CN system locale. The static closure is a superset otherwise."
+    },
+    {
+      "FindingId": "OD04-PRB-F07",
+      "Topic": "BYTECODE_CACHE_MAY_BE_USED",
+      "Detail": "-B stops new bytecode writes but not reads. Source-loaded modules have cache paths under Lib __pycache__, and REV19 saw caches written 2026-10-30T21:03Z. Whether the loader used a cache or the source is not recorded. Check-to-use stays open."
+    },
+    {
+      "FindingId": "OD04-PRB-F08",
+      "Topic": "IN_PROCESS_SELF_REPORT_IS_NOT_T0",
+      "Detail": "Everything here is reported from inside the running interpreter. Per validation execution package V3, an in-process self-check is not the initial trust root. T0 and the caller side of two-side call identity stay absent."
+    }
+  ],
+  "OD04Decision": {
+    "SelectedKey": "DEFER_WITHOUT_EVIDENCE",
+    "ChangedByThisRecord": false,
+    "Note": "Probe observations are candidates; OD-04 is not closed."
+  },
+  "AssetAcceptanceGranted": false,
+  "RuntimeRootAdmitted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS"
+  },
+  "Checks": [
+    {
+      "CheckId": "PRB-01.ISOLATED",
+      "Passed": true,
+      "Detail": "isolated, no_site and dont_write_bytecode are 1."
+    },
+    {
+      "CheckId": "PRB-02.SEEDS",
+      "Passed": true,
+      "Detail": "All 20 seed imports succeeded."
+    },
+    {
+      "CheckId": "PRB-03.NATIVES_MATCH",
+      "Passed": true,
+      "Detail": "8/8 runtime natives match REV19."
+    },
+    {
+      "CheckId": "PRB-04.SYS_HASHED",
+      "Passed": true,
+      "Detail": "22/22 loaded system DLLs hashed."
+    },
+    {
+      "CheckId": "PRB-05.SANITIZED",
+      "Passed": true,
+      "Detail": "Sanitized copy holds no local user path."
+    },
+    {
+      "CheckId": "PRB-06.NO_ADMISSION",
+      "Passed": true,
+      "Detail": "Admission NOT_ADMITTED. OD-04 unchanged."
+    }
+  ],
+  "CheckCount": 6,
+  "ChecksPassed": 6
+}

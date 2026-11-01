@@ -1,0 +1,46 @@
+{
+  "RecordKind": "DSP004_PATH_B_SCOPE_SIGNING_RECORD_ONLY",
+  "Revision": 2,
+  "ExactSentence": "改签路径 B：以本机 CPython 3.12.10 为验证机候选，授权一次只读清单探测运行（只读取解释器版本、内置与冻结模块、实际加载模块来源），不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "SentenceMatch": "OWNER_SELECTED_RECORDER_DRAFTED_SENTENCE",
+  "SentenceOrigin": "The recorder drafted the sentence in a question to the owner. The owner chose the option labeled 按这句执行（推荐）. The owner's own preceding words were: 确认你说的两件事，继续。",
+  "DecisionAuthority": "PROJECT_OWNER",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-01T01:20:00Z",
+  "RecordedAtNote": "Approximate recorder receipt time of the owner's choice. The sentence itself contains no clock.",
+  "Supersedes": {
+    "Revision": 1,
+    "Record": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV1.json",
+      "SHA256": "E92CAD5CBA87D974430735B53491B85F837BF5FECCE0AEBF629ADE1BAB05E025",
+      "Bytes": 2242
+    },
+    "PriorSentence": "签署路径 B：只继续正式验收筹备，不接受资产、不关闭 DSP-004。",
+    "RelationNote": "REV2 widens REV1 by one inventory-only probe run on a named candidate host. Every REV1 exclusion stays."
+  },
+  "Effect": {
+    "ContinueFormalAcceptancePreparation": true,
+    "LocalCandidateHostNamed": true,
+    "InventoryOnlyProbeRunAuthorized": true,
+    "InventoryOnlyProbeRunCount": 1,
+    "AssetAcceptanceGranted": false,
+    "ManifestAuthorized": false,
+    "FormalRunAuthorized": false,
+    "DSP004Closed": false,
+    "FA08Completed": false,
+    "SourceAdmissionGranted": false,
+    "RuntimeRootAdmitted": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  }
+}
