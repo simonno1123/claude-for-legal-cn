@@ -1,0 +1,168 @@
+{
+  "RecordKind": "DSP004_OD04A_T0_DRY_RUN_V2_RESULT_NON_ACCEPTANCE",
+  "Outcome": "PASS_T0_DRY_RUN_V2",
+  "Classification": "NON_EVIDENTIARY_ENGINEERING_OBSERVATION",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "AuthorizingSentence": "授权第二版 T0 演练：按独立审查列出的条件修订监督程序，运行前先审查并把确切字节提交绑定，再由所有者以管理员身份运行一次安装器、运行一次监督下的清单探测。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004；不改动系统审计策略。",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04A_T0_DRY_RUN_V2_RESULT.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "d9b98667aaa7b05668876d058ae6e91d09fdd359",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "RetryAuthorization": {
+    "OwnerWords": "重试",
+    "OwnerMessageUtc": "2026-11-01T06:13:00Z (approx; owner local 2026-10-31 23:13 PDT)",
+    "Context": "After the first invocation was blocked (TOKEN_NOT_FILTERED_MEDIUM) the recorder asked the owner to reply 重试 to record a retry under the same REV4 authorization. A further owner invocation between about 06:13Z and 06:37Z stopped at RECORD_ALREADY_EXISTS because the blocked record had not yet been renamed; it wrote no record and is known only from the absence of a new file and the owner's account."
+  },
+  "Invocations": [
+    {
+      "N": 1,
+      "Record": {
+        "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v2/v2_run_record.BLOCKED_1.json",
+        "SHA256": "61E83F0CCE31CFEAC1AF2DD324F88F41CA6ADB5BB20F711C771CE3FC34A5CC62",
+        "Bytes": 2795
+      },
+      "Outcome": "BLOCKED",
+      "BlockCode": "TOKEN_NOT_FILTERED_MEDIUM",
+      "StartedUtc": "2026-11-01T03:35:03.9087106Z",
+      "Note": "blocked before any lock, T0 or child; parent command line shape matches the Run-as-administrator verb"
+    },
+    {
+      "N": 2,
+      "Record": null,
+      "Outcome": "STOP_RECORD_ALREADY_EXISTS (inferred)",
+      "Note": "no record written by design; not independently evidenced"
+    },
+    {
+      "N": 3,
+      "Record": {
+        "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v2/v2_run_record.json",
+        "SHA256": "1F95332F1D4EBC581CB7CDE266860680D79017249B1BDCEFA6C67E90DFF0CE4F",
+        "Bytes": 26183
+      },
+      "Outcome": "PASS_T0_DRY_RUN_V2",
+      "StartedUtc": "2026-11-01T07:17:21.4004605Z"
+    }
+  ],
+  "Install": {
+    "Record": {
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v2/install_v2_result.json",
+      "SHA256": "BE22F31321887A1E1DD2CFA4427D55059D482C7C76684CB379DA903EE6A9EAF9",
+      "Bytes": 2361
+    },
+    "InstalledUtc": "2026-11-01T03:28:49.4142845Z",
+    "FilesMatchExpected": true
+  },
+  "ExternalReadBacks": [
+    {
+      "WhenUtc": "2026-11-01T03:30Z (approx)",
+      "Result": "4/4 installed files byte-identical to committed assets"
+    },
+    {
+      "WhenUtc": "2026-11-01T07:20Z (approx)",
+      "Result": "4/4 installed files byte-identical to committed assets"
+    }
+  ],
+  "Timeline": {
+    "BindingMergeUtc": "2026-11-01T03:18:58Z",
+    "InstalledUtc": "2026-11-01T03:28:49.4142845Z",
+    "BlockedStartUtc": "2026-11-01T03:35:03.9087106Z",
+    "PassStartUtc": "2026-11-01T07:17:21.4004605Z",
+    "T0Utc": "2026-11-01T07:17:41.2927057Z",
+    "ChildCreatedUtc": "2026-11-01T07:17:41.3401430Z",
+    "ReleasedUtc": "2026-11-01T07:17:44.2422818Z",
+    "ClockNote": "all times after the merge come from the owner's clock"
+  },
+  "PassSummary": {
+    "LockedFiles": 679,
+    "HashMismatches": 0,
+    "TreeProblemsBefore": 0,
+    "AclProblemsBefore": 0,
+    "SignatureProblems": 0,
+    "Token": {
+      "AdminRoleActive": false,
+      "MediumIntegrity": true,
+      "HighOrSystemIntegrity": false,
+      "EnableLUA": 1
+    },
+    "OsBuild": {
+      "CurrentBuild": "26200",
+      "UBR": 9711,
+      "DisplayVersion": "25H2"
+    },
+    "ChildNativeModules": 29,
+    "RunChecks": {
+      "OI_ImagePathIsLockedPython": true,
+      "OI_ParentIsSupervisor": true,
+      "OI_CreatedNotBeforeT0Minus50ms": true,
+      "OI_ChildCommandLineExact": true,
+      "OI_NativeModulesNonEmpty": true,
+      "OI_NativeModulesAllBound": true,
+      "OI_ExitCodeZero": true,
+      "OI_StderrEmpty": true,
+      "CR_ReportParsed": true,
+      "CR_PidMatches": true,
+      "CR_ExecutableIsLocked": true,
+      "CR_MainFileIsProbe": true,
+      "CR_IsolationFlags": true,
+      "CR_NoPycachePrefix": true,
+      "CR_SourceModulesNonEmpty": true,
+      "CR_SourceModulesAllBound": true,
+      "CR_OnlyKnownLoaders": true,
+      "CR_NoLoaderModulesNotFileBacked": true,
+      "CR_SysPathExact": true,
+      "CR_EnvironMinimal": true,
+      "POST_HashesUnchanged": true,
+      "POST_TreeClean": true,
+      "POST_AclClean": true
+    },
+    "RunChecksTrue": 23,
+    "RunChecksTotal": 23
+  },
+  "RecordedDeviations": [
+    "The child keeps its stdin pipe open until EOF and no data is sent (probe L42); this departs from PF-004's literal 'no stdin' and from design REV1.",
+    "V3.2 records Python 3.12.13; the candidate runtime is 3.12.10. The upstream package is not updated by this record.",
+    "The empty_pycache_prefix approach of design REV1 was replaced in v2 by forbidding all bytecode files and directories in the tree."
+  ],
+  "PostRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "Verdict": "C: non-evidentiary engineering observation only",
+    "Verbatim": "**Verdict: (C), a non-evidentiary engineering observation only.** The PASS record is internally consistent and every count I could recompute matches. It still cannot be admitted, because the pre-declared outcome ceiling has not been lifted and the core of IR-01 (the supervisor vouching for itself) is still open. Details follow.\n\nI made no edits and used no network. The six committed v2 asset SHAs at the merge commit `d9b98667` (PR #29, 2026-11-01T03:18:58Z) match the binding JSON. The raw records' SHA-256 values, which nothing anchored when they were written: `v2_run_record.json` `1f95332f…0ce4f`, `v2_run_record.BLOCKED_1.json` `61e83f0c…cc62`, `install_v2_result.json` `be22f313…eaf9`. All three are CRLF output in the PowerShell 5.1 `ConvertTo-Json` style, with no BOM and no user-specific paths.\n\n## 1. Are the checks and values consistent?\n\n**Recomputed from the record and the committed `bound_list_v2.json`:**\n\n| Item | Expected (my recomputation) | Record | Result |\n|---|---|---|---|\n| `Checks.LockedFiles` | 653 runtime + 2 supervisor files + 22 system DLLs + 1 self + 1 bound-list handle (supervisor L123, L131–135) = **679** | 679 | match |\n| `Values.TreeFileCount` | 653 + 2 + self + bound list (L161–162; system DLLs have no relative path) = **657** | 657 | match |\n| `Child.NativeModules` | all inside the bound set | 29 modules, **0 outside it** (case-insensitive; 8 runtime + 21 system; `psapi.DLL` bound but not loaded) | match |\n| Source-loader modules | all inside the bound set | 51 modules, **0 outside it**; only extension modules are `_ctypes.pyd` and `_hashlib.pyd`, both bound | match |\n| Loaders | only known ones | Source 51, Builtin 34, Frozen 16, Extension 2, none 3 (`__main__`, `typing.io`, `typing.re`; the last two have no origin) | match |\n| Child command line | `'\"' + $PyExe + '\" ' + $argv` (L260) | `Child.System.CommandLine` is that string exactly | match |\n| Report line | pid, flags, `sys.path`, environment as expected | Pid 14808 and Ppid 14268 equal the observed values; flags all 1; `sys.path` is the 4 entries of L278; environment names are the same 4; all 20 seeds True | match |\n| Hashes the supervisor reports | bound values | `BoundListSha256` = `8FE6…801E`; `SupervisorSha256` = `2CCF…527F` | match |\n| ACL forms | bound expected forms | install result's Base/Dir/File forms are byte-equal to `bound_list_v2.json` `ExpectedOwnerAccessSddl` | match |\n| Pre-checks | pass | Token Medium, not admin, `EnableLUA` 1; all three Hijack values false; `ClrInjectionVariableNames` empty; outside-Windows host modules are only Defender `MpOav.dll`/`MPCLIENT.DLL`; `OpenSslConfPresent` false; Signers set has 3 entries | consistent |\n| Run checks | 23 | 8 OI + 12 CR + 3 POST = 23, all true; `FailedChecks` empty | match |\n\n**Timing order holds:**\n- commit `e22341304` 03:18:16Z\n- merge 03:18:58Z\n- `InstalledUtc` 03:28:49.41Z\n- blocked attempt starts 03:35:03.91Z\n- PASS parent cmd created 07:17:19.16Z\n- `StartedUtc` 07:17:21.40Z\n- `T0` 07:17:41.2927Z\n- child created 07:17:41.3401Z (T0 + 47.4 ms)\n- `ReleasedUtc` 07:17:44.2423Z\n\nEvery timestamp after the merge comes from the owner's own clock, and nothing ties that clock to an outside time source.\n\n**What \"shows\" each check really means.** The `Pre` object is empty in both run records. The supervisor creates it (L32) but never fills it. The pre-checks appear only as `Values` entries plus the fact that no `Block` fired. Several checks leave only a count or nothing at all, so the record asserts them rather than evidencing them:\n- per-file hashes: only `HashMismatches: 0`\n- per-item ACLs: only `AclProblemsBefore: 0`\n- per-file signature status and thumbprints: only `SignatureProblems: 0` and the de-duplicated `Signers` set\n- signature status of the host modules (L101) and the `$PSCommandPath` check (L83): no value recorded\n\nNo reviewer can recompute these from the record.\n\n## 2. Contradictions and checks that pass vacuously or weakly\n\nI found no field that contradicts a claim. These checks are weaker than their names suggest:\n\n- **The supervisor's self-hash is never enforced.** The SELF entry is skipped at L147. `SupervisorSha256` is a value the possibly-tampered script computes about itself, after PowerShell has already parsed the script. The only anchor for the supervisor is the recorder's bridge read-back, which runs inside the owner's session (initial pre-run review, §3 gap 5).\n- **`POST_HashesUnchanged` is close to a tautology.** The files are hashed again through the same handles that hold `FileShare.Read`, so only a raw disk write or an administrator could make it fail.\n- **The CLR-variable check (L93) runs after the CLR has already loaded.** A profiler that was injected could have removed its own variables. The check catches only an injector that does nothing to hide.\n- **The parent check (L86–87) only finds a substring.** Any process at the user's integrity level can start `cmd.exe` with that path in its command line. The grandparent (PID 9704) is never resolved, so \"launched from Explorer\" is not shown.\n- **`OI_NativeModulesAllBound` compares paths only.** The list is read from the child's own loader list. 12 of the 29 modules are KnownDLLs, and `ntdll` is mapped by the kernel; for these 13 the locked and hashed file is not what was mapped (IR-07).\n- **`OI_CreatedNotBeforeT0Minus50ms` is a lower bound only** (declared residual 6). The actual gap was +47.4 ms.\n- **`TreeDirCount` 50 is not compared with any expected value.** Only `__pycache__` folders are forbidden.\n- **The signer subject `Microsoft Windows Software Compatibility Publisher`** for the two `vcruntime140*.dll` files cannot be checked offline here. A false pass is unlikely because the thumbprint pin (L201) would have failed on a mismatch.\n\n## 3. The blocked first invocation\n\n**It is consistent with an elevated launch:**\n- `Token` shows AdminRoleActive true, MediumIntegrity false, HighOrSystemIntegrity true.\n- `Parent.CommandLine` is `\"C:\\WINDOWS\\System32\\cmd.exe\" /C \"...\\run_v2.cmd\" ` (quoted program, `/C`, trailing space). That is the shape of the `.cmd` \"Run as administrator\" verb. The PASS run shows `C:\\WINDOWS\\system32\\cmd.exe /c \"\"...\\run_v2.cmd\" \"`, the shape of a normal Explorer double-click.\n- Both parents have Ppid 9704, which fits elevation reassigning the parent to the requesting Explorer.\n- Host SHA, UBR 9711 and 82 host modules are the same in both runs.\n\nThis is the run instruction not being followed (\"double-click\", binding JSON `RunConstraints`). The token gate (L112) failed closed as designed. That is the only direct proof in the trail that this gate is not vacuous.\n\n**Effect on the technical validity of the second run: none that I can see.** The block happened at L112, before any lock, write, T0 or child. The second run's tree, ACL and hash checks are clean, to the extent they can be trusted.\n\n**Effect on governance: real.**\n- (a) REV4 (signing record L24) authorizes \"一次第二版演练\" (one v2 run). REV3's single run is counted as \"已经在 REV23 用掉\" (already used up). The retry rests on a chat reply, \"重试\" (retry), that is not recorded in the repository, so the PASS run is a second invocation outside REV4's literal wording.\n- (b) The rename-and-rerun shows that the guard at L71 does not count runs. With no system-written audit trail, nothing rules out other, unreported invocations in the 3 h 42 m between 03:35 and 07:17. The disclosure of BLOCKED_1 is good faith, but nobody can check that the set of runs reported is complete.\n\n## 4. Status of the v1 findings\n\n| Finding | Status | Basis |\n|---|---|---|\n| IR-01 (blocking) | **Partly closed; still blocks admission** | Closed by evidence: absolute host path and `HostSha256`; `PSHOME`; launcher in an admin-only folder, bound before the run and read back; `ClrInjectionVariableNames` empty; Hijack all false; merge before install. Open: self-hash not enforced (L147); record written by the supervisor into user-writable Documents (L28); no system-written detached evidence; read-back is not independent of the session; timestamps from the owner's clock. |\n| IR-02 | Mostly closed | 8 outside-in checks; 29 native modules, all bound; exact command line. Residual: import closure, `MainFile`, flags and `sys.path` are the child's own report; module lists are a single snapshot. |\n| IR-03 | Open, residual | — |\n| IR-04 | Closed by evidence | `Token` recorded and enforced, and BLOCKED_1 shows it firing. Residual: UAC is not a boundary for an admin account; `ConsentPromptBehaviorAdmin` not recorded. |\n| IR-05 | Mostly closed | 4-variable environment, exact argv, `sys.path` asserted, no OpenSSL config. Residual: the stdin pipe is held open until end-of-file (probe L42), which departs from PF-004's literal \"no stdin\" and from design REV1, and this is not recorded. |\n| IR-06 | Mostly closed | Tree and ACL checked before and after, but as counts only. Loader coverage is the child's own report. |\n| IR-07 | Open, residual | 13 of 29 native modules (12 KnownDLLs plus ntdll). |\n| IR-08 | Largely closed | Thumbprint-pinned signatures on 44 PE files; 603 Lib files compared offline with the official CPython tag. Residual: the 6 non-PE, non-Lib files rest on first-use trust, and chain validation still honours the CurrentUser root store. |\n| IR-09 | Partly closed | `InstallerSha256` is a self re-read; the installer ran elevated from an unrecorded, user-writable `$PSScriptRoot`; elevated `cmd.exe` would run AutoRun before the installer's own check; the SHA of `install_v2.cmd` is not recorded. |\n| IR-10 | Closed procedurally | merge < install < start, subject to the owner's clock; the reviewer is the same model family. |\n| IR-11 | Open until the raw bytes are committed | They contain no user paths, so the exact bytes can be committed (with `-text`). Their SHAs were fixed only at read-back, so they could have been forged before that. |\n| IR-12 | Closed | Admin-only parent folders. |\n| IR-13 | Mostly closed | The −50 ms meaning remains a residual. |\n| IR-14 | Open, residual | Read/execute goes to all of BUILTIN\\Users; there is no separate run account. |\n| IR-15 | Applies to any result document still to be written | It must not say \"evidence\" or \"T0 observed\". |\n| IR-16 | Recurs | REV4's sentence was derived from \"继续\" (continue); the \"重试\" retry is not recorded. |\n| IR-17 | Not applicable | No robocopy in v2. |\n\nAdmission is still blocked by:\n- the outcome ceiling: no detached, system-written evidence, such as process-creation audit events 4688/4689 or an equivalent;\n- the residual part of IR-01;\n- same-user tampering (IR-03) and the admin account;\n- n=1 on the owner's desktop, which is not the recorded validation host;\n- the upstream mismatch between V3.2's \"3.12.13\" and the actual 3.12.10;\n- the unrecorded retry authorization.\n\n## 5. Verdict: (C) non-evidentiary engineering observation only\n\n(B) is not available: the binding JSON `OutcomeCeiling` caps a PASS at a non-evidentiary engineering observation unless detached, system-written evidence is added, and none was. Items missing before this could become OD-04 evidence:\n\n1. Detached, system-written evidence for the run: process-creation auditing (4688 with command line, plus 4689) exported after the run. Today that is outside the authorization (\"不改动系统审计策略\": do not change the system audit policy), so it needs a new owner decision.\n2. A way to count runs that is not self-reported, so that a selectively presented PASS can be ruled out.\n3. A supervisor identity anchored at execution time, not by a self-hash or a read-back inside the same session.\n4. A run on the recorded validation host, as a separate standard-user run account (IR-14), with more than one run.\n5. A recorded owner authorization for the second invocation (a REV4 addendum or REV5 quoting \"重试\" with its time), plus the BLOCKED_1 record committed.\n6. The three raw records committed byte-exact with `-text`, at the SHAs listed at the top.\n7. The stdin deviation from PF-004 and the upstream 3.12.13 vs 3.12.10 mismatch, each resolved or formally recorded.\n8. A fresh review from outside the recorder's model family (IR-10 independence).\n\nUntil then, record it as the v2 dry-run observation `PASS_T0_DRY_RUN_V2`, with IR-03, IR-07 and IR-14, the residual parts of IR-01, -02, -05, -06, -08, -09 and -11, and the nine pre-declared residuals written in as limitations. OD-04 stays `OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE` and DSP-004 stays `OPEN / HOLD`.\n\nFiles referenced:\n- /root/claude-for-legal-cn/validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v2/supervisor_v2.ps1\n- /root/claude-for-legal-cn/validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v2/bound_list_v2.json\n- /root/claude-for-legal-cn/validation/route_b_c03/wp_008/DSP_004_OD04A_T0_DRY_RUN_V2_PRE_RUN_BINDING.json\n- /root/claude-for-legal-cn/docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV4.md\n- /tmp/claude-0/-home-claude/e73a5e13-d044-54d4-9d04-b860f7bab701/scratchpad/v2run/v2_run_record.json\n- /tmp/claude-0/-home-claude/e73a5e13-d044-54d4-9d04-b860f7bab701/scratchpad/v2run/v2_run_record.BLOCKED_1.json\n- /tmp/claude-0/-home-claude/e73a5e13-d044-54d4-9d04-b860f7bab701/scratchpad/v2run/install_v2_result.json"
+  },
+  "MissingForEvidence": [
+    "detached system-written evidence (process-creation audit 4688/4689) exported after the run; needs a new owner decision because REV4 excludes audit-policy changes",
+    "a run count that is not self-reported",
+    "supervisor identity anchored at execution time outside the owner's session",
+    "a run on the recorded validation host under a separate standard-user run account, more than once",
+    "stdin deviation and 3.12.13 vs 3.12.10 mismatch resolved or formally accepted",
+    "a fresh review from outside the recorder's model family"
+  ],
+  "OD04Decision": {
+    "SelectedChoiceId": "OD04-A",
+    "State": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE",
+    "EvidenceAdmitted": false
+  },
+  "AssetAcceptanceGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}

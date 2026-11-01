@@ -1,0 +1,186 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "授权第二版 T0 演练：按独立审查列出的条件修订监督程序，运行前先审查并把确切字节提交绑定，再由所有者以管理员身份运行一次安装器、运行一次监督下的清单探测。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004；不改动系统审计策略。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV26.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "d9b98667aaa7b05668876d058ae6e91d09fdd359",
+    "MaterializedFrom": "PR #29 merge",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV25_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV25.md",
+      "SHA256": "68C15AC811B7FCBD2E1715C6E01E313AC1BB689FC12A0239FCFBF49541C801E2",
+      "Bytes": 2922,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV25_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV25.json",
+      "SHA256": "58DA5D11A44FC773CDBF94F4CBB0AA3EBB79B7372EF1BB0E90508585295FE9B2",
+      "Bytes": 6744,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "NewPreparationFact": "OD04A_V2_DRY_RUN_PASSED_NON_EVIDENTIARY_OBSERVATION",
+  "ResultRecord": {
+    "Markdown": {
+      "Role": "V2_RESULT_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04A_T0_DRY_RUN_V2_RESULT.md",
+      "SHA256": "99F0BB962950DAD0A40B324D5E750AAECDC96179CA55D7AE877CEBFFF86DD19E",
+      "Bytes": 5370,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "V2_RESULT_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04A_T0_DRY_RUN_V2_RESULT.json",
+      "SHA256": "E0A9B86D49DBFC2333733E0A02C2AF76F9B7D267BDDCE4AC06AE4B036000AD3B",
+      "Bytes": 20187,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "RetryAuthorizationRecorded": true,
+  "OD04EvidenceAdmitted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-13"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "RETAIN is recorded. DISPOSE and ELIMINATE are false. The FA-06 register stays NOT_ADMITTED."
+    },
+    {
+      "Rank": 2,
+      "GapId": "RUNTIME_ROOT",
+      "State": "REFUSE_LOCATOR",
+      "DecisionIds": [
+        "OD-05",
+        "OD-03"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "OD-05 stays REFUSE_LOCATOR. OD-03 RETAIN does not supply a locator. A new dedicated runtime root now exists on the owner's candidate host (REV23); it is not admitted. OD-05 for AP-006/AP-009 is unchanged."
+    },
+    {
+      "Rank": 3,
+      "GapId": "OD-04",
+      "State": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE",
+      "DecisionIds": [
+        "OD-04"
+      ],
+      "Decided": true,
+      "DeliverableOpened": true,
+      "Note": "REV26: v2 dry run PASS_T0_DRY_RUN_V2 (23/23) after one blocked and one stopped invocation; post-run independent review classifies it as a non-evidentiary engineering observation. Missing for evidence: detached system-written audit, independent run count, execution-time anchoring outside the owner's session, runs on the recorded validation host under a separate account, deviation handling, cross-family review."
+    },
+    {
+      "Rank": 4,
+      "GapId": "FA-05",
+      "State": "INCOMPLETE",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "KEEP_REV1_RECORD stays the bound choice. The future static identity note is not written."
+    },
+    {
+      "Rank": 5,
+      "GapId": "AP-020-AP-022",
+      "State": "LEAVE_UNREPAIRED_AND_REFUSE",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "BLOCK codes stay unrepaired. Actual sequence locators stay null."
+    },
+    {
+      "Rank": 6,
+      "GapId": "ACTUAL_SIDES",
+      "State": "UNBOUND_DO_NOT_AUTHORIZE",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Three sides stay UNBOUND. No call to read actual references is authorized."
+    },
+    {
+      "Rank": 7,
+      "GapId": "SHA_ACCEPTANCE",
+      "State": "REFUSE",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "REV3 SHAs, prior candidate SHAs including 57BAF161, and Harness SHAs are not accepted."
+    },
+    {
+      "Rank": 8,
+      "GapId": "OD-15",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Manifest, formal run, FA-08 and DSP-004 closure stay unauthorized under REV2. Only one inventory-only probe run was authorized."
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "INC26-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV25 JSON re-hash equals the SHA cited in the REV25 narrative."
+    },
+    {
+      "CheckId": "INC26-02.CLASSIFICATION",
+      "Passed": true,
+      "Detail": "Result is classified as a non-evidentiary engineering observation; nothing admitted; DSP-004 OPEN / HOLD."
+    }
+  ],
+  "CheckCount": 2,
+  "ChecksPassed": 2
+}
