@@ -1,0 +1,46 @@
+{
+  "RecordKind": "DSP004_PATH_B_SCOPE_SIGNING_RECORD_ONLY",
+  "Revision": 3,
+  "ExactSentence": "授权按 OD04-A 推进三步：①由所有者以管理员身份运行记录人提供的脚本，建立专用运行时目录并设置访问控制；②由记录人编写外层监督程序，审查后绑定其 SHA；③用监督程序做一次只跑清单探测的 T0 演练。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "SentenceMatch": "OWNER_APPROVED_RECORDER_DRAFTED_SENTENCE",
+  "SentenceOrigin": "The recorder put this sentence in a message to the owner as the text to record if the owner agreed. The owner replied: 合并，三步都授权。",
+  "DecisionAuthority": "PROJECT_OWNER",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-01T01:55:00Z",
+  "RecordedAtNote": "Approximate recorder receipt time; the sentence has no clock.",
+  "Supersedes": {
+    "Revision": 2,
+    "Record": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV2.json",
+      "SHA256": "58C9600334D18A39F771EFDBD43CC396B3DFCD77E7E3B6881D656E6672211992",
+      "Bytes": 2034
+    },
+    "PriorSentence": "改签路径 B：以本机 CPython 3.12.10 为验证机候选，授权一次只读清单探测运行（只读取解释器版本、内置与冻结模块、实际加载模块来源），不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+    "RelationNote": "REV3 adds the three OD04-A steps. REV2's one probe run was already used. Every exclusion stays."
+  },
+  "Effect": {
+    "Od04aStep1SetupAuthorized": true,
+    "Od04aStep2SupervisorAuthorized": true,
+    "Od04aStep3T0DryRunAuthorized": true,
+    "T0DryRunCount": 1,
+    "AssetAcceptanceGranted": false,
+    "ManifestAuthorized": false,
+    "FormalRunAuthorized": false,
+    "DSP004Closed": false,
+    "FA08Completed": false,
+    "SourceAdmissionGranted": false,
+    "RuntimeRootAdmitted": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  }
+}
