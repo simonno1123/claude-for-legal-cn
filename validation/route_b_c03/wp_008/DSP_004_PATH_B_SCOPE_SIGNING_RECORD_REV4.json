@@ -1,0 +1,42 @@
+{
+  "RecordKind": "DSP004_PATH_B_SCOPE_SIGNING_RECORD_ONLY",
+  "Revision": 4,
+  "ExactSentence": "授权第二版 T0 演练：按独立审查列出的条件修订监督程序，运行前先审查并把确切字节提交绑定，再由所有者以管理员身份运行一次安装器、运行一次监督下的清单探测。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004；不改动系统审计策略。",
+  "SentenceMatch": "OWNER_CONTINUE_ON_RECORDER_DESCRIBED_PLAN",
+  "SentenceOrigin": "The recorder described the v2 plan (move supervisor/probe/list into the admin-protected folder, absolute host path, outside-in module enumeration, cleared environment, token/UAC record, post-run scan and per-file ACL, a further independent review; owner runs an elevated step and one launcher) and said it needs re-authorization and the owner decides. The owner replied: 继续。 The recorder wrote this sentence to capture that plan; the owner did not write it word for word. Changing the system audit policy was not described as part of the plan and is excluded.",
+  "DecisionAuthority": "PROJECT_OWNER",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-01T02:53:00Z",
+  "RecordedAtNote": "Owner reply received about 02:53Z; approximate.",
+  "Supersedes": {
+    "Revision": 3,
+    "Record": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV3.json",
+      "SHA256": "51FC43CED82C5DB8C3A52F6139D714745E8B96A8FC753C25DBE682D1495BB077",
+      "Bytes": 2188
+    },
+    "PriorSentence": "授权按 OD04-A 推进三步：①由所有者以管理员身份运行记录人提供的脚本，建立专用运行时目录并设置访问控制；②由记录人编写外层监督程序，审查后绑定其 SHA；③用监督程序做一次只跑清单探测的 T0 演练。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+    "RelationNote": "REV3's single dry run was used (REV23). REV4 authorizes one v2 install and one v2 dry run. Every exclusion stays."
+  },
+  "Effect": {
+    "V2InstallAuthorized": true,
+    "V2DryRunCount": 1,
+    "AuditPolicyChangeAuthorized": false,
+    "AssetAcceptanceGranted": false,
+    "ManifestAuthorized": false,
+    "FormalRunAuthorized": false,
+    "DSP004Closed": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  }
+}
