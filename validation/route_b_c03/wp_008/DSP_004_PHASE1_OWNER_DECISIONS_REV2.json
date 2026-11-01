@@ -1,0 +1,42 @@
+{
+  "RecordKind": "DSP004_PHASE1_OWNER_DECISIONS",
+  "Outcome": "DECISION_AMENDED_NOT_EXECUTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-01T15:45:00Z",
+  "Supersedes": {
+    "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE1_OWNER_DECISIONS_REV1.json",
+    "SHA256": "3E7492E2C236368DB180646E9B5B264B92AF0494A1351F659E89F1767E244ECB",
+    "Bytes": 1515,
+    "Scope": "P1-REVIEWER only; P1-HOST and P1-AUDIT unchanged"
+  },
+  "Method": "owner replied in chat after the recorder explained the limits of same-family review",
+  "OwnerWords": "你先自审，后续有必要再说。",
+  "Decisions": [
+    {
+      "Id": "P1-REVIEWER",
+      "PreviousChoice": "Codex, routed through the owner's existing coordination process",
+      "Choice": "recorder self-review for now; an external review may be added later if the owner finds it necessary",
+      "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL"
+    }
+  ],
+  "SelfReviewConditions": [
+    "each review is done by a fresh subagent that did not see the authoring work, given only final materials and a fixed checklist, instructed to look for defects",
+    "all mechanically checkable items (hashes, byte counts, signatures, audit event presence) are checked by scripts",
+    "Windows Security log events 4688/4689 serve as the system-written side witness",
+    "every review record states: reviewer is the recorder's model family; no external review"
+  ],
+  "KnownLimitation": "a same-family reviewer may share blind spots with the author; scripts and the system audit log reduce but do not remove this",
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
