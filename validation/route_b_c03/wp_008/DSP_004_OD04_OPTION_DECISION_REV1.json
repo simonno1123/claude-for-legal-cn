@@ -1,0 +1,74 @@
+{
+  "RecordKind": "DSP004_OD04_OPTION_DECISION_RECORD",
+  "Outcome": "DECISION_RECORDED_NOT_ADMITTED",
+  "DecisionRecorded": true,
+  "AcceptanceInstrument": false,
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "NewPreparationFact": "OD04_OPTION_A_SELECTED_RECORDED_NOT_ADMITTED",
+  "ScopeSentence": "改签路径 B：以本机 CPython 3.12.10 为验证机候选，授权一次只读清单探测运行（只读取解释器版本、内置与冻结模块、实际加载模块来源），不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "OwnerWords": "a",
+  "OwnerWordsContext": "Reply to the recorder's question listing A (recommended), B and C for OD-04, sent 2026-10-31 18:48 America/Los_Angeles. The same reply did not answer whether to merge PR #26.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_OPTION_DECISION_REV1.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "4b574ae86794de57ad6a1b07768abedec80e4aa9",
+    "RecordedAtUtc": "2026-11-01T01:50:00Z",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "Decision": {
+    "DecisionId": "OD-04",
+    "Options": [
+      {
+        "ChoiceId": "OD04-A",
+        "Selected": true
+      },
+      {
+        "ChoiceId": "OD04-B",
+        "Selected": false
+      },
+      {
+        "ChoiceId": "OD04-C",
+        "Selected": false
+      }
+    ],
+    "SelectedChoiceId": "OD04-A",
+    "SelectedText": "admin-owned dedicated runtime copy + held file handles + empty pycache prefix + outer supervisor for T0 and two-side identity",
+    "PriorKey": "DEFER_WITHOUT_EVIDENCE",
+    "Decided": true,
+    "Opened": false,
+    "EvidenceSupplied": false
+  },
+  "OptionSource": {
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OD04_T0_AND_CHECK_TO_USE_DESIGN_CANDIDATE_REV1.json",
+    "SHA256": "F3B40E76C245A91F09EA2D88C985CE828A06FAA49AB15A0012B9528CFF097B9E",
+    "Bytes": 5110
+  },
+  "NotAuthorizedBySelection": [
+    "create the dedicated runtime directory or change any ACL",
+    "write or build the outer supervisor",
+    "run any program, including a T0 dry run",
+    "Manifest, formal run, FA-08, closing DSP-004"
+  ],
+  "NextOwnerAuthorizationsNeeded": [
+    "create admin-owned dedicated runtime directory and set ACL (owner, elevated)",
+    "write and review the outer supervisor; bind its build SHA",
+    "one supervised T0 dry run of the inventory probe only"
+  ],
+  "OtherDecisionsUnchanged": true,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OD04_A_SELECTED_NOT_OPENED"
+  }
+}
