@@ -1,0 +1,159 @@
+{
+  "RecordKind": "DSP004_FORMAL_COMPLETION_ROADMAP_CANDIDATE",
+  "Outcome": "ROADMAP_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "OwnerRequest": {
+    "Words": "完成DSP-004",
+    "Clarified": "推进到正式验收完成",
+    "AtUtc": "2026-11-01T07:56Z (approx)"
+  },
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_COMPLETION_ROADMAP_REV1_CANDIDATE.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "c4c97b9bda9ba1ca272286f934ce023ac5e2d0c2",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "Sources": [
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_REMAINING_WORK_HANDOFF_REV1.md",
+      "SHA256": "538283D7E48520B56B90ACA42A705A43AFEA468AF6DE8B7A46AE34636A3805AA",
+      "Bytes": 14774
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_ACCEPTANCE_OWNER_DECISION_PACKET_REV1.md",
+      "SHA256": "9B0A3C048E479B714083952E76CF6620A2AE046EA23D2CC95192D967CF5A6736",
+      "Bytes": 8630
+    },
+    {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+      "SHA256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD",
+      "Bytes": 54109
+    }
+  ],
+  "Phases": [
+    {
+      "N": 0,
+      "Name": "re-sign toward formal completion",
+      "Gates": [
+        "OD-15",
+        "path signing"
+      ]
+    },
+    {
+      "N": 1,
+      "Name": "formal validation environment",
+      "Gates": [
+        "FA-01",
+        "FA-02",
+        "FA-06",
+        "R-02",
+        "R-06"
+      ]
+    },
+    {
+      "N": 2,
+      "Name": "six-side sources and actual-side capture",
+      "Gates": [
+        "FA-03",
+        "R-01"
+      ],
+      "OwnerSuppliedFacts": true
+    },
+    {
+      "N": 3,
+      "Name": "formal typed contract and array policy",
+      "Gates": [
+        "FA-04",
+        "R-03"
+      ],
+      "OwnerPolicyDecisions": true
+    },
+    {
+      "N": 4,
+      "Name": "inputs, comparison mapping, harness",
+      "Gates": [
+        "FA-05",
+        "R-05",
+        "OD-10",
+        "OD-11",
+        "OD-12",
+        "OD-14"
+      ]
+    },
+    {
+      "N": 5,
+      "Name": "stop/cleanup LIMITED disposition",
+      "Gates": [
+        "R-07",
+        "OD-06",
+        "OD-07",
+        "OD-13"
+      ]
+    },
+    {
+      "N": 6,
+      "Name": "runtime dependency Manifest",
+      "Gates": [
+        "FA-07",
+        "R-08"
+      ],
+      "DependsOn": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "N": 7,
+      "Name": "formal run",
+      "Gates": [
+        "FA-07",
+        "V3.2 PF-001..PF-012"
+      ],
+      "DependsOn": [
+        6
+      ]
+    },
+    {
+      "N": 8,
+      "Name": "evidence review, final acceptance, closure",
+      "Gates": [
+        "FA-08",
+        "R-04",
+        "R-08"
+      ],
+      "DependsOn": [
+        7
+      ]
+    }
+  ],
+  "Boundaries": [
+    "facts such as six-side sources, trusted roots and approvals cannot be invented by the recorder",
+    "at least one review from outside the recorder's model family is required",
+    "REV17 refusals/retentions must be re-decided item by item"
+  ],
+  "Phase0SentenceDraft": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+  "FirstOwnerDecisions": [
+    "sign the phase-0 sentence",
+    "choose the validation host (this desktop with a separate standard account, or a separate VM/computer)",
+    "allow process-creation auditing (4688 with command line) on the validation host",
+    "choose a reviewer outside the recorder's model family (Codex/Cursor already used by the project, a human, or other)"
+  ],
+  "KnownDiscrepancy": "V3.2 names ten subject files; scripts/phase2_runtime/route_b_c03/ currently tracks nine .py files.",
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}
