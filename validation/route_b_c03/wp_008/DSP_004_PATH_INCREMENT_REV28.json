@@ -1,0 +1,91 @@
+{
+  "RecordKind": "DSP004_PATH_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV28.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "origin/main after PR #31",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV27_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV27.md",
+      "SHA256": "CB680F8B2E9079D2EE3B41ABE415A1FEE17867EF3724A221EED08A0E62DC7B4B",
+      "Bytes": 2405,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV27_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV27.json",
+      "SHA256": "93B29FB7638F1F034DEAF5F097F2E0FADE9EDE97A3410374DDE0CAAAD348BD01",
+      "Bytes": 6125,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "NewPreparationFacts": [
+    "PATH_RESIGNED_REV5_FORMAL_COMPLETION_GOAL",
+    "PHASE1_OWNER_DECISIONS_REV1_RECORDED"
+  ],
+  "SigningRecord": {
+    "Markdown": {
+      "Role": "SIGN_REV5_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_SCOPE_SIGNING_RECORD_REV5.md",
+      "SHA256": "3C7062B38636D2B98E98B297A731C13118648653D21D252A9570282BE5BECE9D",
+      "Bytes": 2031,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "SIGN_REV5_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_SCOPE_SIGNING_RECORD_REV5.json",
+      "SHA256": "F620C74A21B06EB4F7C3DEA97A7AA2A9B79012A7E61826C6F8C02A6EECAC6CD7",
+      "Bytes": 1946,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "DecisionsRecord": {
+    "Role": "PHASE1_DECISIONS_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE1_OWNER_DECISIONS_REV1.json",
+    "SHA256": "3E7492E2C236368DB180646E9B5B264B92AF0494A1351F659E89F1767E244ECB",
+    "Bytes": 1515,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "CurrentPhase": 1,
+  "AnythingExecuted": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "INC28-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV27 JSON re-hash equals the SHA cited in the REV27 narrative."
+    }
+  ],
+  "CheckCount": 1,
+  "ChecksPassed": 1
+}

@@ -1,0 +1,41 @@
+{
+  "RecordKind": "DSP004_PATH_SCOPE_SIGNING_RECORD_ONLY",
+  "Revision": 5,
+  "ExactSentence": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+  "SentenceMatch": "OWNER_SELECTED_RECORDER_DRAFTED_SENTENCE",
+  "SentenceOrigin": "The recorder put this exact sentence in a question; the owner chose 签署（推荐）.",
+  "DecisionAuthority": "PROJECT_OWNER",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-01T08:05:00Z",
+  "RecordedAtNote": "approximate receipt time",
+  "Supersedes": {
+    "Revision": 4,
+    "Record": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_SCOPE_SIGNING_RECORD_REV4.json",
+      "SHA256": "3A8381FE940FA3107AA01C35C850D5BA471D5A919F7FDE6D9FF5A29CB124F86A",
+      "Bytes": 2535
+    },
+    "PriorSentence": "授权第二版 T0 演练：按独立审查列出的条件修订监督程序，运行前先审查并把确切字节提交绑定，再由所有者以管理员身份运行一次安装器、运行一次监督下的清单探测。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004；不改动系统审计策略。",
+    "RelationNote": "REV5 changes the goal from preparation only to formal completion. It authorizes no single asset acceptance, admission, Manifest, formal run or closure; each still needs its own owner decision."
+  },
+  "Effect": {
+    "GoalFormalCompletion": true,
+    "AssetAcceptanceGranted": false,
+    "SourceAdmissionGranted": false,
+    "ManifestAuthorized": false,
+    "FormalRunAuthorized": false,
+    "DSP004Closed": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  }
+}

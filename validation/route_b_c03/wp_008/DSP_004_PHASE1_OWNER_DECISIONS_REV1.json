@@ -1,0 +1,44 @@
+{
+  "RecordKind": "DSP004_PHASE1_OWNER_DECISIONS",
+  "Outcome": "DECISIONS_RECORDED_NOT_EXECUTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-01T08:05:00Z",
+  "Method": "owner chose options in a recorder question",
+  "Decisions": [
+    {
+      "Id": "P1-HOST",
+      "Question": "which machine is the formal validation host",
+      "Choice": "this desktop + a separate standard (non-admin) local account used only for validation",
+      "ChoiceLabel": "本机+独立普通账户（推荐）"
+    },
+    {
+      "Id": "P1-AUDIT",
+      "Question": "enable Windows process-creation auditing (4688 with command line) on the validation host",
+      "Choice": "allowed; owner performs the change; may be turned off afterwards",
+      "ChoiceLabel": "允许（推荐）"
+    },
+    {
+      "Id": "P1-REVIEWER",
+      "Question": "reviewer outside the recorder's model family",
+      "Choice": "Codex, routed through the owner's existing coordination process",
+      "ChoiceLabel": "Codex（项目已在用）"
+    }
+  ],
+  "ExecutionNotes": [
+    "the recorder does not create accounts, set passwords or change security settings; the owner performs those steps",
+    "until executed and recorded, nothing changes on the machine"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
