@@ -1,0 +1,123 @@
+{
+  "RecordKind": "DSP004_OD04_T0_AND_CHECK_TO_USE_DESIGN_CANDIDATE_NON_ACCEPTANCE",
+  "Outcome": "DESIGN_DOCUMENT_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "改签路径 B：以本机 CPython 3.12.10 为验证机候选，授权一次只读清单探测运行（只读取解释器版本、内置与冻结模块、实际加载模块来源），不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "OwnerAuthorization": "2026-10-31: after the recorder offered to write the remaining items as a concrete plan for the owner to decide, the owner replied 继续推进.",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04_T0_AND_CHECK_TO_USE_DESIGN_CANDIDATE_REV1.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisRecord": "7d78a97a93e42b77ebd12db1c63fbf3ce4773367",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    },
+    "CodeImplemented": false,
+    "EnvironmentChanged": false,
+    "ProgramsRun": false
+  },
+  "UpstreamRequirements": {
+    "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_VALIDATION_EXECUTION_PACKAGE_REVISION_V3_2_CANDIDATE.md",
+    "SHA256": "87EE2451298189FDDED9F49AC8106B902290A2AA38CD58158B5972F0BE4463BD",
+    "Bytes": 54109
+  },
+  "BuildsOn": [
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04_LOCAL_FIXED_RUNTIME_CANDIDATE_OBSERVATION_REV1.json",
+      "SHA256": "6F99BAE833A112D982667C30EE9D9FCC53037EF41CA13362EC0AE6FA5E602C34",
+      "Bytes": 54439
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04_INVENTORY_PROBE_REV1_RESULT.json",
+      "SHA256": "E33211D39A7A279DFEA4878A0E2A2792354C8F5287C5912E4A18174E3A2F6D9A",
+      "Bytes": 18137
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_CAPTURE_RESULT_OUTER_SUPERVISOR_CANDIDATE_REV2.cs",
+      "SHA256": "D097CBC8DEFA521F0B19ED06FF8A355881F95DB251453B760E644C33271BBE6A",
+      "Bytes": 51610
+    }
+  ],
+  "CheckToUse": {
+    "Layer1": {
+      "Enforcement": "NTFS_DACL_PLUS_UAC",
+      "Setup": "admin-owned dedicated runtime directory; SYSTEM and Administrators full control; run account read and execute; inheritance off",
+      "Residual": "an elevated process can still replace files or change ACL; T0 records an ACL snapshot hash and rechecks after the run"
+    },
+    "Layer2": {
+      "Enforcement": "WINDOWS_FILE_SHARE_MODE_HELD_HANDLES",
+      "Setup": "supervisor opens every bound file allowing others read only, denying write and delete, and holds the handles until Python exits",
+      "Residual": "kernel-level or offline modification not covered; only files in the bound list are protected"
+    },
+    "Bytecode": {
+      "Argv": "-B -X pycache_prefix=<empty run-specific directory>",
+      "Effect": "no read of Lib __pycache__, no cache writes; T0 verifies the prefix directory is empty"
+    },
+    "Frozen": "frozen module code lives in python312.dll; its SHA binding covers it"
+  },
+  "T0Sequence": [
+    "read bound list",
+    "hash every bound file and block on any mismatch",
+    "record ACL snapshot hash and verify empty pycache prefix",
+    "open and hold all bound files with deny-write/deny-delete sharing",
+    "record monotonic T0",
+    "spawn python.exe -I -S -B -X pycache_prefix=<empty> <fixed entry> with no extra argv, environment or stdin"
+  ],
+  "TwoSideIdentity": {
+    "Caller": [
+      "own image path and SHA",
+      "PID",
+      "command line"
+    ],
+    "Callee": [
+      "PID from process creation",
+      "main image path by system query equals locked python.exe",
+      "parent PID equals supervisor PID",
+      "sys.executable and one-time nonce echoed over the bound pipe"
+    ]
+  },
+  "OD04OptionsDraft": [
+    {
+      "ChoiceId": "OD04-A",
+      "Selected": false,
+      "Text": "admin-owned dedicated runtime copy + held file handles + empty pycache prefix + outer supervisor for T0 and two-side identity",
+      "RecorderView": "recommended"
+    },
+    {
+      "ChoiceId": "OD04-B",
+      "Selected": false,
+      "Text": "as A, using the official embeddable package (stdlib in one zip)",
+      "RecorderView": "optional; owner downloads and checks the official hash"
+    },
+    {
+      "ChoiceId": "OD04-C",
+      "Selected": false,
+      "Text": "stay DEFER_WITHOUT_EVIDENCE",
+      "RecorderView": "current state"
+    }
+  ],
+  "FurtherAuthorizationsNeededIfAOrB": [
+    "create dedicated runtime directory and set ACL (owner, elevated, changes the machine)",
+    "write and review the supervisor implementation; bind build SHA",
+    "one supervised T0 dry run of the inventory probe only"
+  ],
+  "OD04Decision": {
+    "SelectedKey": "DEFER_WITHOUT_EVIDENCE",
+    "ChangedByThisRecord": false
+  },
+  "AssetAcceptanceGranted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "OD04": "OWNER_HELD_OPEN_NO_CLOSED_OPTIONS"
+  }
+}
