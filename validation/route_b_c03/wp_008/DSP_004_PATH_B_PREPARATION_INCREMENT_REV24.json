@@ -1,0 +1,192 @@
+{
+  "RecordKind": "DSP004_PATH_B_PREPARATION_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "授权按 OD04-A 推进三步：①由所有者以管理员身份运行记录人提供的脚本，建立专用运行时目录并设置访问控制；②由记录人编写外层监督程序，审查后绑定其 SHA；③用监督程序做一次只跑清单探测的 T0 演练。不接受资产、不生成 Manifest、不正式运行、不关闭 DSP-004。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV24.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "6b08ce275866c4ec7518b54a92f05ccdbd43f490",
+    "MaterializedFrom": "PR #27 merge",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV23_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_B_PREPARATION_INCREMENT_REV23.md",
+      "SHA256": "DE59CFEFFE9398598F05C92D8CCD4604C0508FE6BF9F74BAA4B5B44730DF9D95",
+      "Bytes": 3399,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV23_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_B_PREPARATION_INCREMENT_REV23.json",
+      "SHA256": "D82B8D579F65CDD6A9E56D7A63C3438ACF9365B6E906B308F07DDA884CC8C746",
+      "Bytes": 7073,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "NewPreparationFact": "OD04A_T0_DRY_RUN_INDEPENDENT_REVIEW_RECORDED_NOT_ADMITTED",
+  "ReviewRecord": {
+    "Markdown": {
+      "Role": "REVIEW_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_OD04A_T0_DRY_RUN_REV1_INDEPENDENT_STATIC_REVIEW.md",
+      "SHA256": "569A0058BE4571ED87EFD6C17DD795E37A6E37DE86B7FA70E1FFA0C593CF162A",
+      "Bytes": 6053,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REVIEW_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04A_T0_DRY_RUN_REV1_INDEPENDENT_STATIC_REVIEW.json",
+      "SHA256": "40355F11BAFE72317F73E654DA4CE3960C7ED08C9D2DC05BE712FF279AAE0F62",
+      "Bytes": 23712,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "CorrectionsToRev23": [
+    "REV23 MD section 4 and JSON OD04Components overstate T0 and two-side identity as observed; per review they are child-relative observations from an unaccepted, unbound launcher.",
+    "REV23 residual list omitted same-user process tampering, token/UAC state, environment and OpenSSL inputs, unchecked loaders, KnownDLLs, trust-on-first-use of the runtime, unsupported script-version claim, post-run SHA binding, and re-serialized records.",
+    "REV23 said step 2 bound the supervisor SHA after review; the SHA was first committed after the run (02:16Z vs T0 02:13Z) and the review was self-review.",
+    "REV23 *.SANITIZED.json files are re-serialized and cannot be tied to the raw SHAs; byte-redacted copies are added."
+  ],
+  "Rev23BytesMutated": false,
+  "OD04EvidenceAdmitted": false,
+  "ManifestCreated": false,
+  "FormalRunAuthorized": false,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "RemainingPrepGapRank": [
+    {
+      "Rank": 1,
+      "GapId": "FA-06",
+      "State": "未建立充分前提",
+      "DecisionIds": [
+        "OD-01",
+        "OD-02",
+        "OD-03",
+        "OD-13"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "RETAIN is recorded. DISPOSE and ELIMINATE are false. The FA-06 register stays NOT_ADMITTED."
+    },
+    {
+      "Rank": 2,
+      "GapId": "RUNTIME_ROOT",
+      "State": "REFUSE_LOCATOR",
+      "DecisionIds": [
+        "OD-05",
+        "OD-03"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "OD-05 stays REFUSE_LOCATOR. OD-03 RETAIN does not supply a locator. A new dedicated runtime root now exists on the owner's candidate host (REV23); it is not admitted. OD-05 for AP-006/AP-009 is unchanged."
+    },
+    {
+      "Rank": 3,
+      "GapId": "OD-04",
+      "State": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE",
+      "DecisionIds": [
+        "OD-04"
+      ],
+      "Decided": true,
+      "DeliverableOpened": true,
+      "Note": "Independent review (REV24) found one BLOCKING and ten MAJOR issues. The REV23 dry run is a non-evidentiary engineering observation. Qualification needs a pre-bound admin-protected launcher, outside-in module enumeration, PF-004-consistent environment, token/UAC record, post-run scan and verifiable raw records."
+    },
+    {
+      "Rank": 4,
+      "GapId": "FA-05",
+      "State": "INCOMPLETE",
+      "DecisionIds": [
+        "OD-14"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "KEEP_REV1_RECORD stays the bound choice. The future static identity note is not written."
+    },
+    {
+      "Rank": 5,
+      "GapId": "AP-020-AP-022",
+      "State": "LEAVE_UNREPAIRED_AND_REFUSE",
+      "DecisionIds": [
+        "OD-06",
+        "OD-07"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "BLOCK codes stay unrepaired. Actual sequence locators stay null."
+    },
+    {
+      "Rank": 6,
+      "GapId": "ACTUAL_SIDES",
+      "State": "UNBOUND_DO_NOT_AUTHORIZE",
+      "DecisionIds": [
+        "OD-08",
+        "OD-09"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Three sides stay UNBOUND. No call to read actual references is authorized."
+    },
+    {
+      "Rank": 7,
+      "GapId": "SHA_ACCEPTANCE",
+      "State": "REFUSE",
+      "DecisionIds": [
+        "OD-10",
+        "OD-11",
+        "OD-12"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "REV3 SHAs, prior candidate SHAs including 57BAF161, and Harness SHAs are not accepted."
+    },
+    {
+      "Rank": 8,
+      "GapId": "OD-15",
+      "State": "UNAUTHORIZED",
+      "DecisionIds": [
+        "OD-15"
+      ],
+      "Decided": true,
+      "DeliverableOpened": false,
+      "Note": "Manifest, formal run, FA-08 and DSP-004 closure stay unauthorized under REV2. Only one inventory-only probe run was authorized."
+    }
+  ],
+  "Checks": [
+    {
+      "CheckId": "INC24-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV23 JSON re-hash equals the SHA cited in the REV23 narrative."
+    },
+    {
+      "CheckId": "INC24-02.VERDICT",
+      "Passed": true,
+      "Detail": "Review verdict NOT_ADMITTED_AS_EVIDENCE with one BLOCKING finding."
+    }
+  ],
+  "CheckCount": 2,
+  "ChecksPassed": 2
+}
