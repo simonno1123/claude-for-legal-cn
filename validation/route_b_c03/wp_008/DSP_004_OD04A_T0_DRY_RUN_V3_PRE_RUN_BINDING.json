@@ -1,0 +1,196 @@
+{
+  "RecordKind": "DSP004_OD04A_T0_DRY_RUN_V3_PRE_RUN_BINDING",
+  "Outcome": "BOUND_BEFORE_RUN_NOT_RUN",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "Phase": 1,
+  "Basis": {
+    "SigningRecord": "REV5 (formal-completion goal; each formal run still decided item by item)",
+    "PhaseDecisions": "DSP_004_PHASE1_OWNER_DECISIONS_REV1 + REV2",
+    "OwnerWords": "好的，继续。",
+    "OwnerWordsContext": "reply to the recorder's message describing the v3 supervisor, three child runs under dsp004val, audit-event collection, and the single double-click the owner would make"
+  },
+  "Purpose": "phase-1 environment dry run: same probe as v2, now under the separate standard account dsp004val, three child runs, with system-written 4688/4689 events collected afterwards",
+  "OutcomeCeiling": "A PASS is a phase-1 environment observation. It is not OD-04 evidence, not a formal run, and not acceptance; admission needs a separate owner decision.",
+  "Assets": [
+    {
+      "Role": "go_v3.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/go_v3.cmd",
+      "SHA256": "7530C3FEE3DEFBF5413710A5AAB27C9DF354456CB542B958D5EA26514E830792",
+      "Bytes": 1503,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "install_v3.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/install_v3.ps1",
+      "SHA256": "56D0578FDEC308CE23B9D4E4C648837CF9351647D5242D747F5226251DECF043",
+      "Bytes": 7514,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "run_v3.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/run_v3.cmd",
+      "SHA256": "B430D9B22CACEDEEAE9C3124916ECFF8FD023EFABAE8D870920ECD2DAE64195A",
+      "Bytes": 390,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "supervisor_v3.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/supervisor_v3.ps1",
+      "SHA256": "7CC3EC3D0432BFFE3D9ADAA34D90ED10DB015F5AFC241221E77E517B69C9E433",
+      "Bytes": 24819,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "probe_v3.py",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/probe_v3.py",
+      "SHA256": "3AF5FD03B9487642A7256EAA21D654F6BF072749EBAF03B967A3E307C34CB2A3",
+      "Bytes": 2669,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "bound_list_v3.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/bound_list_v3.json",
+      "SHA256": "0A349A6DBDA8B1397941EDE195D6D76E5B77DBE252BA6D3B80E0516016AAE561",
+      "Bytes": 148747,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "collect_v3.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/collect_v3.ps1",
+      "SHA256": "66BFF87C50714AD677CD39CEF02A6B00D7CC2E36517C20A51E714A9B9ABBA65B",
+      "Bytes": 8924,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "RunProcedure": [
+    "owner double-clicks go_v3.cmd from Documents\\dsp004-probe\\v3 and approves UAC once",
+    "go_v3 installs (skipped if already installed), then runas dsp004val starts run_v3.cmd; owner types the dsp004val password",
+    "after the dsp004val window shows PASS or BLOCKED, owner presses a key; collect_v3 exports the record and events",
+    "the recorder reads the outputs through the device bridge"
+  ],
+  "PreRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "InitialVerdict": "not ready (3 blocking)",
+    "Findings": [
+      {
+        "N": "1",
+        "Severity": "BLOCKING",
+        "Finding": "supervisor wrote v2_run_record.json; collector looks for v3_run_record.json",
+        "Disposition": "fixed"
+      },
+      {
+        "N": "2",
+        "Severity": "BLOCKING",
+        "Finding": "collector Events() unrolls empty/one-item arrays; .Count throws under StrictMode",
+        "Disposition": "fixed: @(...) at call sites"
+      },
+      {
+        "N": "3",
+        "Severity": "BLOCKING",
+        "Finding": "runas inherits the owner's folder as current directory; dsp004val may not open it (error 267)",
+        "Disposition": "fixed: pushd System32 around runas"
+      },
+      {
+        "N": "4",
+        "Severity": "MAJOR",
+        "Finding": "nothing gates on auditing actually working",
+        "Disposition": "fixed: collector stops unless exactly 3 python.exe 4688 events for dsp004val, each with a command line"
+      },
+      {
+        "N": "5",
+        "Severity": "MAJOR",
+        "Finding": "evtx export holds every account's events (owner identifiers)",
+        "Disposition": "handled: evtx stays on the machine, never committed; filtered XML redacted before commit"
+      },
+      {
+        "N": "6",
+        "Severity": "MINOR",
+        "Finding": "net localgroup exit code unchecked",
+        "Disposition": "fixed"
+      },
+      {
+        "N": "7",
+        "Severity": "MINOR",
+        "Finding": "collector exits 0 without a record",
+        "Disposition": "fixed: exit 3"
+      },
+      {
+        "N": "8",
+        "Severity": "MINOR",
+        "Finding": "runs and checks lost if run 2 or 3 blocks",
+        "Disposition": "fixed: attached to the record before the loop"
+      },
+      {
+        "N": "9",
+        "Severity": "MINOR",
+        "Finding": "MyDocuments may be empty",
+        "Disposition": "fixed: fallback to UserProfile\\Documents"
+      },
+      {
+        "N": "10",
+        "Severity": "MINOR",
+        "Finding": "GrandParent may be gone or reused",
+        "Disposition": "recorded only; not used as evidence"
+      },
+      {
+        "N": "11",
+        "Severity": "MINOR",
+        "Finding": "stdin BOM if code page 65001",
+        "Disposition": "not changed; the check fails closed, it does not crash"
+      },
+      {
+        "N": "12",
+        "Severity": "MINOR",
+        "Finding": "self-elevation uses bare powershell; silent on UAC decline",
+        "Disposition": "fixed"
+      },
+      {
+        "N": "13",
+        "Severity": "MINOR",
+        "Finding": "dsp004val needs a non-empty password and no forced change",
+        "Disposition": "operational; account set with password, net user shows password required"
+      },
+      {
+        "N": "14",
+        "Severity": "MINOR",
+        "Finding": "locale-dependent time format",
+        "Disposition": "fixed: InvariantCulture"
+      }
+    ],
+    "AfterFixes": "hashes re-pinned in installer, collector and this binding; the reviewer's cross-reference checks (bound list, installer and collector tables) re-run by script"
+  },
+  "KnownResiduals": [
+    "supervisor self-hash still not enforced at execution time; anchored by this binding, installer constant and collector post-run re-hash",
+    "KnownDLLs mapped from boot-time sections (IR-07)",
+    "BUILTIN\\Users read/execute on the runtime (IR-14); dsp004val is in Users",
+    "run happens on the owner's desktop (the chosen validation host); timestamps in records come from the machine clock; 4616 time-change events are counted",
+    "V3.2 names 3.12.13; the runtime is 3.12.10 (unchanged)"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}
