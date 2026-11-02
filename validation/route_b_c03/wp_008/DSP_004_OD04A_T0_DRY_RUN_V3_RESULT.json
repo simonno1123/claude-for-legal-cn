@@ -1,0 +1,256 @@
+{
+  "RecordKind": "DSP004_OD04A_T0_DRY_RUN_V3_RESULT_NON_ACCEPTANCE",
+  "Outcome": "PASS_T0_DRY_RUN_V3",
+  "Classification": "PHASE1_ENVIRONMENT_OBSERVATION_NOT_EVIDENCE",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "Phase": 1,
+  "Binding": {
+    "Path": "validation/route_b_c03/wp_008/DSP_004_OD04A_T0_DRY_RUN_V3_PRE_RUN_BINDING.json",
+    "MergedUtc": "2026-11-02T04:29:56Z",
+    "PR": 35
+  },
+  "Invocation": {
+    "Count": 1,
+    "PerformedBy": "owner (double-clicked go_v3.cmd, approved UAC, typed the dsp004val password)",
+    "InstalledUtc": "2026-11-02T04:34:11.4510108Z",
+    "SupervisorStartedUtc": "2026-11-02T04:34:17.0958816Z",
+    "ReleasedUtc": "2026-11-02T04:35:10.2271573Z",
+    "CollectedUtc": "2026-11-02T04:36:32.7451930Z"
+  },
+  "Files": [
+    {
+      "Role": "RUN_RECORD",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/v3_run_record.RAW_REDACTED.json",
+      "SHA256": "39830BF1DEE9B112F58F81988920ED84CC0A2BA926D38FDA15986312E320463E",
+      "Bytes": 382430,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "FB530784EE2BA491E0D28CFDEC5111A70B8A830F6AB93C334F10BE5AF2CC79F4",
+      "UnredactedBytes": 382456
+    },
+    {
+      "Role": "SYSTEM_EVENTS_4688_4689",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/events_dsp004val.RAW_REDACTED.xml",
+      "SHA256": "E760E9E01BB1BD6D2EFDA7F633109110ED78613A0DC0F2730F81D0F93955C1FA",
+      "Bytes": 22776,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "1FE2711AA18EC27A21C93BD2930251699D429C9DCE02C61FE2BF5DECA20F3319",
+      "UnredactedBytes": 23314
+    },
+    {
+      "Role": "COLLECT_RESULT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/collect_v3_result.RAW_REDACTED.json",
+      "SHA256": "220048E5DEB119E1B86F2D414942499A9F4F230C20773825818D16E7F461F14C",
+      "Bytes": 19268,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD (only secret is the 15-character host name; publishing the hash would allow brute force)"
+    },
+    {
+      "Role": "INSTALL_RESULT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/install_v3_result.RAW_REDACTED.json",
+      "SHA256": "CBD8F00F44C0BB5BD1CB86E94424C8D05203E17E4B8FC6529F5BED9CF41544E1",
+      "Bytes": 2956,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD (only secret is the 15-character host name; publishing the hash would allow brute force)"
+    },
+    {
+      "Role": "CROSS_CHECK_SCRIPT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/check_v3_cross.py",
+      "SHA256": "524825B21F024902144776F7D9C19489A318610F30BB074C02602E2B8D666A26",
+      "Bytes": 8588,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Redaction": "plain byte substitution: machine name -> REDACTED-HOST, machine SID prefix -> S-1-5-21-REDACTED; nothing else changed",
+  "SupervisorSummary": {
+    "RunChecks": "69/69",
+    "LockedFiles": 683,
+    "HashMismatches": 0,
+    "Account": "REDACTED-HOST\\dsp004val, not in Administrators, Medium",
+    "ChildRuns": 3,
+    "NativeModulesPerRun": 29,
+    "StdinAtEof": true
+  },
+  "SystemEventCrossCheck": {
+    "Script": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v3/check_v3_cross.py",
+    "Passed": 24,
+    "Total": 24,
+    "Checks": {
+      "X01_ThreeProbeStartsInSystemLog": true,
+      "X02_ProbePidsMatchRecord": true,
+      "X03_ProbeCreatorIsSupervisor": true,
+      "X04_ProbeCommandLineExact": true,
+      "X05_ProbeExitedZeroInSystemLog": true,
+      "X06_ProbeCreateTimeWithin1sOfRecord": true,
+      "X07_SupervisorStartInSystemLog": true,
+      "X08_LauncherStartInSystemLog": true,
+      "X09_AllRunAccountStartsMediumAndRunAccount": true,
+      "X10_NoOtherPythonStartsByRunAccount": true,
+      "X11_NoLogClearPolicyChangeOrTimeChangeInWindow": true,
+      "X12_LogCoversWholeWindow": true,
+      "X13_InstalledFilesUnchangedAfterRun": true,
+      "X14_SupervisorRecordPass": true,
+      "X15_RunAccountNotAdmin": true,
+      "X16_TimelineOrdered": true,
+      "X17_LauncherStartedByRunas": true,
+      "X18_ProcessTreeExactlyAsExpected": true,
+      "X19_EveryStartHasZeroStatusExit": true,
+      "X20_SingleLogonSession": true,
+      "X21_RunAccountSidMatchesRecord": true,
+      "X22_RecordWrittenAfterReleaseBeforeSupervisorExit": true,
+      "X23_WhoamiByInstalledSupervisorAfterStart": true,
+      "X24_ProbeExitTimesMatchRecord": true
+    },
+    "RunAccountEvents": {
+      "4688": 10,
+      "4689": 10
+    },
+    "Timeline": [
+      "2026-11-02T04:29:56+00:00",
+      "2026-11-02T04:34:11.451010+00:00",
+      "2026-11-02T04:34:16.011219+00:00",
+      "2026-11-02T04:34:16.243692+00:00",
+      "2026-11-02T04:34:17.095881+00:00",
+      "2026-11-02T04:34:37.071074+00:00",
+      "2026-11-02T04:34:58.303336+00:00",
+      "2026-11-02T04:35:10.227157+00:00",
+      "2026-11-02T04:35:10.301366+00:00",
+      "2026-11-02T04:35:10.329970+00:00",
+      "2026-11-02T04:36:32.745193+00:00"
+    ]
+  },
+  "PostRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "Verdict": "Classification 'phase-1 environment observation, not OD-04 evidence, not formal run' is correct; not stronger (outcome ceiling, open gaps), not weaker (record and system events agree on every checkable point)",
+    "Findings": [
+      {
+        "N": "1",
+        "Severity": "MAJOR",
+        "Finding": "checker did not assert the complete process tree, all exits, logon session, SID",
+        "Disposition": "fixed: X18-X21 added; data passes"
+      },
+      {
+        "N": "2",
+        "Severity": "MAJOR",
+        "Finding": "log-integrity checks (X11-X13) repeat collector claims; circular log at its 20 MB size; only run-account events exported; full .evtx kept as SHA only",
+        "Disposition": "recorded as limitation"
+      },
+      {
+        "N": "3",
+        "Severity": "MAJOR",
+        "Finding": "window starts at install minus 1 min; earlier dsp004val history and logon events 4624/4634 not collected; owner-account launch of go_v3 not in committed data",
+        "Disposition": "recorded as limitation; next version to collect"
+      },
+      {
+        "N": "4",
+        "Severity": "MINOR",
+        "Finding": "supervisor exit, record write time, whoami parent, probe exit times not checked",
+        "Disposition": "fixed: X22-X24 added; X06 tightened to 10 ms"
+      },
+      {
+        "N": "5",
+        "Severity": "MINOR",
+        "Finding": "timeline skipped steps",
+        "Disposition": "fixed: X16 now covers 11 points"
+      },
+      {
+        "N": "6",
+        "Severity": "MINOR",
+        "Finding": "GrandParent is null (runas had exited)",
+        "Disposition": "recorded; the 4688 event names runas.exe as creator (X17)"
+      },
+      {
+        "N": "7",
+        "Severity": "MINOR",
+        "Finding": "ACL per item still counts only; system-DLL thumbprints not pinned; SELF not re-hashed post-run",
+        "Disposition": "recorded as limitation"
+      },
+      {
+        "N": "8",
+        "Severity": "MINOR",
+        "Finding": "unredacted SHAs of collect/install results allow host-name brute force",
+        "Disposition": "fixed: those SHAs withheld"
+      },
+      {
+        "N": "9",
+        "Severity": "NOTE",
+        "Finding": "install_v3.ps1 header says v2 files; hash of go_v3.cmd as executed not recorded; X17 out of order",
+        "Disposition": "recorded; checks now sorted"
+      }
+    ],
+    "V2GapStatus": [
+      {
+        "N": "1",
+        "Gap": "Detached system-written 4688/4689",
+        "Status": "PARTLY (mostly)"
+      },
+      {
+        "N": "2",
+        "Gap": "Run count not self-reported",
+        "Status": "PARTLY"
+      },
+      {
+        "N": "3",
+        "Gap": "Supervisor identity anchored at execution",
+        "Status": "PARTLY"
+      },
+      {
+        "N": "4",
+        "Gap": "Validation host, separate standard account, >1 run",
+        "Status": "PARTLY (account closed; host by owner decision; 3 runs in one invocation)"
+      },
+      {
+        "N": "5",
+        "Gap": "v2 retry authorization",
+        "Status": "NOT ADDRESSED BY V3 (v2 governance item)"
+      },
+      {
+        "N": "6",
+        "Gap": "Raw bytes committed",
+        "Status": "PARTLY (redacted by plain substitution)"
+      },
+      {
+        "N": "7",
+        "Gap": "stdin deviation; 3.12.13 vs 3.12.10",
+        "Status": "PARTLY (stdin resolved; version residual)"
+      },
+      {
+        "N": "8",
+        "Gap": "Outside-family review",
+        "Status": "OPEN BY OWNER DECISION"
+      }
+    ],
+    "VerbatimEmbedded": false
+  },
+  "RemainingBeforeEvidence": [
+    "separate owner admission decision",
+    "event evidence checkable away from the machine: wider window incl. earlier dsp004val history and 4624/4634, or a redacted all-account export so record IDs can be shown contiguous",
+    "attest the supervisor bytes actually executed; record the hash of go_v3.cmd as run",
+    "repeat invocations (separate runs, ideally across reboots), counted against the audit log",
+    "resolve 3.12.13 vs 3.12.10 and remaining residuals (KnownDLLs, BUILTIN\\Users RX, owner admin account on host)",
+    "outside-family review if the owner decides one is needed"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}
