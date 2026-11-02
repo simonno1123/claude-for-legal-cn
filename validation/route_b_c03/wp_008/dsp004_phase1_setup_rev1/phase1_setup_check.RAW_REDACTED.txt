@@ -1,0 +1,46 @@
+Mandatory Label\High Mandatory Level 标签   S-1-16-12288                                           
+系统审核策略
+类别/子类别                                    设置
+详细追踪
+  进程终止                                    成功
+  进程创建                                    成功
+
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Audit
+    ProcessCreationIncludeCmdLine_Enabled    REG_DWORD    0x1
+
+别名     Administrators
+注释     管理员对计算机/域有不受限制的完全访问权
+
+成员
+
+-------------------------------------------------------------------------------
+Administrator
+<OWNER_ACCOUNT>
+命令成功完成。
+
+用户名                 dsp004val
+全名                   
+注释                   
+用户的注释             
+国家/地区代码          000 (系统默认值)
+账户启用               Yes
+账户到期               从不
+
+上次设置密码           2026/11/1 20:14:40
+密码到期               2026/12/13 20:14:40
+密码可更改             2026/11/1 20:14:40
+需要密码               Yes
+用户可以更改密码       Yes
+
+允许的工作站           All
+登录脚本               
+用户配置文件           
+主目录                 
+上次登录               从不
+
+可允许的登录小时数     All
+
+本地组成员             *Users                
+全局组成员             *None                 
+命令成功完成。
+
