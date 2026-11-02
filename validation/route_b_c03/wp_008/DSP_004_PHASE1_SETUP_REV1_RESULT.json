@@ -1,0 +1,90 @@
+{
+  "RecordKind": "DSP004_PHASE1_SETUP_RESULT",
+  "Outcome": "OWNER_PERFORMED_SETUP_OBSERVED_NOT_ACCEPTED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "PerformedBy": "owner (double-clicked the script, approved UAC, typed the account password)",
+  "PerformedAtLocal": "2026-11-01 20:14 (America/Los_Angeles per owner's client)",
+  "Script": {
+    "Role": "SETUP_SCRIPT",
+    "Path": "validation/route_b_c03/wp_008/dsp004_phase1_setup_rev1/phase1_setup.cmd",
+    "SHA256": "F965D70FE7147CFEFA7C045441DEE7B5433C409CBE7AD6446A6438F1FDA882D6",
+    "Bytes": 1345,
+    "Accepted": false,
+    "Admitted": false
+  },
+  "CheckOutput": {
+    "Role": "CHECK_OUTPUT_RAW_REDACTED",
+    "Path": "validation/route_b_c03/wp_008/dsp004_phase1_setup_rev1/phase1_setup_check.RAW_REDACTED.txt",
+    "SHA256": "47AA70D25BABFBFEBF076398E9C9C205EEAF4C9FCEC803C82E2B674DCB6CE427",
+    "Bytes": 1325,
+    "Accepted": false,
+    "Admitted": false,
+    "Encoding": "GBK (system code page)",
+    "RawSHA256BeforeRedaction": "67CB577921B2801C2468CA4F1BCDCF94AE265A0F8BEF68B40DB3F88BE040F518",
+    "RawBytesBeforeRedaction": 1315,
+    "Redaction": "owner's account name in the Administrators member list replaced by <OWNER_ACCOUNT>; nothing else changed"
+  },
+  "Observations": [
+    {
+      "Id": "P1S-01",
+      "Item": "setup ran elevated",
+      "Observed": "High Mandatory Level S-1-16-12288",
+      "Holds": true
+    },
+    {
+      "Id": "P1S-02",
+      "Item": "Process Creation auditing",
+      "Observed": "success enabled",
+      "Holds": true
+    },
+    {
+      "Id": "P1S-03",
+      "Item": "Process Termination auditing",
+      "Observed": "success enabled",
+      "Holds": true
+    },
+    {
+      "Id": "P1S-04",
+      "Item": "ProcessCreationIncludeCmdLine_Enabled",
+      "Observed": "REG_DWORD 0x1",
+      "Holds": true
+    },
+    {
+      "Id": "P1S-05",
+      "Item": "dsp004val exists, enabled, password required",
+      "Observed": "Yes / Yes",
+      "Holds": true
+    },
+    {
+      "Id": "P1S-06",
+      "Item": "dsp004val local groups",
+      "Observed": "*Users only",
+      "Holds": true
+    },
+    {
+      "Id": "P1S-07",
+      "Item": "dsp004val not in Administrators",
+      "Observed": "Administrators members: Administrator, <OWNER_ACCOUNT>",
+      "Holds": true
+    }
+  ],
+  "Notes": [
+    "observations are self-reported by the owner-run script and read via the device bridge; they are setup facts, not run evidence",
+    "dsp004val password expires about 2026-12-13 per local policy; runs after that date need a password change first",
+    "Security log retention size not changed; to be checked before formal runs"
+  ],
+  "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
