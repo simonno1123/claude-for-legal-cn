@@ -1,0 +1,54 @@
+{
+    "Kind":  "DSP004_OD04A_V3_INSTALL_RESULT",
+    "InstalledUtc":  "2026-11-02T04:34:11.4510108Z",
+    "InstallerSha256":  "56D0578FDEC308CE23B9D4E4C648837CF9351647D5242D747F5226251DECF043",
+    "BaseOwnerAccessSddl":  "O:BAD:PAI(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)",
+    "DirOwnerAccessSddl":  "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+    "Files":  [
+                  {
+                      "Name":  "supervisor_v3.ps1",
+                      "Bytes":  24819,
+                      "SHA256":  "7CC3EC3D0432BFFE3D9ADAA34D90ED10DB015F5AFC241221E77E517B69C9E433",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Name":  "probe_v3.py",
+                      "Bytes":  2669,
+                      "SHA256":  "3AF5FD03B9487642A7256EAA21D654F6BF072749EBAF03B967A3E307C34CB2A3",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Name":  "bound_list_v3.json",
+                      "Bytes":  148747,
+                      "SHA256":  "0A349A6DBDA8B1397941EDE195D6D76E5B77DBE252BA6D3B80E0516016AAE561",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Name":  "run_v3.cmd",
+                      "Bytes":  390,
+                      "SHA256":  "B430D9B22CACEDEEAE9C3124916ECFF8FD023EFABAE8D870920ECD2DAE64195A",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  }
+              ],
+    "HijackChecks":  "PASSED",
+    "ClrInjectionVariables":  0,
+    "HostModulesOutsideWindows":  [
+                                      "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26100.4-0\\MpOav.dll",
+                                      "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26100.4-0\\MPCLIENT.DLL"
+                                  ],
+    "RunAccountExists":  true,
+    "RunAccountInAdministrators":  false,
+    "AuditPolicyCsv":  [
+                           "计算机名称，策略目标，子类别，子类别 GUID，包含设置，排除设置",
+                           "",
+                           "REDACTED-HOST,系统,进程终止,{0CCE922C-69AE-11D9-BED3-505054503030},成功,",
+                           "",
+                           "REDACTED-HOST,系统,进程创建,{0CCE922B-69AE-11D9-BED3-505054503030},成功,",
+                           ""
+                       ],
+    "IncludeCmdLine":  1
+}
