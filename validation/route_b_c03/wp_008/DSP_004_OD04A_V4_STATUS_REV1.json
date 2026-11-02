@@ -1,0 +1,56 @@
+{
+  "RecordKind": "DSP004_OD04A_V4_STATUS",
+  "Outcome": "INVOCATION1_POST_STAGE_STOPPED_CAUSE_UNKNOWN",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Invocation1": {
+    "PreStage": {
+      "CollectedUtc": "2026-11-02T23:25:55.0244066Z",
+      "MovedRecordSHA256": "FB530784EE2BA491E0D28CFDEC5111A70B8A830F6AB93C334F10BE5AF2CC79F4",
+      "MatchesV3Record": true,
+      "CollectorSha256MatchesBinding": true,
+      "Result": {
+        "Role": "PRE_RESULT",
+        "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/invocation1_pre_collect_result.json",
+        "SHA256": "1FB235EAFBE4B0D038108DB4068E1816DA8D06D3797B3811A6D832C102B395EB",
+        "Bytes": 1080,
+        "Accepted": false,
+        "Admitted": false
+      }
+    },
+    "PostStage": {
+      "FolderCreatedUtc": "2026-11-02T23:26:56Z (from folder name)",
+      "Files": 0,
+      "Message": "not seen: the owner restarted the machine afterwards and the window was gone"
+    },
+    "OwnerWords": [
+      "好了",
+      "都重启了，哪来的窗口。"
+    ]
+  },
+  "Reboot": "the owner restarted after invocation 1; the next post stage records 4608 events",
+  "NewAsset": {
+    "Role": "COLLECT_ONLY_WRAPPER",
+    "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/collect_only_v4.cmd",
+    "SHA256": "BB73C89831C82D2AA1B30054A67A30C9B711B7DCAE2CB98DB2B631275B845B92",
+    "Bytes": 823,
+    "Accepted": false,
+    "Admitted": false,
+    "Purpose": "run only the bound collect_v4.ps1 post stage and save all output, including errors, to a log file; it does not start a supervisor run"
+  },
+  "Next": [
+    "owner double-clicks collect_only_v4.cmd once; recorder reads the log and the collected folder",
+    "then the remaining runs with go_v4.cmd"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
