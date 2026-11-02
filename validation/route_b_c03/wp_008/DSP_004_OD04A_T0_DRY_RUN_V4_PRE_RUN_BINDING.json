@@ -1,0 +1,134 @@
+{
+  "RecordKind": "DSP004_OD04A_T0_DRY_RUN_V4_PRE_RUN_BINDING",
+  "Outcome": "BOUND_BEFORE_RUN_NOT_RUN",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "Phase": 1,
+  "Basis": {
+    "OwnerWords": "按照你的建议实施。",
+    "OwnerWordsContext": "reply to the recorder's proposal: a v4 that widens the audit window to the run account's whole history with logon events, records launcher hashes, and is run several times with a reboot in between"
+  },
+  "Purpose": "repeat the bound, installed v3 supervisor run (unchanged) three times, with a Restart between runs 2 and 3, and collect whole-history audit evidence for dsp004val",
+  "Unchanged": "supervisor_v3.ps1, probe_v3.py, bound_list_v3.json, run_v3.cmd as bound in REV31 and installed; nothing is installed by v4",
+  "OutcomeCeiling": "Results are phase-1 environment observations. They are not OD-04 evidence, not formal runs and not acceptance; admission needs a separate owner decision.",
+  "Assets": [
+    {
+      "Role": "go_v4.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/go_v4.cmd",
+      "SHA256": "C03B667309170D351983F82DEAE69E9008758F78CF11F9CD874D2CC35F2E78A6",
+      "Bytes": 1475,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "collect_v4.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/collect_v4.ps1",
+      "SHA256": "1199400BB288A6C1B9B05EC20F5D90C6F3E007AEC2BEC88BBF684430369FBD9B",
+      "Bytes": 12394,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "PlannedRuns": 3,
+  "RunInstructions": [
+    "double-click go_v4.cmd, approve UAC, type the dsp004val password, close the run window after PASS/BLOCKED, press a key",
+    "run twice, then Restart (not Shut down) Windows, then run once more"
+  ],
+  "PreRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "InitialVerdict": "not ready (1 blocking, 5 major)",
+    "Findings": [
+      {
+        "N": "1",
+        "Severity": "BLOCKING",
+        "Finding": "DataMap crashes on 4608 (empty EventData) under StrictMode",
+        "Disposition": "fixed: namespace-safe SelectNodes"
+      },
+      {
+        "N": "2",
+        "Severity": "MAJOR",
+        "Finding": "4720 may roll off the circular 20 MB log before all runs finish",
+        "Disposition": "not changed (enlarging the log is a system-setting change); runs to be done within about a day; the collector stops if 4720 is missing"
+      },
+      {
+        "N": "3",
+        "Severity": "MAJOR",
+        "Finding": "record moved before queries that can fail",
+        "Disposition": "fixed: record moved last, after all queries"
+      },
+      {
+        "N": "4",
+        "Severity": "MAJOR",
+        "Finding": "File.Move keeps the profile ACL",
+        "Disposition": "fixed: copy bytes, re-read and compare, then delete the profile copy"
+      },
+      {
+        "N": "5",
+        "Severity": "MAJOR",
+        "Finding": "launch count by command-line substring can undercount",
+        "Disposition": "handled in the later checker: every dsp004val 4688 classified, records matched by supervisor PID and time; 4719 exported as full events"
+      },
+      {
+        "N": "6",
+        "Severity": "MAJOR",
+        "Finding": "record-number gap check selected by time",
+        "Disposition": "fixed: selected by EventRecordID from the 4720 record; gap ranges listed; first must equal the 4720 record; 1100/1104/1105/1108 counted"
+      },
+      {
+        "N": "7",
+        "Severity": "MINOR",
+        "Finding": "rendering every event is slow",
+        "Disposition": "fixed: record numbers streamed with EventLogReader"
+      },
+      {
+        "N": "8",
+        "Severity": "MINOR",
+        "Finding": "Fast Startup shutdown is not a boot",
+        "Disposition": "instruction: use Restart"
+      },
+      {
+        "N": "9",
+        "Severity": "MINOR",
+        "Finding": "owner may press the key before the record is written",
+        "Disposition": "fixed: post waits up to 3 minutes for any dsp004val PowerShell to end"
+      },
+      {
+        "N": "10",
+        "Severity": "MINOR",
+        "Finding": "mistyped runas password gives 4625, not 4624",
+        "Disposition": "fixed: 4625 collected"
+      },
+      {
+        "N": "11",
+        "Severity": "MINOR",
+        "Finding": "4634 subject query never matches",
+        "Disposition": "fixed: removed"
+      },
+      {
+        "N": "12",
+        "Severity": "PRIVACY",
+        "Finding": "owner and host identifiers in 4720/4648/4624 and others",
+        "Disposition": "redacted before commit; nothing from the machine committed unredacted"
+      }
+    ],
+    "AfterFixes": "fixes checked by the recorder; not re-reviewed by a second fresh subagent"
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}
