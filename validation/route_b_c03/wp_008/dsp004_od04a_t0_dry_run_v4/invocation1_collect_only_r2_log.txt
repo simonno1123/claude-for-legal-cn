@@ -1,0 +1,1 @@
+COLLECTED record=True supervisor_runs_in_history=2 boots=1 record_gaps=0 installed_match=True

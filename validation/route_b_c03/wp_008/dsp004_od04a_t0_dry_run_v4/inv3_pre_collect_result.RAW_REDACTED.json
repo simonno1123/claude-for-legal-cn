@@ -1,0 +1,18 @@
+{
+    "Kind":  "DSP004_OD04A_V4_COLLECT_RESULT",
+    "Stage":  "pre",
+    "Invocation":  "20261103T022233Z",
+    "CollectedUtc":  "2026-11-03T02:22:33.2652023Z",
+    "CollectorSha256":  "A48773E80CF31877AF71F9807E3C2D2022D9D6B50E54D6ED3F7ECBD95A261652",
+    "LauncherFilesNow":  [
+                             {
+                                 "Name":  "go_v4.cmd",
+                                 "SHA256":  "C03B667309170D351983F82DEAE69E9008758F78CF11F9CD874D2CC35F2E78A6"
+                             },
+                             {
+                                 "Name":  "collect_v4.ps1",
+                                 "SHA256":  "A48773E80CF31877AF71F9807E3C2D2022D9D6B50E54D6ED3F7ECBD95A261652"
+                             }
+                         ],
+    "RunRecordFound":  false
+}
