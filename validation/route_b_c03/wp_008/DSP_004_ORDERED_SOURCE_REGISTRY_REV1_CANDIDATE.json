@@ -1,0 +1,413 @@
+{
+  "RecordKind": "DSP004_ORDERED_SOURCE_REGISTRY_CANDIDATE",
+  "Revision": 1,
+  "Outcome": "DRAFTED_NOT_REVIEWED_NOT_ACCEPTED",
+  "Basis": {
+    "ArrayPolicy": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md (accepted, 39F0FDC3...8123), section 3",
+    "AcceptedInput": {
+      "path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json",
+      "sha256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+      "bytes": 115428
+    },
+    "AdmittedRuntime": "phase-1 admission; bound list v3 runtime files",
+    "OwnerWords": "授权",
+    "OwnerWordsReading": "authorization to derive the ORDERED source values as a candidate for owner acceptance; not authorization of a formal run"
+  },
+  "Policies": {
+    "AP-020": {
+      "path": "manifest_identity.fixture_catalog",
+      "source_ref": {
+        "path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json",
+        "sha256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+        "locator": "$.scenarios[*].fixture (array order)"
+      },
+      "element_identity_key": "scenario_id",
+      "sequence": [
+        {
+          "scenario_id": "C03-TA-V-001",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-001.json",
+            "sha256": "C8CEFEDC496D5D0D33E0F21D61B5E3C3354579A8D0E1C74F70640305C65FC99A"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-002",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-002.json",
+            "sha256": "257437A2AA80A58C0741F1EC0A5A514E014C633DD974804C6407DB84DB107290"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-003",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-003.json",
+            "sha256": "21BD65ECD28D569BADFF11489017569E8413B1CC9A5138A851F907CCF62EAF7E"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-004",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+            "sha256": "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-005",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-005.json",
+            "sha256": "4405ADC2CE242B83120B0BA304157B3E6F03687345F764BBBE1E3A2DCF2422DE"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-006",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-006.json",
+            "sha256": "9D24E6AFA92F9EF6E895B0B6E4D0E84BDC326E9C4B815E42723B31374CC2FDC8"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-007",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-007.json",
+            "sha256": "68D9D63583A0301BDE76C3E60A5F66B7CCDA897C17D58E8DBF282E3E49C3DB90"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-008",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-008.json",
+            "sha256": "7AA3FEF0CCDFA0C6A462C7945B63A50D828AC9C6D0725F428D347F6836075193"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-009",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-009.json",
+            "sha256": "34EFBC55490FB2E3FFC89CAFCAD9DD2D319C2C24D9B3E2B026143F74A73DC93C"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-010",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-010.json",
+            "sha256": "19DF9D35835F60C03C969B79B25F62CFE95E28C0A1B8122EDD8B9E1A5BC0E67A"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-011",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-011.json",
+            "sha256": "8795DA58E092E6DC7F88958E3AC60B754870F5BFAE15FF8BC2D699450B65FDFD"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-012",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-012.json",
+            "sha256": "8C6E4FC6279E95CFE48C9E9DA6E161F0AF05CA5FFEA95BE18DBAD6A81204E8E6"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-013",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-013.json",
+            "sha256": "3DBF0F60AC970F90C97CF85F5F21F1758B4818D814A02CE8ED03A4F1C3A49CA6"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-014",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-014.json",
+            "sha256": "D3EF698EA45F41824CCF6C5A7020F6A0B495460341ADE7446461A1AAF0E7D523"
+          }
+        },
+        {
+          "scenario_id": "C03-TA-V-015",
+          "file": {
+            "root_id": "PROJECT_ROOT",
+            "relative_path": "validation/route_b_c03/wp_008/fixtures/C03-TA-V-015.json",
+            "sha256": "06DCEBA08CA43C75439B5A2AC1C140905887EF8CDC26C561FBD68E9A001D5AE1"
+          }
+        }
+      ],
+      "checks": "15 entries, C03-TA-V-001 to 015 once each in that order (verified mechanically)",
+      "state": "COMPLETE"
+    },
+    "AP-021": {
+      "path": "input_contract.scenarios",
+      "source_ref": {
+        "path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json",
+        "sha256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+        "locator": "$.scenarios[*].scenario_id (array order)"
+      },
+      "element_identity_key": "scenario_id",
+      "sequence": [
+        "C03-TA-V-001",
+        "C03-TA-V-002",
+        "C03-TA-V-003",
+        "C03-TA-V-004",
+        "C03-TA-V-005",
+        "C03-TA-V-006",
+        "C03-TA-V-007",
+        "C03-TA-V-008",
+        "C03-TA-V-009",
+        "C03-TA-V-010",
+        "C03-TA-V-011",
+        "C03-TA-V-012",
+        "C03-TA-V-013",
+        "C03-TA-V-014",
+        "C03-TA-V-015"
+      ],
+      "checks": "same as AP-020",
+      "state": "COMPLETE"
+    },
+    "AP-022": {
+      "path": "input_contract.scenarios[].variants",
+      "source_ref": {
+        "path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json",
+        "sha256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+        "locator": "$.scenarios[i].stimulus_variants[*].stimulus_binding_id, located by scenario_id"
+      },
+      "element_identity_key": "variant_id (stimulus_binding_id), unique within its scenario",
+      "sequences": {
+        "C03-TA-V-001": [
+          "SB-001-MISSING-PACKET"
+        ],
+        "C03-TA-V-002": [
+          "SB-002-MALFORMED-CONSTRUCTOR",
+          "SB-002-MATTER-AUTHORITY-MISMATCH",
+          "SB-002-EXECUTION-AUTHORITY-MISMATCH",
+          "SB-002-PACKET-DECISION-MISMATCH",
+          "SB-002-ALL-REFERENCES-MATCH-CONTROL"
+        ],
+        "C03-TA-V-003": [
+          "SB-003-CAPABILITY-VERSION",
+          "SB-003-IMPLEMENTATION-SHA",
+          "SB-003-CONFIGURATION-SHA"
+        ],
+        "C03-TA-V-004": [
+          "SB-004-MATTER-ID",
+          "SB-004-MATTER-VERSION",
+          "SB-004-ACTOR"
+        ],
+        "C03-TA-V-005": [
+          "SB-005-PROHIBITED-KEY"
+        ],
+        "C03-TA-V-006": [
+          "SB-006-REFERENCE-CONSTRUCTION-ONLY"
+        ],
+        "C03-TA-V-007": [
+          "SB-007-ELIGIBILITY"
+        ],
+        "C03-TA-V-008": [
+          "SB-008-REFERENCE-CONSTRUCTION-ONLY"
+        ],
+        "C03-TA-V-009": [
+          "SB-009-CONFIG-REVOKED",
+          "SB-009-PROTECTED-STATE"
+        ],
+        "C03-TA-V-010": [
+          "SB-010-GATE-KILL",
+          "SB-010-PROTECTED-STATE",
+          "SB-010-NO-RELEASE"
+        ],
+        "C03-TA-V-011": [
+          "SB-011-REFERENCE-CONSTRUCTION-ONLY"
+        ],
+        "C03-TA-V-012": [
+          "SB-012-INTEGRITY-REFERENCE",
+          "SB-012-AUDIT-CANDIDATE"
+        ],
+        "C03-TA-V-013": [
+          "SB-013-NULL-PROVIDER"
+        ],
+        "C03-TA-V-014": [
+          "SB-014-ACOS-NAMESPACE",
+          "SB-014-ROUTE-A-NAMESPACE"
+        ],
+        "C03-TA-V-015": [
+          "SB-015-CANDIDATE-CONSTRUCTION"
+        ]
+      },
+      "checks": "28 variants; no duplicate within any scenario (verified mechanically)",
+      "state": "COMPLETE"
+    },
+    "AP-006": {
+      "path": "runtime_identity.declared_startup_sequence",
+      "source_ref": "startup contract of the formal-run deployment (to be bound with the phase-7 assets)",
+      "element_identity_key": "step_id; ordinal 1..n",
+      "sequence": [
+        {
+          "step_id": "STARTUP-01-PYTHON-EXECUTABLE",
+          "ordinal": 1,
+          "file": {
+            "root_id": "RUNTIME_ROOT",
+            "relative_path": "python.exe",
+            "byte_length": 104952,
+            "sha256": "4D6F5F81A4BCA11191C4C7C6B43632694D0A4CE74E068619D8FDC161D469859A"
+          },
+          "role": "VALIDATION_ENTRYPOINT"
+        },
+        {
+          "step_id": "STARTUP-02-PYTHON-CORE-DLL",
+          "ordinal": 2,
+          "file": {
+            "root_id": "RUNTIME_ROOT",
+            "relative_path": "python312.dll",
+            "byte_length": 6945272,
+            "sha256": "9A0E3435AAA680D868150F87AB3E388AD2EEBC22F87E036155C7B4EDA8CD2120"
+          },
+          "role": "CPYTHON_BOOTSTRAP_LIBRARY"
+        },
+        {
+          "step_id": "STARTUP-03-VC-RUNTIME",
+          "ordinal": 3,
+          "file": {
+            "root_id": "RUNTIME_ROOT",
+            "relative_path": "vcruntime140.dll",
+            "byte_length": 120400,
+            "sha256": "052AD6A20D375957E82AA6A3C441EA548D89BE0981516CA7EB306E063D5027F4"
+          },
+          "role": "CPYTHON_BOOTSTRAP_LIBRARY"
+        },
+        {
+          "step_id": "STARTUP-04-HARNESS",
+          "ordinal": 4,
+          "file": "HARNESS_FOR_FORMAL_RUN (PROJECT_ROOT; bound in phase 7)",
+          "role": "VALIDATION_HARNESS_SOURCE"
+        }
+      ],
+      "state": "DRAFT_PENDING_PHASE7_HARNESS_IDENTITY",
+      "note": "declared design sequence; does not claim anything was started or loaded"
+    },
+    "AP-009": {
+      "path": "import_contract.lookup_order",
+      "source_ref": "origin policy of the formal-run deployment (harness private importer, then sys.path under -I -S -B as observed in the v3/v4 runs)",
+      "element_identity_key": "(lookup_kind, root_id, ROOT_SELF) or (lookup_kind, root_id, RELATIVE, relative_path)",
+      "sequence": [
+        {
+          "lookup_kind": "SOURCE_IMPORT",
+          "root_id": "PROJECT_ROOT",
+          "location": {
+            "kind": "RELATIVE",
+            "relative_path": "scripts/phase2_runtime"
+          },
+          "basis": "harness private importer serves only the 10 bound subject modules from hashed bytes"
+        },
+        {
+          "lookup_kind": "SOURCE_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "RELATIVE",
+            "relative_path": "python312.zip"
+          },
+          "basis": "sys.path[0]; file absent (tree check forbids .zip)"
+        },
+        {
+          "lookup_kind": "SOURCE_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "RELATIVE",
+            "relative_path": "DLLs"
+          },
+          "basis": "sys.path[1]"
+        },
+        {
+          "lookup_kind": "EXTENSION_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "RELATIVE",
+            "relative_path": "DLLs"
+          },
+          "basis": "sys.path[1]"
+        },
+        {
+          "lookup_kind": "SOURCE_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "RELATIVE",
+            "relative_path": "Lib"
+          },
+          "basis": "sys.path[2]"
+        },
+        {
+          "lookup_kind": "EXTENSION_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "RELATIVE",
+            "relative_path": "Lib"
+          },
+          "basis": "sys.path[2]"
+        },
+        {
+          "lookup_kind": "SOURCE_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "ROOT_SELF"
+          },
+          "basis": "sys.path[3]"
+        },
+        {
+          "lookup_kind": "EXTENSION_IMPORT",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "ROOT_SELF"
+          },
+          "basis": "sys.path[3]"
+        },
+        {
+          "lookup_kind": "DLL_DEPENDENCY",
+          "root_id": "RUNTIME_ROOT",
+          "location": {
+            "kind": "ROOT_SELF"
+          },
+          "basis": "application directory"
+        },
+        {
+          "lookup_kind": "DLL_DEPENDENCY",
+          "root_id": "SYSTEM_ROOT",
+          "location": {
+            "kind": "ROOT_SELF"
+          },
+          "basis": "System32 (KnownDLLs residual P1-RESIDUALS)"
+        }
+      ],
+      "state": "DRAFT_PENDING_PHASE7_DEPLOYMENT",
+      "note": "builtin and frozen importers precede the path finder and bind to the interpreter identity, not to a LookupItem"
+    }
+  },
+  "RootDesign": {
+    "PROJECT_ROOT": "C:\\Program Files\\DSP004Runtime\\project_v1 (to be created in phase 7; holds the 10 subject files, 15 fixtures, input REV4 and the formal-run harness at repository-relative paths)",
+    "RUNTIME_ROOT": "C:\\Program Files\\DSP004Runtime\\Python312",
+    "SYSTEM_ROOT": "C:\\Windows\\System32",
+    "VENV_ROOT": "OPEN QUESTION: the admitted environment has no virtual environment; the contract requires exactly four RootIds; needs an owner decision before the Manifest"
+  },
+  "OpenBeforeManifest": [
+    "AP-006 step 4 and AP-009 item 1 need the phase-7 harness identity and deployment",
+    "VENV_ROOT has no counterpart in the admitted environment"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
