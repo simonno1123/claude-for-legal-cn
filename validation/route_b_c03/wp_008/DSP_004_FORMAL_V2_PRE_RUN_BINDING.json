@@ -1,0 +1,107 @@
+{
+  "RecordKind": "DSP004_FORMAL_V2_PRE_RUN_BINDING",
+  "Outcome": "BOUND_BEFORE_INSTALL_NOT_RUN",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Reason": {
+    "Finding": "the v1 preflight closure contains urllib and urllib.parse (pulled in by importlib.abc -> importlib.resources -> pathlib); urllib is in the accepted typed contract's denied-module set, so a Manifest built on it would be blocked by cross-group rule 8",
+    "Source": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/preflight_import_closure.json"
+  },
+  "Change": "harness REV4 = REV3 without importlib.abc/importlib.util (importlib.machinery.ModuleSpec and a plain finder/loader); all other v2 files = v1 with paths moved to supervisor_formal_v2 / project_v2 / harness_rev4 / formal_v2_run_record; v1 stays installed and is listed as prior files",
+  "Assets": [
+    {
+      "Role": "harness_rev4.py",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/harness_rev4.py",
+      "SHA256": "0B2AC413272D048B75904689C3105B4758A31624356D69FD9CF4B81C622D2394",
+      "Bytes": 25803,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "supervisor_formal_v2.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/supervisor_formal_v2.ps1",
+      "SHA256": "3463EC1E62193F84605ADD3FF8A8D695C6E92905F5BE1F68423765B5A023E1D3",
+      "Bytes": 26269,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "bound_list_formal_v2.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/bound_list_formal_v2.json",
+      "SHA256": "19A1CE8D54AF938F86BF81DFA54AD2DC9719F12E498F0483AC8B0B08D486BF50",
+      "Bytes": 160152,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "run_formal_v2.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/run_formal_v2.cmd",
+      "SHA256": "ADFBB01E415C2238568B615F351EA6A4DA0E6BB988FDD0140730EF49D8200770",
+      "Bytes": 411,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "install_formal_v2.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/install_formal_v2.ps1",
+      "SHA256": "A8FF7D77228AEDF207A5AD4D8059C77BE3F5C21B9B4DEBD07BCE93C6A64E0CA8",
+      "Bytes": 10586,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "install_formal_v2.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/install_formal_v2.cmd",
+      "SHA256": "AB9B4928CEFC42A5BFCE68F1BCC26D23051DB6CD8AEC772655A16D5ECE7408DB",
+      "Bytes": 641,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "collect_formal_v2.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/collect_formal_v2.ps1",
+      "SHA256": "8F130258F9D5BD9CC6C14FFE4F1BBE270632B66772145EE3B32296B7C1AF4840",
+      "Bytes": 17175,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "go_formal_v2.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/go_formal_v2.cmd",
+      "SHA256": "C941E07347104BB5B1410E524B10F74846831026841F545D8890BCC87E6C2249",
+      "Bytes": 1503,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Layout": {
+    "ExpectedFilesOnDisk": 721,
+    "ExpectedLockedFiles": 743,
+    "ExpectedDirs": 71
+  },
+  "PreRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "Verdict": "NO_BLOCKING_ITEMS",
+    "Confirmed": "only intended changes vs v1; all cross-references; harness REV4 28/28 on 3.12 and 3.13 with identical results to REV3 and a strict-subset closure without any denied module; BytesImporter correct without ABCs on 3.12; tree/lock arithmetic",
+    "Notes": [
+      "run_formal_v2.cmd comment still says launcher v1 (cosmetic)",
+      "collector exports the whole history, including the v1 preflight; v2 supervisor runs are counted by path"
+    ]
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
