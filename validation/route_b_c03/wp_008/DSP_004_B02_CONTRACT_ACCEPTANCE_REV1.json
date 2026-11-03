@@ -1,0 +1,151 @@
+{
+  "RecordKind": "DSP004_B02_CONTRACT_REVIEW_AND_CONDITIONAL_ACCEPTANCE",
+  "Outcome": "ACCEPTED_BY_OWNER_CONDITION_P3_CONTRACT_MET",
+  "Basis": "owner decision P3-CONTRACT (DSP_004_PHASES_2_TO_5_OWNER_DECISIONS_REV1.json): accepted at the exact SHAs if an in-repository static review finds no BLOCKING item",
+  "Review": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "Verdict": "NO_BLOCKING_ITEMS",
+    "Counts": {
+      "NamedTypes": 41,
+      "EntryFields": 15,
+      "ArrayPathsContract": 32,
+      "RegistryPolicies": 32,
+      "Ordered": 5,
+      "SetSorted": 27
+    },
+    "Findings": [
+      {
+        "N": "1",
+        "Severity": "MAJOR",
+        "Finding": "entry_id 'category prefix' never defined (contract:334, inherited from Plan V2.2:286)",
+        "Status": "open; must be fixed by the bound identifier source or read as set membership before Manifest generation"
+      },
+      {
+        "N": "2",
+        "Severity": "MAJOR",
+        "Finding": "InputContract.binding fixes the path SCENARIO_INPUT_BINDING.json (contract:311-313, 461), while P4-DRAFT keeps the new input in a separate file",
+        "Status": "open; needs an owner decision before Manifest generation"
+      },
+      {
+        "N": "3",
+        "Severity": "MINOR",
+        "Finding": "startup step ordinal not explicitly tied to array position",
+        "Status": "open"
+      },
+      {
+        "N": "4",
+        "Severity": "MINOR",
+        "Finding": "three fixed sets called sets; shape fixed only by registry",
+        "Status": "open"
+      },
+      {
+        "N": "5",
+        "Severity": "MINOR",
+        "Finding": "some array sizes stated only in the registry",
+        "Status": "open"
+      },
+      {
+        "N": "6",
+        "Severity": "MINOR",
+        "Finding": "cross-reference contract:518 should point to section 5.1",
+        "Status": "open"
+      },
+      {
+        "N": "7",
+        "Severity": "NOTE",
+        "Finding": "layout line shortened but unambiguous",
+        "Status": "none"
+      },
+      {
+        "N": "8",
+        "Severity": "NOTE",
+        "Finding": "no hard-coded 3.12.13; environment_acceptance should point to phase-1 admission",
+        "Status": "none"
+      },
+      {
+        "N": "9",
+        "Severity": "NOTE",
+        "Finding": "no real provider required",
+        "Status": "none"
+      },
+      {
+        "N": "10",
+        "Severity": "NOTE",
+        "Finding": "no LIMITED must be eliminated",
+        "Status": "none"
+      },
+      {
+        "N": "11",
+        "Severity": "NOTE",
+        "Finding": "files grant no admission, run or Manifest",
+        "Status": "none"
+      },
+      {
+        "N": "12",
+        "Severity": "NOTE",
+        "Finding": "five ORDERED source values still empty; blocks Manifest generation, not acceptance",
+        "Status": "open for Manifest"
+      },
+      {
+        "N": "13",
+        "Severity": "NOTE",
+        "Finding": "sampled claims match Plan V2.2 and Package V3.2",
+        "Status": "none"
+      }
+    ],
+    "VerbatimEmbedded": false
+  },
+  "Accepted": [
+    {
+      "Role": "TYPED_CONTRACT_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md",
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "Accepted": true,
+      "Admitted": false
+    },
+    {
+      "Role": "ARRAY_POLICY_REGISTRY_REV3",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md",
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "Accepted": true,
+      "Admitted": false
+    }
+  ],
+  "AcceptanceScope": "design text at these exact bytes, as the B-02 typed contract and array policy for later Manifest work; open MAJOR findings 1 and 2 and the empty ORDERED sources must be resolved before a Manifest is generated; acceptance does not admit sources, generate a Manifest or authorize a run",
+  "B02": "typed contract and array policy ACCEPTED at exact SHAs; ORDERED sources and findings 1-2 pending",
+  "Phase4DevRun": {
+    "Role": "DEVRUN_OBSERVATION",
+    "Path": "validation/route_b_c03/wp_008/dsp004_phase4_harness_rev1/devrun1_container_py313.json",
+    "SHA256": "469F62C02F6B3690B641768DA9EF6C319D50C27826FA319D9FAC846AA73D1FAA",
+    "Bytes": 19750,
+    "Accepted": false,
+    "Admitted": false,
+    "What": "one local development run of harness REV1 in the recorder's Linux container (Python 3.13), after the rules were bound in REV39",
+    "Totals": {
+      "fail": 0,
+      "fixture_conformant": 20,
+      "pass": 28,
+      "variants": 28
+    },
+    "Status": "NOT_EVIDENCE; runtime differs from the admitted CPython 3.12.10 environment"
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "Phase1Environment": "ADMITTED_BY_OWNER"
+  }
+}
