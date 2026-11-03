@@ -1,0 +1,140 @@
+{
+  "RecordKind": "DSP004_PHASE4_REV1_REVIEW_AND_REV2_BINDING",
+  "Outcome": "REV2_BOUND_BEFORE_RUN_NOT_ACCEPTED",
+  "ReviewOfRev1": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "Verdict": "BLOCKING_ITEMS_FOUND (2)",
+    "Confirmed": "REV3 changed only listed keys; all 13 new rule derivations correct against source; 12 variants hand-checked",
+    "Findings": [
+      {
+        "N": "B-1",
+        "Severity": "BLOCKING",
+        "Finding": "state compared by value only; wrong enum class or str subclass could pass; class checked by name",
+        "Disposition": "fixed: native types checked by identity (exact bound class, exact enum class, exact str)"
+      },
+      {
+        "N": "B-2",
+        "Severity": "BLOCKING",
+        "Finding": "an existing __pycache__ .pyc could run different code while hashes pass",
+        "Disposition": "fixed: subject built from the hashed bytes by a private importer; no sys.path entry; no .pyc read"
+      },
+      {
+        "N": "M-1",
+        "Severity": "MAJOR",
+        "Finding": "CR-010-NO-RELEASE mapped to the kill fixture",
+        "Disposition": "fixed in input REV4: unmapped"
+      },
+      {
+        "N": "M-2",
+        "Severity": "MAJOR",
+        "Finding": "six-side 'actual' was a literal dict, described as captured",
+        "Disposition": "fixed: separate capture function reads a context object and provider instance; input text says what it is"
+      },
+      {
+        "N": "M-3",
+        "Severity": "MAJOR",
+        "Finding": "no V3.2 pre-import scan or guards",
+        "Disposition": "fixed: AST import/call scan of subject bytes before import; audit hook blocks network, process, writes and removals"
+      },
+      {
+        "N": "m-1",
+        "Severity": "MINOR",
+        "Finding": "input could choose attributes via getattr",
+        "Disposition": "fixed: object-type allow-list; enum lookup by member name"
+      },
+      {
+        "N": "m-2",
+        "Severity": "MINOR",
+        "Finding": "unused overrides ignored",
+        "Disposition": "fixed: stop"
+      },
+      {
+        "N": "m-3",
+        "Severity": "MINOR",
+        "Finding": "whole scripts/ on sys.path",
+        "Disposition": "fixed: no sys.path entry"
+      },
+      {
+        "N": "m-4",
+        "Severity": "MINOR",
+        "Finding": "fixtures re-read after hashing",
+        "Disposition": "fixed: hashed bytes reused"
+      },
+      {
+        "N": "m-5",
+        "Severity": "MINOR",
+        "Finding": "flags not enforced",
+        "Disposition": "fixed: stop unless -I -S -B"
+      },
+      {
+        "N": "m-6",
+        "Severity": "MINOR",
+        "Finding": "exit codes ambiguous",
+        "Disposition": "fixed: 0/4/2/3/64"
+      },
+      {
+        "N": "m-7",
+        "Severity": "MINOR",
+        "Finding": "conformance total mixed classes",
+        "Disposition": "fixed: FULL and PARTIAL counted separately"
+      },
+      {
+        "N": "m-8",
+        "Severity": "MINOR",
+        "Finding": "write set not compared",
+        "Disposition": "fixed where the mapping states it"
+      },
+      {
+        "N": "m-9",
+        "Severity": "MINOR",
+        "Finding": "PROTECTED-STATE mappings stretched",
+        "Disposition": "fixed in input REV4: unmapped"
+      },
+      {
+        "N": "m-10",
+        "Severity": "MINOR",
+        "Finding": "CR-004 REJECTED reinterpretation unstated",
+        "Disposition": "fixed in input REV4 mapping_basis"
+      },
+      {
+        "N": "m-11",
+        "Severity": "MINOR",
+        "Finding": "rule count said 12, is 13",
+        "Disposition": "fixed"
+      }
+    ]
+  },
+  "Bound": [
+    {
+      "Role": "INPUT_CANDIDATE_REV4",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json",
+      "SHA256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+      "Bytes": 115428,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "HARNESS_REV2",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase4_harness_rev2/harness_rev2.py",
+      "SHA256": "4A4B859405D31AD5716615E7FE5FF0330143BB48F2AAB83BC487CC9CE786D7B7",
+      "Bytes": 22043,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Rev1Unchanged": "input REV3 and harness REV1 keep their bytes",
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
