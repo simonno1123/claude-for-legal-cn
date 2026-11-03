@@ -1,0 +1,113 @@
+{
+  "RecordKind": "DSP004_PREFLIGHT_V1_RESULT",
+  "Outcome": "PASS_FORMAL_V1 (preflight run; not a formal result)",
+  "Classification": "PREFLIGHT_OBSERVATION_FOR_MANIFEST",
+  "Authorization": {
+    "OwnerChoice": "授权预检运行（推荐）",
+    "Scope": "one supervised run of the bound formal-v1 assets as dsp004val to observe the Windows import closure; not a formal result"
+  },
+  "Install": {
+    "InstalledUtc": "2026-11-03T17:21:36.3241045Z",
+    "Files": 30,
+    "AllMatchExpected": true
+  },
+  "Run": {
+    "SupervisorStartedUtc": "2026-11-03T17:22:38.1754755Z",
+    "ReleasedUtc": "2026-11-03T17:23:08.7882383Z",
+    "SupervisorPid": 3064,
+    "HarnessPid": 14164,
+    "ExitCode": 0,
+    "LockedFiles": 713,
+    "RunChecks": "29/29",
+    "Python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "HarnessTotals": {
+      "conformant_full": 12,
+      "conformant_partial_limited": 5,
+      "fail": 0,
+      "guard_denied": 0,
+      "mapped_not_conformant": 0,
+      "not_mapped": 11,
+      "pass": 28,
+      "variants": 28
+    },
+    "ImportClosureModules": 125,
+    "NativeModules": 26
+  },
+  "AuditCrossCheck": {
+    "FormalSupervisorStartsInHistory": 1,
+    "MatchesRecordPid": true,
+    "HarnessStartCommandLineExact": true,
+    "HarnessExitStatus": "0x0",
+    "RunAccount4688Total": 46,
+    "Logons4624": 5,
+    "FailedLogons4625": 0,
+    "RecordNumbers": "65637..72702 contiguous (7066)",
+    "LogCleared": 0,
+    "AuditPolicyChanges": "2 (setup only)"
+  },
+  "Files": [
+    {
+      "Role": "install_formal_v1_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/install_formal_v1_result.json",
+      "SHA256": "262F9AA2D073692B1096072CB8F49A47A679D8083779ECE6A7229F5287794C4D",
+      "Bytes": 13524,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "preflight_pre_collect_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/preflight_pre_collect_result.json",
+      "SHA256": "CE5D1C2CC8DB114F76EF1EE8CC36D036318C7CC85CF27BEB4FAA348B29C77C33",
+      "Bytes": 833,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "preflight_post_collect_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/preflight_post_collect_result.json",
+      "SHA256": "F2D6D74D33D7264462140E68F08A5789A4F932AF0A018DCCAA7FFCAF7473CEA8",
+      "Bytes": 82906,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "preflight_run_record.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/preflight_run_record.RAW_REDACTED.json",
+      "SHA256": "8855C048FEA91A8C922F64106191ED6483900CCFEE1D516576FA304A9003E5D6",
+      "Bytes": 382951,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "125D44DE9E13BA841F0CBA83AAB5BECFB4F870BD397992B89A4ACD5A5279D208",
+      "UnredactedBytes": 382977
+    },
+    {
+      "Role": "preflight_events_history.RAW_REDACTED.xml",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/preflight_events_history.RAW_REDACTED.xml",
+      "SHA256": "1124A9701AECD3281CB0628719321368F0FF8F35513964CB69471BD0B7C90FEE",
+      "Bytes": 131140,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "16C9B554681B761FD840DD8EE3D4987E74803F75B561458C5971ABA2316B338D",
+      "UnredactedBytes": 134233
+    },
+    {
+      "Role": "IMPORT_CLOSURE_EXTRACT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v1/preflight_import_closure.json",
+      "SHA256": "207317E902E72E7AE8A00DFD68C81AF0234A5C6F4AC05736EB06F42453145CD1",
+      "Bytes": 17303,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Redaction": "host -> REDACTED-HOST, machine SID prefix -> S-1-5-21-REDACTED, owner username -> REDACTED-OWNER",
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
