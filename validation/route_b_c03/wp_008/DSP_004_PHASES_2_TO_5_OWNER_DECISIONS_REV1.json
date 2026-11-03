@@ -1,0 +1,69 @@
+{
+  "RecordKind": "DSP004_PHASES_2_TO_5_OWNER_DECISIONS",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-03T03:00:00Z (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "References": {
+    "TypedContractRev3": {
+      "SHA256": "AAD3921DEFCF62DF63F4A575F67B4DB1C5766414828128DB101D325D9A09DE1F",
+      "Bytes": 29240,
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_TYPED_CONTRACT_REV3_CANDIDATE.md"
+    },
+    "ArrayPolicyRev3": {
+      "SHA256": "39F0FDC37CD8C8C52B0ABD8754BF1173C698E7F846530BFDB0DF032EF3A88123",
+      "Bytes": 16317,
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_B02_ARRAY_POLICY_REGISTRY_REV3_CANDIDATE.md"
+    },
+    "Fa06LimitedRegisterRev1": {
+      "SHA256": "500015848949A8B789E0E44F2BB21AE0676D50B9440EA89124BB30CDC8B06254",
+      "Bytes": 38377,
+      "Path": "validation/route_b_c03/wp_008/DSP_004_FA06_LIMITED_REGISTER_REV1_CANDIDATE.json"
+    },
+    "SourceUseRev1": {
+      "SHA256": "F4B995D8F2DA424E68D94EA7E31FB6387F628C7681BEF5CC05807A29D6684A2F",
+      "Bytes": 24541,
+      "Path": "docs/phase2/route-b/DSP_004_SOURCE_USE_AND_INPUT_EXTENSION_REV1_CANDIDATE.md"
+    }
+  },
+  "Decisions": [
+    {
+      "Id": "P2-SOURCES",
+      "Gate": "FA-03 / R-01",
+      "Choice": "all six sides are local synthetic: expected sides are the REF-03 synthetic documents (SYNTHETIC-PROJECT-001, SYNTHETIC-SESSION-001, SYNTHETIC-PROVIDER-001); actual sides are captured from a synthetic call context by a capture entry that the recorder writes, binds and has reviewed, run in the admitted phase-1 environment; no real project, session or provider",
+      "ChoiceLabel": "全部用本地合成来源（推荐）"
+    },
+    {
+      "Id": "P3-CONTRACT",
+      "Gate": "FA-04 / R-03",
+      "Choice": "the recorder runs an in-repository static review (same model family) of typed contract REV3 and array policy REV3 at the SHAs above; if it finds no blocking item, both are recorded as accepted by the owner at those exact SHAs; if it finds a blocking item, it is fixed first and the owner is asked again",
+      "ChoiceLabel": "审查无阻断项则接受（推荐）",
+      "ConditionalAcceptance": true
+    },
+    {
+      "Id": "P5-LIMITED",
+      "Gate": "FA-06 / R-06 / R-07",
+      "Choice": "all existing LIMITED items (dependency, start-up, isolation, stop and clean-up) are kept as declared known limitations; formal results conclude only within them and do not claim them eliminated",
+      "ChoiceLabel": "全部作为已知限制保留（推荐）"
+    },
+    {
+      "Id": "P4-DRAFT",
+      "Gate": "FA-05 / R-05",
+      "Choice": "the recorder may draft a complete input candidate (new file; SCENARIO_INPUT_BINDING.json is not overwritten), the native-result to Fixture comparison mapping, and harness source, then bind and review them before owner acceptance; no acceptance, Manifest or formal run by this decision",
+      "ChoiceLabel": "授权起草（推荐）"
+    }
+  ],
+  "Supersedes": "for these four gates, the REV17 refusals/reservations are replaced by the choices above",
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN until the conditional acceptance of P3-CONTRACT takes effect",
+    "Phase1Environment": "ADMITTED_BY_OWNER"
+  }
+}
