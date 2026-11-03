@@ -1,0 +1,86 @@
+{
+  "RecordKind": "DSP004_PATH_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "OWNER_ACCEPTANCE_RECORDED",
+  "Signed": false,
+  "Accepted": true,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV42.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "origin/main after PR #45",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV41_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV41.md",
+      "SHA256": "44BA6659C91AAC00D84994C102088F3BE38CDB9AE7C7F8563A48F1ED8E23D025",
+      "Bytes": 1328,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV41_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_INCREMENT_REV41.json",
+      "SHA256": "33AA314E14E332AB4D0F5EFC2FF0C8C045204D34F4D45C57D10A87D8D9025FF0",
+      "Bytes": 2878,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "NewPreparationFacts": [
+    "PHASE4_INPUT_AND_HARNESS_ACCEPTED",
+    "CONTRACT_INPUT_PATH_AND_ENTRY_ID_DECIDED"
+  ],
+  "CurrentPhase": "1 admitted; 3 and 4 accepted; 2 and 5 decided; 6 next (ORDERED sources pending)",
+  "AnythingExecuted": true,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "CONTRACT_AND_ARRAY_POLICY_ACCEPTED; ORDERED_SOURCES_PENDING",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "INC42-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV41 JSON re-hash equals the SHA cited in the REV41 narrative."
+    }
+  ],
+  "CheckCount": 1,
+  "ChecksPassed": 1,
+  "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+  "Phase1Environment": "ADMITTED_BY_OWNER",
+  "Record": {
+    "Markdown": {
+      "Role": "P4_ACCEPT_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PHASE4_ACCEPTANCE_REV1.md",
+      "SHA256": "87A3310D56233DAC26EBCFC2F3094C21974BB6A2D88F9014B94BA3092DEE8634",
+      "Bytes": 3303,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "P4_ACCEPT_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE4_ACCEPTANCE_REV1.json",
+      "SHA256": "983BBB1813E92A7BE831944ACBB00F42404F5CA3397516EBCFD7AF366A696F64",
+      "Bytes": 5428,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "AcceptedScope": "phase-4 input candidate REV4 and harness REV2 at exact SHAs only"
+}

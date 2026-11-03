@@ -1,0 +1,115 @@
+{
+  "RecordKind": "DSP004_PHASE4_ACCEPTANCE_AND_CONTRACT_DECISIONS",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-03T04:30:00Z (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Rev2Review": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "Verdict": "NO_BLOCKING_ITEMS",
+    "Confirmed": "B-1 and B-2 fixed (planted wrong enum classes, str subclass, look-alike classes, list for tuple, bool for int, ValueError subclass, stale .pyc all handled); output identical on Python 3.12.3 and 3.13; 13 variants hand-checked",
+    "OpenFindings": [
+      {
+        "Id": "MINOR-1",
+        "Finding": "guard misses os.open with write flags, os.startfile, truncate, link/symlink, utime, sqlite3, tempfile",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "MINOR-2",
+        "Finding": "docstring/binding over-claim: exec/compile not blocked; hook can be disarmed from inside; scan bypassable via module attributes",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "MINOR-3",
+        "Finding": "a guard denial does not force FAIL or change the exit code",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "MINOR-4",
+        "Finding": "pass-with-mapping-mismatch not counted; mapped OBSERVE_ONLY would go to partial bucket",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "MINOR-5",
+        "Finding": "lenient compare for rule shapes absent from REV4 (null expected, empty requirement, True==1 in construct, CR-014 prefix)",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "NOTE-1",
+        "Finding": "observation shows class names only",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "NOTE-2",
+        "Finding": "six-side Consistent compares harness constants",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "NOTE-3",
+        "Finding": "some stops exit 3 not 2; BaseException escapes",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      },
+      {
+        "Id": "NOTE-4",
+        "Finding": "applies_to not checked against variant id",
+        "Disposition": "to be fixed in the harness revision used for the formal run (phase 7), before that run"
+      }
+    ]
+  },
+  "Decisions": [
+    {
+      "Id": "P4-ACCEPT",
+      "Choice": "accept input candidate REV4 and harness REV2 at the exact SHAs below; the open MINOR findings are recorded and fixed in the next harness revision before the formal run",
+      "ChoiceLabel": "接受（推荐）"
+    },
+    {
+      "Id": "P6-INPUT-PATH",
+      "Choice": "for Manifest generation, InputContract.binding refers to validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json; this decision supersedes the fixed path SCENARIO_INPUT_BINDING.json in the accepted typed contract REV3 (contract lines 311-313, 461; registry 115-116); the contract file is not edited",
+      "ChoiceLabel": "用新文件（推荐）"
+    },
+    {
+      "Id": "P6-ENTRY-ID",
+      "Choice": "entry_id 'category prefix' is not a separate format rule; an entry_id is well-formed if and only if it is a member of the bound identifier source's set (contract line 58); this decision settles review finding 1 on contract line 334",
+      "ChoiceLabel": "只核对是否属于绑定的标识集（推荐）"
+    }
+  ],
+  "Accepted": [
+    {
+      "Role": "INPUT_CANDIDATE_REV4",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV4.json",
+      "SHA256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+      "Bytes": 115428,
+      "Accepted": true,
+      "Admitted": false
+    },
+    {
+      "Role": "HARNESS_REV2",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase4_harness_rev2/harness_rev2.py",
+      "SHA256": "4A4B859405D31AD5716615E7FE5FF0330143BB48F2AAB83BC487CC9CE786D7B7",
+      "Bytes": 22043,
+      "Accepted": true,
+      "Admitted": false
+    }
+  ],
+  "AcceptanceScope": "phase-4 input and harness for the later supervised formal run in the admitted phase-1 environment; does not generate a Manifest or authorize a run; the formal-run harness revision must keep the input and comparison logic and add the MINOR fixes",
+  "StillOpenBeforeManifest": [
+    "five ORDERED source values (AP-006, AP-009, AP-020, AP-021, AP-022)"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "CONTRACT_AND_ARRAY_POLICY_ACCEPTED; ORDERED_SOURCES_PENDING",
+    "Phase1Environment": "ADMITTED_BY_OWNER"
+  }
+}
