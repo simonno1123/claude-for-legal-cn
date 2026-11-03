@@ -1,0 +1,28 @@
+{
+  "RecordKind": "DSP004_PHASE6_7_OWNER_DECISIONS",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-03T03:40:00Z (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Decisions": [
+    {
+      "Id": "P6-VENV-ROOT",
+      "Choice": "the admitted environment uses no virtual environment; in the Manifest VENV_ROOT is recorded as NOT_APPLICABLE by this owner decision and no file is read under it; the accepted typed contract file is not edited",
+      "ChoiceLabel": "记为“不适用”（推荐）"
+    },
+    {
+      "Id": "P7-PREPARE",
+      "Choice": "the recorder may prepare phase-7 assets: install the accepted subject, fixtures and input plus harness REV3 (REV2 with the recorded MINOR fixes) into the protected directory C:\\Program Files\\DSP004Runtime\\project_v1, prepare a supervisor that runs it as dsp004val, bind and review them, and generate the Manifest for owner acceptance; the formal run itself needs a separate authorization",
+      "ChoiceLabel": "授权准备（推荐）"
+    }
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}

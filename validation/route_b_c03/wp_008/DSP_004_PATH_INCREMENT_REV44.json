@@ -1,0 +1,75 @@
+{
+  "RecordKind": "DSP004_PATH_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "PREPARATION_NOTES_ONLY",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV44.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "origin/main after PR #47",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV43_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV43.md",
+      "SHA256": "D04C567519140618BEA1AE3163045036F9CD937B9A19C30E816DD359417A6C3B",
+      "Bytes": 1478,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV43_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_INCREMENT_REV43.json",
+      "SHA256": "BE17A0B46CAFF687D320C33BE10059F81B4422FFEFDAAD0163C5BEFA1842B021",
+      "Bytes": 3109,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "NewPreparationFacts": [
+    "VENV_ROOT_NOT_APPLICABLE_DECIDED",
+    "PHASE7_PREPARATION_AUTHORIZED"
+  ],
+  "CurrentPhase": "1 admitted; 3 and 4 accepted; 2 and 5 decided; 6 next (ORDERED sources pending)",
+  "AnythingExecuted": true,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "CONTRACT_AND_ARRAY_POLICY_ACCEPTED; ORDERED_SOURCES_PENDING",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "INC44-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV43 JSON re-hash equals the SHA cited in the REV43 narrative."
+    }
+  ],
+  "CheckCount": 1,
+  "ChecksPassed": 1,
+  "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+  "Phase1Environment": "ADMITTED_BY_OWNER",
+  "Record": {
+    "Role": "P6_7_DECISIONS_JSON",
+    "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE6_7_OWNER_DECISIONS_REV1.json",
+    "SHA256": "D004C16A0644556449A3FBE662D62A896362D78933AD4444B0B80EE047FFA0B6",
+    "Bytes": 1277,
+    "Accepted": false,
+    "Admitted": false
+  }
+}
