@@ -1,0 +1,42 @@
+{
+  "RecordKind": "DSP004_OD04A_V4_STATUS",
+  "Outcome": "COLLECTOR_REVISION_2_BOUND",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "CollectOnly": {
+    "OwnerRanUtc": "about 2026-11-03T00:04Z",
+    "Log": {
+      "Role": "COLLECT_ONLY_LOG",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/invocation1_collect_only_log.txt",
+      "SHA256": "EEF7093CDA6538E9D6C72CA0D056F1009D36E492DF50F365E50BDB4A8010D2E8",
+      "Bytes": 32,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Stop": "ACCOUNT_CREATION_EVENTS_2",
+    "Meaning": "collect_v4.ps1 (revision 1) found two 4720 account-created events named dsp004val and, by design, stopped before moving the run record; the record stays in the dsp004val profile. The empty post folder of invocation 1 fits the same stop."
+  },
+  "Revision2": {
+    "Role": "COLLECTOR_R2",
+    "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/collect_v4.r2.ps1",
+    "SHA256": "A48773E80CF31877AF71F9807E3C2D2022D9D6B50E54D6ED3F7ECBD95A261652",
+    "Bytes": 13022,
+    "Accepted": false,
+    "Admitted": false,
+    "DeployedAs": "collect_v4.ps1 in the owner's v4 folder (go_v4.cmd and collect_only_v4.cmd call it by that name)",
+    "Change": "window starts at the earliest 4720 whose TargetSid is the current dsp004val SID; all 4720 and 4726 events for the name are exported and counted",
+    "Revision1Unchanged": "collect_v4.ps1 in the repository keeps the revision-1 bytes"
+  },
+  "Review": "change checked by the recorder only (small, local change); not reviewed by a fresh subagent",
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
