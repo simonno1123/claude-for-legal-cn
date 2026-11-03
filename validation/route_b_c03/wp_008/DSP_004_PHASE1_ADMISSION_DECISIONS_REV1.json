@@ -1,0 +1,68 @@
+{
+  "RecordKind": "DSP004_PHASE1_ADMISSION_DECISIONS",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-03T02:45:00Z (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "V4Result": {
+      "Path": "validation/route_b_c03/wp_008/DSP_004_OD04A_V4_RESULT.json",
+      "SHA256": "9F5813AD6DA40B6B2B3F8D6B35985A1C4C77403F81114D962EB39FCE7CE3CAE0",
+      "Bytes": 13668
+    }
+  },
+  "Decisions": [
+    {
+      "Id": "P1-PYVER",
+      "Question": "V3.2 names Python 3.12.13; the verified runtime is 3.12.10",
+      "Choice": "use 3.12.10 as the runtime version of record; V3.2's version line is superseded by this decision (V3.2 bytes are not edited)",
+      "ChoiceLabel": "以 3.12.10 为准（推荐）"
+    },
+    {
+      "Id": "P1-RESIDUALS",
+      "Question": "KnownDLLs mapped from boot-time sections; BUILTIN\\Users read/execute on the runtime; owner administrator account on the host",
+      "Choice": "accepted as known limitations of the phase-1 environment",
+      "ChoiceLabel": "作为已知局限接受（推荐）"
+    },
+    {
+      "Id": "P1-EXTREVIEW",
+      "Question": "outside-family review before admission",
+      "Choice": "not needed for now; records state that all reviews are same-family",
+      "ChoiceLabel": "暂不需要（推荐）"
+    },
+    {
+      "Id": "P1-ADMIT",
+      "Question": "admit the phase-1 validation environment (this host + dsp004val + process-creation auditing + the bound runtime and v3 supervisor) as the basis for later formal runs",
+      "Choice": "admitted",
+      "ChoiceLabel": "准入（推荐）"
+    }
+  ],
+  "Phase1Environment": {
+    "Admission": "ADMITTED_BY_OWNER",
+    "Scope": "validation environment only: host, run account, auditing, bound runtime (CPython 3.12.10 under C:\\Program Files\\DSP004Runtime) and supervisor_v3 with its bound list, as recorded in REV30-REV36",
+    "Conditions": [
+      "known limitations P1-RESIDUALS apply",
+      "no outside-family review",
+      "the dsp004val password expires about 2026-12-13 under local policy",
+      "Security log is circular 20 MB; later runs must collect before the account's history rolls off, or the owner decides otherwise"
+    ],
+    "NotIncluded": [
+      "OD-04 evidence (status unchanged)",
+      "any formal run",
+      "harness, inputs, comparison mapping, Manifest",
+      "closure of DSP-004"
+    ]
+  },
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE",
+    "B01": "OPEN",
+    "B02": "OPEN"
+  }
+}
