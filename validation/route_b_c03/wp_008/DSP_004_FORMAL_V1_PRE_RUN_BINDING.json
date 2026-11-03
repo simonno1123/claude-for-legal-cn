@@ -1,0 +1,148 @@
+{
+  "RecordKind": "DSP004_FORMAL_V1_PRE_RUN_BINDING",
+  "Outcome": "BOUND_BEFORE_INSTALL_NOT_RUN",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Basis": "owner decision P7-PREPARE (DSP_004_PHASE6_7_OWNER_DECISIONS_REV1.json)",
+  "Assets": [
+    {
+      "Role": "harness_rev3.py",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/harness_rev3.py",
+      "SHA256": "9F93F66FEB39EB102AA8B8EF94D578E532B50D8D6F50BDB6F00F4341DB53DC8E",
+      "Bytes": 25485,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "supervisor_formal_v1.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/supervisor_formal_v1.ps1",
+      "SHA256": "D8AE28B705932894447CBE9B14038E787077E2F203384A61EF8056467FA3101F",
+      "Bytes": 26211,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "bound_list_formal_v1.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/bound_list_formal_v1.json",
+      "SHA256": "1AC8841274FF77C655B5B9D7D2F9B2B86B18B9065E290F50497D1688D47B8D10",
+      "Bytes": 154458,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "run_formal_v1.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/run_formal_v1.cmd",
+      "SHA256": "C1CF428D4F95A00C57FB28F01EE9118C081C99EEF3D8ECA02F0C336FDADD9621",
+      "Bytes": 411,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "install_formal_v1.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/install_formal_v1.ps1",
+      "SHA256": "5203FA575C4DC03848952CC34915A53AF248CFF2ACB06B7356A6670FA424437D",
+      "Bytes": 10586,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "install_formal_v1.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/install_formal_v1.cmd",
+      "SHA256": "4E3CB5E37DB0209432AB55385857BCBB12EA828D4033BBB5EA159D6D7884D1C4",
+      "Bytes": 641,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "collect_formal_v1.ps1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/collect_formal_v1.ps1",
+      "SHA256": "E3AECE809CE279DD068E802BD62C61A606DF2FA4098C8D1A6FBCFC7D5539EBF9",
+      "Bytes": 17175,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "go_formal_v1.cmd",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v1/go_formal_v1.cmd",
+      "SHA256": "95AA6D886E82CD82D02EF5DAB8298BBD8517535B7AF5172083652F22FEADDADE",
+      "Bytes": 1503,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Layout": {
+    "SupervisorDir": "C:\\Program Files\\DSP004Runtime\\supervisor_formal_v1 (3 files)",
+    "ProjectRoot": "C:\\Program Files\\DSP004Runtime\\project_v1 (27 files at repository-relative paths)",
+    "ExpectedFilesOnDisk": 691,
+    "ExpectedLockedFiles": 713
+  },
+  "PreRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "Verdict": "NO_BLOCKING_ITEMS",
+    "Confirmed": "all cross-references and hashes; harness REV3 28/28 on Python 3.12.3 and 3.13 with Scenarios/SixSide identical to REV2; ~39 KB output parses in PS 5.1; HX checks match output fields; guard tested with real calls, no Windows false positives expected; tree/lock/ACL counts match the target layout",
+    "Findings": [
+      {
+        "Id": "MINOR-1",
+        "Finding": "supervisor read Totals under StrictMode when the harness printed a Stop",
+        "Disposition": "fixed: HX_NoStop computed first; other HX checks skipped on a Stop"
+      },
+      {
+        "Id": "MINOR-2",
+        "Finding": "harness docstring overclaimed the scan; some input errors exited 3",
+        "Disposition": "fixed: docstring states getattr allowed and module-attribute calls not caught; input conversion errors now Stop (exit 2)"
+      },
+      {
+        "Id": "MINOR-5/NOTE-1/NOTE-2",
+        "Finding": "CR-014 prefix check lenient; enum encoding without module; six-side compares harness constants",
+        "Disposition": "kept by design (comparison logic unchanged from accepted REV2; limitation already stated)"
+      },
+      {
+        "Id": "NOTE-3",
+        "Finding": "collector and installer write next to themselves",
+        "Disposition": "run from the owner's staging folder outside the repository; outputs are redacted before commit"
+      },
+      {
+        "Id": "NOTE-4",
+        "Finding": "stale v3/v4 comments in collector",
+        "Disposition": "partly fixed"
+      },
+      {
+        "Id": "NOTE-5",
+        "Finding": "installer drops v3 host-module, run-account and audit checks",
+        "Disposition": "compensated by supervisor re-hash and collector"
+      },
+      {
+        "Id": "NOTE-6",
+        "Finding": "no staging script; partial write leaves folders",
+        "Disposition": "the recorder stages the files through the device bridge and verifies them by read-back"
+      },
+      {
+        "Id": "NOTE-7",
+        "Finding": "Windows import set inferred, not observed; expect _bz2.pyd and _lzma.pyd as new native modules (bound)",
+        "Disposition": "first observed in the preflight run"
+      }
+    ]
+  },
+  "Plan": [
+    "owner runs install_formal_v1.cmd (installs only)",
+    "a preflight run observes the Windows import closure (needs owner authorization)",
+    "Manifest generated from the accepted contract, input, harness, runtime and the preflight closure; owner acceptance",
+    "formal run under a separate owner authorization"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
