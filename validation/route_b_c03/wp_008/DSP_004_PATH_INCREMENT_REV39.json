@@ -1,0 +1,92 @@
+{
+  "RecordKind": "DSP004_PATH_INCREMENT_NON_ACCEPTANCE",
+  "Outcome": "OWNER_DECISIONS_RECORDED",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "ScopeSentence": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+  "Owner": "张纯熙",
+  "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV39.md",
+  "SelfShaNotEmbedded": true,
+  "Formation": {
+    "GitHeadBeforeThisIncrement": "origin/main after PR #42",
+    "Writer": {
+      "Name": "Claude",
+      "Email": "noreply@anthropic.com",
+      "Role": "RECORDER_ONLY",
+      "IsOwner": false,
+      "CoAuthor": false
+    }
+  },
+  "PriorIncrement": {
+    "Markdown": {
+      "Role": "REV38_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV38.md",
+      "SHA256": "70082AF5F5924F9AD784093065402E8D493849556792C9AF9AEB50B847B44940",
+      "Bytes": 1357,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Json": {
+      "Role": "REV38_JSON",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_INCREMENT_REV38.json",
+      "SHA256": "1679E432B2F102ABE4B6279E61F7757B275EBC78C5F5D77A4F3B9D464E01FDA2",
+      "Bytes": 2861,
+      "Accepted": false,
+      "Admitted": false
+    }
+  },
+  "NewPreparationFacts": [
+    "PHASE4_INPUT_MAPPING_HARNESS_DRAFTED_AND_BOUND_BEFORE_ANY_RUN"
+  ],
+  "CurrentPhase": "1 admitted; 2-5 decided, work in progress",
+  "AnythingExecuted": true,
+  "DSP004Closed": false,
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "B01": "OPEN",
+    "B02": "OPEN",
+    "FA03": "MISSING_BINDING_AND_ACTUAL_ENTRY",
+    "FA04": "INCOMPLETE",
+    "FA05": "INCOMPLETE",
+    "FA06": "未建立充分前提",
+    "FA08": "INCOMPLETE"
+  },
+  "Checks": [
+    {
+      "CheckId": "INC39-01.PRIOR_BINDING",
+      "Passed": true,
+      "Detail": "REV38 JSON re-hash equals the SHA cited in the REV38 narrative."
+    }
+  ],
+  "CheckCount": 1,
+  "ChecksPassed": 1,
+  "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+  "Phase1Environment": "ADMITTED_BY_OWNER",
+  "Drafts": {
+    "Narrative": {
+      "Role": "P4_DRAFTS_MD",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PHASE4_DRAFTS_REV1.md",
+      "SHA256": "0AD50C60D29C378272AD14B5068AA8A85ECA8CC3E656EB9FF525705C421C9ADB",
+      "Bytes": 8298,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "InputCandidate": {
+      "Role": "INPUT_CANDIDATE_REV3",
+      "Path": "validation/route_b_c03/wp_008/DSP_004_INPUT_CANDIDATE_REV3.json",
+      "SHA256": "16CBAFDF8D7E12682321DA3E905A5985F042E37B5E440EE6BE9A6217FDE36D08",
+      "Bytes": 114941,
+      "Accepted": false,
+      "Admitted": false
+    },
+    "Harness": {
+      "Role": "HARNESS_REV1",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase4_harness_rev1/harness_rev1.py",
+      "SHA256": "B54F45D638FC8157DE642985B8F7CC45A5ECF805BB355BF913119EB591457AD1",
+      "Bytes": 14520,
+      "Accepted": false,
+      "Admitted": false
+    }
+  }
+}
