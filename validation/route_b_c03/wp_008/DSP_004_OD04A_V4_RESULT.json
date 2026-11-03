@@ -1,0 +1,348 @@
+{
+  "RecordKind": "DSP004_OD04A_V4_RESULT_NON_ACCEPTANCE",
+  "Outcome": "FOUR_OF_FOUR_RUNS_PASS_MATCHED_TO_WHOLE_AUDIT_HISTORY",
+  "Classification": "PHASE1_ENVIRONMENT_OBSERVATION_NOT_EVIDENCE",
+  "Signed": false,
+  "Accepted": false,
+  "Admission": "NOT_ADMITTED",
+  "Owner": "张纯熙",
+  "Phase": 1,
+  "FactualStatement": "On the chosen host, the unchanged installed v3 supervisor ran 4 of 4 times as the separate standard, non-elevated account dsp004val, each in its own runas logon session, 2 before and 2 after one clean restart. Each run was PASS 69/69. Every dsp004val event in the account's retained audit history belongs to those 4 sessions, and the collector reports no Security record gaps since the account was created.",
+  "Runs": [
+    {
+      "Run": "v3",
+      "SupervisorStartUtc": "2026-11-02T04:34:16.243692+00:00",
+      "SupervisorPid": 4652,
+      "LogonId": "0x21f7f2e8",
+      "ProbePids": [
+        7432,
+        10424,
+        4760
+      ]
+    },
+    {
+      "Run": "inv1",
+      "SupervisorStartUtc": "2026-11-02T23:26:02.189456+00:00",
+      "SupervisorPid": 13832,
+      "LogonId": "0x2daab65e",
+      "ProbePids": [
+        13968,
+        6592,
+        14492
+      ]
+    },
+    {
+      "Run": "inv2",
+      "SupervisorStartUtc": "2026-11-03T00:42:43.632421+00:00",
+      "SupervisorPid": 8560,
+      "LogonId": "0xc6a8d7",
+      "ProbePids": [
+        13828,
+        1188,
+        16104
+      ]
+    },
+    {
+      "Run": "inv3",
+      "SupervisorStartUtc": "2026-11-03T02:22:37.523474+00:00",
+      "SupervisorPid": 4148,
+      "LogonId": "0x13f961b",
+      "ProbePids": [
+        17056,
+        5272,
+        14128
+      ]
+    }
+  ],
+  "SupervisorStartsUtc": [
+    "2026-11-02T04:34:16.243692+00:00",
+    "2026-11-02T23:26:02.189456+00:00",
+    "2026-11-03T00:42:43.632421+00:00",
+    "2026-11-03T02:22:37.523474+00:00"
+  ],
+  "BootsUtc": [
+    "2026-11-02T23:28:45.487893+00:00"
+  ],
+  "RecordNumbers": {
+    "CreationRecordId": 65637,
+    "Count": 4976,
+    "First": 65637,
+    "Last": 70612,
+    "Gaps": 0,
+    "GapRanges": [],
+    "FirstIsCreation": true
+  },
+  "HistoryCheck": {
+    "Script": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/check_v4_history.py",
+    "Passed": 27,
+    "Total": 27,
+    "Checks": {
+      "H01_OneCreationEventForRunAccount": true,
+      "H02_EveryRunAccountStartHasCommandLine": true,
+      "H03_OnlyExpectedImages": true,
+      "H04_SupervisorLaunchesEqualRecords": true,
+      "H05_EveryStartHasOneZeroExit": true,
+      "H06_EachRecordMatchesOneSupervisorStart": true,
+      "H07_EachRecordPass69of69": true,
+      "H08_EachRunThreeProbesPidsAndCommandLineMatch": true,
+      "H09_EachRunTreeRunasCmdSupervisorChildren": true,
+      "H10_EachRunOwnInteractiveLogonWithExplicitCredentials": true,
+      "H11_EachRunSeparateLogonSession": true,
+      "H12_RebootBetweenV4Invocation1And2": true,
+      "H13_RunsAfterRebootExist": true,
+      "H14_RecordNumbersContiguousFromCreation": true,
+      "H15_RecordNumberChainGrowsFromSameStart": true,
+      "H16_NoLogCleared": true,
+      "H17_AuditPolicyChangesOnlyAtSetup": true,
+      "H18_TimeChangesOnlyAroundReboot": true,
+      "H19_InstalledFilesUnchangedAtEveryCollection": true,
+      "H20_LauncherAndCollectorAsBound": true,
+      "H21_LogCoversWholeHistory": true,
+      "H22_RunAccountAlwaysMediumNotElevated": true,
+      "H23_EveryRunAccountEventInARunSession": true,
+      "H24_ExactlyFourLogonsNoFailuresNoPrivileged": true,
+      "H25_EachSessionExactlyTenStartsInPattern": true,
+      "H26_EarlierSameNameAccountOnlyCreatedAndDeleted": true,
+      "H27_PreStagesAsBound": true
+    }
+  },
+  "RecordedFacts": {
+    "SessionsWithoutLogoffEvent": [
+      "0x2daab65e",
+      "0xc6a8d7"
+    ],
+    "EarlierSameNameAccount": {
+      "Created": [
+        {
+          "TimeUtc": "2026-11-02T00:12:21.761739+00:00",
+          "TargetSid": "S-1-5-21-REDACTED-1003"
+        }
+      ],
+      "Deleted": [
+        {
+          "TimeUtc": "2026-11-02T00:13:24.349954+00:00",
+          "TargetSid": "S-1-5-21-REDACTED-1003"
+        }
+      ]
+    },
+    "Invocation2Wait": "supervisor exited 00:45:06Z; the go_v4 window waited at pause until 02:21:44Z; no run-account events in between",
+    "SupervisorExitAfterRelease": "0.1 s, 13.2 s, 93.4 s, 0.07 s (likely console output blocked); no child processes in those gaps"
+  },
+  "Deviations": [
+    "Reboot came after v4 invocation 1, not after invocation 2 as planned; so the history has 2 runs before and 2 after the restart (v3 run + v4 inv1 before; v4 inv2 + inv3 after)",
+    "Collector changed mid-series: invocation 1 pre stage ran revision 1; its post stage (via collect_only_v4.cmd, 00:28Z, after the reboot) ran revision 2, which was checked by the recorder only",
+    "Invocation 1's run record stayed in the dsp004val profile about one hour, across the reboot; its last-write time equals the supervisor release time and there was no dsp004val logon in between, but object access is not audited",
+    "An earlier bridge write delivered the old collector bytes; caught by read-back before any run used them",
+    "The checker was written after seeing the data; its counts are fitted to what happened"
+  ],
+  "Files": [
+    {
+      "Role": "inv1_post_collect_result.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv1_post_collect_result.RAW_REDACTED.json",
+      "SHA256": "06AD59A7F01A955D7AEF5DB083392114885BE5F0FDBC37FCB6E24BD768C41CD1",
+      "Bytes": 37083,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD",
+      "UnredactedBytes": 37083
+    },
+    {
+      "Role": "inv1_post_events_history.RAW_REDACTED.xml",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv1_post_events_history.RAW_REDACTED.xml",
+      "SHA256": "EC8A4633F17C82DA21A230B87F69D8ECD7522F70EA03EC14BCDA2F95FE7C5CE4",
+      "Bytes": 60009,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "E2324C671C3727B5A3F357812B9B2B8D0A81284D422E41E10725B3D922EBA7B0",
+      "UnredactedBytes": 61424
+    },
+    {
+      "Role": "inv1_run_record.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv1_run_record.RAW_REDACTED.json",
+      "SHA256": "A5714E008258E7EAF485369D47E9ADF83DC3C1745412BEB04E042A601D85D4FF",
+      "Bytes": 382440,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "43AB8F8F5B4EA047EB18182A0069246F39F80456B5E9609CE7D0F06F76F2A240",
+      "UnredactedBytes": 382466
+    },
+    {
+      "Role": "inv2_pre_collect_result.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv2_pre_collect_result.RAW_REDACTED.json",
+      "SHA256": "0A640C1B32C24992A11B6DEFA4308B28B125F58F4455BE16CA8FC7228AB9F12D",
+      "Bytes": 818,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD",
+      "UnredactedBytes": 818
+    },
+    {
+      "Role": "inv2_post_collect_result.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv2_post_collect_result.RAW_REDACTED.json",
+      "SHA256": "8D5EF83E36100283876310249BCDD09BCDD694DAB3C998873A43B48F9A8532EF",
+      "Bytes": 50420,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD",
+      "UnredactedBytes": 50420
+    },
+    {
+      "Role": "inv2_post_events_history.RAW_REDACTED.xml",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv2_post_events_history.RAW_REDACTED.xml",
+      "SHA256": "907EA701E0EFE86E115B20A41F6429C3532775EC294131212B51EBD9E664409F",
+      "Bytes": 85907,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "8A604C984857C736FEBD8096CD1E92DE3D87CF8216380FB8215F383D3409BEB9",
+      "UnredactedBytes": 87928
+    },
+    {
+      "Role": "inv2_run_record.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv2_run_record.RAW_REDACTED.json",
+      "SHA256": "B9D75FD088BDA001BACEF30A6722394B0697A6CEC6E5935D345724CC38CB11E5",
+      "Bytes": 382427,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "CB3CD3DAA710836B302244962DF04420572C03C065D2668BD8C7F3C766889B31",
+      "UnredactedBytes": 382453
+    },
+    {
+      "Role": "inv3_pre_collect_result.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv3_pre_collect_result.RAW_REDACTED.json",
+      "SHA256": "51950B13F67AF629DFCAB0E4A53CCB17E010E99A7DEA462735CB0DB09E150D70",
+      "Bytes": 818,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD",
+      "UnredactedBytes": 818
+    },
+    {
+      "Role": "inv3_post_collect_result.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv3_post_collect_result.RAW_REDACTED.json",
+      "SHA256": "01A782E857AF25BF3B40ADF8B4BD72FF2FA2C81BF030C4DDA9B1579F8F37A60A",
+      "Bytes": 64304,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "WITHHELD",
+      "UnredactedBytes": 64304
+    },
+    {
+      "Role": "inv3_post_events_history.RAW_REDACTED.xml",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv3_post_events_history.RAW_REDACTED.xml",
+      "SHA256": "81440ED3AB014667AEC0F069EB5FE673EA81C9721AB95690922AC900CAE8DB57",
+      "Bytes": 112629,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "00C684A7994687090E8696A3A827AD57F8939FBE8B78E374FDECF40F9D7EF26C",
+      "UnredactedBytes": 115284
+    },
+    {
+      "Role": "inv3_run_record.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/inv3_run_record.RAW_REDACTED.json",
+      "SHA256": "FA7A84B54D9F49170D6A916A52F77BDC2B09ED85AA27A54059A2D208B1610DE1",
+      "Bytes": 382429,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "8E8129DC0E867C0ECD559618C0BC9C4C22FD6B8540C0458C709ACA7C4B18626F",
+      "UnredactedBytes": 382455
+    },
+    {
+      "Role": "check_v4_history.py",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/check_v4_history.py",
+      "SHA256": "4969C63DC86821184EF182685708225B1251995E8281A9E5D5A7537557DDF230",
+      "Bytes": 12163,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "invocation1_collect_only_r2_log.txt",
+      "Path": "validation/route_b_c03/wp_008/dsp004_od04a_t0_dry_run_v4/invocation1_collect_only_r2_log.txt",
+      "SHA256": "A0551F96CA696DD8C0F9D33DA7A1B95223D6EF293E680253ED15BB7BC3549903",
+      "Bytes": 95,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Redaction": "plain byte substitution: host name -> REDACTED-HOST, machine SID prefix -> S-1-5-21-REDACTED, owner username -> REDACTED-OWNER (only in SubjectUserName fields of 4720/4726/4719/4648/4624)",
+  "PostRunReview": {
+    "Reviewer": {
+      "Kind": "FRESH_CONTEXT_SUBAGENT",
+      "Model": "Claude (same family as recorder)",
+      "AuthoredReviewedMaterial": false
+    },
+    "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+    "Findings": [
+      {
+        "N": "1",
+        "Severity": "MAJOR",
+        "Finding": "checker did not reject extra run-account activity",
+        "Disposition": "fixed: H23-H26 added; data passes"
+      },
+      {
+        "N": "2",
+        "Severity": "MAJOR",
+        "Finding": "record-number contiguity and launcher hashes rest on the collector's own report",
+        "Disposition": "recorded as limitation"
+      },
+      {
+        "N": "3",
+        "Severity": "MAJOR",
+        "Finding": "deviations from the binding not surfaced; H12 named to hide reboot placement",
+        "Disposition": "fixed: H12 renamed; deviations recorded; collect-only log committed; H27 checks pre stages"
+      },
+      {
+        "N": "4",
+        "Severity": "MAJOR",
+        "Finding": "checker written after seeing the data",
+        "Disposition": "recorded"
+      },
+      {
+        "N": "5",
+        "Severity": "MINOR",
+        "Finding": "no logoff event for 2 of 4 sessions",
+        "Disposition": "recorded"
+      },
+      {
+        "N": "6",
+        "Severity": "MINOR",
+        "Finding": "4616 at shutdown only counted",
+        "Disposition": "recorded"
+      },
+      {
+        "N": "7",
+        "Severity": "MINOR",
+        "Finding": "slow supervisor exit after release in two runs",
+        "Disposition": "recorded"
+      },
+      {
+        "N": "8",
+        "Severity": "NOTE",
+        "Finding": "1.5-hour wait in invocation 2 benign",
+        "Disposition": "recorded"
+      },
+      {
+        "N": "9",
+        "Severity": "NOTE",
+        "Finding": "byte counts reveal identifier lengths",
+        "Disposition": "accepted; hashes not brute-forceable because every hashed file contains the SID prefix"
+      }
+    ],
+    "Verdict": "classification stays phase-1 environment observation; the factual statement above is supported, with limits: one host, one reboot, collector's word for contiguity, post-hoc checker, same-family review"
+  },
+  "RemainingBeforeAdmission": [
+    "owner decision on Python version (V3.2 says 3.12.13; runtime is 3.12.10) and residuals (KnownDLLs, BUILTIN\\Users read/execute, owner admin account on the host)",
+    "owner decision on whether an outside-family review is needed",
+    "owner admission decision on the phase-1 environment"
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD",
+    "OD04": "OD04_A_DRY_RUN_OBSERVATION_NOT_EVIDENCE"
+  }
+}

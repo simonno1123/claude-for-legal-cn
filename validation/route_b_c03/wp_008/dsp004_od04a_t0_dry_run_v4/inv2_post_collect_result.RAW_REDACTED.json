@@ -1,0 +1,936 @@
+{
+    "Kind":  "DSP004_OD04A_V4_COLLECT_RESULT",
+    "Stage":  "post",
+    "Invocation":  "20261103T022146Z",
+    "CollectedUtc":  "2026-11-03T02:21:46.8755991Z",
+    "CollectorSha256":  "A48773E80CF31877AF71F9807E3C2D2022D9D6B50E54D6ED3F7ECBD95A261652",
+    "LauncherFilesNow":  [
+                             {
+                                 "Name":  "go_v4.cmd",
+                                 "SHA256":  "C03B667309170D351983F82DEAE69E9008758F78CF11F9CD874D2CC35F2E78A6"
+                             },
+                             {
+                                 "Name":  "collect_v4.ps1",
+                                 "SHA256":  "A48773E80CF31877AF71F9807E3C2D2022D9D6B50E54D6ED3F7ECBD95A261652"
+                             }
+                         ],
+    "WaitedSeconds":  0,
+    "InstalledFiles":  [
+                           {
+                               "Name":  "supervisor_v3.ps1",
+                               "SHA256":  "7CC3EC3D0432BFFE3D9ADAA34D90ED10DB015F5AFC241221E77E517B69C9E433",
+                               "MatchesExpected":  true
+                           },
+                           {
+                               "Name":  "probe_v3.py",
+                               "SHA256":  "3AF5FD03B9487642A7256EAA21D654F6BF072749EBAF03B967A3E307C34CB2A3",
+                               "MatchesExpected":  true
+                           },
+                           {
+                               "Name":  "bound_list_v3.json",
+                               "SHA256":  "0A349A6DBDA8B1397941EDE195D6D76E5B77DBE252BA6D3B80E0516016AAE561",
+                               "MatchesExpected":  true
+                           },
+                           {
+                               "Name":  "run_v3.cmd",
+                               "SHA256":  "B430D9B22CACEDEEAE9C3124916ECFF8FD023EFABAE8D870920ECD2DAE64195A",
+                               "MatchesExpected":  true
+                           }
+                       ],
+    "AccountCreationEvents":  {
+                                  "Named":  2,
+                                  "ForCurrentSid":  1,
+                                  "TimesUtc":  [
+                                                   "2026-11-02T04:14:40.8032683Z",
+                                                   "2026-11-02T00:12:21.7617393Z"
+                                               ]
+                              },
+    "WindowStartUtc":  "2026-11-02T04:14:40.8032683Z",
+    "EventsXml":  {
+                      "Bytes":  87928,
+                      "SHA256":  "8A604C984857C736FEBD8096CD1E92DE3D87CF8216380FB8215F383D3409BEB9",
+                      "Events":  73
+                  },
+    "EventSummary":  [
+                         {
+                             "Id":  4720,
+                             "RecordId":  65480,
+                             "TimeUtc":  "2026-11-02T00:12:21.7617393Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4726,
+                             "RecordId":  65491,
+                             "TimeUtc":  "2026-11-02T00:13:24.3499545Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4720,
+                             "RecordId":  65637,
+                             "TimeUtc":  "2026-11-02T04:14:40.8032683Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4719,
+                             "RecordId":  65642,
+                             "TimeUtc":  "2026-11-02T04:14:40.9026463Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4719,
+                             "RecordId":  65644,
+                             "TimeUtc":  "2026-11-02T04:14:40.9353250Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4648,
+                             "RecordId":  65840,
+                             "TimeUtc":  "2026-11-02T04:34:15.1238640Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3758",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4624,
+                             "RecordId":  65841,
+                             "TimeUtc":  "2026-11-02T04:34:15.1239145Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3758",
+                             "CommandLine":  null,
+                             "LogonType":  "2",
+                             "TargetLogonId":  "0x21f7f2e8"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65845,
+                             "TimeUtc":  "2026-11-02T04:34:16.0112192Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\cmd.exe",
+                             "NewProcessId":  "0x1cf0",
+                             "ProcessId":  "0x3a80",
+                             "CommandLine":  "C:\\Windows\\System32\\cmd.exe /c \"\"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\run_v3.cmd\"\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x21f7f2e8"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65847,
+                             "TimeUtc":  "2026-11-02T04:34:16.0286813Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x758",
+                             "ProcessId":  "0x1cf0",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65848,
+                             "TimeUtc":  "2026-11-02T04:34:16.2436928Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                             "NewProcessId":  "0x122c",
+                             "ProcessId":  "0x1cf0",
+                             "CommandLine":  "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"  -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\supervisor_v3.ps1\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65851,
+                             "TimeUtc":  "2026-11-02T04:34:17.8603771Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\whoami.exe",
+                             "NewProcessId":  "0x4db0",
+                             "ProcessId":  "0x122c",
+                             "CommandLine":  "\"C:\\WINDOWS\\system32\\whoami.exe\" /groups /fo csv /nh",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65852,
+                             "TimeUtc":  "2026-11-02T04:34:17.9126118Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x4db0",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65854,
+                             "TimeUtc":  "2026-11-02T04:34:37.0710744Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x1d08",
+                             "ProcessId":  "0x122c",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65855,
+                             "TimeUtc":  "2026-11-02T04:34:37.0931109Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x27b4",
+                             "ProcessId":  "0x1d08",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65858,
+                             "TimeUtc":  "2026-11-02T04:34:47.5571606Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x1d08",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65859,
+                             "TimeUtc":  "2026-11-02T04:34:47.5607232Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x27b4",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65860,
+                             "TimeUtc":  "2026-11-02T04:34:47.7638615Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x28b8",
+                             "ProcessId":  "0x122c",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65861,
+                             "TimeUtc":  "2026-11-02T04:34:47.7703448Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x600",
+                             "ProcessId":  "0x28b8",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65862,
+                             "TimeUtc":  "2026-11-02T04:34:58.2793037Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x28b8",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65863,
+                             "TimeUtc":  "2026-11-02T04:34:58.2846906Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x600",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65864,
+                             "TimeUtc":  "2026-11-02T04:34:58.3033362Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x1298",
+                             "ProcessId":  "0x122c",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  65865,
+                             "TimeUtc":  "2026-11-02T04:34:58.3108914Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x1b88",
+                             "ProcessId":  "0x1298",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65867,
+                             "TimeUtc":  "2026-11-02T04:35:08.7684971Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x1298",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65868,
+                             "TimeUtc":  "2026-11-02T04:35:08.7726646Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x1b88",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65869,
+                             "TimeUtc":  "2026-11-02T04:35:10.3299707Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x122c",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65871,
+                             "TimeUtc":  "2026-11-02T04:36:26.2072902Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x1cf0",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  65872,
+                             "TimeUtc":  "2026-11-02T04:36:26.2424797Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x758",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4634,
+                             "RecordId":  65877,
+                             "TimeUtc":  "2026-11-02T04:36:26.3704814Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  "2",
+                             "TargetLogonId":  "0x21f7f2e8"
+                         },
+                         {
+                             "Id":  4648,
+                             "RecordId":  68456,
+                             "TimeUtc":  "2026-11-02T23:26:01.9544290Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3758",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4624,
+                             "RecordId":  68457,
+                             "TimeUtc":  "2026-11-02T23:26:01.9544639Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3758",
+                             "CommandLine":  null,
+                             "LogonType":  "2",
+                             "TargetLogonId":  "0x2daab65e"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68460,
+                             "TimeUtc":  "2026-11-02T23:26:02.0029566Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\cmd.exe",
+                             "NewProcessId":  "0x2cc8",
+                             "ProcessId":  "0x1298",
+                             "CommandLine":  "C:\\Windows\\System32\\cmd.exe /c \"\"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\run_v3.cmd\"\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x2daab65e"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68461,
+                             "TimeUtc":  "2026-11-02T23:26:02.0164243Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x2d0c",
+                             "ProcessId":  "0x2cc8",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68463,
+                             "TimeUtc":  "2026-11-02T23:26:02.1894562Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                             "NewProcessId":  "0x3608",
+                             "ProcessId":  "0x2cc8",
+                             "CommandLine":  "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"  -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\supervisor_v3.ps1\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68465,
+                             "TimeUtc":  "2026-11-02T23:26:03.8365131Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\whoami.exe",
+                             "NewProcessId":  "0x4754",
+                             "ProcessId":  "0x3608",
+                             "CommandLine":  "\"C:\\WINDOWS\\system32\\whoami.exe\" /groups /fo csv /nh",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68466,
+                             "TimeUtc":  "2026-11-02T23:26:03.9000158Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x4754",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68467,
+                             "TimeUtc":  "2026-11-02T23:26:22.1969323Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x3690",
+                             "ProcessId":  "0x3608",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68468,
+                             "TimeUtc":  "2026-11-02T23:26:22.2167647Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x4e38",
+                             "ProcessId":  "0x3690",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68469,
+                             "TimeUtc":  "2026-11-02T23:26:32.6536843Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3690",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68470,
+                             "TimeUtc":  "2026-11-02T23:26:32.6567993Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x4e38",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68471,
+                             "TimeUtc":  "2026-11-02T23:26:32.8385201Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x19c0",
+                             "ProcessId":  "0x3608",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68472,
+                             "TimeUtc":  "2026-11-02T23:26:32.8471238Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x928",
+                             "ProcessId":  "0x19c0",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68473,
+                             "TimeUtc":  "2026-11-02T23:26:43.3210208Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x19c0",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68474,
+                             "TimeUtc":  "2026-11-02T23:26:43.3255842Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x928",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68475,
+                             "TimeUtc":  "2026-11-02T23:26:43.3536421Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x389c",
+                             "ProcessId":  "0x3608",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  68476,
+                             "TimeUtc":  "2026-11-02T23:26:43.3683931Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x3138",
+                             "ProcessId":  "0x389c",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68477,
+                             "TimeUtc":  "2026-11-02T23:26:53.8164906Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x389c",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68478,
+                             "TimeUtc":  "2026-11-02T23:26:53.8221687Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3138",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68483,
+                             "TimeUtc":  "2026-11-02T23:27:08.7240205Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3608",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68484,
+                             "TimeUtc":  "2026-11-02T23:27:13.0443995Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x2cc8",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  68485,
+                             "TimeUtc":  "2026-11-02T23:27:13.1167859Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x2d0c",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4608,
+                             "RecordId":  68794,
+                             "TimeUtc":  "2026-11-02T23:28:45.4878936Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  null,
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4648,
+                             "RecordId":  70301,
+                             "TimeUtc":  "2026-11-03T00:42:43.4009196Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3be8",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4624,
+                             "RecordId":  70302,
+                             "TimeUtc":  "2026-11-03T00:42:43.4009604Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3be8",
+                             "CommandLine":  null,
+                             "LogonType":  "2",
+                             "TargetLogonId":  "0xc6a8d7"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70305,
+                             "TimeUtc":  "2026-11-03T00:42:43.4480918Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\cmd.exe",
+                             "NewProcessId":  "0x3380",
+                             "ProcessId":  "0x1c14",
+                             "CommandLine":  "C:\\Windows\\System32\\cmd.exe /c \"\"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\run_v3.cmd\"\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0xc6a8d7"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70307,
+                             "TimeUtc":  "2026-11-03T00:42:43.4622854Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x2b68",
+                             "ProcessId":  "0x3380",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70308,
+                             "TimeUtc":  "2026-11-03T00:42:43.6324216Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                             "NewProcessId":  "0x2170",
+                             "ProcessId":  "0x3380",
+                             "CommandLine":  "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"  -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\supervisor_v3.ps1\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70310,
+                             "TimeUtc":  "2026-11-03T00:42:45.1304340Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\whoami.exe",
+                             "NewProcessId":  "0x2acc",
+                             "ProcessId":  "0x2170",
+                             "CommandLine":  "\"C:\\WINDOWS\\system32\\whoami.exe\" /groups /fo csv /nh",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70311,
+                             "TimeUtc":  "2026-11-03T00:42:45.1894307Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x2acc",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70312,
+                             "TimeUtc":  "2026-11-03T00:43:00.4526745Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x3604",
+                             "ProcessId":  "0x2170",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70313,
+                             "TimeUtc":  "2026-11-03T00:43:00.5262133Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x1894",
+                             "ProcessId":  "0x3604",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70314,
+                             "TimeUtc":  "2026-11-03T00:43:11.0082205Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3604",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70315,
+                             "TimeUtc":  "2026-11-03T00:43:11.0112384Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x1894",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70316,
+                             "TimeUtc":  "2026-11-03T00:43:11.1986770Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x4a4",
+                             "ProcessId":  "0x2170",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70317,
+                             "TimeUtc":  "2026-11-03T00:43:11.2046670Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x3a0c",
+                             "ProcessId":  "0x4a4",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70318,
+                             "TimeUtc":  "2026-11-03T00:43:21.6790881Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x4a4",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70319,
+                             "TimeUtc":  "2026-11-03T00:43:21.6833679Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3a0c",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70320,
+                             "TimeUtc":  "2026-11-03T00:43:21.7104531Z",
+                             "NewProcessName":  "C:\\Program Files\\DSP004Runtime\\Python312\\python.exe",
+                             "NewProcessId":  "0x3ee8",
+                             "ProcessId":  "0x2170",
+                             "CommandLine":  "\"C:\\Program Files\\DSP004Runtime\\Python312\\python.exe\" -I -S -B \"C:\\Program Files\\DSP004Runtime\\supervisor_v3\\probe_v3.py\"",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4688,
+                             "RecordId":  70321,
+                             "TimeUtc":  "2026-11-03T00:43:21.7162881Z",
+                             "NewProcessName":  "C:\\Windows\\System32\\conhost.exe",
+                             "NewProcessId":  "0x2a40",
+                             "ProcessId":  "0x3ee8",
+                             "CommandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+                             "LogonType":  null,
+                             "TargetLogonId":  "0x0"
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70322,
+                             "TimeUtc":  "2026-11-03T00:43:32.1495816Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3ee8",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70323,
+                             "TimeUtc":  "2026-11-03T00:43:32.1518213Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x2a40",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70332,
+                             "TimeUtc":  "2026-11-03T00:45:06.8990013Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x2170",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70540,
+                             "TimeUtc":  "2026-11-03T02:21:44.4697807Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x3380",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         },
+                         {
+                             "Id":  4689,
+                             "RecordId":  70541,
+                             "TimeUtc":  "2026-11-03T02:21:44.5147244Z",
+                             "NewProcessName":  null,
+                             "NewProcessId":  null,
+                             "ProcessId":  "0x2b68",
+                             "CommandLine":  null,
+                             "LogonType":  null,
+                             "TargetLogonId":  null
+                         }
+                     ],
+    "RecordNumbers":  {
+                          "CreationRecordId":  65637,
+                          "Count":  4909,
+                          "First":  65637,
+                          "Last":  70545,
+                          "Gaps":  0,
+                          "GapRanges":  [
+
+                                        ],
+                          "FirstIsCreation":  true
+                      },
+    "IntegrityEvents":  {
+                            "Event1102":  {
+                                              "Count":  0,
+                                              "TimesUtc":  [
+
+                                                           ]
+                                          },
+                            "Event4719":  {
+                                              "Count":  2,
+                                              "TimesUtc":  [
+                                                               "2026-11-02T04:14:40.9353250Z",
+                                                               "2026-11-02T04:14:40.9026463Z"
+                                                           ]
+                                          },
+                            "Event4616":  {
+                                              "Count":  1,
+                                              "TimesUtc":  [
+                                                               "2026-11-02T23:28:17.0844802Z"
+                                                           ]
+                                          },
+                            "Event4608":  {
+                                              "Count":  1,
+                                              "TimesUtc":  [
+                                                               "2026-11-02T23:28:45.4878936Z"
+                                                           ]
+                                          },
+                            "Event1100":  {
+                                              "Count":  1,
+                                              "TimesUtc":  [
+                                                               "2026-11-02T23:28:17.0309087Z"
+                                                           ]
+                                          },
+                            "Event1104":  {
+                                              "Count":  0,
+                                              "TimesUtc":  [
+
+                                                           ]
+                                          },
+                            "Event1105":  {
+                                              "Count":  0,
+                                              "TimesUtc":  [
+
+                                                           ]
+                                          },
+                            "Event1108":  {
+                                              "Count":  0,
+                                              "TimesUtc":  [
+
+                                                           ]
+                                          }
+                        },
+    "SecurityLog":  {
+                        "RecordCount":  23511,
+                        "MaximumSizeInBytes":  20971520,
+                        "FileSize":  20975616,
+                        "LogMode":  "Circular",
+                        "OldestEventUtc":  "2026-10-23T12:31:59.6097234Z",
+                        "OldestBeforeWindow":  true
+                    },
+    "IncludeCmdLine":  1,
+    "RunRecordFound":  true,
+    "RunRecord":  {
+                      "Bytes":  382453,
+                      "SHA256":  "CB3CD3DAA710836B302244962DF04420572C03C065D2668BD8C7F3C766889B31",
+                      "SourceLastWriteUtc":  "2026-11-03T00:43:33.5221475Z"
+                  }
+}
