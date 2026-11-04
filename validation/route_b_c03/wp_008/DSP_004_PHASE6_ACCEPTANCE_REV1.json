@@ -1,0 +1,62 @@
+{
+  "RecordKind": "DSP004_PHASE6_ACCEPTANCE_AND_PHASE7_RUN_AUTHORIZATION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-03 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "Increment": "REV49 (PR #53)",
+    "Review": "fresh-context subagent, SAME_MODEL_FAMILY_NOT_EXTERNAL; 1 blocking fixed before REV49"
+  },
+  "Decisions": [
+    {
+      "Id": "P6-ACCEPT-MANIFEST",
+      "Choice": "接受（含9项偏离）",
+      "Effect": "Manifest REV1, support policies REV1, ORDERED source registry REV1 and the formal v2 assets listed below accepted at the exact SHAs; the nine §D1 deviations confirmed",
+      "Accepted": [
+        {
+          "Path": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+          "SHA256": "B73C19C7717AC8F889E122A2D9C375F28FB7B7ACAC2ABD55D5896BB8CC4870DD",
+          "Bytes": 451503
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_MANIFEST_SUPPORT_POLICIES_REV1.md",
+          "SHA256": "9F03F7199E5C50398F1E356F10A6FAD50A78A6AAA3710CF2107C4C5359ADB3BA",
+          "Bytes": 11929
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_ORDERED_SOURCE_REGISTRY_REV1_CANDIDATE.json",
+          "SHA256": "527F98DD8B4E1B15D22235944A9B6982A311F422B40437BD1F263FF5E8DE0E0E",
+          "Bytes": 14689
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/harness_rev4.py",
+          "SHA256": "0B2AC413272D048B75904689C3105B4758A31624356D69FD9CF4B81C622D2394",
+          "Bytes": 25803
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2/bound_list_formal_v2.json",
+          "SHA256": "19A1CE8D54AF938F86BF81DFA54AD2DC9719F12E498F0483AC8B0B08D486BF50",
+          "Bytes": 160152
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_V2_PRE_RUN_BINDING.json",
+          "SHA256": "F4DD7AC8BEAEA686F1675589910AB9560C8402498DF46A87F6B33B31EA0E1F9E",
+          "Bytes": 4306
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/install_formal_v2_result.json",
+          "SHA256": "543541CBF41AC18ED97F2E2F207701B1EDB36106AE4E0AAC46BFDEF19CFA7B6F",
+          "Bytes": 13524
+        }
+      ],
+      "DeviationsConfirmed": 9
+    },
+    {
+      "Id": "P7-RUN",
+      "Choice": "授权正式运行",
+      "Effect": "owner may run go_formal_v2.cmd once; the recorder collects, verifies and records; the result needs separate owner acceptance (phase 8)"
+    }
+  ],
+  "DSP004": "OPEN / HOLD",
+  "Closed": false
+}
