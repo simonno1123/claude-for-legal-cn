@@ -1,0 +1,112 @@
+{
+  "RecordKind": "DSP004_PREFLIGHT_V2_RESULT",
+  "Outcome": "PASS_FORMAL_V2 (preflight run; not a formal result)",
+  "Classification": "PREFLIGHT_OBSERVATION_FOR_MANIFEST",
+  "Authorization": {
+    "OwnerChoice": "授权（推荐）",
+    "Scope": "install v2 and one preflight run to confirm the Windows import closure has no denied module; not a formal result"
+  },
+  "Install": {
+    "InstalledUtc": "2026-11-04T03:32:44.2113392Z",
+    "Files": 30,
+    "AllMatchExpected": true
+  },
+  "Run": {
+    "SupervisorStartedUtc": "2026-11-04T03:33:02.2264285Z",
+    "SupervisorPid": 10052,
+    "HarnessPid": 11016,
+    "ExitCode": 0,
+    "LockedFiles": 743,
+    "TreeFiles": 721,
+    "TreeDirs": 71,
+    "RunChecks": "29/29",
+    "Python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "HarnessTotals": {
+      "conformant_full": 12,
+      "conformant_partial_limited": 5,
+      "fail": 0,
+      "guard_denied": 0,
+      "mapped_not_conformant": 0,
+      "not_mapped": 11,
+      "pass": 28,
+      "variants": 28
+    },
+    "ImportClosureModules": 96,
+    "NativeModules": 24,
+    "DeniedModulesInClosure": []
+  },
+  "AuditCrossCheck": {
+    "V2SupervisorStartsInHistory": 1,
+    "MatchesRecordPid": true,
+    "HarnessExitStatus": "0x0",
+    "RunAccount4688Total": 52,
+    "Logons4624": 6,
+    "FailedLogons4625": 0,
+    "RecordNumbers": "65637..74348 contiguous (8712)",
+    "LogCleared": 0
+  },
+  "Files": [
+    {
+      "Role": "install_formal_v2_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/install_formal_v2_result.json",
+      "SHA256": "543541CBF41AC18ED97F2E2F207701B1EDB36106AE4E0AAC46BFDEF19CFA7B6F",
+      "Bytes": 13524,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "preflight2_pre_collect_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/preflight2_pre_collect_result.json",
+      "SHA256": "D3FB5D38C892C9717537BAF7C51315012254AF4DA5F5BAEF85EB42DE0EDE31E0",
+      "Bytes": 833,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "preflight2_post_collect_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/preflight2_post_collect_result.json",
+      "SHA256": "4CE5CE062A15950FF1B07F4E74459E068A5E5188AED96A2DCCF0A7718244DB6D",
+      "Bytes": 92031,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "preflight2_run_record.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/preflight2_run_record.RAW_REDACTED.json",
+      "SHA256": "52E842271FDA939099BE9CB4B740AD255A3C2D01359081A5CA72329AFE73087F",
+      "Bytes": 392765,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "24880BF60A25A2762A833B6C10ACF04B48F65AA0CB48E632591A7407475ECFD3",
+      "UnredactedBytes": 392791
+    },
+    {
+      "Role": "preflight2_events_history.RAW_REDACTED.xml",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/preflight2_events_history.RAW_REDACTED.xml",
+      "SHA256": "A690C64866E16E82179EE6BD7F882DC1B08DD04A82929CD9599C3DF02C07EB12",
+      "Bytes": 148868,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "CB88EFD0EDA91825BD52FE5C0691037D06BBB6F91A675BF4CF7F262AC5870A0D",
+      "UnredactedBytes": 152371
+    },
+    {
+      "Role": "IMPORT_CLOSURE_EXTRACT",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_preflight_v2/preflight2_import_closure.json",
+      "SHA256": "7F82B0390DEE2BB2B20A8286A0CAC4AA8F2848AF9DDBBD00BA983FE6C4CB1342",
+      "Bytes": 13302,
+      "Accepted": false,
+      "Admitted": false
+    }
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
