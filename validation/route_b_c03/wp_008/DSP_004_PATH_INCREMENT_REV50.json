@@ -1,0 +1,88 @@
+{
+ "RecordKind": "DSP004_PATH_INCREMENT_NON_ACCEPTANCE",
+ "Outcome": "PREPARATION_NOTES_ONLY",
+ "Signed": false,
+ "Accepted": false,
+ "Admission": "NOT_ADMITTED",
+ "ScopeSentence": "改签路径：以完成 DSP-004 正式验收为目标，按正式验收完成路线图 REV1 逐阶段推进；每个阶段的资产接受、来源准入、Manifest、正式运行与关闭仍由所有者逐项决定。",
+ "Owner": "张纯熙",
+ "NarrativePath": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV50.md",
+ "SelfShaNotEmbedded": true,
+ "Formation": {
+  "GitHeadBeforeThisIncrement": "origin/main after PR #54",
+  "Writer": {
+   "Name": "Claude",
+   "Email": "noreply@anthropic.com",
+   "Role": "RECORDER_ONLY",
+   "IsOwner": false,
+   "CoAuthor": false
+  }
+ },
+ "PriorIncrement": {
+  "Markdown": {
+   "Role": "REV49_MD",
+   "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_PATH_INCREMENT_REV49.md",
+   "SHA256": "7DB8013EA3B48C70B15D344B5456C211A67BBD2CDADD0F34D3D8F893FB8FA642",
+   "Bytes": 2118,
+   "Accepted": false,
+   "Admitted": false
+  },
+  "Json": {
+   "Role": "REV49_JSON",
+   "Path": "validation/route_b_c03/wp_008/DSP_004_PATH_INCREMENT_REV49.json",
+   "SHA256": "ACB438B862FC7F7EBF5DD6BC61D431C2D92EE2C87D5B73C743455786A780ABB4",
+   "Bytes": 3821,
+   "Accepted": false,
+   "Admitted": false
+  }
+ },
+ "OwnerDecisionsSincePrior": {
+  "Role": "PHASE6_ACCEPTANCE_AND_P7_RUN",
+  "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE6_ACCEPTANCE_REV1.json",
+  "SHA256": "31F03A7EB585E97F8F19EF87808D8B5933E1401220D5509DB6ED6186849712E5",
+  "Bytes": 2661,
+  "Accepted": false,
+  "Admitted": false
+ },
+ "NewPreparationFacts": [
+  "MANIFEST_REV1_ACCEPTED_BY_OWNER",
+  "FORMAL_RUN_V2_PASSED"
+ ],
+ "CurrentPhase": "1-6 accepted/decided; 7 formal run PASS, result pending owner acceptance; 8 next",
+ "AnythingExecuted": true,
+ "DSP004Closed": false,
+ "RetainedState": {
+  "DSP004": "OPEN / HOLD",
+  "B01": "OPEN",
+  "B02": "MANIFEST_REV1_ACCEPTED",
+  "FA08": "INCOMPLETE"
+ },
+ "Checks": [
+  {
+   "CheckId": "INC50-01.PRIOR_BINDING",
+   "Passed": true,
+   "Detail": "REV49 JSON re-hash equals the SHA cited in the REV49 narrative."
+  }
+ ],
+ "CheckCount": 1,
+ "ChecksPassed": 1,
+ "ReviewerIndependence": "SAME_MODEL_FAMILY_NOT_EXTERNAL",
+ "Record": {
+  "Markdown": {
+   "Role": "FORMAL_RUN_V2_MD",
+   "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_RUN_V2_RESULT.md",
+   "SHA256": "4454D6D2BCDBCC80116AB815C4F12087CDE5156E3DA055DFB1191DFDED864278",
+   "Bytes": 2134,
+   "Accepted": false,
+   "Admitted": false
+  },
+  "Json": {
+   "Role": "FORMAL_RUN_V2_JSON",
+   "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_RUN_V2_RESULT.json",
+   "SHA256": "86488C277577B259F6FE415FEF9525A43F32123808AFD127826ED01443226196",
+   "Bytes": 4307,
+   "Accepted": false,
+   "Admitted": false
+  }
+ }
+}

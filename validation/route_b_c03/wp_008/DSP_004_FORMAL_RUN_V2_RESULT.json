@@ -1,0 +1,135 @@
+{
+  "RecordKind": "DSP004_FORMAL_RUN_V2_RESULT",
+  "Outcome": "PASS_FORMAL_V2",
+  "Classification": "FORMAL_RUN_RESULT_PENDING_OWNER_ACCEPTANCE",
+  "Authorization": {
+    "Decision": "P7-RUN",
+    "Record": "validation/route_b_c03/wp_008/DSP_004_PHASE6_ACCEPTANCE_REV1.json",
+    "OwnerChoice": "授权正式运行"
+  },
+  "ManifestBasis": {
+    "Role": "MANIFEST_REV1_ACCEPTED",
+    "Path": "validation/route_b_c03/wp_008/PYTHON_RUNTIME_DEPENDENCY_MANIFEST.json",
+    "SHA256": "B73C19C7717AC8F889E122A2D9C375F28FB7B7ACAC2ABD55D5896BB8CC4870DD",
+    "Bytes": 451503,
+    "Accepted": true,
+    "Admitted": false
+  },
+  "Run": {
+    "SupervisorStartedUtc": "2026-11-04T07:56:14.7664538Z",
+    "SupervisorPid": 6328,
+    "HarnessPid": 1300,
+    "ExitCode": 0,
+    "ExitSeenUtc": "2026-11-04T07:56:32.4031510Z",
+    "LockedFiles": 743,
+    "HashMismatches": 0,
+    "SignatureProblems": 0,
+    "TreeFiles": 721,
+    "TreeDirs": 71,
+    "RunChecks": "29/29",
+    "FailedChecks": [],
+    "Python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "InputSha256": "685BBCBF13BF96746E6DE4201C1FCE72B667CD6A07D0CE0902D9EF9A6C4235C1",
+    "Flags": {
+      "isolated": 1,
+      "no_site": 1,
+      "dont_write_bytecode": 1
+    },
+    "HarnessTotals": {
+      "variants": 28,
+      "pass": 28,
+      "fail": 0,
+      "conformant_full": 12,
+      "conformant_partial_limited": 5,
+      "not_mapped": 11,
+      "mapped_not_conformant": 0,
+      "guard_denied": 0
+    },
+    "SixSideConsistent": true
+  },
+  "ManifestConformance": {
+    "ImportClosureModules": 96,
+    "ModulesEqualManifest": true,
+    "NativeModules": 24,
+    "ClosureFilesOutsideManifestEntries": 0,
+    "DeniedModulesInClosure": [],
+    "IdenticalToPreflightV2": {
+      "Modules": true,
+      "NativeModules": true,
+      "SysPath": true
+    },
+    "EnvironNames": [
+      "PATH",
+      "SYSTEMDRIVE",
+      "SYSTEMROOT",
+      "WINDIR"
+    ]
+  },
+  "AuditCrossCheck": {
+    "SupervisorStart4688": {
+      "Record": 75190,
+      "Pid": 6328,
+      "Label": "S-1-16-8192 (medium)",
+      "ElevationType": "%%1936 (limited/default)"
+    },
+    "HarnessStart4688": {
+      "Record": 75194,
+      "Pid": 1300
+    },
+    "HarnessExit4689": "0x0",
+    "SupervisorExit4689": "0x0",
+    "RecordNumbers": "65637..75209 contiguous (9573), first is the account-creation record",
+    "FailedLogons4625": 0,
+    "LogCleared1102": 0,
+    "RunAccount4688Total": 58,
+    "InstalledFiles": "30/30 match"
+  },
+  "Files": [
+    {
+      "Role": "formal_v2_pre_collect_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_pre_collect_result.json",
+      "SHA256": "23537E4A6818EB753A34013645A71C1D82B0CDDE42125FA9071958565585224C",
+      "Bytes": 833,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "formal_v2_post_collect_result.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_post_collect_result.json",
+      "SHA256": "4C640FB23B74DE1D22CB21A1EE9DE67E75795D0665BEE6C567AAF16FA362D518",
+      "Bytes": 100070,
+      "Accepted": false,
+      "Admitted": false
+    },
+    {
+      "Role": "formal_v2_run_record.RAW_REDACTED.json",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_run_record.RAW_REDACTED.json",
+      "SHA256": "72F5F628F90E1CD0F8A2CD07BDE33A341E377E4C1E304FF677DCC49307AC330A",
+      "Bytes": 392761,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "BDF9F48E0B7DC4F76DE9697E0C9A6E55E36F7F2B3F08BA2923926FD37354B857",
+      "UnredactedBytes": 392787
+    },
+    {
+      "Role": "formal_v2_events_history.RAW_REDACTED.xml",
+      "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_events_history.RAW_REDACTED.xml",
+      "SHA256": "A6F68DF4A0195538A7E7F6E33FE062D401B29CBC96F37D577E0DEB3E0987F60D",
+      "Bytes": 164804,
+      "Accepted": false,
+      "Admitted": false,
+      "UnredactedSHA256": "CB38181A65861B4F080FA433F89F561149EF0C1970295A0EC95216884F4A60EE",
+      "UnredactedBytes": 168661
+    }
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  },
+  "RetainedState": {
+    "DSP004": "OPEN / HOLD"
+  }
+}
