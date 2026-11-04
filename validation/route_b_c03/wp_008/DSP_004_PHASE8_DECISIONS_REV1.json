@@ -1,0 +1,56 @@
+{
+  "RecordKind": "DSP004_PHASE7_RESULT_ACCEPTANCE_AND_PHASE8_DECISIONS",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-04 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "Increment": "REV50 (PR #55)"
+  },
+  "Decisions": [
+    {
+      "Id": "P8-ACCEPT-RESULT",
+      "Choice": "接受（推荐）",
+      "Effect": "formal run v2 result PASS_FORMAL_V2 accepted at the exact SHAs below",
+      "Accepted": [
+        {
+          "Path": "validation/route_b_c03/wp_008/DSP_004_FORMAL_RUN_V2_RESULT.json",
+          "SHA256": "86488C277577B259F6FE415FEF9525A43F32123808AFD127826ED01443226196",
+          "Bytes": 4307
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_FORMAL_RUN_V2_RESULT.md",
+          "SHA256": "4454D6D2BCDBCC80116AB815C4F12087CDE5156E3DA055DFB1191DFDED864278",
+          "Bytes": 2134
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_pre_collect_result.json",
+          "SHA256": "23537E4A6818EB753A34013645A71C1D82B0CDDE42125FA9071958565585224C",
+          "Bytes": 833
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_post_collect_result.json",
+          "SHA256": "4C640FB23B74DE1D22CB21A1EE9DE67E75795D0665BEE6C567AAF16FA362D518",
+          "Bytes": 100070
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_run_record.RAW_REDACTED.json",
+          "SHA256": "72F5F628F90E1CD0F8A2CD07BDE33A341E377E4C1E304FF677DCC49307AC330A",
+          "Bytes": 392761
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/dsp004_phase7_formal_v2_run/formal_v2_events_history.RAW_REDACTED.xml",
+          "SHA256": "A6F68DF4A0195538A7E7F6E33FE062D401B29CBC96F37D577E0DEB3E0987F60D",
+          "Bytes": 164804
+        }
+      ]
+    },
+    {
+      "Id": "P8-EXTREVIEW",
+      "Choice": "先做外部审查再关闭（推荐）",
+      "Effect": "before closure, at least one review from outside the recorder's model family (roadmap REV1 boundary); recorder prepares a review brief, owner hands it to the outside reviewer; supersedes P1-EXTREVIEW for closure"
+    }
+  ],
+  "Closure": "NOT_YET; awaits outside-family review and a separate owner closure decision",
+  "DSP004": "OPEN / HOLD",
+  "Closed": false
+}
