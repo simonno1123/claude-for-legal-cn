@@ -1,0 +1,112 @@
+{
+  "RecordKind": "DSP004_CLOSURE",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-04 (approx)",
+  "Method": "owner chose '在这里选择追认并关闭' in a recorder question (option text drafted by the recorder); not a personal signature or owner commit",
+  "Decision": {
+    "Id": "P8-CLOSE",
+    "Ratifies": "all owner decisions P1 to P8",
+    "RatifiedRecords": [
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE1_ADMISSION_DECISIONS_REV1.json",
+        "SHA256": "0989FCEFD6A59FD6C2376BDE54882A142C111631C7A18086DEA311B81D154664",
+        "Bytes": 2712
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PHASES_2_TO_5_OWNER_DECISIONS_REV1.json",
+        "SHA256": "8FAB5BC81A4E5EEFE206C1E99D1C31D701F2892A788D5B56060B458745813FA9",
+        "Bytes": 3489
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE4_ACCEPTANCE_REV1.json",
+        "SHA256": "983BBB1813E92A7BE831944ACBB00F42404F5CA3397516EBCFD7AF366A696F64",
+        "Bytes": 5428
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE6_7_OWNER_DECISIONS_REV1.json",
+        "SHA256": "D004C16A0644556449A3FBE662D62A896362D78933AD4444B0B80EE047FFA0B6",
+        "Bytes": 1277
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE6_ACCEPTANCE_REV1.json",
+        "SHA256": "31F03A7EB585E97F8F19EF87808D8B5933E1401220D5509DB6ED6186849712E5",
+        "Bytes": 2661
+      },
+      {
+        "Path": "validation/route_b_c03/wp_008/DSP_004_PHASE8_DECISIONS_REV1.json",
+        "SHA256": "A6B0FB548A2513F0B52C0789F1DF2225ECBC1881DC2BC23987282018BF3AE01F",
+        "Bytes": 2434
+      }
+    ],
+    "EffectiveCondition": "after the 4616 time-change check",
+    "ConditionMet": true
+  },
+  "ExternalReview": {
+    "Reviewer": "Grok Bot (outside the Claude model family)",
+    "Verdict": "有条件支持关闭",
+    "Blocking": 0,
+    "Record": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_EXTERNAL_REVIEW_GROK_REV1.md",
+      "SHA256": "7A23B9130A9CF0EF8404D23D84B17DBCD01F9789D020059882BF0FFAF0A63F4C",
+      "Bytes": 10140
+    },
+    "Disposition": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_DSP_004_EXTERNAL_REVIEW_DISPOSITION_REV1.md",
+      "SHA256": "07CF716E9230BF8321A72E531EDBB0A347B37CA18C6689DAD2C232EFE6646A08",
+      "Bytes": 2690
+    },
+    "FulfilsDecision": "P8-EXTREVIEW (supersedes P1-EXTREVIEW and the §V1 wording)"
+  },
+  "ConditionsFromReview": {
+    "C1_RebootAndTimeChange": {
+      "Reboot": "planned phase-1 v4 reboot at 2026-11-02T23:28Z, before phase-1 admission (~2026-11-03T02:45Z); disclosed in OD04A_V4_RESULT",
+      "Event4616": {
+        "Record": 68709,
+        "By": "LOCAL SERVICE / svchost.exe",
+        "PreviousTime": "2026-11-02T23:28:16.9441139Z",
+        "NewTime": "2026-11-02T23:28:16.9447463Z",
+        "ShiftMs": 0.6
+      },
+      "SamePatternOnEarlierReboots": [
+        "2026-10-23 (~1.6 ms)",
+        "2026-10-30 (~1.2 ms)"
+      ],
+      "Evidence": {
+        "Path": "validation/route_b_c03/wp_008/dsp004_phase8/time_change_events.RAW_REDACTED.xml",
+        "SHA256": "318401C763A822975A2EBC7AC7FDD84D2BF245D7BCFABECFC804A696BB0A7463",
+        "Bytes": 7880
+      },
+      "UnredactedSHA256": "44B4F7CD809E33869E274E7112A9552767BF99A26D48A76E676AB9F0FCD964D3",
+      "UnredactedBytes": 7902,
+      "Event4719": "2 events 2026-11-02T04:14:40Z enabling process creation/termination success auditing during phase-1 setup (expected)",
+      "Conclusion": "sub-millisecond routine adjustment at shutdown; no effect on admission or KnownDLLs state"
+    },
+    "C2_Ratification": "done by this decision (method stated above)",
+    "C3_KnownLimitations": "N-3 and N-4 added below"
+  },
+  "KnownLimitations": [
+    "single machine; one standard account; host administrators trusted",
+    "audit hook is not a tamper-proof sandbox; KnownDLLs mapped from boot-time sections (P1-RESIDUALS)",
+    "UNUSED_ASSET non-read is policy plus import-closure observation; runtime-side non-import reads not observed (N-3)",
+    "six-side Consistent compares harness constants with themselves; not evidence of trust separation (N-4)",
+    "HX checks are child self-reports; native-module list is a single snapshot",
+    "run record writable by host administrators between write and collection",
+    "redaction fidelity verifiable only against recorder-supplied unredacted SHAs",
+    "LIMITED coverage scenarios: 3 PARTIAL_LIMITED, 6 OBSERVE_ONLY_LIMITED (P5-LIMITED)",
+    "decision options were drafted by the recorder; owner ratified by choice, not signature",
+    "the nine Manifest deviations in §D1 of the support policies"
+  ],
+  "Result": {
+    "FormalRun": "PASS_FORMAL_V2 (accepted, P8-ACCEPT-RESULT)",
+    "Variants": "28/28 pass"
+  },
+  "DSP004": "CLOSED",
+  "Closed": true,
+  "Writer": {
+    "Name": "Claude",
+    "Email": "noreply@anthropic.com",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false,
+    "CoAuthor": false
+  }
+}
