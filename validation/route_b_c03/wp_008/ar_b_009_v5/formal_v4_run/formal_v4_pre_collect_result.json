@@ -1,0 +1,18 @@
+{
+    "Kind":  "C03_FORMAL_V4_COLLECT_RESULT",
+    "Stage":  "pre",
+    "Invocation":  "20261105T032815Z",
+    "CollectedUtc":  "2026-11-05T03:28:15.3174147Z",
+    "CollectorSha256":  "A71C7D813A5A4225D098F16223E4A4B26A696E39960F013A71C4CFADD7BCC692",
+    "LauncherFilesNow":  [
+                             {
+                                 "Name":  "go_formal_v4.cmd",
+                                 "SHA256":  "484CCCE5A0ACA1BB08D22E39FA1B1A89F65F29E653BDB4790E4998F32527DD00"
+                             },
+                             {
+                                 "Name":  "collect_formal_v4.ps1",
+                                 "SHA256":  "A71C7D813A5A4225D098F16223E4A4B26A696E39960F013A71C4CFADD7BCC692"
+                             }
+                         ],
+    "RunRecordFound":  false
+}
