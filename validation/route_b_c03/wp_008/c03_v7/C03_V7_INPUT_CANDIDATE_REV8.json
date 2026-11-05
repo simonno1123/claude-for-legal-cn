@@ -147,11 +147,11 @@
   "scripts/phase2_runtime/route_b_c03/contracts.py": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
   "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
   "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
-  "scripts/phase2_runtime/route_b_c03/isolation.py": "3B5769A25500D3C21535F542C387E6CE362B4C40FB6AF4D06872BD730F939E2B",
-  "scripts/phase2_runtime/route_b_c03/failures.py": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+  "scripts/phase2_runtime/route_b_c03/isolation.py": "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8",
+  "scripts/phase2_runtime/route_b_c03/failures.py": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
   "scripts/phase2_runtime/route_b_c03/audit.py": "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
   "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
-  "scripts/phase2_runtime/route_b_c03/capability.py": "CA93D99B407BEC4F4F0796EB70C2B2A61E878FE545EB1120F9C06BF3E02AD81F"
+  "scripts/phase2_runtime/route_b_c03/capability.py": "E4EA6A90D6E8B18E7242F3C7D782F554AEF94B9C55AA731B83FEF0CB5E849DB6"
  },
  "fixture_identities": {
   "validation/route_b_c03/wp_008/fixtures/C03-TA-V-001.json": "C8CEFEDC496D5D0D33E0F21D61B5E3C3354579A8D0E1C74F70640305C65FC99A",
@@ -206,7 +206,7 @@
   },
   "ADP-ASSERT-REFERENCE-ONLY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
-   "subject_sha256": "3B5769A25500D3C21535F542C387E6CE362B4C40FB6AF4D06872BD730F939E2B",
+   "subject_sha256": "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8",
    "callable": "assert_reference_only",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -221,7 +221,7 @@
   },
   "ADP-EVALUATE-RETRY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_retry",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -246,7 +246,7 @@
   },
   "ADP-PROTECTED-STATE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "protected_state",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "keyword_only": [
@@ -257,7 +257,7 @@
   },
   "ADP-EVALUATE-RELEASE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_release",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -297,7 +297,7 @@
   },
   "ADP-ASSERT-WRITE-SET": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
-   "subject_sha256": "3B5769A25500D3C21535F542C387E6CE362B4C40FB6AF4D06872BD730F939E2B",
+   "subject_sha256": "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8",
    "callable": "assert_permitted_write_set",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -318,7 +318,7 @@
   },
   "ADP-CAPABILITY-EVALUATE-GATE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/capability.py",
-   "subject_sha256": "CA93D99B407BEC4F4F0796EB70C2B2A61E878FE545EB1120F9C06BF3E02AD81F",
+   "subject_sha256": "E4EA6A90D6E8B18E7242F3C7D782F554AEF94B9C55AA731B83FEF0CB5E849DB6",
    "callable": "C03Capability.evaluate_gate",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "instance": "C03Capability() with no configuration",
@@ -335,7 +335,7 @@
   },
   "ADP-CONTROL-PRECEDENCE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_control_precedence",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [],
@@ -348,7 +348,7 @@
   },
   "ADP-EVALUATE-IDEMPOTENCY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_idempotency",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -364,7 +364,7 @@
   },
   "ADP-EVALUATE-TIMEOUT": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_timeout",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -379,7 +379,7 @@
   },
   "ADP-EVALUATE-ROLLBACK": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_rollback",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -394,7 +394,7 @@
   },
   "ADP-EVALUATE-SUPERSESSION": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_supersession",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -405,7 +405,7 @@
   },
   "ADP-VERIFY-AUDIT-CHAIN": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "verify_audit_chain",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -417,7 +417,7 @@
   },
   "ADP-EVALUATE-DEPENDENCY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_dependency",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -430,7 +430,7 @@
   },
   "ADP-EVALUATE-CLASSIFICATION": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
-   "subject_sha256": "3B5769A25500D3C21535F542C387E6CE362B4C40FB6AF4D06872BD730F939E2B",
+   "subject_sha256": "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8",
    "callable": "evaluate_classification_request",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -442,7 +442,7 @@
   },
   "ADP-EVALUATE-INTEGRITY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7",
+   "subject_sha256": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
    "callable": "evaluate_integrity",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -455,7 +455,7 @@
   },
   "ADP-CAPABILITY-EVALUATE-TRANSITION": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/capability.py",
-   "subject_sha256": "CA93D99B407BEC4F4F0796EB70C2B2A61E878FE545EB1120F9C06BF3E02AD81F",
+   "subject_sha256": "E4EA6A90D6E8B18E7242F3C7D782F554AEF94B9C55AA731B83FEF0CB5E849DB6",
    "callable": "C03Capability.evaluate_transition",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED; METHOD ON DEFAULT C03Capability()",
    "argument_order": [
@@ -2665,9 +2665,9 @@
     "type": "ControlDetermination",
     "state": {
      "enum_class": "ControlState",
-     "member": "PROTECTED_BLOCKED"
+     "member": "QUARANTINED"
     },
-    "reason_code": "PROTECTED_BLOCKED — INTEGRITY OBSERVATION UNAVAILABLE"
+    "reason_code": "QUARANTINED — INTEGRITY UNCERTAIN: DEPENDENCY"
    },
    "fixture_mapping": null,
    "coverage_class": "SUPPLEMENTARY_RAW_CHECK",

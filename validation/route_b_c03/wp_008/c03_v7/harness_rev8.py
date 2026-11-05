@@ -88,7 +88,7 @@ import sys
 import time
 
 INPUT_REL = "validation/route_b_c03/wp_008/c03_v7/C03_V7_INPUT_CANDIDATE_REV8.json"
-INPUT_SHA256 = "33A84CDBCBBBC51A5A83745997F80FCBE89FBB51F54D14BCFE322A6E042DC4A4"
+INPUT_SHA256 = "572D9C7DA572EE12FDAD7E0B70205744DFFE67AA90BDC6AA96F3786B92EB0BED"
 # module name -> (repository path, SHA-256, is package)
 SUBJECT = {
     "phase2_runtime": ("scripts/phase2_runtime/__init__.py", "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844", True),
@@ -96,11 +96,11 @@ SUBJECT = {
     "phase2_runtime.route_b_c03.contracts": ("scripts/phase2_runtime/route_b_c03/contracts.py", "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99", False),
     "phase2_runtime.route_b_c03.identity_gate": ("scripts/phase2_runtime/route_b_c03/identity_gate.py", "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31", False),
     "phase2_runtime.route_b_c03.mapping": ("scripts/phase2_runtime/route_b_c03/mapping.py", "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66", False),
-    "phase2_runtime.route_b_c03.isolation": ("scripts/phase2_runtime/route_b_c03/isolation.py", "3B5769A25500D3C21535F542C387E6CE362B4C40FB6AF4D06872BD730F939E2B", False),
-    "phase2_runtime.route_b_c03.failures": ("scripts/phase2_runtime/route_b_c03/failures.py", "4083702B31623A38B4D2CB36F3038B85F66A3725E404205AED8AA2E226F921A7", False),
+    "phase2_runtime.route_b_c03.isolation": ("scripts/phase2_runtime/route_b_c03/isolation.py", "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8", False),
+    "phase2_runtime.route_b_c03.failures": ("scripts/phase2_runtime/route_b_c03/failures.py", "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE", False),
     "phase2_runtime.route_b_c03.audit": ("scripts/phase2_runtime/route_b_c03/audit.py", "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA", False),
     "phase2_runtime.route_b_c03.provider_port": ("scripts/phase2_runtime/route_b_c03/provider_port.py", "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381", False),
-    "phase2_runtime.route_b_c03.capability": ("scripts/phase2_runtime/route_b_c03/capability.py", "CA93D99B407BEC4F4F0796EB70C2B2A61E878FE545EB1120F9C06BF3E02AD81F", False),
+    "phase2_runtime.route_b_c03.capability": ("scripts/phase2_runtime/route_b_c03/capability.py", "E4EA6A90D6E8B18E7242F3C7D782F554AEF94B9C55AA731B83FEF0CB5E849DB6", False),
 }
 PKG = "phase2_runtime.route_b_c03"
 ALLOWED_IMPORTS = {"__future__", "dataclasses", "enum", "re", "typing", "collections.abc", "hashlib", "json"}

@@ -442,11 +442,13 @@ def evaluate_integrity(
 ) -> ControlDetermination:
     """Exact SHA-256 comparison of a caller-supplied observation; a mismatch quarantines (design 15, V-012).
 
-    Case is ignored for the hex digits only. A missing or malformed value or an unknown subject kind blocks."""
+    Case is ignored for the hex digits only. An unknown subject kind or malformed expected value blocks (the
+    reference itself is unbound); a missing or malformed observation leaves the subject integrity-uncertain and
+    quarantines it (design 12)."""
     if type(subject_kind) is not str or subject_kind not in INTEGRITY_SUBJECTS or not _is_sha(expected_sha256):
         return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — INTEGRITY REFERENCE UNBOUND")
     if not _is_sha(observed_sha256):
-        return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — INTEGRITY OBSERVATION UNAVAILABLE")
+        return _cd(ControlState.QUARANTINED, "QUARANTINED — INTEGRITY UNCERTAIN: " + subject_kind)
     if observed_sha256.upper() != expected_sha256.upper():
         return _cd(ControlState.QUARANTINED, "QUARANTINED — INTEGRITY FAILURE: " + subject_kind)
     return _cd(ControlState.PROTECTED_BLOCKED, "INTEGRITY MATCHED — EXECUTION NOT AUTHORIZED")

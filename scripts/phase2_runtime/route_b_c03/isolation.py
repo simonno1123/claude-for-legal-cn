@@ -96,7 +96,11 @@ def _check_reference_mapping(record: Mapping[str, object], depth: int) -> None:
 
 
 def assert_reference_only(record: Mapping[str, object]) -> None:
-    """Field names at every nesting level and str values are screened; raw bytes are refused (V-005, V7)."""
+    """Field names at every nesting level and str values are screened; raw bytes are refused (V-005, V7).
+
+    The record itself must be a Mapping; it and up to MAX_REFERENCE_DEPTH nested containers are screened."""
+    if not isinstance(record, Mapping):
+        raise IsolationViolation("QUARANTINED — REFERENCE RECORD MUST BE A MAPPING")
     _check_reference_mapping(record, 0)
 
 

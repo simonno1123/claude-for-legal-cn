@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from .contracts import (
     CapabilityConfigurationReference,
     CapabilityState,
+    ControlState,
     ExpectedIdentityReference,
     GateDecision,
     GovernedInputEnvelopeReference,
@@ -19,6 +20,7 @@ from .identity_gate import evaluate_identity_gate
 from .provider_port import NullProviderPort, ProviderPortResult
 
 NO_ACTIVE_CONTROL = "PROTECTED_BLOCKED — NO ACTIVE CONTROL; EXECUTION NOT AUTHORIZED"
+GATE_STATES = (InvocationState.BLOCKED, InvocationState.REJECTED, InvocationState.ELIGIBLE_FOR_MAPPING)
 
 
 @dataclass(frozen=True, slots=True)
@@ -34,16 +36,28 @@ class TransitionDetermination:
     def __post_init__(self) -> None:
         if self.execution_authorized is not False:
             raise ValueError("a transition determination never authorizes execution")
-        if type(self.control) is not ControlDetermination or type(self.state) is not InvocationState:
+        if (
+            type(self.control) is not ControlDetermination
+            or type(self.control.state) is not ControlState
+            or type(self.control.reason_code) is not str
+            or type(self.state) is not InvocationState
+            or type(self.reason_code) is not str
+        ):
             raise ValueError("control and state must be exact contract types")
+        no_control = (
+            self.control.state is ControlState.PROTECTED_BLOCKED
+            and str.__eq__(self.control.reason_code, NO_ACTIVE_CONTROL) is True
+        )
         if self.gate is None:
-            if self.state is not InvocationState.BLOCKED or self.reason_code != self.control.reason_code:
-                raise ValueError("without a gate decision the transition is BLOCKED by the control")
+            if no_control or self.state is not InvocationState.BLOCKED or self.reason_code != self.control.reason_code:
+                raise ValueError("without a gate decision the transition is BLOCKED by an active or unknown control")
         elif (
-            type(self.gate) is not GateDecision
-            or self.control.reason_code != NO_ACTIVE_CONTROL
+            not no_control
+            or type(self.gate) is not GateDecision
+            or self.gate.state not in GATE_STATES
             or self.state is not self.gate.state
             or self.reason_code != self.gate.reason_code
+            or (self.gate.state is not InvocationState.ELIGIBLE_FOR_MAPPING and self.gate.permitted_write_namespaces != ())
         ):
             raise ValueError("a gate decision is reported only when no control is active, and unchanged")
 
