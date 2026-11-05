@@ -1,0 +1,108 @@
+{
+  "RecordKind": "C03_AR_B_009_CLOSURE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature or owner commit",
+  "Decisions": [
+    {
+      "Id": "V5-ACCEPT-IMPLEMENTATION",
+      "Choice": "验收 V5 并关闭 AR-B-009（推荐）",
+      "AcceptedImplementation": {
+        "scripts/phase2_runtime/__init__.py": "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
+        "scripts/phase2_runtime/route_b_c03/__init__.py": "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
+        "scripts/phase2_runtime/route_b_c03/contracts.py": "D0D5DA397EF4DFA0DB47D924A90CB9EBD9017F737FCB7B915AE9633D7C6F310A",
+        "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
+        "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
+        "scripts/phase2_runtime/route_b_c03/isolation.py": "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B",
+        "scripts/phase2_runtime/route_b_c03/failures.py": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
+        "scripts/phase2_runtime/route_b_c03/audit.py": "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
+        "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+        "scripts/phase2_runtime/route_b_c03/capability.py": "8D0B3CD664A893609EDCEFABADCD48EAA77DEF6B519872DA27E9E15F68EA7686"
+      },
+      "AcceptedRecords": [
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/C03_V5_FORMAL_RUN_V4_RESULT.json",
+          "SHA256": "C75E5E4BFB24C9BECC970A5EB2643E7441D37881E5F2E50904D9452589FB3774",
+          "Bytes": 4087
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_009_AR_B_009_V5_FORMAL_RUN_V4_RESULT.md",
+          "SHA256": "9D5E15F9D280B4E9EC2F5655E2F062698D6982D889DCC1013065CCCAFC105219",
+          "Bytes": 2444
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_007_WP_009_MATERIALIZATION_RECORD_REVISION_V5_CANDIDATE.md",
+          "SHA256": "915A7644A2FA0E11D8C1A69E84FA171C530BE55090349D412D0C710005129A6F",
+          "Bytes": 6232
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/C03_V5_INPUT_CANDIDATE_REV6.json",
+          "SHA256": "418AD1EE9144C28E93DF571FD829C660E6B8EDA4DD06B3B16CDEEC1AAF1BE9C0",
+          "Bytes": 203027
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/harness_rev6.py",
+          "SHA256": "15BEDB445B44A472CF0058D07491DCF7E389B235B4FE46B8EC2F92CE9E9C8C66",
+          "Bytes": 28099
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/install_formal_v4_result.json",
+          "SHA256": "F4A2D11C45A554002BDD58F281EE52555B90DC31A4E636019BB134A1CCA61D03",
+          "Bytes": 13524
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_pre_collect_result.json",
+          "SHA256": "089C7A5F0B322B2B4AEBB257D668AC75BF23B3407A430067C6303CAB2460F794",
+          "Bytes": 830
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_post_collect_result.json",
+          "SHA256": "828FCC880B3C0B878CEB561E31168C2B07D71D3FBE4351A0DCA9EBE967DBE620",
+          "Bytes": 119376
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_run_record.RAW_REDACTED.json",
+          "SHA256": "1A5C202F9378DCA0B131DA4B48D1CD56CE6D5AE20F9F5D93B42622516E9152C1",
+          "Bytes": 443879
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_events_history.RAW_REDACTED.xml",
+          "SHA256": "7375613597EE6FC4D7E0D7630223771BA0BA8E0373ED83E593D5CB2F3E9302A6",
+          "Bytes": 202048
+        }
+      ],
+      "Effect": "formal run v4 result and the V5 implementation accepted at the exact SHAs, with the limitations stated in the V5 record"
+    },
+    {
+      "Id": "AR-B-009-CLOSE",
+      "Basis": {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_009_AR_B_009_CLOSURE_EVIDENCE_PACKET_REV1.md",
+        "SHA256": "693DBA1499FD4571969D81E00D5A0C24E6657545D8DD58D5CF6EC4C946F75F64",
+        "Bytes": 4916
+      },
+      "Effect": "AR-B-009 (recovery and audit controls) CLOSED under C03-CP-WP-009, scope: deterministic control logic; withdrawal conditions of plan §7.9 stay in force (control version change, audit integrity failure, kill/revocation active)"
+    },
+    {
+      "Id": "AR-B-008-KEEP-OPEN",
+      "Choice": "保持开放，先补 V-015（推荐）",
+      "Effect": "AR-B-008 stays OPEN / BLOCKED; next work: classification-boundary design and implementation for V-015 (RDM-DSP-012)"
+    }
+  ],
+  "ReviewIndependence": "all reviews by fresh-context subagents of the recorder's model family; no outside review for AR-B-009",
+  "KnownLimitationsRetained": [
+    "decision logic only: no timers, signal propagation, persistence or real dependencies observed",
+    "evaluators not wired into capability.py",
+    "decision inputs caller-supplied",
+    "audit chain unsigned; truncated chain with its own head passes; supersedes used as chain link",
+    "evaluators emit no audit candidates or transition bindings",
+    "V-015 out of scope"
+  ],
+  "ResultingState": {
+    "AR_B_007": "CLOSED",
+    "AR_B_009": "CLOSED",
+    "AR_B_008": "OPEN / BLOCKED",
+    "Tier A blockers closed": "2 / 3",
+    "C03": "NOT READY",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  }
+}
