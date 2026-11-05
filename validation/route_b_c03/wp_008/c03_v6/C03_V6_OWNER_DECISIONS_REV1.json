@@ -1,0 +1,52 @@
+{
+  "RecordKind": "C03_V6_MANIFEST_ACCEPTANCE_AND_FORMAL_V5_RUN_AUTHORIZATION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "PR": 69,
+    "Review": ".codex-coordination/reviews/TASK_PHASE2_ROUTE_B_C03_V6_REVISION_REVIEW_REV1.md (PASS WITH NOTES; SAME_MODEL_FAMILY_NOT_EXTERNAL)"
+  },
+  "Decisions": [
+    {
+      "Id": "V6-ACCEPT-MANIFEST",
+      "Choice": "全部接受（推荐）",
+      "Accepted": [
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV4.json",
+          "SHA256": "B9C14114A64A298D42582E8B0D77CABA1B262C2FAFE1618361988CDAE216A6AA",
+          "Bytes": 497634
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_C03_V6_MANIFEST_SUPPORT_POLICIES_REV4.md",
+          "SHA256": "B20CE6568F656C895A3FC1F4C8DC47D58A66D48CBE978AC4150CC59B13841B26",
+          "Bytes": 13549
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_MATERIALIZATION_RECORD_REVISION_V6_CANDIDATE.md",
+          "SHA256": "9D13408996998027C6173033AA3DF01B036C5CBDBC31E2242CA3B63C1EE79CC5",
+          "Bytes": 8595
+        }
+      ],
+      "DeviationsConfirmed": 11,
+      "DesignValuesConfirmed": [
+        "two-level state: request REJECTED, candidate HUMAN_REVIEW_PENDING, downstream blocked",
+        "only exact CandidateClass members are permitted classes",
+        "only the 4 exact design-16.3 dispositions; approval still leaves downstream blocked"
+      ],
+      "ClassificationBoundaryDesignSignedOff": "the three values together with WP-007 design section 16 (RDM-DSP-012 option)",
+      "V015CoverageClass": "FULL, on the stated condition that a standalone evaluator plus the CandidateRecord constructor check counts as full coverage"
+    },
+    {
+      "Id": "V6-RUN-FORMAL-V5",
+      "Choice": "授权正式运行 v5（推荐）",
+      "Effect": "owner runs go_formal_v5.cmd; recorder collects, verifies and records"
+    }
+  ],
+  "NotDecided": [
+    "V6 implementation acceptance",
+    "AR-B-008 closure"
+  ],
+  "AR_B_008": "OPEN / BLOCKED",
+  "C03": "NOT READY"
+}
