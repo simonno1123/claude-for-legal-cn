@@ -8,6 +8,11 @@ import re
 from typing import Any
 
 _SHA256 = re.compile(r"^[0-9A-Fa-f]{64}$")
+_UTC_TIMESTAMP = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$")
+
+# Artifact reference values that the gate accepts as ready; anything else blocks.
+ARTIFACT_READY = "READY"
+ARTIFACT_VALIDATED = "VALIDATED"
 
 
 def require_text(value: str, field: str) -> None:
@@ -20,6 +25,21 @@ def require_sha256(value: str, field: str, *, allow_none: bool = False) -> None:
         return
     if not isinstance(value, str) or _SHA256.fullmatch(value) is None:
         raise ValueError(f"{field} must be a complete SHA-256 value")
+
+
+def is_utc_timestamp(value: object) -> bool:
+    """True only for the fixed-width form YYYY-MM-DDTHH:MM:SSZ (compares correctly as text)."""
+    return type(value) is str and _UTC_TIMESTAMP.fullmatch(value) is not None
+
+
+def require_utc_timestamp(value: str, field: str) -> None:
+    if not is_utc_timestamp(value):
+        raise ValueError(f"{field} must be a UTC timestamp YYYY-MM-DDTHH:MM:SSZ")
+
+
+def require_enum(value: object, enum_class: type, field: str) -> None:
+    if type(value) is not enum_class:
+        raise ValueError(f"{field} must be a {enum_class.__name__} member")
 
 
 class CapabilityState(str, Enum):
@@ -115,6 +135,7 @@ class CapabilityConfigurationReference:
     validity: str = "NON_ACTIVE"
 
     def __post_init__(self) -> None:
+        require_enum(self.state, CapabilityState, "state")
         require_text(self.capability_id, "capability_id")
         require_text(self.capability_version, "capability_version")
         require_sha256(self.implementation_sha256, "implementation_sha256")
@@ -186,6 +207,13 @@ class TierBAuthorityPacketReference:
             require_text(getattr(self, field), field)
         require_sha256(self.packet_sha256, "packet_sha256")
         require_sha256(self.input_set_sha256, "input_set_sha256")
+        require_enum(self.output_class, CandidateClass, "output_class")
+        require_enum(self.revocation_state, RevocationState, "revocation_state")
+        require_enum(self.state, PacketState, "state")
+        require_utc_timestamp(self.valid_from, "valid_from")
+        require_utc_timestamp(self.valid_until, "valid_until")
+        if not self.valid_from < self.valid_until:
+            raise ValueError("valid_from must be earlier than valid_until")
 
 
 @dataclass(frozen=True, slots=True)
@@ -206,6 +234,9 @@ class ArtifactReference:
             "readiness_state", "validation_state", "human_review_reference",
         ):
             require_text(getattr(self, field), field)
+        for field in ("readiness_state", "validation_state"):
+            if type(getattr(self, field)) is not str:
+                raise ValueError(f"{field} must be a plain str")
 
 
 @dataclass(frozen=True, slots=True)
@@ -242,6 +273,15 @@ class GovernedInputEnvelopeReference:
             "audit_correlation_id",
         ):
             require_text(getattr(self, field), field)
+        if type(self.requested_output_scope) is not tuple:
+            raise ValueError("requested_output_scope must be a tuple")
+        for item in self.requested_output_scope:
+            require_enum(item, CandidateClass, "requested_output_scope item")
+        if type(self.input_artifact_references) is not tuple:
+            raise ValueError("input_artifact_references must be a tuple")
+        for item in self.input_artifact_references:
+            if type(item) is not ArtifactReference:
+                raise ValueError("input_artifact_references items must be ArtifactReference")
 
 
 @dataclass(frozen=True, slots=True)
@@ -526,3 +566,58 @@ class AuditRecordCandidate:
     redaction_state: str
     input_artifact_references: tuple[str, ...] = ()
     supersedes: str = "NONE"
+
+    def __post_init__(self) -> None:
+        require_sha256(self.implementation_sha256, "implementation_sha256")
+        require_sha256(
+            self.configuration_sha256, "configuration_sha256", allow_none=True
+        )
+        for field in (
+            "audit_id", "correlation_id", "capability_reference",
+            "domain_reference", "tier_b_packet_reference", "matter_reference",
+            "actor_reference", "purpose", "operation", "prior_state",
+            "next_state", "reason_code", "decision_reference", "created_at",
+            "redaction_state", "supersedes",
+        ):
+            require_text(getattr(self, field), field)
+        if type(self.input_artifact_references) is not tuple:
+            raise ValueError("input_artifact_references must be a tuple")
+        for item in self.input_artifact_references:
+            require_text(item, "input_artifact_references item")
+        assert_audit_redacted(
+            (
+                self.audit_id, self.correlation_id, self.capability_reference,
+                self.domain_reference, self.tier_b_packet_reference,
+                self.matter_reference, self.actor_reference, self.purpose,
+                self.operation, self.prior_state, self.next_state,
+                self.reason_code, self.decision_reference, self.created_at,
+                self.redaction_state, *self.input_artifact_references,
+                self.supersedes,
+            )
+        )
+
+
+# Audit redaction screen. Markers are matched case-insensitively as substrings; the patterns catch
+# common personal identifiers. A hit quarantines the candidate; nothing is stored either way.
+_PROHIBITED_MARKERS = (
+    "password", "passwd", "passphrase", "secret", "token", "cookie",
+    "authorization:", "bearer ", "private key", "private_key", "api_key",
+    "apikey", "api-key", "access_key", "access key", "credential",
+    "prompt content", "attachment content", "raw payload",
+    "密码", "口令", "密钥", "私钥", "令牌", "身份证", "银行卡", "手机号",
+)
+_PROHIBITED_PATTERNS = (
+    re.compile(r"(?<![0-9A-Za-z])[0-9]{17}[0-9Xx](?![0-9A-Za-z])"),  # mainland resident ID number
+    re.compile(r"(?<![0-9A-Za-z])1[3-9][0-9]{9}(?![0-9A-Za-z])"),  # mainland mobile number
+    re.compile(r"(?<![0-9A-Za-z])[0-9]{16,19}(?![0-9A-Za-z])"),  # bank card number
+    re.compile(r"(?<![0-9A-Za-z])sk-[0-9A-Za-z]"),  # API secret key prefix
+)
+
+
+def assert_audit_redacted(values: tuple[str, ...]) -> None:
+    for value in values:
+        lowered = value.lower()
+        if any(marker in lowered for marker in _PROHIBITED_MARKERS) or any(
+            pattern.search(value) for pattern in _PROHIBITED_PATTERNS
+        ):
+            raise ValueError("QUARANTINED — AUDIT REDACTION FAILURE")

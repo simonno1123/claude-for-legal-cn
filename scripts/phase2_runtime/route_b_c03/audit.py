@@ -1,28 +1,12 @@
-"""Redacted append-only audit candidate construction; no persistence."""
+"""Redacted append-only audit candidate construction; no persistence.
+
+All field, identity and redaction checks live in AuditRecordCandidate.__post_init__, so a candidate
+cannot be built around them, whether through this function or by constructing the record directly.
+"""
 
 from __future__ import annotations
 
-from .contracts import AuditRecordCandidate, require_sha256, require_text
-
-_PROHIBITED_MARKERS = (
-    "password",
-    "secret",
-    "token",
-    "cookie",
-    "authorization:",
-    "bearer ",
-    "private key",
-    "prompt content",
-    "attachment content",
-    "raw payload",
-)
-
-
-def _assert_redacted(values: tuple[str, ...]) -> None:
-    for value in values:
-        lowered = value.lower()
-        if any(marker in lowered for marker in _PROHIBITED_MARKERS):
-            raise ValueError("QUARANTINED — AUDIT REDACTION FAILURE")
+from .contracts import AuditRecordCandidate
 
 
 def build_audit_candidate(
@@ -48,24 +32,6 @@ def build_audit_candidate(
     supersedes: str = "NONE",
 ) -> AuditRecordCandidate:
     """Build an immutable candidate from explicit caller-supplied metadata."""
-    require_sha256(implementation_sha256, "implementation_sha256")
-    require_sha256(configuration_sha256, "configuration_sha256", allow_none=True)
-    for name, value in (
-        ("audit_id", audit_id), ("correlation_id", correlation_id),
-        ("capability_reference", capability_reference),
-        ("domain_reference", domain_reference),
-        ("reason_code", reason_code), ("created_at", created_at),
-        ("redaction_state", redaction_state),
-    ):
-        require_text(value, name)
-    _assert_redacted(
-        (
-            audit_id, correlation_id, capability_reference, domain_reference,
-            tier_b_packet_reference, matter_reference, actor_reference, purpose,
-            operation, prior_state, next_state, reason_code, decision_reference,
-            created_at, redaction_state, *input_artifact_references, supersedes,
-        )
-    )
     return AuditRecordCandidate(
         audit_id, correlation_id, capability_reference, implementation_sha256,
         configuration_sha256, domain_reference, tier_b_packet_reference,

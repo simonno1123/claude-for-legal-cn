@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 
 from .contracts import (
     CapabilityConfigurationReference,
+    CapabilityState,
     ExpectedIdentityReference,
     GateDecision,
     GovernedInputEnvelopeReference,
@@ -27,8 +28,8 @@ class C03Capability:
 
     @property
     def is_active(self) -> bool:
-        return False if self.configuration is None else (
-            self.configuration.state.value == "ENABLED_CAPABILITY_ONLY"
+        return self.configuration is not None and (
+            self.configuration.state is CapabilityState.ENABLED_CAPABILITY_ONLY
         )
 
     def evaluate_gate(
@@ -37,9 +38,11 @@ class C03Capability:
         packet: TierBAuthorityPacketReference | None = None,
         *,
         expected_identity: ExpectedIdentityReference,
-        validity_confirmed: bool = False,
-        kill_active: bool = False,
+        validity_confirmed: bool,
+        kill_active: bool,
+        evaluated_at: str,
     ) -> GateDecision:
+        """The kill state, validity confirmation and evaluation time have no defaults."""
         return evaluate_identity_gate(
             self.configuration,
             packet,
@@ -47,6 +50,7 @@ class C03Capability:
             expected=expected_identity,
             validity_confirmed=validity_confirmed,
             kill_active=kill_active,
+            evaluated_at=evaluated_at,
         )
 
     def submit_provider_reference(self, request_reference: str) -> ProviderPortResult:
