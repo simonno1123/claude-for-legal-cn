@@ -144,10 +144,10 @@
  "subject_identities": {
   "scripts/phase2_runtime/__init__.py": "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
   "scripts/phase2_runtime/route_b_c03/__init__.py": "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
-  "scripts/phase2_runtime/route_b_c03/contracts.py": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+  "scripts/phase2_runtime/route_b_c03/contracts.py": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
   "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
   "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
-  "scripts/phase2_runtime/route_b_c03/isolation.py": "56409022573592EE982647C113B041EFBEC187E3B44A20A0F14B3A951A6E090B",
+  "scripts/phase2_runtime/route_b_c03/isolation.py": "0A7E937AB514D865FB71306C368168F9D06B0BC091150FA22C7EA7F24A699FE6",
   "scripts/phase2_runtime/route_b_c03/failures.py": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
   "scripts/phase2_runtime/route_b_c03/audit.py": "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
   "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
@@ -200,13 +200,13 @@
   },
   "ADP-CONSTRUCT-EXPECTED": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "ExpectedIdentityReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
   "ADP-ASSERT-REFERENCE-ONLY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
-   "subject_sha256": "56409022573592EE982647C113B041EFBEC187E3B44A20A0F14B3A951A6E090B",
+   "subject_sha256": "0A7E937AB514D865FB71306C368168F9D06B0BC091150FA22C7EA7F24A699FE6",
    "callable": "assert_reference_only",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -215,7 +215,7 @@
   },
   "ADP-CONSTRUCT-IDEMPOTENCY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "IdempotencyKeyReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -240,7 +240,7 @@
   },
   "ADP-CONSTRUCT-TIMEOUT": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "TimeoutPolicyReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -270,13 +270,13 @@
   },
   "ADP-CONSTRUCT-ROLLBACK": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "RollbackReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
   "ADP-CONSTRUCT-AUDIT-INTEGRITY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "AuditIntegrityReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -297,7 +297,7 @@
   },
   "ADP-ASSERT-WRITE-SET": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
-   "subject_sha256": "56409022573592EE982647C113B041EFBEC187E3B44A20A0F14B3A951A6E090B",
+   "subject_sha256": "0A7E937AB514D865FB71306C368168F9D06B0BC091150FA22C7EA7F24A699FE6",
    "callable": "assert_permitted_write_set",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -306,13 +306,13 @@
   },
   "ADP-CONSTRUCT-CANDIDATE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "CandidateRecord",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
   "ADP-CONSTRUCT-CONFIG": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "subject_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "callable": "CapabilityConfigurationReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -430,7 +430,7 @@
   },
   "ADP-EVALUATE-CLASSIFICATION": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/isolation.py",
-   "subject_sha256": "56409022573592EE982647C113B041EFBEC187E3B44A20A0F14B3A951A6E090B",
+   "subject_sha256": "0A7E937AB514D865FB71306C368168F9D06B0BC091150FA22C7EA7F24A699FE6",
    "callable": "evaluate_classification_request",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -445,7 +445,7 @@
   "OBJ-CONFIG-BASE": {
    "type": "CapabilityConfigurationReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "capability_id": "C03-SYNTHETIC",
     "capability_version": "1.0-SYNTHETIC",
@@ -463,7 +463,7 @@
   "OBJ-EXPECTED-BASE": {
    "type": "ExpectedIdentityReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "capability_id": "C03-SYNTHETIC",
     "capability_version": "1.0-SYNTHETIC",
@@ -482,7 +482,7 @@
   "OBJ-ENVELOPE-BASE": {
    "type": "GovernedInputEnvelopeReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "envelope_id": "SYNTHETIC-ENVELOPE-001",
     "route": "ROUTE_B_SYNTHETIC",
@@ -528,7 +528,7 @@
   "OBJ-PACKET-BASE": {
    "type": "TierBAuthorityPacketReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "packet_id": "SYNTHETIC-PACKET-001",
     "packet_version": "1.0-SYNTHETIC",
@@ -559,7 +559,7 @@
   "OBJ-RETRY-POLICY": {
    "type": "RetryPolicyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "policy_id": "SYNTHETIC-RETRY-POLICY-001",
     "version": "1.0-SYNTHETIC",
@@ -587,7 +587,7 @@
   "OBJ-IDEMPOTENCY-REFERENCE": {
    "type": "IdempotencyKeyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "canonicalization_version": "1.0-SYNTHETIC",
     "digest_algorithm": "SHA-256",
@@ -598,7 +598,7 @@
   "OBJ-TIMEOUT-REFERENCE": {
    "type": "TimeoutPolicyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "policy_id": "SYNTHETIC-TIMEOUT-POLICY-001",
     "version": "1.0-SYNTHETIC",
@@ -616,7 +616,7 @@
   "OBJ-ROLLBACK-REFERENCE": {
    "type": "RollbackReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "rollback_id": "SYNTHETIC-ROLLBACK-001",
     "version": "1.0-SYNTHETIC",
@@ -650,7 +650,7 @@
   "OBJ-AUDIT-INTEGRITY": {
    "type": "AuditIntegrityReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "policy_id": "SYNTHETIC-INTEGRITY-POLICY-001",
     "version": "1.0-SYNTHETIC",
@@ -674,7 +674,7 @@
   "OBJ-CANDIDATE-BASE": {
    "type": "CandidateRecord",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "candidate_id": "SYNTHETIC-CANDIDATE-001",
     "candidate_version": "1.0-SYNTHETIC",
@@ -724,7 +724,7 @@
   "OBJ-V5-IDEM-KEY": {
    "type": "IdempotencyKeyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "canonicalization_version": "1.0-SYNTHETIC",
     "digest_algorithm": "SHA-256",
@@ -735,7 +735,7 @@
   "OBJ-V5-IDEM-KEY-UNBOUND": {
    "type": "IdempotencyKeyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "canonicalization_version": "1.0-SYNTHETIC",
     "digest_algorithm": "MD5",
@@ -746,7 +746,7 @@
   "OBJ-V5-IDEM-PRIOR-EFFECT": {
    "type": "IdempotencyRecord",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "key_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
     "scope_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
@@ -757,7 +757,7 @@
   "OBJ-V5-IDEM-PRIOR-OTHER-SCOPE": {
    "type": "IdempotencyRecord",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "key_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
     "scope_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
@@ -768,7 +768,7 @@
   "OBJ-V5-IDEM-PRIOR-OLD": {
    "type": "IdempotencyRecord",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "key_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
     "scope_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
@@ -779,7 +779,7 @@
   "OBJ-V5-TIMEOUT-POLICY": {
    "type": "TimeoutPolicyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "policy_id": "SYNTHETIC-TIMEOUT-POLICY-V5",
     "version": "1.0-SYNTHETIC",
@@ -797,7 +797,7 @@
   "OBJ-V5-KILL": {
    "type": "RevocationOrKillReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "control_id": "SYNTHETIC-KILL-001",
     "version": "1.0-SYNTHETIC",
@@ -817,7 +817,7 @@
   "OBJ-V5-REVOCATION": {
    "type": "RevocationOrKillReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "control_id": "SYNTHETIC-REVOCATION-001",
     "version": "1.0-SYNTHETIC",
@@ -837,7 +837,7 @@
   "OBJ-V5-ROLLBACK": {
    "type": "RollbackReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "rollback_id": "SYNTHETIC-ROLLBACK-V5",
     "version": "1.0-SYNTHETIC",
@@ -870,7 +870,7 @@
   "OBJ-V5-ROLLBACK-AUDIT-UNPROTECTED": {
    "type": "RollbackReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "rollback_id": "SYNTHETIC-ROLLBACK-V5B",
     "version": "1.0-SYNTHETIC",
@@ -901,7 +901,7 @@
   "OBJ-V5-SUPERSESSION": {
    "type": "SupersessionReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "supersession_id": "SYNTHETIC-SUPERSESSION-001",
     "superseded_identity": "SYNTHETIC_PRIOR",
@@ -914,7 +914,7 @@
   "OBJ-V5-AUDIT-1": {
    "type": "AuditRecordCandidate",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "audit_id": "SYNTHETIC-AUDIT-V5-001",
     "correlation_id": "SYNTHETIC-CORRELATION-V5",
@@ -942,7 +942,7 @@
   "OBJ-V5-AUDIT-2": {
    "type": "AuditRecordCandidate",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "audit_id": "SYNTHETIC-AUDIT-V5-002",
     "correlation_id": "SYNTHETIC-CORRELATION-V5",
@@ -970,7 +970,7 @@
   "OBJ-V5-AUDIT-2-TAMPERED": {
    "type": "AuditRecordCandidate",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4",
+   "source_sha256": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
    "arguments": {
     "audit_id": "SYNTHETIC-AUDIT-V5-002",
     "correlation_id": "SYNTHETIC-CORRELATION-V5",
@@ -4593,6 +4593,13 @@
    "execution_state": "NOT_RUN",
    "coverage_class_rev3": "OBSERVE_ONLY_LIMITED",
    "coverage_class_rev7": "FULL",
+   "coverage_limitations_rev7": [
+    "supersedes for REV7 the REV3 limitation text and binding_state PARTIAL_OBSERVABLE above, which are preserved as written",
+    "the evaluator classifies a caller-supplied class label only; no legal reasoning is performed or judged",
+    "the fixture request LEGAL_ADVICE_OR_DOWNSTREAM_AUTHORITY is rejected because it is not an exact permitted member (reason CLASS NOT PERMITTED), not by recognising it as a prohibited class",
+    "the evaluator is a standalone pure function; no production path that creates candidates is wired to it",
+    "FULL rests on the owner accepting a standalone evaluator plus the CandidateRecord constructor check as full coverage"
+   ],
    "coverage_rev7_rationale": "the fixture's prohibited classification request is evaluated by a closed evaluator (request rejected, candidate HUMAN_REVIEW_PENDING, downstream blocked) and CandidateRecord refuses any non-member class"
   }
  ],
@@ -4949,7 +4956,7 @@
    "subject hashes re-computed from the V6 sources (catalog source_sha256 refreshed for 24 objects)",
    "adapter ADP-EVALUATE-CLASSIFICATION",
    "6 variants with 6 new rules in V-015; 1 fixture-mapped",
-   "coverage_class_rev7 = FULL for C03-TA-V-015"
+   "coverage_class_rev7 = FULL for C03-TA-V-015, with coverage_limitations_rev7"
   ],
   "variant_count": 76,
   "runtime_version_of_record": "CPython 3.12.10 (P1-PYVER)"

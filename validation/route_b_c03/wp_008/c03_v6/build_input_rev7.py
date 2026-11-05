@@ -7,7 +7,8 @@ REV7 = REV6 with exactly these changes, all made here so the derivation can be r
   3. six variants with pre-declared rules are added to scenario V-015; one carries a fixture mapping to the V-015
      oracle (the fixture's own request LEGAL_ADVICE_OR_DOWNSTREAM_AUTHORITY);
   4. V-015 gets coverage_class_rev7 = FULL: the fixture's prohibited request is now evaluated by a closed
-     evaluator and the candidate constructor refuses any class that is not an exact permitted member.
+     evaluator and the candidate constructor refuses any class that is not an exact permitted member; the current
+     limits of that claim are stated in coverage_limitations_rev7.
 The 70 REV6 variants and their rules are otherwise unchanged.
 
 Run from the repository root:  python3 -I validation/route_b_c03/wp_008/c03_v6/build_input_rev7.py [--write]
@@ -104,6 +105,13 @@ def main():
          "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS", "observation_surface": "raised exception",
          "comparison_rule_id": "CR-V6-015-CANDIDATE-CLASS", "variant_role": "V6_RAW_CHECK"}])
     sc["coverage_class_rev7"] = "FULL"
+    sc["coverage_limitations_rev7"] = [
+        "supersedes for REV7 the REV3 limitation text and binding_state PARTIAL_OBSERVABLE above, which are preserved as written",
+        "the evaluator classifies a caller-supplied class label only; no legal reasoning is performed or judged",
+        "the fixture request LEGAL_ADVICE_OR_DOWNSTREAM_AUTHORITY is rejected because it is not an exact permitted member "
+        "(reason CLASS NOT PERMITTED), not by recognising it as a prohibited class",
+        "the evaluator is a standalone pure function; no production path that creates candidates is wired to it",
+        "FULL rests on the owner accepting a standalone evaluator plus the CandidateRecord constructor check as full coverage"]
     sc["coverage_rev7_rationale"] = ("the fixture's prohibited classification request is evaluated by a closed evaluator (request rejected, "
                                      "candidate HUMAN_REVIEW_PENDING, downstream blocked) and CandidateRecord refuses any non-member class")
 
@@ -116,7 +124,7 @@ def main():
         "builder": "validation/route_b_c03/wp_008/c03_v6/build_input_rev7.py",
         "changes": ["subject hashes re-computed from the V6 sources (catalog source_sha256 refreshed for %d objects)" % refreshed,
                     "adapter ADP-EVALUATE-CLASSIFICATION", "6 variants with 6 new rules in V-015; 1 fixture-mapped",
-                    "coverage_class_rev7 = FULL for C03-TA-V-015"],
+                    "coverage_class_rev7 = FULL for C03-TA-V-015, with coverage_limitations_rev7"],
         "variant_count": sum(len(s["stimulus_variants"]) for s in new["scenarios"]),
         "runtime_version_of_record": "CPython 3.12.10 (P1-PYVER)"}
     data = (json.dumps(new, ensure_ascii=False, indent=1) + "\n").encode("utf-8")

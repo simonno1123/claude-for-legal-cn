@@ -76,15 +76,15 @@ import sys
 import time
 
 INPUT_REL = "validation/route_b_c03/wp_008/c03_v6/C03_V6_INPUT_CANDIDATE_REV7.json"
-INPUT_SHA256 = "C1A32F956E02DA1D2FF76B9FA8A773573B4705E6BBEFE7382213A17DCC0330FD"
+INPUT_SHA256 = "3E01C1961BC435608A7907A35C6E0C013E26312011A6D68983E44E24FEB76E2F"
 # module name -> (repository path, SHA-256, is package)
 SUBJECT = {
     "phase2_runtime": ("scripts/phase2_runtime/__init__.py", "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844", True),
     "phase2_runtime.route_b_c03": ("scripts/phase2_runtime/route_b_c03/__init__.py", "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D", True),
-    "phase2_runtime.route_b_c03.contracts": ("scripts/phase2_runtime/route_b_c03/contracts.py", "82F6928E733DC643A6C7F7701E601BAC26A2AC710FC28DC45E14A2C422D84EC4", False),
+    "phase2_runtime.route_b_c03.contracts": ("scripts/phase2_runtime/route_b_c03/contracts.py", "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99", False),
     "phase2_runtime.route_b_c03.identity_gate": ("scripts/phase2_runtime/route_b_c03/identity_gate.py", "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31", False),
     "phase2_runtime.route_b_c03.mapping": ("scripts/phase2_runtime/route_b_c03/mapping.py", "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66", False),
-    "phase2_runtime.route_b_c03.isolation": ("scripts/phase2_runtime/route_b_c03/isolation.py", "56409022573592EE982647C113B041EFBEC187E3B44A20A0F14B3A951A6E090B", False),
+    "phase2_runtime.route_b_c03.isolation": ("scripts/phase2_runtime/route_b_c03/isolation.py", "0A7E937AB514D865FB71306C368168F9D06B0BC091150FA22C7EA7F24A699FE6", False),
     "phase2_runtime.route_b_c03.failures": ("scripts/phase2_runtime/route_b_c03/failures.py", "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E", False),
     "phase2_runtime.route_b_c03.audit": ("scripts/phase2_runtime/route_b_c03/audit.py", "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA", False),
     "phase2_runtime.route_b_c03.provider_port": ("scripts/phase2_runtime/route_b_c03/provider_port.py", "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381", False),

@@ -547,7 +547,7 @@ class CandidateRecord:
             raise ValueError("mandatory candidate notices must remain exact")
         if self.state is not InvocationState.HUMAN_REVIEW_PENDING:
             raise ValueError("candidate must remain HUMAN_REVIEW_PENDING")
-        if not self.downstream_blocked:
+        if self.downstream_blocked is not True:
             raise ValueError("candidate must remain downstream blocked")
 
 

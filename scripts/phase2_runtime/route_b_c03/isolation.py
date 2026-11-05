@@ -88,6 +88,19 @@ class ClassificationDetermination:
     downstream_blocked: bool
     reason_code: str
 
+    def __post_init__(self) -> None:
+        # The type itself keeps the boundary: no determination can unblock downstream use or leave review.
+        if type(self.request_state) is not InvocationState or self.request_state not in (
+            InvocationState.REJECTED, InvocationState.HUMAN_REVIEW_PENDING,
+        ):
+            raise ValueError("request_state must be REJECTED or HUMAN_REVIEW_PENDING")
+        if self.candidate_state is not InvocationState.HUMAN_REVIEW_PENDING:
+            raise ValueError("candidate_state must remain HUMAN_REVIEW_PENDING")
+        if self.downstream_blocked is not True:
+            raise ValueError("downstream_blocked must remain True")
+        if type(self.reason_code) is not str or not self.reason_code:
+            raise ValueError("reason_code must be a non-empty str")
+
 
 def evaluate_classification_request(
     requested_class: object,
