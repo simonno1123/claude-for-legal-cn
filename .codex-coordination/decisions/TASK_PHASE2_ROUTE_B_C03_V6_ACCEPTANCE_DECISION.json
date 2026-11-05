@@ -92,8 +92,8 @@
   ],
   "ReviewIndependence": "all reviews by fresh-context subagents of the recorder's model family; no outside review",
   "ResultingState": {
-    "AR_B_007": "CLOSED",
-    "AR_B_009": "CLOSED",
+    "AR_B_007": "CLOSED as recorded; subject to owner reaffirmation at current SHAs (literal hash-change withdrawal since V5; see AR-B-008 closure evidence packet REV1 section 三)",
+    "AR_B_009": "CLOSED as recorded; reaffirmation proposed with AR-B-007 (shared contracts.py changed in V6)",
     "AR_B_008": "OPEN / BLOCKED",
     "Tier A blockers closed": "2 / 3",
     "C03": "NOT READY",
