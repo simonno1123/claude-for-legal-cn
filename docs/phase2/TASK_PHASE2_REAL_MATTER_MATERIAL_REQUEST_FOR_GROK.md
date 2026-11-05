@@ -1,5 +1,7 @@
 # 真实案件材料需求（交 Grok bot 整理）
 
+> **已被取代（2026-11-05）**：所有者改为由 Grok bot 直接执行真实案件阶段，任务包见 `docs/phase2/TASK_PHASE2_REAL_MATTER_GROK_HANDOFF_PACKETS.md`。本文件仅作历史保留。
+
 依据：`.codex-coordination/decisions/TASK_PHASE2_REAL_MATTER_STAGES_GROK_ROUTING_DECISION.md`。由 Grok bot 基于真实案件整理，由 Claude 在获得授权的阶段中使用。
 
 **重要：材料含真实信息，只能放在所有者电脑的私有文件夹（建议 `Documents\legal-cn-private\`），不得上传到本公开仓库。**
