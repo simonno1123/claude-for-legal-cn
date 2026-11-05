@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from .contracts import (
+    ARTIFACT_READY,
+    ARTIFACT_VALIDATED,
     CapabilityConfigurationReference,
     CapabilityState,
     ExpectedIdentityReference,
@@ -12,6 +14,7 @@ from .contracts import (
     PacketState,
     RevocationState,
     TierBAuthorityPacketReference,
+    is_utc_timestamp,
 )
 
 
@@ -27,12 +30,18 @@ def evaluate_identity_gate(
     expected: ExpectedIdentityReference,
     validity_confirmed: bool,
     kill_active: bool,
+    evaluated_at: str,
 ) -> GateDecision:
-    """Evaluate explicit metadata only and return a closed gate decision."""
+    """Evaluate explicit metadata only and return a closed gate decision.
+
+    Every check is an allow-list: only a kill flag that is exactly False, an exact
+    ENABLED_CAPABILITY_ONLY member, an exact ACCEPTED/CLEAR packet inside its validity window and
+    ready, validated artifact references can reach ELIGIBLE_FOR_MAPPING.
+    """
     correlation = envelope.audit_correlation_id
-    if kill_active:
+    if kill_active is not False:
         return _decision(InvocationState.BLOCKED, "BLOCKED — KILL ACTIVE", correlation)
-    if configuration is None or configuration.state is CapabilityState.DISABLED:
+    if configuration is None or type(configuration.state) is not CapabilityState:
         return _decision(
             InvocationState.BLOCKED,
             "BLOCKED — CAPABILITY NOT ACTIVE",
@@ -42,6 +51,12 @@ def evaluate_identity_gate(
         return _decision(InvocationState.BLOCKED, "BLOCKED — AUTHORITY FAILURE", correlation)
     if configuration.state is CapabilityState.STALE:
         return _decision(InvocationState.BLOCKED, "BLOCKED — VERSION FAILURE", correlation)
+    if configuration.state is not CapabilityState.ENABLED_CAPABILITY_ONLY:
+        return _decision(
+            InvocationState.BLOCKED,
+            "BLOCKED — CAPABILITY NOT ACTIVE",
+            correlation,
+        )
     if (
         configuration.capability_id != expected.capability_id
         or configuration.capability_version != expected.capability_version
@@ -75,7 +90,14 @@ def evaluate_identity_gate(
         )
     if packet.state is not PacketState.ACCEPTED:
         return _decision(InvocationState.BLOCKED, "BLOCKED — AUTHORITY FAILURE", correlation)
-    if packet.revocation_state is not RevocationState.CLEAR or not validity_confirmed:
+    if packet.revocation_state is not RevocationState.CLEAR or validity_confirmed is not True:
+        return _decision(InvocationState.BLOCKED, "BLOCKED — AUTHORITY FAILURE", correlation)
+    if not (
+        is_utc_timestamp(evaluated_at)
+        and is_utc_timestamp(packet.valid_from)
+        and is_utc_timestamp(packet.valid_until)
+        and packet.valid_from <= evaluated_at < packet.valid_until
+    ):
         return _decision(InvocationState.BLOCKED, "BLOCKED — AUTHORITY FAILURE", correlation)
     if (
         packet.matter_id != envelope.matter_id
@@ -101,6 +123,16 @@ def evaluate_identity_gate(
         or packet.decision_reference != expected.execution_authorization_reference
     ):
         return _decision(InvocationState.BLOCKED, "BLOCKED — AUTHORITY BINDING FAILURE", correlation)
+    if not envelope.input_artifact_references or any(
+        artifact.readiness_state != ARTIFACT_READY
+        or artifact.validation_state != ARTIFACT_VALIDATED
+        for artifact in envelope.input_artifact_references
+    ):
+        return _decision(
+            InvocationState.BLOCKED,
+            "BLOCKED — READINESS/PROVENANCE FAILURE",
+            correlation,
+        )
     return _decision(
         InvocationState.ELIGIBLE_FOR_MAPPING,
         "ELIGIBLE — SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
