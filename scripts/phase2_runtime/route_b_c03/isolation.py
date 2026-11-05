@@ -48,11 +48,60 @@ def assert_permitted_write_set(write_set: Mapping[str, Sequence[str]]) -> None:
         raise IsolationViolation("REJECTED — UNKNOWN WRITE NAMESPACE")
 
 
-def assert_reference_only(record: Mapping[str, object]) -> None:
-    for key in record:
+# Value markers of secret material (V7); compared case-insensitively as substrings of str values.
+PROHIBITED_VALUE_MARKERS = (
+    "-----begin",
+    "bearer ",
+    "authorization:",
+    "password=",
+    "password:",
+    "secret=",
+    "secret:",
+    "token=",
+    "token:",
+    "api_key=",
+    "api_key:",
+    "apikey=",
+    "private_key",
+)
+MAX_REFERENCE_DEPTH = 8
+
+
+def _check_reference_value(value: object, depth: int) -> None:
+    if depth > MAX_REFERENCE_DEPTH:
+        raise IsolationViolation("QUARANTINED — REFERENCE NESTING TOO DEEP")
+    if type(value) in (bytes, bytearray, memoryview):
+        raise IsolationViolation("QUARANTINED — RAW BYTES PROHIBITED")
+    if isinstance(value, str):
+        folded = value.casefold()
+        if any(marker in folded for marker in PROHIBITED_VALUE_MARKERS):
+            raise IsolationViolation("QUARANTINED — SECRET MARKER IN VALUE")
+        return
+    if isinstance(value, Mapping):
+        _check_reference_mapping(value, depth + 1)
+        return
+    if isinstance(value, (tuple, list, set, frozenset)):
+        for item in value:
+            _check_reference_value(item, depth + 1)
+
+
+def _check_reference_mapping(record: Mapping[str, object], depth: int) -> None:
+    for key, value in record.items():
+        if not isinstance(key, str):
+            raise IsolationViolation("QUARANTINED — NON-TEXT FIELD NAME")
         normalized = key.lower().replace("-", "_")
         if any(term in normalized for term in PROHIBITED_REFERENCE_KEYS):
             raise IsolationViolation(f"QUARANTINED — CONTENT FIELD PROHIBITED: {key}")
+        _check_reference_value(value, depth)
+
+
+def assert_reference_only(record: Mapping[str, object]) -> None:
+    """Field names at every nesting level and str values are screened; raw bytes are refused (V-005, V7).
+
+    The record itself must be a Mapping; it and up to MAX_REFERENCE_DEPTH nested containers are screened."""
+    if not isinstance(record, Mapping):
+        raise IsolationViolation("QUARANTINED — REFERENCE RECORD MUST BE A MAPPING")
+    _check_reference_mapping(record, 0)
 
 
 # ---------------------------------------------------------------------------
