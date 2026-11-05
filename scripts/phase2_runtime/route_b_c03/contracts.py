@@ -535,6 +535,7 @@ class CandidateRecord:
     downstream_blocked: bool = True
 
     def __post_init__(self) -> None:
+        require_enum(self.candidate_class, CandidateClass, "candidate_class")
         require_sha256(self.candidate_sha256, "candidate_sha256")
         require_sha256(self.input_set_sha256, "input_set_sha256")
         for field in (
@@ -546,7 +547,7 @@ class CandidateRecord:
             raise ValueError("mandatory candidate notices must remain exact")
         if self.state is not InvocationState.HUMAN_REVIEW_PENDING:
             raise ValueError("candidate must remain HUMAN_REVIEW_PENDING")
-        if not self.downstream_blocked:
+        if self.downstream_blocked is not True:
             raise ValueError("candidate must remain downstream blocked")
 
 
