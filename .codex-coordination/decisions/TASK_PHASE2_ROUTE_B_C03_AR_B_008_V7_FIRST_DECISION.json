@@ -1,0 +1,28 @@
+{
+  "RecordKind": "C03_AR_B_008_V7_FIRST_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature or owner commit",
+  "Basis": {
+    "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_AR_B_008_CLOSURE_EVIDENCE_PACKET_REV1.md",
+    "SHA256": "4F45F231C34C709FC0241BDC844FC0084D833239EF2A0E436C51BAD7AE8993FF",
+    "Bytes": 16361,
+    "PR": 71
+  },
+  "Decisions": [
+    {
+      "Id": "AR-B-008-V7-FIRST",
+      "Choice": "先做 V7，再一次性决定（推荐）",
+      "Effect": "authorizes implementation candidate V7 and its review and validation preparation: the five capability-layer test gaps of the packet section 四 and wiring the evaluators into capability.py; after review and a separately authorized formal run, the owner decides AR-B-008 closure and the reaffirmation of AR-B-007 and AR-B-009 together"
+    }
+  ],
+  "NotAuthorized": [
+    "any formal run (needs a separate owner authorization)",
+    "closure of AR-B-008",
+    "reaffirmation of AR-B-007 or AR-B-009"
+  ],
+  "ResultingState": {
+    "AR_B_008": "OPEN / BLOCKED",
+    "C03": "NOT READY"
+  }
+}

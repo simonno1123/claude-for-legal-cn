@@ -426,3 +426,27 @@ def evaluate_dependency(
     if availability_state != "AVAILABLE":
         return _cd(ControlState.PROTECTED_BLOCKED, "BLOCKED — DEPENDENCY OR PROVIDER UNAVAILABLE; NO SUBSTITUTION")
     return _cd(ControlState.PROTECTED_BLOCKED, "DEPENDENCY AVAILABLE — EXECUTION NOT AUTHORIZED")
+
+
+# ---------------------------------------------------------------------------
+# Integrity comparison (V-012 output-hash and dependency-identity tamper; V7)
+# ---------------------------------------------------------------------------
+INTEGRITY_SUBJECTS = ("IDENTITY", "OUTPUT", "DEPENDENCY", "AUDIT_REFERENCE")
+
+
+def evaluate_integrity(
+    subject_kind: str,
+    *,
+    expected_sha256: str,
+    observed_sha256: str | None,
+) -> ControlDetermination:
+    """Exact SHA-256 comparison of a caller-supplied observation; a mismatch quarantines (design 15, V-012).
+
+    Case is ignored for the hex digits only. A missing or malformed value or an unknown subject kind blocks."""
+    if type(subject_kind) is not str or subject_kind not in INTEGRITY_SUBJECTS or not _is_sha(expected_sha256):
+        return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — INTEGRITY REFERENCE UNBOUND")
+    if not _is_sha(observed_sha256):
+        return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — INTEGRITY OBSERVATION UNAVAILABLE")
+    if observed_sha256.upper() != expected_sha256.upper():
+        return _cd(ControlState.QUARANTINED, "QUARANTINED — INTEGRITY FAILURE: " + subject_kind)
+    return _cd(ControlState.PROTECTED_BLOCKED, "INTEGRITY MATCHED — EXECUTION NOT AUTHORIZED")
