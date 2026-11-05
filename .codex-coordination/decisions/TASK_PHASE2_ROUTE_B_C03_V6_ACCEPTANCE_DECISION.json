@@ -81,7 +81,8 @@
           "Bytes": 221289
         }
       ],
-      "Effect": "formal run v5 result and the V6 implementation accepted at the exact SHAs, with the limitations stated in the V6 record and in input REV7 coverage_limitations_rev7; C03-TA-V-015 counts as FULL on the condition recorded in V6-ACCEPT-MANIFEST"
+      "Effect": "formal run v5 result and the V6 implementation accepted at the exact SHAs, with the limitations stated in the V6 record and in input REV7 coverage_limitations_rev7; C03-TA-V-015 counts as FULL on the condition recorded in V6-ACCEPT-MANIFEST (validation/route_b_c03/wp_008/c03_v6/C03_V6_OWNER_DECISIONS_REV1.json)",
+      "RecorderNote": "one owner option covered both the failed-logon confirmation and acceptance; the AcceptedRecords list (including the V6 record, input REV7 and harness REV7) is the recorder's expansion of that option"
     },
     {
       "Id": "AR-B-008-PREPARE-CLOSURE-WITH-LIMITS",
@@ -97,5 +98,6 @@
     "Tier A blockers closed": "2 / 3",
     "C03": "NOT READY",
     "AutomaticDownstreamTransition": "BLOCKED"
-  }
+  },
+  "Supersedes": "the 'owner to confirm' note and PENDING_OWNER_ACCEPTANCE classification in C03_V6_FORMAL_RUN_V5_RESULT.json, which is kept unchanged"
 }
