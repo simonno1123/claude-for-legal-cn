@@ -1,0 +1,115 @@
+{
+ "RecordKind": "C03_V7_FORMAL_RUN_V6_RESULT",
+ "Outcome": "PASS_FORMAL_V6",
+ "Classification": "FORMAL_RUN_RESULT_PENDING_OWNER_ACCEPTANCE",
+ "Authorization": {
+  "Decision": "V7-RUN-FORMAL-V6",
+  "Record": "validation/route_b_c03/wp_008/c03_v7/C03_V7_OWNER_DECISIONS_REV1.json"
+ },
+ "ManifestBasis": {
+  "Path": "validation/route_b_c03/wp_008/c03_v7/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV5.json",
+  "SHA256": "A88C5D450945B8C15C28D3C521D3CCE0044A13302619C0451123ABB91F82E544",
+  "Bytes": 513236,
+  "Accepted": true
+ },
+ "Install": {
+  "InstalledUtc": "2026-11-05T05:14:34.9295043Z",
+  "Files": 30,
+  "AllMatchExpected": true
+ },
+ "Run": {
+  "SupervisorStartedUtc": "2026-11-05T05:14:40.7449638Z",
+  "SupervisorPid": 2760,
+  "HarnessPid": 8824,
+  "ExitCode": 0,
+  "ExitSeenUtc": "2026-11-05T05:14:58.0549506Z",
+  "ReleasedUtc": "2026-11-05T05:15:00.1857316Z",
+  "RunCount": 1,
+  "LockedFiles": 863,
+  "HashMismatches": 0,
+  "SignatureProblems": 0,
+  "TreeFiles": 841,
+  "TreeDirs": 111,
+  "RunChecks": "29/29",
+  "FailedChecks": [],
+  "Python": "3.12.10",
+  "InputSha256": "572D9C7DA572EE12FDAD7E0B70205744DFFE67AA90BDC6AA96F3786B92EB0BED",
+  "HarnessTotals": {
+   "variants": 93,
+   "pass": 93,
+   "fail": 0,
+   "conformant_full": 13,
+   "conformant_partial_limited": 13,
+   "not_mapped": 67,
+   "mapped_not_conformant": 0,
+   "guard_denied": 0
+  },
+  "SubjectScan": "CLEAN",
+  "V7Variants": "17/17 PASS"
+ },
+ "ManifestConformance": {
+  "ImportClosureModules": 96,
+  "ModulesEqualManifest": true,
+  "DeniedModulesInClosure": [],
+  "VersusFormalV5": "identical apart from the origin of __main__ (harness_rev8) and the project_v6 prefix; native modules and sys.path identical"
+ },
+ "AuditCrossCheck": {
+  "SupervisorExitPromptly": "powershell 4689 at 05:15:00.259, 0.07 s after release",
+  "AllProcessesMediumIntegrity": true,
+  "HarnessExit4689": "0x0",
+  "SupervisorExit4689": "0x0",
+  "Logoff4634BeforeCollection": true,
+  "RecordNumbers": "65637..79061 contiguous (13425)",
+  "FailedLogons4625SinceFormalV5": 0,
+  "LogCleared1102": 0,
+  "NewIntegrityEvents": "none",
+  "LauncherHashes": "equal to prepared values",
+  "InstalledFiles": "30/30 match",
+  "Invocations": "one: install, pre-collect, run, post-collect"
+ },
+ "Files": [
+  {
+   "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/install_formal_v6_result.json",
+   "SHA256": "389552F2785887853E4864C588BFD87094FCA5500AFDB90E78D842D31387A73A",
+   "Bytes": 13514,
+   "Accepted": false
+  },
+  {
+   "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_pre_collect_result.json",
+   "SHA256": "A215E59E53D7AFAF093B110D44BB7310090260396C3E44C15F1EAB06D40C4A2C",
+   "Bytes": 830,
+   "Accepted": false
+  },
+  {
+   "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_post_collect_result.json",
+   "SHA256": "CCB0F77616F770300FD5F0D85530B155B3ACF7BFA2BF754005D0EA7EDAC7F1DD",
+   "Bytes": 138124,
+   "Accepted": false
+  },
+  {
+   "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_run_record.RAW_REDACTED.json",
+   "SHA256": "3BB10960E4C85B6017F1AB3E5B7674749C0F663E61FC5ED8D0B6E56C23A82888",
+   "Bytes": 487043,
+   "Accepted": false,
+   "UnredactedSHA256": "1EA70318083023E55A4DF392B6C230650434E5DEBBA764F5F6B190D506D141AF",
+   "UnredactedBytes": 487069
+  },
+  {
+   "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_events_history.RAW_REDACTED.xml",
+   "SHA256": "D4CF10394B282345321AF98CCCDD6DCC2443FCFC3DB67ADF959AD92427083147",
+   "Bytes": 239009,
+   "Accepted": false,
+   "UnredactedSHA256": "D1F5DFF448C6C57868DA6117F39A270614C719020403BD64516D26AB7E0EFE96",
+   "UnredactedBytes": 244585
+  }
+ ],
+ "Writer": {
+  "Name": "Claude",
+  "Role": "RECORDER_ONLY",
+  "IsOwner": false
+ },
+ "RetainedState": {
+  "AR_B_008": "OPEN / BLOCKED",
+  "C03": "NOT READY"
+ }
+}
