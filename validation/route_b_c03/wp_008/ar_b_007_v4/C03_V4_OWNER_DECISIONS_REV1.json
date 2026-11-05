@@ -1,0 +1,42 @@
+{
+  "RecordKind": "C03_AR_B_007_V4_MANIFEST_ACCEPTANCE_AND_FORMAL_V3_RUN_AUTHORIZATION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-04 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "PR": 61,
+    "Review": ".codex-coordination/reviews/TASK_PHASE2_ROUTE_B_C03_WP_007_V4_REVISION_REVIEW_REV1.md (PASS WITH NOTES; SAME_MODEL_FAMILY_NOT_EXTERNAL)"
+  },
+  "Decisions": [
+    {
+      "Id": "V4-ACCEPT-MANIFEST",
+      "Choice": "接受（含偏离与澄清）",
+      "Accepted": [
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV2.json",
+          "SHA256": "55308C77DBF8AB04368280E049029FBF2091E50BF283B31E81CEC87AEA4E10F4",
+          "Bytes": 465467
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_AR_B_007_V4_MANIFEST_SUPPORT_POLICIES_REV2.md",
+          "SHA256": "F00E27D8F746CEC11CE5CD823592D3ADF32AFAB1A3863361BB24C878398C3939",
+          "Bytes": 13038
+        }
+      ],
+      "DeviationsConfirmed": 11,
+      "DesignClarificationsConfirmed": 5,
+      "Effect": "Manifest REV2 and support policies REV2 accepted at the exact SHAs, with the 11 §D1 deviations and the 5 design clarifications of the V4 authorization"
+    },
+    {
+      "Id": "V4-RUN-FORMAL-V3",
+      "Choice": "授权正式运行 v3",
+      "Effect": "owner runs go_formal_v3.cmd once (install, run, collect); recorder collects, verifies and records; V4 implementation acceptance and AR-B-007 closure are separate later decisions"
+    }
+  ],
+  "NotDecided": [
+    "V4 implementation acceptance",
+    "AR-B-007 closure"
+  ],
+  "AR_B_007": "OPEN / BLOCKED",
+  "C03": "NOT READY"
+}
