@@ -163,6 +163,55 @@ def _is_sha(value: object) -> bool:
     return type(value) is str and len(value) == 64 and all(c in _SHA256_HEX for c in value)
 
 
+def _norm(value: str) -> str:
+    return value.strip().casefold()
+
+
+def _is_text_tuple(value: object, *, allow_empty: bool) -> bool:
+    return type(value) is tuple and (allow_empty or bool(value)) and all(_is_text(v) for v in value)
+
+
+def _flag_state(flag: object, state: ControlState, reason: str) -> ControlDetermination | None:
+    """True -> the protected state; False -> None (not active); anything else -> control state unknown."""
+    if flag is True:
+        return _cd(state, reason)
+    if flag is False:
+        return None
+    return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — CONTROL STATE UNKNOWN")
+
+
+def _days_from_civil(y: int, m: int, d: int) -> int:
+    y -= m <= 2
+    era = y // 400
+    yoe = y - era * 400
+    doy = (153 * (m + (-3 if m > 2 else 9)) + 2) // 5 + d - 1
+    doe = yoe * 365 + yoe // 4 - yoe // 100 + doy
+    return era * 146097 + doe - 719468
+
+
+def _utc_seconds(value: object) -> int | None:
+    """Seconds since 1970 for a valid YYYY-MM-DDTHH:MM:SSZ calendar time, else None (no clock is read)."""
+    if not is_utc_timestamp(value):
+        return None
+    y, mo, d = int(value[0:4]), int(value[5:7]), int(value[8:10])
+    hh, mi, ss = int(value[11:13]), int(value[14:16]), int(value[17:19])
+    leap = y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)
+    month_days = (31, 29 if leap else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+    if not (1 <= mo <= 12 and 1 <= d <= month_days[mo - 1] and hh < 24 and mi < 60 and ss < 60):
+        return None
+    return _days_from_civil(y, mo, d) * 86400 + hh * 3600 + mi * 60 + ss
+
+
+def _duration_seconds(value: object) -> int | None:
+    """Only the form PT<n>S with n >= 1 is accepted."""
+    if type(value) is not str or not value.startswith("PT") or not value.endswith("S"):
+        return None
+    digits = value[2:-1]
+    if not digits or not all(c in "0123456789" for c in digits) or int(digits) < 1:
+        return None
+    return int(digits)
+
+
 def evaluate_control_precedence(
     *,
     kill: RevocationOrKillReference | None,
@@ -181,7 +230,9 @@ def evaluate_control_precedence(
             continue
         if type(ref) is not RevocationOrKillReference or ref.effective_state is not state:
             return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — STATE CONTRACT FAILURE")
-        if ref.affected_scope in (subject_scope, ALL_SCOPES):
+        if not _is_text(ref.affected_scope):
+            return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — STATE CONTRACT FAILURE")
+        if _norm(ref.affected_scope) in (_norm(subject_scope), _norm(ALL_SCOPES)):
             return _cd(state, reason)
     return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — NO ACTIVE CONTROL; EXECUTION NOT AUTHORIZED")
 
@@ -234,19 +285,27 @@ def evaluate_timeout(
     observed_at: str,
     result_received_at: str | None,
 ) -> ControlDetermination:
-    """Timeout and late-result determination over caller-supplied times; no clock is read (design 11)."""
+    """Timeout and late-result determination over caller-supplied times; no clock is read (design 11).
+
+    The deadline must equal started_at plus the policy's own duration (PT<n>S), so the caller cannot widen it.
+    """
+    start_s = _utc_seconds(started_at)
+    deadline_s = _utc_seconds(deadline_at)
+    observed_s = _utc_seconds(observed_at)
+    duration_s = _duration_seconds(policy.deadline_duration) if type(policy) is TimeoutPolicyReference else None
     if (
         type(policy) is not TimeoutPolicyReference
         or policy.terminal_state is not ControlState.QUARANTINED
         or policy.late_result_policy != "DENY_USE"
         or policy.retry_effect != "NONE"
-        or not (is_utc_timestamp(started_at) and is_utc_timestamp(deadline_at) and is_utc_timestamp(observed_at))
-        or not started_at < deadline_at
-        or not started_at <= observed_at
+        or None in (start_s, deadline_s, observed_s, duration_s)
+        or deadline_s - start_s != duration_s
+        or not start_s <= observed_s
     ):
         return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — TIMEOUT POLICY UNBOUND")
     if result_received_at is not None:
-        if not is_utc_timestamp(result_received_at) or not started_at <= result_received_at <= observed_at:
+        result_s = _utc_seconds(result_received_at)
+        if result_s is None or not start_s <= result_s <= observed_s:
             return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — TIMEOUT POLICY UNBOUND")
         if result_received_at >= deadline_at:
             return _cd(ControlState.QUARANTINED, "QUARANTINED — LATE RESULT DENIED")
@@ -264,28 +323,35 @@ def evaluate_rollback(
     kill_active: bool,
     revoked: bool,
 ) -> ControlDetermination:
-    """Rollback eligibility only; never restores (design 14)."""
-    if kill_active is not False:
-        return _cd(ControlState.KILLED, "BLOCKED — KILL ACTIVE")
-    if revoked is not False:
-        return _cd(ControlState.REVOKED, "BLOCKED — REVOKED")
+    """Rollback eligibility only; never restores (design 14). Text comparisons ignore case and outer spaces."""
+    for flag, state, reason in (
+        (kill_active, ControlState.KILLED, "BLOCKED — KILL ACTIVE"),
+        (revoked, ControlState.REVOKED, "BLOCKED — REVOKED"),
+    ):
+        protected = _flag_state(flag, state, reason)
+        if protected is not None:
+            return protected
     if (
         type(reference) is not RollbackReference
-        or type(accepted_prior_identities) is not tuple
-        or type(reference.restoration_surface) is not tuple
-        or type(reference.prohibited_surface) is not tuple
+        or not all(_is_text(v) for v in (reference.rollback_id, reference.version, reference.current_identity,
+                                         reference.target_identity, reference.decision_reference))
+        or not _is_text_tuple(reference.restoration_surface, allow_empty=False)
+        or not _is_text_tuple(reference.prohibited_surface, allow_empty=False)
+        or not _is_text_tuple(reference.preconditions, allow_empty=True)
+        or not _is_text_tuple(accepted_prior_identities, allow_empty=True)
     ):
         return _cd(ControlState.PROTECTED_BLOCKED, "ROLLBACK BLOCKED — REFERENCE INVALID")
     if reference.post_restore_state is not CapabilityState.DISABLED:
         return _cd(ControlState.PROTECTED_BLOCKED, "ROLLBACK BLOCKED — RESTORE MUST RETURN TO DISABLED")
-    if reference.target_identity == reference.current_identity or reference.target_identity not in accepted_prior_identities:
+    target = _norm(reference.target_identity)
+    if target == _norm(reference.current_identity) or target not in {_norm(a) for a in accepted_prior_identities}:
         return _cd(ControlState.PROTECTED_BLOCKED, "ROLLBACK BLOCKED — TARGET NOT AN ACCEPTED PRIOR VERSION")
-    if (
-        not reference.restoration_surface
-        or "AUDIT_HISTORY" not in reference.prohibited_surface
-        or set(reference.restoration_surface) & set(reference.prohibited_surface)
-    ):
+    restoration = {_norm(v) for v in reference.restoration_surface}
+    prohibited = {_norm(v) for v in reference.prohibited_surface}
+    if _norm("AUDIT_HISTORY") not in prohibited or _norm(ALL_SCOPES) in restoration or restoration & prohibited:
         return _cd(ControlState.PROTECTED_BLOCKED, "ROLLBACK BLOCKED — SURFACE NOT BOUNDED")
+    if decision_reference_valid is True and _norm(reference.decision_reference) == _norm("NONE"):
+        return _cd(ControlState.PROTECTED_BLOCKED, "ROLLBACK BLOCKED — REFERENCE INVALID")
     if decision_reference_valid is not True:
         return _cd(ControlState.ROLLBACK_PENDING, "ROLLBACK ELIGIBILITY ONLY — DECISION REQUIRED")
     return _cd(ControlState.ROLLBACK_PENDING, "ROLLBACK DECISION RECORDED — EXECUTION NOT AUTHORIZED")
@@ -300,10 +366,11 @@ def evaluate_supersession(
         not _is_text(identity)
         or type(supersessions) is not tuple
         or any(type(s) is not SupersessionReference for s in supersessions)
+        or any(not _is_text(s.superseded_identity) or not _is_text(s.replacement_identity) for s in supersessions)
         or any(s.stale_effect != "BLOCK_CURRENT_USE" or s.history_preservation != "APPEND_ONLY" for s in supersessions)
     ):
         return _cd(ControlState.PROTECTED_BLOCKED, "PROTECTED_BLOCKED — STATE CONTRACT FAILURE")
-    if any(s.superseded_identity == identity for s in supersessions):
+    if any(_norm(s.superseded_identity) == _norm(identity) for s in supersessions):
         return _cd(ControlState.STALE, "STALE — SUPERSEDED IDENTITY; NO FALLBACK")
     return _cd(ControlState.PROTECTED_BLOCKED, "CURRENT IDENTITY — EXECUTION NOT AUTHORIZED")
 

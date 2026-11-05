@@ -12,7 +12,7 @@
 | `scripts/phase2_runtime/route_b_c03/identity_gate.py` | `F9CC7021C1A25866…` | `F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31` | 未变 |
 | `scripts/phase2_runtime/route_b_c03/mapping.py` | `320F7E8576C1C4E8…` | `320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66` | 未变 |
 | `scripts/phase2_runtime/route_b_c03/isolation.py` | `9BC554294D594518…` | `9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B` | 未变 |
-| `scripts/phase2_runtime/route_b_c03/failures.py` | `6F30D996119F61A1…` | `19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E` | 修改 |
+| `scripts/phase2_runtime/route_b_c03/failures.py` | `6F30D996119F61A1…` | `C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E` | 修改 |
 | `scripts/phase2_runtime/route_b_c03/audit.py` | `96F874FD494AA672…` | `96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA` | 未变 |
 | `scripts/phase2_runtime/route_b_c03/provider_port.py` | `66E4DA862BBBD503…` | `66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381` | 未变 |
 | `scripts/phase2_runtime/route_b_c03/capability.py` | `8D0B3CD664A89360…` | `8D0B3CD664A893609EDCEFABADCD48EAA77DEF6B519872DA27E9E15F68EA7686` | 未变 |
@@ -36,24 +36,37 @@
 
 **没有任何函数会返回"执行"或"已激活"的状态。** 新增导入只有 `hashlib`、`json`、`dataclasses.fields`。这些模块已在 Harness 的导入闭包中，因此闭包预计不变，由正式运行核对。
 
-## 验证资产（本地：Linux，CPython 3.13）
+## 验证资产（本地：Linux，CPython 3.13；正式运行必须使用 3.12.10）
 
 | 资产 | 字节 | SHA-256 |
 | --- | --- | --- |
-| `validation/route_b_c03/wp_008/ar_b_009_v5/C03_V5_INPUT_CANDIDATE_REV6.json` | 198716 | `0BF2068E300C7ED9050644C6F252D3615CBCA70AA4CE8488AEC123DA74C22C62` |
-| `validation/route_b_c03/wp_008/ar_b_009_v5/harness_rev6.py` | 28099 | `537736595EC29249A679EFED639FD35CFD8EE11BB46470DD9EDF222364F9F619` |
-| `validation/route_b_c03/wp_008/ar_b_009_v5/build_input_rev6.py` | 24537 | `45816D298CD11CA7649CBE2006193B4A13706A9ECB2DCF092EB8662E303BE757` |
+| `validation/route_b_c03/wp_008/ar_b_009_v5/C03_V5_INPUT_CANDIDATE_REV6.json` | 203027 | `418AD1EE9144C28E93DF571FD829C660E6B8EDA4DD06B3B16CDEEC1AAF1BE9C0` |
+| `validation/route_b_c03/wp_008/ar_b_009_v5/harness_rev6.py` | 28099 | `15BEDB445B44A472CF0058D07491DCF7E389B235B4FE46B8EC2F92CE9E9C8C66` |
+| `validation/route_b_c03/wp_008/ar_b_009_v5/build_input_rev6.py` | 25368 | `0908ADFF2A0B16B05EED5CFCB3EE9C496B5697DED3CBBFFA43BA48B96F87EDEF` |
 
-- **运行结果**：Harness REV6 以 `-I -S -B` 运行，退出码为 0；67 个变体全部通过，运行时拦截 0 次。
+- **运行结果**：Harness REV6 以 `-I -S -B` 运行，退出码 0；70 个变体全部通过，运行时拦截 0 次。其中：
   - 完全符合 Fixture：12 个；
-  - 部分符合：13 个，其中 8 个是这次新增并映射到 Fixture 的变体；
-  - 按设计不映射：42 个。
-- **新增变体**：25 个，覆盖 V-006、V-008、V-009、V-010、V-011、V-012、V-013 七个场景。这七个场景的覆盖等级从"仅观察"或"部分"标为 `PARTIAL_LIMITED`。
-- **审计链的预期头部**：由生成脚本按同一规则独立重写的实现算出，没有调用受测代码。
+  - 部分符合：13 个，包括本次新增并映射到 Fixture 的 8 个；
+  - 不映射：45 个。
+- **新增变体**：28 个，分布在 V-006、V-008、V-009、V-010、V-011、V-012、V-013 七个场景，它们的覆盖等级都标为 `PARTIAL_LIMITED`。其中 V-009、V-010 原本就是这个等级，实际升级的是另外 5 个场景。
+- **审计链预期头部**：由生成脚本按同一规则另写的实现计算，没有调用受测代码。
+
+## 审查
+
+全新子代理审查结论为 PASS WITH NOTES，没有阻断项；3 个非阻断项都已修正，见 `.codex-coordination/reviews/TASK_PHASE2_ROUTE_B_C03_AR_B_009_V5_REVISION_REVIEW_REV1.md`。修正内容：
+- **回滚**：全面校验输入；比对忽略大小写；禁止 `ALL`；决定引用不能为 `NONE`；终止、撤销标志只认严格的布尔值。
+- **超时**：截止时刻必须等于开始时刻加上政策时长（`PT<n>S`），并校验是否为真实的日历时间。
+- **作用范围、取代判定**：比对忽略大小写和首尾空格。
 
 ## 仍然保留的局限
 
-- **只验证判定逻辑。** 计时器、信号传播与接收回执、持久化的幂等记录、真实依赖和网络都没有被观察；设计也规定不实现这些。
-- **判定依据都由调用方提供**：时间、作用范围、已接受版本清单、决定是否有效。
-- **审计链只校验调用方提供的候选记录**：不签名，也不防止调用方同时改动记录和预期头部。
+- **只验证判定逻辑。** 计时器、信号传播与回执、持久化的幂等记录、真实依赖和网络都没有被观察；设计本身也规定不实现这些。
+- **判定依据都由调用方提供**：时间、作用范围、已接受版本清单，以及决定是否有效。
+- **判定函数尚未接入 `capability.py`。** 设计要求"每一次重要转换之前都要判定"，目前还没有任何代码路径强制执行；这些函数只是库函数。
+- **判定函数本身不产生审计候选，也不绑定状态转换。**（设计 §15，CI-017）
+- **审计链的局限：**
+  - 只校验调用方提供的候选记录，不签名；
+  - 截断的链配上它自己的头部仍能通过；
+  - 用 `supersedes` 字段充当前一条记录的链接。
+- **映射说明偏宽：** V-006 是"单次调用加先前记录"，不是两次真实调用；V-013 的可用性取值由调用方声明。
 - **V-015（分类边界）不在本版范围内。**

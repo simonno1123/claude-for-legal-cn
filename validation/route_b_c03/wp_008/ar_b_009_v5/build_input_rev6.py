@@ -4,7 +4,7 @@ REV6 = REV5 with exactly these changes, all made here so the derivation can be r
   1. subject_identities, adapter subject hashes and catalog source_sha256 values are re-hashed from the V5 sources;
   2. seven adapters for the WP-009 evaluators in failures.py are added;
   3. synthetic catalog objects for the new evaluators are added;
-  4. 25 variants with pre-declared rules are added to scenarios V-006, V-008, V-009, V-010, V-011, V-012 and V-013.
+  4. 28 variants with pre-declared rules are added to scenarios V-006, V-008, V-009, V-010, V-011, V-012 and V-013.
      One variant per scenario carries a fixture mapping to that scenario's original fixture oracle; the others are
      raw checks. The expected audit-chain head is computed here by an independent re-implementation of the
      digest rule (not by calling the subject);
@@ -126,7 +126,7 @@ def main():
                                                        "recorded_at": "2026-04-15T00:00:00Z", "effect_reference": "NONE"})
     obj("OBJ-V5-TIMEOUT-POLICY", "TimeoutPolicyReference", {"policy_id": "SYNTHETIC-TIMEOUT-POLICY-V5", "version": "1.0-SYNTHETIC",
                                                             "sha256": SHA_C, "start_category": "SYNTHETIC-START",
-                                                            "deadline_duration": "PT30S-SYNTHETIC", "late_result_policy": "DENY_USE",
+                                                            "deadline_duration": "PT30S", "late_result_policy": "DENY_USE",
                                                             "terminal_state": enum("ControlState", "QUARANTINED"), "retry_effect": "NONE"})
     control_args = {"version": "1.0-SYNTHETIC", "sha256": SHA_C, "trigger_reference": "SYNTHETIC-TRIGGER",
                     "authority_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY", "propagation_boundary": "SYNTHETIC-BOUNDARY",
@@ -164,6 +164,7 @@ def main():
     a2 = {"audit_id": "SYNTHETIC-AUDIT-V5-002", **audit_fields, "input_artifact_references": tup(), "supersedes": "SYNTHETIC-AUDIT-V5-001"}
     obj("OBJ-V5-AUDIT-1", "AuditRecordCandidate", a1)
     obj("OBJ-V5-AUDIT-2", "AuditRecordCandidate", a2)
+    obj("OBJ-V5-AUDIT-2-TAMPERED", "AuditRecordCandidate", {**a2, "reason_code": "INTEGRITY_CHECK_ALTERED"})
     plain = lambda a: {k: (v["tuple"] if isinstance(v, dict) and "tuple" in v else v) for k, v in a.items()}
     head = independent_chain_head([plain(a1), plain(a2)])
 
@@ -200,12 +201,14 @@ def main():
     rules["CR-V5-008-LATE"] = cd_rule(["SB-008-V5-LATE-RESULT"], "QUARANTINED", "QUARANTINED — LATE RESULT DENIED",
                                       mapping("C03-TA-V-008", "a result at or after the deadline is denied use"))
     rules["CR-V5-008-PENDING"] = cd_rule(["SB-008-V5-DEADLINE-PENDING"], "PROTECTED_BLOCKED", "DEADLINE PENDING — NO RESULT")
-    rules["CR-V5-008-UNBOUND"] = cd_rule(["SB-008-V5-RESULT-AFTER-OBSERVATION"], "PROTECTED_BLOCKED", "PROTECTED_BLOCKED — TIMEOUT POLICY UNBOUND")
+    rules["CR-V5-008-UNBOUND"] = cd_rule(["SB-008-V5-RESULT-AFTER-OBSERVATION", "SB-008-V5-DEADLINE-NOT-POLICY"], "PROTECTED_BLOCKED", "PROTECTED_BLOCKED — TIMEOUT POLICY UNBOUND")
     added["C03-TA-V-008"] = [
         variant("SB-008-V5-TIMEOUT-REACHED", "ADP-EVALUATE-TIMEOUT", tmo("2026-06-01T00:00:31Z"), "CR-V5-008-TIMEOUT", "V5_FIXTURE_MAPPED"),
         variant("SB-008-V5-LATE-RESULT", "ADP-EVALUATE-TIMEOUT", tmo("2026-06-01T00:00:45Z", "2026-06-01T00:00:30Z"), "CR-V5-008-LATE", "V5_FIXTURE_MAPPED"),
         variant("SB-008-V5-DEADLINE-PENDING", "ADP-EVALUATE-TIMEOUT", tmo("2026-06-01T00:00:10Z"), "CR-V5-008-PENDING", "V5_RAW_CHECK"),
-        variant("SB-008-V5-RESULT-AFTER-OBSERVATION", "ADP-EVALUATE-TIMEOUT", tmo("2026-06-01T00:00:10Z", "2026-06-01T00:00:20Z"), "CR-V5-008-UNBOUND", "V5_RAW_CHECK")]
+        variant("SB-008-V5-RESULT-AFTER-OBSERVATION", "ADP-EVALUATE-TIMEOUT", tmo("2026-06-01T00:00:10Z", "2026-06-01T00:00:20Z"), "CR-V5-008-UNBOUND", "V5_RAW_CHECK"),
+        variant("SB-008-V5-DEADLINE-NOT-POLICY", "ADP-EVALUATE-TIMEOUT",
+                {**tmo("2026-06-01T00:00:31Z"), "deadline_at": "2036-06-01T00:00:30Z"}, "CR-V5-008-UNBOUND", "V5_RAW_CHECK")]
 
     prec = lambda kill, rev, scope="SYNTHETIC-SCOPE-A", known=True: {
         "kill": ref(kill) if kill else None, "revocation": ref(rev) if rev else None, "control_state_known": known, "subject_scope": scope}
@@ -221,9 +224,9 @@ def main():
         variant("SB-009-V5-REVOCATION-PASSED-AS-KILL", "ADP-CONTROL-PRECEDENCE", prec("OBJ-V5-REVOCATION", None), "CR-V5-009-WRONG-KIND", "V5_RAW_CHECK")]
 
     rules["CR-V5-010-KILL-FIRST"] = cd_rule(["SB-010-V5-KILL-PRECEDES-REVOCATION"], "KILLED", "BLOCKED — KILL ACTIVE",
-                                            mapping("C03-TA-V-010", "kill takes priority over revocation; no release authority present"))
+                                            mapping("C03-TA-V-010", "kill takes priority over revocation for the subject scope"))
     rules["CR-V5-010-ROLLBACK-KILLED"] = cd_rule(["SB-010-V5-ROLLBACK-WHILE-KILLED"], "KILLED", "BLOCKED — KILL ACTIVE")
-    rbk = lambda r="OBJ-V5-ROLLBACK", acc=("SYNTHETIC_PRIOR",), dec=False, kill=False: {
+    rbk = lambda r="OBJ-V5-ROLLBACK", acc=("SYNTHETIC_PRIOR",), dec=False, kill=False: {  # kill may be None (unknown)
         "reference": ref(r), "accepted_prior_identities": tup(*acc), "decision_reference_valid": dec, "kill_active": kill, "revoked": False}
     added["C03-TA-V-010"] = [
         variant("SB-010-V5-KILL-PRECEDES-REVOCATION", "ADP-CONTROL-PRECEDENCE", prec("OBJ-V5-KILL", "OBJ-V5-REVOCATION"), "CR-V5-010-KILL-FIRST", "V5_FIXTURE_MAPPED"),
@@ -234,17 +237,19 @@ def main():
     rules["CR-V5-011-TARGET"] = cd_rule(["SB-011-V5-TARGET-NOT-ACCEPTED"], "PROTECTED_BLOCKED", "ROLLBACK BLOCKED — TARGET NOT AN ACCEPTED PRIOR VERSION")
     rules["CR-V5-011-AUDIT"] = cd_rule(["SB-011-V5-AUDIT-NOT-PROTECTED"], "PROTECTED_BLOCKED", "ROLLBACK BLOCKED — SURFACE NOT BOUNDED")
     rules["CR-V5-011-STALE"] = cd_rule(["SB-011-V5-SUPERSEDED-IDENTITY"], "STALE", "STALE — SUPERSEDED IDENTITY; NO FALLBACK")
+    rules["CR-V5-011-KILL-UNKNOWN"] = cd_rule(["SB-011-V5-KILL-STATE-UNKNOWN"], "PROTECTED_BLOCKED", "PROTECTED_BLOCKED — CONTROL STATE UNKNOWN")
     added["C03-TA-V-011"] = [
         variant("SB-011-V5-NO-DECISION", "ADP-EVALUATE-ROLLBACK", rbk(), "CR-V5-011-ELIGIBILITY", "V5_FIXTURE_MAPPED"),
         variant("SB-011-V5-TARGET-NOT-ACCEPTED", "ADP-EVALUATE-ROLLBACK", rbk(acc=()), "CR-V5-011-TARGET", "V5_RAW_CHECK"),
         variant("SB-011-V5-AUDIT-NOT-PROTECTED", "ADP-EVALUATE-ROLLBACK", rbk(r="OBJ-V5-ROLLBACK-AUDIT-UNPROTECTED"), "CR-V5-011-AUDIT", "V5_RAW_CHECK"),
         variant("SB-011-V5-SUPERSEDED-IDENTITY", "ADP-EVALUATE-SUPERSESSION",
-                {"identity": "SYNTHETIC_PRIOR", "supersessions": tup(ref("OBJ-V5-SUPERSESSION"))}, "CR-V5-011-STALE", "V5_RAW_CHECK")]
+                {"identity": "SYNTHETIC_PRIOR", "supersessions": tup(ref("OBJ-V5-SUPERSESSION"))}, "CR-V5-011-STALE", "V5_RAW_CHECK"),
+        variant("SB-011-V5-KILL-STATE-UNKNOWN", "ADP-EVALUATE-ROLLBACK", rbk(kill=None), "CR-V5-011-KILL-UNKNOWN", "V5_RAW_CHECK")]
 
     chain = lambda recs, h: {"records": tup(*[ref(r) for r in recs]), "expected_head_sha256": h}
     rules["CR-V5-012-MISMATCH"] = cd_rule(["SB-012-V5-CHAIN-HEAD-MISMATCH"], "QUARANTINED", "QUARANTINED — INTEGRITY FAILURE",
                                           mapping("C03-TA-V-012", "a deterministic head mismatch quarantines the audit reference path"))
-    rules["CR-V5-012-REORDERED"] = cd_rule(["SB-012-V5-CHAIN-REORDERED"], "QUARANTINED", "QUARANTINED — INTEGRITY FAILURE")
+    rules["CR-V5-012-REORDERED"] = cd_rule(["SB-012-V5-CHAIN-REORDERED", "SB-012-V5-FIELD-TAMPERED"], "QUARANTINED", "QUARANTINED — INTEGRITY FAILURE")
     rules["CR-V5-012-MATCHED"] = cd_rule(["SB-012-V5-CHAIN-MATCHED"], "PROTECTED_BLOCKED", "AUDIT CHAIN MATCHED — CANDIDATE ONLY; NOT PERSISTED",
                                          limitation=LIMITED_NOTE + "; the expected head is computed by the builder's independent re-implementation")
     rules["CR-V5-012-EMPTY"] = cd_rule(["SB-012-V5-CHAIN-EMPTY"], "PROTECTED_BLOCKED", "PROTECTED_BLOCKED — AUDIT CHAIN UNAVAILABLE")
@@ -252,7 +257,8 @@ def main():
         variant("SB-012-V5-CHAIN-HEAD-MISMATCH", "ADP-VERIFY-AUDIT-CHAIN", chain(["OBJ-V5-AUDIT-1", "OBJ-V5-AUDIT-2"], "8" * 64), "CR-V5-012-MISMATCH", "V5_FIXTURE_MAPPED"),
         variant("SB-012-V5-CHAIN-REORDERED", "ADP-VERIFY-AUDIT-CHAIN", chain(["OBJ-V5-AUDIT-2", "OBJ-V5-AUDIT-1"], head), "CR-V5-012-REORDERED", "V5_RAW_CHECK"),
         variant("SB-012-V5-CHAIN-MATCHED", "ADP-VERIFY-AUDIT-CHAIN", chain(["OBJ-V5-AUDIT-1", "OBJ-V5-AUDIT-2"], head), "CR-V5-012-MATCHED", "V5_RAW_CHECK"),
-        variant("SB-012-V5-CHAIN-EMPTY", "ADP-VERIFY-AUDIT-CHAIN", chain([], head), "CR-V5-012-EMPTY", "V5_RAW_CHECK")]
+        variant("SB-012-V5-CHAIN-EMPTY", "ADP-VERIFY-AUDIT-CHAIN", chain([], head), "CR-V5-012-EMPTY", "V5_RAW_CHECK"),
+        variant("SB-012-V5-FIELD-TAMPERED", "ADP-VERIFY-AUDIT-CHAIN", chain(["OBJ-V5-AUDIT-1", "OBJ-V5-AUDIT-2-TAMPERED"], head), "CR-V5-012-REORDERED", "V5_RAW_CHECK")]
 
     dep = lambda req, auth, avail: {"requested_dependency": req, "authorized_dependencies": tup(*auth), "availability_state": avail}
     rules["CR-V5-013-UNAVAILABLE"] = cd_rule(["SB-013-V5-PROVIDER-UNAVAILABLE"], "PROTECTED_BLOCKED", "BLOCKED — DEPENDENCY OR PROVIDER UNAVAILABLE; NO SUBSTITUTION",

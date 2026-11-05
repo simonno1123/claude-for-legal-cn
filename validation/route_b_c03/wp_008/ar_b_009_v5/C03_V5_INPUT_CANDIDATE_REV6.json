@@ -148,7 +148,7 @@
   "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
   "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
   "scripts/phase2_runtime/route_b_c03/isolation.py": "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B",
-  "scripts/phase2_runtime/route_b_c03/failures.py": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+  "scripts/phase2_runtime/route_b_c03/failures.py": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
   "scripts/phase2_runtime/route_b_c03/audit.py": "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
   "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
   "scripts/phase2_runtime/route_b_c03/capability.py": "8D0B3CD664A893609EDCEFABADCD48EAA77DEF6B519872DA27E9E15F68EA7686"
@@ -221,7 +221,7 @@
   },
   "ADP-EVALUATE-RETRY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_retry",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -246,7 +246,7 @@
   },
   "ADP-PROTECTED-STATE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "protected_state",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "keyword_only": [
@@ -257,7 +257,7 @@
   },
   "ADP-EVALUATE-RELEASE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_release",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -335,7 +335,7 @@
   },
   "ADP-CONTROL-PRECEDENCE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_control_precedence",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [],
@@ -348,7 +348,7 @@
   },
   "ADP-EVALUATE-IDEMPOTENCY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_idempotency",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -364,7 +364,7 @@
   },
   "ADP-EVALUATE-TIMEOUT": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_timeout",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -379,7 +379,7 @@
   },
   "ADP-EVALUATE-ROLLBACK": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_rollback",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -394,7 +394,7 @@
   },
   "ADP-EVALUATE-SUPERSESSION": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_supersession",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -405,7 +405,7 @@
   },
   "ADP-VERIFY-AUDIT-CHAIN": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "verify_audit_chain",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -417,7 +417,7 @@
   },
   "ADP-EVALUATE-DEPENDENCY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/failures.py",
-   "subject_sha256": "19E7EB6EFBA6AB8F13F7FB0268EF8F047F776F387B6C2C8CDB2D01DC514F3A3E",
+   "subject_sha256": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
    "callable": "evaluate_dependency",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -773,7 +773,7 @@
     "version": "1.0-SYNTHETIC",
     "sha256": "7777777777777777777777777777777777777777777777777777777777777777",
     "start_category": "SYNTHETIC-START",
-    "deadline_duration": "PT30S-SYNTHETIC",
+    "deadline_duration": "PT30S",
     "late_result_policy": "DENY_USE",
     "terminal_state": {
      "enum_class": "ControlState",
@@ -946,6 +946,34 @@
     "prior_state": "UNCHECKED",
     "next_state": "QUARANTINED",
     "reason_code": "INTEGRITY_CHECK",
+    "decision_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY",
+    "created_at": "SYNTHETIC-ORDER-MARKER",
+    "redaction_state": "SYNTHETIC-REDACTED-METADATA",
+    "input_artifact_references": {
+     "tuple": []
+    },
+    "supersedes": "SYNTHETIC-AUDIT-V5-001"
+   }
+  },
+  "OBJ-V5-AUDIT-2-TAMPERED": {
+   "type": "AuditRecordCandidate",
+   "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
+   "source_sha256": "D0D5DA397EF4DFA0DB47D924A90CB9EBD9017F737FCB7B915AE9633D7C6F310A",
+   "arguments": {
+    "audit_id": "SYNTHETIC-AUDIT-V5-002",
+    "correlation_id": "SYNTHETIC-CORRELATION-V5",
+    "capability_reference": "SYNTHETIC-C03-CAPABILITY-REFERENCE",
+    "implementation_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+    "configuration_sha256": "NONE",
+    "domain_reference": "C03-SYNTHETIC",
+    "tier_b_packet_reference": "SYNTHETIC-PACKET-REFERENCE",
+    "matter_reference": "SYNTHETIC-MATTER-001",
+    "actor_reference": "SYNTHETIC-ACTOR-001",
+    "purpose": "SYNTHETIC-INTEGRITY-METADATA",
+    "operation": "SYNTHETIC-AUDIT-CHAIN",
+    "prior_state": "UNCHECKED",
+    "next_state": "QUARANTINED",
+    "reason_code": "INTEGRITY_CHECK_ALTERED",
     "decision_reference": "SYNTHETIC-REFERENCE-NOT-AUTHORITY",
     "created_at": "SYNTHETIC-ORDER-MARKER",
     "redaction_state": "SYNTHETIC-REDACTED-METADATA",
@@ -1756,7 +1784,8 @@
    "status": "DRAFTED_REV6_NOT_ACCEPTED",
    "derivation": "pre-declared from static reading of the V5 subject source before any harness run",
    "applies_to": [
-    "SB-008-V5-RESULT-AFTER-OBSERVATION"
+    "SB-008-V5-RESULT-AFTER-OBSERVATION",
+    "SB-008-V5-DEADLINE-NOT-POLICY"
    ],
    "observation_surface": "ControlDetermination.state/reason_code",
    "raw_requirement": {
@@ -1884,7 +1913,7 @@
    "fixture_mapping": {
     "expected_state": "BLOCKED_KILL_ACTIVE",
     "expected_reason_class": "KILL_STATE_DENIAL",
-    "mapping_basis": "kill takes priority over revocation; no release authority present"
+    "mapping_basis": "kill takes priority over revocation for the subject scope"
    },
    "coverage_class": "PARTIAL_LIMITED",
    "limitation": "deterministic control logic over caller-supplied references only; no runtime timer, signal propagation, persistence, ledger or real dependency is observed",
@@ -2006,6 +2035,28 @@
    "mismatch_policy": "DO_NOT_ASSERT_CONFORMANCE; PRESERVE RAW OBSERVATION OR EXCEPTION; THE VARIANT IS FAIL",
    "post_hoc_change": "PROHIBITED"
   },
+  "CR-V5-011-KILL-UNKNOWN": {
+   "status": "DRAFTED_REV6_NOT_ACCEPTED",
+   "derivation": "pre-declared from static reading of the V5 subject source before any harness run",
+   "applies_to": [
+    "SB-011-V5-KILL-STATE-UNKNOWN"
+   ],
+   "observation_surface": "ControlDetermination.state/reason_code",
+   "raw_requirement": {
+    "type": "ControlDetermination",
+    "state": {
+     "enum_class": "ControlState",
+     "member": "PROTECTED_BLOCKED"
+    },
+    "reason_code": "PROTECTED_BLOCKED — CONTROL STATE UNKNOWN"
+   },
+   "fixture_mapping": null,
+   "coverage_class": "SUPPLEMENTARY_RAW_CHECK",
+   "limitation": "deterministic control logic over caller-supplied references only; no runtime timer, signal propagation, persistence, ledger or real dependency is observed",
+   "comparison_mode": "EXACT_NATIVE_TYPES_AND_VALUES; NO SEMANTIC NORMALIZATION, PREFIX MATCH OR REASON SUBSTITUTION",
+   "mismatch_policy": "DO_NOT_ASSERT_CONFORMANCE; PRESERVE RAW OBSERVATION OR EXCEPTION; THE VARIANT IS FAIL",
+   "post_hoc_change": "PROHIBITED"
+  },
   "CR-V5-012-MISMATCH": {
    "status": "DRAFTED_REV6_NOT_ACCEPTED",
    "derivation": "pre-declared from static reading of the V5 subject source before any harness run",
@@ -2036,7 +2087,8 @@
    "status": "DRAFTED_REV6_NOT_ACCEPTED",
    "derivation": "pre-declared from static reading of the V5 subject source before any harness run",
    "applies_to": [
-    "SB-012-V5-CHAIN-REORDERED"
+    "SB-012-V5-CHAIN-REORDERED",
+    "SB-012-V5-FIELD-TAMPERED"
    ],
    "observation_surface": "ControlDetermination.state/reason_code",
    "raw_requirement": {
@@ -3194,6 +3246,24 @@
      "observation_surface": "ControlDetermination.state/reason_code",
      "comparison_rule_id": "CR-V5-008-UNBOUND",
      "variant_role": "V5_RAW_CHECK"
+    },
+    {
+     "stimulus_binding_id": "SB-008-V5-DEADLINE-NOT-POLICY",
+     "adapter_id": "ADP-EVALUATE-TIMEOUT",
+     "arguments": {
+      "policy": {
+       "object_ref": "OBJ-V5-TIMEOUT-POLICY"
+      },
+      "started_at": "2026-06-01T00:00:00Z",
+      "deadline_at": "2036-06-01T00:00:30Z",
+      "observed_at": "2026-06-01T00:00:31Z",
+      "result_received_at": null
+     },
+     "object_overrides": {},
+     "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+     "observation_surface": "ControlDetermination.state/reason_code",
+     "comparison_rule_id": "CR-V5-008-UNBOUND",
+     "variant_role": "V5_RAW_CHECK"
     }
    ],
    "original_oracle": {
@@ -3692,6 +3762,28 @@
      "observation_surface": "ControlDetermination.state/reason_code",
      "comparison_rule_id": "CR-V5-011-STALE",
      "variant_role": "V5_RAW_CHECK"
+    },
+    {
+     "stimulus_binding_id": "SB-011-V5-KILL-STATE-UNKNOWN",
+     "adapter_id": "ADP-EVALUATE-ROLLBACK",
+     "arguments": {
+      "reference": {
+       "object_ref": "OBJ-V5-ROLLBACK"
+      },
+      "accepted_prior_identities": {
+       "tuple": [
+        "SYNTHETIC_PRIOR"
+       ]
+      },
+      "decision_reference_valid": false,
+      "kill_active": null,
+      "revoked": false
+     },
+     "object_overrides": {},
+     "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+     "observation_surface": "ControlDetermination.state/reason_code",
+     "comparison_rule_id": "CR-V5-011-KILL-UNKNOWN",
+     "variant_role": "V5_RAW_CHECK"
     }
    ],
    "original_oracle": {
@@ -3965,6 +4057,28 @@
      "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
      "observation_surface": "ControlDetermination.state/reason_code",
      "comparison_rule_id": "CR-V5-012-EMPTY",
+     "variant_role": "V5_RAW_CHECK"
+    },
+    {
+     "stimulus_binding_id": "SB-012-V5-FIELD-TAMPERED",
+     "adapter_id": "ADP-VERIFY-AUDIT-CHAIN",
+     "arguments": {
+      "records": {
+       "tuple": [
+        {
+         "object_ref": "OBJ-V5-AUDIT-1"
+        },
+        {
+         "object_ref": "OBJ-V5-AUDIT-2-TAMPERED"
+        }
+       ]
+      },
+      "expected_head_sha256": "D446CDB52078BB75ACFEB4549DF7379399AC0774997561E30D187CF0A442F1C4"
+     },
+     "object_overrides": {},
+     "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+     "observation_surface": "ControlDetermination.state/reason_code",
+     "comparison_rule_id": "CR-V5-012-REORDERED",
      "variant_role": "V5_RAW_CHECK"
     }
    ],
@@ -4536,11 +4650,11 @@
    "subject hashes re-computed from the V5 sources (catalog source_sha256 refreshed for 10 objects)",
    "7 adapters for the WP-009 evaluators",
    "synthetic catalog objects for the evaluators",
-   "25 variants with 25 new rules; 8 are fixture-mapped",
+   "28 variants with 26 new rules; 8 are fixture-mapped",
    "coverage_class_rev6 = PARTIAL_LIMITED for C03-TA-V-006, C03-TA-V-008, C03-TA-V-009, C03-TA-V-010, C03-TA-V-011, C03-TA-V-012, C03-TA-V-013"
   ],
   "audit_chain_expected_head": "D446CDB52078BB75ACFEB4549DF7379399AC0774997561E30D187CF0A442F1C4",
-  "variant_count": 67,
+  "variant_count": 70,
   "runtime_version_of_record": "CPython 3.12.10 (P1-PYVER)"
  }
 }
