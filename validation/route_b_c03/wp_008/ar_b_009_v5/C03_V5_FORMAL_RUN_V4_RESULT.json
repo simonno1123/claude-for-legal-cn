@@ -1,0 +1,114 @@
+{
+  "RecordKind": "C03_AR_B_009_V5_FORMAL_RUN_V4_RESULT",
+  "Outcome": "PASS_FORMAL_V4",
+  "Classification": "FORMAL_RUN_RESULT_PENDING_OWNER_ACCEPTANCE",
+  "Authorization": {
+    "Decision": "V5-RUN-FORMAL-V4",
+    "Record": "validation/route_b_c03/wp_008/ar_b_009_v5/C03_V5_OWNER_DECISIONS_REV1.json"
+  },
+  "ManifestBasis": {
+    "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV3.json",
+    "SHA256": "864DD7FED05052145E3F7C170E28B451138FD8C8B9818D5E14E9BFD99811855B",
+    "Bytes": 493703,
+    "Accepted": true
+  },
+  "Install": {
+    "InstalledUtc": "2026-11-05T03:28:04.3931403Z",
+    "Files": 30,
+    "AllMatchExpected": true
+  },
+  "Run": {
+    "SupervisorStartedUtc": "2026-11-05T03:28:19.8613994Z",
+    "SupervisorPid": 4564,
+    "HarnessPid": 3452,
+    "ExitCode": 0,
+    "ExitSeenUtc": "2026-11-05T03:28:39.0677251Z",
+    "ReleasedUtc": "2026-11-05T03:28:41.0608983Z",
+    "LockedFiles": 803,
+    "HashMismatches": 0,
+    "SignatureProblems": 0,
+    "TreeFiles": 781,
+    "TreeDirs": 91,
+    "RunChecks": "29/29",
+    "FailedChecks": [],
+    "Python": "3.12.10",
+    "InputSha256": "418AD1EE9144C28E93DF571FD829C660E6B8EDA4DD06B3B16CDEEC1AAF1BE9C0",
+    "HarnessTotals": {
+      "variants": 70,
+      "pass": 70,
+      "fail": 0,
+      "conformant_full": 12,
+      "conformant_partial_limited": 13,
+      "not_mapped": 45,
+      "mapped_not_conformant": 0,
+      "guard_denied": 0
+    },
+    "V5Variants": "28/28 PASS; 8 fixture-mapped and conformant"
+  },
+  "ManifestConformance": {
+    "ImportClosureModules": 96,
+    "ModulesEqualManifest": true,
+    "ClosureFilesOutsideManifestEntries": 0,
+    "DeniedModulesInClosure": [],
+    "VersusPreflightV2": "identical apart from the project_v4 origins of __main__ and the 9 subject modules; native modules and sys.path identical (§D1 item 10 confirmed)"
+  },
+  "AuditCrossCheck": {
+    "SupervisorExitPromptly": "powershell 4689 at 03:28:41.131, 0.07 s after release",
+    "AllProcessesMediumIntegrity": true,
+    "HarnessExit4689": "0x0",
+    "SupervisorExit4689": "0x0",
+    "Logoff4634BeforeCollection": true,
+    "RecordNumbers": "65637..78529 contiguous (12893)",
+    "FailedLogons4625": 0,
+    "LogCleared1102": 0,
+    "NewIntegrityEvents": "none",
+    "LauncherHashes": "equal to prepared values",
+    "InstalledFiles": "30/30 match"
+  },
+  "Files": [
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/install_formal_v4_result.json",
+      "SHA256": "F4A2D11C45A554002BDD58F281EE52555B90DC31A4E636019BB134A1CCA61D03",
+      "Bytes": 13524,
+      "Accepted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_pre_collect_result.json",
+      "SHA256": "089C7A5F0B322B2B4AEBB257D668AC75BF23B3407A430067C6303CAB2460F794",
+      "Bytes": 830,
+      "Accepted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_post_collect_result.json",
+      "SHA256": "828FCC880B3C0B878CEB561E31168C2B07D71D3FBE4351A0DCA9EBE967DBE620",
+      "Bytes": 119376,
+      "Accepted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_run_record.RAW_REDACTED.json",
+      "SHA256": "1A5C202F9378DCA0B131DA4B48D1CD56CE6D5AE20F9F5D93B42622516E9152C1",
+      "Bytes": 443879,
+      "Accepted": false,
+      "UnredactedSHA256": "BC88F3E29859CE5B17509CAFD57A698D0BCF34F355F6EDFB9AD9529E2186CFA9",
+      "UnredactedBytes": 443905
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/formal_v4_run/formal_v4_events_history.RAW_REDACTED.xml",
+      "SHA256": "7375613597EE6FC4D7E0D7630223771BA0BA8E0373ED83E593D5CB2F3E9302A6",
+      "Bytes": 202048,
+      "Accepted": false,
+      "UnredactedSHA256": "D30BB1AAEDE21C2A5868C36EE8066A11E5CF43B717ADA571F7412C5442AD6985",
+      "UnredactedBytes": 206781
+    }
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false
+  },
+  "RetainedState": {
+    "AR_B_009": "OPEN / BLOCKED",
+    "AR_B_008": "OPEN / BLOCKED",
+    "C03": "NOT READY"
+  }
+}
