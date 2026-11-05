@@ -1,0 +1,47 @@
+{
+  "RecordKind": "C03_AR_B_009_V5_MANIFEST_ACCEPTANCE_AND_FORMAL_V4_RUN_AUTHORIZATION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "PR": 65,
+    "Review": ".codex-coordination/reviews/TASK_PHASE2_ROUTE_B_C03_AR_B_009_V5_REVISION_REVIEW_REV1.md (PASS WITH NOTES; SAME_MODEL_FAMILY_NOT_EXTERNAL)"
+  },
+  "Decisions": [
+    {
+      "Id": "V5-ACCEPT-MANIFEST",
+      "Choice": "接受（含偏离与取值）",
+      "Accepted": [
+        {
+          "Path": "validation/route_b_c03/wp_008/ar_b_009_v5/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV3.json",
+          "SHA256": "864DD7FED05052145E3F7C170E28B451138FD8C8B9818D5E14E9BFD99811855B",
+          "Bytes": 493703
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_AR_B_009_V5_MANIFEST_SUPPORT_POLICIES_REV3.md",
+          "SHA256": "AA5537D384D5249FB446A527E522E5ED3399644C4F10EEB284BFBC03A94B4B17",
+          "Bytes": 13098
+        },
+        {
+          "Path": ".codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_AR_B_009_WORK_AUTHORIZATION.md",
+          "SHA256": "B23D7130F52259002EC00BFACCBBF74E81038288016BC6B16A5AC9C72314C8EF",
+          "Bytes": 3492
+        }
+      ],
+      "DeviationsConfirmed": 11,
+      "DesignValuesConfirmed": 6
+    },
+    {
+      "Id": "V5-RUN-FORMAL-V4",
+      "Choice": "授权正式运行 v4",
+      "Effect": "owner runs go_formal_v4.cmd once; recorder collects, verifies and records"
+    }
+  ],
+  "NotDecided": [
+    "V5 implementation acceptance",
+    "AR-B-009 closure",
+    "AR-B-008 closure"
+  ],
+  "AR_B_009": "OPEN / BLOCKED",
+  "C03": "NOT READY"
+}
