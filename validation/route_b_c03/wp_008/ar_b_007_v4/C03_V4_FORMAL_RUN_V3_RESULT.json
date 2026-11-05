@@ -1,0 +1,132 @@
+{
+  "RecordKind": "C03_AR_B_007_V4_FORMAL_RUN_V3_RESULT",
+  "Outcome": "PASS_FORMAL_V3",
+  "Classification": "FORMAL_RUN_RESULT_PENDING_OWNER_ACCEPTANCE",
+  "Authorization": {
+    "Decision": "V4-RUN-FORMAL-V3",
+    "Record": "validation/route_b_c03/wp_008/ar_b_007_v4/C03_V4_OWNER_DECISIONS_REV1.json"
+  },
+  "ManifestBasis": {
+    "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV2.json",
+    "SHA256": "55308C77DBF8AB04368280E049029FBF2091E50BF283B31E81CEC87AEA4E10F4",
+    "Bytes": 465467,
+    "Accepted": true
+  },
+  "Install": {
+    "InstalledUtc": "2026-11-05T01:57:59.3833804Z",
+    "Files": 30,
+    "AllMatchExpected": true
+  },
+  "Run": {
+    "SupervisorStartedUtc": "2026-11-05T01:59:26.5280778Z",
+    "SupervisorPid": 14356,
+    "HarnessPid": 5720,
+    "ExitCode": 0,
+    "ExitSeenUtc": "2026-11-05T01:59:57.3257747Z",
+    "ReleasedUtc": "2026-11-05T01:59:59.3187188Z",
+    "LockedFiles": 773,
+    "HashMismatches": 0,
+    "SignatureProblems": 0,
+    "TreeFiles": 751,
+    "TreeDirs": 81,
+    "RunChecks": "29/29",
+    "FailedChecks": [],
+    "Python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "InputSha256": "8A422CEE97A9434201CFA4309A2359672DD3E9ADEBF9322CD1C2AFBD9A27800A",
+    "HarnessTotals": {
+      "variants": 42,
+      "pass": 42,
+      "fail": 0,
+      "conformant_full": 12,
+      "conformant_partial_limited": 5,
+      "not_mapped": 25,
+      "mapped_not_conformant": 0,
+      "guard_denied": 0
+    },
+    "V4Variants": "14/14 PASS (B1, B2, N1, N2)"
+  },
+  "ManifestConformance": {
+    "ImportClosureModules": 96,
+    "ModulesEqualManifest": true,
+    "NativeModules": 24,
+    "ClosureFilesOutsideManifestEntries": 0,
+    "DeniedModulesInClosure": [],
+    "VersusPreflightV2": "same module names, loaders and runtime origins; only the project_v2 -> project_v3 origins of __main__ and the 9 subject modules differ; native modules and sys.path identical (§D1 item 10 confirmed)",
+    "EnvironNames": [
+      "PATH",
+      "SYSTEMDRIVE",
+      "SYSTEMROOT",
+      "WINDIR"
+    ]
+  },
+  "AuditCrossCheck": {
+    "SupervisorStart4688": {
+      "Record": 78202,
+      "Pid": 14356,
+      "Label": "S-1-16-8192 (medium)"
+    },
+    "HarnessStart4688": {
+      "Record": 78208,
+      "Pid": 5720
+    },
+    "HarnessExit4689": "0x0",
+    "SupervisorExit4689": {
+      "Record": 78220,
+      "Status": "0x0",
+      "At": "2026-11-05T02:01:56.756Z",
+      "Note": "about 2 minutes after the record was written and released (01:59:59); no dsp004val process started in between; the most likely cause is console output blocked while the window was in selection (QuickEdit) mode. The record and the release precede it."
+    },
+    "Logoff4634BeforeCollection": true,
+    "RecordNumbers": "65637..78225 contiguous (12589)",
+    "FailedLogons4625": 0,
+    "LogCleared1102": 0,
+    "NewIntegrityEvents": "none (counts unchanged since the 11-02 planned reboot)",
+    "LauncherHashes": "go_formal_v3.cmd and collect_formal_v3.ps1 equal the prepared values",
+    "InstalledFiles": "30/30 match"
+  },
+  "Files": [
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/formal_v3_run/install_formal_v3_result.json",
+      "SHA256": "15003185286B3C582934EBE56025877A4B25413FAD05FAD7DC8F3D5974D0B797",
+      "Bytes": 13523,
+      "Accepted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/formal_v3_run/formal_v3_pre_collect_result.json",
+      "SHA256": "F6D8A27BF4CBC6E2D96BA4AC74CDBDFABDCAF7F74449087D84D216D325B7608E",
+      "Bytes": 830,
+      "Accepted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/formal_v3_run/formal_v3_post_collect_result.json",
+      "SHA256": "FB558C105ECEF09BF1EF2853DB6D455DF4B861E5A252352B2A8326DCC45EF64C",
+      "Bytes": 110263,
+      "Accepted": false
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/formal_v3_run/formal_v3_run_record.RAW_REDACTED.json",
+      "SHA256": "CE1FB778474350B1D5A3EC6174F4D08C8C0617060C4A4E300499986BD3A3AC63",
+      "Bytes": 414265,
+      "Accepted": false,
+      "UnredactedSHA256": "6BF9F1C3F5D2F7C562391BCDCF91D4E40F451CAF86413C74525A6377D847F938",
+      "UnredactedBytes": 414291
+    },
+    {
+      "Path": "validation/route_b_c03/wp_008/ar_b_007_v4/formal_v3_run/formal_v3_events_history.RAW_REDACTED.xml",
+      "SHA256": "55697CFE072E2D019C94F00555D68C278EE9B05125386ED0A20FE220BE34214B",
+      "Bytes": 184322,
+      "Accepted": false,
+      "UnredactedSHA256": "A03BCDE8226CED5E45B91F33B410A20E4E9F07707DEF432976FCC01DB565D5A9",
+      "UnredactedBytes": 188645
+    }
+  ],
+  "Writer": {
+    "Name": "Claude",
+    "Role": "RECORDER_ONLY",
+    "IsOwner": false
+  },
+  "RetainedState": {
+    "AR_B_007": "OPEN / BLOCKED",
+    "C03": "NOT READY"
+  }
+}
