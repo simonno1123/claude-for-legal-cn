@@ -1,0 +1,119 @@
+{
+  "RecordKind": "C03_TIER_A_CLOSURE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature or owner commit",
+  "Basis": {
+    "Packets": [
+      {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_AR_B_008_CLOSURE_EVIDENCE_PACKET_REV1.md",
+        "SHA256": "4F45F231C34C709FC0241BDC844FC0084D833239EF2A0E436C51BAD7AE8993FF",
+        "Bytes": 16361
+      },
+      {
+        "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_AR_B_008_CLOSURE_EVIDENCE_PACKET_REV2.md",
+        "SHA256": "BB46DD2FDAC93B67B2B206EB0500D16620CAD34651CA4898235EB6C009E49F00",
+        "Bytes": 9600
+      }
+    ],
+    "PR": 73
+  },
+  "Decisions": [
+    {
+      "Id": "V7-ACCEPT-IMPLEMENTATION",
+      "Choice": "验收 V7（推荐）",
+      "AcceptedImplementation": {
+        "scripts/phase2_runtime/__init__.py": "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
+        "scripts/phase2_runtime/route_b_c03/__init__.py": "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
+        "scripts/phase2_runtime/route_b_c03/contracts.py": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
+        "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
+        "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
+        "scripts/phase2_runtime/route_b_c03/isolation.py": "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8",
+        "scripts/phase2_runtime/route_b_c03/failures.py": "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
+        "scripts/phase2_runtime/route_b_c03/audit.py": "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
+        "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+        "scripts/phase2_runtime/route_b_c03/capability.py": "E4EA6A90D6E8B18E7242F3C7D782F554AEF94B9C55AA731B83FEF0CB5E849DB6"
+      },
+      "AcceptedRecords": [
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/C03_V7_FORMAL_RUN_V6_RESULT.json",
+          "SHA256": "29EC91E712022E29897F0A0EFBCAAA7FEC78B76932DADCD06B154090C1A86AD2",
+          "Bytes": 3797
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_MATERIALIZATION_RECORD_REVISION_V7_CANDIDATE.md",
+          "SHA256": "48DD57D9040425E5A19D9161599952EFF2BEAC07FE164EC7034A6028D6D8118F",
+          "Bytes": 9609
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/C03_V7_INPUT_CANDIDATE_REV8.json",
+          "SHA256": "572D9C7DA572EE12FDAD7E0B70205744DFFE67AA90BDC6AA96F3786B92EB0BED",
+          "Bytes": 247676
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/harness_rev8.py",
+          "SHA256": "C4086A40D985C3D4CDA2A155AF11646476871B9A3361C71C859C64ED489FF9DA",
+          "Bytes": 30299
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/install_formal_v6_result.json",
+          "SHA256": "389552F2785887853E4864C588BFD87094FCA5500AFDB90E78D842D31387A73A",
+          "Bytes": 13514
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_pre_collect_result.json",
+          "SHA256": "A215E59E53D7AFAF093B110D44BB7310090260396C3E44C15F1EAB06D40C4A2C",
+          "Bytes": 830
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_post_collect_result.json",
+          "SHA256": "CCB0F77616F770300FD5F0D85530B155B3ACF7BFA2BF754005D0EA7EDAC7F1DD",
+          "Bytes": 138124
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_run_record.RAW_REDACTED.json",
+          "SHA256": "3BB10960E4C85B6017F1AB3E5B7674749C0F663E61FC5ED8D0B6E56C23A82888",
+          "Bytes": 487043
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/formal_v6_run/formal_v6_events_history.RAW_REDACTED.xml",
+          "SHA256": "D4CF10394B282345321AF98CCCDD6DCC2443FCFC3DB67ADF959AD92427083147",
+          "Bytes": 239009
+        }
+      ],
+      "Effect": "formal run v6 result and the V7 implementation accepted at the exact SHAs, with the limitations of the V7 record; the earlier V7-ACCEPT-MANIFEST bound these identities for the run only"
+    },
+    {
+      "Id": "AR-B-007-RECLOSE",
+      "Choice": "重新关闭两项（推荐）",
+      "Effect": "AR-B-007 (adapter and C03 implementation), literally reopened by hash change since V5, CLOSED again at the AcceptedImplementation SHAs; scope and limitations as in the original closure plus the V7 limitations; withdrawal conditions of plan §7.7 stay in force"
+    },
+    {
+      "Id": "AR-B-009-RECLOSE",
+      "Choice": "重新关闭两项（推荐）",
+      "Effect": "AR-B-009 (recovery and audit controls), literally reopened by the V7 change to failures.py, CLOSED again at the AcceptedImplementation SHAs; scope: deterministic control logic; withdrawal conditions of plan §7.9 stay in force"
+    },
+    {
+      "Id": "AR-B-008-CLOSE-WITH-LIMITS",
+      "Choice": "带局限关闭（推荐）",
+      "Scope": "operational validation of capability-layer decision logic",
+      "DeviationsAccepted": [
+        "exit gate: 8 of 15 scenarios PARTIAL_LIMITED, the 7 FULL ones with stated limits; all reviews same-model-family, not external",
+        "evidence: formal run v6 serves as both C03-CP-E-011 and C03-CP-E-013 at the current SHAs",
+        "objective: only the pre-transition check (controls then identity gate) is wired into capability.py; other evaluators remain module functions"
+      ],
+      "Handover": "unverified items of packet REV1 section 四 not removed by packet REV2 section 三, and the limitations of packet REV2 section 二, become open items and residual risks of the Final Readiness Review (C03-CP-E-014)",
+      "Effect": "AR-B-008 (operational validation) CLOSED WITH LIMITATIONS under C03-CP-WP-008; withdrawal conditions of plan §7.8 stay in force (implementation, configuration or environment change, or evidence invalidation)"
+    }
+  ],
+  "ReviewIndependence": "all reviews by fresh-context subagents of the recorder's model family; no outside review",
+  "ResultingState": {
+    "AR_B_007": "CLOSED (re-closed at V7 SHAs)",
+    "AR_B_009": "CLOSED (re-closed at V7 SHAs)",
+    "AR_B_008": "CLOSED WITH LIMITATIONS",
+    "Tier A blockers closed": "3 / 3",
+    "All blockers closed": "3 / 10 (AR-B-001 to 006 and AR-B-010 open)",
+    "C03": "NOT READY — eligible only to request Final Readiness Review authorization (C03-TA-D-017); not activated",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  }
+}
