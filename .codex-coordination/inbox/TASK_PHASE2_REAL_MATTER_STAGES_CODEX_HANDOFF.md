@@ -6,7 +6,7 @@ TASK_PHASE2_REAL_MATTER_STAGES_CODEX_HANDOFF
 
 ## 2. Status
 
-READY — SCOPE HANDOFF (each stage still needs its own owner authorization before execution)
+WITHDRAWN (2026-11-05) — superseded by `.codex-coordination/decisions/TASK_PHASE2_REAL_MATTER_STAGES_GROK_ROUTING_DECISION.md`; Codex takes no action on this task. Kept for history.
 
 ## 3. Background
 
