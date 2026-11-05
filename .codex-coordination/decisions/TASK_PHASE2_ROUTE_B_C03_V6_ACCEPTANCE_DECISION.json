@@ -1,0 +1,103 @@
+{
+  "RecordKind": "C03_V6_ACCEPTANCE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature or owner commit",
+  "Decisions": [
+    {
+      "Id": "V6-FAILED-LOGON-CONFIRMED",
+      "Choice": "是我输错密码；验收（推荐）",
+      "Effect": "the failed logon (record 78811, 2026-11-05T04:17:48Z, SubStatus 0xC000006A) is the owner's own password typing error; no further action"
+    },
+    {
+      "Id": "V6-ACCEPT-IMPLEMENTATION",
+      "Choice": "是我输错密码；验收（推荐）",
+      "AcceptedImplementation": {
+        "scripts/phase2_runtime/__init__.py": "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
+        "scripts/phase2_runtime/route_b_c03/__init__.py": "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
+        "scripts/phase2_runtime/route_b_c03/contracts.py": "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
+        "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
+        "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
+        "scripts/phase2_runtime/route_b_c03/isolation.py": "0A7E937AB514D865FB71306C368168F9D06B0BC091150FA22C7EA7F24A699FE6",
+        "scripts/phase2_runtime/route_b_c03/failures.py": "C6E03A8AB0305B83F6042D8F8E379AE91047D41F4AB3467AC0A7281E7E4DA48E",
+        "scripts/phase2_runtime/route_b_c03/audit.py": "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
+        "scripts/phase2_runtime/route_b_c03/provider_port.py": "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+        "scripts/phase2_runtime/route_b_c03/capability.py": "8D0B3CD664A893609EDCEFABADCD48EAA77DEF6B519872DA27E9E15F68EA7686"
+      },
+      "AcceptedRecords": [
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/C03_V6_FORMAL_RUN_V5_RESULT.json",
+          "SHA256": "EABCD699C0A54A5CF31D77E0F727147910BC9D24523E80016C3C82571FB0A1E7",
+          "Bytes": 4800
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_V6_FORMAL_RUN_V5_RESULT.md",
+          "SHA256": "15FA0FDDC760545FD28DA2BA6D03466A855B567616E27E38453670B54680167F",
+          "Bytes": 2986
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_MATERIALIZATION_RECORD_REVISION_V6_CANDIDATE.md",
+          "SHA256": "9D13408996998027C6173033AA3DF01B036C5CBDBC31E2242CA3B63C1EE79CC5",
+          "Bytes": 8595
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/C03_V6_INPUT_CANDIDATE_REV7.json",
+          "SHA256": "3E01C1961BC435608A7907A35C6E0C013E26312011A6D68983E44E24FEB76E2F",
+          "Bytes": 216339
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/harness_rev7.py",
+          "SHA256": "8DA8A17274E61293433FAC61C912016F29CECA28B3DA782424701DC3E181A551",
+          "Bytes": 29193
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/formal_v5_run/install_formal_v5_result.json",
+          "SHA256": "C316682E71F4A07DA79EE984F86FCF9E931577B7926A6286300BB211ECF053CA",
+          "Bytes": 13514
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/formal_v5_run/formal_v5_pre1_collect_result.json",
+          "SHA256": "64826F12678E0E25ACC404B65E2B89C759AAB8CBDDBCA335711A860007603365",
+          "Bytes": 830
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/formal_v5_run/formal_v5_pre2_collect_result.json",
+          "SHA256": "FD9C007D900E53340B54898D7ABA5D34A66D544794876EF09366A3568A26B3D7",
+          "Bytes": 830
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/formal_v5_run/formal_v5_post_collect_result.json",
+          "SHA256": "6EE14C2DB0521F100F7E4B81591C4AE6B03FD8D91060CB6AEC8D0156D4B83E26",
+          "Bytes": 129017
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/formal_v5_run/formal_v5_run_record.RAW_REDACTED.json",
+          "SHA256": "CF835C2B1D60B13DADAFC557C43D384D0FF01D24788EA091323BA2C7570B1D43",
+          "Bytes": 462133
+        },
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v6/formal_v5_run/formal_v5_events_history.RAW_REDACTED.xml",
+          "SHA256": "A0CD5BF0302D8855038C77BAC9E2028773C78078402BE2B47D081B928E206C57",
+          "Bytes": 221289
+        }
+      ],
+      "Effect": "formal run v5 result and the V6 implementation accepted at the exact SHAs, with the limitations stated in the V6 record and in input REV7 coverage_limitations_rev7; C03-TA-V-015 counts as FULL on the condition recorded in V6-ACCEPT-MANIFEST (validation/route_b_c03/wp_008/c03_v6/C03_V6_OWNER_DECISIONS_REV1.json)",
+      "RecorderNote": "one owner option covered both the failed-logon confirmation and acceptance; the AcceptedRecords list (including the V6 record, input REV7 and harness REV7) is the recorder's expansion of that option"
+    },
+    {
+      "Id": "AR-B-008-PREPARE-CLOSURE-WITH-LIMITS",
+      "Choice": "准备带局限的关闭（推荐）",
+      "Effect": "recorder drafts an AR-B-008 closure evidence packet with stated limitations and has it reviewed; AR-B-008 stays OPEN / BLOCKED until a separate owner closure decision"
+    }
+  ],
+  "ReviewIndependence": "all reviews by fresh-context subagents of the recorder's model family; no outside review",
+  "ResultingState": {
+    "AR_B_007": "CLOSED as recorded; subject to owner reaffirmation at current SHAs (literal hash-change withdrawal since V5; see AR-B-008 closure evidence packet REV1 section 三)",
+    "AR_B_009": "CLOSED as recorded; reaffirmation proposed with AR-B-007 (shared contracts.py changed in V6)",
+    "AR_B_008": "OPEN / BLOCKED",
+    "Tier A blockers closed": "2 / 3",
+    "C03": "NOT READY",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  },
+  "Supersedes": "the 'owner to confirm' note and PENDING_OWNER_ACCEPTANCE classification in C03_V6_FORMAL_RUN_V5_RESULT.json, which is kept unchanged"
+}
