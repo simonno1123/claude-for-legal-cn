@@ -1,0 +1,222 @@
+{
+    "Kind":  "DSP004_FORMAL_V6_INSTALL_RESULT",
+    "InstalledUtc":  "2026-11-05T05:14:34.9295043Z",
+    "InstallerSha256":  "CFDD2166EA496A40516BFB9A75B70E14E636FF0F8E0713EBE55A5479EA7AA09E",
+    "BaseOwnerAccessSddl":  "O:BAD:PAI(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)",
+    "SupervisorDirSddl":  "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+    "ProjectDirSddl":  "O:BAD:AI(A;OICIID;0x1200a9;;;BU)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;SY)",
+    "FileCount":  30,
+    "Files":  [
+                  {
+                      "Rel":  "supervisor_formal_v6/supervisor_formal_v6.ps1",
+                      "Bytes":  26283,
+                      "SHA256":  "E9DE83AC8984ED4E04928596994B0DDF82B2C3188E245488942BEE8717D40FF0",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "supervisor_formal_v6/bound_list_formal_v6.json",
+                      "Bytes":  177449,
+                      "SHA256":  "60C42D018F4E72A209D735537F9AF8D05511040272F11F13CA879E3F3BC829E0",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "supervisor_formal_v6/run_formal_v6.cmd",
+                      "Bytes":  412,
+                      "SHA256":  "EB0D75E96B75AD15BA1C8C63D8FA28DE9CB0BCFC73B72D77C75E3D04451D60F3",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/__init__.py",
+                      "Bytes":  167,
+                      "SHA256":  "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/__init__.py",
+                      "Bytes":  1705,
+                      "SHA256":  "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/contracts.py",
+                      "Bytes":  21988,
+                      "SHA256":  "144841285C8E7ED88BED930FD01FB314863DFE8B2F67BDF3C73D816BE5423A99",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/identity_gate.py",
+                      "Bytes":  6157,
+                      "SHA256":  "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/mapping.py",
+                      "Bytes":  3619,
+                      "SHA256":  "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/isolation.py",
+                      "Bytes":  6905,
+                      "SHA256":  "FB5528D6FE5794BDDF55E99B6EBA26B8899BE377F997F2AFE198C3DCA02A5DE8",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/failures.py",
+                      "Bytes":  20039,
+                      "SHA256":  "A4A5861BD9042316C04C3247C9FA4839B9D097A5D14BEDD185A7BDBE1E24A5FE",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/audit.py",
+                      "Bytes":  1407,
+                      "SHA256":  "96F874FD494AA67276604A8AD49813F68B7BF4F2C28E63FC9D6C6ECE127C44DA",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/provider_port.py",
+                      "Bytes":  870,
+                      "SHA256":  "66E4DA862BBBD50380B17686DB6BC2AB6D5D3B861AB53FCDDE1B608F86DEA381",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/scripts/phase2_runtime/route_b_c03/capability.py",
+                      "Bytes":  5768,
+                      "SHA256":  "E4EA6A90D6E8B18E7242F3C7D782F554AEF94B9C55AA731B83FEF0CB5E849DB6",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-001.json",
+                      "Bytes":  674,
+                      "SHA256":  "C8CEFEDC496D5D0D33E0F21D61B5E3C3354579A8D0E1C74F70640305C65FC99A",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-002.json",
+                      "Bytes":  683,
+                      "SHA256":  "257437A2AA80A58C0741F1EC0A5A514E014C633DD974804C6407DB84DB107290",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-003.json",
+                      "Bytes":  713,
+                      "SHA256":  "21BD65ECD28D569BADFF11489017569E8413B1CC9A5138A851F907CCF62EAF7E",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-004.json",
+                      "Bytes":  770,
+                      "SHA256":  "9DAE8B930EB62CE358605D0FB4CB080FC8F5A3C81CAF946B7C98D48979BE46D8",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-005.json",
+                      "Bytes":  708,
+                      "SHA256":  "4405ADC2CE242B83120B0BA304157B3E6F03687345F764BBBE1E3A2DCF2422DE",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-006.json",
+                      "Bytes":  695,
+                      "SHA256":  "9D24E6AFA92F9EF6E895B0B6E4D0E84BDC326E9C4B815E42723B31374CC2FDC8",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-007.json",
+                      "Bytes":  735,
+                      "SHA256":  "68D9D63583A0301BDE76C3E60A5F66B7CCDA897C17D58E8DBF282E3E49C3DB90",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-008.json",
+                      "Bytes":  711,
+                      "SHA256":  "7AA3FEF0CCDFA0C6A462C7945B63A50D828AC9C6D0725F428D347F6836075193",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-009.json",
+                      "Bytes":  687,
+                      "SHA256":  "34EFBC55490FB2E3FFC89CAFCAD9DD2D319C2C24D9B3E2B026143F74A73DC93C",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-010.json",
+                      "Bytes":  687,
+                      "SHA256":  "19DF9D35835F60C03C969B79B25F62CFE95E28C0A1B8122EDD8B9E1A5BC0E67A",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-011.json",
+                      "Bytes":  753,
+                      "SHA256":  "8795DA58E092E6DC7F88958E3AC60B754870F5BFAE15FF8BC2D699450B65FDFD",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-012.json",
+                      "Bytes":  696,
+                      "SHA256":  "8C6E4FC6279E95CFE48C9E9DA6E161F0AF05CA5FFEA95BE18DBAD6A81204E8E6",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-013.json",
+                      "Bytes":  758,
+                      "SHA256":  "3DBF0F60AC970F90C97CF85F5F21F1758B4818D814A02CE8ED03A4F1C3A49CA6",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-014.json",
+                      "Bytes":  704,
+                      "SHA256":  "D3EF698EA45F41824CCF6C5A7020F6A0B495460341ADE7446461A1AAF0E7D523",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/fixtures/C03-TA-V-015.json",
+                      "Bytes":  767,
+                      "SHA256":  "06DCEBA08CA43C75439B5A2AC1C140905887EF8CDC26C561FBD68E9A001D5AE1",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/c03_v7/C03_V7_INPUT_CANDIDATE_REV8.json",
+                      "Bytes":  247676,
+                      "SHA256":  "572D9C7DA572EE12FDAD7E0B70205744DFFE67AA90BDC6AA96F3786B92EB0BED",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  },
+                  {
+                      "Rel":  "project_v6/validation/route_b_c03/wp_008/c03_v7/harness_rev8.py",
+                      "Bytes":  30299,
+                      "SHA256":  "C4086A40D985C3D4CDA2A155AF11646476871B9A3361C71C859C64ED489FF9DA",
+                      "MatchesExpected":  true,
+                      "OwnerAccessSddl":  "O:BAD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)"
+                  }
+              ],
+    "HijackChecks":  "PASSED"
+}

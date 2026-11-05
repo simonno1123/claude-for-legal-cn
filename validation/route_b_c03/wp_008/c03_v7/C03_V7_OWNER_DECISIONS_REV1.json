@@ -1,0 +1,52 @@
+{
+  "RecordKind": "C03_V7_MANIFEST_ACCEPTANCE_AND_FORMAL_V6_RUN_AUTHORIZATION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-05 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder",
+  "Basis": {
+    "PR": 72,
+    "Review": ".codex-coordination/reviews/TASK_PHASE2_ROUTE_B_C03_V7_REVISION_REVIEW_REV1.md (PASS WITH NOTES; SAME_MODEL_FAMILY_NOT_EXTERNAL)"
+  },
+  "Decisions": [
+    {
+      "Id": "V7-ACCEPT-MANIFEST",
+      "Choice": "全部接受（推荐）",
+      "Accepted": [
+        {
+          "Path": "validation/route_b_c03/wp_008/c03_v7/PYTHON_RUNTIME_DEPENDENCY_MANIFEST_REV5.json",
+          "SHA256": "A88C5D450945B8C15C28D3C521D3CCE0044A13302619C0451123ABB91F82E544",
+          "Bytes": 513236
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_WP_008_C03_V7_MANIFEST_SUPPORT_POLICIES_REV5.md",
+          "SHA256": "2F631C17246C3A8B318983E929DE36DDCA0E39E8D392E3F33C27DA5A1E4AD34D",
+          "Bytes": 13681
+        },
+        {
+          "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_MATERIALIZATION_RECORD_REVISION_V7_CANDIDATE.md",
+          "SHA256": "48DD57D9040425E5A19D9161599952EFF2BEAC07FE164EC7034A6028D6D8118F",
+          "Bytes": 9609
+        }
+      ],
+      "DeviationsConfirmed": 11,
+      "DesignValuesConfirmed": [
+        "fixed list of 13 secret value markers; nesting limit 8 below the record",
+        "integrity comparison: 4 subject kinds; missing observation quarantines (design 12); unbound reference blocks",
+        "pre-transition check: controls first, then the identity gate",
+        "only the pre-transition check is wired into capability.py; other evaluators stay module functions for the integration stage (deviation 3 of the AR-B-008 packet narrowed, not removed)"
+      ]
+    },
+    {
+      "Id": "V7-RUN-FORMAL-V6",
+      "Choice": "授权正式运行 v6（推荐）",
+      "Effect": "owner runs go_formal_v6.cmd; recorder collects, verifies and records"
+    }
+  ],
+  "NotDecided": [
+    "V7 implementation acceptance",
+    "AR-B-008 closure",
+    "reaffirmation of AR-B-007 and AR-B-009"
+  ],
+  "AR_B_008": "OPEN / BLOCKED",
+  "C03": "NOT READY"
+}
