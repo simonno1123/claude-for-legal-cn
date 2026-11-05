@@ -144,8 +144,8 @@
  "subject_identities": {
   "scripts/phase2_runtime/__init__.py": "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844",
   "scripts/phase2_runtime/route_b_c03/__init__.py": "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D",
-  "scripts/phase2_runtime/route_b_c03/contracts.py": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
-  "scripts/phase2_runtime/route_b_c03/identity_gate.py": "3B652CF9D5B07147A15C909FC7ADE56680C0D15ABF7907864E9970ACB1AD5F4B",
+  "scripts/phase2_runtime/route_b_c03/contracts.py": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
+  "scripts/phase2_runtime/route_b_c03/identity_gate.py": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
   "scripts/phase2_runtime/route_b_c03/mapping.py": "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66",
   "scripts/phase2_runtime/route_b_c03/isolation.py": "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B",
   "scripts/phase2_runtime/route_b_c03/failures.py": "6F30D996119F61A19B20208FC44C8AF1FB96ADFE09ADE3538675B9D3F2933734",
@@ -183,7 +183,7 @@
  "adapter_catalog": {
   "ADP-EVALUATE-IDENTITY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/identity_gate.py",
-   "subject_sha256": "3B652CF9D5B07147A15C909FC7ADE56680C0D15ABF7907864E9970ACB1AD5F4B",
+   "subject_sha256": "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31",
    "callable": "evaluate_identity_gate",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED",
    "argument_order": [
@@ -200,7 +200,7 @@
   },
   "ADP-CONSTRUCT-EXPECTED": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "ExpectedIdentityReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -215,7 +215,7 @@
   },
   "ADP-CONSTRUCT-IDEMPOTENCY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "IdempotencyKeyReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -240,7 +240,7 @@
   },
   "ADP-CONSTRUCT-TIMEOUT": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "TimeoutPolicyReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -270,13 +270,13 @@
   },
   "ADP-CONSTRUCT-ROLLBACK": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "RollbackReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
   "ADP-CONSTRUCT-AUDIT-INTEGRITY": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "AuditIntegrityReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -306,13 +306,13 @@
   },
   "ADP-CONSTRUCT-CANDIDATE": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "CandidateRecord",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
   "ADP-CONSTRUCT-CONFIG": {
    "subject_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "subject_sha256": "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A",
+   "subject_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "callable": "CapabilityConfigurationReference",
    "dispatch_state": "PROPOSED_FIXED_HARNESS_MAPPING_NOT_ACCEPTED"
   },
@@ -338,7 +338,7 @@
   "OBJ-CONFIG-BASE": {
    "type": "CapabilityConfigurationReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "capability_id": "C03-SYNTHETIC",
     "capability_version": "1.0-SYNTHETIC",
@@ -356,7 +356,7 @@
   "OBJ-EXPECTED-BASE": {
    "type": "ExpectedIdentityReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "capability_id": "C03-SYNTHETIC",
     "capability_version": "1.0-SYNTHETIC",
@@ -375,7 +375,7 @@
   "OBJ-ENVELOPE-BASE": {
    "type": "GovernedInputEnvelopeReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "envelope_id": "SYNTHETIC-ENVELOPE-001",
     "route": "ROUTE_B_SYNTHETIC",
@@ -421,7 +421,7 @@
   "OBJ-PACKET-BASE": {
    "type": "TierBAuthorityPacketReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "packet_id": "SYNTHETIC-PACKET-001",
     "packet_version": "1.0-SYNTHETIC",
@@ -452,7 +452,7 @@
   "OBJ-RETRY-POLICY": {
    "type": "RetryPolicyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "policy_id": "SYNTHETIC-RETRY-POLICY-001",
     "version": "1.0-SYNTHETIC",
@@ -480,7 +480,7 @@
   "OBJ-IDEMPOTENCY-REFERENCE": {
    "type": "IdempotencyKeyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "canonicalization_version": "1.0-SYNTHETIC",
     "digest_algorithm": "SHA-256",
@@ -491,7 +491,7 @@
   "OBJ-TIMEOUT-REFERENCE": {
    "type": "TimeoutPolicyReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "policy_id": "SYNTHETIC-TIMEOUT-POLICY-001",
     "version": "1.0-SYNTHETIC",
@@ -509,7 +509,7 @@
   "OBJ-ROLLBACK-REFERENCE": {
    "type": "RollbackReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "rollback_id": "SYNTHETIC-ROLLBACK-001",
     "version": "1.0-SYNTHETIC",
@@ -543,7 +543,7 @@
   "OBJ-AUDIT-INTEGRITY": {
    "type": "AuditIntegrityReference",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "policy_id": "SYNTHETIC-INTEGRITY-POLICY-001",
     "version": "1.0-SYNTHETIC",
@@ -567,7 +567,7 @@
   "OBJ-CANDIDATE-BASE": {
    "type": "CandidateRecord",
    "source_path": "scripts/phase2_runtime/route_b_c03/contracts.py",
-   "source_sha256": "7EA17AC467011A198DCEF268ED792CA0D448D2DD3C0E510E516AEF98FCF04DE4",
+   "source_sha256": "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51",
    "arguments": {
     "candidate_id": "SYNTHETIC-CANDIDATE-001",
     "candidate_version": "1.0-SYNTHETIC",
@@ -1141,7 +1141,8 @@
    "derivation": "pre-declared from static reading of the V4 subject source before any harness run",
    "applies_to": [
     "SB-001-V4-ARTIFACT-NOT-READY",
-    "SB-001-V4-NO-ARTIFACTS"
+    "SB-001-V4-NO-ARTIFACTS",
+    "SB-001-V4-ARTIFACT-NOT-VALIDATED"
    ],
    "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
    "raw_requirement": {
@@ -1157,6 +1158,30 @@
    "fixture_mapping": null,
    "coverage_class": "SUPPLEMENTARY_RAW_CHECK",
    "limitation": "reference metadata only; readiness values are caller-supplied (N2)",
+   "comparison_mode": "EXACT_NATIVE_TYPES_AND_VALUES; NO SEMANTIC NORMALIZATION, PREFIX MATCH OR REASON SUBSTITUTION",
+   "mismatch_policy": "DO_NOT_ASSERT_CONFORMANCE; PRESERVE RAW OBSERVATION OR EXCEPTION; THE VARIANT IS FAIL",
+   "post_hoc_change": "PROHIBITED"
+  },
+  "CR-V4-N2-AT-VALID-FROM": {
+   "status": "DRAFTED_REV5_NOT_ACCEPTED",
+   "derivation": "pre-declared from static reading of the V4 subject source before any harness run",
+   "applies_to": [
+    "SB-002-V4-AT-VALID-FROM"
+   ],
+   "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+   "raw_requirement": {
+    "type": "GateDecision",
+    "state": {
+     "enum_class": "InvocationState",
+     "member": "ELIGIBLE_FOR_MAPPING"
+    },
+    "reason_code": "ELIGIBLE — SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+    "audit_correlation_id": "SYNTHETIC-CORRELATION-001",
+    "permitted_write_namespaces": []
+   },
+   "fixture_mapping": null,
+   "coverage_class": "SUPPLEMENTARY_RAW_CHECK",
+   "limitation": "positive boundary control: evaluated_at equal to valid_from is inside the window (N2)",
    "comparison_mode": "EXACT_NATIVE_TYPES_AND_VALUES; NO SEMANTIC NORMALIZATION, PREFIX MATCH OR REASON SUBSTITUTION",
    "mismatch_policy": "DO_NOT_ASSERT_CONFORMANCE; PRESERVE RAW OBSERVATION OR EXCEPTION; THE VARIANT IS FAIL",
    "post_hoc_change": "PROHIBITED"
@@ -1294,6 +1319,34 @@
      "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
      "comparison_rule_id": "CR-V4-N2-READINESS",
      "variant_role": "V4_N2_NO_ARTIFACTS"
+    },
+    {
+     "stimulus_binding_id": "SB-001-V4-ARTIFACT-NOT-VALIDATED",
+     "adapter_id": "ADP-EVALUATE-IDENTITY",
+     "arguments": {
+      "configuration": {
+       "object_ref": "OBJ-CONFIG-BASE"
+      },
+      "packet": {
+       "object_ref": "OBJ-PACKET-BASE"
+      },
+      "envelope": {
+       "object_ref": "OBJ-ENVELOPE-BASE"
+      },
+      "expected": {
+       "object_ref": "OBJ-EXPECTED-BASE"
+      },
+      "validity_confirmed": true,
+      "kill_active": false,
+      "evaluated_at": "2026-06-01T00:00:00Z"
+     },
+     "object_overrides": {
+      "/OBJ-ARTIFACT-BASE/arguments/validation_state": "PENDING"
+     },
+     "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+     "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+     "comparison_rule_id": "CR-V4-N2-READINESS",
+     "variant_role": "V4_N2_ARTIFACT_NOT_VALIDATED"
     }
    ],
    "original_oracle": {
@@ -1518,6 +1571,32 @@
      "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
      "comparison_rule_id": "CR-V4-N2-OUTSIDE-WINDOW",
      "variant_role": "V4_N2_NOT_YET_VALID"
+    },
+    {
+     "stimulus_binding_id": "SB-002-V4-AT-VALID-FROM",
+     "adapter_id": "ADP-EVALUATE-IDENTITY",
+     "arguments": {
+      "configuration": {
+       "object_ref": "OBJ-CONFIG-BASE"
+      },
+      "packet": {
+       "object_ref": "OBJ-PACKET-BASE"
+      },
+      "envelope": {
+       "object_ref": "OBJ-ENVELOPE-BASE"
+      },
+      "expected": {
+       "object_ref": "OBJ-EXPECTED-BASE"
+      },
+      "validity_confirmed": true,
+      "kill_active": false,
+      "evaluated_at": "2025-01-01T00:00:00Z"
+     },
+     "object_overrides": {},
+     "selected_defaults": "ALL_DEFAULTS_EXPLICIT_IN_OBJECT_CATALOG_OR_ARGUMENTS",
+     "observation_surface": "GateDecision.state/reason_code/audit_correlation_id/permitted_write_namespaces",
+     "comparison_rule_id": "CR-V4-N2-AT-VALID-FROM",
+     "variant_role": "V4_N2_POSITIVE_BOUNDARY_CONTROL"
     }
    ],
    "original_oracle": {
@@ -3006,9 +3085,10 @@
    "base packet validity window set to UTC timestamps",
    "base envelope carries one READY/VALIDATED artifact reference",
    "adapters ADP-CONSTRUCT-CONFIG and ADP-CAPABILITY-EVALUATE-GATE added",
-   "12 supplementary raw-check variants with 7 new rules (B1, B2, N1, N2)"
+   "14 supplementary raw-check variants with 8 new rules (B1, B2, N1, N2)",
+   "catalog source_sha256 metadata refreshed for 10 objects"
   ],
-  "variant_count": 40,
+  "variant_count": 42,
   "runtime_version_of_record": "CPython 3.12.10 (P1-PYVER)"
  }
 }

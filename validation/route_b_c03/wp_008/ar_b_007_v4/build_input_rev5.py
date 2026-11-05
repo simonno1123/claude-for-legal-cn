@@ -5,9 +5,9 @@ REV5 = REV4 with exactly these changes, all made here so the derivation can be r
   2. the identity gate gets the new required keyword evaluated_at; every gate variant passes
      2026-06-01T00:00:00Z; the base packet's validity window becomes 2025-01-01T00:00:00Z .. 2027-01-01T00:00:00Z;
   3. the base envelope carries one ready, validated synthetic artifact reference (OBJ-ARTIFACT-BASE);
-  4. two adapters are added (ADP-CONSTRUCT-CONFIG, ADP-CAPABILITY-EVALUATE-GATE) and 12 variants with
+  4. two adapters are added (ADP-CONSTRUCT-CONFIG, ADP-CAPABILITY-EVALUATE-GATE) and 14 variants with
      pre-declared rules that cover B1, B2, N1 and N2 of the security/privacy boundary review REV1.
-The 28 REV4 variants and their rules are otherwise unchanged. New rules are raw checks without a fixture mapping.
+The 28 REV4 variants and their rules are otherwise unchanged; stale source_sha256 metadata in the object catalog is refreshed. New rules are raw checks without a fixture mapping.
 
 Run from the repository root:  python3 -I validation/route_b_c03/wp_008/ar_b_007_v4/build_input_rev5.py [--write]
 """
@@ -72,6 +72,11 @@ def main():
     new["subject_identities"] = subj
     for a in new["adapter_catalog"].values():
         a["subject_sha256"] = subj[a["subject_path"]]
+    stale = 0
+    for o in new["synthetic_object_catalog"].values():  # catalog metadata naming the defining source file
+        if "source_path" in o and o["source_path"] in subj and o.get("source_sha256") != subj[o["source_path"]]:
+            o["source_sha256"] = subj[o["source_path"]]
+            stale += 1
     gate = new["adapter_catalog"]["ADP-EVALUATE-IDENTITY"]
     gate["keyword_only"] = ["expected", "validity_confirmed", "kill_active", "evaluated_at"]
     new["adapter_catalog"]["ADP-CONSTRUCT-CONFIG"] = {
@@ -139,13 +144,20 @@ def main():
         gate_variant("SB-002-V4-PACKET-EXPIRED", "CR-V4-N2-OUTSIDE-WINDOW", evaluated_at="2027-01-01T00:00:00Z", role="V4_N2_EXPIRED"),
         gate_variant("SB-002-V4-PACKET-NOT-YET-VALID", "CR-V4-N2-OUTSIDE-WINDOW", evaluated_at="2024-12-31T23:59:59Z", role="V4_N2_NOT_YET_VALID")]
 
-    rules["CR-V4-N2-READINESS"] = gate_rule(["SB-001-V4-ARTIFACT-NOT-READY", "SB-001-V4-NO-ARTIFACTS"], "BLOCKED",
+    rules["CR-V4-N2-READINESS"] = gate_rule(["SB-001-V4-ARTIFACT-NOT-READY", "SB-001-V4-NO-ARTIFACTS", "SB-001-V4-ARTIFACT-NOT-VALIDATED"], "BLOCKED",
                                             "BLOCKED — READINESS/PROVENANCE FAILURE", "reference metadata only; readiness values are caller-supplied (N2)")
     added["C03-TA-V-001"] = [
         gate_variant("SB-001-V4-ARTIFACT-NOT-READY", "CR-V4-N2-READINESS",
                      overrides={"/OBJ-ARTIFACT-BASE/arguments/readiness_state": "PENDING"}, role="V4_N2_ARTIFACT_NOT_READY"),
         gate_variant("SB-001-V4-NO-ARTIFACTS", "CR-V4-N2-READINESS",
-                     overrides={"/OBJ-ENVELOPE-BASE/arguments/input_artifact_references": {"tuple": []}}, role="V4_N2_NO_ARTIFACTS")]
+                     overrides={"/OBJ-ENVELOPE-BASE/arguments/input_artifact_references": {"tuple": []}}, role="V4_N2_NO_ARTIFACTS"),
+        gate_variant("SB-001-V4-ARTIFACT-NOT-VALIDATED", "CR-V4-N2-READINESS",
+                     overrides={"/OBJ-ARTIFACT-BASE/arguments/validation_state": "PENDING"}, role="V4_N2_ARTIFACT_NOT_VALIDATED")]
+    rules["CR-V4-N2-AT-VALID-FROM"] = gate_rule(["SB-002-V4-AT-VALID-FROM"], "ELIGIBLE_FOR_MAPPING",
+                                                "ELIGIBLE — SEPARATE MATTER INVOCATION AUTHORITY STILL REQUIRED",
+                                                "positive boundary control: evaluated_at equal to valid_from is inside the window (N2)")
+    added["C03-TA-V-002"].append(gate_variant("SB-002-V4-AT-VALID-FROM", "CR-V4-N2-AT-VALID-FROM",
+                                              evaluated_at="2025-01-01T00:00:00Z", role="V4_N2_POSITIVE_BOUNDARY_CONTROL"))
 
     rules["CR-V4-N1-REDACTION"] = exc_rule(["SB-012-V4-AUDIT-ID-NUMBER", "SB-012-V4-AUDIT-API-KEY"], "ValueError",
                                            "QUARANTINED — AUDIT REDACTION FAILURE", "pattern screen on synthetic values only (N1)")
@@ -177,7 +189,8 @@ def main():
         "changes": ["subject hashes re-computed from the V4 sources", "gate keyword evaluated_at added to all gate variants",
                     "base packet validity window set to UTC timestamps", "base envelope carries one READY/VALIDATED artifact reference",
                     "adapters ADP-CONSTRUCT-CONFIG and ADP-CAPABILITY-EVALUATE-GATE added",
-                    "12 supplementary raw-check variants with 7 new rules (B1, B2, N1, N2)"],
+                    "14 supplementary raw-check variants with 8 new rules (B1, B2, N1, N2)",
+                    "catalog source_sha256 metadata refreshed for %d objects" % stale],
         "variant_count": sum(len(s["stimulus_variants"]) for s in new["scenarios"]),
         "runtime_version_of_record": "CPython 3.12.10 (P1-PYVER)"}
     text = json.dumps(new, ensure_ascii=False, indent=1) + "\n"

@@ -234,6 +234,9 @@ class ArtifactReference:
             "readiness_state", "validation_state", "human_review_reference",
         ):
             require_text(getattr(self, field), field)
+        for field in ("readiness_state", "validation_state"):
+            if type(getattr(self, field)) is not str:
+                raise ValueError(f"{field} must be a plain str")
 
 
 @dataclass(frozen=True, slots=True)

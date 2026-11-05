@@ -56,13 +56,13 @@ import sys
 import time
 
 INPUT_REL = "validation/route_b_c03/wp_008/ar_b_007_v4/C03_V4_INPUT_CANDIDATE_REV5.json"
-INPUT_SHA256 = "84F719D8EDE0735B6B01AE1D66DC97527AE85534D53E5D7E59E9A3CE3F4A43C9"
+INPUT_SHA256 = "8A422CEE97A9434201CFA4309A2359672DD3E9ADEBF9322CD1C2AFBD9A27800A"
 # module name -> (repository path, SHA-256, is package)
 SUBJECT = {
     "phase2_runtime": ("scripts/phase2_runtime/__init__.py", "49B8B1BD319B6424323AD0EDC04B3969D71196CD8D69E12C16D5442B17340844", True),
     "phase2_runtime.route_b_c03": ("scripts/phase2_runtime/route_b_c03/__init__.py", "F669613D65267EC5D4D42CB79008EB510307A99B20E40EE13E9E1E0E404A504D", True),
-    "phase2_runtime.route_b_c03.contracts": ("scripts/phase2_runtime/route_b_c03/contracts.py", "A7D30CF9F0694C46C904DB8EFBCCAA5ED205CF73E3E7AA1DBD5A6A45187CB05A", False),
-    "phase2_runtime.route_b_c03.identity_gate": ("scripts/phase2_runtime/route_b_c03/identity_gate.py", "3B652CF9D5B07147A15C909FC7ADE56680C0D15ABF7907864E9970ACB1AD5F4B", False),
+    "phase2_runtime.route_b_c03.contracts": ("scripts/phase2_runtime/route_b_c03/contracts.py", "10616DF4C6A9E1E792C6D50E8A47547C37CA790E3D82713AA56403A48EC69B51", False),
+    "phase2_runtime.route_b_c03.identity_gate": ("scripts/phase2_runtime/route_b_c03/identity_gate.py", "F9CC7021C1A2586611FBCA7333F8ADC8BDE3A6436663680EEA100CA26EDC9C31", False),
     "phase2_runtime.route_b_c03.mapping": ("scripts/phase2_runtime/route_b_c03/mapping.py", "320F7E8576C1C4E81B4E78E6058000E4D720173948BE736AD846B8CAD664EC66", False),
     "phase2_runtime.route_b_c03.isolation": ("scripts/phase2_runtime/route_b_c03/isolation.py", "9BC554294D5945188A153F0A5CBEDFAB4E483C95B133683B7517ECC334D4205B", False),
     "phase2_runtime.route_b_c03.failures": ("scripts/phase2_runtime/route_b_c03/failures.py", "6F30D996119F61A19B20208FC44C8AF1FB96ADFE09ADE3538675B9D3F2933734", False),

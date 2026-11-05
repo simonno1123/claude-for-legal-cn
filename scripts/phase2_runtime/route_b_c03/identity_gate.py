@@ -5,6 +5,7 @@ from __future__ import annotations
 from .contracts import (
     ARTIFACT_READY,
     ARTIFACT_VALIDATED,
+    ArtifactReference,
     CapabilityConfigurationReference,
     CapabilityState,
     ExpectedIdentityReference,
@@ -123,10 +124,18 @@ def evaluate_identity_gate(
         or packet.decision_reference != expected.execution_authorization_reference
     ):
         return _decision(InvocationState.BLOCKED, "BLOCKED — AUTHORITY BINDING FAILURE", correlation)
-    if not envelope.input_artifact_references or any(
-        artifact.readiness_state != ARTIFACT_READY
-        or artifact.validation_state != ARTIFACT_VALIDATED
-        for artifact in envelope.input_artifact_references
+    artifacts = envelope.input_artifact_references
+    if (
+        type(artifacts) is not tuple
+        or not artifacts
+        or not all(
+            type(artifact) is ArtifactReference
+            and type(artifact.readiness_state) is str
+            and type(artifact.validation_state) is str
+            and str.__eq__(artifact.readiness_state, ARTIFACT_READY) is True
+            and str.__eq__(artifact.validation_state, ARTIFACT_VALIDATED) is True
+            for artifact in artifacts
+        )
     ):
         return _decision(
             InvocationState.BLOCKED,
