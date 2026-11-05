@@ -376,6 +376,22 @@ class IdempotencyKeyReference:
 
 
 @dataclass(frozen=True, slots=True)
+class IdempotencyRecord:
+    """One caller-supplied prior use of an idempotency key (no ledger is stored here)."""
+
+    key_sha256: str
+    scope_sha256: str
+    recorded_at: str
+    effect_reference: str = "NONE"
+
+    def __post_init__(self) -> None:
+        require_sha256(self.key_sha256, "idempotency record key_sha256")
+        require_sha256(self.scope_sha256, "idempotency record scope_sha256")
+        require_utc_timestamp(self.recorded_at, "recorded_at")
+        require_text(self.effect_reference, "effect_reference")
+
+
+@dataclass(frozen=True, slots=True)
 class TimeoutPolicyReference:
     policy_id: str
     version: str
