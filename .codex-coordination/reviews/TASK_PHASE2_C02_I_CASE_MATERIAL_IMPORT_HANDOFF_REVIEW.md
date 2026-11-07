@@ -12,7 +12,7 @@
 
 ## Review Summary
 
-The `TASK_PHASE2_C02_I_CASE_MATERIAL_IMPORT_HANDOFF.md` has been audited and matches Track C governance criteria. The design introduces a secure input stage to catalog physical case files (Muxi: 4, Subofang: 5, Zhang Chengqi: 4) into the workspace, mapping missing files as explicit gaps (`NOT_FOUND`) without generating mock facts.
+The `TASK_PHASE2_C02_I_CASE_MATERIAL_IMPORT_HANDOFF.md` has been audited and matches Track C governance criteria. The design introduces a secure input stage to catalog physical case files (CASE-A: 4, CASE-B party: 5, CASE-C frozen-label party: 4) into the workspace, mapping missing files as explicit gaps (`NOT_FOUND`) without generating mock facts.
 
 The review recommends approval of the Handoff to authorize the case material import.
 

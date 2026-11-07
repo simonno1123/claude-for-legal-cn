@@ -141,7 +141,7 @@ All `NOT_FOUND` categories remain explicit gaps. The validation does not infer t
 
 ## 6. CASE-A — Commercial Transaction Material Profile
 
-The label “沐希鞋业案件” is a validation identifier only.
+The label “CASE-A 案件” is a validation identifier only.
 
 | ID | Material category | Evidence Object mapping | Conceptual route | Gate result |
 |---|---|---|---|---|
@@ -177,7 +177,7 @@ No transaction fact, amount, attribution, delivery, payment, balance, defense, o
 
 ## 7. CASE-B — Litigation and Corporate Record Profile
 
-The label “塑博坊相关案件” is a validation identifier only.
+The label “CASE-B 相关案件” is a validation identifier only.
 
 | ID | Material category | Evidence Object mapping | Conceptual route | Gate result |
 |---|---|---|---|---|
@@ -209,7 +209,7 @@ BLOCKED
 
 ## 8. CASE-C — Property, Cost, and Enforcement-Derivative Profile
 
-The current instruction uses the label “康尔达相关案件”; the frozen C02 case registry uses `C02-CASE-C-001 / 张成棋执行衍生案件`, while one historical filename contains “康尔达”. These labels and filenames do not prove that the matter identities are the same. The design correctly requires a qualified human to reconcile the matter ID and intended use before any material can be admitted.
+The current instruction uses the label “CASE-C 当前标签案件”; the frozen C02 case registry uses `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件`, while one historical filename contains “CASE-C 当前标签”. These labels and filenames do not prove that the matter identities are the same. The design correctly requires a qualified human to reconcile the matter ID and intended use before any material can be admitted.
 
 | ID | Material category | Evidence Object mapping | Conceptual route | Gate result |
 |---|---|---|---|---|

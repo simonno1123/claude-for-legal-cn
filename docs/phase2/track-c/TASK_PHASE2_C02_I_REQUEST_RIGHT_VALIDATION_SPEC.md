@@ -48,15 +48,15 @@ The hashes above verify governance-document identity. They do not prove that eve
 
 | Case | Manifest-recorded bound material | Accessible at execution | Result |
 |---|---:|---:|---|
-| CASE-A — 沐希鞋业买卖合同纠纷 | 2 files | 1 PDF | PARTIAL |
-| CASE-B — 塑博坊人格否认责任 | 13 file nodes | 0 | BLOCKED |
-| CASE-C — 张成棋执行衍生案件 | 1 workbook | 0 | BLOCKED |
+| CASE-A — CASE-A 买卖合同纠纷 | 2 files | 1 PDF | PARTIAL |
+| CASE-B — CASE-B 人格否认责任 | 13 file nodes | 0 | BLOCKED |
+| CASE-C — CASE-C 冻结标签执行衍生案件 | 1 workbook | 0 | BLOCKED |
 
 ### 3.1 Accessible Source
 
 | Case | Source | SHA-256 | Verification |
 |---|---|---|---|
-| CASE-A | `C:\Users\Administrator\Documents\xwechat_files\simonno1123_a85c\msg\file\2026-06\温州沐希鞋业有限公司报告.pdf` | `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898` | Hash matches manifest; 8 pages; pages 1–7 have a text layer; page 8 is blank |
+| CASE-A | `<OWNER-IM-FILES>\[A-D02 文件].pdf` | `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898` | Hash matches manifest; 8 pages; pages 1–7 have a text layer; page 8 is blank |
 
 The PDF was checked through both text extraction and rendered-page inspection. Its cover note states that the report is for reference and that the National Enterprise Credit Information Publicity System query page controls.
 
@@ -64,11 +64,11 @@ The PDF was checked through both text extraction and rendered-page inspection. I
 
 The following manifest paths were unavailable when execution began:
 
-- CASE-A: `沐希10-12月账单.xls`;
-- CASE-B: `浙江塑博坊判决书.pdf`;
+- CASE-A: `[A-D01 文件].xls`;
+- CASE-B: `[B-D01 文件].pdf`;
 - CASE-B: `资金流流水.xlsx`;
 - CASE-B: the bound `工商调档资料` directory;
-- CASE-C: `康尔达系列案件费用明细.xlsx`.
+- CASE-C: `[C-D01 文件].xlsx`.
 
 The WeChat records, payment vouchers, property registration, enforcement logs, and derivative-litigation documents were already marked missing by the manifest. No spreadsheet values, judgment content, corporate-record content, or enforcement facts were inferred from filenames or historic summaries.
 
@@ -113,7 +113,7 @@ Only the company publicity report was accessible. It can support a limited enter
 
 | ID | Source statement or recorded data | Permitted candidate fact | Boundary |
 |---|---|---|---|
-| A-S01 | The report identifies 温州沐希鞋业有限公司 and unified social credit code `91330324MACGRX8D8R` | A registered company with that identifier is reported as the possible transaction entity | Identity only; transaction-party status unresolved |
+| A-S01 | The report identifies [CASE-A 主体] and unified social credit code `[USCC-REDACTED]` | A registered company with that identifier is reported as the possible transaction entity | Identity only; transaction-party status unresolved |
 | A-S02 | Page 2 reports a natural-person wholly owned limited company, legal representative 温德义, registered capital RMB 200,000, and status `存续` | Current registered form and roles as shown in the report | Must be rechecked against the live publicity system |
 | A-S03 | Page 3 records changes on 2024-06-05, including legal representative from 崔龙 to 温德义 and shareholder/type changes | Registered-role attribution may depend on the transaction date | Does not prove authority or ratification in a specific transaction |
 | A-S04 | The 2023 annual-report section records then-shareholders 崔龙 and 周宁, subscribed amounts of RMB 150,000 and RMB 50,000, and paid-in amount 0 at that reporting point | Historic registered contribution information may be time-sensitive context | Not a finding of capital defect, abuse, or liability |
@@ -178,7 +178,7 @@ Legal Fact candidates generated:   0
 Request Right candidates:          0
 ```
 
-The manifest label `塑博坊人格否认责任` is a test theme, not evidence and not a final request-right selection.
+The manifest label `CASE-B 人格否认责任` is a test theme, not evidence and not a final request-right selection.
 
 | Validation question | Required evidence category | Current status |
 |---|---|---|
@@ -199,7 +199,7 @@ Human review boundary:              PASS
 
 ## 7. CASE-C — Competing Request Right Analysis Validation
 
-The only file recorded as bound for CASE-C, `康尔达系列案件费用明细.xlsx`, was unavailable. Property registration, enforcement logs and derivative-litigation materials were already marked missing.
+The only file recorded as bound for CASE-C, `[C-D01 文件].xlsx`, was unavailable. Property registration, enforcement logs and derivative-litigation materials were already marked missing.
 
 ```text
 Evidence items read:               0

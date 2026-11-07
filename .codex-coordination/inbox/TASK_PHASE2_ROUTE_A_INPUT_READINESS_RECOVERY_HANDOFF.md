@@ -309,7 +309,7 @@ Frozen state:
 
 ```text
 0 of 4 categories accessible
-Current “康尔达” validation label and frozen matter label require reconciliation
+Current “CASE-C 当前标签” validation label and frozen matter label require reconciliation
 Infrastructure descriptor: BLOCKED
 ```
 

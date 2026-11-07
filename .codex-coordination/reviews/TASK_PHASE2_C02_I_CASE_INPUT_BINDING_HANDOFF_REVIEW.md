@@ -12,7 +12,7 @@
 
 ## Review Summary
 
-The `TASK_PHASE2_C02_I_CASE_INPUT_BINDING_HANDOFF.md` has been audited and matches Track C governance criteria. The design introduces strict input asset tracking for Muxi, Subofang, and Zhang Chengqi cases, ensuring validation results bind directly to reproducible workspace data.
+The `TASK_PHASE2_C02_I_CASE_INPUT_BINDING_HANDOFF.md` has been audited and matches Track C governance criteria. The design introduces strict input asset tracking for CASE-A, CASE-B party, and CASE-C frozen-label party cases, ensuring validation results bind directly to reproducible workspace data.
 
 The review recommends approval of the Handoff for C02-I case input binding.
 

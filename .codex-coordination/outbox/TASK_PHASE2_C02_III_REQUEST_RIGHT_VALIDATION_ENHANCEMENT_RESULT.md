@@ -53,15 +53,15 @@ Every previously bound physical path was rechecked during this execution. Prior 
 
 | Case | Required material categories | Accessible and hash-verified | Missing / unavailable | Case-level status |
 |---|---:|---:|---:|---|
-| CASE-A — 沐希鞋业买卖合同纠纷 | 4 | 1 | 3 | PARTIAL / BLOCKED |
-| CASE-B — 塑博坊人格否认责任 | 5 | 0 | 5 | BLOCKED |
-| CASE-C — 张成棋执行衍生案件 | 4 | 0 | 4 | BLOCKED |
+| CASE-A — CASE-A 买卖合同纠纷 | 4 | 1 | 3 | PARTIAL / BLOCKED |
+| CASE-B — CASE-B 人格否认责任 | 5 | 0 | 5 | BLOCKED |
+| CASE-C — CASE-C 冻结标签执行衍生案件 | 4 | 0 | 4 | BLOCKED |
 | **Total** | **13** | **1** | **12** | **MATERIAL GAP** |
 
 The sole accessible material was:
 
-- file: `温州沐希鞋业有限公司报告.pdf`;
-- path: `C:\Users\Administrator\Documents\xwechat_files\simonno1123_a85c\msg\file\2026-06\温州沐希鞋业有限公司报告.pdf`;
+- file: `[A-D02 文件].pdf`;
+- path: `<OWNER-IM-FILES>\[A-D02 文件].pdf`;
 - SHA-256: `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898`;
 - byte-hash result: exact match to the approved import manifest;
 - text/OCR result: 2,996 characters extracted from pages 1–7; page 8 was visually verified as blank, so all substantive pages have a usable text layer;

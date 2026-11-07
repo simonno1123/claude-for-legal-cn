@@ -349,7 +349,7 @@ Any failure or missing human decision yields:
 BLOCKED
 ```
 
-The current “康尔达” label, frozen `C02-CASE-C-001 / 张成棋执行衍生案件` label, and historical filename cannot be automatically merged.
+The current “CASE-C 当前标签” label, frozen `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件` label, and historical filename cannot be automatically merged.
 
 ## 9. Execution Registry Record
 

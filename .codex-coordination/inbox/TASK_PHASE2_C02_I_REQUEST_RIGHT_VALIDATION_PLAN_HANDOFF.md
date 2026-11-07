@@ -49,11 +49,11 @@ C02 is anchored in the Request-Right Foundation theory (请求权基础理论):
 
 ## 4. Verification Scope (Three Core Cases)
 
-- **CASE-A: Muxi Shoes Sales Contract Dispute (C02-CASE-A-001)**
+- **CASE-A: CASE-A party Sales Contract Dispute (C02-CASE-A-001)**
   - *Focus*: Transaction facts -> Sales price request-right -> Agency authority dispute mapping.
-- **CASE-B: Subofang Corporate Veil Piercing (C02-CASE-B-001)**
+- **CASE-B: CASE-B party Corporate Veil Piercing (C02-CASE-B-001)**
   - *Focus*: Creditor request-right -> Company insolvency -> Corporate veil piercing.
-- **CASE-C: Zhang Chengqi Enforcement Derivative Dispute (C02-CASE-C-001)**
+- **CASE-C: CASE-C frozen-label party Enforcement Derivative Dispute (C02-CASE-C-001)**
   - *Focus*: Enforcement debt -> Asset property right dispute -> New request-right generation.
 
 ## 5. Fixed Baseline Inputs
@@ -101,6 +101,6 @@ Codex is authorized to create exactly **2 documentation files**:
 - **AC-C02-I-001**: Request-right must serve as the primary entry point for analysis.
 - **AC-C02-I-002**: Differentiate `Evidence -> Fact -> Legal Fact -> Element`.
 - **AC-B3-003**: Prohibit automated claim selection, factual supplements, or outcome predictions.
-- **AC-B3-004**: Complete validation tracing for Muxi, Subofang, and Zhang Chengqi cases.
+- **AC-B3-004**: Complete validation tracing for CASE-A, CASE-B party, and CASE-C frozen-label party cases.
 - **AC-B3-005**: Human review priority remains preserved.
 - **AC-B3-006**: `git diff --check` passes, staging remains empty, and only the two designated outputs are created.

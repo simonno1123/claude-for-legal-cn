@@ -54,7 +54,7 @@ Before execution, the executor must verify:
 
 ## 4. Enhancement Validation Scope and Rules
 
-- **Allowed**: Map elements and verify gaps for located materials under Muxi, Subofang, and Zhang Chengqi cases; construct the Case Material Registry; log OCR layer verified states.
+- **Allowed**: Map elements and verify gaps for located materials under CASE-A, CASE-B party, and CASE-C frozen-label party cases; construct the Case Material Registry; log OCR layer verified states.
 - **Prohibited**: Editing Skill prompts, Agents, or code under `litigation-legal/`; generating final win rates, strategy choices, or merits predictions.
 
 ---

@@ -267,7 +267,7 @@ Document Review confirms source fidelity, extraction completeness, locators, cor
 
 ## 7. CASE-A Acquisition Package
 
-The matter name “沐希鞋业” is a planning identifier only.
+The matter name “CASE-A 主体” is a planning identifier only.
 
 ### 7.1 Frozen and Candidate Category Matrix
 
@@ -305,7 +305,7 @@ No corporate record can substitute for transaction, communication, delivery, or 
 
 ## 8. CASE-B Acquisition Package
 
-The matter name “塑博坊” is a planning identifier only.
+The matter name “CASE-B 主体” is a planning identifier only.
 
 | ID | Category | Frozen state | Candidate source path | Identity/verification requirement | Plan result |
 |---|---|---|---|---|---|
@@ -327,7 +327,7 @@ NOT AUTHORIZED / NOT PERFORMED
 
 ## 9. CASE-C Acquisition Package
 
-The current “康尔达” label, frozen `C02-CASE-C-001 / 张成棋执行衍生案件` label, and a historical filename containing “康尔达” remain unbound metadata observations.
+The current “CASE-C 当前标签” label, frozen `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件` label, and a historical filename containing “CASE-C 当前标签” remain unbound metadata observations.
 
 ### 9.1 Identity-First Rule
 

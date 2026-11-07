@@ -463,7 +463,7 @@ Every gate records `PASS`, `UNKNOWN`, `BLOCKED`, or `REJECTED` plus reviewer, da
 
 ### 7.3 CASE-C Identity Drift Control
 
-The current “康尔达” validation label, the frozen `C02-CASE-C-001 / 张成棋执行衍生案件` label, and a historical filename containing “康尔达” are distinct metadata observations. The Recovery Registry must not merge them automatically.
+The current “CASE-C 当前标签” validation label, the frozen `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件` label, and a historical filename containing “CASE-C 当前标签” are distinct metadata observations. The Recovery Registry must not merge them automatically.
 
 Required resolution package:
 

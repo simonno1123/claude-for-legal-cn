@@ -121,7 +121,7 @@ Matter input gate:             PASS — BLOCKED
 Human Review separation:       PASS
 ```
 
-The current “康尔达” validation label, frozen `C02-CASE-C-001 / 张成棋执行衍生案件` label, and historical filename are not treated as proof of the same matter identity. No ownership, asset-transfer, enforcement-path, derivative-request-right, or priority conclusion was generated.
+The current “CASE-C 当前标签” validation label, frozen `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件` label, and historical filename are not treated as proof of the same matter identity. No ownership, asset-transfer, enforcement-path, derivative-request-right, or priority conclusion was generated.
 
 ## 5. Acceptance Criteria
 

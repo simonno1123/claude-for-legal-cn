@@ -31,9 +31,9 @@ BLOCKED — Gaps in Workspace and OCR Coverage
 ## 2. Scan Results and Gaps
 
 A recursive search of WeChat files and WPS directories on the system successfully discovered:
-- **CASE-A**: Found 2/4 files (Muxi Bill XLS and Company Report PDF).微信聊天记录与付款凭证仍缺失。
+- **CASE-A**: Found 2/4 files (CASE-A Bill XLS and Company Report PDF).微信聊天记录与付款凭证仍缺失。
 - **CASE-B**: Found 13 unique file nodes (Judgments, bank flows, registration).
-- **CASE-C**: Found 1/4 files (Kangerda Fee Details XLSX).
+- **CASE-C**: Found 1/4 files (CASE-C current-label Fee Details XLSX).
 
 ### Gaps Summary
 - **Physical Gaps**:微信往来记录、付款凭证、财产登记以及衍生诉讼材料缺失。

@@ -19,6 +19,6 @@ The Project Owner formally accepts the C02-I Case Input Binding audit results an
 
 1. **C02-I Case Input Binding Closeout**: The input audit task is **CLOSED / DONE**.
 2. **C02-I Validation Execution State**: Remains **BLOCKED**. No validation simulation, reasoning mapping, or element analysis may proceed for the three cases.
-3. **Trigger Requirement**: Validation execution remains blocked until the actual raw material files (for Muxi, Subofang, and Zhang Chengqi cases) are successfully copied into the workspace and bound via a revised Input Manifest Handoff.
+3. **Trigger Requirement**: Validation execution remains blocked until the actual raw material files (for CASE-A, CASE-B party, and CASE-C frozen-label party cases) are successfully copied into the workspace and bound via a revised Input Manifest Handoff.
 
 No modifications to Skill prompts, Agents, manifests, or code are authorized under this decision.
