@@ -18,7 +18,7 @@ SKILL / AGENT / CODE MODIFICATION: NOT AUTHORIZED
 
 This Handoff authorizes execution of **C02-I Case Material Import and Binding**.
 
-The objective is to scan the workspace and host machine, identify any files belonging to the Muxi Shoes, Subofang, and Zhang Chengqi cases, register them with their exact paths and SHA-256 hashes, and output an Import Manifest.
+The objective is to scan the workspace and host machine, identify any files belonging to the CASE-A party, CASE-B party, and CASE-C frozen-label party cases, register them with their exact paths and SHA-256 hashes, and output an Import Manifest.
 
 This phase is **read-only and documentation-only**. No actual editing of skill prompts, rewriting agent definitions, or modifying code is authorized.
 
@@ -52,7 +52,7 @@ Before execution, the executor must verify:
 
 ## 4. Import Scope and Inventory Rules
 
-- **Source Check**: Scan directories and log file parameters (Muxi: 4 items, Subofang: 5 items, Zhang Chengqi: 4 items).
+- **Source Check**: Scan directories and log file parameters (CASE-A: 4 items, CASE-B party: 5 items, CASE-C frozen-label party: 4 items).
 - **Missing Marker**: Pursuant to AC-C02-IMPORT-003, missing files must be explicitly registered as `NOT_FOUND` with `NOT_AVAILABLE` hashes and `NO_READ` boundaries. No virtual mock files or fake case data may be generated.
 
 ## 5. Authorized Outputs

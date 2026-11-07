@@ -35,13 +35,13 @@ Governance-document identity passed. Physical case-file availability did not mat
 
 | Case | Manifest-recorded bound material | Accessible material | Result |
 |---|---:|---:|---|
-| CASE-A — 沐希鞋业买卖合同纠纷 | 2 files | 1 PDF | PARTIAL |
-| CASE-B — 塑博坊人格否认责任 | 13 file nodes | 0 | BLOCKED |
-| CASE-C — 张成棋执行衍生案件 | 1 workbook | 0 | BLOCKED |
+| CASE-A — CASE-A 买卖合同纠纷 | 2 files | 1 PDF | PARTIAL |
+| CASE-B — CASE-B 人格否认责任 | 13 file nodes | 0 | BLOCKED |
+| CASE-C — CASE-C 冻结标签执行衍生案件 | 1 workbook | 0 | BLOCKED |
 
 Accessible and verified source:
 
-- `温州沐希鞋业有限公司报告.pdf`;
+- `[A-D02 文件].pdf`;
 - SHA-256: `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898`;
 - verification: manifest hash match, text extraction and rendered-page inspection completed;
 - permitted use: enterprise identity and registered-role timeline only.

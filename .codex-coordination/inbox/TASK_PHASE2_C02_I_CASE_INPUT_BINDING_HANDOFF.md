@@ -50,13 +50,13 @@ Before execution, the executor must verify that the following baselines exist in
 
 The executor must look up, catalog, and bind the following case files:
 
-### 4.1 CASE-A: Muxi Shoes (C02-CASE-A-001)
+### 4.1 CASE-A: CASE-A party (C02-CASE-A-001)
 - Contract, correspondence, billing, payments, or other transaction files.
 
-### 4.2 CASE-B: Subofang (C02-CASE-B-001)
+### 4.2 CASE-B: CASE-B party (C02-CASE-B-001)
 - Judicial decisions, corporate records, shareholder lists, financial flows, or enforcement docs.
 
-### 4.3 CASE-C: Zhang Chengqi (C02-CASE-C-001)
+### 4.3 CASE-C: CASE-C frozen-label party (C02-CASE-C-001)
 - Enforcement files, asset clues, property records, or derivative litigation files.
 
 Each entry must list path, SHA-256, type, access scope, and validation boundary.

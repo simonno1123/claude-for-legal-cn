@@ -143,9 +143,9 @@ The design covers:
 Identity result:
 
 ```text
-Current “康尔达” label
+Current “CASE-C 当前标签” label
         ≠
-Frozen C02-CASE-C-001 / 张成棋执行衍生案件 label
+Frozen C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件 label
         ≠
 Historical filename identity
 ```

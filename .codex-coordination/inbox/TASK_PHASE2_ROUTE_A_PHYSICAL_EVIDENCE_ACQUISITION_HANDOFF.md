@@ -226,7 +226,7 @@ NO_ACTION_AUTHORIZED
 
 The design must not claim that a court, bank, registry, platform, company, party, or other custodian is legally required or procedurally available to provide a record. Current China Mainland law, procedure, professional duties, confidentiality, personal-information constraints, and matter-specific authority require qualified-lawyer confirmation before any external step.
 
-## 7. CASE-A — 沐希鞋业 Material Recovery Package
+## 7. CASE-A — CASE-A 主体 Material Recovery Package
 
 The matter name is a validation/planning identifier only.
 
@@ -260,7 +260,7 @@ The system may not infer delivery, non-delivery, performance, breach, or proof n
 
 Corporate/public-record evidence cannot substitute for transaction, payment, communication, or any human-confirmed delivery category. Recovery of one item cannot release the case-bundle gate.
 
-## 8. CASE-B — 塑博坊 Material and Identity Recovery
+## 8. CASE-B — CASE-B 主体 Material and Identity Recovery
 
 The matter name is a validation/planning identifier only.
 
@@ -290,9 +290,9 @@ Physical acquisition: NOT AUTHORIZED
 Analysis readiness: BLOCKED
 ```
 
-## 9. CASE-C — 康尔达 / Historical-Matter Identity Gate
+## 9. CASE-C — CASE-C 当前标签 / Historical-Matter Identity Gate
 
-The current “康尔达” label, frozen `C02-CASE-C-001 / 张成棋执行衍生案件` label, and historical filename containing “康尔达” are distinct metadata observations.
+The current “CASE-C 当前标签” label, frozen `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件` label, and historical filename containing “CASE-C 当前标签” are distinct metadata observations.
 
 Required gate:
 

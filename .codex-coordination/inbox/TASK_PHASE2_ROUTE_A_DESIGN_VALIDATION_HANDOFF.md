@@ -170,7 +170,7 @@ The validation may not conclude:
 
 ### 4.1 CASE-A — Commercial Transaction Material Profile
 
-Matter label: 沐希鞋业案件. The label is a validation identifier only, not evidence.
+Matter label: CASE-A 案件. The label is a validation identifier only, not evidence.
 
 Bound material categories from the frozen governance inputs:
 
@@ -198,7 +198,7 @@ No transaction fact, amount, party attribution, delivery, payment, or request-ri
 
 ### 4.2 CASE-B — Litigation and Corporate Record Profile
 
-Matter label: 塑博坊相关案件. The label is a validation identifier only.
+Matter label: CASE-B 相关案件. The label is a validation identifier only.
 
 Bound material categories:
 
@@ -224,7 +224,7 @@ Validation objectives:
 
 ### 4.3 CASE-C — Property, Cost, and Enforcement-Derivative Profile
 
-Matter label: 康尔达相关案件. The label is a validation identifier only.
+Matter label: CASE-C 当前标签案件. The label is a validation identifier only.
 
 Bound material categories:
 

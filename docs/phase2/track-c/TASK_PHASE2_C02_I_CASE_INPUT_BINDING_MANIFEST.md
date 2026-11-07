@@ -20,9 +20,9 @@ Due to the absence of physical documents in the workspace, all cases are marked 
 
 All fields below are explicit. `NOT_FOUND` means no authorized workspace path exists; `UNKNOWN` means no file type can be identified; `NOT_AVAILABLE` means no file exists from which a SHA-256 can be computed; and `NONE` means no material is authorized for reading.
 
-### 1.1 CASE-A: Muxi Shoes (C02-CASE-A-001)
+### 1.1 CASE-A: CASE-A party (C02-CASE-A-001)
 
-- **Matter Name**: 沐希鞋业买卖合同纠纷
+- **Matter Name**: CASE-A 买卖合同纠纷
 - **Status**: **MISSING / NOT FOUND**
 
 | Material Name | Path | Type | SHA-256 | Access Scope | Validation Boundary | Status |
@@ -35,9 +35,9 @@ All fields below are explicit. `NOT_FOUND` means no authorized workspace path ex
 - **Material Count**: `4 required / 4 missing / 0 bound`
 - **Validation Execution Status**: **BLOCKED**.
 
-### 1.2 CASE-B: Subofang (C02-CASE-B-001)
+### 1.2 CASE-B: CASE-B party (C02-CASE-B-001)
 
-- **Matter Name**: 塑博坊人格否认责任
+- **Matter Name**: CASE-B 人格否认责任
 - **Status**: **MISSING / NOT FOUND**
 
 | Material Name | Path | Type | SHA-256 | Access Scope | Validation Boundary | Status |
@@ -51,9 +51,9 @@ All fields below are explicit. `NOT_FOUND` means no authorized workspace path ex
 - **Material Count**: `5 required / 5 missing / 0 bound`
 - **Validation Execution Status**: **BLOCKED**.
 
-### 1.3 CASE-C: Zhang Chengqi (C02-CASE-C-001)
+### 1.3 CASE-C: CASE-C frozen-label party (C02-CASE-C-001)
 
-- **Matter Name**: 张成棋执行衍生案件
+- **Matter Name**: CASE-C 冻结标签执行衍生案件
 - **Status**: **MISSING / NOT FOUND**
 
 | Material Name | Path | Type | SHA-256 | Access Scope | Validation Boundary | Status |

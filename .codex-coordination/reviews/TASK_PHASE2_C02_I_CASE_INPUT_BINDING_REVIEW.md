@@ -17,7 +17,7 @@
 
 The execution results of Phase C02-I Case Input Binding have been audited. The executor successfully audited the workspace and verified the raw material manifest. 
 
-Due to the absence of the actual files for Muxi, Subofang, and Zhang Chengqi in the workspace, the manifest correctly catalogs all targets as `MISSING` and sets the execution status to `BLOCKED`. 
+Due to the absence of the actual files for CASE-A, CASE-B party, and CASE-C frozen-label party in the workspace, the manifest correctly catalogs all targets as `MISSING` and sets the execution status to `BLOCKED`. 
 
 This is fully compliant with **AC-C02-BIND-003** (mismatch/missing elements must block analysis and prevent mock facts synthesis).
 

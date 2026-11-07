@@ -94,34 +94,34 @@ No registry descriptor is a merits assessment.
 
 ## 4. Case Material Registry
 
-### 4.1 CASE-A — C02-CASE-A-001 / 沐希鞋业买卖合同纠纷
+### 4.1 CASE-A — C02-CASE-A-001 / CASE-A 买卖合同纠纷
 
 | Document ID | Material | Bound path | Expected hash | Actual hash | Access | Text/OCR status | Human review | Validation state |
 |---|---|---|---|---|---|---|---|---|
-| A-D01 | Muxi Bill (10–12) | `C:\Users\Administrator\WPSDrive\729282343\WPS云文档\wps个人云文档\私有\法律案件\沐希鞋业合同案\沐希10-12月账单.xls` | `6B1E5ED87165576847EEBC67B50E048FBC7F8C2FD708172C492BEFBD5F526082` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
-| A-D02 | Muxi Company Report | `C:\Users\Administrator\Documents\xwechat_files\simonno1123_a85c\msg\file\2026-06\温州沐希鞋业有限公司报告.pdf` | `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898` | `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898` | `ACCESSIBLE_VERIFIED` | `TEXT_LAYER_VERIFIED` — 2,996 extracted characters across pages 1–7; page 8 visually verified as blank | REQUIRED / PENDING | `SUPPORTED` for source identity only |
+| A-D01 | CASE-A Bill (10–12) | `<OWNER-CLOUD-DOCS>\CASE-A\[A-D01 文件].xls` | `6B1E5ED87165576847EEBC67B50E048FBC7F8C2FD708172C492BEFBD5F526082` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
+| A-D02 | CASE-A Company Report | `<OWNER-IM-FILES>\[A-D02 文件].pdf` | `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898` | `8A654E4F136240496AE0EC3602CC1A7099CB546C3B6BD4AFFEDD0C90A5A2A898` | `ACCESSIBLE_VERIFIED` | `TEXT_LAYER_VERIFIED` — 2,996 extracted characters across pages 1–7; page 8 visually verified as blank | REQUIRED / PENDING | `SUPPORTED` for source identity only |
 | A-D03 | WeChat chat logs | `NOT_FOUND` | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 | A-D04 | Payment vouchers | `NOT_FOUND` | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 
 CASE-A registry result: **1 of 4 material categories accessible; 3 blocked**.
 
-### 4.2 CASE-B — C02-CASE-B-001 / 塑博坊人格否认责任
+### 4.2 CASE-B — C02-CASE-B-001 / CASE-B 人格否认责任
 
 | Document ID | Material | Bound path | Expected hash | Actual hash | Access | Text/OCR status | Human review | Validation state |
 |---|---|---|---|---|---|---|---|---|
-| B-D01 | Court Judgment | `C:\Users\Administrator\WPSDrive\729282343\WPS云文档\wps个人云文档\私有\法律案件\塑博坊案\浙江塑博坊判决书.pdf` | `FE0636347235BF3EBC800032BB075B2CC62F486279796FA6AB66A6EE5B412EA2` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
-| B-D02 | Bank Flow Records | `C:\Users\Administrator\WPSDrive\729282343\WPS云文档\wps个人云文档\私有\法律案件\塑博坊案\资金流流水.xlsx` | `85ACDB7FEC78A4FCB195844F229C470A8927B4B52698278B7CE501B7D52A8833` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
-| B-D03 | Corporate Registration Records | `C:\Users\Administrator\WPSDrive\729282343\WPS云文档\wps个人云文档\私有\法律案件\塑博坊案\工商调档资料\` | Prior manifest: `Bound Multiple` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
+| B-D01 | Court Judgment | `<OWNER-CLOUD-DOCS>\CASE-B\[B-D01 文件].pdf` | `FE0636347235BF3EBC800032BB075B2CC62F486279796FA6AB66A6EE5B412EA2` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
+| B-D02 | Bank Flow Records | `<OWNER-CLOUD-DOCS>\CASE-B\[B-D02 文件].xlsx` | `85ACDB7FEC78A4FCB195844F229C470A8927B4B52698278B7CE501B7D52A8833` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
+| B-D03 | Corporate Registration Records | `<OWNER-CLOUD-DOCS>\CASE-B\[B-D03 目录]\` | Prior manifest: `Bound Multiple` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 | B-D04 | Shareholder Lists | Expected within corporate-record set; no independently bound file | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 | B-D05 | Enforcement Documents | `NOT_FOUND` | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 
 CASE-B registry result: **0 of 5 material categories accessible; all blocked**. The prior directory-level entry did not bind each child file by path and hash, and the directory is now unavailable, so C02-III cannot validate the earlier node count or OCR-gap count.
 
-### 4.3 CASE-C — C02-CASE-C-001 / 张成棋执行衍生案件
+### 4.3 CASE-C — C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件
 
 | Document ID | Material | Bound path | Expected hash | Actual hash | Access | Text/OCR status | Human review | Validation state |
 |---|---|---|---|---|---|---|---|---|
-| C-D01 | Kangerda Fee Details | `C:\Users\Administrator\WPSDrive\729282343\WPS云文档\wps个人云文档\私有\法律案件\康尔达系列案\康尔达系列案件费用明细.xlsx` | `0A984697AA7B1EAA4157F8C8CF84B0E114AA7097118E0054023337BC2163764B` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
+| C-D01 | CASE-C current-label Fee Details | `<OWNER-CLOUD-DOCS>\CASE-C\[C-D01 文件].xlsx` | `0A984697AA7B1EAA4157F8C8CF84B0E114AA7097118E0054023337BC2163764B` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 | C-D02 | Property Registration | `NOT_FOUND` | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 | C-D03 | Enforcement Logs | `NOT_FOUND` | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |
 | C-D04 | Derivative-Litigation Materials | `NOT_FOUND` | `NOT_AVAILABLE` | `NOT_AVAILABLE` | `MISSING_AT_BOUND_PATH` | `NOT_APPLICABLE_UNAVAILABLE` | PENDING | `BLOCKED` |

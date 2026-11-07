@@ -114,7 +114,7 @@ Design findings:
 
 Design findings:
 
-- the current “康尔达” label, frozen `C02-CASE-C-001 / 张成棋执行衍生案件` label, and historical filename are not automatically bound;
+- the current “CASE-C 当前标签” label, frozen `C02-CASE-C-001 / CASE-C 冻结标签执行衍生案件` label, and historical filename are not automatically bound;
 - matter identity must be resolved before any material acquisition or analytical use;
 - the fee workbook cannot substitute for property, enforcement, transaction, or derivative-litigation records;
 - no ownership, transfer, enforcement path, priority, or derivative request-right conclusion was generated.

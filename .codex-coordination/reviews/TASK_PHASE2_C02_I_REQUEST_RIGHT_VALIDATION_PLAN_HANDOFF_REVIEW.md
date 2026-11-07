@@ -23,7 +23,7 @@ The review recommends approval of the Handoff for C02-I validation design.
 | AC-C02-I-001 | Request-Right Primacy | Yes | Enforces request-right starting entry point. |
 | AC-C02-I-002 | Fact-Element Distinction | Yes | Mandates clear differentiation across 3 mapping layers. |
 | AC-C02-I-003 | No Auto-decision | Yes | Prohibits win prediction or auto-satisfaction. |
-| AC-C02-I-004 | Case Verification | Yes | Covers Muxi Shoes, Subofang, and Zhang Chengqi cases. |
+| AC-C02-I-004 | Case Verification | Yes | Covers CASE-A party, CASE-B party, and CASE-C frozen-label party cases. |
 | AC-C02-I-005 | Human Control Priority | Yes | Lawyer retains final request-right selection authority. |
 | AC-C02-I-006 | Technical validation | Yes | Read-only scope; git checks enforced. |
 
