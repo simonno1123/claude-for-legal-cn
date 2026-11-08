@@ -1,0 +1,73 @@
+{
+  "RecordKind": "C03_AR_B_002_AND_AR_B_004_CLOSURE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-08 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Matter": "CASE-D / ENF-01 (real matter; all material, identities and the private registry stay on the owner computer)",
+  "BasisRecords": [
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_ROUTE_A_CASE_D_INVENTORY_RESULT.md",
+      "SHA256": "6FD1A4E6D787E2D35B05496EE5630A58AA8EBBCA380D10EAE5376944697DC74A"
+    },
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_CASE_D_DOCUMENT_REVIEW_AND_C03_READINESS_RESULT.md",
+      "SHA256": "07B08037FE040C04B95C9514088AE8AD0BBE58A25650552383B3211705187B05"
+    },
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_CASE_D_OWNER_CONFIRMATIONS_UPDATE.md",
+      "SHA256": "5AFFBA3B0DFCEB4E0E55082731BD12565006BAC921448171779BD109B4FC48D2"
+    },
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_CASE_D_ENFORCEMENT_PROGRESS_UPDATE.md",
+      "SHA256": "BB29DB393E30F470B033E423A3E0AF07CBD46441F6951908BB5CED47F47CCDAA"
+    },
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_CASE_D_PAYMENTS_AND_COLLATERAL_UPDATE.md",
+      "SHA256": "F76E009F0D0D94F6F6621EDE3177658E935BE58AD38ECB349E0CE476D757D788"
+    },
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_CASE_D_AR_B_004_VERIFICATION_RESULT.md",
+      "SHA256": "DE148075D3FD61FE54741989B3C5EDC07D54143EAA162E0879F293868695799C"
+    },
+    {
+      "Path": ".codex-coordination/outbox/TASK_PHASE2_CASE_D_AR_B_002_READINESS_UPDATE.md",
+      "SHA256": "C78EC1A18B7F12E1339A1BDA7661E5E8BB6F70FC6E5C5CEE4168BB6868993D00"
+    }
+  ],
+  "PrivateEvidence": "Documents\\legal-cn-private\\CASE-D\\ on the owner computer (registry, text extraction, review and readiness package); not in this repository",
+  "Decisions": [
+    {
+      "Id": "AR-B-002-CLOSE-WITH-LIMITS",
+      "Choice": "带局限关闭（推荐）",
+      "Effect": "AR-B-002 (Route A readiness) CLOSED WITH LIMITATIONS for CASE-D: conflicts 1-5 resolved by owner confirmation, other-matter file excluded",
+      "Limitations": [
+        "cash payments without vouchers",
+        "original recording media not verified",
+        "some materials are derived copies or working versions",
+        "number of loans and their bank mapping unconfirmed",
+        "one judgment debtor not located"
+      ]
+    },
+    {
+      "Id": "AR-B-004-CLOSE-WITH-LIMITS",
+      "Choice": "带局限关闭（推荐）",
+      "Effect": "AR-B-004 (evidence readiness and provenance) CLOSED WITH LIMITATIONS for CASE-D: owner, as the matter's lawyer, accepts the evidence registry and provenance matrix",
+      "Limitations": [
+        "cash payments without vouchers",
+        "original recording media not verified",
+        "some materials are derived copies or working versions",
+        "number of loans and their bank mapping unconfirmed",
+        "one judgment debtor not located"
+      ]
+    }
+  ],
+  "Scope": "closure is bound to CASE-D only; a different matter needs its own packages",
+  "Withdrawal": "plan §7.2 / §7.4 conditions stay in force: material, identity or evidence-use change, revocation, or invalidated evidence reopens the item",
+  "ResultingState": {
+    "Closed blockers": "5 / 10 (AR-B-002, 004, 007, 008, 009)",
+    "Open": "AR-B-001, 003, 005, 006, 010",
+    "AR_B_003": "OPEN — known gap: no written resumed-enforcement case number",
+    "C03": "NOT ACTIVE",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  }
+}
