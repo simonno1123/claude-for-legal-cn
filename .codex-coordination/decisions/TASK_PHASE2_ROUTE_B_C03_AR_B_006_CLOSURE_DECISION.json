@@ -1,0 +1,36 @@
+{
+  "RecordKind": "C03_AR_B_006_CLOSURE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-08 (approx)",
+  "Method": "owner chose an option in a recorder question; option text drafted by the recorder; not a personal signature",
+  "Matter": "CASE-D / ENF-01",
+  "Basis": {
+    "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_AR_B_006_AUTHORITY_FRESHNESS_PACKET_CASE_D.md",
+    "SHA256": "1E725C0495FB1515FF57446273E75EAD53C730B0662D452EB921BC260712CBCC",
+    "PRs": [
+      92,
+      93,
+      94
+    ]
+  },
+  "Decisions": [
+    {
+      "Id": "AR-B-006-CLOSE-WITH-LIMITS",
+      "Choice": "带局限关闭（推荐）",
+      "Effect": "AR-B-006 (China-law authority freshness) CLOSED WITH LIMITATIONS for CASE-D: 18 cited authorities listed with currency status; 7 verified at official sources, 8 partially verified, 2 supplementary items unverified, 1 non-normative local threshold removed; no blocked item",
+      "Limitations": [
+        "8 items: article text not compared word-for-word because official full-text pages block automated retrieval; manual spot-check handed over",
+        "local refusal-to-execute threshold is non-normative and not used; a new local document may follow",
+        "authority freshness is time-sensitive: re-check before any output that relies on it"
+      ]
+    }
+  ],
+  "Scope": "bound to CASE-D; a different matter or a later date needs a fresh check",
+  "Withdrawal": "plan §7.6 conditions stay in force (amendment, repeal, new interpretation, or stale check)",
+  "ResultingState": {
+    "Closed blockers": "6 / 10 (AR-B-002, 004, 006, 007, 008, 009)",
+    "Open": "AR-B-001, 003, 005, 010",
+    "C03": "NOT ACTIVE",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  }
+}
