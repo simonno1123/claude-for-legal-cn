@@ -1,0 +1,49 @@
+{
+  "RecordKind": "C03_AR_B_005_ADOPTION_AND_CLOSURE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-08 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Basis": {
+    "Design": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_AR_B_005_HUMAN_REVIEW_GATE_PACKET.md",
+      "SHA256": "126C8E24033ADD6706483E961CAB3F9081C22F11FCFFFCABDA0F6DF462EDCDDD",
+      "DesignId": "C03-GATE-DESIGN-005",
+      "Version": "R2",
+      "Checklist": "CL-005-R2"
+    },
+    "PRs": [
+      96
+    ],
+    "Reviews": "two rounds by a fresh-context subagent of the recorder's model family (not external): FAIL (3 blocking) then FAIL (1 regression); all findings addressed in R2"
+  },
+  "Decisions": [
+    {
+      "Id": "AR-B-005-VALUE-A",
+      "Choice": "接受集中，记为局限（推荐）",
+      "Effect": "option 1: the owner is REVIEWER-01 and the downstream authorizer; independence is self-declared and partial; recorded in E-006 as an accepted limitation"
+    },
+    {
+      "Id": "AR-B-005-VALUE-B",
+      "Choice": "30 日（推荐）",
+      "Effect": "a disposition expires at the earlier of 30 days after the authority-pack check date or before any deadline falling in that window"
+    },
+    {
+      "Id": "AR-B-005-ADOPT-AND-CLOSE",
+      "Choice": "采纳设计并带局限关闭 AR-B-005（推荐）",
+      "Effect": "gate design R2 adopted (checklist CL-005-R2, exclusions per §8); AR-B-005 CLOSED WITH LIMITATIONS; each real candidate still needs its own review packet",
+      "Limitations": [
+        "single-lawyer concentration: reviewer = downstream authorizer = owner; independence self-declared and partial",
+        "reviewer mostly supplied or confirmed the candidate's inputs",
+        "code checks only the disposition text and keeps downstream blocked; binding a disposition to candidate ID/version/SHA, expiry and reviewer identity are enforced only by the packet and records",
+        "all reviews of this design were same-model-family, not external"
+      ]
+    }
+  ],
+  "Withdrawal": "plan §7.5: qualification/independence change, packet change, candidate superseded, review revoked; a design revision requires renewed review and adoption",
+  "ResultingState": {
+    "Closed blockers": "7 / 10 (AR-B-002, 004, 005, 006, 007, 008, 009)",
+    "Open": "AR-B-001, 003, 010",
+    "C03": "NOT ACTIVE",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  }
+}
