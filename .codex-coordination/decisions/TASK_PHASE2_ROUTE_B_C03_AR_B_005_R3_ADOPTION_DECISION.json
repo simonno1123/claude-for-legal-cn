@@ -1,0 +1,59 @@
+{
+  "RecordKind": "C03_AR_B_005_R3_ADOPTION_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-10 (approx)",
+  "Method": "owner chose options in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Basis": {
+    "Design": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_AR_B_005_HUMAN_REVIEW_GATE_PACKET_R3.md",
+      "SHA256": "1029BD425BDBC10DD641FA4AC6A85A2845E75AD0C17B7FABA1342C3E49C0CFEB",
+      "DesignId": "C03-GATE-DESIGN-005",
+      "Version": "R3 (revision 9)",
+      "Checklist": "CL-005-R2"
+    },
+    "Supersedes": {
+      "Version": "R2",
+      "SHA256": "126C8E24033ADD6706483E961CAB3F9081C22F11FCFFFCABDA0F6DF462EDCDDD",
+      "Relation": "R3 keeps R2 as the floor and adds controls; R2 rules remain in force through R3 §二 inheritance"
+    },
+    "PRs": [99, 100, 101, 102, 103, 104, 105, 106],
+    "Reviews": "nine rounds of read-only cross-model design review by OpenAI Codex (results archived in .codex-coordination/outbox/TASK_PHASE2_ROUTE_B_C03_AR_B_005_R3*_CROSS_MODEL_REVIEW_RESULT.md); rounds 1-8 FAIL with findings addressed; round 9 (confirmation, revision 9) PASS. Text reviews only, not human or legal review, not operational validation",
+    "OwnerDirections": [
+      "2026-11-08: mitigation direction approved ('可以')",
+      "2026-11-09: split R3 (procedural) from V8 (code enforcement)",
+      "2026-11-10: round 9 is the final review round"
+    ]
+  },
+  "Decisions": [
+    {"Id": "R3-CONFIRM-1", "Choice": "接受", "Effect": "R3 contains human-executed procedural rules only; V8 code enforcement (C03-GATE-ENFORCEMENT-V8) is designed separately"},
+    {"Id": "R3-CONFIRM-2", "Choice": "接受", "Effect": "candidate audience limited to the reviewer for both tiers; closed allowed-use table U1/U2/U3"},
+    {"Id": "R3-CONFIRM-3", "Choice": "接受", "Effect": "cross-check fixed coverage C1-C11; hard stops on C5/C6/C7; anti-shopping rules incl. stop-point index"},
+    {"Id": "R3-CONFIRM-4", "Choice": "接受", "Effect": "L2 egress only after admission record E and on-the-spot pre-send checks (§7.4 items 1-6)"},
+    {"Id": "R3-CONFIRM-5", "Choice": "接受", "Effect": "R/P at least 24h apart, no shortening for urgency; validity cutoff per §9.2; unknown deadline blocks; Q1/Q2/Q3 at application, authorization and use"},
+    {"Id": "R3-CONFIRM-6", "Choice": "接受", "Effect": "pre-review declaration I signed item by item before substantive review; private append-only stop-point index H queried and incrementally checked per §6.5"},
+    {"Id": "R3-CONFIRM-7", "Choice": "接受", "Effect": "the C03 internal gate collects no client records (narrower than the 2026-11-08 direction); whether client instructions are needed outside C03 remains the lawyer's own legal judgment"},
+    {"Id": "R3-CONFIRM-8", "Choice": "接受", "Effect": "quarterly sampling: ceil(10%), minimum 2, L2 first, fixed reproducible selection algorithm per §十二"},
+    {"Id": "R3-CONFIRM-9", "Choice": "已完成", "Effect": "the owner chose a final Codex confirmation round; result PASS"},
+    {
+      "Id": "R3-ADOPT",
+      "Choice": "采纳 R3（推荐）",
+      "Effect": "gate design R3 revision 9 adopted and in force; AR-B-005 remains CLOSED WITH LIMITATIONS; each real candidate still needs its own review records",
+      "Limitations": [
+        "all R2 limitations retained: single-lawyer concentration, self-declared and partial independence, reviewer participation in inputs",
+        "R3 is a proposed mitigation, not verified: record as '拟缓解，未验证' until controls are evidenced in operation",
+        "R3's added controls have no code enforcement until V8 is adopted and run; timing, waiting, pre-send checks and record contemporaneity rely on the reviewer's own discipline (R2's existing code protections remain)",
+        "the cross-check sees only de-identified material and provides no independent check of blind-scope sub-judgments",
+        "the cross-check model and the generator may share errors",
+        "all reviews are text reviews, not operational validation"
+      ]
+    }
+  ],
+  "Withdrawal": "R3 §十 and R2 §十 rules; a further design revision requires renewed review and owner adoption",
+  "ResultingState": {
+    "Closed blockers": "7 / 10 (AR-B-002, 004, 005, 006, 007, 008, 009)",
+    "Open": "AR-B-001, 003, 010",
+    "C03": "NOT ACTIVE",
+    "AutomaticDownstreamTransition": "BLOCKED",
+    "NextDesign": "C03-GATE-ENFORCEMENT-V8 (not started)"
+  }
+}
