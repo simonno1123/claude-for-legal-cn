@@ -1,0 +1,28 @@
+{
+  "RecordKind": "C03_AR_B_003_CLOSURE_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-11 (approx)",
+  "Method": "owner chose an option in a recorder question; option text drafted by the recorder; not a personal signature",
+  "Blocker": "AR-B-003 case and person identity / authorization (CASE-D / ENF-01)",
+  "Basis": {
+    "CaseIdentity": "case code CASE-D / ENF-01; civil and original enforcement case numbers fixed in the private readiness pack; the original enforcement case was terminated by settlement and enforcement has since resumed",
+    "ResumedEnforcementEvidence": "owner statement (2026-11-07) and the owner's own work record dated 2026-03-08 noting enforcement resumed (second-hand, private)",
+    "OperatorRole": "REVIEWER-01: the applicant's agent lawyer (the owner)",
+    "AuthoritySource": "engagement and power-of-attorney materials for the original proceedings (private); owner statement (situation note) that the owner continues to handle the matter"
+  },
+  "Decision": {
+    "Choice": "带局限关闭（推荐）",
+    "Effect": "AR-B-003 CLOSED WITH LIMITATIONS",
+    "Limitations": [
+      "no written record of the resumed-enforcement case number; candidates bind to case code CASE-D / ENF-01 and the resumed stage is evidenced only by owner statement and a second-hand work record",
+      "no written current power of attorney for the resumed-enforcement stage; the authority chain is verified only up to the original proceedings plus the owner's statement",
+      "when the resumed-enforcement case number or current authorization is obtained, it is added to the private readiness pack and to each later candidate's M; any discrepancy found then is a withdrawal event under R2 §十"
+    ]
+  },
+  "ResultingState": {
+    "Closed blockers": "8 / 10 (AR-B-002, 003, 004, 005, 006, 007, 008, 009)",
+    "Open": "AR-B-001, AR-B-010",
+    "C03": "NOT ACTIVE",
+    "AutomaticDownstreamTransition": "BLOCKED"
+  }
+}
