@@ -437,9 +437,6 @@ def validate(bundle: dict, *, now: str, stage: str = "review") -> dict:
     _ref(c, I, "M", sha["M"])
     _ref(c, T, "M", sha["M"])
     _ref(c, T, "I", sha["I"])
-    _ref(c, R, "M", sha["M"])
-    _ref(c, R, "I", sha["I"])
-    _ref(c, R, "T", sha["T"])
     if POST_REVIEW_FIELDS & set(M) or POST_REVIEW_FIELDS & set(M["candidate"]):
         c.add("M_CONTAINS_POST_REVIEW_FIELD")
 
@@ -449,6 +446,8 @@ def validate(bundle: dict, *, now: str, stage: str = "review") -> dict:
     if tier == "L1" and (b.get("E") or b.get("S") or b["X"]):
         c.add("EGRESS_CHAIN_INVALID")
     _check_stops_before_r(c, tier, x_main)
+    _check_r_refs(c, tier, x_main)
+    _check_not_future(c)
     _check_disposition(c, R)
     cutoff = _check_deadlines(c, M, R)
     t_r = parse_time(R["formed_at"])
@@ -658,6 +657,10 @@ def _check_stops_before_r(c: _Ctx, tier: str | None, x_main: dict | None) -> Non
                 needs.append("MODEL_FINDING_REFUTED_BY_ORIGINAL")
             if op.get("blind") is not None:
                 needs.append("ORIGINAL_VERIFICATION_OF_BLIND_SCOPE")
+            if op.get("visible") != "通过" and not any(
+                    e["type"] == "模型停点" and e["X"] == sha_x and e["item"] == item and e["M"] == c.sha["M"]
+                    and e["candidate"] == c.cand[0] for e in c.discoveries):
+                c.add("STOP_INDEX_NOT_CLEARED")
             for wanted in needs:
                 if not any(v["item"] == item and v["clearance_type"] == wanted
                            and v["refs"] == {"M": c.sha["M"], "T": c.sha["T"], "X": sha_x}
@@ -673,6 +676,39 @@ def _check_stops_before_r(c: _Ctx, tier: str | None, x_main: dict | None) -> Non
     for ev in before_r:
         if _is_related(R["h_query"], ev) and not _covered(c, ev, before=t_r, allow_correction=True, answers=R["h_query"]):
             c.add("STOP_INDEX_NOT_CLEARED")
+
+
+def _check_r_refs(c: _Ctx, tier: str | None, x_main: dict | None) -> None:
+    """R3 §3.3, §9.3: R binds M, I, T and every basis it relies on (X, all V, W, cited clearances)."""
+    R = c.b["R"]
+    expected = {"M": c.sha["M"], "I": c.sha["I"], "T": c.sha["T"]}
+    if tier == "L2" and x_main is not None:
+        expected["X"] = record_sha256(x_main)
+    for prefix, items in (("V", c.b["V"]), ("W", c.b["W"])):
+        for i, h in enumerate(sorted(record_sha256(x) for x in items), 1):
+            expected[f"{prefix}{i}"] = h
+    cited = sorted({a["clearance"] for a in R["h_query"]["answers"].values() if a["clearance"]})
+    for i, h in enumerate(cited, 1):
+        expected[f"CL{i}"] = h
+    got = R["refs"]
+    if set(got) != set(expected):
+        c.add("CHAIN_BROKEN")
+    elif got != expected:
+        c.add("BINDING_MISMATCH")
+
+
+def _check_not_future(c: _Ctx) -> None:
+    """No record or event may be formed after the time of this check."""
+    times = []
+    for k, v in c.b.items():
+        for rec in (v if isinstance(v, list) else [v]):
+            if isinstance(rec, dict):
+                for field in ("formed_at", "at", "received_at", "sent_at"):
+                    t = parse_time(rec.get(field)) if field in rec else None
+                    if t is not None:
+                        times.append(t)
+    if any(t > c.now for t in times):
+        c.add("EVENT_ORDER_INVALID")
 
 
 def _check_disposition(c: _Ctx, R: dict) -> None:
@@ -776,7 +812,8 @@ def _check_use(c: _Ctx, q3: dict | None, auth: dict | None, shas: dict) -> None:
     auth_sha = record_sha256(auth)
     if q3["refs"] != {"AUTH": auth_sha, "Q2": shas["Q2"]}:
         c.add("AUTHORIZATION_INVALID")
-    if parse_time(auth["formed_at"]) >= parse_time(q3["formed_at"]):
+    q2 = c.b.get("Q2")
+    if not parse_time(q2["formed_at"]) < parse_time(auth["formed_at"]) < parse_time(q3["formed_at"]):
         c.add("AUTHORIZATION_INVALID")
     checks = q3["auth_checks"]
     if not isinstance(checks, dict) or set(checks) != AUTH_CHECK_KEYS or any(v is not True for v in checks.values()):

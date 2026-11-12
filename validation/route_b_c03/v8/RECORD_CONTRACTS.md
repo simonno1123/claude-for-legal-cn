@@ -4,6 +4,10 @@
 
 ## 通用规则
 
+- 任何记录或事件的形成时间（`formed_at`、`at`、`received_at`、`sent_at`）都不得晚于本次校验时传入的当前时间。
+- X 中每一个可见部分不是"通过"的项，都必须在 H 中登记为模型停点，即发现事件的 `X` 指向本轮 X，并有对应的解除事件。
+- 时间顺序必须满足 Q2 < AUTH < Q3。
+
 - 每份记录都有共同字段 `record`、`schema`（固定为 `C03-V8-R1`）、`formed_at`、`method`、`refs`。
 - `formed_at` 必须是带时区偏移的时间。
 - `method` 只能取 `file_a`、`file_b`、`chat_c` 之一。
@@ -23,7 +27,7 @@
 | X | `opinions`：C1 至 C11 每项为 `{visible, blind}`。`visible` 取"通过""不通过""无法判断-可见范围内"之一；`blind` 为 null，或为 `{sub, value: "无法判断-脱敏盲区"}`，其中 `sub` 只能是 R3 §6.2 为该项列出的子判断；C6、C7、C8 不得有 `blind`。另有 `provider`、`model`、`model_family`、`received_at`、`request_id`；`refs`：`{S}` |
 | V | `item`、`issue`；`clearance_type` 为两种解除类型之一；`evidence`：`[{code, sha256, locator}]`，非空，每个 SHA 必须出现在 M 的 `trace_refs` 中；`refs`：`{M, T, X}` |
 | W | `result` 为"通过"或"不通过"；`location`：原件定位列表；`refs`：`{M, T, discovery}` |
-| R | `h_query`、`actual_scope`、`checklist`、`c11_original_verified`；`deadlines`：`[{item, status, expiry}]`；`no_deadline_declaration`、`validity_cutoff`；`material_conflict` 为"有"或"无"；`withdrawn`；`disposition` 为 4 种原文之一；`reason`；`refs`：`{M, I, T}` |
+| R | `h_query`、`actual_scope`、`checklist`、`c11_original_verified`；`deadlines`：`[{item, status, expiry}]`；`no_deadline_declaration`、`validity_cutoff`；`material_conflict` 为"有"或"无"；`withdrawn`；`disposition` 为 4 种原文之一；`reason`。`refs` 必须完整列出 R 所依据的全部前件：`{M, I, T}`；L2 另加 `X`；全部 V 按 SHA 排序后依次记为 `V1…Vn`，全部 W 依次记为 `W1…Wn`；`h_query` 中引用的解除事件依次记为 `CL1…CLn` |
 | CORR | `items`：C 项 → "通过"或"不通过"；`statement`；`refs`：`{R}` |
 | P | `reconfirm`：第 1 至 4 项均为"已重查"（第 5 项 H 增量核对由 `h_increment` 承载）；`authority_recheck_at`；`h_increment`；`refs`：`{R}` |
 | Q（Q1、Q2、Q3） | `stage`；`rows`：七个固定键 `deadlines`（与 R 完全相同）、`new_deadlines`、`expired_deadlines`、`cutoff`、`authority`、`qualification`、`withdrawal`；`h_increment`；`auth_checks`：只有 Q3 使用，五个固定键。各份的 `refs`：Q1 为 `{R, [P], application_body}`，Q2 为 `{Q1, application_body}`，Q3 为 `{AUTH, Q2}` |

@@ -93,6 +93,13 @@ def rebind(bd):
     for w in bd["W"]:
         w["refs"] = {**w["refs"], "M": sha(M), "T": sha(T)}
     R["refs"] = {"M": sha(M), "I": sha(I), "T": sha(T)}
+    if bd.get("E") and bd["X"]:
+        R["refs"]["X"] = sha(bd["X"][0])
+    for prefix in ("V", "W"):
+        for i, h in enumerate(sorted(sha(x) for x in bd[prefix]), 1):
+            R["refs"][f"{prefix}{i}"] = h
+    for i, h in enumerate(sorted({a["clearance"] for a in R["h_query"]["answers"].values() if a["clearance"]}), 1):
+        R["refs"][f"CL{i}"] = h
     if bd.get("P"):
         bd["P"]["refs"] = {"R": sha(R)}
     for corr in bd["CORR"]:
@@ -205,7 +212,22 @@ class AnnexA(unittest.TestCase):
         bd["V"] = [mk("V", "2026-12-01T10:50:00+08:00", item="C5", issue="x",
                       clearance_type="MODEL_FINDING_REFUTED_BY_ORIGINAL", evidence=copy.deepcopy(EVID))]
         rebind(bd)
+        # Codex PR #113 round 2: a model stop must also be in H with a refutation (R3 §6.5 item 2)
+        self.assertIn("STOP_INDEX_NOT_CLEARED", reasons(bd))
+        ev = {"event": "discovery", "type": "模型停点", "case": CASE, "item": "C5", "issue": "x", "candidate": "CAND-Z",
+              "M": sha(bd["M"]), "X": sha(bd["X"][0]), "stage": "X 返回", "at": "2026-12-01T10:41:00+08:00"}
+        cl = clear(ev, "FINDING_REFUTED", "2026-12-01T10:51:00+08:00")
+        bd["H"] = [ev, cl]; bd["R"]["h_query"]["answers"] = answer(ev, cl=cl); rebind(bd)
         self.assertEqual(run(bd)["result"], "ELIGIBLE_TO_REQUEST_AR_B_010")
+
+    def test_R_binds_its_basis(self):
+        bd = l2_bundle(); r_before = copy.deepcopy(bd["R"])
+        bd["X"][0]["model"] = "model-z"; bd["X"][0]["refs"] = {"S": sha(bd["S"])}
+        bd["R"] = r_before  # R not re-formed after its basis changed
+        self.assertIn("BINDING_MISMATCH", reasons(bd))
+
+    def test_future_records_rejected(self):
+        self.assertIn("EVENT_ORDER_INVALID", reasons(l2_bundle(), now="2026-12-01T12:00:00+08:00"))
 
     def test_blind_scope_rules(self):
         # Codex PR #113 finding 7: blind only for the listed sub-judgment; visible part still judged
@@ -429,6 +451,12 @@ class LaterStages(unittest.TestCase):
         bd = self.full(); bd["AUTH"]["scope"]["candidate"] = "CAND-OTHER"
         self.assertIn("AUTHORIZATION_INVALID", reasons(bd, stage="use"))
         bd = self.full(); bd["Q3"]["refs"] = {"AUTH": SHA_A, "Q2": sha(bd["Q2"])}
+        self.assertIn("AUTHORIZATION_INVALID", reasons(bd, stage="use"))
+
+    def test_auth_after_Q2(self):
+        bd = self.full(); bd["AUTH"]["formed_at"] = "2026-12-02T09:30:00+08:00"
+        bd["Q3"]["refs"] = {"AUTH": sha(bd["AUTH"]), "Q2": sha(bd["Q2"])}
+        bd["G"][0]["auth"] = sha(bd["AUTH"]); bd["G"][0]["at"] = "2026-12-02T09:30:00+08:00"
         self.assertIn("AUTHORIZATION_INVALID", reasons(bd, stage="use"))
 
     def test_A60_A61_A62(self):
