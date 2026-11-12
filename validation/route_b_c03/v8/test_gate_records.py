@@ -398,6 +398,11 @@ class StopIndex(unittest.TestCase):
                              evidence=[{"record": "W", "sha256": SHA_D}])]
         self.assertIn("R_INVALIDATED_BY_NEW_STOP", reasons(bd))  # A-73 / correction cannot keep old R
 
+    def test_stop_at_check_instant(self):
+        # Codex PR #113 round 3: a stop registered exactly at the check time must pause
+        bd = LaterStages().full(); bd["H"] = [disc(NOW)]
+        self.assertIn("PAUSED_PENDING_STOP", reasons(bd, stage="use"))
+
     def test_A67_unrelated(self):
         bd = l2_bundle(); ev = disc("2026-12-01T12:00:00+08:00"); bd["H"] = [ev]
         bd["P"]["h_increment"]["answers"] = answer(ev, "不相关")

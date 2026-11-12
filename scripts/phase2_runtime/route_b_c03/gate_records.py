@@ -849,7 +849,7 @@ def _check_stops_after_r(c: _Ctx, t_r: datetime, stage_records: list[dict]) -> N
     """R3 §6.5 item 3 rules 1-3: pause; refute with originals in M and re-form the stage record; else R is invalid."""
     for ev in c.discoveries:
         at = parse_time(ev["at"])
-        if not t_r <= at < c.now:
+        if not t_r <= at <= c.now:  # an event registered at the check instant counts
             continue
         ev_sha = record_sha256(ev)
         if any(cl["refs_discovery"] == ev_sha and cl["type"] == "CORRECTED_IN_CANDIDATE" for cl in c.clearances):
