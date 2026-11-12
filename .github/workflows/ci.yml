@@ -36,3 +36,6 @@ jobs:
 
       - name: Managed-agent cookbook smoke test
         run: bash scripts/test-cookbooks.sh
+
+      - name: C03 V8-A gate record tests
+        run: python3 -m unittest discover -s validation/route_b_c03/v8 -t validation/route_b_c03/v8
