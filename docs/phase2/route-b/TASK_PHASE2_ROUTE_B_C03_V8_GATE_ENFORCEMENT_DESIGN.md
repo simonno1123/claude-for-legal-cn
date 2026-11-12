@@ -5,7 +5,7 @@
 | 设计代号 | `C03-GATE-ENFORCEMENT-V8`；版本 `R1` |
 | 依据 | 已采纳的 R3（修订九，SHA-256 `1029BD425BDBC10DD641FA4AC6A85A2845E75AD0C17B7FABA1342C3E49C0CFEB`）§十 的移交清单；采纳决定 `.codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_AR_B_005_R3_ADOPTION_DECISION.json`；首次 L1 试跑的发现 TF-01 至 TF-05（`.codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_R3_L1_TRIAL_RUN_AUTHORIZATION.md`） |
 | 起草 | Claude（记录人） |
-| 状态 | **草稿**。待跨模型复核和所有者采纳；采纳之前不实现，R3 照常靠人工执行 |
+| 状态 | **草稿**。待跨模型复核和所有者采纳；采纳之前不实现，R3 照常靠人工执行。复核方式：在 GitHub PR 上由 Codex 审查（试行） |
 
 ## 一、目的与范围
 
