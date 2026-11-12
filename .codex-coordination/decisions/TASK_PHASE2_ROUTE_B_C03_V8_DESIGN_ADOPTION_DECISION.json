@@ -1,0 +1,31 @@
+{
+  "RecordKind": "C03_V8_DESIGN_ADOPTION_DECISION",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-12 (approx)",
+  "Method": "owner answered single-select questions in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Basis": {
+    "Design": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_V8_GATE_ENFORCEMENT_DESIGN.md",
+      "SHA256": "002F2173453062CABD99C53A660BAEBDE5A8005E8FAC4DB488B568BCAC34755F",
+      "DesignId": "C03-GATE-ENFORCEMENT-V8",
+      "Version": "R2"
+    },
+    "Implements": "AR-B-005 gate design R3 revision 9 (SHA-256 1029BD425BDBC10DD641FA4AC6A85A2845E75AD0C17B7FABA1342C3E49C0CFEB) §十",
+    "Reviews": "Codex review on GitHub PR #112: R1 FAIL (5 P0, 1 P1), R2 no findings (treated as PASS); results archived in .codex-coordination/outbox/TASK_PHASE2_ROUTE_B_C03_V8_DESIGN_R{1,2}_CROSS_MODEL_REVIEW_RESULT.md"
+  },
+  "Decisions": [
+    {"Id": "V8-CONFIRM-1", "Choice": "确认", "Effect": "two phases: V8-A (record contracts, pure validator, CLI wrapper, record builder, tests) now; V8-B (signatures, trusted time, anti-replay) deferred"},
+    {"Id": "V8-CONFIRM-2", "Choice": "确认", "Effect": "the builder pre-fills only mechanical fields; every judgment item is answered by the reviewer one item at a time and transcribed verbatim; the validator lists every unmet rule"},
+    {"Id": "V8-CONFIRM-3-ADOPT", "Choice": "确认并采纳", "Effect": "tests are based on R3 annex A counterexamples; V8 design R2 adopted; implementation of V8-A may start on a feature branch and goes through tests, PR review and owner decision before any run on real records"}
+  ],
+  "Limitations": [
+    "V8-A cannot prove that records are true; it checks only consistency and rules",
+    "until V8-B, record contemporaneity, waiting time, model provenance and cross-call replay rely on the reviewer",
+    "single-lawyer concentration is not removed"
+  ],
+  "ResultingState": {
+    "C03": "NOT ACTIVE",
+    "AutomaticDownstreamTransition": "BLOCKED",
+    "Next": "implement V8-A"
+  }
+}
