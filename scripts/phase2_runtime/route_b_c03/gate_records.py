@@ -4,6 +4,8 @@ The validator encodes the adopted gate design R3 (revision 9). It never reads a
 clock, the network or files; the caller passes every record and the current time.
 The best possible result only says that the records are complete and consistent
 (for example ELIGIBLE_TO_REQUEST_AR_B_010). It never authorizes or executes anything.
+
+Exact field contracts are documented in validation/route_b_c03/v8/RECORD_CONTRACTS.md.
 """
 
 from __future__ import annotations
@@ -11,7 +13,7 @@ from __future__ import annotations
 from datetime import date, datetime, timedelta, timezone
 import hashlib
 import json
-from typing import Any, Iterable
+from typing import Any, Callable
 
 SCHEMA = "C03-V8-R1"
 DESIGN_ID = "C03-GATE-DESIGN-005"
@@ -44,12 +46,22 @@ ALLOWED_USES = {
     "U3": ("L2", PERMITTED_CLASSES - {"C03_QUALIFIED_HUMAN_REVIEW_PACKET_CANDIDATE"}, "自行沟通准备参考"),
 }
 PROHIBITED_PURPOSE_MARKERS = ("对外", "转发", "附件", "提交法院", "发送委托人", "发给委托人")
-M_POST_REVIEW_FIELDS = {"disposition", "checklist", "actual_scope", "validity_cutoff", "reason"}
-OPINIONS = {"通过", "不通过", "无法判断-可见范围内", "无法判断-脱敏盲区"}
-# R3 §6.2: items whose visible part must be judged; blind scope is never allowed for these
-NO_BLIND_ITEMS = {"C6", "C7", "C8"}
-HARD_STOP_ITEMS = {"C5", "C6", "C7"}
+POST_REVIEW_FIELDS = {"disposition", "checklist", "actual_scope", "validity_cutoff", "reason"}
+VISIBLE_OPINIONS = {"通过", "不通过", "无法判断-可见范围内"}
+# R3 §6.2: the only sub-judgments that may be marked as de-identification blind scope
+BLIND_SUBS = {
+    "C1": "真实案件身份",
+    "C2": "原件SHA与证据矩阵",
+    "C3": "出处是否真实支持",
+    "C4": "依据是否仍有效",
+    "C5": "真实日期与是否届满",
+    "C9": "原件中未列出的冲突",
+    "C10": "原包最少化",
+    "C11": "原包输入输出SHA",
+}
 STAGES = ("review", "application", "authorization", "use")
+Q_ROW_KEYS = {"deadlines", "new_deadlines", "expired_deadlines", "cutoff", "authority", "qualification", "withdrawal"}
+AUTH_CHECK_KEYS = {"exists", "not_withdrawn", "own_deadline_ok", "count_ok", "action_scope_match"}
 
 # Ordered reason codes (design §五). Output keeps this order.
 REASON_ORDER = (
@@ -176,7 +188,7 @@ def parse_record(text: str) -> dict:
     return value
 
 
-# ---------------------------------------------------------------- helpers
+# ---------------------------------------------------------------- field checks
 
 def parse_time(value: Any) -> datetime | None:
     if not isinstance(value, str) or "T" not in value:
@@ -194,6 +206,179 @@ def is_sha(value: Any) -> bool:
     return isinstance(value, str) and len(value) == 64 and all(c in "0123456789ABCDEF" for c in value)
 
 
+def is_text(value: Any) -> bool:
+    return isinstance(value, str) and bool(value.strip())
+
+
+def is_date(value: Any) -> bool:
+    try:
+        date.fromisoformat(value)
+        return isinstance(value, str) and len(value) == 10
+    except (TypeError, ValueError):
+        return False
+
+
+def _obj(value: Any, spec: dict[str, Callable[[Any], bool]]) -> bool:
+    return isinstance(value, dict) and set(value) == set(spec) and all(check(value[k]) for k, check in spec.items())
+
+
+def _list_of(check: Callable[[Any], bool], *, nonempty: bool = False) -> Callable[[Any], bool]:
+    return lambda v: isinstance(v, list) and (bool(v) or not nonempty) and all(check(i) for i in v)
+
+
+def _const(*allowed: Any) -> Callable[[Any], bool]:
+    return lambda v: v in allowed
+
+
+def _opt(check: Callable[[Any], bool]) -> Callable[[Any], bool]:
+    return lambda v: v is None or check(v)
+
+
+def _answers_shape(v: Any) -> bool:
+    """Stop-index query: per discovery event the reviewer's answers (design §七 item 1)."""
+    if not isinstance(v, dict) or set(v) != {"answers", "last_event"} or not _opt(is_sha)(v["last_event"]):
+        return False
+    if not isinstance(v["answers"], dict):
+        return False
+    for key, a in v["answers"].items():
+        if not is_sha(key) or not isinstance(a, dict) or set(a) != {"relevant", "reason", "covered", "clearance"}:
+            return False
+        if a["relevant"] not in {"相关", "不相关"} or not is_text(a["reason"]):
+            return False
+        if a["relevant"] == "不相关" and (a["covered"] != "不适用" or a["clearance"] is not None):
+            return False
+        if a["relevant"] == "相关" and not (
+            (a["covered"] == "已覆盖" and is_sha(a["clearance"])) or (a["covered"] == "未覆盖" and a["clearance"] is None)
+        ):
+            return False
+    return True
+
+
+def _deadline(v: Any) -> bool:
+    return (isinstance(v, dict) and set(v) == {"item", "status", "expiry"} and is_text(v["item"])
+            and v["status"] in {"适用", "无适用期限", "不适用", "未知"}
+            and (v["expiry"] is None or parse_time(v["expiry"]) is not None))
+
+
+def _opinion(item: str) -> Callable[[Any], bool]:
+    def check(v: Any) -> bool:
+        if not isinstance(v, dict) or set(v) != {"visible", "blind"} or v["visible"] not in VISIBLE_OPINIONS:
+            return False
+        if v["blind"] is None:
+            return True
+        return item in BLIND_SUBS and v["blind"] == {"sub": BLIND_SUBS[item], "value": "无法判断-脱敏盲区"}
+    return check
+
+
+def _evidence_item(v: Any) -> bool:
+    return _obj(v, {"code": is_text, "sha256": is_sha, "locator": is_text})
+
+
+SPECS: dict[str, dict[str, Callable[[Any], bool]]] = {
+    "M": {
+        "candidate": lambda v: _obj(v, {
+            "id": is_text, "version": is_text, "output_sha256": is_sha, "generated_at": lambda t: parse_time(t) is not None,
+            "class": is_text, "capability": is_text, "operation": is_text, "generator": is_text,
+            "generator_model_family": is_text}),
+        "case": lambda v: _obj(v, {"code": is_text, "version": is_text}),
+        "trace_refs": lambda v: isinstance(v, dict) and bool(v) and all(
+            is_text(k) and _obj(r, {"path": is_text, "sha256": is_sha}) for k, r in v.items()),
+        "contract_refs": _list_of(is_sha),
+        "omission_conflict_adverse_refs": _list_of(is_sha),
+        "failure_audit_refs": _list_of(is_sha),
+        "authority": lambda v: _obj(v, {"pack_sha256": is_sha, "check_date": is_date, "entries": _list_of(is_text)}),
+        "known_limitations": is_text,
+        "prohibited_uses": is_text,
+        "design_version": lambda v: _obj(v, {"design_id": is_text, "text_sha256": is_sha, "checklist": is_text}),
+        "planned_scope": is_text,
+        "reviewer": lambda v: _obj(v, {"code": is_text, "qualification_ref": is_text}),
+    },
+    "I": {"reviewer_name": is_text, "items": lambda v: isinstance(v, dict)},
+    "T": {
+        "use_code": lambda v: isinstance(v, str), "output_class": is_text, "audience": is_text,
+        "next_step": lambda v: isinstance(v, str), "l1_positive_confirmation": _opt(lambda b: isinstance(b, bool)),
+        "h_query": _opt(_answers_shape),
+        "corrections": _list_of(lambda c: _obj(c, {"discovery": is_sha, "description": is_text, "diff_ref": is_sha})),
+    },
+    "E": {
+        "d_sha256": is_sha, "task_sha256": is_sha, "scope": is_text, "allowed_fields": _list_of(is_text, nonempty=True),
+        "receiver": is_text, "conditions": lambda v: isinstance(v, dict), "config_sha256": is_sha,
+        "window": lambda v: _obj(v, {"start": lambda t: parse_time(t) is not None, "end": lambda t: parse_time(t) is not None}),
+        "withdrawn": lambda v: isinstance(v, bool),
+    },
+    "S": {
+        "sent_sha256": is_sha, "scope": is_text, "receiver": is_text, "config_sha256": is_sha,
+        "checks": lambda v: isinstance(v, dict), "h_check": _answers_shape, "request_id": is_text,
+        "sent_at": lambda t: parse_time(t) is not None,
+    },
+    "X": {
+        "opinions": lambda v: isinstance(v, dict), "provider": is_text, "model": is_text,
+        "model_family": lambda v: isinstance(v, str), "received_at": lambda t: parse_time(t) is not None,
+        "request_id": is_text,
+    },
+    "V": {"item": _const(*CHECKLIST), "issue": is_text,
+          "clearance_type": _const("MODEL_FINDING_REFUTED_BY_ORIGINAL", "ORIGINAL_VERIFICATION_OF_BLIND_SCOPE"),
+          "evidence": _list_of(_evidence_item, nonempty=True)},
+    "W": {"result": _const("通过", "不通过"), "location": _list_of(_evidence_item, nonempty=True)},
+    "R": {
+        "h_query": _answers_shape, "actual_scope": is_text, "checklist": lambda v: isinstance(v, dict),
+        "c11_original_verified": lambda v: isinstance(v, bool), "deadlines": _list_of(_deadline),
+        "no_deadline_declaration": lambda v: isinstance(v, bool), "validity_cutoff": _opt(lambda t: parse_time(t) is not None),
+        "material_conflict": _const("有", "无"), "withdrawn": lambda v: isinstance(v, bool),
+        "disposition": _const(*DISPOSITIONS), "reason": is_text,
+    },
+    "CORR": {"items": lambda v: isinstance(v, dict) and set(v) <= set(CHECKLIST) and all(x in {"通过", "不通过"} for x in v.values()),
+             "statement": is_text},
+    "P": {"reconfirm": lambda v: isinstance(v, dict), "authority_recheck_at": lambda t: parse_time(t) is not None,
+          "h_increment": _answers_shape},
+    "Q": {"stage": _const("Q1", "Q2", "Q3"), "rows": lambda v: isinstance(v, dict), "h_increment": _answers_shape,
+          "auth_checks": _opt(lambda v: isinstance(v, dict))},
+    "AUTH": {"action": is_text, "scope": lambda v: _obj(v, {"candidate": is_text, "version": is_text, "M": is_sha}),
+             "own_deadline": _opt(lambda t: parse_time(t) is not None),
+             "max_uses": _opt(lambda n: isinstance(n, int) and not isinstance(n, bool) and n >= 1)},
+}
+COMMON = {"record", "schema", "formed_at", "method", "refs"}
+H_SPECS = {
+    "discovery": {"event": _const("discovery"), "type": _const("模型停点", "人工停点"), "case": is_text,
+                  "item": is_text, "issue": is_text, "candidate": is_text, "M": is_sha, "X": lambda v: is_sha(v) or v == "不适用",
+                  "stage": is_text, "at": lambda t: parse_time(t) is not None},
+    "clearance": {"event": _const("clearance"), "type": _const("FINDING_REFUTED", "CORRECTED_IN_CANDIDATE"),
+                  "refs_discovery": is_sha, "scope_candidate": _opt(lambda v: isinstance(v, list) and len(v) == 3
+                                                                    and is_text(v[0]) and is_text(v[1]) and is_sha(v[2])),
+                  "evidence": _list_of(lambda e: _evidence_item(e) or _obj(e, {"record": _const("W", "X"), "sha256": is_sha}),
+                                       nonempty=True),
+                  "at": lambda t: parse_time(t) is not None},
+}
+G_SPECS = {
+    "initial": {"kind": _const("initial"), "auth": is_sha, "max_uses": lambda n: isinstance(n, int) and not isinstance(n, bool),
+                "used": _const(0), "at": lambda t: parse_time(t) is not None},
+    "use": {"kind": _const("use"), "auth": is_sha, "q3": is_sha, "at": lambda t: parse_time(t) is not None},
+}
+
+
+def _contract_ok(rec: Any, kind: str) -> bool:
+    if not isinstance(rec, dict) or rec.get("record") != kind or rec.get("schema") != SCHEMA:
+        return False
+    spec = SPECS[kind]
+    if set(rec) != COMMON | set(spec):
+        return False
+    if rec["method"] not in METHODS or parse_time(rec["formed_at"]) is None:
+        return False
+    if not isinstance(rec["refs"], dict) or not all(is_sha(v) for v in rec["refs"].values()):
+        return False
+    return all(check(rec[k]) for k, check in spec.items())
+
+
+def _h_ok(ev: Any) -> bool:
+    return isinstance(ev, dict) and ev.get("event") in H_SPECS and _obj(ev, H_SPECS[ev["event"]])
+
+
+def _g_ok(ev: Any) -> bool:
+    return isinstance(ev, dict) and ev.get("kind") in G_SPECS and _obj(ev, G_SPECS[ev["kind"]])
+
+
+# ---------------------------------------------------------------- dates
+
 def authority_cutoff(check_date: str) -> datetime:
     """R3 §9.2 item 1: 00:00 Beijing time on the 30th day after the check date."""
     day = date.fromisoformat(check_date)
@@ -210,479 +395,450 @@ def compute_cutoff(check_date: str, deadlines: list[dict]) -> datetime:
     return cutoff
 
 
-# Closed record contracts (design §4.2). Value is the set of required fields;
-# a record may contain only common fields plus these.
-COMMON = {"record", "schema", "formed_at", "method", "refs"}
-CONTRACTS: dict[str, set[str]] = {
-    "M": {
-        "candidate", "case", "trace_refs", "contract_refs", "omission_conflict_adverse_refs",
-        "failure_audit_refs", "authority", "known_limitations", "prohibited_uses",
-        "design_version", "planned_scope", "reviewer",
-    },
-    "I": {"reviewer_name", "items"},
-    "T": {"use_code", "output_class", "audience", "next_step", "l1_positive_confirmation", "h_query"},
-    "E": {"d_sha256", "task_sha256", "scope", "allowed_fields", "receiver", "conditions", "config_sha256", "window", "withdrawn"},
-    "S": {"sent_sha256", "scope", "receiver", "config_sha256", "checks", "h_last_event", "request_id", "sent_at"},
-    "X": {"opinions", "provider", "model", "model_family", "received_at", "request_id"},
-    "V": {"item", "issue", "clearance_type", "evidence"},
-    "W": {"result", "location"},
-    "R": {
-        "h_query", "actual_scope", "checklist", "c11_original_verified", "deadlines",
-        "no_deadline_declaration", "validity_cutoff", "material_conflict", "withdrawn",
-        "disposition", "reason",
-    },
-    "CORR": {"items", "statement"},
-    "P": {"reconfirm", "authority_recheck_at", "h_increment"},
-    "Q": {"stage", "rows", "h_increment", "auth_checks"},
-    "AUTH": {"action", "scope", "own_deadline", "max_uses"},
-}
-M_CANDIDATE_FIELDS = {"id", "version", "output_sha256", "generated_at", "class", "capability", "operation", "generator", "generator_model_family"}
-H_DISCOVERY_FIELDS = {"event", "type", "case", "item", "issue", "candidate", "M", "X", "stage", "at"}
-H_CLEARANCE_FIELDS = {"event", "type", "refs_discovery", "scope_candidate", "evidence", "at"}
-
-
-def _contract_ok(rec: Any, kind: str) -> bool:
-    if not isinstance(rec, dict) or rec.get("record") != kind or rec.get("schema") != SCHEMA:
-        return False
-    required = COMMON | CONTRACTS[kind]
-    if set(rec) != required:
-        return False
-    if rec.get("method") not in METHODS or parse_time(rec.get("formed_at")) is None:
-        return False
-    if not isinstance(rec.get("refs"), dict):
-        return False
-    if kind == "M":
-        cand = rec["candidate"]
-        if not isinstance(cand, dict) or set(cand) != M_CANDIDATE_FIELDS:
-            return False
-        if not all(isinstance(rec[f], str) and rec[f].strip() for f in ("known_limitations", "prohibited_uses", "planned_scope")):
-            return False
-        auth = rec["authority"]
-        if not isinstance(auth, dict) or set(auth) != {"pack_sha256", "check_date", "entries"}:
-            return False
-        if not isinstance(rec["trace_refs"], dict) or not rec["trace_refs"]:
-            return False
-    return True
-
-
-def _h_ok(ev: Any) -> bool:
-    if not isinstance(ev, dict):
-        return False
-    if ev.get("event") == "discovery":
-        return set(ev) == H_DISCOVERY_FIELDS and ev.get("type") in {"模型停点", "人工停点"} and parse_time(ev.get("at")) is not None
-    if ev.get("event") == "clearance":
-        return (set(ev) == H_CLEARANCE_FIELDS and ev.get("type") in {"FINDING_REFUTED", "CORRECTED_IN_CANDIDATE"}
-                and parse_time(ev.get("at")) is not None)
-    return False
-
-
 # ---------------------------------------------------------------- validator
+
+class _Ctx:
+    def __init__(self, bundle: dict, now: datetime, stage: str):
+        self.b = bundle
+        self.now = now
+        self.stage = stage
+        self.reasons: set[str] = set()
+
+    def add(self, code: str) -> None:
+        self.reasons.add(code)
+
 
 def validate(bundle: dict, *, now: str, stage: str = "review") -> dict:
     """Validate one candidate's record bundle.
 
     bundle keys: M, I, T, R (dicts); optional E, S, P, Q1, Q2, Q3, AUTH (dicts);
-    X, V, W, CORR, G (lists of dicts); H (list of H events).
+    X, V, W, CORR, G (lists of dicts); H (list of stop-index events).
     Returns {"result": ..., "reasons": [...]}.
     """
-    reasons: set[str] = set()
-    add = reasons.add
     now_t = parse_time(now)
     if now_t is None or stage not in STAGES:
         return {"result": "BLOCKED", "reasons": ["RECORD_INVALID"]}
+    c = _Ctx(bundle, now_t, stage)
+    if not _check_contracts(c):
+        return _finish(c)
 
-    singles = {k: bundle.get(k) for k in ("M", "I", "T", "R", "E", "S", "P", "Q1", "Q2", "Q3", "AUTH")}
-    lists = {k: bundle.get(k) or [] for k in ("X", "V", "W", "CORR", "G", "H")}
-    for k in ("M", "I", "T", "R"):
-        if singles[k] is None:
-            add("CHAIN_BROKEN")
-    try:
-        for k, rec in singles.items():
-            if rec is not None:
-                canonical_bytes(rec)
-        for k, items in lists.items():
-            for rec in items:
-                canonical_bytes(rec)
-    except RecordError:
-        add("RECORD_INVALID")
-        return _finish(reasons, stage)
+    b = c.b
+    M, I, T, R = b["M"], b["I"], b["T"], b["R"]
+    sha = {k: record_sha256(b[k]) for k in ("M", "I", "T", "R")}
+    c.sha = sha
+    c.case = M["case"]["code"]
+    c.cand = [M["candidate"]["id"], M["candidate"]["version"], sha["M"]]
+    c.discoveries = [e for e in b["H"] if e["event"] == "discovery" and e["case"] == c.case]
+    c.clearances = [e for e in b["H"] if e["event"] == "clearance"]
+    c.trace = {r["sha256"] for r in M["trace_refs"].values()}
 
-    M, I, T, R = (singles[k] for k in ("M", "I", "T", "R"))
-    E, S, P, AUTH = (singles[k] for k in ("E", "S", "P", "AUTH"))
-    X, V, W, CORR, H = (lists[k] for k in ("X", "V", "W", "CORR", "H"))
+    if M["design_version"] != {"design_id": DESIGN_ID, "text_sha256": ADOPTED_R3_SHA256, "checklist": CHECKLIST_ID}:
+        c.add("DESIGN_VERSION_MISMATCH")
+    _ref(c, I, "M", sha["M"])
+    _ref(c, T, "M", sha["M"])
+    _ref(c, T, "I", sha["I"])
+    _ref(c, R, "M", sha["M"])
+    _ref(c, R, "I", sha["I"])
+    _ref(c, R, "T", sha["T"])
+    if POST_REVIEW_FIELDS & set(M) or POST_REVIEW_FIELDS & set(M["candidate"]):
+        c.add("M_CONTAINS_POST_REVIEW_FIELD")
 
-    # rule 1: contracts
-    for kind, rec in (("M", M), ("I", I), ("T", T), ("R", R), ("E", E), ("S", S), ("P", P), ("AUTH", AUTH)):
-        if rec is not None and not _contract_ok(rec, kind):
-            add("RECORD_INVALID")
-    for q in ("Q1", "Q2", "Q3"):
-        if singles[q] is not None and not _contract_ok(singles[q], "Q"):
-            add("RECORD_INVALID")
-    for kind, items in (("X", X), ("V", V), ("W", W), ("CORR", CORR)):
-        for rec in items:
-            if not _contract_ok(rec, kind):
-                add("RECORD_INVALID")
-    for ev in H:
-        if not _h_ok(ev):
-            add("RECORD_INVALID")
-    if "RECORD_INVALID" in reasons or "CHAIN_BROKEN" in reasons:
-        return _finish(reasons, stage)
-
-    sha = {name: record_sha256(rec) for name, rec in (("M", M), ("I", I), ("T", T), ("R", R)) if rec is not None}
-
-    # rule 2: design version
-    dv = M["design_version"]
-    if dv != {"design_id": DESIGN_ID, "text_sha256": ADOPTED_R3_SHA256, "checklist": CHECKLIST_ID}:
-        add("DESIGN_VERSION_MISMATCH")
-
-    # rule 3: chain
-    def ref(rec: dict, name: str, target: str | None) -> None:
-        got = rec["refs"].get(name)
-        if got is None or target is None:
-            add("CHAIN_BROKEN")
-        elif got != target:
-            add("BINDING_MISMATCH")
-
-    ref(I, "M", sha["M"])
-    ref(T, "M", sha["M"])
-    ref(T, "I", sha["I"])
-    ref(R, "M", sha["M"])
-    ref(R, "I", sha["I"])
-    ref(R, "T", sha["T"])
-
-    # rule 4: M contains no post-review field
-    if M_POST_REVIEW_FIELDS & set(M) or M_POST_REVIEW_FIELDS & set(M["candidate"]):
-        add("M_CONTAINS_POST_REVIEW_FIELD")
-
-    # rule 5: pre-review declaration
-    items = I["items"]
-    decl_ok = (
-        isinstance(items, dict)
-        and set(items) == {"1", "2", "3", "4", "5", "6"}
-        and all(items[k] == "确认" for k in ("1", "2", "3", "5", "6"))
-        and items["4"] in {"提供并确认", "仅确认", "未参与"}
-        and isinstance(I["reviewer_name"], str) and I["reviewer_name"].strip()
-    )
-    t_i, t_t = parse_time(I["formed_at"]), parse_time(T["formed_at"])
-    if not decl_ok or not (t_i < t_t):
-        add("PRE_REVIEW_DECLARATION_INVALID")
-
-    # rules 6-9: purpose and tier
-    use = T["use_code"]
-    next_step = T["next_step"] if isinstance(T["next_step"], str) else ""
-    if T["audience"] != AUDIENCE or any(m in next_step for m in PROHIBITED_PURPOSE_MARKERS):
-        add("PURPOSE_PROHIBITED")
-    tier = None
-    if use not in ALLOWED_USES:
-        add("PURPOSE_NOT_ESTABLISHED")
-    else:
-        tier, classes, step = ALLOWED_USES[use]
-        if next_step != step and "PURPOSE_PROHIBITED" not in reasons:
-            add("PURPOSE_NOT_ESTABLISHED")
-        if tier == "L1" and T["l1_positive_confirmation"] is not True:
-            add("TIER_INVALID")
-        if tier == "L2" and T["l1_positive_confirmation"] not in (False, None):
-            add("TIER_INVALID")
-        if T["output_class"] not in classes:
-            add("OUTPUT_CLASS_NOT_PERMITTED")
-    if T["output_class"] != M["candidate"]["class"]:
-        add("BINDING_MISMATCH")
-    if T["output_class"] not in PERMITTED_CLASSES:
-        add("OUTPUT_CLASS_NOT_PERMITTED")
-
-    # L2: egress, cross-check
-    x_main = None
-    if tier == "L2":
-        x_main = _check_l2(M, T, E, S, X, sha, add)
-
-    # stop clearance (rules 14, 15)
-    _check_stops(M, T, R, X, V, W, H, sha, x_main, tier, add)
-
-    # rule 16-18
-    if R["disposition"] not in DISPOSITIONS:
-        add("RECORD_INVALID")
-    if R["disposition"] != APPROVE:
-        add("DISPOSITION_NOT_APPROVE")
-    checklist = dict(R["checklist"]) if isinstance(R["checklist"], dict) else {}
-    r_sha = sha["R"]
-    for corr in sorted(CORR, key=lambda c: c["formed_at"]):
-        if corr["refs"].get("R") != r_sha:
-            add("BINDING_MISMATCH")
-            continue
-        checklist.update(corr["items"])
-    if set(checklist) != set(CHECKLIST) or any(checklist[c] != "通过" for c in CHECKLIST) or R["c11_original_verified"] is not True:
-        add("CHECKLIST_NOT_ALL_PASS")
-    if R["material_conflict"] != "无":
-        add("MATERIAL_CONFLICT_OPEN")
-    if R["withdrawn"] is not False:
-        add("WITHDRAWN_OR_SUPERSEDED")
-
-    # rules 19-22: deadlines and validity
-    deadlines = R["deadlines"] if isinstance(R["deadlines"], list) else []
-    if any(d.get("status") == "未知" for d in deadlines) or any(
-        d.get("status") not in {"适用", "无适用期限", "不适用"} for d in deadlines
-    ):
-        add("DEADLINE_STATUS_UNKNOWN")
-    if any(d.get("status") == "适用" and parse_time(d.get("expiry")) is None for d in deadlines):
-        add("DEADLINE_STATUS_UNKNOWN")
-    if not deadlines and R["no_deadline_declaration"] is not True:
-        add("DEADLINE_STATUS_UNKNOWN")
-    cutoff = None
-    if "DEADLINE_STATUS_UNKNOWN" not in reasons:
-        try:
-            cutoff = compute_cutoff(M["authority"]["check_date"], deadlines)
-        except (ValueError, TypeError):
-            add("RECORD_INVALID")
-        if cutoff is not None:
-            recorded = parse_time(R["validity_cutoff"])
-            if recorded is None or recorded != cutoff:
-                add("VALIDITY_CUTOFF_MISMATCH")
+    _check_declaration(c, I, T)
+    tier = _check_purpose(c, M, T)
+    x_main = _check_l2(c) if tier == "L2" else None
+    if tier == "L1" and (b.get("E") or b.get("S") or b["X"]):
+        c.add("EGRESS_CHAIN_INVALID")
+    _check_stops_before_r(c, tier, x_main)
+    _check_disposition(c, R)
+    cutoff = _check_deadlines(c, M, R)
     t_r = parse_time(R["formed_at"])
-    if not (t_t < t_r):
-        add("EVENT_ORDER_INVALID")
-    if cutoff is not None and not (t_r < cutoff):
-        add("VALIDITY_EXPIRED")
-
-    case = M["case"].get("code") if isinstance(M["case"], dict) else None
-    later_answers: dict = {}
+    if not parse_time(T["formed_at"]) < t_r:
+        c.add("EVENT_ORDER_INVALID")
+    if cutoff is not None and not t_r < cutoff:
+        c.add("VALIDITY_EXPIRED")
+    stage_records = []
     if tier == "L2":
-        _check_p(R, P, x_main, t_r, cutoff, sha, add)
+        P = _check_p(c, x_main, t_r, cutoff)
         if P is not None:
-            t_p = parse_time(P["formed_at"])
-            if not _increment_ok(P["h_increment"], H, case, t_r, t_p):
-                add("STOP_RELEVANCE_UNANSWERED")
-            later_answers.update(_answers(P["h_increment"]))
-    if cutoff is not None and not (now_t < cutoff):
-        add("VALIDITY_EXPIRED")
-
-    # rule 23: Q records by stage
-    _check_q(stage, singles, AUTH, lists["G"], R, P, tier, cutoff, now_t, H, case, later_answers, add)
-
-    # rule 15c: stops discovered after R (R3 §6.5 item 3 rules 1-3)
-    _post_r_stops(R, M, H, t_r, now_t, later_answers, add, sha)
-
-    return _finish(reasons, stage)
+            stage_records.append(P)
+    if cutoff is not None and not c.now < cutoff:
+        c.add("VALIDITY_EXPIRED")
+    stage_records += _check_q(c, tier, cutoff)
+    _check_increments(c, t_r, stage_records)
+    _check_stops_after_r(c, t_r, stage_records)
+    return _finish(c)
 
 
-def _check_l2(M, T, E, S, X, sha, add):
+def _check_contracts(c: _Ctx) -> bool:
+    b = c.b
+    for k in ("M", "I", "T", "R"):
+        if b.get(k) is None:
+            c.add("CHAIN_BROKEN")
+    for k in ("X", "V", "W", "CORR", "G", "H"):
+        b.setdefault(k, [])
+        if not isinstance(b[k], list):
+            c.add("RECORD_INVALID")
+    if c.reasons:
+        return False
+    try:
+        for k, v in b.items():
+            for rec in (v if isinstance(v, list) else [v]):
+                if rec is not None:
+                    canonical_bytes(rec)
+    except RecordError:
+        c.add("RECORD_INVALID")
+        return False
+    for kind in ("M", "I", "T", "R", "E", "S", "P", "AUTH"):
+        if b.get(kind) is not None and not _contract_ok(b[kind], kind):
+            c.add("RECORD_INVALID")
+    for q in ("Q1", "Q2", "Q3"):
+        if b.get(q) is not None and not (_contract_ok(b[q], "Q") and b[q]["stage"] == q):
+            c.add("RECORD_INVALID")
+    for kind in ("X", "V", "W", "CORR"):
+        for rec in b[kind]:
+            if not _contract_ok(rec, kind):
+                c.add("RECORD_INVALID")
+    if not all(_h_ok(e) for e in b["H"]) or not all(_g_ok(e) for e in b["G"]):
+        c.add("RECORD_INVALID")
+    return not c.reasons
+
+
+def _ref(c: _Ctx, rec: dict, name: str, target: str | None) -> None:
+    got = rec["refs"].get(name)
+    if got is None or target is None:
+        c.add("CHAIN_BROKEN")
+    elif got != target:
+        c.add("BINDING_MISMATCH")
+
+
+def _check_declaration(c: _Ctx, I: dict, T: dict) -> None:
+    items = I["items"]
+    ok = (set(items) == {"1", "2", "3", "4", "5", "6"}
+          and all(items[k] == "确认" for k in ("1", "2", "3", "5", "6"))
+          and items["4"] in {"提供并确认", "仅确认", "未参与"})
+    if not ok or not parse_time(I["formed_at"]) < parse_time(T["formed_at"]):
+        c.add("PRE_REVIEW_DECLARATION_INVALID")
+
+
+def _check_purpose(c: _Ctx, M: dict, T: dict) -> str | None:
+    use, step = T["use_code"], T["next_step"]
+    if T["audience"] != AUDIENCE or any(m in step for m in PROHIBITED_PURPOSE_MARKERS):
+        c.add("PURPOSE_PROHIBITED")
+    if T["output_class"] != M["candidate"]["class"]:
+        c.add("BINDING_MISMATCH")
+    if T["output_class"] not in PERMITTED_CLASSES:
+        c.add("OUTPUT_CLASS_NOT_PERMITTED")
+    if use not in ALLOWED_USES:
+        c.add("PURPOSE_NOT_ESTABLISHED")
+        return None
+    tier, classes, wanted_step = ALLOWED_USES[use]
+    if step != wanted_step and "PURPOSE_PROHIBITED" not in c.reasons:
+        c.add("PURPOSE_NOT_ESTABLISHED")
+    if (tier == "L1" and T["l1_positive_confirmation"] is not True) or (tier == "L2" and T["l1_positive_confirmation"] is True):
+        c.add("TIER_INVALID")
+    if tier == "L2" and T["h_query"] is None:
+        c.add("STOP_RELEVANCE_UNANSWERED")
+    if T["output_class"] not in classes:
+        c.add("OUTPUT_CLASS_NOT_PERMITTED")
+    return tier
+
+
+def _check_l2(c: _Ctx) -> dict | None:
+    b, M, T = c.b, c.b["M"], c.b["T"]
+    E, S, X = b.get("E"), b.get("S"), b["X"]
     if E is None or S is None:
-        add("EGRESS_CHAIN_INVALID")
+        c.add("EGRESS_CHAIN_INVALID")
         return None
     sha_e, sha_s = record_sha256(E), record_sha256(S)
-    if E["refs"].get("M") != sha["M"] or E["refs"].get("T") != sha["T"] or S["refs"].get("E") != sha_e:
-        add("EGRESS_CHAIN_INVALID")
+    if E["refs"] != {"M": c.sha["M"], "T": c.sha["T"]} or S["refs"] != {"E": sha_e}:
+        c.add("EGRESS_CHAIN_INVALID")
     cond = E["conditions"]
-    if (not isinstance(cond, dict) or set(cond) != {"retention", "training", "reshare", "region"}
-            or any(v != "接受" for v in cond.values()) or E["withdrawn"] is not False):
-        add("EGRESS_CHAIN_INVALID")
+    if set(cond) != {"retention", "training", "reshare", "region"} or any(v != "接受" for v in cond.values()) or E["withdrawn"]:
+        c.add("EGRESS_CHAIN_INVALID")
     checks = S["checks"]
-    if not isinstance(checks, dict) or set(checks) != {"1", "2", "3", "4", "5", "6"} or any(v != "通过" for v in checks.values()):
-        add("EGRESS_CHAIN_INVALID")
+    if set(checks) != {"1", "2", "3", "4", "5", "6"} or any(v != "通过" for v in checks.values()):
+        c.add("EGRESS_CHAIN_INVALID")
     if (S["sent_sha256"] != E["d_sha256"] or S["receiver"] != E["receiver"] or S["scope"] != E["scope"]
             or S["config_sha256"] != E["config_sha256"]):
-        add("EGRESS_CHAIN_INVALID")
-    window = E["window"] if isinstance(E["window"], dict) else {}
-    w0, w1, sent = parse_time(window.get("start")), parse_time(window.get("end")), parse_time(S["sent_at"])
-    t_e = parse_time(E["formed_at"])
-    if None in (w0, w1, sent) or not (t_e < sent and w0 <= sent < w1):
-        add("EGRESS_CHAIN_INVALID")
-    # one S and one X per M (R3 §6.5 item 1)
-    xs = [x for x in X]
-    if len(xs) > 1:
-        add("MULTIPLE_CROSS_CHECKS")
-    if not xs:
-        add("CROSS_CHECK_INCOMPLETE")
-        return None
-    x = xs[0]
-    if x["refs"].get("S") != sha_s:
-        add("CHAIN_BROKEN")
-    if x["request_id"] != S["request_id"]:
-        add("EGRESS_CHAIN_INVALID")
+        c.add("EGRESS_CHAIN_INVALID")
+    w0, w1, sent = parse_time(E["window"]["start"]), parse_time(E["window"]["end"]), parse_time(S["sent_at"])
+    if not (parse_time(E["formed_at"]) < sent and w0 <= sent < w1 and parse_time(T["formed_at"]) < parse_time(E["formed_at"])):
+        c.add("EGRESS_CHAIN_INVALID")
+    # R3 §7.4 item 6: pre-send stop-index check between T and the send, answered event by event
+    pre_send = [e for e in c.discoveries if parse_time(T["formed_at"]) <= parse_time(e["at"]) < sent]
+    if not _answered(S["h_check"], pre_send):
+        c.add("EGRESS_CHAIN_INVALID")
+    for ev in pre_send:
+        if _is_related(S["h_check"], ev) and not _covered(c, ev, before=sent, allow_correction=False, answers=S["h_check"]):
+            c.add("EGRESS_CHAIN_INVALID")
+    # R3 §6.5 item 1: one send and one cross-check per M
+    if len(X) != 1:
+        c.add("MULTIPLE_CROSS_CHECKS" if len(X) > 1 else "CROSS_CHECK_INCOMPLETE")
+        if not X:
+            return None
+    x = X[0]
+    if x["refs"] != {"S": sha_s}:
+        c.add("CHAIN_BROKEN")
     received = parse_time(x["received_at"])
-    if received is None or sent is None or received < sent:
-        add("EGRESS_CHAIN_INVALID")
+    if x["request_id"] != S["request_id"] or received < sent:
+        c.add("EGRESS_CHAIN_INVALID")
     ops = x["opinions"]
-    if not isinstance(ops, dict) or set(ops) != set(CHECKLIST):
-        add("CROSS_CHECK_INCOMPLETE")
-    else:
-        for item, op in ops.items():
-            if not isinstance(op, dict) or op.get("value") not in OPINIONS:
-                add("CROSS_CHECK_INCOMPLETE")
-            elif op["value"] == "无法判断-脱敏盲区" and (item in NO_BLIND_ITEMS or not op.get("blind_sub")):
-                add("CROSS_CHECK_INCOMPLETE")
-    family = x["model_family"]
-    gen_family = M["candidate"]["generator_model_family"]
-    if not isinstance(family, str) or not family.strip() or family == "未知":
-        add("MODEL_SOURCE_UNKNOWN")
-    elif family == gen_family:
-        add("SAME_MODEL_FAMILY")
+    if set(ops) != set(CHECKLIST) or not all(_opinion(item)(op) for item, op in ops.items()):
+        c.add("CROSS_CHECK_INCOMPLETE")
+    family = x["model_family"].strip()
+    if not family or family == "未知":
+        c.add("MODEL_SOURCE_UNKNOWN")
+    elif family == M["candidate"]["generator_model_family"]:
+        c.add("SAME_MODEL_FAMILY")
     return x
 
 
-def _relevance_ok(query: Any, events: list[dict]) -> bool:
-    """Every enumerated discovery event needs a reviewer answer and reason."""
-    if not isinstance(query, dict) or not isinstance(query.get("answers"), dict):
-        return False
+def _answered(query: dict, events: list[dict]) -> bool:
     answers = query["answers"]
-    for ev in events:
-        a = answers.get(record_sha256(ev))
-        if not isinstance(a, dict) or a.get("relevant") not in {"相关", "不相关"} or not str(a.get("reason", "")).strip():
-            return False
-    return True
+    return all(record_sha256(ev) in answers for ev in events)
 
 
-def _check_stops(M, T, R, X, V, W, H, sha, x_main, tier, add):
-    case = M["case"].get("code") if isinstance(M["case"], dict) else None
-    cand = M["candidate"]["id"], M["candidate"]["version"]
-    t_r = parse_time(R["formed_at"])
-    discoveries = [e for e in H if e["event"] == "discovery" and e["case"] == case]
-    clearances = [e for e in H if e["event"] == "clearance"]
-
-    # current-round model stops from X need a V (rule 14)
-    if x_main is not None and isinstance(x_main["opinions"], dict):
-        sha_x = record_sha256(x_main)
-        for item, op in x_main["opinions"].items():
-            value = op.get("value") if isinstance(op, dict) else None
-            needs = value in {"不通过", "无法判断-可见范围内", "无法判断-脱敏盲区"}
-            if not needs:
-                continue
-            wanted = "ORIGINAL_VERIFICATION_OF_BLIND_SCOPE" if value == "无法判断-脱敏盲区" else "MODEL_FINDING_REFUTED_BY_ORIGINAL"
-            ok = any(
-                v["item"] == item and v["clearance_type"] == wanted and v["refs"].get("X") == sha_x
-                and v["refs"].get("M") == sha["M"] and _evidence_ok(v["evidence"], M)
-                for v in V
-            )
-            if not ok:
-                add("STOP_UNRESOLVED")
-
-    # H relevance answers: L1 in R, L2 in T and R (rule 15a)
-    before_r = [e for e in discoveries if parse_time(e["at"]) < t_r]
-    if not _relevance_ok(R["h_query"], before_r):
-        add("STOP_RELEVANCE_UNANSWERED")
-    if tier == "L2":
-        t_t = parse_time(T["formed_at"])
-        if not _relevance_ok(T["h_query"], [e for e in discoveries if parse_time(e["at"]) < t_t]):
-            add("STOP_RELEVANCE_UNANSWERED")
-
-    answers = R["h_query"].get("answers", {}) if isinstance(R["h_query"], dict) else {}
-    for ev in before_r:
-        a = answers.get(record_sha256(ev), {})
-        if a.get("relevant") == "不相关":
-            continue
-        if not _covered(ev, clearances, cand, M, W, sha, t_r, pre_r=True):
-            add("STOP_INDEX_NOT_CLEARED")
+def _is_related(query: dict, ev: dict) -> bool:
+    return query["answers"].get(record_sha256(ev), {}).get("relevant") != "不相关"
 
 
-def _evidence_ok(evidence: Any, M: dict) -> bool:
-    if not isinstance(evidence, list) or not evidence:
+def _evidence_in_m(c: _Ctx, evidence: list) -> bool:
+    return bool(evidence) and all("code" in e and e["sha256"] in c.trace for e in evidence)
+
+
+def _covered(c: _Ctx, ev: dict, *, before: datetime, allow_correction: bool, answers: dict) -> bool:
+    """A related discovery is covered only if the reviewer answered 已覆盖 and the cited clearance checks out."""
+    a = answers["answers"].get(record_sha256(ev))
+    if not a or a["covered"] != "已覆盖":
         return False
-    trace = {v.get("sha256") for v in M["trace_refs"].values() if isinstance(v, dict)}
-    return all(isinstance(e, dict) and e.get("sha256") in trace and str(e.get("locator", "")).strip() for e in evidence)
-
-
-def _covered(ev, clearances, cand, M, W, sha, before, *, pre_r):
-    ev_sha = record_sha256(ev)
-    for c in clearances:
-        if c["refs_discovery"] != ev_sha or parse_time(c["at"]) >= before:
+    for cl in c.clearances:
+        if record_sha256(cl) != a["clearance"] or cl["refs_discovery"] != record_sha256(ev):
             continue
-        if c["type"] == "FINDING_REFUTED" and _evidence_ok(c["evidence"], M):
-            return True
-        if pre_r and c["type"] == "CORRECTED_IN_CANDIDATE" and c["scope_candidate"] == [cand[0], cand[1], sha["M"]]:
-            return True
+        if not parse_time(cl["at"]) < before:
+            return False
+        if cl["type"] == "FINDING_REFUTED":
+            return _evidence_in_m(c, cl["evidence"])
+        return allow_correction and _correction_ok(c, ev, cl)
     return False
 
 
-def _answers(query: Any) -> dict:
-    if isinstance(query, dict) and isinstance(query.get("answers"), dict):
-        return query["answers"]
-    return {}
+def _correction_ok(c: _Ctx, ev: dict, cl: dict) -> bool:
+    """R3 §6.5 item 5: T records the correction; L1 needs W, L2 needs this round's X passing the item."""
+    if cl["scope_candidate"] != c.cand:
+        return False
+    ev_sha = record_sha256(ev)
+    T = c.b["T"]
+    if not any(k["discovery"] == ev_sha for k in T["corrections"]):
+        return False
+    cl_at = parse_time(cl["at"])
+    for e in cl["evidence"]:
+        if e.get("record") == "W":
+            for w in c.b["W"]:
+                if (record_sha256(w) == e["sha256"] and w["result"] == "通过"
+                        and w["refs"] == {"M": c.sha["M"], "T": c.sha["T"], "discovery": ev_sha}
+                        and parse_time(w["formed_at"]) < cl_at):
+                    return True
+        if e.get("record") == "X":
+            for x in c.b["X"]:
+                op = x["opinions"].get(ev["item"])
+                if (record_sha256(x) == e["sha256"] and isinstance(op, dict) and op.get("visible") == "通过"
+                        and op.get("blind") is None and parse_time(x["received_at"]) < cl_at):
+                    return True
+    return False
 
 
-def _post_r_stops(R, M, H, after, upto, answers, add, sha):
-    """R3 §6.5 item 3 rules 1-3 for stops discovered after R."""
-    case = M["case"].get("code")
-    cand = M["candidate"]["id"], M["candidate"]["version"]
-    clearances = [e for e in H if e["event"] == "clearance"]
-    for ev in H:
-        if ev["event"] != "discovery" or ev["case"] != case:
+def _check_stops_before_r(c: _Ctx, tier: str | None, x_main: dict | None) -> None:
+    b, R = c.b, c.b["R"]
+    t_r = parse_time(R["formed_at"])
+    if x_main is not None and set(x_main["opinions"]) == set(CHECKLIST):
+        sha_x = record_sha256(x_main)
+        for item, op in x_main["opinions"].items():
+            needs = []
+            if op.get("visible") != "通过":
+                needs.append("MODEL_FINDING_REFUTED_BY_ORIGINAL")
+            if op.get("blind") is not None:
+                needs.append("ORIGINAL_VERIFICATION_OF_BLIND_SCOPE")
+            for wanted in needs:
+                if not any(v["item"] == item and v["clearance_type"] == wanted
+                           and v["refs"] == {"M": c.sha["M"], "T": c.sha["T"], "X": sha_x}
+                           and _evidence_in_m(c, v["evidence"]) and parse_time(v["formed_at"]) < t_r for v in b["V"]):
+                    c.add("STOP_UNRESOLVED")
+    before_r = [e for e in c.discoveries if parse_time(e["at"]) < t_r]
+    if not _answered(R["h_query"], before_r):
+        c.add("STOP_RELEVANCE_UNANSWERED")
+    if tier == "L2" and b["T"]["h_query"] is not None:
+        before_t = [e for e in c.discoveries if parse_time(e["at"]) < parse_time(b["T"]["formed_at"])]
+        if not _answered(b["T"]["h_query"], before_t):
+            c.add("STOP_RELEVANCE_UNANSWERED")
+    for ev in before_r:
+        if _is_related(R["h_query"], ev) and not _covered(c, ev, before=t_r, allow_correction=True, answers=R["h_query"]):
+            c.add("STOP_INDEX_NOT_CLEARED")
+
+
+def _check_disposition(c: _Ctx, R: dict) -> None:
+    if R["disposition"] != APPROVE:
+        c.add("DISPOSITION_NOT_APPROVE")
+    checklist = dict(R["checklist"])
+    for corr in sorted(c.b["CORR"], key=lambda x: parse_time(x["formed_at"])):
+        if corr["refs"] != {"R": c.sha["R"]}:
+            c.add("BINDING_MISMATCH")
             continue
-        at = parse_time(ev["at"])
-        if not (after <= at < upto):
-            continue
-        if answers.get(record_sha256(ev), {}).get("relevant") == "不相关":
-            continue
-        if _covered(ev, clearances, cand, M, [], sha, upto, pre_r=False):
-            continue
-        corrected = any(
-            c["refs_discovery"] == record_sha256(ev) and c["type"] == "CORRECTED_IN_CANDIDATE" for c in clearances
-        )
-        add("R_INVALIDATED_BY_NEW_STOP" if corrected else "PAUSED_PENDING_STOP")
+        checklist.update(corr["items"])
+    if set(checklist) != set(CHECKLIST) or any(checklist[k] != "通过" for k in CHECKLIST) or not R["c11_original_verified"]:
+        c.add("CHECKLIST_NOT_ALL_PASS")
+    if R["material_conflict"] != "无":
+        c.add("MATERIAL_CONFLICT_OPEN")
+    if R["withdrawn"]:
+        c.add("WITHDRAWN_OR_SUPERSEDED")
 
 
-def _increment_ok(inc: Any, H: list, case: str, after: datetime, upto: datetime) -> bool:
-    events = [e for e in H if e["event"] == "discovery" and e["case"] == case and after <= parse_time(e["at"]) < upto]
-    return _relevance_ok(inc, events)
+def _check_deadlines(c: _Ctx, M: dict, R: dict) -> datetime | None:
+    deadlines = R["deadlines"]
+    unknown = (any(d["status"] == "未知" for d in deadlines)
+               or any(d["status"] == "适用" and d["expiry"] is None for d in deadlines)
+               or (not deadlines and not R["no_deadline_declaration"]))
+    if unknown:
+        c.add("DEADLINE_STATUS_UNKNOWN")
+        return None
+    cutoff = compute_cutoff(M["authority"]["check_date"], deadlines)
+    if parse_time(R["validity_cutoff"]) != cutoff:
+        c.add("VALIDITY_CUTOFF_MISMATCH")
+    return cutoff
 
 
-def _check_p(R, P, x_main, t_r, cutoff, sha, add):
+def _check_p(c: _Ctx, x_main: dict | None, t_r: datetime, cutoff: datetime | None) -> dict | None:
+    P = c.b.get("P")
     if P is None:
-        add("RECONFIRMATION_MISSING")
-        return
-    if P["refs"].get("R") != sha["R"]:
-        add("BINDING_MISMATCH")
+        c.add("RECONFIRMATION_MISSING")
+        return None
+    if P["refs"] != {"R": c.sha["R"]}:
+        c.add("BINDING_MISMATCH")
     t_p = parse_time(P["formed_at"])
-    if x_main is not None:
-        received = parse_time(x_main["received_at"])
-        if received is None or not (received < t_r < t_p):
-            add("EVENT_ORDER_INVALID")
+    if x_main is not None and not parse_time(x_main["received_at"]) < t_r < t_p:
+        c.add("EVENT_ORDER_INVALID")
     if t_p - t_r < timedelta(hours=24):
-        add("COOLING_PERIOD_UNMET")
-    if cutoff is not None and not (t_p < cutoff):
-        add("VALIDITY_EXPIRED")
+        c.add("COOLING_PERIOD_UNMET")
+    if cutoff is not None and not t_p < cutoff:
+        c.add("VALIDITY_EXPIRED")
     rec = P["reconfirm"]
     recheck = parse_time(P["authority_recheck_at"])
-    if (not isinstance(rec, dict) or set(rec) != {"1", "2", "3", "4"} or any(v != "已重查" for v in rec.values())
-            or recheck is None or not (t_r < recheck <= t_p)):
-        add("RECONFIRMATION_MISSING")
+    if set(rec) != {"1", "2", "3", "4"} or any(v != "已重查" for v in rec.values()) or not t_r < recheck <= t_p:
+        c.add("RECONFIRMATION_MISSING")
+    return P
 
 
-def _check_q(stage, singles, AUTH, G, R, P, tier, cutoff, now_t, H, case, later_answers, add):
-    needed = {"review": (), "application": ("Q1",), "authorization": ("Q1", "Q2"), "use": ("Q1", "Q2", "Q3")}[stage]
-    prev = parse_time(P["formed_at"]) if (tier == "L2" and P is not None) else parse_time(R["formed_at"])
-    for name in needed:
-        q = singles.get(name)
-        if q is None or q["stage"] != name:
-            add("RECHECK_MISSING")
+def _check_q(c: _Ctx, tier: str | None, cutoff: datetime | None) -> list[dict]:
+    b, R = c.b, c.b["R"]
+    needed = {"review": (), "application": ("Q1",), "authorization": ("Q1", "Q2"), "use": ("Q1", "Q2", "Q3")}[c.stage]
+    P = b.get("P") if tier == "L2" else None
+    prev_t = parse_time(P["formed_at"]) if P is not None else parse_time(R["formed_at"])
+    out = []
+    shas = {}
+    for name in ("Q1", "Q2", "Q3"):
+        q = b.get(name)
+        if q is None:
+            if name in needed:
+                c.add("RECHECK_MISSING")
             continue
+        shas[name] = record_sha256(q)
         t_q = parse_time(q["formed_at"])
         rows = q["rows"]
-        if (not isinstance(rows, dict) or not rows or any(v != "满足" for v in rows.values())
-                or not (prev < t_q) or (cutoff is not None and not (t_q < cutoff))):
-            add("RECHECK_MISSING")
-        if not _increment_ok(q["h_increment"], H, case, prev, t_q):
-            add("STOP_RELEVANCE_UNANSWERED")
-        later_answers.update(_answers(q["h_increment"]))
-        prev = t_q
-    if stage == "use":
-        q3 = singles.get("Q3")
-        checks = q3["auth_checks"] if q3 is not None else None
-        keys = {"exists", "not_withdrawn", "own_deadline_ok", "count_ok", "action_scope_match"}
-        if AUTH is None or not isinstance(checks, dict) or set(checks) != keys or any(v is not True for v in checks.values()):
-            add("AUTHORIZATION_INVALID")
-        if AUTH is not None:
-            own = AUTH["own_deadline"]
-            if own is not None and (parse_time(own) is None or not now_t < parse_time(own)):
-                add("AUTHORIZATION_INVALID")
-            if AUTH["max_uses"] is not None:
-                auth_sha = record_sha256(AUTH)
-                initial = [g for g in G if g.get("kind") == "initial" and g.get("auth") == auth_sha and g.get("used") == 0]
-                uses = [g for g in G if g.get("kind") == "use" and g.get("auth") == auth_sha]
-                if len(initial) != 1 or len(uses) >= AUTH["max_uses"]:
-                    add("USAGE_COUNT_UNVERIFIED")
+        rows_ok = (set(rows) == Q_ROW_KEYS and rows["deadlines"] == R["deadlines"]
+                   and rows["new_deadlines"] == "无" and rows["expired_deadlines"] == "无"
+                   and cutoff is not None and parse_time(rows["cutoff"]) == cutoff
+                   and rows["authority"] == "仍有效" and rows["qualification"] == "无变化" and rows["withdrawal"] == "未撤回")
+        if not rows_ok or not prev_t < t_q or (cutoff is not None and not t_q < cutoff):
+            c.add("RECHECK_MISSING")
+        prev_t = t_q
+        out.append(q)
+    # exact record chain (R3 §9.6, §十一)
+    base = {"R": c.sha["R"]}
+    if P is not None:
+        base["P"] = record_sha256(P)
+    q1, q2, q3, auth = b.get("Q1"), b.get("Q2"), b.get("Q3"), b.get("AUTH")
+    if q1 is not None:
+        body = q1["refs"].get("application_body")
+        if q1["refs"] != {**base, "application_body": body}:
+            c.add("BINDING_MISMATCH")
+        if q2 is not None and q2["refs"] != {"Q1": shas["Q1"], "application_body": body}:
+            c.add("BINDING_MISMATCH")
+        if auth is not None and q2 is not None and auth["refs"] != {"Q2": shas["Q2"], "application_body": body}:
+            c.add("AUTHORIZATION_INVALID")
+    if c.stage == "use":
+        _check_use(c, q3, auth, shas)
+    return out
 
 
-def _finish(reasons: set[str], stage: str) -> dict:
-    ordered = [r for r in REASON_ORDER if r in reasons]
+def _check_use(c: _Ctx, q3: dict | None, auth: dict | None, shas: dict) -> None:
+    if auth is None or q3 is None or "Q2" not in shas:
+        c.add("AUTHORIZATION_INVALID")
+        return
+    auth_sha = record_sha256(auth)
+    if q3["refs"] != {"AUTH": auth_sha, "Q2": shas["Q2"]}:
+        c.add("AUTHORIZATION_INVALID")
+    if parse_time(auth["formed_at"]) >= parse_time(q3["formed_at"]):
+        c.add("AUTHORIZATION_INVALID")
+    checks = q3["auth_checks"]
+    if not isinstance(checks, dict) or set(checks) != AUTH_CHECK_KEYS or any(v is not True for v in checks.values()):
+        c.add("AUTHORIZATION_INVALID")
+    if auth["scope"] != {"candidate": c.cand[0], "version": c.cand[1], "M": c.cand[2]} or auth["action"] != c.b["T"]["next_step"]:
+        c.add("AUTHORIZATION_INVALID")
+    if auth["own_deadline"] is not None and not c.now < parse_time(auth["own_deadline"]):
+        c.add("AUTHORIZATION_INVALID")
+    if auth["max_uses"] is not None:
+        events = [g for g in c.b["G"] if g["auth"] == auth_sha]
+        initial = [g for g in events if g["kind"] == "initial"]
+        uses = [g for g in events if g["kind"] == "use"]
+        ok = (len(initial) == 1 and initial[0]["max_uses"] == auth["max_uses"]
+              and parse_time(initial[0]["at"]) <= parse_time(q3["formed_at"])
+              and all(parse_time(u["at"]) > parse_time(initial[0]["at"]) and parse_time(u["at"]) <= c.now for u in uses)
+              and len(uses) < auth["max_uses"])
+        if not ok:
+            c.add("USAGE_COUNT_UNVERIFIED")
+
+
+def _check_increments(c: _Ctx, t_r: datetime, stage_records: list[dict]) -> None:
+    """Each P/Q answers every discovery event since the previous query, one by one."""
+    prev = t_r
+    for rec in stage_records:
+        t = parse_time(rec["formed_at"])
+        window = [e for e in c.discoveries if prev <= parse_time(e["at"]) < t]
+        if not _answered(rec["h_increment"], window):
+            c.add("STOP_RELEVANCE_UNANSWERED")
+        prev = t
+
+
+def _check_stops_after_r(c: _Ctx, t_r: datetime, stage_records: list[dict]) -> None:
+    """R3 §6.5 item 3 rules 1-3: pause; refute with originals in M and re-form the stage record; else R is invalid."""
+    for ev in c.discoveries:
+        at = parse_time(ev["at"])
+        if not t_r <= at < c.now:
+            continue
+        ev_sha = record_sha256(ev)
+        if any(cl["refs_discovery"] == ev_sha and cl["type"] == "CORRECTED_IN_CANDIDATE" for cl in c.clearances):
+            c.add("R_INVALIDATED_BY_NEW_STOP")
+            continue
+        later = [r for r in stage_records if parse_time(r["formed_at"]) > at]
+        if not later:
+            c.add("PAUSED_PENDING_STOP")
+            continue
+        first = later[0]
+        answer = first["h_increment"]["answers"].get(ev_sha)
+        if answer is None:
+            c.add("STOP_RELEVANCE_UNANSWERED")
+            continue
+        if answer["relevant"] == "不相关":
+            continue
+        refuted = answer["covered"] == "已覆盖" and any(
+            record_sha256(cl) == answer["clearance"] and cl["refs_discovery"] == ev_sha and cl["type"] == "FINDING_REFUTED"
+            and at <= parse_time(cl["at"]) < parse_time(first["formed_at"]) and _evidence_in_m(c, cl["evidence"])
+            for cl in c.clearances)
+        if not refuted:
+            c.add("PAUSED_PENDING_STOP")
+
+
+def _finish(c: _Ctx) -> dict:
+    ordered = [r for r in REASON_ORDER if r in c.reasons]
     if ordered:
         return {"result": "BLOCKED", "reasons": ordered}
     positive = {
@@ -690,14 +846,5 @@ def _finish(reasons: set[str], stage: str) -> dict:
         "application": "APPLICATION_RECORDS_COMPLETE",
         "authorization": "AUTHORIZATION_RECORDS_COMPLETE",
         "use": "PRE_USE_RECORDS_COMPLETE",
-    }[stage]
+    }[c.stage]
     return {"result": positive, "reasons": []}
-
-
-def check_post_r_stops(bundle: dict, *, now: str) -> list[str]:
-    """Expose the R3 §6.5 item 3 post-R rule for stages after R (used by validate)."""
-    out: set[str] = set()
-    M, R = bundle["M"], bundle["R"]
-    sha = {"M": record_sha256(M), "R": record_sha256(R)}
-    _post_r_stops(R, M, bundle.get("H") or [], parse_time(R["formed_at"]), parse_time(now), {}, out.add, sha)
-    return [r for r in REASON_ORDER if r in out]

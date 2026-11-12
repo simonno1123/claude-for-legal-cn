@@ -44,31 +44,52 @@ def require_answers(expected: set[str], answers: dict) -> dict:
     return {k: answers[k] for k in sorted(expected)}
 
 
-def enumerate_stop_events(h_events: list[dict], case: str, *, after: str | None = None, upto: str | None = None) -> list[dict]:
-    """List every discovery event for the case in the window, for the reviewer to judge one by one."""
+def enumerate_stop_events(h_events: list[dict], case: str, *, after: str | None = None, upto: str | None = None) -> dict:
+    """List every discovery event for the case in the window, with every clearance event that cites it.
+
+    The reviewer judges each discovery one by one (relevance, reason, and whether a
+    cited clearance covers this candidate). The builder never makes those judgments.
+    """
     lo = g.parse_time(after) if after else None
     hi = g.parse_time(upto) if upto else None
-    out = []
+    discoveries = []
     for ev in h_events:
         if ev.get("event") != "discovery" or ev.get("case") != case:
             continue
         at = g.parse_time(ev.get("at"))
         if (lo and at < lo) or (hi and at >= hi):
             continue
-        out.append({"sha256": g.record_sha256(ev), "item": ev.get("item"), "issue": ev.get("issue"), "at": ev.get("at")})
-    out.sort(key=lambda e: (e["at"], e["sha256"]))
-    return out
+        ev_sha = g.record_sha256(ev)
+        cited = [
+            {"sha256": g.record_sha256(c), "type": c.get("type"), "scope_candidate": c.get("scope_candidate"), "at": c.get("at")}
+            for c in h_events if c.get("event") == "clearance" and c.get("refs_discovery") == ev_sha
+        ]
+        discoveries.append({"sha256": ev_sha, "item": ev.get("item"), "issue": ev.get("issue"), "at": ev.get("at"),
+                            "clearances": cited})
+    discoveries.sort(key=lambda e: (e["at"], e["sha256"]))
+    return {"discoveries": discoveries}
 
 
-def stop_query(enumerated: list[dict], answers: dict) -> dict:
-    """Combine the enumeration with reviewer answers; every event needs relevance and a reason."""
+def stop_query(enumerated: dict, answers: dict) -> dict:
+    """Transcribe the reviewer's answers verbatim; refuse any missing or incomplete answer."""
     result = {}
-    for ev in enumerated:
+    for ev in enumerated["discoveries"]:
         a = answers.get(ev["sha256"])
         if not isinstance(a, dict) or a.get("relevant") not in {"相关", "不相关"} or not str(a.get("reason", "")).strip():
             raise MissingAnswer(f"no relevance answer for event {ev['sha256'][:12]}")
-        result[ev["sha256"]] = {"relevant": a["relevant"], "reason": a["reason"]}
-    last = enumerated[-1]["sha256"] if enumerated else None
+        if a["relevant"] == "不相关":
+            covered, clearance = "不适用", None
+        else:
+            covered = a.get("covered")
+            clearance = a.get("clearance")
+            if covered not in {"已覆盖", "未覆盖"}:
+                raise MissingAnswer(f"no coverage answer for event {ev['sha256'][:12]}")
+            if covered == "已覆盖" and clearance not in {c["sha256"] for c in ev["clearances"]}:
+                raise MissingAnswer(f"coverage answer must cite one listed clearance for event {ev['sha256'][:12]}")
+            if covered == "未覆盖":
+                clearance = None
+        result[ev["sha256"]] = {"relevant": a["relevant"], "reason": a["reason"], "covered": covered, "clearance": clearance}
+    last = enumerated["discoveries"][-1]["sha256"] if enumerated["discoveries"] else None
     return {"answers": result, "last_event": last}
 
 
