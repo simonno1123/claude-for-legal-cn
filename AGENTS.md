@@ -175,3 +175,21 @@ rules that `scripts/lint-tool-scope.py` enforces:
 - `references/` lives only at repo root and is not shipped inside any plugin
   directory. Several plugin `AGENTS.md` templates reference it as if it were —
   that's a known gap, not a thing to silently move.
+
+## Code Review Rules
+
+These rules apply when Codex reviews a pull request in this repository, for example when someone comments `@codex review`.
+
+1. **Governance documents** are the files under `docs/phase2/` and `.codex-coordination/`.
+   - If the review comment or the PR description names a task file in `.codex-coordination/inbox/`, follow that task's goal, questions and output requirements.
+   - Review the full text of the named design document, not only the lines changed in the diff.
+2. **Language.** Write review findings in Chinese.
+3. **Severity.** Label each finding BLOCKING or NON-BLOCKING and cite line references.
+   - **P0 / BLOCKING** means any of the following:
+     - a rule relaxes the adopted design it builds on (for C03 that is R2 and R3);
+     - an ambiguity would let an implementation pass something the adopted design blocks;
+     - any path lets AI act as the qualified reviewer or decide a disposition;
+     - real case material appears in this public repository.
+   - **P1** means internal inconsistency or a rule a careful human reviewer could not carry out.
+4. **Verdict.** Finish with a summary comment that gives a verdict of PASS, PASS WITH NOTES or FAIL. State that the review is a cross-model review by Codex, not a human or legal review.
+5. **Authority.** Do not adopt, close or authorize anything. The Project Owner decides.
