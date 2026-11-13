@@ -1,0 +1,46 @@
+{
+  "RecordKind": "C03_ACTIVATION_DECISION",
+  "DecisionId": "C03-CP-D-014",
+  "Blocker": "AR-B-001",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-13 (approx)",
+  "Method": "owner answered single-select questions in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Basis": {
+    "FinalReadinessReview": {"Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW.md", "SHA256": "42C7604182762C912CD6C963599DD0DA160F84EF71C5C1599D9EAA392A0878BF", "Accepted": "TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW_ACCEPTANCE_DECISION.md"},
+    "ActivationDecisionPacket": {"Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_ACTIVATION_DECISION_PACKET.md", "SHA256": "4D94991F20DC6C320C9407EDFCE51EB278743639E97999DFBEA08F94371B8E3D"},
+    "Reviews": "Codex cross-model reviews on GitHub PRs #117 (E-014: R1 2 P1, R2 no findings) and #118 (E-015: R1 2 P0, R2 no findings); text reviews, not human or legal review",
+    "OwnerChoices": {"R-01": "只申请能力激活", "R-02": "V8-A 纳入激活绑定", "R-03": "按 E-014 执行 (owner corrected an earlier narrower wording)"}
+  },
+  "Decision": {
+    "Choice": "激活（CAPABILITY_ONLY）",
+    "Effect": "C03 ACTIVATED — CAPABILITY_ONLY: the version-bound capability bound in E-015 §二 is enabled with a closed invocation gate",
+    "MaximumEffect": "enable the bound capability; every invocation lacking a separately approved Tier B exact-matter packet is rejected",
+    "ExpresslyNotCreated": [
+      "no access to any matter material",
+      "no candidate generation",
+      "no downstream use",
+      "no matter-bound execution, including CASE-D",
+      "no standing authority; AR-B-010 per-output decisions still required"
+    ],
+    "BindingSHAs": "as listed in the activation decision packet §二 (10 V7 implementation files, 3 V8-A files, validation evidence and governance files)",
+    "ValidityAndExpiry": "activation lapses automatically at 2026-12-08T00:00+08:00 (authority freshness pack expiry) unless the authorities are re-checked and the binding is updated and confirmed by the owner before that time",
+    "Withdrawal": [
+      "owner withdrawal",
+      "SHA change of any bound file",
+      "kill or revocation state active",
+      "withdrawal conditions of plan §7.7, §7.8, §7.9",
+      "identity mismatch",
+      "authority freshness expiry without timely re-check and update"
+    ],
+    "MatterUsePrerequisite": "each matter use needs a separate Tier B exact-matter packet and a new independent decision chain; before that, the E-014 §五之二 category-B items must be resolved or expressly accepted by the owner",
+    "Limitations": "all limitations of E-014 §六 and §五之二 remain: single-lawyer concentration, V8-B deferred, runtime mechanisms and isolation layers unverified, truncated audit chain known defect, 30-day authority freshness"
+  },
+  "ResultingState": {
+    "AR_B_001": "DECIDED — C03 ACTIVATED (CAPABILITY_ONLY)",
+    "Blockers": "AR-B-001 decided; AR-B-002 to AR-B-009 closed (mostly with limitations); AR-B-010 per-output gate",
+    "C03": "ACTIVE — CAPABILITY_ONLY, invocation gate closed",
+    "MatterBoundInvocation": "NOT AUTHORIZED",
+    "AutomaticDownstreamTransition": "BLOCKED",
+    "ActivationLapsesAt": "2026-12-08T00:00+08:00 unless renewed"
+  }
+}
