@@ -32,9 +32,9 @@
 | | `implementation_sha256` | 对 E-015 R3 §2.1 所列 10 个 V7 实现文件，按路径排序，逐行写"路径＋制表符＋SHA-256＋换行"（UTF-8），对该文本取 SHA-256。运行开始时在本机重算，各文件 SHA 须与 E-015 R3 逐一相符（处置 B-09），否则停止 |
 | | `configuration_sha256` | `NONE`（没有单独的配置文件） |
 | | `activation_decision_reference` | `C03-CP-D-015` |
-| | `state` | `ENABLED_CAPABILITY_ONLY`。运行开始时核对：主分支上的激活决定仍是 `C03-CP-D-015` 且绑定文件 SHA 未变；否则填 `STALE` 并照实运行或停止，由所有者当场决定 |
+| | `state` | `ENABLED_CAPABILITY_ONLY`。运行开始时核对：主分支上的激活决定仍是 `C03-CP-D-015` 且绑定文件 SHA 未变；否则停止，不构造调用输入，记一条拒绝事件 |
 | 预期身份 | 全部字段 | 与能力配置及信封取值各自独立地从同一来源文件抄录（先填预期，再填配置和信封，不互相复制） |
-| 信封 | `route` 等五个域字段 | 取自已采纳的 Route B 执行域适配规范和 WP-007 实现设计中的确切取值；本机填写时注明出处行 |
+| 信封 | `route` 等五个域字段 | 按第二节之二的固定基线填写，不得在运行时另选取值 |
 | | `matter_id` / `matter_version` | `CASE-D` / 私有目录中案件材料清单的版本号 |
 | | `actor_reference` / `role` | `REVIEWER-01` / 合格复核人（R3 的 M、I 记录） |
 | | `matter_authorization_reference` | AR-B-002/004 与 AR-B-003 关闭决定的编号 |
@@ -49,11 +49,23 @@
 | | `matter_id`、`matter_version`、`actor_reference`、`purpose`、`operation`、`input_set_sha256`、`output_class` | 按本包取值填写，不从信封复制 |
 | | `decision_reference` | 所有者对本包的执行授权决定编号 |
 | | `valid_from` / `valid_until` | 见第四节 |
-| | `revocation_state` / `state` | 运行开始时由所有者当场确认：未撤回则 `CLEAR` / `ACCEPTED`；无法确认则 `UNKNOWN`，照实填写 |
+| | `revocation_state` / `state` | 运行开始时由所有者当场确认本包未撤回、未失效：确认则 `RevocationState.CLEAR` / `PacketState.ACCEPTED`。无法确认或已撤回的，停止，不构造调用输入，记一条拒绝事件（`PacketState` 没有“未知”取值，不得硬填） |
 | 调用参数 | `validity_confirmed` | 第四节三项时刻核对全部通过才为 `True`，否则 `False` |
-| | `kill` / `revocation` / `control_state_known` | 所有者当场确认没有叫停或撤回，则为 `None` / `None` / `True`；无法确认则 `control_state_known=False` |
+| | `kill` / `revocation` / `control_state_known` | 所有者当场确认没有叫停或撤回，则为 `None` / `None` / `True`；无法确认的，按上一行停止 |
 | | `subject_scope` | `CASE-D` |
 | | `evaluated_at` | 调用时的 UTC 时刻，取自本机时钟，并由所有者对照另一时间来源确认 |
+
+### 二之二、域身份固定基线
+
+| 字段 | 固定取值 | 出处 |
+| --- | --- | --- |
+| `route` | `Route-B` | Route B 执行域适配规范 §6 信封定义 |
+| `domain_id` | `C03-ENFORCEMENT-ADVERSARIAL-DESIGN` | C03 执行对抗域规范（`TASK_PHASE2_ROUTE_B_C03_ENFORCEMENT_ADVERSARIAL_DOMAIN_PROFILE_SPEC.md`） |
+| `domain_version` | `1.0` | 同上 |
+| `adapter_contract_version` | `v1.0` | 执行域适配规范文件自身的版本号。该规范没有给这个字段单独赋值 |
+| `route_version` | `1.0` | **没有任何已采纳文件给出取值**，由本包为本次运行固定 |
+
+局限：后两项此前没有已采纳的赋值，是本包为本次运行指定的；关口对这两项的相等比较因此只能证明填写一致，不能证明符合某个更早的已采纳身份。所有者授权本包即确认这两个取值；以后的授权包沿用，变更须另行决定。预期身份与信封都只能填本表取值，任何一项与本表不符即停止。
 
 **输入集。** 只包含两类已经过人工关口的材料的引用，不含案卷原件：
 
@@ -76,10 +88,12 @@
 
 ## 四、时刻与有效期
 
+- **记录链有效截止**（R3 §9.2）：从输入集中那份确切的 R 记录取得 C5 期限清单及其状态，取“依据核对日＋30 日”与每一项适用的 C5 期限中的最早者。任何一项 C5 期限状态为“未知”的，本次不得运行。就现有记录，依据时效截止为 2026-12-08T00:00+08:00；C5 各项以私有目录中 R 记录为准，运行开始时由所有者逐项过目确认。
 - `valid_from`：所有者作出执行授权决定的时刻。
-- `valid_until`：取下列两者中较早者——①`valid_from` 之后 7 日；②依据时效截止 2026-12-08T00:00+08:00。
+- `valid_until`：取下列两者中较早者——①`valid_from` 之后 7 日；②上述记录链有效截止。
+- 截止的含义：到达截止时刻的那一瞬间起即不再有效（`valid_from ≤ 时刻 < valid_until`，与 `identity_gate.py` 的比较一致）。
 - 允许运行时长：10 分钟。运行截止时刻＝开始时刻＋10 分钟。
-- 按处置 B-04，在开始时、结果返回时、结果写入审计记录并报告之前，各核对一次精确时刻：未过运行截止；在 `valid_from` 与 `valid_until` 之间；依据时效未过期。任一项超时或无法确认，本次运行进入 `QUARANTINED — INCOMPLETE`，结果不得使用。
+- 按处置 B-04，在开始时、结果返回时、结果写入审计记录并报告之前，各核对一次精确时刻（含时区），三项都要成立：未到运行截止；在 `valid_from` 与 `valid_until` 之间；未到记录链有效截止。任一项不成立或无法确认，本次运行进入 `QUARANTINED — INCOMPLETE`，结果不得使用。
 
 ## 五、执行控制
 
