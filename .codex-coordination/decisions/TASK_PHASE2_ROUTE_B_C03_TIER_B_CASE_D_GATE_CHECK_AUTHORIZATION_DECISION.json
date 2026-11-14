@@ -1,0 +1,38 @@
+{
+  "RecordKind": "C03_TIER_B_EXECUTION_AUTHORIZATION_DECISION",
+  "DecisionId": "C03-CP-D-017",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-14T15:00:00Z (decision made shortly before; valid_from set at or after the decision)",
+  "Method": "owner answered two single-select questions, one per call, in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Basis": {
+    "Packet": {
+      "Id": "C03-TB-CASE-D-001",
+      "Version": "R1",
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_TIER_B_CASE_D_GATE_CHECK_PACKET.md",
+      "SHA256": "7F4C4F966C8E0B7893A6C2A6917CFA562E08118610EF0F1B2BE7AB936D984EF2"
+    },
+    "ActivationDecision": "C03-CP-D-015",
+    "CarryoverDispositionDecision": "C03-CP-D-016",
+    "Reviews": "Codex PR #121: R1 1 P0 + 2 P1 (C5 deadlines in cutoff; domain identity baseline; PacketState enum), fixed; R2 no major issues. Text review, not human or legal review"
+  },
+  "Decision": {
+    "DomainIdentityBaseline": "确认：route_version=1.0、adapter_contract_version=v1.0 由本包固定；接受“只能证明填写一致”的局限",
+    "Choice": "授权一次关口检查",
+    "Scope": "one local call to C03Capability.evaluate_transition for CASE-D, references and metadata only, per the packet",
+    "ValidFrom": "2026-11-14T15:00:00Z",
+    "ValidUntil": "2026-11-21T15:00:00Z, and never later than the record-chain validity cutoff (R3 §9.2)",
+    "RunTimeLimit": "PT10M",
+    "Uses": 1,
+    "ExpresslyNotCreated": [
+      "no mapping, candidate generation or execution, whatever the determination",
+      "no downstream use of the determination",
+      "no access to original case files",
+      "no standing authority",
+      "no change to the closed invocation gate"
+    ]
+  },
+  "ResultingState": {
+    "Packet": "ACCEPTED — single use, not yet used",
+    "Run": "NOT YET PERFORMED"
+  }
+}
