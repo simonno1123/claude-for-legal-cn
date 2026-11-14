@@ -1,0 +1,47 @@
+{
+  "RecordKind": "C03_TIER_B_CARRYOVER_DISPOSITION_DECISION",
+  "DecisionId": "C03-CP-D-016",
+  "Owner": "张纯熙",
+  "RecordedAtUtc": "2026-11-14 (approx; owner local 2026-11-13)",
+  "Method": "owner answered ten single-select questions, one item per question, in a recorder question; option texts drafted by the recorder; not a personal signature",
+  "Basis": {
+    "Disposition": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_TIER_B_CARRYOVER_DISPOSITION.md",
+      "SHA256": "BABC010BD42FB07944A3AC7C0ED24E7D4C1022D961772B7C3460495849ACD089"
+    },
+    "FinalReadinessReview": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW.md",
+      "Section": "§五之二",
+      "SHA256": "42C7604182762C912CD6C963599DD0DA160F84EF71C5C1599D9EAA392A0878BF"
+    },
+    "ActivationDecision": "C03-CP-D-015",
+    "Reviews": "Codex PR #120: R1 2 P0 + 1 P1 (timeout/late result; per-event audit; stop wind-down), fixed; R2 no major issues. Text review, not human or legal review"
+  },
+  "Decision": {
+    "Items": {
+      "B-01": "接受（替代控制＋接受的局限）",
+      "B-02": "接受（替代控制＋接受的局限）",
+      "B-03": "接受（替代控制＋接受的局限）",
+      "B-04": "接受（替代控制＋接受的局限）",
+      "B-05": "接受（替代控制＋接受的局限）",
+      "B-06": "接受（替代控制＋接受的局限）",
+      "B-07": "接受（替代控制＋接受的局限）",
+      "B-08": "接受（替代控制＋接受的局限）",
+      "B-09": "接受（替代控制＋接受的局限）",
+      "B-10": "接受（替代控制＋接受的局限）"
+    },
+    "Scope": "CASE-D matter-level execution only, under the execution mode of the disposition §一",
+    "Effect": "the E-014 §五之二 category-B precondition for CASE-D matter-level execution is satisfied",
+    "ExpresslyNotCreated": [
+      "no matter-level execution authorized",
+      "no Tier B packet approved",
+      "no AR-B-010 decision",
+      "no change to the closed invocation gate",
+      "no change to category A or C items"
+    ]
+  },
+  "ResultingState": {
+    "CASE_D_CategoryB": "DISPOSED — all ten accepted with manual controls",
+    "NextPrerequisite": "Tier B exact-matter packet for CASE-D with a new independent decision chain, plus an in-date authority freshness pack at the start of each matter-level operation"
+  }
+}
