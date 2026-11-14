@@ -1,15 +1,32 @@
 {
   "RecordKind": "C03_ACTIVATION_DECISION",
-  "DecisionId": "C03-CP-D-014",
+  "DecisionId": "C03-CP-D-015",
   "Blocker": "AR-B-001",
   "Owner": "张纯熙",
   "RecordedAtUtc": "2026-11-13 (approx)",
   "Method": "owner answered single-select questions in a recorder question; option texts drafted by the recorder; not a personal signature",
   "Basis": {
-    "FinalReadinessReview": {"Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW.md", "SHA256": "42C7604182762C912CD6C963599DD0DA160F84EF71C5C1599D9EAA392A0878BF", "Accepted": "TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW_ACCEPTANCE_DECISION.md"},
-    "ActivationDecisionPacket": {"Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_ACTIVATION_DECISION_PACKET.md", "SHA256": "4D94991F20DC6C320C9407EDFCE51EB278743639E97999DFBEA08F94371B8E3D"},
-    "Reviews": "Codex cross-model reviews on GitHub PRs #117 (E-014: R1 2 P1, R2 no findings) and #118 (E-015: R1 2 P0, R2 no findings); text reviews, not human or legal review",
-    "OwnerChoices": {"R-01": "只申请能力激活", "R-02": "V8-A 纳入激活绑定", "R-03": "按 E-014 执行 (owner corrected an earlier narrower wording)"}
+    "FinalReadinessReview": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW.md",
+      "SHA256": "42C7604182762C912CD6C963599DD0DA160F84EF71C5C1599D9EAA392A0878BF",
+      "Accepted": "TASK_PHASE2_ROUTE_B_C03_FINAL_READINESS_REVIEW_ACCEPTANCE_DECISION.md"
+    },
+    "ActivationDecisionPacket": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_ACTIVATION_DECISION_PACKET.md",
+      "Revision": "R3",
+      "SHA256": "655C7AEB5443D21B3070FDF8B6E45AC4BD299824A4B6ED8203EBCFC7E167363C"
+    },
+    "Reviews": "Codex cross-model reviews on GitHub PRs #117 (E-014: R1 2 P1, R2 no findings) and #118 (E-015: R1 2 P0, R2 no findings); text reviews, not human or legal review; #119 (amendment + E-015 R3: R1 1 P1 non-blocking, fixed; R2 no major issues)",
+    "OwnerChoices": {
+      "R-01": "只申请能力激活",
+      "R-02": "V8-A 纳入激活绑定",
+      "R-03": "先选“按 E-014 执行”；2026-11-13 改选“解除挂钩”：依据时效只约束案件级操作"
+    },
+    "AuthorityFreshnessScopeAmendment": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_AUTHORITY_FRESHNESS_SCOPE_AMENDMENT.md",
+      "SHA256": "72A3C88C8B2B150EE4E2AF7E5D680E1453C6660137FC3F4C703948E973A140AA",
+      "OwnerConfirmed": "确认采纳（2026-11-13）"
+    }
   },
   "Decision": {
     "Choice": "激活（CAPABILITY_ONLY）",
@@ -23,24 +40,28 @@
       "no standing authority; AR-B-010 per-output decisions still required"
     ],
     "BindingSHAs": "as listed in the activation decision packet §二 (10 V7 implementation files, 3 V8-A files, validation evidence and governance files)",
-    "ValidityAndExpiry": "activation lapses automatically at 2026-12-08T00:00+08:00 (authority freshness pack expiry) unless the authorities are re-checked and the binding is updated and confirmed by the owner before that time",
+    "ValidityAndExpiry": "no calendar expiry; activation ends only on a withdrawal condition. Authority freshness (30 days) applies at the start of every matter-level operation (Tier B packet, candidate review, AR-B-010, matter execution), not to this capability activation",
     "Withdrawal": [
       "owner withdrawal",
       "SHA change of any bound file",
       "kill or revocation state active",
       "withdrawal conditions of plan §7.7, §7.8, §7.9",
-      "identity mismatch",
-      "authority freshness expiry without timely re-check and update"
+      "identity mismatch"
     ],
     "MatterUsePrerequisite": "each matter use needs a separate Tier B exact-matter packet and a new independent decision chain; before that, the E-014 §五之二 category-B items must be resolved or expressly accepted by the owner",
-    "Limitations": "all limitations of E-014 §六 and §五之二 remain: single-lawyer concentration, V8-B deferred, runtime mechanisms and isolation layers unverified, truncated audit chain known defect, 30-day authority freshness"
+    "Limitations": "all limitations of E-014 §六 and §五之二 remain: single-lawyer concentration, V8-B deferred, runtime mechanisms and isolation layers unverified, truncated audit chain known defect, 30-day authority freshness for matter-level operations"
   },
   "ResultingState": {
-    "AR_B_001": "DECIDED — C03 ACTIVATED (CAPABILITY_ONLY)",
+    "AR_B_001": "DECIDED — C03 ACTIVATED (CAPABILITY_ONLY), C03-CP-D-015",
     "Blockers": "AR-B-001 decided; AR-B-002 to AR-B-009 closed (mostly with limitations); AR-B-010 per-output gate",
     "C03": "ACTIVE — CAPABILITY_ONLY, invocation gate closed",
     "MatterBoundInvocation": "NOT AUTHORIZED",
     "AutomaticDownstreamTransition": "BLOCKED",
-    "ActivationLapsesAt": "2026-12-08T00:00+08:00 unless renewed"
+    "ActivationExpiry": "none (withdrawal conditions only)"
+  },
+  "Supersedes": {
+    "DecisionId": "C03-CP-D-014",
+    "Effective": "at the merge of PR #119 into main; no period in which both or neither decision is in force",
+    "PriorRecordInGitHistory": "this file at the merge commit of PR #118"
   }
 }
