@@ -82,10 +82,26 @@ def _lock(handle) -> bool:
 
 
 def _append_use(handle, event: dict) -> None:
+    """Append one event as its own line (adding a separator if the last line is unterminated), then verify."""
     handle.seek(0, 2)
-    handle.write(g.canonical_bytes(event) + b"\n")
+    size = handle.tell()
+    sep = b""
+    if size:
+        handle.seek(size - 1)
+        if handle.read(1) != b"\n":
+            sep = b"\n"
+    handle.seek(0, 2)
+    handle.write(sep + g.canonical_bytes(event) + b"\n")
     handle.flush()
     os.fsync(handle.fileno())
+    handle.seek(0)
+    lines = [ln for ln in handle.read().decode("utf-8").splitlines() if ln.strip()]
+    try:
+        last = g.parse_record(lines[-1])
+    except (g.RecordError, IndexError, ValueError) as exc:
+        raise OSError(f"usage log unreadable after append: {exc}") from exc
+    if last != event:
+        raise OSError("usage log does not end with the appended event")
 
 
 def record_use(folder: pathlib.Path, candidate: pathlib.Path, dest: pathlib.Path, *, now: str | None = None) -> dict:

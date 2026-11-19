@@ -651,3 +651,14 @@ class RecordUseAndRefs(unittest.TestCase):
             self.assertEqual(list(dest.iterdir()), [])
             self.assertEqual(gate_cli.record_use(folder, cand, dest, now=NOW)["result"], "USED")
 
+    def test_record_use_unterminated_log_line(self):
+        import tempfile
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            folder, cand, dest = self._setup(d)
+            gp = folder / "G.jsonl"
+            gp.write_bytes(gp.read_bytes().rstrip(b"\n"))
+            self.assertEqual(gate_cli.record_use(folder, cand, dest, now=NOW)["result"], "USED")
+            events = gate_cli._load_lines(gp)
+            self.assertEqual([e["kind"] for e in events], ["initial", "use"])
+
