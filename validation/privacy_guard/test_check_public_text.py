@@ -73,13 +73,15 @@ class RealGit(unittest.TestCase):
             run("init", "-q")
             pathlib.Path(d, "案件 记录.md").write_text("电话 13900000000\n", encoding="utf-8")
             pathlib.Path(d, "note.md").write_text("++ heading\n@@ not a hunk\n电话 13900000001\n", encoding="utf-8")
+            pathlib.Path(d, "sep.md").write_bytes("heading\u2028+ continuation\r\n电话 13900000002\n".encode("utf-8"))
             run("add", "-A")
             for quote in ("true", "false"):
                 diff = subprocess.run(["git", "-c", f"core.quotePath={quote}", "diff", "--cached", "--unified=0", "--no-color"],
-                                      cwd=d, capture_output=True, text=True, encoding="utf-8", check=True).stdout
+                                      cwd=d, capture_output=True, check=True).stdout.decode("utf-8")
                 found = list(c.added_lines(diff))
-                self.assertEqual(sorted({p for p, _, _ in found}), ["note.md", "案件 记录.md"], quote)
-                self.assertEqual(len(c.run(found, [], case_check=False)), 2)
+                self.assertEqual(sorted({p for p, _, _ in found}), ["note.md", "sep.md", "案件 记录.md"], quote)
+                self.assertEqual(len(c.run(found, [], case_check=False)), 3)
+                self.assertIn(("sep.md", 2), [(p, n) for p, n, _ in found])
                 self.assertIn(("note.md", 3), [(p, n) for p, n, _ in found])
 
 

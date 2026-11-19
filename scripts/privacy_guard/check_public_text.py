@@ -89,8 +89,9 @@ def scan_line(line: str, terms: list[str], case_file: bool = False) -> list[tupl
 
 
 def _git(*args: str) -> str:
-    return subprocess.run(["git", "-c", "core.quotePath=false", *args], capture_output=True, text=True, check=True,
-                          encoding="utf-8").stdout
+    # Bytes in, decoded without newline translation, so the patch keeps Git's own LF line boundaries.
+    out = subprocess.run(["git", "-c", "core.quotePath=false", *args], capture_output=True, check=True).stdout
+    return out.decode("utf-8", errors="replace")
 
 
 def _header_path(raw: str) -> str | None:
@@ -108,7 +109,7 @@ def added_lines(diff: str):
     that happens to start with '+++ ' or '@@' is never mistaken for a header."""
     path, lineno, old_left, new_left, in_header = None, 0, 0, 0, False
     hunk = re.compile(r"^@@ -\d+(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
-    for raw in diff.splitlines():
+    for raw in diff.split("\n"):
         if old_left > 0 or new_left > 0:
             tag, text = raw[:1], raw[1:]
             if tag == "+":
@@ -146,7 +147,7 @@ def file_lines(paths):
             text = fp.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
-        for i, line in enumerate(text.splitlines(), 1):
+        for i, line in enumerate(text.split("\n"), 1):
             yield str(p), i, line
 
 
