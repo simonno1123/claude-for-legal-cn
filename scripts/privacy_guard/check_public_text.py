@@ -131,21 +131,26 @@ def file_lines(paths):
             yield str(p), i, line
 
 
-def _is_case_file(path: str, cache: dict) -> bool:
+def _read_worktree(path: str) -> str:
+    return pathlib.Path(path).read_text(encoding="utf-8")
+
+
+def _is_case_file(path: str, cache: dict, reader) -> bool:
+    """Whether the version being checked names a matter code. Unreadable counts as yes (fail closed)."""
     if path not in cache:
         try:
-            cache[path] = bool(CASE_CODE.search(pathlib.Path(path).read_text(encoding="utf-8")))
-        except (OSError, UnicodeDecodeError):
-            cache[path] = False
+            cache[path] = bool(CASE_CODE.search(reader(path)))
+        except (OSError, UnicodeDecodeError, subprocess.CalledProcessError):
+            cache[path] = True
     return cache[path]
 
 
-def run(lines, terms: list[str], case_check: bool = True) -> list[str]:
+def run(lines, terms: list[str], case_check: bool = True, reader=_read_worktree) -> list[str]:
     report, cache = [], {}
     for path, lineno, line in lines:
         if path.replace("\\", "/") in SELF_EXEMPT:
             continue
-        case_file = case_check and _is_case_file(path, cache)
+        case_file = case_check and _is_case_file(path, cache, reader)
         for rule, text in scan_line(line, terms, case_file):
             report.append(f"{path}:{lineno}: {rule}: {mask(text)}")
     return report
@@ -161,15 +166,18 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("files", nargs="*")
     a = ap.parse_args(argv)
     terms = load_terms(a.terms)
+    reader = _read_worktree
     if a.staged:
         lines = added_lines(_git("diff", "--cached", "--unified=0", "--no-color"))
+        reader = lambda p: _git("show", f":{p}")  # the index version that will be committed
     elif a.base:
         lines = added_lines(_git("diff", f"{a.base}...HEAD", "--unified=0", "--no-color"))
+        reader = lambda p: _git("show", f"HEAD:{p}")
     elif a.tree:
         lines = file_lines(_git("ls-files").splitlines())
     else:
         lines = file_lines(a.files)
-    report = run(lines, terms, case_check=not a.tree)
+    report = run(lines, terms, case_check=not a.tree, reader=reader)
     for r in report:
         print(r)
     print(f"privacy guard: {len(report)} finding(s); private term list: {'loaded, ' + str(len(terms)) + ' terms' if terms else 'not loaded'}",

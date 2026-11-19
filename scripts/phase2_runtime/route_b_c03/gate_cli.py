@@ -94,7 +94,9 @@ def record_use(folder: pathlib.Path, candidate: pathlib.Path, dest: pathlib.Path
     Order: lock G.jsonl -> load and validate (use stage) -> read the candidate once and check
     its SHA-256 against M -> write those same bytes to a temporary file in DEST -> append and
     fsync the G use event -> atomically rename the temporary file to its final name.
-    If anything fails before the G event is written, G is unchanged and no final file exists.
+    If anything fails before the G event is durable, G is rolled back to its original length and
+no final file exists; if the rollback itself cannot be confirmed, the result is
+USAGE_LOG_INCONSISTENT and the folder needs manual inspection before any further use.
     """
     now = now or _now()
     g_path = folder / "G.jsonl"
@@ -127,16 +129,33 @@ def record_use(folder: pathlib.Path, candidate: pathlib.Path, dest: pathlib.Path
         except OSError as exc:
             return {"result": "REFUSED", "reason": "COPY_FAILED", "detail": str(exc), "leftover": _cleanup(partial)}
         event = {"kind": "use", "auth": g.record_sha256(bundle["AUTH"]), "q3": g.record_sha256(bundle["Q3"]), "at": now}
+        handle.seek(0, 2)
+        original_size = handle.tell()
         try:
             _append_use(handle, event)
         except OSError as exc:
-            return {"result": "REFUSED", "reason": "USAGE_LOG_WRITE_FAILED", "detail": str(exc), "leftover": _cleanup(partial)}
+            restored = _restore_log(handle, original_size)
+            out = {"result": "REFUSED" if restored else "USAGE_LOG_INCONSISTENT", "reason": "USAGE_LOG_WRITE_FAILED",
+                   "detail": str(exc), "log_restored": restored, "leftover": _cleanup(partial)}
+            return out
         try:
             os.replace(partial, target)
         except OSError as exc:
             return {"result": "USED_NOT_PUBLISHED", "reason": "RENAME_FAILED", "detail": str(exc),
                     "partial": str(partial), "sha256": digest, "at": now}
     return {"result": "USED", "pre_use": pre["result"], "copied_to": str(target), "sha256": digest, "at": now}
+
+
+def _restore_log(handle, size: int) -> bool:
+    """Roll G.jsonl back to its pre-append length; True only if the restore is confirmed on disk."""
+    try:
+        handle.truncate(size)
+        handle.flush()
+        os.fsync(handle.fileno())
+        handle.seek(0, 2)
+        return handle.tell() == size
+    except OSError:
+        return False
 
 
 def _cleanup(path: pathlib.Path) -> str | None:

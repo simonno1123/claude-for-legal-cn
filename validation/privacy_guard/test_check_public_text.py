@@ -81,6 +81,28 @@ class RealGit(unittest.TestCase):
                 self.assertEqual(len(c.run(found, [], case_check=False)), 1)
 
 
+class PartialStaging(unittest.TestCase):
+    def test_case_code_read_from_index_not_worktree(self):
+        import os
+        import subprocess
+        guard = pathlib.Path(__file__).resolve().parents[2] / "scripts" / "privacy_guard" / "check_public_text.py"
+        with tempfile.TemporaryDirectory() as d:
+            env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid",
+                   "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+            run = lambda *a: subprocess.run(["git", *a], cwd=d, env=env, check=True, capture_output=True)
+            run("init", "-q")
+            f = pathlib.Path(d, "rec.md")
+            f.write_text("CASE-Z\n该冻结未续冻\n", encoding="utf-8")
+            run("add", "rec.md")
+            f.write_text("该冻结未续冻\n", encoding="utf-8")  # worktree no longer names the code
+            res = subprocess.run([sys.executable, str(guard), "--staged"], cwd=d, capture_output=True, text=True)
+            self.assertEqual(res.returncode, 1, res.stdout + res.stderr)
+            self.assertIn("CASE_FACT_WORD", res.stdout)
+            f.unlink()  # deleted from the worktree after staging
+            res = subprocess.run([sys.executable, str(guard), "--staged"], cwd=d, capture_output=True, text=True)
+            self.assertEqual(res.returncode, 1)
+
+
 class Diff(unittest.TestCase):
     def test_added_lines_only(self):
         diff = ("diff --git a/x.md b/x.md\n--- a/x.md\n+++ b/x.md\n@@ -1,0 +2,2 @@\n"

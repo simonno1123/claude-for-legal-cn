@@ -629,3 +629,25 @@ class RecordUseAndRefs(unittest.TestCase):
             self.assertEqual(out["result"], "USED")
             self.assertEqual(hashlib.sha256((dest / "cand.md").read_bytes()).hexdigest().upper(), out["sha256"])
 
+    def test_record_use_log_fsync_failure_rolls_back(self):
+        import tempfile, os as _os
+        from unittest import mock
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            folder, cand, dest = self._setup(d)
+            before = (folder / "G.jsonl").read_bytes()
+            calls = {"n": 0}
+            real = _os.fsync
+            def fsync(fd):
+                calls["n"] += 1
+                if calls["n"] == 2:  # 1: candidate temp file, 2: the G append
+                    raise OSError("fictional fsync failure")
+                return real(fd)
+            with mock.patch.object(gate_cli.os, "fsync", fsync):
+                out = gate_cli.record_use(folder, cand, dest, now=NOW)
+            self.assertEqual(out["result"], "REFUSED")
+            self.assertTrue(out["log_restored"])
+            self.assertEqual((folder / "G.jsonl").read_bytes(), before)
+            self.assertEqual(list(dest.iterdir()), [])
+            self.assertEqual(gate_cli.record_use(folder, cand, dest, now=NOW)["result"], "USED")
+
