@@ -43,7 +43,7 @@ GENERIC = {
     "PRC_ID_NUMBER": re.compile(_B + r"[1-9]\d{5}(?:19|20)\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\d{3}[\dXx]" + _E),
     "MOBILE_NUMBER": re.compile(_B + r"1[3-9]\d{9}" + _E),
     "CARD_LENGTH_DIGITS": re.compile(_B + r"\d{16,19}" + _E),
-    "COURT_CASE_NUMBER": re.compile(r"[（(]\s*(?:19|20)\d{2}\s*[）)]\s*[一-龥]{1,2}\s*\d{2,6}\s*[一-龥]{1,6}[（(]?[一-龥]{0,4}[）)]?\s*\d+\s*号"),
+    "COURT_CASE_NUMBER": re.compile(r"[（(]\s*(?:19|20)\d{2}\s*[）)]\s*(?:最高法|[\u4e00-\u9fa5]{1,2})\s*\d{0,6}\s*[\u4e00-\u9fa5]{1,6}[（(]?[\u4e00-\u9fa5]{0,4}[）)]?\s*\d+\s*号"),
     "WINDOWS_USER_PATH": re.compile(r"[A-Za-z]:\\+Users\\+[^\\\s]+", re.I),
     "HOST_NAME": re.compile(r"DESKTOP-(?!REDACTED)[A-Z0-9]{5,}", re.I),
     "MACHINE_SID": re.compile(r"S-1-5-21-(?!REDACTED)\d+"),
@@ -89,14 +89,25 @@ def scan_line(line: str, terms: list[str], case_file: bool = False) -> list[tupl
 
 
 def _git(*args: str) -> str:
-    return subprocess.run(["git", *args], capture_output=True, text=True, check=True, encoding="utf-8").stdout
+    return subprocess.run(["git", "-c", "core.quotePath=false", *args], capture_output=True, text=True, check=True,
+                          encoding="utf-8").stdout
+
+
+def _header_path(raw: str) -> str | None:
+    """Path from a '+++ ' header; handles Git's C-style quoted form (non-ASCII as octal escapes)."""
+    rest = raw[4:].rstrip("\n").split("\t", 1)[0]  # Git appends a tab after paths containing spaces
+    if rest == "/dev/null":
+        return None
+    if rest.startswith('"') and rest.endswith('"'):
+        rest = rest[1:-1].encode("latin-1", "backslashreplace").decode("unicode_escape").encode("latin-1").decode("utf-8")
+    return rest[2:] if rest.startswith("b/") else None
 
 
 def added_lines(diff: str):
     path, lineno = None, 0
     for raw in diff.splitlines():
         if raw.startswith("+++ "):
-            path = raw[6:] if raw.startswith("+++ b/") else None
+            path = _header_path(raw)
         elif raw.startswith("@@"):
             m = re.search(r"\+(\d+)", raw)
             lineno = int(m.group(1)) if m else 0

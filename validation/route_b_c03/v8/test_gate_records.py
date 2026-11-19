@@ -563,3 +563,69 @@ class RecordUseAndRefs(unittest.TestCase):
             self.assertEqual(out["reason"], "CANDIDATE_SHA_MISMATCH")
             self.assertEqual(len((folder / "G.jsonl").read_text(encoding="utf-8").splitlines()), 1)
 
+    def _setup(self, d):
+        import pathlib as _p, hashlib
+        root = _p.Path(d)
+        cand = root / "cand.md"; cand.write_text("虚构候选\n", encoding="utf-8")
+        bd = LaterStages().full(output_sha=hashlib.sha256(cand.read_bytes()).hexdigest().upper())
+        (root / "rec").mkdir()
+        return self._folder(root / "rec", bd), cand, root / "archive"
+
+    def test_record_use_refuses_when_locked(self):
+        import tempfile, fcntl
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            folder, cand, dest = self._setup(d)
+            with (folder / "G.jsonl").open("r+b") as h:
+                fcntl.flock(h.fileno(), fcntl.LOCK_EX)
+                out = gate_cli.record_use(folder, cand, dest, now=NOW)
+            self.assertEqual(out["reason"], "BUSY")
+            self.assertFalse(dest.exists())
+            self.assertEqual(gate_cli.record_use(folder, cand, dest, now=NOW)["result"], "USED")
+
+    def test_record_use_log_failure_publishes_nothing(self):
+        import tempfile
+        from unittest import mock
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            folder, cand, dest = self._setup(d)
+            with mock.patch.object(gate_cli, "_append_use", side_effect=PermissionError("fictional")):
+                out = gate_cli.record_use(folder, cand, dest, now=NOW)
+            self.assertEqual(out["reason"], "USAGE_LOG_WRITE_FAILED")
+            self.assertEqual(list(dest.iterdir()), [])
+            self.assertEqual(len((folder / "G.jsonl").read_text(encoding="utf-8").splitlines()), 1)
+            self.assertEqual(gate_cli.record_use(folder, cand, dest, now=NOW)["result"], "USED")
+            again = gate_cli.record_use(folder, cand, dest.parent / "other", now=NOW)
+            self.assertEqual(again["reason"], "PRE_USE_CHECK_FAILED")
+
+    def test_record_use_copy_failure_leaves_log(self):
+        import tempfile, pathlib as _p
+        from unittest import mock
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            folder, cand, dest = self._setup(d)
+            real_open = _p.Path.open
+            def fail_x(self, mode="r", *a, **k):
+                if mode == "xb":
+                    raise OSError("fictional disk full")
+                return real_open(self, mode, *a, **k)
+            with mock.patch.object(_p.Path, "open", fail_x):
+                out = gate_cli.record_use(folder, cand, dest, now=NOW)
+            self.assertEqual(out["reason"], "COPY_FAILED")
+            self.assertEqual(len((folder / "G.jsonl").read_text(encoding="utf-8").splitlines()), 1)
+
+    def test_record_use_writes_the_validated_bytes(self):
+        import tempfile, hashlib
+        from unittest import mock
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            folder, cand, dest = self._setup(d)
+            real_append = gate_cli._append_use
+            def swap_then_append(handle, event):
+                cand.write_text("被替换的内容\n", encoding="utf-8")
+                real_append(handle, event)
+            with mock.patch.object(gate_cli, "_append_use", swap_then_append):
+                out = gate_cli.record_use(folder, cand, dest, now=NOW)
+            self.assertEqual(out["result"], "USED")
+            self.assertEqual(hashlib.sha256((dest / "cand.md").read_bytes()).hexdigest().upper(), out["sha256"])
+

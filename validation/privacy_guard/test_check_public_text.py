@@ -25,6 +25,8 @@ class Generic(unittest.TestCase):
         self.assertIn("MOBILE_NUMBER", rules("电话 13900000000"))
         self.assertIn("CARD_LENGTH_DIGITS", rules("账号 6222000000000000000"))
         self.assertIn("COURT_CASE_NUMBER", rules("（2030）浙0000执9999号之一"))
+        for num in ("（2030）京民终123号", "（2030）最高法民终123号", "（2030）浙00民终1号", "(2030)沪0000民初1号"):
+            self.assertIn("COURT_CASE_NUMBER", rules(num), num)
         self.assertIn("WINDOWS_USER_PATH", rules(r"C:\Users\someone\Documents"))
         self.assertIn("HOST_NAME", rules("DESKTOP-ABC1234"))
         self.assertIn("MACHINE_SID", rules("S-1-5-21-1234567890"))
@@ -58,6 +60,25 @@ class CaseFact(unittest.TestCase):
         self.assertEqual(rules(line, case_file=False), [])
         self.assertIn("CASE_FACT_WORD", rules("已分得 1234.5 元", case_file=True))
         self.assertEqual(rules("C5 出现停点；处置 APPROVE；授权用尽", case_file=True), [])
+
+
+class RealGit(unittest.TestCase):
+    def test_chinese_file_name_in_staged_diff(self):
+        import os
+        import subprocess
+        with tempfile.TemporaryDirectory() as d:
+            env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid",
+                   "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+            run = lambda *a: subprocess.run(["git", *a], cwd=d, env=env, check=True, capture_output=True)
+            run("init", "-q")
+            pathlib.Path(d, "案件 记录.md").write_text("电话 13900000000\n", encoding="utf-8")
+            run("add", "-A")
+            for quote in ("true", "false"):
+                diff = subprocess.run(["git", "-c", f"core.quotePath={quote}", "diff", "--cached", "--unified=0", "--no-color"],
+                                      cwd=d, capture_output=True, text=True, encoding="utf-8", check=True).stdout
+                found = list(c.added_lines(diff))
+                self.assertEqual([p for p, _, _ in found], ["案件 记录.md"], quote)
+                self.assertEqual(len(c.run(found, [], case_check=False)), 1)
 
 
 class Diff(unittest.TestCase):
