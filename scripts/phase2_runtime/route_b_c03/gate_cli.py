@@ -1,8 +1,14 @@
 """C03 V8-A local wrapper: read a private record folder and run the pure validator.
 
-Read-only. Usage:
+Usage:
   python -I -S -B gate_cli.py validate <folder> [--stage review|application|authorization|use]
   python -I -S -B gate_cli.py enumerate-h <folder> --case CODE [--after TIME] [--upto TIME]
+  python -I -S -B gate_cli.py record-use <folder> --candidate FILE --dest DIR
+
+validate and enumerate-h are read-only. record-use is the only command that writes:
+it runs the use-stage validation first and, only if the result is
+PRE_USE_RECORDS_COMPLETE, copies the candidate (whose SHA-256 must equal the one in M)
+into DIR and then appends the use event to G.jsonl. Any failure leaves both untouched.
 
 Folder layout: M.json I.json T.json R.json and optionally E.json S.json P.json
 Q1.json Q2.json Q3.json AUTH.json; X*.json V*.json W*.json CORR*.json; G.jsonl; H_index.jsonl.
@@ -48,6 +54,37 @@ def load_bundle(folder: pathlib.Path) -> dict:
     return bundle
 
 
+def _now() -> str:
+    return datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
+
+
+def record_use(folder: pathlib.Path, candidate: pathlib.Path, dest: pathlib.Path, *, now: str | None = None) -> dict:
+    """Validate-then-use, in that order. Returns {"result": ...}; writes nothing unless the pre-use check passes."""
+    import hashlib
+    import shutil
+
+    now = now or _now()
+    try:
+        bundle = load_bundle(folder)
+    except (g.RecordError, OSError) as exc:
+        return {"result": "REFUSED", "reason": "RECORD_INVALID", "detail": str(exc)}
+    pre = g.validate(bundle, now=now, stage="use")
+    if pre["result"] != "PRE_USE_RECORDS_COMPLETE":
+        return {"result": "REFUSED", "reason": "PRE_USE_CHECK_FAILED", "pre_use": pre}
+    digest = hashlib.sha256(candidate.read_bytes()).hexdigest().upper()
+    if digest != bundle["M"]["candidate"]["output_sha256"]:
+        return {"result": "REFUSED", "reason": "CANDIDATE_SHA_MISMATCH"}
+    target = dest / candidate.name
+    if target.exists():
+        return {"result": "REFUSED", "reason": "DESTINATION_EXISTS"}
+    dest.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(candidate, target)
+    event = {"kind": "use", "auth": g.record_sha256(bundle["AUTH"]), "q3": g.record_sha256(bundle["Q3"]), "at": now}
+    with (folder / "G.jsonl").open("a", encoding="utf-8", newline="\n") as f:
+        f.write(g.canonical_bytes(event).decode("utf-8") + "\n")
+    return {"result": "USED", "pre_use": pre["result"], "copied_to": str(target), "sha256": digest, "at": now}
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -59,15 +96,23 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--case", required=True)
     e.add_argument("--after")
     e.add_argument("--upto")
+    u = sub.add_parser("record-use")
+    u.add_argument("folder")
+    u.add_argument("--candidate", required=True)
+    u.add_argument("--dest", required=True)
     args = ap.parse_args(argv)
     folder = pathlib.Path(args.folder)
+    if args.cmd == "record-use":
+        out = record_use(folder, pathlib.Path(args.candidate), pathlib.Path(args.dest))
+        print(json.dumps(out, ensure_ascii=False, indent=1))
+        return 0 if out["result"] == "USED" else 1
     if args.cmd == "validate":
         try:
             bundle = load_bundle(folder)
         except (g.RecordError, OSError) as exc:
             print(json.dumps({"result": "BLOCKED", "reasons": ["RECORD_INVALID"], "detail": str(exc)}, ensure_ascii=False))
             return 1
-        now = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
+        now = _now()
         out = g.validate(bundle, now=now, stage=args.stage)
         out["checked_at"] = now
         out["note"] = "记录齐全且符合规则不等于授权；下游仍阻断，直至 AR-B-010 逐项决定。"

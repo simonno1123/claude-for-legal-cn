@@ -93,6 +93,23 @@ def stop_query(enumerated: dict, answers: dict) -> dict:
     return {"answers": result, "last_event": last}
 
 
+def r_refs(M: dict, I: dict, T: dict, h_query: dict, *, V=(), W=(), X: dict | None = None) -> dict:
+    """The complete reference set R must carry (R3 §3.3, §9.3): M, I, T, X (L2), every V and W, every cited clearance.
+
+    Mirrors gate_records._check_r_refs so a hand-assembled set cannot silently omit a basis.
+    """
+    refs = {"M": g.record_sha256(M), "I": g.record_sha256(I), "T": g.record_sha256(T)}
+    if X is not None:
+        refs["X"] = g.record_sha256(X)
+    for prefix, items in (("V", V), ("W", W)):
+        for i, h in enumerate(sorted(g.record_sha256(x) for x in items), 1):
+            refs[f"{prefix}{i}"] = h
+    cited = sorted({a["clearance"] for a in h_query["answers"].values() if a["clearance"]})
+    for i, h in enumerate(cited, 1):
+        refs[f"CL{i}"] = h
+    return refs
+
+
 def validity_cutoff(check_date: str, deadlines: list[dict]) -> str:
     if any(d.get("status") == "未知" for d in deadlines):
         raise MissingAnswer("a deadline is unknown; R3 §9.2 blocks")

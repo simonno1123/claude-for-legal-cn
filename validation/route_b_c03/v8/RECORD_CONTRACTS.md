@@ -34,3 +34,9 @@
 | AUTH | `action` 必须等于 T 的 `next_step`；`scope` 为 `{candidate, version, M}`；`own_deadline`；`max_uses`；`refs`：`{Q2, application_body}` |
 | G 事件 | 初始事件：`{kind: "initial", auth, max_uses, used: 0, at}`；使用事件：`{kind: "use", auth, q3, at}` |
 | H 事件 | 发现事件：`{event, type, case, item, issue, candidate, M, X（SHA 或"不适用"）, stage, at}`；解除事件：`{event, type, refs_discovery, scope_candidate, evidence, at}`。`evidence` 为原件定位 `{code, sha256, locator}`，或记录引用 `{record: "W"/"X", sha256}` |
+
+## 生成与使用的辅助规则（2026-11-19 增补）
+
+- R 的 `refs` 用 `gate_record_builder.r_refs()` 生成，不手工拼接；它与校验器 `_check_r_refs` 的要求一致（M、I、T，L2 另加 X，全部 V、W，以及 `h_query` 引用的全部解除事件）。
+- 实际使用只通过 `gate_cli.py record-use` 进行：先做使用阶段校验，结果为 `PRE_USE_RECORDS_COMPLETE` 才复制候选（其 SHA-256 须等于 M 中登记的值）并追加 G 使用事件；任何一步不满足，候选和 G 都不改动。
+- 起因：首次真实运行中，R 漏列引用，以及使用前校验在使用之后才运行（见 `.codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_CASE_E_FIRST_OUTPUT_RECORD.md` CE-04、CE-05）。

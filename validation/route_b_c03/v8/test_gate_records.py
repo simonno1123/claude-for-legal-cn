@@ -39,9 +39,9 @@ def opinions(**over):
     return ops
 
 
-def l1_bundle():
+def l1_bundle(output_sha=SHA_A):
     M = mk("M", "2026-12-01T09:00:00+08:00",
-           candidate={"id": "CAND-Z", "version": "v1", "output_sha256": SHA_A, "generated_at": "2026-12-01T08:00:00+08:00",
+           candidate={"id": "CAND-Z", "version": "v1", "output_sha256": output_sha, "generated_at": "2026-12-01T08:00:00+08:00",
                       "class": "C03_CONFLICT_AND_INFORMATION_GAP_REGISTER_CANDIDATE", "capability": "C03",
                       "operation": "fictional", "generator": "gen-model", "generator_model_family": "FAMILY-G"},
            case={"code": CASE, "version": "v1"},
@@ -422,8 +422,8 @@ class LaterStages(unittest.TestCase):
             refs["P"] = sha(bd["P"])
         return mk("Q", at, refs=refs, stage="Q1", rows=LaterStages.rows(bd), h_increment=copy.deepcopy(EMPTY_Q), auth_checks=None)
 
-    def full(self, max_uses=1):
-        bd = l1_bundle()
+    def full(self, max_uses=1, output_sha=SHA_A):
+        bd = l1_bundle(output_sha)
         bd["Q1"] = self.q1(bd, "2026-12-02T09:00:00+08:00")
         bd["Q2"] = mk("Q", "2026-12-02T10:00:00+08:00", refs={"Q1": sha(bd["Q1"]), "application_body": SHA_D}, stage="Q2",
                       rows=self.rows(bd), h_increment=copy.deepcopy(EMPTY_Q), auth_checks=None)
@@ -511,3 +511,55 @@ class Builder(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RecordUseAndRefs(unittest.TestCase):
+    """Lessons from the first real CASE-E run: R must bind every basis; use must follow a passing pre-use check."""
+
+    def test_r_refs_matches_validator(self):
+        bd = l1_bundle()
+        W1 = mk("W", "2026-12-01T10:30:00+08:00", refs={"M": sha(bd["M"]), "T": sha(bd["T"]), "discovery": SHA_D},
+                result="通过", location=copy.deepcopy(EVID))
+        bd["W"] = [W1]
+        bd = rebind(bd)
+        self.assertEqual(b.r_refs(bd["M"], bd["I"], bd["T"], bd["R"]["h_query"], W=bd["W"]), bd["R"]["refs"])
+        bd["R"]["refs"] = {k: v for k, v in bd["R"]["refs"].items() if not k.startswith("W")}
+        self.assertIn("CHAIN_BROKEN", reasons(bd))
+
+    def _folder(self, d, bd):
+        import pathlib as _p
+        root = _p.Path(d)
+        for name in ("M", "I", "T", "R", "Q1", "Q2", "Q3", "AUTH"):
+            (root / f"{name}.json").write_bytes(g.canonical_bytes(bd[name]))
+        (root / "G.jsonl").write_text("".join(g.canonical_bytes(e).decode() + "\n" for e in bd["G"]), encoding="utf-8")
+        return root
+
+    def test_record_use_validates_first(self):
+        import tempfile, pathlib as _p
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            cand = _p.Path(d) / "cand.md"; cand.write_text("虚构候选\n", encoding="utf-8")
+            digest = __import__("hashlib").sha256(cand.read_bytes()).hexdigest().upper()
+            bd = LaterStages().full(output_sha=digest)
+            (_p.Path(d) / "rec").mkdir()
+            folder = self._folder(_p.Path(d) / "rec", bd)
+            dest = _p.Path(d) / "archive"
+            out = gate_cli.record_use(folder, cand, dest, now=NOW)
+            self.assertEqual(out["result"], "USED")
+            self.assertTrue((dest / "cand.md").exists())
+            again = gate_cli.record_use(folder, cand, _p.Path(d) / "archive2", now=NOW)
+            self.assertEqual(again["result"], "REFUSED")
+            self.assertEqual(again["reason"], "PRE_USE_CHECK_FAILED")
+            self.assertFalse((_p.Path(d) / "archive2").exists())
+
+    def test_record_use_refuses_wrong_candidate(self):
+        import tempfile, pathlib as _p
+        from phase2_runtime.route_b_c03 import gate_cli
+        with tempfile.TemporaryDirectory() as d:
+            (_p.Path(d) / "rec").mkdir()
+            folder = self._folder(_p.Path(d) / "rec", LaterStages().full())
+            cand = _p.Path(d) / "other.md"; cand.write_text("不同内容\n", encoding="utf-8")
+            out = gate_cli.record_use(folder, cand, _p.Path(d) / "archive", now=NOW)
+            self.assertEqual(out["reason"], "CANDIDATE_SHA_MISMATCH")
+            self.assertEqual(len((folder / "G.jsonl").read_text(encoding="utf-8").splitlines()), 1)
+
