@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -39,3 +41,10 @@ jobs:
 
       - name: C03 V8-A gate record tests
         run: python3 -m unittest discover -s validation/route_b_c03/v8 -t validation/route_b_c03/v8
+
+      - name: Privacy guard tests
+        run: python3 -m unittest discover -s validation/privacy_guard -t validation/privacy_guard
+
+      - name: Privacy guard on lines added by this pull request
+        if: github.event_name == 'pull_request'
+        run: python3 scripts/privacy_guard/check_public_text.py --base "origin/${{ github.base_ref }}"
