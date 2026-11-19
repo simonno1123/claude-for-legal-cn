@@ -72,13 +72,15 @@ class RealGit(unittest.TestCase):
             run = lambda *a: subprocess.run(["git", *a], cwd=d, env=env, check=True, capture_output=True)
             run("init", "-q")
             pathlib.Path(d, "案件 记录.md").write_text("电话 13900000000\n", encoding="utf-8")
+            pathlib.Path(d, "note.md").write_text("++ heading\n@@ not a hunk\n电话 13900000001\n", encoding="utf-8")
             run("add", "-A")
             for quote in ("true", "false"):
                 diff = subprocess.run(["git", "-c", f"core.quotePath={quote}", "diff", "--cached", "--unified=0", "--no-color"],
                                       cwd=d, capture_output=True, text=True, encoding="utf-8", check=True).stdout
                 found = list(c.added_lines(diff))
-                self.assertEqual([p for p, _, _ in found], ["案件 记录.md"], quote)
-                self.assertEqual(len(c.run(found, [], case_check=False)), 1)
+                self.assertEqual(sorted({p for p, _, _ in found}), ["note.md", "案件 记录.md"], quote)
+                self.assertEqual(len(c.run(found, [], case_check=False)), 2)
+                self.assertIn(("note.md", 3), [(p, n) for p, n, _ in found])
 
 
 class PartialStaging(unittest.TestCase):
@@ -105,7 +107,7 @@ class PartialStaging(unittest.TestCase):
 
 class Diff(unittest.TestCase):
     def test_added_lines_only(self):
-        diff = ("diff --git a/x.md b/x.md\n--- a/x.md\n+++ b/x.md\n@@ -1,0 +2,2 @@\n"
+        diff = ("diff --git a/x.md b/x.md\nindex 1..2 100644\n--- a/x.md\n+++ b/x.md\n@@ -1,0 +2,2 @@\n"
                 "+safe line\n+电话 13900000000\n")
         found = list(c.added_lines(diff))
         self.assertEqual([(p, n) for p, n, _ in found], [("x.md", 2), ("x.md", 3)])

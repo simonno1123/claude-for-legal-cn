@@ -104,18 +104,37 @@ def _header_path(raw: str) -> str | None:
 
 
 def added_lines(diff: str):
-    path, lineno = None, 0
+    """Yield (path, line number, text) for every added line, following hunk lengths so body text
+    that happens to start with '+++ ' or '@@' is never mistaken for a header."""
+    path, lineno, old_left, new_left, in_header = None, 0, 0, 0, False
+    hunk = re.compile(r"^@@ -\d+(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
     for raw in diff.splitlines():
-        if raw.startswith("+++ "):
+        if old_left > 0 or new_left > 0:
+            tag, text = raw[:1], raw[1:]
+            if tag == "+":
+                if path:
+                    yield path, lineno, text
+                lineno += 1
+                new_left -= 1
+            elif tag == "-":
+                old_left -= 1
+            elif tag == " ":
+                lineno += 1
+                old_left -= 1
+                new_left -= 1
+            # "\ No newline at end of file" and anything else: no count change
+            continue
+        if raw.startswith("diff --git "):
+            path, in_header = None, True
+        elif in_header and raw.startswith("+++ "):
             path = _header_path(raw)
         elif raw.startswith("@@"):
-            m = re.search(r"\+(\d+)", raw)
-            lineno = int(m.group(1)) if m else 0
-        elif path and raw.startswith("+") and not raw.startswith("+++"):
-            yield path, lineno, raw[1:]
-            lineno += 1
-        elif path and not raw.startswith("-"):
-            lineno += 1
+            m = hunk.match(raw)
+            if m:
+                old_left = int(m.group(1)) if m.group(1) is not None else 1
+                lineno = int(m.group(2))
+                new_left = int(m.group(3)) if m.group(3) is not None else 1
+                in_header = False
 
 
 def file_lines(paths):
