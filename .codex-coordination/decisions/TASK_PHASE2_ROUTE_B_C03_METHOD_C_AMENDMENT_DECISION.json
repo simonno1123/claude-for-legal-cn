@@ -1,0 +1,25 @@
+{
+  "RecordKind": "C03_METHOD_C_AMENDMENT_DECISION",
+  "DecisionId": "C03-CP-D-018",
+  "Owner": "REVIEWER-01 (project owner)",
+  "RecordedAt": "2026-11-19 (owner local)",
+  "Method": "owner answered two single-select questions, one per call",
+  "Basis": {
+    "Amendment": {
+      "Path": "docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_METHOD_C_GROUPED_CHECKLIST_AMENDMENT.md",
+      "SHA256": "B9DFD6AFD65B18B483601C1D3C3D196B087F261F37A33BA5C1214C4C57AB8A2A"
+    },
+    "Reviews": "Codex PR #129: R1 2 P0 + 1 P1 (full §9.6 rows; substantive-negative path; I item 4), fixed; R2 no major issues. Text review, not human or legal review"
+  },
+  "Decision": {
+    "Adopt": "采纳（分组勾选，范围与限制如修订第二节）",
+    "CE09": "只记录为局限，不补救；CASE-E 第二条授权链归档保持有效",
+    "ExpresslyNotChanged": [
+      "R3 gate design text",
+      "R2 §四 declaration content",
+      "record formats",
+      "V8-A validator",
+      "any judgment, disposition or ordering rule"
+    ]
+  }
+}
