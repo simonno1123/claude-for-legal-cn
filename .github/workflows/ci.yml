@@ -42,6 +42,13 @@ jobs:
       - name: C03 V8-A gate record tests
         run: python3 -m unittest discover -s validation/route_b_c03/v8 -t validation/route_b_c03/v8
 
+      - name: C03 V8-B integrity tests (require ssh-keygen; must not be skipped)
+        run: |
+          set -o pipefail
+          command -v ssh-keygen
+          python3 -m unittest discover -s validation/route_b_c03/v8b -t validation/route_b_c03/v8b -v 2>&1 | tee v8b.log
+          ! grep -q "skipped" v8b.log
+
       - name: Privacy guard tests
         run: python3 -m unittest discover -s validation/privacy_guard -t validation/privacy_guard
 
