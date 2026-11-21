@@ -285,9 +285,28 @@ class V8B(unittest.TestCase):
         bd, root = self.through_s3()
         self.assertEqual(self.use(root)["result"], "USED")
         target = self.d / "out" / self.cand.name
-        self.assertTrue(v8b.verify_output(self.trust, target)["ok"])
+        view = lambda: v8b.View(root, str(self.hfile))
+        self.assertTrue(v8b.verify_output(self.trust, target, view())["ok"])
         target.write_bytes(b"changed")
-        self.assertEqual(v8b.verify_output(self.trust, target)["reasons"], ["OUTPUT_TAMPERED"])
+        self.assertEqual(v8b.verify_output(self.trust, target, view())["reasons"], ["OUTPUT_TAMPERED"])
+
+    def test_verify_output_bound_to_this_s4(self):
+        bd, root = self.through_s3()
+        self.assertEqual(self.use(root)["result"], "USED")
+        first = self.d / "out" / self.cand.name
+        # A second, independent use publishing a different file with the same name elsewhere.
+        other = self.d / "c2"; other.mkdir(); cand2 = other / self.cand.name; cand2.write_text("另一份虚构候选\n", encoding="utf-8")
+        d2 = hashlib.sha256(cand2.read_bytes()).hexdigest().upper()
+        bd2 = full_from(fx.l1_bundle(d2)); bd2["M"]["case"]["code"] = "CASE-Z"; bd2 = full_from(fx.rebind(bd2))
+        r2 = self.d / "rec2"
+        write_folder(r2, bd2, ("M", "I", "T", "R")); self.assertEqual(self.sign(r2, "S1")["result"], "SIGNED")
+        write_folder(r2, bd2, ("Q1", "Q2", "AUTH", "G")); self.assertEqual(self.sign(r2, "S3", now=T_S3)["result"], "SIGNED")
+        write_folder(r2, bd2, ("Q3",))
+        self.assertEqual(v8b.use(r2, cand2, self.d / "out2", self.trust, self.signer, h=str(self.hfile), now=T_USE)["result"], "USED")
+        view = v8b.View(root, str(self.hfile))
+        self.assertTrue(v8b.verify_output(self.trust, first, view)["ok"])
+        first.write_bytes(cand2.read_bytes())
+        self.assertEqual(v8b.verify_output(self.trust, first, view)["reasons"], ["OUTPUT_TAMPERED"])
 
     def test_unlimited_max_uses(self):
         bd = full_from(fx.l1_bundle(self.digest), max_uses=None)

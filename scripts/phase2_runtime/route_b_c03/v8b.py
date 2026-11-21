@@ -605,14 +605,19 @@ def _file_sha(path: pathlib.Path) -> str | None:
         return None
 
 
-def verify_output(trust: Trust, output: pathlib.Path) -> dict:
-    """Check a published output against the SHA recorded in the committed registry entry."""
+def verify_output(trust: Trust, output: pathlib.Path, view: View) -> dict:
+    """Check a published output against THIS folder's signed S4: its candidate SHA and the committed
+    registry entry for the S4's own registry sequence (not the latest entry with the same file name)."""
+    data = view.get("V8B_S4.json")
+    if data is None:
+        return {"ok": False, "reasons": ["SIGNATURE_MISSING:S4"]}
+    manifest = json.loads(data.decode("utf-8"))
     reg = trust.read_registry()
-    entries = [e for e in reg if e["type"] == "committed" and e.get("output_name") == output.name]
-    if not entries:
+    entry = next((e for e in reg if e["type"] == "committed" and e.get("intent") == manifest["registry_seq"]), None)
+    if entry is None or entry.get("output_name") != output.name or entry.get("output_sha") != manifest.get("candidate_sha"):
         return {"ok": False, "reasons": ["OUTPUT_NOT_REGISTERED"]}
-    ok = _file_sha(output) == entries[-1]["output_sha"]
-    return {"ok": ok, "reasons": [] if ok else ["OUTPUT_TAMPERED"], "registered_sha": entries[-1]["output_sha"]}
+    ok = _file_sha(output) == manifest["candidate_sha"]
+    return {"ok": ok, "reasons": [] if ok else ["OUTPUT_TAMPERED"], "signed_sha": manifest["candidate_sha"]}
 
 
 # ---------------------------------------------------------------- withdraw / recover
@@ -663,7 +668,7 @@ def main(argv: list[str] | None = None) -> int:
         present = [st for st in STAGE_ORDER if view.get(f"V8B_{st}.json") is not None]
         out = verify_chain(view, trust, signer, upto=present[-1] if present else "S1")
         if a.output:
-            out["output"] = verify_output(trust, pathlib.Path(a.output))
+            out["output"] = verify_output(trust, pathlib.Path(a.output), view)
             out["ok"] = out["ok"] and out["output"]["ok"]
         ok = out["ok"]
     elif a.cmd == "use":
