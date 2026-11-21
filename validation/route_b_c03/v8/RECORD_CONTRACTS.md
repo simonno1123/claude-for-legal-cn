@@ -40,3 +40,12 @@
 - R 的 `refs` 用 `gate_record_builder.r_refs()` 生成，不手工拼接；它与校验器 `_check_r_refs` 的要求一致（M、I、T，L2 另加 X，全部 V、W，以及 `h_query` 引用的全部解除事件）。
 - 实际使用只通过 `gate_cli.py record-use` 进行：先做使用阶段校验，结果为 `PRE_USE_RECORDS_COMPLETE` 才复制候选（其 SHA-256 须等于 M 中登记的值）并追加 G 使用事件；任何一步不满足，候选和 G 都不改动。
 - 起因：首次真实运行中，R 漏列引用，以及使用前校验在使用之后才运行（见 `.codex-coordination/decisions/TASK_PHASE2_ROUTE_B_C03_CASE_E_FIRST_OUTPUT_RECORD.md` CE-04、CE-05）。
+
+## 操作纪律（2026-11-20 增补）
+
+所有者 2026-11-20 确认，依据 `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_ENFORCEMENT_MODULE_LESSONS_AND_AUTHORITY_CATALOG.md` 第五、六节：
+
+- 形成 T 之前，先查停点索引（H），再写 T 的实质修正。
+- 缺口登记或候选中一旦出现措施或期限事项（D07、D10），同步把相应规范加入该案依据时效包的待核清单。
+- 每形成一份记录，先读回文件确认存在、内容无误，再向复核人提问。
+- 记录人提议下一份输出前，先对照领域规格第 10.1 节的允许类别；不在其中的（策略、文书、财产查找、追加当事人结论、救济结论等）不在 C03 内提议。
