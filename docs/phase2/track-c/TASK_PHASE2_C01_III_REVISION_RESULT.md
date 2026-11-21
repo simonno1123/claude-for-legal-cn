@@ -1,10 +1,10 @@
-# TASK_PHASE2_C01_III_REVISION_RESULT（执行结果，待评审）
+# TASK_PHASE2_C01_III_REVISION_RESULT（执行结果，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `.codex-coordination/inbox/TASK_PHASE2_C01_III_REVISION_HANDOFF.md`（已确认，PR #138） |
 | 执行 | Claude（记录人），2026-11-21 |
-| 状态 | **待 Codex 评审和所有者确认。** 合并后，下表"改动后 SHA"取代 C01-II-B-3 决定中对应文件的基线 SHA |
+| 状态 | **已确认（2026-11-21）。** PR #139 经 Codex 评审无发现，CI 通过；所有者确认合并。自合并起，第一节"改动后 SHA"取代 C01-II-B-3 决定中对应文件的基线 SHA |
 | 方法 | 与 B-3 相同：静态、只读的指令追溯。未运行模型，未用真实案件；真实案件试跑（R5）另行启动 |
 
 ## 一、改动前后
