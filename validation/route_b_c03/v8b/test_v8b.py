@@ -112,7 +112,7 @@ class V8B(unittest.TestCase):
         self.assertEqual(out["result"], "USED", out)
         reg = self.trust.registry.read()
         self.assertEqual([e["type"] for e in reg], ["intent", "committed"])
-        chk = v8b.verify_chain(root, self.trust, self.signer, upto="S4")
+        chk = v8b.verify_chain(v8b.View(root, str(self.hfile)), self.trust, self.signer, upto="S4")
         self.assertTrue(chk["ok"], chk)
 
     def test_l2_positive_and_cooling(self):
@@ -142,9 +142,9 @@ class V8B(unittest.TestCase):
 
     def test_closed_manifest(self):
         bd, root = self.through_s3()
-        self.assertTrue(v8b.verify_chain(root, self.trust, self.signer, upto="S3")["ok"])
+        self.assertTrue(v8b.verify_chain(v8b.View(root, str(self.hfile)), self.trust, self.signer, upto="S3")["ok"])
         r = root / "R.json"; r.write_bytes(r.read_bytes().replace("虚构".encode(), "改动".encode(), 1))
-        chk = v8b.verify_chain(root, self.trust, self.signer, upto="S3")
+        chk = v8b.verify_chain(v8b.View(root, str(self.hfile)), self.trust, self.signer, upto="S3")
         self.assertIn("SIGNED_MANIFEST_MISMATCH:S1", chk["reasons"])
 
     def test_replay_across_folders(self):
@@ -191,7 +191,7 @@ class V8B(unittest.TestCase):
         lines = log.read_text(encoding="utf-8").splitlines()
         lines[0] = lines[0].replace('"S1"', '"S3"')
         log.write_text("\n".join(lines) + "\n", encoding="utf-8")
-        chk = v8b.verify_chain(root, self.trust, self.signer, upto="S3")
+        chk = v8b.verify_chain(v8b.View(root, str(self.hfile)), self.trust, self.signer, upto="S3")
         self.assertFalse(chk["ok"])
 
     def test_s1_requires_review_pass(self):
@@ -202,6 +202,65 @@ class V8B(unittest.TestCase):
         out = self.sign(root, "S1")
         self.assertEqual(out["result"], "REFUSED")
         self.assertFalse((root / "V8B_S1.json").exists())
+
+    # -- Codex PR #135 round 1
+    def test_external_index_is_the_validated_index(self):
+        bd, root = self.l1()
+        self.hfile.write_text(h_line("CASE-Z", "2026-12-01T10:30:00+08:00"), encoding="utf-8")
+        out = self.sign(root, "S1")
+        self.assertEqual(out["result"], "REFUSED", out)
+
+    def test_new_checkpoint_requires_extension(self):
+        bd, root = self.l1()
+        self.assertEqual(self.sign(root, "S1")["result"], "SIGNED")
+        self.add(root, bd, ("Q1", "Q2", "AUTH", "G"))
+        self.hfile.write_text("", encoding="utf-8")
+        self.assertEqual(self.sign(root, "S3", now=T_S3)["reasons"], ["STOP_INDEX_ROLLED_BACK"])
+
+    def test_registry_truncation_refused(self):
+        bd, root = self.through_s3()
+        twin = self.d / "twin"; shutil.copytree(root, twin)
+        self.assertEqual(self.use(root)["result"], "USED")
+        (self.trust_dir / "registry.jsonl").write_text("", encoding="utf-8")
+        out = self.use(twin, dest="out2")
+        self.assertEqual(out["reasons"], ["TRUST_LOG_CORRUPT"])
+        self.assertFalse((self.d / "out2").exists())
+
+    def test_records_swapped_while_signing(self):
+        bd, root = self.through_s3()
+        real = self.signer
+
+        class Swapping:
+            def sign(self_inner, manifest):
+                q3 = root / "Q3.json"
+                Q3 = g.parse_record(q3.read_text(encoding="utf-8")); Q3["method"] = "chat_c"; Q3["formed_at"] = "2026-12-04T10:00:01+08:00"
+                q3.write_bytes(g.canonical_bytes(Q3))
+                return real.sign(manifest)
+
+            def verify(self_inner, data, sig, allowed):
+                return real.verify(data, sig, allowed)
+
+        out = v8b.use(root, self.cand, self.d / "out", self.trust, Swapping(), h=str(self.hfile), now=T_USE)
+        self.assertEqual(out["reasons"], ["RECORDS_CHANGED_DURING_SIGNING"])
+        self.assertFalse((self.d / "out" / self.cand.name).exists())
+        self.assertEqual(self.trust.registry.read()[-1]["type"], "aborted")
+
+    def test_cutoff_rechecked_after_signing(self):
+        bd, root = self.through_s3()
+        times = iter([T_USE, T_USE, "2026-12-21T00:00:00+08:00"])
+        last = ["2026-12-21T00:00:00+08:00"]
+        clock = lambda: next(times, last[0])
+        out = v8b.use(root, self.cand, self.d / "out", self.trust, self.signer, h=str(self.hfile), clock=clock)
+        self.assertEqual(out["result"], "REFUSED", out)
+        self.assertFalse((self.d / "out" / self.cand.name).exists())
+
+    def test_s4_requires_the_use_event(self):
+        bd, root = self.through_s3()
+        g_before = (root / "G.jsonl").read_bytes()
+        self.assertEqual(self.use(root)["result"], "USED")
+        (root / "G.jsonl").write_bytes(g_before)
+        chk = v8b.verify_chain(v8b.View(root, str(self.hfile)), self.trust, self.signer, upto="S4")
+        self.assertIn("USE_EVENT_MISMATCH:S4", chk["reasons"])
 
 
 if __name__ == "__main__":

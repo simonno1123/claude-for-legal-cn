@@ -10,17 +10,21 @@ Usage (owner terminal):
   python -I -S -B v8b.py withdraw --case CODE [--m SHA] --reason TEXT --trust DIR
   python -I -S -B v8b.py recover  --trust DIR [--resolve SEQ --as committed|aborted --note TEXT]
 
-Trust folder contents (all append-only JSONL, each line chained to the SHA-256 of the previous line):
+One stop index is authoritative per run: --h if given, otherwise <folder>/H_index.jsonl. It is the
+index V8-A validates against, the index checkpointed in the trust folder, and the index scanned for
+stops after Q3.
+
+Trust folder contents (append-only JSONL, each line chained to the SHA-256 of the previous line):
   allowed_signers        owner's public key, principal REVIEWER-01, namespace c03-gate
-  sign_log.jsonl         one line per signature: stage, case, M, manifest and signature SHA, local time
-  stop_checkpoints.jsonl H index length and last-line SHA at each signature
+  sign_log.jsonl         one line per signature, time taken after signing completes
+  stop_checkpoints.jsonl stop-index length and prefix SHA at each signature
   withdrawals.jsonl      owner-registered withdrawals (authoritative)
   registry.jsonl         global use registry: intent / committed / aborted
-  registry.lock          global lock (exclusive create)
+  registry.lock          global lock (exclusive create); remove by hand only after a crash
 
-Signatures use `ssh-keygen -Y sign/verify` with namespace c03-gate. Only the trust folder's
-allowed_signers is ever read. V8-A's pure validator is called unchanged; the review_commit check
-(S1 under L2) only drops the single RECONFIRMATION_MISSING reason.
+The use command works on an in-memory snapshot taken under the global lock and the folder's G lock:
+it validates and signs the snapshot, re-reads the clock and the folder after signing, and publishes
+the snapshot's candidate bytes only if nothing changed and the cutoff has not passed.
 """
 
 from __future__ import annotations
@@ -35,6 +39,7 @@ import secrets
 import subprocess
 import sys
 import tempfile
+from typing import Callable
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
@@ -49,10 +54,13 @@ NAMESPACE = "c03-gate"
 PRINCIPAL = "REVIEWER-01"
 COOLING = timedelta(hours=24)
 STAGE_ORDER = ("S1", "S2", "S3", "S4")
+SINGLE = ("M", "I", "T", "R", "E", "S", "P", "Q1", "Q2", "Q3", "AUTH")
+MULTI = ("X", "V", "W", "CORR")
+Clock = Callable[[], str]
 
 
 class TrustError(Exception):
-    """A trust-folder log is missing, unreadable, or its chain is broken."""
+    """A trust-folder log is missing, unreadable, rolled back, or its chain is broken."""
 
 
 def _sha(data: bytes) -> str:
@@ -63,22 +71,29 @@ def _now() -> str:
     return datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
 
 
+def _lines(data: bytes) -> list[bytes]:
+    return [ln for ln in data.split(b"\n") if ln.strip()]
+
+
 # ---------------------------------------------------------------- trust-folder logs
 
 class ChainLog:
-    """Append-only JSONL whose every line carries `prev`: the SHA-256 of the previous line's bytes."""
+    """Append-only JSONL whose every line carries `seq` and `prev` (SHA-256 of the previous line)."""
 
     def __init__(self, path: pathlib.Path):
         self.path = path
 
-    def read(self) -> list[dict]:
+    def _raw(self) -> list[bytes]:
         if not self.path.exists():
             return []
         lines = self.path.read_bytes().split(b"\n")
         if lines and lines[-1] == b"":
             lines.pop()
+        return lines
+
+    def read(self) -> list[dict]:
         out, prev = [], None
-        for i, raw in enumerate(lines, 1):
+        for i, raw in enumerate(self._raw(), 1):
             try:
                 rec = g.parse_record(raw.decode("utf-8"))
             except (g.RecordError, UnicodeDecodeError, ValueError) as exc:
@@ -90,12 +105,11 @@ class ChainLog:
         return out
 
     def append(self, entry: dict) -> dict:
+        raw = self._raw()
         existing = self.read()
-        prev = _sha(self.path.read_bytes().split(b"\n")[len(existing) - 1]) if existing else None
-        rec = {"seq": len(existing) + 1, "prev": prev, **entry}
-        data = g.canonical_bytes(rec) + b"\n"
+        rec = {"seq": len(existing) + 1, "prev": _sha(raw[-1]) if raw else None, **entry}
         with self.path.open("ab") as fh:
-            fh.write(data)
+            fh.write(g.canonical_bytes(rec) + b"\n")
             fh.flush()
             os.fsync(fh.fileno())
         if self.read()[-1] != rec:
@@ -116,6 +130,19 @@ class Trust:
     def check(self) -> None:
         if not self.allowed_signers.is_file():
             raise TrustError("allowed_signers missing in trust folder")
+
+    def read_registry(self) -> list[dict]:
+        """Registry lines, refused if shorter than the high-water mark recorded by signed S4 entries."""
+        reg = self.registry.read()
+        marks = [e["registry_seq"] for e in self.sign_log.read() if e.get("stage") == "S4"]
+        if marks and len(reg) < max(marks):
+            raise TrustError("registry shorter than the sequence already signed in S4 (rolled back)")
+        for e in self.sign_log.read():
+            if e.get("stage") == "S4":
+                intent = reg[e["registry_seq"] - 1] if len(reg) >= e["registry_seq"] else None
+                if not intent or intent["type"] != "intent" or intent.get("challenge") != e.get("challenge"):
+                    raise TrustError("registry intent does not match the signed S4 sequence")
+        return reg
 
 
 # ---------------------------------------------------------------- signatures
@@ -144,97 +171,113 @@ class SshSigner:
             return r.returncode == 0
 
 
-# ---------------------------------------------------------------- helpers over a record folder
+# ---------------------------------------------------------------- folder snapshot
 
-def _file_sha(path: pathlib.Path) -> str:
-    return _sha(path.read_bytes())
+class View:
+    """Byte snapshot of a record folder plus the authoritative stop index."""
+
+    def __init__(self, folder: pathlib.Path, h: str | None):
+        self.folder = folder
+        self.h_path = pathlib.Path(h) if h else folder / "H_index.jsonl"
+        self.files: dict[str, bytes] = {}
+        for p in sorted(folder.iterdir()):
+            if p.is_file():
+                self.files[p.name] = p.read_bytes()
+        self.h_bytes = self.h_path.read_bytes() if self.h_path.exists() else b""
+
+    def same_as_disk(self) -> bool:
+        return View(self.folder, str(self.h_path)).fingerprint() == self.fingerprint()
+
+    def fingerprint(self) -> str:
+        parts = [f"{n}:{_sha(b)}" for n, b in sorted(self.files.items())] + [f"H:{_sha(self.h_bytes)}"]
+        return _sha("\n".join(parts).encode())
+
+    def get(self, name: str) -> bytes | None:
+        return self.files.get(name)
+
+    def bundle(self) -> dict:
+        bd: dict = {}
+        for n in SINGLE:
+            data = self.get(f"{n}.json")
+            if data is not None:
+                bd[n] = g.parse_record(data.decode("utf-8"))
+        for n in MULTI:
+            bd[n] = [g.parse_record(self.files[k].decode("utf-8")) for k in sorted(self.files)
+                     if k.startswith(f"{n}_") and k.endswith(".json")]
+        bd["G"] = [g.parse_record(ln.decode("utf-8")) for ln in _lines(self.get("G.jsonl") or b"")]
+        bd["H"] = [g.parse_record(ln.decode("utf-8")) for ln in _lines(self.h_bytes)]
+        return bd
 
 
-def _record_files(folder: pathlib.Path, stage: str, bundle: dict) -> dict[str, str]:
-    """Closed set of record files each stage covers (design §3), name -> SHA-256 of file bytes."""
+def _record_names(view: View, stage: str, bundle: dict) -> list[str]:
     if stage == "S1":
-        names = ["M", "I", "T", "R"] + [n for n in ("E", "S") if bundle.get(n)]
-        files = [folder / f"{n}.json" for n in names]
-        for prefix in ("V", "W", "X"):
-            files += sorted(folder.glob(f"{prefix}_*.json"))
-    elif stage == "S2":
-        files = [folder / "P.json"]
-    elif stage == "S3":
-        files = [folder / f"{n}.json" for n in ("Q1", "Q2", "AUTH")]
-    elif stage == "S4":
-        files = [folder / "Q3.json"]
-    else:
-        raise ValueError(stage)
-    missing = [f.name for f in files if not f.is_file()]
+        names = [f"{n}.json" for n in ("M", "I", "T", "R") + tuple(n for n in ("E", "S") if bundle.get(n))]
+        names += sorted(k for k in view.files if k.split("_")[0] in ("V", "W", "X") and k.endswith(".json") and "_" in k)
+        return names
+    return {"S2": ["P.json"], "S3": ["Q1.json", "Q2.json", "AUTH.json"], "S4": ["Q3.json"]}[stage]
+
+
+def _records(view: View, stage: str, bundle: dict) -> dict[str, str]:
+    names = _record_names(view, stage, bundle)
+    missing = [n for n in names if view.get(n) is None]
     if missing:
         raise TrustError(f"records missing for {stage}: {', '.join(missing)}")
-    return {f.name: _file_sha(f) for f in files}
-
-
-def _h_refs(R: dict) -> list[str]:
-    answers = R.get("h_query", {}).get("answers", {})
-    refs = set(answers)
-    refs |= {a["clearance"] for a in answers.values() if a.get("clearance")}
-    return sorted(refs)
+    return {n: _sha(view.files[n]) for n in names}
 
 
 def _is_l2(bundle: dict) -> bool:
     return bool(bundle.get("X") or bundle.get("P") or bundle.get("E"))
 
 
-def _h_path(folder: pathlib.Path, h: str | None) -> pathlib.Path:
-    return pathlib.Path(h) if h else folder / "H_index.jsonl"
-
-
-def _h_lines(path: pathlib.Path) -> list[bytes]:
-    if not path.exists():
-        return []
-    lines = [ln for ln in path.read_bytes().split(b"\n") if ln.strip()]
-    return lines
-
-
-def _manifest_path(folder: pathlib.Path, stage: str) -> pathlib.Path:
-    return folder / f"V8B_{stage}.json"
-
-
-def _load_signed(folder: pathlib.Path, stage: str) -> tuple[dict, bytes, bytes] | None:
-    mp = _manifest_path(folder, stage)
-    sp = mp.with_name(mp.name + ".sig")
-    if not mp.exists() and not sp.exists():
-        return None
-    if not (mp.exists() and sp.exists()):
-        return ({}, b"", b"")
-    data = mp.read_bytes()
-    return (json.loads(data.decode("utf-8")), data, sp.read_bytes())
-
-
-def _expected_stages(bundle: dict) -> list[str]:
+def _expected(bundle: dict) -> list[str]:
     return ["S1", "S2", "S3"] if _is_l2(bundle) else ["S1", "S3"]
+
+
+def _h_refs(R: dict) -> list[str]:
+    answers = R.get("h_query", {}).get("answers", {})
+    return sorted(set(answers) | {a["clearance"] for a in answers.values() if a.get("clearance")})
+
+
+# ---------------------------------------------------------------- stop-index checkpoints
+
+def _prefix_sha(lines: list[bytes], n: int) -> str:
+    return _sha(b"\n".join(lines[:n]))
+
+
+def _checkpoint_ok(trust: Trust, case: str, view: View) -> bool:
+    """Current index must extend every recorded checkpoint for this case (checked against the latest,
+    which itself was only recorded after extending the one before)."""
+    cps = [c for c in trust.checkpoints.read() if c["case"] == case]
+    if not cps:
+        return True
+    lines = _lines(view.h_bytes)
+    cp = cps[-1]
+    return len(lines) >= cp["lines"] and _prefix_sha(lines, cp["lines"]) == cp["prefix_sha"]
 
 
 # ---------------------------------------------------------------- chain verification
 
-def verify_chain(folder: pathlib.Path, trust: Trust, signer: SshSigner, *, upto: str, h: str | None = None) -> dict:
-    """Verify every expected signature up to and including `upto`. Returns {ok, reasons, stages, nonce}."""
+def verify_chain(view: View, trust: Trust, signer: SshSigner, *, upto: str) -> dict:
     reasons: list[str] = []
     try:
         trust.check()
-        bundle = gate_cli.load_bundle(folder)
+        bundle = view.bundle()
         log = trust.sign_log.read()
-    except (TrustError, g.RecordError, OSError) as exc:
+        registry = trust.read_registry() if upto == "S4" else None
+    except (TrustError, g.RecordError, OSError, UnicodeDecodeError) as exc:
         return {"ok": False, "reasons": ["TRUST_OR_RECORD_UNREADABLE"], "detail": str(exc)}
     m_sha = g.record_sha256(bundle["M"]) if bundle.get("M") else None
-    wanted = [s for s in _expected_stages(bundle) + ["S4"] if STAGE_ORDER.index(s) <= STAGE_ORDER.index(upto)]
+    wanted = [s for s in _expected(bundle) + ["S4"] if STAGE_ORDER.index(s) <= STAGE_ORDER.index(upto)]
     prev_sig, stages, nonce = None, {}, None
     for stage in wanted:
-        got = _load_signed(folder, stage)
-        if got is None:
+        data, sig = view.get(f"V8B_{stage}.json"), view.get(f"V8B_{stage}.json.sig")
+        if data is None or sig is None:
             reasons.append(f"SIGNATURE_MISSING:{stage}")
             break
-        manifest, data, sig = got
-        if not data or not sig or not signer.verify(data, sig, trust.allowed_signers):
+        if not signer.verify(data, sig, trust.allowed_signers):
             reasons.append(f"SIGNATURE_INVALID:{stage}")
             break
+        manifest = json.loads(data.decode("utf-8"))
         if manifest.get("stage") != stage or manifest.get("version") != VERSION or manifest.get("M") != m_sha:
             reasons.append(f"SIGNED_MANIFEST_MISMATCH:{stage}")
             break
@@ -242,7 +285,7 @@ def verify_chain(folder: pathlib.Path, trust: Trust, signer: SshSigner, *, upto:
             reasons.append(f"SIGNATURE_CHAIN_BROKEN:{stage}")
             break
         try:
-            current = _record_files(folder, stage, bundle)
+            current = _records(view, stage, bundle)
         except TrustError:
             current = None
         if current != manifest.get("records"):
@@ -254,87 +297,42 @@ def verify_chain(folder: pathlib.Path, trust: Trust, signer: SshSigner, *, upto:
             break
         if stage == "S3":
             nonce = manifest.get("nonce")
-        if stage == "S4":
-            g_lines = (folder / "G.jsonl").read_bytes() if (folder / "G.jsonl").exists() else b""
-            if not g_lines.startswith(_prefix_bytes(manifest)) or _sha(_prefix_bytes(manifest)) != manifest.get("g_prefix_sha"):
-                reasons.append("SIGNED_MANIFEST_MISMATCH:S4")
-                break
+        if stage == "S4" and not _s4_effect_ok(view, bundle, manifest, registry):
+            reasons.append("USE_EVENT_MISMATCH:S4")
+            break
         stages[stage] = {"at": entry["at"], "sig_sha": _sha(sig)}
         prev_sig = _sha(sig)
     return {"ok": not reasons, "reasons": reasons, "stages": stages, "nonce": nonce, "last_sig": prev_sig}
 
 
-def _prefix_bytes(manifest: dict) -> bytes:
-    return bytes.fromhex(manifest.get("g_prefix_hex", ""))
+def _s4_effect_ok(view: View, bundle: dict, manifest: dict, registry: list[dict] | None) -> bool:
+    """After S4: G = signed prefix + exactly this use event; registry has the signed intent, committed."""
+    g_bytes = view.get("G.jsonl") or b""
+    prefix = bytes.fromhex(manifest.get("g_prefix_hex", ""))
+    if _sha(prefix) != manifest.get("g_prefix_sha") or not g_bytes.startswith(prefix):
+        return False
+    rest = _lines(g_bytes[len(prefix):])
+    if len(rest) != 1:
+        return False
+    ev = g.parse_record(rest[0].decode("utf-8"))
+    if ev.get("kind") != "use" or ev.get("auth") != g.record_sha256(bundle["AUTH"]) or ev.get("q3") != g.record_sha256(bundle["Q3"]):
+        return False
+    if registry is None or len(registry) < manifest["registry_seq"]:
+        return False
+    intent = registry[manifest["registry_seq"] - 1]
+    if intent["type"] != "intent" or intent.get("challenge") != manifest.get("challenge"):
+        return False
+    return any(e["type"] == "committed" and e.get("intent") == intent["seq"] for e in registry)
 
 
-# ---------------------------------------------------------------- sign S1 / S2 / S3
+# ---------------------------------------------------------------- signing
 
-def _validate(bundle: dict, now: str, stage: str) -> dict:
-    return g.validate(bundle, now=now, stage=stage)
-
-
-def sign_stage(folder: pathlib.Path, stage: str, trust: Trust, signer: SshSigner, *, h: str | None = None,
-               now: str | None = None) -> dict:
-    now = now or _now()
-    try:
-        trust.check()
-        bundle = gate_cli.load_bundle(folder)
-    except (TrustError, g.RecordError, OSError) as exc:
-        return {"result": "REFUSED", "reasons": ["TRUST_OR_RECORD_UNREADABLE"], "detail": str(exc)}
-    if _manifest_path(folder, stage).exists():
-        return {"result": "REFUSED", "reasons": ["SIGNATURE_EXISTS"]}
-    l2 = _is_l2(bundle)
-    extra: dict = {}
-    if stage == "S1":
-        out = _validate(bundle, now, "review")
-        left = [r for r in out["reasons"] if not (l2 and r == "RECONFIRMATION_MISSING")]
-        if left:
-            return {"result": "REFUSED", "reasons": left, "check": "review_commit" if l2 else "review"}
-        prev = None
-        extra["h_refs"] = _h_refs(bundle["R"])
-        check = "review_commit" if l2 else "review"
-    elif stage == "S2":
-        if not l2:
-            return {"result": "REFUSED", "reasons": ["STAGE_NOT_APPLICABLE"]}
-        chain = verify_chain(folder, trust, signer, upto="S1", h=h)
-        if not chain["ok"]:
-            return {"result": "REFUSED", "reasons": chain["reasons"]}
-        s1_at = g.parse_time(chain["stages"]["S1"]["at"])
-        if g.parse_time(now) < s1_at + COOLING:
-            return {"result": "REFUSED", "reasons": ["COOLING_PERIOD_UNMET"], "earliest": (s1_at + COOLING).isoformat()}
-        out = _validate(bundle, now, "review")
-        if out["reasons"]:
-            return {"result": "REFUSED", "reasons": out["reasons"], "check": "review"}
-        prev = chain["last_sig"]
-        extra["cooling_basis"] = {"s1_signed_at": chain["stages"]["S1"]["at"], "checked_at": now}
-        check = "review"
-    elif stage == "S3":
-        chain = verify_chain(folder, trust, signer, upto="S2" if l2 else "S1", h=h)
-        if not chain["ok"]:
-            return {"result": "REFUSED", "reasons": chain["reasons"]}
-        out = _validate(bundle, now, "authorization")
-        if out["reasons"]:
-            return {"result": "REFUSED", "reasons": out["reasons"], "check": "authorization"}
-        prev = chain["last_sig"]
-        extra["nonce"] = secrets.token_hex(16)
-        extra["auth_sha"] = g.record_sha256(bundle["AUTH"])
-        check = "authorization"
-    else:
-        return {"result": "REFUSED", "reasons": ["USE_STAGE_IS_SIGNED_BY_USE_COMMAND"]}
-    try:
-        records = _record_files(folder, stage, bundle)
-    except TrustError as exc:
-        return {"result": "REFUSED", "reasons": ["RECORDS_MISSING"], "detail": str(exc)}
-    manifest = {"version": VERSION, "stage": stage, "case": bundle["M"]["case"]["code"], "M": g.record_sha256(bundle["M"]),
-                "records": records, "prev_sig": prev, "validator": {"stage": check, "result": out["result"]},
-                "signed_at_local": now, **extra}
-    return _sign_and_log(folder, stage, manifest, trust, signer, h=h, now=now)
-
-
-def _sign_and_log(folder: pathlib.Path, stage: str, manifest: dict, trust: Trust, signer: SshSigner, *,
-                  h: str | None, now: str) -> dict:
-    mp = _manifest_path(folder, stage)
+def _sign_and_log(view: View, stage: str, manifest: dict, trust: Trust, signer: SshSigner, clock: Clock) -> dict:
+    """Write the manifest, sign it, then log with the clock read AFTER signing completes."""
+    lines = _lines(view.h_bytes)
+    if not _checkpoint_ok(trust, manifest["case"], view):
+        return {"result": "REFUSED", "reasons": ["STOP_INDEX_ROLLED_BACK"]}
+    mp = view.folder / f"V8B_{stage}.json"
     data = g.canonical_bytes(manifest)
     with mp.open("xb") as fh:
         fh.write(data)
@@ -347,20 +345,87 @@ def _sign_and_log(folder: pathlib.Path, stage: str, manifest: dict, trust: Trust
         _quarantine(mp)
         _quarantine(mp.with_name(mp.name + ".sig"))
         return {"result": "REFUSED", "reasons": ["SIGNATURE_INVALID"], "detail": "key not in trust allowed_signers"}
+    at = clock()
+    extra = {k: manifest[k] for k in ("registry_seq", "challenge") if k in manifest}
     entry = trust.sign_log.append({"stage": stage, "case": manifest["case"], "M": manifest["M"],
-                                   "manifest_sha": _sha(data), "sig_sha": _sha(sig), "at": now})
-    hp = _h_path(folder, h)
-    lines = _h_lines(hp)
-    trust.checkpoints.append({"case": manifest["case"], "h_file": hp.name, "lines": len(lines),
-                              "last_sha": _sha(lines[-1]) if lines else None, "at": now})
-    return {"result": "SIGNED", "stage": stage, "manifest": mp.name, "sign_log_seq": entry["seq"], "at": now}
+                                   "manifest_sha": _sha(data), "sig_sha": _sha(sig), "at": at, **extra})
+    trust.checkpoints.append({"case": manifest["case"], "h_file": view.h_path.name, "lines": len(lines),
+                              "prefix_sha": _prefix_sha(lines, len(lines)), "at": at})
+    return {"result": "SIGNED", "stage": stage, "manifest": mp.name, "sign_log_seq": entry["seq"], "at": at,
+            "sig": sig, "data": data}
 
 
 def _quarantine(path: pathlib.Path) -> None:
-    """Move a file aside (never delete) so a failed signing leaves no half-signed stage."""
+    """Move a file aside (never delete)."""
     if path.exists():
-        dest = path.with_name(f"_void_{datetime.now().strftime('%Y%m%dT%H%M%S')}_{path.name}")
-        os.replace(path, dest)
+        os.replace(path, path.with_name(f"_void_{datetime.now().strftime('%Y%m%dT%H%M%S%f')}_{path.name}"))
+
+
+def sign_stage(folder: pathlib.Path, stage: str, trust: Trust, signer: SshSigner, *, h: str | None = None,
+               now: str | None = None, clock: Clock | None = None) -> dict:
+    if clock is None:
+        clock = (lambda: now) if now else _now
+    now = now or clock()
+    try:
+        trust.check()
+        view = View(folder, h)
+        bundle = view.bundle()
+    except (TrustError, g.RecordError, OSError, UnicodeDecodeError) as exc:
+        return {"result": "REFUSED", "reasons": ["TRUST_OR_RECORD_UNREADABLE"], "detail": str(exc)}
+    if view.get(f"V8B_{stage}.json") is not None:
+        return {"result": "REFUSED", "reasons": ["SIGNATURE_EXISTS"]}
+    l2 = _is_l2(bundle)
+    extra: dict = {}
+    if stage == "S1":
+        out = g.validate(bundle, now=now, stage="review")
+        left = [r for r in out["reasons"] if not (l2 and r == "RECONFIRMATION_MISSING")]
+        check = "review_commit" if l2 else "review"
+        if left:
+            return {"result": "REFUSED", "reasons": left, "check": check}
+        prev = None
+        extra["h_refs"] = _h_refs(bundle["R"])
+    elif stage == "S2":
+        if not l2:
+            return {"result": "REFUSED", "reasons": ["STAGE_NOT_APPLICABLE"]}
+        chain = verify_chain(view, trust, signer, upto="S1")
+        if not chain["ok"]:
+            return {"result": "REFUSED", "reasons": chain["reasons"]}
+        s1_at = g.parse_time(chain["stages"]["S1"]["at"])
+        if g.parse_time(now) < s1_at + COOLING:
+            return {"result": "REFUSED", "reasons": ["COOLING_PERIOD_UNMET"], "earliest": (s1_at + COOLING).isoformat()}
+        out = g.validate(bundle, now=now, stage="review")
+        check = "review"
+        if out["reasons"]:
+            return {"result": "REFUSED", "reasons": out["reasons"], "check": check}
+        prev = chain["last_sig"]
+        extra["cooling_basis"] = {"s1_signed_at": chain["stages"]["S1"]["at"], "checked_at": now}
+    elif stage == "S3":
+        chain = verify_chain(view, trust, signer, upto="S2" if l2 else "S1")
+        if not chain["ok"]:
+            return {"result": "REFUSED", "reasons": chain["reasons"]}
+        out = g.validate(bundle, now=now, stage="authorization")
+        check = "authorization"
+        if out["reasons"]:
+            return {"result": "REFUSED", "reasons": out["reasons"], "check": check}
+        prev = chain["last_sig"]
+        extra["nonce"] = secrets.token_hex(16)
+        extra["auth_sha"] = g.record_sha256(bundle["AUTH"])
+    else:
+        return {"result": "REFUSED", "reasons": ["USE_STAGE_IS_SIGNED_BY_USE_COMMAND"]}
+    try:
+        records = _records(view, stage, bundle)
+    except TrustError as exc:
+        return {"result": "REFUSED", "reasons": ["RECORDS_MISSING"], "detail": str(exc)}
+    manifest = {"version": VERSION, "stage": stage, "case": bundle["M"]["case"]["code"], "M": g.record_sha256(bundle["M"]),
+                "records": records, "prev_sig": prev, "validator": {"stage": check, "result": out["result"]},
+                "checked_at": now, **extra}
+    res = _sign_and_log(view, stage, manifest, trust, signer, clock)
+    if res["result"] == "SIGNED" and stage == "S2":
+        if g.parse_time(res["at"]) < s1_at + COOLING:  # defensive: clock moved backwards while signing
+            return {"result": "REFUSED", "reasons": ["COOLING_PERIOD_UNMET"]}
+    res.pop("sig", None)
+    res.pop("data", None)
+    return res
 
 
 # ---------------------------------------------------------------- use (S4 + global registry)
@@ -387,20 +452,27 @@ def _orphans(registry: list[dict]) -> list[dict]:
     return [e for e in registry if e["type"] == "intent" and e["seq"] not in closed]
 
 
-def _checkpoint_ok(trust: Trust, case: str, hp: pathlib.Path) -> bool:
-    cps = [c for c in trust.checkpoints.read() if c["case"] == case and c["h_file"] == hp.name]
-    if not cps:
-        return False
-    cp = cps[-1]
-    lines = _h_lines(hp)
-    if len(lines) < cp["lines"]:
-        return False
-    return cp["lines"] == 0 or _sha(lines[cp["lines"] - 1]) == cp["last_sha"]
+def _state_reasons(view: View, bundle: dict, trust: Trust, now: str) -> list[str]:
+    """Current-state checks shared by the pre-sign and post-sign passes."""
+    reasons: list[str] = []
+    pre = g.validate(bundle, now=now, stage="use")
+    if pre["result"] != "PRE_USE_RECORDS_COMPLETE":
+        reasons += pre["reasons"] or ["PRE_USE_CHECK_FAILED"]
+    case, m_sha = bundle["M"]["case"]["code"], g.record_sha256(bundle["M"])
+    if any(w["case"] == case and w["M"] in ("*", m_sha) for w in trust.withdrawals.read()):
+        reasons.append("WITHDRAWN_OR_SUPERSEDED")
+    if not _checkpoint_ok(trust, case, view):
+        reasons.append("STOP_INDEX_ROLLED_BACK")
+    q3_at = g.parse_time(bundle["Q3"]["formed_at"]) if bundle.get("Q3") else None
+    if q3_at and any(ev.get("event") == "discovery" and ev.get("case") == case and g.parse_time(ev["at"]) > q3_at
+                     for ev in bundle["H"]):
+        reasons.append("NEW_STOP_AFTER_Q3")
+    return reasons
 
 
 def use(folder: pathlib.Path, candidate: pathlib.Path, dest: pathlib.Path, trust: Trust, signer: SshSigner, *,
-        h: str | None = None, now: str | None = None) -> dict:
-    now = now or _now()
+        h: str | None = None, now: str | None = None, clock: Clock | None = None) -> dict:
+    clock = clock or ((lambda: now) if now else _now)
     try:
         trust.check()
     except TrustError as exc:
@@ -408,71 +480,115 @@ def use(folder: pathlib.Path, candidate: pathlib.Path, dest: pathlib.Path, trust
     if not _acquire(trust.lock_path):
         return {"result": "REFUSED", "reasons": ["BUSY_GLOBAL"]}
     try:
-        return _use_locked(folder, candidate, dest, trust, signer, h=h, now=now)
+        g_path = folder / "G.jsonl"
+        if not g_path.exists():
+            return {"result": "REFUSED", "reasons": ["USAGE_LOG_MISSING"]}
+        with g_path.open("r+b") as handle:
+            if not gate_cli._lock(handle):
+                return {"result": "REFUSED", "reasons": ["BUSY"]}
+            return _use_locked(folder, candidate, dest, trust, signer, handle, h=h, clock=clock)
     except TrustError as exc:
         return {"result": "REFUSED", "reasons": ["TRUST_LOG_CORRUPT"], "detail": str(exc)}
     finally:
         _release(trust.lock_path)
 
 
-def _use_locked(folder, candidate, dest, trust: Trust, signer: SshSigner, *, h, now) -> dict:
-    registry = trust.registry.read()
+def _use_locked(folder, candidate, dest, trust: Trust, signer: SshSigner, handle, *, h, clock: Clock) -> dict:
+    registry = trust.read_registry()
     if _orphans(registry):
         return {"result": "REFUSED", "reasons": ["REGISTRY_RECOVERY_REQUIRED"]}
+    now = clock()
     try:
-        bundle = gate_cli.load_bundle(folder)
-    except (g.RecordError, OSError) as exc:
+        view = View(folder, h)
+        bundle = view.bundle()
+        cand_bytes = candidate.read_bytes()
+    except (g.RecordError, OSError, UnicodeDecodeError) as exc:
         return {"result": "REFUSED", "reasons": ["TRUST_OR_RECORD_UNREADABLE"], "detail": str(exc)}
-    chain = verify_chain(folder, trust, signer, upto="S3", h=h)
+    if view.get("V8B_S4.json") is not None:
+        return {"result": "REFUSED", "reasons": ["SIGNATURE_EXISTS"]}
+    chain = verify_chain(view, trust, signer, upto="S3")
     if not chain["ok"]:
         return {"result": "REFUSED", "reasons": chain["reasons"]}
-    if _manifest_path(folder, "S4").exists():
-        return {"result": "REFUSED", "reasons": ["SIGNATURE_EXISTS"]}
-    reasons: list[str] = []
     auth_sha = g.record_sha256(bundle["AUTH"])
     auth_key = f"{auth_sha}:{chain['nonce']}"
-    used = sum(1 for e in registry if e["type"] == "committed" and e["auth_key"] == auth_key)
-    used_elsewhere = sum(1 for e in registry if e["type"] == "committed" and e["auth_key"].split(":")[0] == auth_sha)
-    if used >= bundle["AUTH"]["max_uses"] or used_elsewhere >= bundle["AUTH"]["max_uses"]:
+    reasons: list[str] = []
+    committed = [e for e in registry if e["type"] == "committed" and e["auth_key"].split(":")[0] == auth_sha]
+    if len(committed) >= bundle["AUTH"]["max_uses"]:
         reasons.append("AUTHORIZATION_REPLAYED")
-    pre = g.validate(bundle, now=now, stage="use")
-    if pre["result"] != "PRE_USE_RECORDS_COMPLETE":
-        reasons += [r for r in pre["reasons"] if r not in reasons] or ["PRE_USE_CHECK_FAILED"]
-    case, m_sha = bundle["M"]["case"]["code"], g.record_sha256(bundle["M"])
-    if any(w["case"] == case and w["M"] in ("*", m_sha) for w in trust.withdrawals.read()):
-        reasons.append("WITHDRAWN_OR_SUPERSEDED")
-    hp = _h_path(folder, h)
-    if not _checkpoint_ok(trust, case, hp):
-        reasons.append("STOP_INDEX_ROLLED_BACK")
-    q3_at = g.parse_time(bundle["Q3"]["formed_at"]) if bundle.get("Q3") else None
-    for raw in _h_lines(hp):
-        ev = g.parse_record(raw.decode("utf-8"))
-        if ev.get("event") == "discovery" and ev.get("case") == case and q3_at and g.parse_time(ev["at"]) > q3_at:
-            reasons.append("NEW_STOP_AFTER_Q3")
-            break
+    if _sha(cand_bytes) != bundle["M"]["candidate"]["output_sha256"]:
+        reasons.append("CANDIDATE_SHA_MISMATCH")
+    reasons += [r for r in _state_reasons(view, bundle, trust, now) if r not in reasons]
     if reasons:
         return {"result": "REFUSED", "reasons": reasons}
-    g_bytes = (folder / "G.jsonl").read_bytes()
     challenge = secrets.token_hex(16)
-    manifest = {"version": VERSION, "stage": "S4", "case": case, "M": m_sha,
-                "records": _record_files(folder, "S4", bundle), "prev_sig": chain["last_sig"],
-                "validator": {"stage": "use", "result": pre["result"]}, "signed_at_local": now,
+    g_bytes = view.get("G.jsonl") or b""
+    case = bundle["M"]["case"]["code"]
+    manifest = {"version": VERSION, "stage": "S4", "case": case, "M": g.record_sha256(bundle["M"]),
+                "records": _records(view, "S4", bundle), "prev_sig": chain["last_sig"],
+                "validator": {"stage": "use", "result": "PRE_USE_RECORDS_COMPLETE"}, "checked_at": now,
                 "challenge": challenge, "auth_key": auth_key, "registry_seq": len(registry) + 1,
-                "g_prefix_sha": _sha(g_bytes), "g_prefix_hex": g_bytes.hex()}
-    signed = _sign_and_log(folder, "S4", manifest, trust, signer, h=h, now=now)
-    if signed["result"] != "SIGNED":
-        return signed
+                "g_prefix_sha": _sha(g_bytes), "g_prefix_hex": g_bytes.hex(), "candidate_sha": _sha(cand_bytes),
+                "snapshot": view.fingerprint()}
+    # Intent first: a crash from here on leaves an open intent that recover must resolve.
     intent = trust.registry.append({"type": "intent", "auth_key": auth_key, "case": case, "folder": folder.name,
                                     "challenge": challenge, "at": now})
-    out = gate_cli.record_use(folder, candidate, dest, now=now)
-    if out["result"] in ("USED", "USED_NOT_PUBLISHED"):
-        trust.registry.append({"type": "committed", "intent": intent["seq"], "auth_key": auth_key, "case": case,
-                               "folder": folder.name, "result": out["result"], "at": _now()})
-    elif out["result"] == "REFUSED":
+
+    def abort(reason: str, quarantine: bool = True, **more) -> dict:
+        if quarantine:
+            _quarantine(folder / "V8B_S4.json")
+            _quarantine(folder / "V8B_S4.json.sig")
         trust.registry.append({"type": "aborted", "intent": intent["seq"], "auth_key": auth_key, "case": case,
-                               "folder": folder.name, "result": out.get("reason", "REFUSED"), "at": _now()})
-    # USAGE_LOG_INCONSISTENT leaves the intent open: recover must be run before any further use.
-    return {"result": out["result"], "record_use": out, "registry_intent": intent["seq"], "challenge": challenge}
+                               "folder": folder.name, "result": reason, "at": clock()})
+        return {"result": "REFUSED", "reasons": [reason], **more}
+
+    signed = _sign_and_log(view, "S4", manifest, trust, signer, clock)
+    if signed["result"] != "SIGNED":
+        return abort(signed["reasons"][0], quarantine=False, detail=signed.get("detail"))
+
+    # Post-signing pass: real time now, unchanged folder, unchanged current state.
+    now2 = clock()
+    after = View(folder, h)
+    expected = dict(view.files)
+    expected["V8B_S4.json"] = signed["data"]
+    expected["V8B_S4.json.sig"] = signed["sig"]
+    if after.files != expected or after.h_bytes != view.h_bytes or candidate.read_bytes() != cand_bytes:
+        return abort("RECORDS_CHANGED_DURING_SIGNING")
+    later = _state_reasons(view, bundle, trust, now2)
+    if later:
+        return abort(later[0], all_reasons=later)
+    # Publish the snapshot's bytes; append G under the lock held since before the snapshot.
+    target, partial = dest / candidate.name, dest / f".{candidate.name}.partial"
+    if target.exists() or partial.exists():
+        return abort("DESTINATION_EXISTS")
+    try:
+        dest.mkdir(parents=True, exist_ok=True)
+        with partial.open("xb") as out:
+            out.write(cand_bytes)
+            out.flush()
+            os.fsync(out.fileno())
+    except OSError as exc:
+        gate_cli._cleanup(partial)
+        return abort("COPY_FAILED", detail=str(exc))
+    event = {"kind": "use", "auth": auth_sha, "q3": g.record_sha256(bundle["Q3"]), "at": now2}
+    handle.seek(0, 2)
+    size = handle.tell()
+    try:
+        gate_cli._append_use(handle, event)
+    except OSError as exc:
+        if gate_cli._restore_log(handle, size):
+            gate_cli._cleanup(partial)
+            return abort("USAGE_LOG_WRITE_FAILED", detail=str(exc))
+        # G state unknown: leave the intent open so recover must be run before any further use.
+        return {"result": "USAGE_LOG_INCONSISTENT", "reasons": ["USAGE_LOG_WRITE_FAILED"], "registry_intent": intent["seq"]}
+    published = True
+    try:
+        os.replace(partial, target)
+    except OSError:
+        published = False
+    trust.registry.append({"type": "committed", "intent": intent["seq"], "auth_key": auth_key, "case": case,
+                           "folder": folder.name, "result": "USED" if published else "USED_NOT_PUBLISHED", "at": clock()})
+    return {"result": "USED" if published else "USED_NOT_PUBLISHED", "copied_to": str(target), "sha256": _sha(cand_bytes),
+            "at": now2, "registry_intent": intent["seq"], "challenge": challenge}
 
 
 # ---------------------------------------------------------------- withdraw / recover
@@ -484,7 +600,7 @@ def withdraw(trust: Trust, case: str, m: str | None, reason: str, *, now: str | 
 
 def recover(trust: Trust, resolve: int | None = None, as_: str | None = None, note: str = "", *,
             now: str | None = None) -> dict:
-    registry = trust.registry.read()
+    registry = trust.read_registry()
     orphans = _orphans(registry)
     if resolve is None:
         return {"result": "ORPHANS", "orphans": orphans}
@@ -519,9 +635,9 @@ def main(argv: list[str] | None = None) -> int:
         out = sign_stage(pathlib.Path(a.folder), a.stage, trust, signer, h=a.h)
         ok = out["result"] == "SIGNED"
     elif a.cmd == "verify":
-        folder = pathlib.Path(a.folder)
-        present = [st for st in STAGE_ORDER if _manifest_path(folder, st).exists()]
-        out = verify_chain(folder, trust, signer, upto=present[-1] if present else "S1", h=a.h)
+        view = View(pathlib.Path(a.folder), a.h)
+        present = [st for st in STAGE_ORDER if view.get(f"V8B_{st}.json") is not None]
+        out = verify_chain(view, trust, signer, upto=present[-1] if present else "S1")
         ok = out["ok"]
     elif a.cmd == "use":
         out = use(pathlib.Path(a.folder), pathlib.Path(a.candidate), pathlib.Path(a.dest), trust, signer, h=a.h)
