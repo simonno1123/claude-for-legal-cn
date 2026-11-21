@@ -262,6 +262,45 @@ class V8B(unittest.TestCase):
         chk = v8b.verify_chain(v8b.View(root, str(self.hfile)), self.trust, self.signer, upto="S4")
         self.assertIn("USE_EVENT_MISMATCH:S4", chk["reasons"])
 
+    # -- Codex PR #135 round 2
+    def test_output_tampered_during_publish(self):
+        from phase2_runtime.route_b_c03 import gate_cli
+        bd, root = self.through_s3()
+        target = self.d / "out" / self.cand.name
+        real = gate_cli._append_use
+
+        def tamper(handle, event):
+            target.write_bytes("替换内容\n".encode())
+            return real(handle, event)
+
+        gate_cli._append_use = tamper
+        try:
+            out = self.use(root)
+        finally:
+            gate_cli._append_use = real
+        self.assertEqual(out["result"], "USED_OUTPUT_TAMPERED")
+        self.assertFalse(target.exists())
+
+    def test_verify_output_detects_later_change(self):
+        bd, root = self.through_s3()
+        self.assertEqual(self.use(root)["result"], "USED")
+        target = self.d / "out" / self.cand.name
+        self.assertTrue(v8b.verify_output(self.trust, target)["ok"])
+        target.write_bytes(b"changed")
+        self.assertEqual(v8b.verify_output(self.trust, target)["reasons"], ["OUTPUT_TAMPERED"])
+
+    def test_unlimited_max_uses(self):
+        bd = full_from(fx.l1_bundle(self.digest), max_uses=None)
+        bd["G"] = []
+        root = self.d / "rec"
+        write_folder(root, bd, ("M", "I", "T", "R"))
+        self.assertEqual(self.sign(root, "S1")["result"], "SIGNED")
+        write_folder(root, bd, ("Q1", "Q2", "AUTH", "G"))
+        self.assertEqual(self.sign(root, "S3", now=T_S3)["result"], "SIGNED")
+        write_folder(root, bd, ("Q3",))
+        out = self.use(root)
+        self.assertEqual(out["result"], "USED", out)
+
 
 if __name__ == "__main__":
     unittest.main()

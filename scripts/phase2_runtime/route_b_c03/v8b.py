@@ -513,7 +513,7 @@ def _use_locked(folder, candidate, dest, trust: Trust, signer: SshSigner, handle
     auth_key = f"{auth_sha}:{chain['nonce']}"
     reasons: list[str] = []
     committed = [e for e in registry if e["type"] == "committed" and e["auth_key"].split(":")[0] == auth_sha]
-    if len(committed) >= bundle["AUTH"]["max_uses"]:
+    if bundle["AUTH"]["max_uses"] is not None and len(committed) >= bundle["AUTH"]["max_uses"]:
         reasons.append("AUTHORIZATION_REPLAYED")
     if _sha(cand_bytes) != bundle["M"]["candidate"]["output_sha256"]:
         reasons.append("CANDIDATE_SHA_MISMATCH")
@@ -556,19 +556,26 @@ def _use_locked(folder, candidate, dest, trust: Trust, signer: SshSigner, handle
     later = _state_reasons(view, bundle, trust, now2)
     if later:
         return abort(later[0], all_reasons=later)
-    # Publish the snapshot's bytes; append G under the lock held since before the snapshot.
-    target, partial = dest / candidate.name, dest / f".{candidate.name}.partial"
-    if target.exists() or partial.exists():
+    # Publish: write the snapshot's bytes straight to the final name (no swappable temp path), then
+    # read the published file back and require the signed SHA before and after the G append. The
+    # output's SHA goes into the committed registry entry, so later tampering is detectable by
+    # `verify --output`.
+    target = dest / candidate.name
+    if target.exists():
         return abort("DESTINATION_EXISTS")
+    want = _sha(cand_bytes)
     try:
         dest.mkdir(parents=True, exist_ok=True)
-        with partial.open("xb") as out:
+        with target.open("xb") as out:
             out.write(cand_bytes)
             out.flush()
             os.fsync(out.fileno())
     except OSError as exc:
-        gate_cli._cleanup(partial)
+        _quarantine(target)
         return abort("COPY_FAILED", detail=str(exc))
+    if _file_sha(target) != want:
+        _quarantine(target)
+        return abort("OUTPUT_TAMPERED")
     event = {"kind": "use", "auth": auth_sha, "q3": g.record_sha256(bundle["Q3"]), "at": now2}
     handle.seek(0, 2)
     size = handle.tell()
@@ -576,19 +583,36 @@ def _use_locked(folder, candidate, dest, trust: Trust, signer: SshSigner, handle
         gate_cli._append_use(handle, event)
     except OSError as exc:
         if gate_cli._restore_log(handle, size):
-            gate_cli._cleanup(partial)
+            _quarantine(target)
             return abort("USAGE_LOG_WRITE_FAILED", detail=str(exc))
         # G state unknown: leave the intent open so recover must be run before any further use.
         return {"result": "USAGE_LOG_INCONSISTENT", "reasons": ["USAGE_LOG_WRITE_FAILED"], "registry_intent": intent["seq"]}
-    published = True
-    try:
-        os.replace(partial, target)
-    except OSError:
-        published = False
+    result = "USED"
+    if _file_sha(target) != want:
+        _quarantine(target)
+        result = "USED_OUTPUT_TAMPERED"
     trust.registry.append({"type": "committed", "intent": intent["seq"], "auth_key": auth_key, "case": case,
-                           "folder": folder.name, "result": "USED" if published else "USED_NOT_PUBLISHED", "at": clock()})
-    return {"result": "USED" if published else "USED_NOT_PUBLISHED", "copied_to": str(target), "sha256": _sha(cand_bytes),
-            "at": now2, "registry_intent": intent["seq"], "challenge": challenge}
+                           "folder": folder.name, "result": result, "output_name": target.name,
+                           "output_sha": want, "at": clock()})
+    return {"result": result, "copied_to": str(target), "sha256": want, "at": now2,
+            "registry_intent": intent["seq"], "challenge": challenge}
+
+
+def _file_sha(path: pathlib.Path) -> str | None:
+    try:
+        return _sha(path.read_bytes())
+    except OSError:
+        return None
+
+
+def verify_output(trust: Trust, output: pathlib.Path) -> dict:
+    """Check a published output against the SHA recorded in the committed registry entry."""
+    reg = trust.read_registry()
+    entries = [e for e in reg if e["type"] == "committed" and e.get("output_name") == output.name]
+    if not entries:
+        return {"ok": False, "reasons": ["OUTPUT_NOT_REGISTERED"]}
+    ok = _file_sha(output) == entries[-1]["output_sha"]
+    return {"ok": ok, "reasons": [] if ok else ["OUTPUT_TAMPERED"], "registered_sha": entries[-1]["output_sha"]}
 
 
 # ---------------------------------------------------------------- withdraw / recover
@@ -618,7 +642,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="C03 V8-B owner-run integrity layer")
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("sign"); s.add_argument("folder"); s.add_argument("--stage", required=True, choices=("S1", "S2", "S3"))
-    v = sub.add_parser("verify"); v.add_argument("folder")
+    v = sub.add_parser("verify"); v.add_argument("folder"); v.add_argument("--output")
     u = sub.add_parser("use"); u.add_argument("folder"); u.add_argument("--candidate", required=True); u.add_argument("--dest", required=True)
     w = sub.add_parser("withdraw"); w.add_argument("--case", required=True); w.add_argument("--m"); w.add_argument("--reason", required=True)
     r = sub.add_parser("recover"); r.add_argument("--resolve", type=int); r.add_argument("--as", dest="as_"); r.add_argument("--note", default="")
@@ -638,6 +662,9 @@ def main(argv: list[str] | None = None) -> int:
         view = View(pathlib.Path(a.folder), a.h)
         present = [st for st in STAGE_ORDER if view.get(f"V8B_{st}.json") is not None]
         out = verify_chain(view, trust, signer, upto=present[-1] if present else "S1")
+        if a.output:
+            out["output"] = verify_output(trust, pathlib.Path(a.output))
+            out["ok"] = out["ok"] and out["output"]["ok"]
         ok = out["ok"]
     elif a.cmd == "use":
         out = use(pathlib.Path(a.folder), pathlib.Path(a.candidate), pathlib.Path(a.dest), trust, signer, h=a.h)
