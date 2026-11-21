@@ -23,7 +23,8 @@ from phase2_runtime.route_b_c03 import v8b  # noqa: E402
 import test_gate_records as fx  # noqa: E402
 
 HAVE_SSH = shutil.which("ssh-keygen") is not None
-T0 = "2026-12-03T12:00:00+08:00"
+T0 = "2026-12-01T12:00:00+08:00"
+T_S3 = "2026-12-02T16:00:00+08:00"
 T_USE = "2026-12-05T09:00:00+08:00"
 
 
@@ -96,8 +97,9 @@ class V8B(unittest.TestCase):
     def through_s3(self):
         bd, root = self.l1()
         self.assertEqual(self.sign(root, "S1")["result"], "SIGNED")
-        self.add(root, bd, ("Q1", "Q2", "AUTH", "Q3", "G"))
-        self.assertEqual(self.sign(root, "S3")["result"], "SIGNED")
+        self.add(root, bd, ("Q1", "Q2", "AUTH", "G"))
+        self.assertEqual(self.sign(root, "S3", now=T_S3)["result"], "SIGNED")
+        self.add(root, bd, ("Q3",))
         return bd, root
 
     def use(self, root, dest="out", now=T_USE):
@@ -125,8 +127,9 @@ class V8B(unittest.TestCase):
         early = self.sign(root, "S2", now="2026-12-02T10:00:00+08:00")
         self.assertEqual(early["reasons"], ["COOLING_PERIOD_UNMET"])
         self.assertEqual(self.sign(root, "S2", now="2026-12-03T10:00:00+08:00")["result"], "SIGNED")
-        self.add(root, bd, ("Q1", "Q2", "AUTH", "Q3", "G"))
+        self.add(root, bd, ("Q1", "Q2", "AUTH", "G"))
         self.assertEqual(self.sign(root, "S3", now="2026-12-03T11:00:00+08:00")["result"], "SIGNED")
+        self.add(root, bd, ("Q3",))
         self.assertEqual(self.use(root)["result"], "USED")
 
     def test_untrusted_key_refused(self):

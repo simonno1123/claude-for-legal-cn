@@ -44,6 +44,7 @@ jobs:
 
       - name: C03 V8-B integrity tests (require ssh-keygen; must not be skipped)
         run: |
+          set -o pipefail
           command -v ssh-keygen
           python3 -m unittest discover -s validation/route_b_c03/v8b -t validation/route_b_c03/v8b -v 2>&1 | tee v8b.log
           ! grep -q "skipped" v8b.log
