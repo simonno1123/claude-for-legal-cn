@@ -1,4 +1,4 @@
-# C01 诉讼推理框架：架构复核（2026-11-21，待确认）
+# C01 诉讼推理框架：架构复核（2026-11-21，已确认立项）
 
 | 字段 | 值 |
 | --- | --- |
@@ -7,7 +7,7 @@
 | 对象 | C01 设计基线 v0.2（现行 SHA-256 前缀 `EAB7EE7C`）；B-3 验证中确认的 9 个技能资产（现行 SHA 与 B-3 决定一致，已逐一重算）；`litigation-legal/references/china-litigation-core-rules.md` |
 | 参照 | C03 首例试用的经验（`docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_ENFORCEMENT_MODULE_LESSONS_AND_AUTHORITY_CATALOG.md`） |
 | 现状 | C01 已于 2026-07-19 关闭并采纳（`TASK_PHASE2_C01_II_B_3_VALIDATION_DECISION`）。该决定规定，没有新的范围交接，不得再改动基线 |
-| 状态 | **待所有者确认**：第三节各项是否立项 |
+| 状态 | **已确认（2026-11-21）。** 所有者勾选第三节全部 6 项立项：第 1 项采用方案一；第 2、3 项合并立项；第 5、6 项合并立项。PR #137 经 Codex 两轮评审（第 1 轮 P0 1 项、P1 2 项已改，第 2 轮无发现）。各项实施仍须新的范围交接、评审和所有者确认 |
 
 ## 一、总体判断
 
