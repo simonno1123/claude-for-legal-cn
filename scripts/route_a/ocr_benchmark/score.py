@@ -7,6 +7,7 @@ Rules fixed by the confirmed design (TASK_PHASE2_ROUTE_A_TESSERACT_CHI_SIM_BENCH
 - table cells (clean group): words contained in the cell box, exact match;
 - low-confidence rule: word conf < 80; field flagged if any assigned word is low;
   covered = wrong & flagged; missing field (no words) = uncovered; all versions counted;
+- digit error rate: digits and decimal points only;
 - failed page: empty output or CER > 0.5.
 Usage: python3 score.py <set_dir> <run_dir>
 """
@@ -93,8 +94,8 @@ def main() -> None:
             fields.append({"page": stem, "name": f["name"], "clean": clean, "correct": correct, "missing": not got,
                            "flagged": any(w["conf"] < LOW for w in got),
                            "loc_ok": bool(got) and iou(merge(got), f["bbox"]) >= 0.5,
-                           "digit_err": lev(re.sub(r"\D", "", text), re.sub(r"\D", "", f["text"])),
-                           "digits": len(re.sub(r"\D", "", f["text"]))})
+                           "digit_err": lev(re.sub(r"[^\d.]", "", text), re.sub(r"[^\d.]", "", f["text"])),
+                           "digits": len(re.sub(r"[^\d.]", "", f["text"]))})
         if clean and t.get("table"):
             for c in t["table"]["cells"]:
                 cells["n"] += 1

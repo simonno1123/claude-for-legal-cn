@@ -3,9 +3,11 @@
 # Output formats are set with -c parameters: the private tessdata directory has no configs/ folder, so the "txt tsv" config names would not load.
 # Recognition runs inside a bwrap sandbox with no network and only whitelisted mounts; evidence is recorded.
 # The host only allows short foreground calls, so the run is split into phases on one run directory:
+#   run_ocr.sh <root> <set> <run_id> selftest      deliberate outbound attempt in a throwaway run; must be detected and locked
 #   run_ocr.sh <root> <set> <run_id> init          network-denial evidence, write-scope snapshot, environment record
 #   run_ocr.sh <root> <set> <run_id> batch <N>     recognise up to N not-yet-processed images within a time budget (BUDGET, default 100 s) (each batch re-checks network denial)
-#   run_ocr.sh <root> <set> <run_id> finish        input-handling checks, stop checks (outbound attempts, write scope)
+#   run_ocr.sh <root> <set> <run_id> finish        input-handling checks, final stop checks (outbound attempts, write scope)
+# Network syscalls are watched while each sandboxed call runs; the first outbound attempt kills it and locks the run as void.
 set -euo pipefail
 ROOT="$1"; SET="$2"; RUN="$3"; PHASE="$4"; N="${5:-8}"
 TESS="$ROOT/../tessdata"
@@ -15,9 +17,11 @@ OUT="$ROOT/runs/$RUN"
 PRIV="$(cd "$ROOT/../.." && pwd)"
 [ -f "$TESS/chi_sim.traineddata" ] || { echo "STOP: chi_sim.traineddata missing"; exit 2; }
 
-BINDS=(--unshare-net --die-with-parent --proc /proc --dev /dev --tmpfs /tmp)
+# /dev is a minimal sandbox-private device tree (null, zero, random ...); /tmp is mapped into the run directory, so
+# every writable path the recognition process can see lies inside the audited run directory.
+BINDS=(--unshare-net --die-with-parent --proc /proc --dev /dev)
 for d in /usr /lib /lib64 /bin /sbin /etc; do [ -e "$d" ] && BINDS+=(--ro-bind "$d" "$d"); done
-BINDS+=(--ro-bind "$TESS" /tessdata --ro-bind "$SAMPLES" /samples --ro-bind "$INPUTS" /inputs --bind "$OUT" /out --chdir /out)
+BINDS+=(--ro-bind "$TESS" /tessdata --ro-bind "$SAMPLES" /samples --ro-bind "$INPUTS" /inputs --bind "$OUT" /out --bind "$OUT/tmp" /tmp --setenv TMPDIR /tmp --chdir /out)
 
 net_denied() {  # evidence: the sandbox cannot reach the network (must fail)
   if bwrap "${BINDS[@]}" curl -sS -m 5 https://example.com -o /dev/null 2>> "$OUT/net_check.txt"; then
@@ -26,14 +30,33 @@ net_denied() {  # evidence: the sandbox cannot reach the network (must fail)
   echo "[$(date -Iseconds)] network denied" >> "$OUT/net_check.txt"
 }
 snapshot() { find "$PRIV" -path "$OUT" -prune -o -type f -printf '%p %s %T@\n' | sort; }
-traced() {  # run inside the sandbox, tracing network-related syscalls into a per-call file
-  strace -f -qq -e trace=connect,sendto,socket -o "$OUT/strace_network_$(date +%s%N).txt" bwrap "${BINDS[@]}" "$@"
+# Any network-family syscall other than local (AF_UNIX / AF_NETLINK) sockets counts as an outbound attempt.
+ATTEMPT='(socket\((AF_INET|AF_INET6|AF_PACKET)|(connect|sendto|sendmsg|sendmmsg)\(.*(AF_INET|AF_INET6|AF_PACKET))'
+void_lock() { echo "[$(date -Iseconds)] $1" >> "$OUT/VOID_LOCK"; echo "STOP: $1; results void"; exit 4; }
+traced() {  # run inside the sandbox; all network syscalls traced; watched while running, killed at the first attempt
+  local log="$OUT/strace_network_$(date +%s%N).txt"
+  strace -f -qq -e trace=%network -o "$log" bwrap "${BINDS[@]}" "$@" &
+  local pid=$!
+  while kill -0 "$pid" 2>/dev/null; do
+    if grep -Eq "$ATTEMPT" "$log" 2>/dev/null; then kill -KILL "$pid" 2>/dev/null; pkill -KILL -f "^tesseract " 2>/dev/null || true
+      grep -E "$ATTEMPT" "$log" >> "$OUT/outbound_attempts.txt"; void_lock "outbound network attempt during run"; fi
+    sleep 0.2
+  done
+  wait "$pid" || true
+  if grep -Eq "$ATTEMPT" "$log"; then grep -E "$ATTEMPT" "$log" >> "$OUT/outbound_attempts.txt"; void_lock "outbound network attempt during run"; fi
 }
 
+[ ! -f "$OUT/VOID_LOCK" ] || { echo "STOP: run is void (VOID_LOCK)"; exit 4; }
 case "$PHASE" in
+selftest)  # proves the watcher fires: a deliberate outbound attempt in a throwaway run directory must lock it as void
+  [ ! -e "$OUT" ] || { echo "STOP: run directory exists (no overwrite)"; exit 2; }
+  mkdir -p "$OUT/tmp"
+  ( traced curl -sS -m 5 https://example.com -o /dev/null ) && { echo "SELFTEST FAILED: attempt not detected"; exit 7; }
+  [ -f "$OUT/VOID_LOCK" ] || { echo "SELFTEST FAILED: no VOID_LOCK"; exit 7; }
+  echo "SELFTEST OK: attempt detected and run locked"; exit 0 ;;
 init)
   [ ! -e "$OUT" ] || { echo "STOP: run directory exists (no overwrite)"; exit 2; }
-  mkdir -p "$OUT/ocr" "$OUT/inputs"
+  mkdir -p "$OUT/ocr" "$OUT/inputs" "$OUT/tmp"
   net_denied
   snapshot > "$OUT/.files_before"
   {
@@ -76,14 +99,15 @@ finish)
     echo "unsupported file type: $(file -b /inputs/unsupported.xyz)" >> /out/inputs/_rc.txt
     tesseract /inputs/unsupported.xyz /out/inputs/unsupported -l chi_sim --tessdata-dir /tessdata >/dev/null 2>>/out/inputs/_stderr.txt; echo "unsupported tesseract rc=$?" >> /out/inputs/_rc.txt'
   echo "end: $(date -Iseconds)" >> "$OUT/run_env.txt"
-  if cat "$OUT"/strace_network_*.txt | grep -E 'connect\(.*(AF_INET|AF_INET6)' > "$OUT/outbound_attempts.txt"; then
-    echo "STOP: outbound connection attempt recorded; results void"; exit 4
-  fi
+  if cat "$OUT"/strace_network_*.txt | grep -E "$ATTEMPT" > "$OUT/outbound_attempts_final.txt"; then void_lock "outbound network attempt recorded"; fi
+  grep -c . "$OUT"/strace_network_*.txt > "$OUT/strace_line_counts.txt" || true
   snapshot > "$OUT/.files_after"
   if ! diff -q "$OUT/.files_before" "$OUT/.files_after" >/dev/null; then
     diff "$OUT/.files_before" "$OUT/.files_after" > "$OUT/write_scope_violation.txt" || true
+    echo "[$(date -Iseconds)] files outside the run directory changed" >> "$OUT/VOID_LOCK"
     echo "STOP: files outside the run directory changed; results void"; exit 5
   fi
+  find "$OUT/tmp" -type f | sed "s#^$OUT/##" > "$OUT/tmp_files.txt"
   echo "OK: run $RUN complete" ;;
 *) echo "unknown phase"; exit 2 ;;
 esac
