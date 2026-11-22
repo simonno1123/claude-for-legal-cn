@@ -1,10 +1,10 @@
-# TASK_PHASE2_C01_IV_REVISION_RESULT（执行结果，待评审）
+# TASK_PHASE2_C01_IV_REVISION_RESULT（执行结果，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `.codex-coordination/inbox/TASK_PHASE2_C01_IV_REVISION_HANDOFF.md`（已确认，PR #141） |
 | 执行 | Claude（记录人），2026-11-22 |
-| 状态 | **待 Codex 评审和所有者确认。** 合并后，下表"改动后 SHA"成为这两个文件的基线 |
+| 状态 | **已确认（2026-11-22）。** PR #142 经 Codex 评审无发现，CI 通过；所有者确认合并。自合并起，第一节"改动后 SHA"为这两个文件的基线 |
 | 方法 | 静态、只读的指令追溯，与 B-3、C01-III 相同 |
 
 ## 一、改动前后
