@@ -25,6 +25,7 @@
 
 5. **时间效力。** 每条都要写“适用时点”。适用时点上有效的版本与现行版本不同的，两个版本分列两行，并说明本案适用哪一个；无法确定的，标为“待核对”。
 6. **来源层级。** 沿用 `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_ENFORCEMENT_MODULE_LESSONS_AND_AUTHORITY_CATALOG.md` 第二节的五层分级。
+7. **适用问题。** 条文已经核对，但能否适用于某类请求或某种情形属于律师判断的，不改变条文的核对状态；在说明中写明“适用问题：……”。依赖该适用判断的命题标 `[律师复核]`。该适用判断尚未取得与案件、版本、用途相匹配的合格复核（复核记录中为 `reviewed-approved`）的，撰稿输出 `[阻断：需补充合格复核]`；已取得的，按一般复核门处理。
 
 本文件为 `litigation-legal` 各技能的底层规则字典。输出时不得直接照搬美国 discovery、subpoena、deposition、privilege log 等程序概念。
 
