@@ -1,10 +1,10 @@
-# TASK_PHASE2_C01_V_REVISION_HANDOFF（范围交接，待评审）
+# TASK_PHASE2_C01_V_REVISION_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | 第二次试跑问题清单（`docs/phase2/track-c/TASK_PHASE2_C01_SECOND_TRIAL_FINDINGS.md`，已确认）；所有者 2026-11-22 决定立项 C01-V（T5、T7、T8、T9、T10、T11），T6 暂缓 |
 | 起草 | Claude（记录人），2026-11-22 |
-| 状态 | **待 Codex 评审和所有者确认。** 确认之前，本交接不授权改动任何文件 |
+| 状态 | **已确认（2026-11-22）。** 所有者确认，授权按第二节实施。PR #144 经 Codex 三轮评审（前两轮 P1 共 4 项已改，第 3 轮无发现） |
 
 ## 一、固定基线
 
