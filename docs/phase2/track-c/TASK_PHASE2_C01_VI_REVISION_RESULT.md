@@ -1,10 +1,10 @@
-# TASK_PHASE2_C01_VI_REVISION_RESULT（执行结果，待确认）
+# TASK_PHASE2_C01_VI_REVISION_RESULT（执行结果，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `.codex-coordination/inbox/TASK_PHASE2_C01_VI_AMOUNT_CONSISTENCY_HANDOFF.md`（已确认，PR #149；授权 W1、W2、W3） |
 | 执行 | Claude（记录人），2026-11-22 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-22）。** PR #150 经 Codex 评审（第 1 轮无发现），CI 通过，所有者确认合并。第一节"改动后 SHA"为基线 |
 | 方法 | 静态、只读的指令追溯 |
 
 ## 一、改动前后
