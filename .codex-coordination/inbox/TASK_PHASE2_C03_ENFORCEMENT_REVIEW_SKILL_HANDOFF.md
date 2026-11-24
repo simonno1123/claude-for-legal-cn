@@ -20,6 +20,7 @@
 | `litigation-legal/skills/chronology/SKILL.md` | `F5374C44732D2F1B76E7EC7EF5F30B6B5D50783FAE74F71B2BD3919DCFC03E8A` |
 | `litigation-legal/skills/claim-chart/SKILL.md` | `8BECCBCCCF83CED9C6EC21F676294E258C1B91341BBA6CD747503DB895DA8BFC` |
 | `litigation-legal/skills/brief-section-drafter/SKILL.md` | `F2F14916A5D71CFF63D6F6D20382BA4B4150B612467094AEA68090F242EADBF2` |
+| `litigation-legal/references/china-litigation-core-rules.md` | `A74A7F146773DA6E8FC1B2BA176D7C6DFD85869664B04F050DD5A49516CF2E47` |
 
 新建文件没有基线。
 
@@ -144,6 +145,10 @@ argument-hint: "[执行案件材料或案件名称]"
 ## 回归
 
 使用 `references/test-cases-cn.md` 中的执行类情境（E 系列）做人工回归。
+
+## 与共享规则字典的关系
+
+规则字典适用于本技能；两者不一致的，以本技能的强制规则为准（尤其是期限不自行推算、执行分析在本技能内进行）。
 ````
 
 ### 包 S2：新建参考文件 `litigation-legal/references/china-enforcement-checklists.md`
@@ -161,7 +166,8 @@ argument-hint: "[执行案件材料或案件名称]"
 | 编号 | 输入 | 应有表现 |
 | --- | --- | --- |
 | E1 | 金钱给付执行，曾终本后恢复，卷内两个执行案号 | D04 分别登记两个案号及终本、恢复文书和日期；终本状态不当然视为现状 |
-| E2 | 卷内某查封裁定载明期限，无续行文书 | 第六节照录到期日及出处，标 `[律师复核]`；不写"应续封" |
+| E2 | 卷内某查封裁定**载明具体到期日**，无续行文书 | 第六节照录到期日及出处，标 `[律师复核]`；不写"应续封" |
+| E2b | 卷内某查封裁定**只载明期限长度**，没有具体到期日，也没有上游已复核的计算 | 不推算到期日；把裁定日期等起算相关日期与已核对的期间条文并列，标"未计算——`[律师复核]`" |
 | E3 | 卷内无限制消费、失信记录 | 第六节列出两类措施及法定前提，逐项对照；不排先后 |
 | E4 | 卷内有第三人对同一财产提出的异议 | 第三、四节和第六、九节相关事项都照录该异议；漏列即阻断 |
 | E5 | 卷内有公司股东出资未缴足的线索 | 第八节列出可能涉及的法定情形和所缺材料；不写"可以追加" |
@@ -175,6 +181,24 @@ argument-hint: "[执行案件材料或案件名称]"
 
 matter-intake、chronology、claim-chart、brief-section-drafter 四个技能中的"并注明'执行阶段分析转 C03，由律师启动'"，改为"并注明'执行阶段分析转 C03（`enforcement-review`），由律师启动'"。其余文字不变。
 
+### 包 S5：共享规则字典的定点修订（`litigation-legal/references/china-litigation-core-rules.md`）
+
+1. 第 38 行：
+
+   > - 执行阶段的分析不在本插件内进行，按 C03 的关口流程，由律师另行启动。
+
+   改为：
+
+   > - 执行阶段的分析由律师另行启动 `enforcement-review` 技能（C03）。该技能的输出是候选分析，不是 V8 关口记录链中的候选，不经 V8 复核关口。诉讼类技能遇执行阶段，仍按各自的分流规则只登记，不作执行分析。
+
+2. 第 53 行：
+
+   > - 期限计算必须注明起算日、届满日、顺延/节假日因素和 `[待律师复核]`。
+
+   之后，接着写：
+
+   > `enforcement-review` 技能的期限按其强制规则处理：不自行推算届满日。
+
 ### 不授权
 
 - 以上所列以外的任何改动；
@@ -183,13 +207,13 @@ matter-intake、chronology、claim-chart、brief-section-drafter 四个技能中
 
 ## 三、验证
 
-1. **静态核查：** 逐条对照技能文字，核查 E1–E10；C01 的 S01–S42 不受影响（S4 只改提示文字）。
+1. **静态核查：** 逐条对照技能文字，核查 E1–E10（含 E2b）；C01 的 S01–S42 不受影响（S4 只改提示文字）。
 2. **运行验证（虚构材料）：** 另起独立子代理作为运行者，只给它技能、两份参考文件、虚构材料和虚构依据时效包，不给预期表现。用 2 宗虚构执行案件覆盖 E1–E6、E9、E10；E7、E8 另用最小材料单独触发。由记录人按上表评判。具体材料和评判办法，在实施前另写一页试跑设计交所有者确认。
 3. 结果写入 `docs/phase2/track-c/TASK_PHASE2_C03_ENFORCEMENT_REVIEW_SKILL_RESULT.md`，评审记录写入 `.codex-coordination/outbox/`。
 
 ## 四、回滚与验收
 
-- 改动前另存四个技能文件的原始字节；新建文件可整体删除回滚。
+- 改动前另存四个技能文件和规则字典的原始字节；新建文件可整体删除回滚。
 - 验收条件：
   1. 改动前 SHA 与第一节一致；
   2. 差异只在第二节所列位置；
@@ -199,4 +223,4 @@ matter-intake、chronology、claim-chart、brief-section-drafter 四个技能中
 
 ## 五、请所有者确认
 
-确认本交接，即授权按第二节新建 C03 技能（`enforcement-review`）、参考文件和回归情境，并修改 C01 四个技能的分流提示。
+确认本交接，即授权按第二节新建 C03 技能（`enforcement-review`）、参考文件和回归情境，修改 C01 四个技能的分流提示，并定点修订共享规则字典两处。
