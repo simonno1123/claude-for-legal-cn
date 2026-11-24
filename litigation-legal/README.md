@@ -32,9 +32,9 @@
 | `/litigation-legal:demand-received` | 收到律师函/催告函/仲裁通知/起诉材料后的应对分流 |
 | `/litigation-legal:matter-briefing` | 案件汇报：事实、程序、风险、费用、保全、执行、和解窗口 |
 | `/litigation-legal:portfolio-status` | 未决案件组合盘点：金额、阶段、期限、保全、执行、拨备/披露口径 |
-| `/litigation-legal:matter-workspace` | 案件工作区：创建、切换、列示、归档，隔离不同案件上下文 |
-| `/litigation-legal:matter-update` | 案件进展更新：程序事件、证据、期限、保全、和解、执行，同步台账 |
-| `/litigation-legal:matter-close` | 结案报告：和解、撤诉、判决、裁决、执行完毕、终本、费用与复盘 |
+| `/litigation-legal:matter-workspace` | 案件工作区：创建、切换、列示、归档，隔离不同案件上下文；只管理文件和上下文，不替代收案审查 |
+| `/litigation-legal:matter-update` | 案件进展更新：针对程序事件、证据、期限、保全、和解、执行的变化，输出文档级更新、台账字段建议与重审提示；不写入台账、日历或外部系统 |
+| `/litigation-legal:matter-close` | 结案报告：和解、撤诉、判决、裁决、执行完毕、终本、费用与复盘；审查上诉、再审、撤裁、执行等后续风险，关闭前须人工确认 |
 | `/litigation-legal:oc-status` | 外部律师/仲裁代理/承办法官或仲裁员事项跟进清单 |
 
 ## 中国法核心卡点
