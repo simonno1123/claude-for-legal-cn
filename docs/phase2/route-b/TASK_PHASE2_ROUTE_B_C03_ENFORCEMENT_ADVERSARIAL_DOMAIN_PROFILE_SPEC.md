@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | v1.0 |
+| Version | v1.1 |
 | Status | **DESIGN OUTPUT — PENDING ARCHITECTURE REVIEW** |
 | Route | Phase 2 / Route B |
 | Domain ID | `C03-ENFORCEMENT-ADVERSARIAL-DESIGN` |
@@ -14,6 +14,8 @@
 | Domain Activation | **NOT AUTHORIZED** |
 | Case-Material Access | **NOT AUTHORIZED / NOT PERFORMED** |
 | Implementation / Production | **NOT AUTHORIZED** |
+
+> v1.1 (2026-11-23): Project Owner opened four record-bound lawyer-consideration candidate types (Section 10.1A). All other boundaries unchanged.
 
 This document defines a finite, non-executable candidate Domain Profile for
 structured issue identification and stress-testing in China Mainland civil and
@@ -96,6 +98,7 @@ execution_domain_profile:
     - ENUMERATE_CANDIDATE_REVIEW_DIMENSIONS
     - RECORD_ADVERSE_CONDITIONS
     - RECORD_CONFLICTS_AND_INFORMATION_GAPS
+    - ENUMERATE_RECORD_BOUND_LAWYER_CONSIDERATION_CANDIDATES
     - PREPARE_QUALIFIED_HUMAN_REVIEW_PACKET
   prohibited_operations:
     - CASE_MATERIAL_ACCESS
@@ -215,12 +218,12 @@ The following are review dimensions, not rules, findings, or conclusions:
 | ID | Candidate dimension | Required boundary |
 |---|---|---|
 | `C03-D01` | Enforceable-instrument identity and recorded scope | Record exact source and version; do not decide enforceability |
-| `C03-D02` | Recorded parties, roles, and identity conflicts | No identity inference or additional-party conclusion |
+| `C03-D02` | Recorded parties, roles, and identity conflicts | No identity inference or additional-party conclusion; except a Section 10.1A candidate |
 | `C03-D03` | Recorded performance, payment, settlement, or outstanding-obligation states | Preserve conflicts; do not calculate an authoritative balance without reviewed inputs |
 | `C03-D04` | Recorded procedural posture and currency | No assumption that a historical status remains current |
 | `C03-D05` | Recorded court, territorial, or procedural-competence references | Candidate issue only; qualified lawyer determines legal relevance |
-| `C03-D06` | Authorized property-clue references | No active search, tracing, enrichment, or third-party access |
-| `C03-D07` | Recorded preservation or enforcement measures | No instruction to initiate, evade, or alter a measure |
+| `C03-D06` | Authorized property-clue references | No active search, tracing, enrichment, or third-party access; a Section 10.1A candidate may name statutory investigation tools only, and no search is performed |
+| `C03-D07` | Recorded preservation or enforcement measures | No instruction to initiate, evade, or alter a measure; except a Section 10.1A candidate |
 | `C03-D08` | Recorded objections, third-party claims, insolvency, or intersecting proceedings | Preserve adverse positions and missing records |
 | `C03-D09` | Recorded service, notice, and participation information | No legal-effect conclusion from metadata alone |
 | `C03-D10` | Recorded time-related facts and authority-check needs | No limitation or deadline conclusion without current-law review |
@@ -299,6 +302,64 @@ NOT AN ENFORCEMENT INSTRUCTION
 NOT AUTHORIZED FOR FILING, CONTACT, TRANSFER, OR EXECUTION
 ```
 
+### 10.1A Record-Bound Lawyer-Consideration Candidates (v1.1)
+
+Four additional candidate types are permitted. Each is a list of matters a
+qualified lawyer may consider, bound to the record and to checked authorities:
+
+    C03_MEASURE_AND_DEADLINE_CONSIDERATION_CANDIDATE          （A 可供律师考虑的措施与期限事项）
+    C03_ASSET_INVESTIGATION_PATHWAY_CONSIDERATION_CANDIDATE   （B 可供律师考虑的财产调查途径）
+    C03_PARTY_CHANGE_GROUND_CONSIDERATION_CANDIDATE           （C 可供律师考虑的变更追加当事人情形）
+    C03_OBJECTION_AND_REMEDY_PATHWAY_CONSIDERATION_CANDIDATE  （D 可供律师考虑的异议与救济途径）
+
+Scope of each type:
+
+- A: for each recorded measure, its recorded scope, term, expiry and
+  continuation requirement; for each statutory measure category not yet
+  recorded as taken, the statutory preconditions.
+- B: statutory investigation tools (such as investigation orders and the
+  categories of institutions they may address, property-report orders, reward
+  notices, audits) and their conditions. No search is performed.
+- C: the statutory grounds in the applicable rules that recorded facts may
+  touch, and the materials needed to establish each ground.
+- D: the procedural remedies that may be available, with their time limits and
+  preconditions.
+
+Every item in these four types must:
+
+1. cite only authorities whose status in the matter's authority freshness
+   packet is "checked" or "lawyer-confirmed" and current; otherwise the item
+   reads "authority not checked" and is blocked from use;
+2. compare each statutory precondition with the record and mark it
+   "present in record", "contradicted by record", or "no record", citing the
+   record location;
+3. list the materials missing for each precondition;
+4. not compute any new date. A time limit may be shown only as (a) a
+   computation already reviewed upstream, with its source; or otherwise
+   (b) the recorded start-related dates placed beside the checked authority's
+   period text, marked "computation not performed — [lawyer review]". Where
+   the start date is missing or the record conflicts, the item lists this as
+   an information gap and is blocked from use;
+5. not rank, order, time, prioritise, or recommend any item, and not use
+   words of recommendation;
+6. not state whether any measure, ground, or remedy would succeed, should be
+   pursued, or is likely to be granted;
+7. not perform, describe how to perform, or suggest any search of persons,
+   assets, accounts, or third parties beyond naming the statutory tool; and
+8. carry the four labels required by Section 10.1; and
+9. carry forward, for its subject, every recorded adverse position,
+   objection, third-party claim, intersecting proceeding, and missing record
+   required by C03-D08 and C03-D12. An item that omits any of them is blocked.
+
+An item that violates any of rules 5 to 7 is reclassified under Section 10.2
+and must be blocked.
+
+Reviewability: until the closed permitted-use table of the human review gate
+(AR-B-005 R3, Section 4.2) and the inherited R2 check C6 are revised by a
+separate Project Owner authorization, these four types are design permissions
+only. They may not enter U1, U2 or U3 review, may not be approved, and remain
+blocked.
+
 ### 10.2 Prohibited Outputs
 
 ```text
@@ -313,6 +374,11 @@ OUTCOME_PREDICTION
 SUCCESS_PROBABILITY
 AUTOMATED_RISK_OR_COMPLIANCE_SCORE
 ```
+
+The categories above remain prohibited. A Section 10.1A candidate is not an
+`ENFORCEMENT_STRATEGY_OR_TACTIC`, `ASSET_SEARCH_OR_TRACING_INSTRUCTION`,
+`ADDITIONAL_PARTY_OR_LIABILITY_CONCLUSION`, or `OBJECTION_OR_REMEDY_CONCLUSION`
+only while it complies with every rule in Section 10.1A.
 
 ### 10.3 Retention and Downstream Boundary
 
@@ -453,6 +519,7 @@ No audit instance is created by this Spec.
 | `C03-DG-013` — Human Decision Gate | Qualified-human review and separate downstream authorization remain mandatory |
 | `C03-DG-014` — Version and Audit Integrity | Correction, supersession, withdrawal, and invalidation are traceable and append-only |
 | `C03-DG-015` — Zero Implementation Drift | No material access, OCR, provider, code, runtime, integration, or production action occurs |
+| `C03-DG-016` — Consideration-Candidate Boundary | Section 10.1A items are record-bound and authority-checked, and contain no ranking, recommendation, timing, success assessment, or search |
 
 ## 17. Required Next Governance State
 
