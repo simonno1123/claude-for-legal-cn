@@ -1,10 +1,10 @@
-# TASK_PHASE2_C03_ENFORCEMENT_REVIEW_R1_R3_HANDOFF（范围交接，待确认）
+# TASK_PHASE2_C03_ENFORCEMENT_REVIEW_R1_R3_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `docs/phase2/track-c/TASK_PHASE2_C03_ENFORCEMENT_REVIEW_FIRST_REAL_TRIAL_FINDINGS.md` 第三节 R1–R3 |
 | 起草 | Claude（记录人），2026-11-23 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-24）。** 所有者确认，授权按第二节实施并复验。PR #160 经 Codex 两轮评审（第 1 轮 P0 1 项、P1 2 项，均已改；第 2 轮无发现） |
 
 ## 一、固定基线
 
@@ -35,7 +35,7 @@
 
 ### 包 T4：回归情境
 
-在 `references/test-cases-cn.md` 的 E 系列表格末尾追加三行：
+在 `references/test-cases-cn.md` 的 E 系列表格末尾追加四行：
 
 | 编号 | 输入 | 应有表现 |
 | --- | --- | --- |
