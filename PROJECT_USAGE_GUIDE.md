@@ -23,7 +23,7 @@
 | `employment-legal` | 劳动用工、解除、补偿、员工手册、工时休假、社保公积金 | `/employment-legal:cold-start-interview` |
 | `corporate-legal` | 公司治理、新公司法、出资、股权转让、章程审查、实体合规 | `/corporate-legal:cold-start-interview` |
 | `commercial-legal` | 商事合同、采购销售、SaaS、NDA、续约、授权用印 | `/commercial-legal:review` |
-| `litigation-legal` | 民商事诉讼/仲裁、保全、举证期限、庭审质证、执行 | `/litigation-legal:matter-intake` |
+| `litigation-legal` | 民商事诉讼/仲裁、保全、举证期限、庭审质证、执行 | `/litigation-legal:matter-intake`；执行案件用 `/litigation-legal:enforcement-review` |
 | `product-legal` | 产品上线、广告营销、消费者权益、电商平台、质量召回 | `/product-legal:launch-review` |
 | `privacy-legal` | 个人信息保护、PIPIA、数据出境、委托处理、个人权利请求 | `/privacy-legal:use-case-triage` |
 | `ip-legal` | 商标、专利、著作权、平台维权、开源合规、商业秘密 | `/ip-legal:clearance` |
@@ -386,6 +386,12 @@ Commercial 的 deal debrief、playbook monitor、renewal tracker 和 proposal re
 
 ```text
 /litigation-legal:matter-intake
+```
+
+执行案件（由律师启动，处理执行卷宗）：
+
+```text
+/litigation-legal:enforcement-review
 ```
 
 数据和 AI 合规初次使用：
