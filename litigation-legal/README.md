@@ -14,8 +14,10 @@
 |---|---|
 | `/litigation-legal:cold-start-interview` | 中国争议解决画像访谈：主体、常见纠纷、常用法院/仲裁委、外部律师、案件台账、保全和执行策略 |
 | `/litigation-legal:matter-intake` | 收案与立案审查：管辖、诉讼时效、主体、仲裁条款、诉请、证据、保全和执行可行性 |
-| `/litigation-legal:claim-chart` | 诉请/抗辩/证据对照表：诉讼请求、请求权基础、待证事实、证据编号、三性和证明目的 |
+| `/litigation-legal:claim-chart` | 诉请/抗辩/证据对照表：诉讼请求、请求权基础、待证事实、证据编号、候选质证风险提示、证明目的和缺口；分析表与复核记录表分列 |
 | `/litigation-legal:chronology` | 案件事实时间线：按时间、证据编号、争议焦点和证明目的整理大事记 |
+| `/litigation-legal:brief-section-drafter` | 文书段落起草：起诉状、答辩状、代理意见、质证意见、保全或调查令申请等局部段落；依据未核对、复核未通过或金额口径未确认的命题阻断 |
+| `/litigation-legal:enforcement-review` | 执行案件审查（C03，由律师启动）：按 13 个维度整理执行卷宗，输出争点矩阵、不利条件、冲突与缺口、依据核查请求，以及"可供律师考虑的"措施与期限、财产调查途径、变更追加当事人情形、异议与救济途径（均为候选，不排先后、不提建议、不下结论、不查找财产） |
 | `/litigation-legal:court-order-triage` | 法院文书、协助执行通知、律师调查令、仲裁程序令、监管函甄别 |
 | `/litigation-legal:witness-trial-prep` | 庭审、当事人陈述、证人出庭、鉴定人/专家辅助人发问准备 |
 | `/litigation-legal:confidential-evidence-review` | 证据保密、商业秘密、个人信息、国家秘密和涉外数据出境审查 |
@@ -24,11 +26,15 @@
 | `/litigation-legal:deposition-prep` | 兼容旧命令，已映射到庭审与证人准备 |
 | `/litigation-legal:privilege-log-review` | 兼容旧命令，已映射到证据保密与脱敏审查 |
 | `/litigation-legal:legal-hold` | 兼容旧命令，已映射到证据留存/保全 |
+| `/litigation-legal:customize` | 已废弃，画像配置统一使用 `cold-start-interview` |
 | `/litigation-legal:demand-intake` | 律师函/催告函/解除通知/索赔函起草前信息收集 |
 | `/litigation-legal:demand-draft` | 中国法语境下律师函、催告函、索赔函、保全提示函初稿 |
 | `/litigation-legal:demand-received` | 收到律师函/催告函/仲裁通知/起诉材料后的应对分流 |
 | `/litigation-legal:matter-briefing` | 案件汇报：事实、程序、风险、费用、保全、执行、和解窗口 |
 | `/litigation-legal:portfolio-status` | 未决案件组合盘点：金额、阶段、期限、保全、执行、拨备/披露口径 |
+| `/litigation-legal:matter-workspace` | 案件工作区：创建、切换、列示、归档，隔离不同案件上下文；只管理文件和上下文，不替代收案审查 |
+| `/litigation-legal:matter-update` | 案件进展更新：针对程序事件、证据、期限、保全、和解、执行的变化，输出文档级更新、台账字段建议与重审提示；不写入台账、日历或外部系统 |
+| `/litigation-legal:matter-close` | 结案报告：和解、撤诉、判决、裁决、执行完毕、终本、费用与复盘；审查上诉、再审、撤裁、执行等后续风险，关闭前须人工确认 |
 | `/litigation-legal:oc-status` | 外部律师/仲裁代理/承办法官或仲裁员事项跟进清单 |
 
 ## 中国法核心卡点
