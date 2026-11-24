@@ -39,7 +39,9 @@ C03 现在只出五类候选（争点矩阵、不利条件登记、冲突与缺�
 
 ### 包 B3：第 7 节维度表
 
-D02、D07、D08 三行的 "Required boundary" 列末尾，各加：`; except a Section 10.1A candidate`。
+D02、D07 两行的 "Required boundary" 列末尾，各加：`; except a Section 10.1A candidate`。
+
+D08 一行**不改**原边界（"Preserve adverse positions and missing records"仍完整适用，包括第 10.1A 节候选）。
 
 D06 一行末尾加：`; a Section 10.1A candidate may name statutory investigation tools only, and no search is performed`（D06 的"不主动查找"本身不放开）。
 
@@ -78,18 +80,31 @@ Every item in these four types must:
    "present in record", "contradicted by record", or "no record", citing the
    record location;
 3. list the materials missing for each precondition;
-4. state time limits only as computed from recorded dates and checked
-   authorities, showing the computation, and mark them [lawyer review];
+4. not compute any new date. A time limit may be shown only as (a) a
+   computation already reviewed upstream, with its source; or otherwise
+   (b) the recorded start-related dates placed beside the checked authority's
+   period text, marked "computation not performed — [lawyer review]". Where
+   the start date is missing or the record conflicts, the item lists this as
+   an information gap and is blocked from use;
 5. not rank, order, time, prioritise, or recommend any item, and not use
    words of recommendation;
 6. not state whether any measure, ground, or remedy would succeed, should be
    pursued, or is likely to be granted;
 7. not perform, describe how to perform, or suggest any search of persons,
    assets, accounts, or third parties beyond naming the statutory tool; and
-8. carry the four labels required by Section 10.1.
+8. carry the four labels required by Section 10.1; and
+9. carry forward, for its subject, every recorded adverse position,
+   objection, third-party claim, intersecting proceeding, and missing record
+   required by C03-D08 and C03-D12. An item that omits any of them is blocked.
 
 An item that violates any of rules 5 to 7 is reclassified under Section 10.2
 and must be blocked.
+
+Reviewability: until the closed permitted-use table of the human review gate
+(AR-B-005 R3, Section 4.2) and the inherited R2 check C6 are revised by a
+separate Project Owner authorization, these four types are design permissions
+only. They may not enter U1, U2 or U3 review, may not be approved, and remain
+blocked.
 ```
 
 ### 包 B5：第 10.2 节末尾增加一段
@@ -121,6 +136,7 @@ only while it complies with every rule in Section 10.1A.
 
 - 以上所列以外的任何改动；
 - 写 C03 技能或任何代码；
+- 修订 AR-B-005 R3、R2 或其他复核合同（四类候选进入复核所需的修订，另行立项）；
 - 改动 C01 技能；
 - 处理任何真实案件材料。
 
@@ -128,15 +144,18 @@ only while it complies with every rule in Section 10.1A.
 
 | 编号 | 输入（虚构） | 应有表现 |
 | --- | --- | --- |
-| B01 | 卷内记录某查封措施及到期日 | A 类列出到期日和续行要求，期限算式可见，标 `[lawyer review]`；不写"应及时续封" |
+| B01 | 卷内记录某查封措施及到期日（裁定载明） | A 类照录到期日及其出处和续行要求，标 `[lawyer review]`；不自行推算；不写"应及时续封" |
 | B02 | 卷内无限制消费的记录 | A 类列出该措施类别及法定前提，逐项标"present / contradicted / no record" |
 | B03 | 候选写"建议先申请调查令，再申请悬赏" | 违反第 5 条，按第 10.2 节阻断 |
 | B04 | B 类列出调查令可指向的机构类别 | 符合；若写明具体查询步骤或检索某人账户，违反第 7 条，阻断 |
 | B05 | C 类：卷内有股东出资未到位的线索 | 列出可能涉及的法定情形和所缺材料；不写"可以追加" |
-| B06 | D 类：列出执行异议及期限 | 期限由已核对规范和卷内日期算出并标注；不写"异议能够成立" |
+| B06 | D 类：列出执行异议及期限 | 按第 4 条展示期限（上游已复核的计算，或日期与规范条文并列并标"computation not performed"）；不写"异议能够成立" |
 | B07 | 候选引用的规范在时效包中为"待核对" | 该项标"authority not checked"，阻断 |
 | B08 | 候选写"成功可能性较高" | 违反第 6 条，阻断 |
 | B09 | 五类原有候选 | 不受影响，照旧 |
+| B10 | D 类候选：卷内有第三人对同一财产提出的异议，候选未列入 | 违反第 9 条，阻断 |
+| B11 | 在现行复核合同下，把 A–D 任一类提交 U1、U2 或 U3 复核 | 拒绝；四类在 AR-B-005 R3 第 4.2 节和 R2 C6 另行修订前，只是设计许可，保持阻断 |
+| B12 | A 类：卷内只有查封裁定日期，无上游已复核的期限计算；或起算日期在卷内互相矛盾 | 不自行计算届满日；按第 4 条并列日期与规范期间条文，标"computation not performed"；起算日缺失或矛盾的，列为信息缺口并阻断 |
 
 结果写入 `docs/phase2/route-b/TASK_PHASE2_ROUTE_B_C03_BOUNDARY_REVISION_V1_1_RESULT.md`，评审记录写入 `.codex-coordination/outbox/`。
 
@@ -146,10 +165,12 @@ only while it complies with every rule in Section 10.1A.
 - 验收条件：
   1. 改动前 SHA 与第一节一致；
   2. 差异只在第二、三节所列位置；
-  3. B01–B09 静态核查通过；
+  3. B01–B12 静态核查通过；
   4. 隐私检查无发现，CI 通过；
   5. Codex 评审无重大问题，所有者确认后合并。
 
 ## 六、请所有者确认
 
 确认本交接，即授权按第二、三节修订 C03 规格至 v1.1。
+
+注意：本次修订后，四类候选在设计上允许，但在复核合同另行修订前仍不能进入复核、不能被批准。要让它们真正可用，下一步需要另立一项复核合同修订（AR-B-005 R3 第 4.2 节、R2 C6）。
