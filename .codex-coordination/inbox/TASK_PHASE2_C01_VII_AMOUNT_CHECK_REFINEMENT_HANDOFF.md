@@ -1,10 +1,10 @@
-# TASK_PHASE2_C01_VII_AMOUNT_CHECK_REFINEMENT_HANDOFF（范围交接，待确认）
+# TASK_PHASE2_C01_VII_AMOUNT_CHECK_REFINEMENT_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | C01-VI 虚构材料试跑结果（`docs/phase2/track-c/TASK_PHASE2_C01_VI_FICTIONAL_TRIAL_RESULT.md`，已确认，PR #153）第三节第 1–3 项；所有者 2026-11-23 决定合并立项小修订 |
 | 起草 | Claude（记录人），2026-11-23 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-23）。** 所有者确认，授权按第二节改动并做运行复验。PR #154 经 Codex 两轮评审（第 1 轮 P1 1 项已改，第 2 轮无发现） |
 
 ## 一、固定基线
 
