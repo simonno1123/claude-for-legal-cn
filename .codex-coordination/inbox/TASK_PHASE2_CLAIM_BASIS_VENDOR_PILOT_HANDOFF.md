@@ -1,10 +1,10 @@
-# TASK_PHASE2_CLAIM_BASIS_VENDOR_PILOT_HANDOFF（范围交接，待确认）
+# TASK_PHASE2_CLAIM_BASIS_VENDOR_PILOT_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | 接入方案（`docs/phase2/track-c/TASK_PHASE2_CLAIM_BASIS_INTEGRATION_PROPOSAL.md`，所有者 2026-11-25 决定：方式 C，先在 `claim-chart` 试点） |
 | 起草 | Claude（记录人），2026-11-25 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-25）。** 所有者确认，授权按第二节实施并验证。PR #168 经 Codex 评审（第 1 轮 P1 1 项：CB-01、CB-09 未配依据时效包，已补；第 2 轮无发现） |
 
 ## 一、固定基线
 
