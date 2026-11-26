@@ -4,7 +4,7 @@
 | --- | --- |
 | 依据 | `.codex-coordination/inbox/TASK_PHASE2_CLAIM_BASIS_VENDOR_PILOT_HANDOFF.md`（已确认，PR #168） |
 | 起草 | Claude（记录人），2026-11-25 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-25）。** 所有者确认合并；部分通过事项另立修订。PR #169 经 Codex 评审（第 1 轮 P1 1 项：R3 三段式评判偏宽，已改为部分通过；第 2 轮无发现） |
 
 ## 一、实施
 
