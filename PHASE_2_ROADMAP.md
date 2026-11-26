@@ -131,7 +131,7 @@
 
 Active maintenance 只包括 schema/命令一致性、回归检查和缺陷修复。真实连接器、外部调度与通知仍属于 Phase 2。
 
-## Phase 2 进展：民商事诉讼与民事执行（截至 2026-11-24）
+## Phase 2 进展：民商事诉讼与民事执行（截至 2026-11-25）
 
 以下技能都在 `litigation-legal` 插件内，输出一律为候选，须经合格律师复核；依据须经案件级依据时效包核对，未核对的事项阻断。
 
@@ -139,7 +139,7 @@ Active maintenance 只包括 schema/命令一致性、回归检查和缺陷修�
 |---|---|---|---|
 | C01 诉讼分析 | `matter-intake`、`chronology`、`claim-chart`、`brief-section-drafter` | 已交付，经 C01-III 至 C01-VII 多轮修订 | 两次真实材料试跑；C01-VI、C01-VII 虚构材料试跑与复验 |
 | C03 民事执行审查 | `enforcement-review` | 已交付（规格 v1.1；技能经 S6、R1–R3、S1–S2 修订） | 6 宗虚构案件试跑与复验；2 宗类型不同的真实案件试用 |
-| 请求权基础方法 | 独立仓库 `claim-basis-cn` | 已决定拆分为独立项目；本仓库技能引用该项目及版本锁定，待另行决定 | 另行维护 |
+| 请求权基础方法 | 独立仓库 `claim-basis-cn`；本仓库 `references/claim-basis/` 为 v0.3.0 只读副本 | 2026-11-25 起由 `claim-chart` 第 3A 步调用（覆盖规则见 `VENDORED.md`）；其他技能是否接入另行决定 | C01-VI 与上游 CB-01、CB-09 虚构案例试跑及复验；1 宗真实案件试用 |
 
 已知并经所有者接受、留待真实使用中观察的事项：
 
