@@ -1,10 +1,10 @@
-# TASK_PHASE2_CLAIM_CHART_3A_REVISION_HANDOFF（范围交接，待确认）
+# TASK_PHASE2_CLAIM_CHART_3A_REVISION_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `docs/phase2/track-c/TASK_PHASE2_CLAIM_BASIS_VENDOR_PILOT_RESULT.md`（已确认，PR #169）：所有者 2026-11-25 决定部分通过事项另立修订 |
 | 起草 | Claude（记录人），2026-11-25 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-25）。** 所有者确认，授权按第三节实施并复验。PR #170 经 Codex 评审（第 1 轮无发现） |
 
 ## 一、固定基线
 
