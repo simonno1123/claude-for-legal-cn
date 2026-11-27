@@ -13,10 +13,10 @@
 | 命令 | 中国法语义 |
 |---|---|
 | `/litigation-legal:cold-start-interview` | 中国争议解决画像访谈：主体、常见纠纷、常用法院/仲裁委、外部律师、案件台账、保全和执行策略 |
-| `/litigation-legal:matter-intake` | 收案与立案审查：管辖、诉讼时效、主体、仲裁条款、诉请、证据、保全和执行可行性 |
-| `/litigation-legal:claim-chart` | 诉请/抗辩/证据对照表：诉讼请求、请求权基础、待证事实、证据编号、候选质证风险提示、证明目的和缺口；分析表与复核记录表分列 |
-| `/litigation-legal:chronology` | 案件事实时间线：按时间、证据编号、争议焦点和证明目的整理大事记 |
-| `/litigation-legal:brief-section-drafter` | 文书段落起草：起诉状、答辩状、代理意见、质证意见、保全或调查令申请等局部段落；依据未核对、复核未通过或金额口径未确认的命题阻断 |
+| `/litigation-legal:matter-intake` | 收案与立案审查：管辖、诉讼时效、主体、仲裁条款、诉请、证据、保全和执行可行性；逐份登记全部素材（含图片、视频、聊天记录），金额核对须看原件手写改动；请求权基础只列收案候选，完整检索在 `claim-chart` 进行 |
+| `/litigation-legal:claim-chart` | 诉请/抗辩/证据对照表：诉讼请求、请求权基础、待证事实、证据编号、候选质证风险提示、证明目的和缺口；按请求权基础方法（`references/claim-basis/` 只读副本）逐类检索并作三段式检验，集中列出依据补核请求；分析表与复核记录表分列，未复核的写"人工确认增补" |
+| `/litigation-legal:chronology` | 案件事实时间线：按时间、证据编号、争议焦点和证明目的整理大事记；候选法律事实索引未复核的写"人工确认增补" |
+| `/litigation-legal:brief-section-drafter` | 文书段落起草：起诉状、答辩状、代理意见、质证意见、保全或调查令申请等局部段落；依据未核对、复核未通过或金额口径未确认的命题阻断，阻断的命题不写入正文，全部阻断时初稿写"无（全部阻断）" |
 | `/litigation-legal:enforcement-review` | 执行案件审查（C03，由律师启动）：按 13 个维度整理执行卷宗，输出争点矩阵、不利条件、冲突与缺口、依据核查请求，以及"可供律师考虑的"措施与期限、财产调查途径、变更追加当事人情形、异议与救济途径（均为候选，不排先后、不提建议、不下结论、不查找财产） |
 | `/litigation-legal:court-order-triage` | 法院文书、协助执行通知、律师调查令、仲裁程序令、监管函甄别 |
 | `/litigation-legal:witness-trial-prep` | 庭审、当事人陈述、证人出庭、鉴定人/专家辅助人发问准备 |
@@ -28,7 +28,7 @@
 | `/litigation-legal:legal-hold` | 兼容旧命令，已映射到证据留存/保全 |
 | `/litigation-legal:customize` | 已废弃，画像配置统一使用 `cold-start-interview` |
 | `/litigation-legal:demand-intake` | 律师函/催告函/解除通知/索赔函起草前信息收集 |
-| `/litigation-legal:demand-draft` | 中国法语境下律师函、催告函、索赔函、保全提示函初稿 |
+| `/litigation-legal:demand-draft` | 中国法语境下律师函、催告函、索赔函、保全提示函初稿；请求权基础取自经律师复核的 `claim-chart` 输出 |
 | `/litigation-legal:demand-received` | 收到律师函/催告函/仲裁通知/起诉材料后的应对分流 |
 | `/litigation-legal:matter-briefing` | 案件汇报：事实、程序、风险、费用、保全、执行、和解窗口 |
 | `/litigation-legal:portfolio-status` | 未决案件组合盘点：金额、阶段、期限、保全、执行、拨备/披露口径 |
