@@ -1,10 +1,10 @@
-# TASK_PHASE2_CLAIM_BASIS_ROUTING_HANDOFF（范围交接，待确认）
+# TASK_PHASE2_CLAIM_BASIS_ROUTING_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `docs/phase2/track-c/TASK_PHASE2_CLAIM_BASIS_OTHER_SKILLS_PROPOSAL.md`（已决定方案 B，PR #176） |
 | 起草 | Claude（记录人），2026-11-25 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-25）。** 所有者确认，授权按第二节实施并复验。PR #177 经 Codex 评审（第 1 轮无发现） |
 
 ## 一、固定基线
 
