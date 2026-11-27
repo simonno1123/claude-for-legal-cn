@@ -388,6 +388,15 @@ Commercial 的 deal debrief、playbook monitor、renewal tracker 和 proposal re
 /litigation-legal:matter-intake
 ```
 
+诉讼案件的常用顺序（每一步输出均为候选，须经律师复核；复核答复记入复核记录表后，下游技能才能引用）：
+
+```text
+/litigation-legal:matter-intake
+/litigation-legal:chronology
+/litigation-legal:claim-chart
+/litigation-legal:brief-section-drafter
+```
+
 执行案件（由律师启动，处理执行卷宗）：
 
 ```text
