@@ -1,10 +1,10 @@
-# TASK_PHASE2_BRIEF_BLOCKED_DRAFT_HANDOFF（范围交接，待确认）
+# TASK_PHASE2_BRIEF_BLOCKED_DRAFT_HANDOFF（范围交接，已确认）
 
 | 字段 | 值 |
 | --- | --- |
 | 依据 | `docs/phase2/track-c/TASK_PHASE2_REVIEW_STATUS_PLACEHOLDER_RESULT.md`（已确认，PR #180）：所有者 2026-11-26 决定，`brief-section-drafter` 补造事实偏差另立一项 |
 | 起草 | Claude（记录人），2026-11-26 |
-| 状态 | **待所有者确认** |
+| 状态 | **已确认（2026-11-26）。** 所有者确认，授权按第三节实施并复验。PR #181 经 Codex 评审（第 1 轮无发现） |
 
 ## 一、问题
 
