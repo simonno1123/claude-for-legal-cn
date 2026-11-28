@@ -4,7 +4,7 @@
 | --- | --- |
 | 依据 | `.codex-coordination/inbox/TASK_PHASE2_CLAIM_CHART_PREMISE_ISSUES_HANDOFF.md`（已确认，PR #194） |
 | 起草 | Claude（记录人），2026-11-27 |
-| 状态 | 待所有者确认 |
+| 状态 | **已确认（2026-11-27）。** 所有者确认合并；观察第 1 项列入观察。PR #195 经 Codex 评审（第 1 轮 P1 一项：S60 复验案卷含中断线索，已另用无中断记录案卷补充运行；第 2 轮无发现） |
 
 ## 一、实施
 
